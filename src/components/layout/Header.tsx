@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, Search, MessageCircle, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { Plan10Logo } from "@/components/ui/Plan10Logo";
 import { Button } from "@/components/ui/Plan10Button";
 import { cn } from "@/lib/utils";
-import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
+
 import { verticals } from "@/data/verticals";
 
 const navLinks = [
@@ -72,15 +72,6 @@ export function Header() {
             >
               <Search size={20} />
             </button>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white hover:opacity-90 transition"
-              aria-label="WhatsApp"
-            >
-              <MessageCircle size={18} fill="white" />
-            </a>
             <Link to="/fale-conosco" className="hidden md:inline-flex">
               <Button variant="primary" size="sm">Fale Conosco</Button>
             </Link>
