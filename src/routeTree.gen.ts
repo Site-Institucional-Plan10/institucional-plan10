@@ -9,38 +9,275 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermosRouteImport } from './routes/termos'
+import { Route as Servicos24hRouteImport } from './routes/servicos-24h'
+import { Route as SegurosRouteImport } from './routes/seguros'
+import { Route as SaudeRouteImport } from './routes/saude'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as LgpdRouteImport } from './routes/lgpd'
+import { Route as FinancasRouteImport } from './routes/financas'
+import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
+import { Route as ConsorciosRouteImport } from './routes/consorcios'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
 
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Servicos24hRoute = Servicos24hRouteImport.update({
+  id: '/servicos-24h',
+  path: '/servicos-24h',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SegurosRoute = SegurosRouteImport.update({
+  id: '/seguros',
+  path: '/seguros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SaudeRoute = SaudeRouteImport.update({
+  id: '/saude',
+  path: '/saude',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LgpdRoute = LgpdRouteImport.update({
+  id: '/lgpd',
+  path: '/lgpd',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinancasRoute = FinancasRouteImport.update({
+  id: '/financas',
+  path: '/financas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaleConoscoRoute = FaleConoscoRouteImport.update({
+  id: '/fale-conosco',
+  path: '/fale-conosco',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorciosRoute = ConsorciosRouteImport.update({
+  id: '/consorcios',
+  path: '/consorcios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/consorcios': typeof ConsorciosRoute
+  '/fale-conosco': typeof FaleConoscoRoute
+  '/financas': typeof FinancasRoute
+  '/lgpd': typeof LgpdRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/saude': typeof SaudeRoute
+  '/seguros': typeof SegurosRoute
+  '/servicos-24h': typeof Servicos24hRoute
+  '/termos': typeof TermosRoute
+  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/consorcios': typeof ConsorciosRoute
+  '/fale-conosco': typeof FaleConoscoRoute
+  '/financas': typeof FinancasRoute
+  '/lgpd': typeof LgpdRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/saude': typeof SaudeRoute
+  '/seguros': typeof SegurosRoute
+  '/servicos-24h': typeof Servicos24hRoute
+  '/termos': typeof TermosRoute
+  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/consorcios': typeof ConsorciosRoute
+  '/fale-conosco': typeof FaleConoscoRoute
+  '/financas': typeof FinancasRoute
+  '/lgpd': typeof LgpdRoute
+  '/privacidade': typeof PrivacidadeRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/saude': typeof SaudeRoute
+  '/seguros': typeof SegurosRoute
+  '/servicos-24h': typeof Servicos24hRoute
+  '/termos': typeof TermosRoute
+  '/api/contact': typeof ApiContactRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/consorcios'
+    | '/fale-conosco'
+    | '/financas'
+    | '/lgpd'
+    | '/privacidade'
+    | '/quem-somos'
+    | '/saude'
+    | '/seguros'
+    | '/servicos-24h'
+    | '/termos'
+    | '/api/contact'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/blog'
+    | '/consorcios'
+    | '/fale-conosco'
+    | '/financas'
+    | '/lgpd'
+    | '/privacidade'
+    | '/quem-somos'
+    | '/saude'
+    | '/seguros'
+    | '/servicos-24h'
+    | '/termos'
+    | '/api/contact'
+  id:
+    | '__root__'
+    | '/'
+    | '/blog'
+    | '/consorcios'
+    | '/fale-conosco'
+    | '/financas'
+    | '/lgpd'
+    | '/privacidade'
+    | '/quem-somos'
+    | '/saude'
+    | '/seguros'
+    | '/servicos-24h'
+    | '/termos'
+    | '/api/contact'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
+  ConsorciosRoute: typeof ConsorciosRoute
+  FaleConoscoRoute: typeof FaleConoscoRoute
+  FinancasRoute: typeof FinancasRoute
+  LgpdRoute: typeof LgpdRoute
+  PrivacidadeRoute: typeof PrivacidadeRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  SaudeRoute: typeof SaudeRoute
+  SegurosRoute: typeof SegurosRoute
+  Servicos24hRoute: typeof Servicos24hRoute
+  TermosRoute: typeof TermosRoute
+  ApiContactRoute: typeof ApiContactRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos-24h': {
+      id: '/servicos-24h'
+      path: '/servicos-24h'
+      fullPath: '/servicos-24h'
+      preLoaderRoute: typeof Servicos24hRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seguros': {
+      id: '/seguros'
+      path: '/seguros'
+      fullPath: '/seguros'
+      preLoaderRoute: typeof SegurosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/saude': {
+      id: '/saude'
+      path: '/saude'
+      fullPath: '/saude'
+      preLoaderRoute: typeof SaudeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lgpd': {
+      id: '/lgpd'
+      path: '/lgpd'
+      fullPath: '/lgpd'
+      preLoaderRoute: typeof LgpdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financas': {
+      id: '/financas'
+      path: '/financas'
+      fullPath: '/financas'
+      preLoaderRoute: typeof FinancasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fale-conosco': {
+      id: '/fale-conosco'
+      path: '/fale-conosco'
+      fullPath: '/fale-conosco'
+      preLoaderRoute: typeof FaleConoscoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcios': {
+      id: '/consorcios'
+      path: '/consorcios'
+      fullPath: '/consorcios'
+      preLoaderRoute: typeof ConsorciosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +285,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
+  ConsorciosRoute: ConsorciosRoute,
+  FaleConoscoRoute: FaleConoscoRoute,
+  FinancasRoute: FinancasRoute,
+  LgpdRoute: LgpdRoute,
+  PrivacidadeRoute: PrivacidadeRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  SaudeRoute: SaudeRoute,
+  SegurosRoute: SegurosRoute,
+  Servicos24hRoute: Servicos24hRoute,
+  TermosRoute: TermosRoute,
+  ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
