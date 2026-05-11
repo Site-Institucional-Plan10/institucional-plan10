@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, Search, MessageCircle, X } from "lucide-react";
 import { Plan10Logo } from "@/components/ui/Plan10Logo";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Plan10Button";
 import { cn } from "@/lib/utils";
 import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
 import { verticals } from "@/data/verticals";

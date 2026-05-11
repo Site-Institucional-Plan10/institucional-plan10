@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Modal } from "@/components/ui/primitives";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Plan10Button";
 
 interface RedirectPopupProps {
   isOpen: boolean;

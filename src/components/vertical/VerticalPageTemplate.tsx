@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MessageCircle, Check, ArrowRight } from "lucide-react";
 import type { VerticalConfig } from "@/data/verticals";
 import { Plan10Logo } from "@/components/ui/Plan10Logo";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Plan10Button";
 import { Toggle } from "@/components/ui/primitives";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Testimonials } from "@/components/sections/Testimonials";

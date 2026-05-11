@@ -1,5 +1,5 @@
 import { Search, GitCompare, Lightbulb, FileSignature, Headphones } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Plan10Button";
 
 const steps = [
   { Icon: Search, title: "Entendimento do seu perfil", desc: "Conversamos para mapear o cenário real." },

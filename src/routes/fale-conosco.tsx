@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Input } from "@/components/ui/primitives";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Plan10Button";
 
 export const Route = createFileRoute("/fale-conosco")({
   head: () => ({

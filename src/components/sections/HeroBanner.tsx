@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MessageCircle, Check, Shield } from "lucide-react";
 import { Plan10Logo } from "@/components/ui/Plan10Logo";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Plan10Button";
 import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
 
 const banners = [

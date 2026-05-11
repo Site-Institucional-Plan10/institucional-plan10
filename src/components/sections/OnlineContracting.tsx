@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Info } from "lucide-react";
 import { verticals } from "@/data/verticals";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/Plan10Button";
 import { RedirectPopup } from "@/components/common/RedirectPopup";
 
 export function OnlineContracting() {
