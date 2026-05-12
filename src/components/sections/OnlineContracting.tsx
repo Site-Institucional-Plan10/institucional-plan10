@@ -30,12 +30,29 @@ export function OnlineContracting() {
                 key={v.id}
                 onClick={() => setActive(v.id)}
                 className={cn(
-                  "rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 border",
+                  "rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 border cursor-pointer transform hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg",
                 )}
                 style={{
                   borderColor: v.hubColor,
                   backgroundColor: isActive ? v.hubColor : "transparent",
                   color: isActive ? "#fff" : v.hubColor,
+                  boxShadow: isActive ? `0 6px 20px -8px ${v.hubColor}` : undefined,
+                }}
+                onMouseEnter={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.backgroundColor = v.hubColor;
+                    e.currentTarget.style.color = "#fff";
+                  }
+                  e.currentTarget.style.boxShadow = `0 10px 24px -8px ${v.hubColor}`;
+                }}
+                onMouseLeave={(e) => {
+                  if (!isActive) {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.color = v.hubColor;
+                    e.currentTarget.style.boxShadow = "";
+                  } else {
+                    e.currentTarget.style.boxShadow = `0 6px 20px -8px ${v.hubColor}`;
+                  }
                 }}
               >
                 {v.name}
