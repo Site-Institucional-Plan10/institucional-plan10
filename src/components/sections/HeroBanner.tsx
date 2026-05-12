@@ -1,38 +1,32 @@
-import { useEffect, useRef, useState } from "react";
-import { MessageCircle, Check, Shield } from "lucide-react";
-import { Plan10Logo } from "@/components/ui/Plan10Logo";
-import { Button } from "@/components/ui/Plan10Button";
-import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
-import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
+import { HeroCarousel, type HeroSlide } from "./HeroCarousel";
 
-interface HeroSlide {
-  id: number;
-  backgroundImage: string | null;
-  placeholderBg: string;
-  badge: string;
-  headline: string[];
-  headlineAccent: string;
-  subheadline: string;
-}
-
-const heroBanners: HeroSlide[] = [
+const homeSlides: HeroSlide[] = [
   {
     id: 1,
-    backgroundImage: "/assets/images/hero-veleiro.jpg",
-    placeholderBg: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)",
+    backgroundImage: "/assets/banners/hero-home-1.png",
+    backgroundPosition: "center 35%",
+    overlayLayer1: "rgba(0, 0, 0, 0.48)",
+    overlayLayer2: "linear-gradient(105deg, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.00) 100%)",
     badge: "Corretora multimodal · Credenciada SUSEP",
-    headline: ["Seu futuro", "muito mais", "tranquilo."],
+    headlineLines: ["Seu futuro", "muito mais", "tranquilo."],
     headlineAccent: "tranquilo.",
     subheadline: "Mais de 40 produtos em um só lugar: seguros, saúde, consórcio e finanças.",
+    ctaSecondaryLabel: "Conhecer Soluções",
+    ctaSecondaryHref: "#verticais",
   },
   {
     id: 2,
-    backgroundImage: null,
-    placeholderBg: "linear-gradient(135deg, #0D2B6E 0%, #1A4FA0 100%)",
+    backgroundImage: "/assets/banners/hero-home-2.jpg",
+    backgroundPosition: "center 50%",
+    overlayLayer1: "rgba(0, 5, 20, 0.55)",
+    overlayLayer2: "linear-gradient(105deg, rgba(0,5,20,0.45) 0%, rgba(26,79,160,0.20) 60%, rgba(0,0,0,0.00) 100%)",
     badge: "Proteção completa para sua família",
-    headline: ["Proteção,", "saúde e", "planejamento."],
+    headlineLines: ["Proteção,", "saúde e", "planejamento."],
     headlineAccent: "planejamento.",
     subheadline: "Consultoria independente para pessoa física e jurídica em 5 grandes áreas.",
+    ctaSecondaryLabel: "Conhecer Soluções",
+    ctaSecondaryHref: "#verticais",
   },
 ];
 
@@ -45,150 +39,16 @@ const stripBanners = [
 ];
 
 export function HeroBanner() {
-  const [active, setActive] = useState(0);
   const [stripIdx, setStripIdx] = useState(0);
-  const pausedRef = useRef(false);
-
-  useEffect(() => {
-    const t = setInterval(() => {
-      if (!pausedRef.current) setActive((i) => (i + 1) % heroBanners.length);
-    }, 6000);
-    return () => clearInterval(t);
-  }, []);
 
   useEffect(() => {
     const t = setInterval(() => setStripIdx((i) => (i + 1) % stripBanners.length), 4000);
     return () => clearInterval(t);
   }, []);
 
-  const scrollToVerticals = () => {
-    document.getElementById("verticais")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section className="pt-20">
-      <div
-        className="relative overflow-hidden"
-        onMouseEnter={() => { pausedRef.current = true; }}
-        onMouseLeave={() => { pausedRef.current = false; }}
-      >
-        {heroBanners.map((slide, i) => {
-          const isActive = i === active;
-          const bgStyle: React.CSSProperties = slide.backgroundImage
-            ? { backgroundImage: `url(${slide.backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center 40%", backgroundRepeat: "no-repeat" }
-            : { background: slide.placeholderBg };
-          return (
-            <div
-              key={slide.id}
-              className={cn(
-                "absolute inset-0 transition-opacity duration-[800ms] ease-in-out",
-                isActive ? "opacity-100" : "opacity-0",
-              )}
-              style={bgStyle}
-              aria-hidden={!isActive}
-            >
-              {slide.id === 1 && (
-                <>
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{ zIndex: 1, background: "rgba(0, 0, 0, 0.52)" }}
-                  />
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      zIndex: 2,
-                      background:
-                        "linear-gradient(to right, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.10) 55%, rgba(0,0,0,0.00) 100%)",
-                    }}
-                  />
-                </>
-              )}
-            </div>
-          );
-        })}
-
-        {/* Foreground content — driven by active slide */}
-        <div className="relative container-x grid gap-10 lg:grid-cols-2 lg:items-center py-20 md:py-28 min-h-[560px]">
-          <div className="text-white">
-            <p
-              className="mb-5 uppercase"
-              style={{
-                color: "rgba(255,255,255,0.75)",
-                letterSpacing: "0.1em",
-                fontSize: "0.75rem",
-                fontWeight: 600,
-              }}
-            >
-              {heroBanners[active].badge}
-            </p>
-            <h1 className="font-display" style={{ fontWeight: 800 }}>
-              {heroBanners[active].headline.map((line, idx) => (
-                <span
-                  key={idx}
-                  className="block"
-                  style={{
-                    color:
-                      line === heroBanners[active].headlineAccent ? "#FF6B00" : "#FFFFFF",
-                  }}
-                >
-                  {line}
-                </span>
-              ))}
-            </h1>
-            <p
-              className="mt-6 text-lg max-w-lg leading-[1.7]"
-              style={{ color: "rgba(255,255,255,0.85)" }}
-            >
-              {heroBanners[active].subheadline}
-            </p>
-            <div
-              className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm"
-              style={{ color: "rgba(255,255,255,0.70)" }}
-            >
-              {["Análise gratuita", "Atendimento humano", "Compare antes de contratar"].map((t) => (
-                <span key={t} className="inline-flex items-center gap-1.5">
-                  <Check size={16} className="text-orange" /> {t}
-                </span>
-              ))}
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                <Button variant="primary" size="lg">
-                  <MessageCircle size={18} />
-                  Falar com Especialista
-                </Button>
-              </a>
-              <Button
-                variant="ghost"
-                size="lg"
-                onClick={scrollToVerticals}
-                style={{
-                  border: "1.5px solid rgba(255,255,255,0.60)",
-                  color: "#FFFFFF",
-                  background: "transparent",
-                }}
-              >
-                Conhecer Soluções
-              </Button>
-            </div>
-          </div>
-
-          {/* Dot indicators */}
-          <div className="absolute bottom-6 left-4 sm:left-6 lg:left-8 flex gap-2 z-10">
-            {heroBanners.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActive(i)}
-                aria-label={`Slide ${i + 1}`}
-                className={cn(
-                  "h-2 w-2 rounded-full border border-white transition",
-                  i === active ? "bg-white" : "bg-transparent",
-                )}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <HeroCarousel slides={homeSlides} />
 
       {/* Banner strip — rotating */}
       <div className="bg-ink text-white">
