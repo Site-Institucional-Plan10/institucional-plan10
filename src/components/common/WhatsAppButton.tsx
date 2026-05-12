@@ -9,11 +9,12 @@ export function WhatsAppButton() {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="group fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg md:h-16 md:w-16 animate-pulse-ring"
+      className="group fixed z-50 flex items-center justify-center rounded-full bg-[#25D366] text-white animate-whatsapp-pulse"
+      style={{ bottom: 28, right: 28, width: 64, height: 64 }}
       aria-label="Fale agora pelo WhatsApp"
     >
-      <MessageCircle size={28} fill="white" />
-      <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-md bg-ink px-3 py-1.5 text-xs font-semibold text-white opacity-0 group-hover:opacity-100 transition">
+      <MessageCircle size={30} fill="white" />
+      <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-full bg-white px-4 py-2 text-xs font-semibold text-ink shadow-md opacity-0 group-hover:opacity-100 transition">
         Fale agora pelo WhatsApp
       </span>
     </a>
