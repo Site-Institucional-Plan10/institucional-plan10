@@ -92,6 +92,12 @@
   }
   .animate-pulse-ring { animation: pulse-ring 2.5s ease-in-out infinite; }
 
+  @keyframes whatsapp-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+    50% { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+  }
+  .animate-whatsapp-pulse { animation: whatsapp-pulse 2.5s ease-in-out infinite; }
+
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }

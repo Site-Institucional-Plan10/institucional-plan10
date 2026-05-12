@@ -30,7 +30,7 @@ export function Plan10Logo({
         width: variant === "symbol" ? logoHeight : "auto",
         objectFit: "contain",
         objectPosition: variant === "symbol" ? "left center" : "center",
-        
+        filter: light ? "brightness(0) invert(1)" : undefined,
       }}
       className={variant === "symbol" ? "object-left" : ""}
     />
