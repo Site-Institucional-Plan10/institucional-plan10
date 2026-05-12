@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container-x py-16">
         <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <Plan10Logo variant="full" size={130} light />
+            <img src="/assets/logos/logo-plan10.png" alt="Plan10" style={{ height: 40, width: "auto" }} />
             <p className="mt-4 text-sm text-neutral-300 max-w-xs leading-[1.7]">
               Proteção, cuidados com a saúde e planejamento patrimonial em um só lugar.
             </p>
