@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, Search, X } from "lucide-react";
-import { Plan10Logo } from "@/components/ui/Plan10Logo";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 
@@ -19,24 +18,13 @@ const navLinks = [
 ] as const;
 
 function HeaderLogo({ size = 48 }: { size?: number }) {
-  const { src, isHub } = useHubLogo();
-  if (isHub && src) {
-    return (
-      <img
-        src={src}
-        alt="Plan10"
-        style={{ height: size, width: "auto" }}
-        className="object-contain"
-      />
-    );
-  }
-  // White mono version of the Plan10 logo for non-hub routes (header is orange)
+  const { src } = useHubLogo();
   return (
-    <span
-      style={{ filter: "brightness(0) invert(1)", display: "inline-flex" }}
-    >
-      <Plan10Logo variant="full" size={size * 2.5} />
-    </span>
+    <img
+      src={src}
+      alt="Plan10"
+      style={{ height: size, width: "auto", objectFit: "contain" }}
+    />
   );
 }
 
@@ -47,7 +35,8 @@ export function Header() {
   return (
     <>
       <header
-        className="fixed top-0 left-0 right-0 z-40 bg-orange shadow-sm"
+        className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm"
+        style={{ borderBottom: "1px solid #E8E8E8" }}
       >
         <div className="container-x flex h-20 items-center justify-between gap-4">
           <Link to="/" className="flex-shrink-0" aria-label="Plan10 — Home">
@@ -59,8 +48,9 @@ export function Header() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="group relative px-3 py-2 text-sm font-semibold text-white hover:text-white/80 transition flex items-center gap-1.5"
-                activeProps={{ className: "underline underline-offset-4" }}
+                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5"
+                style={{ color: "#1A1A1A" }}
+                activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
               >
                 {"hubColor" in l && l.hubColor && (
                   <span
@@ -68,8 +58,8 @@ export function Header() {
                     style={{ backgroundColor: l.hubColor }}
                   />
                 )}
-                {l.label}
-                <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-white transition-transform group-hover:scale-x-100" />
+                <span className="group-hover:text-orange transition-colors">{l.label}</span>
+                <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
               </Link>
             ))}
           </nav>
@@ -78,7 +68,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setSearchOpen((s) => !s)}
-              className="hidden md:flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/15 transition"
+              className="hidden md:flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100 transition"
               aria-label="Buscar"
             >
               <Search size={20} />
@@ -89,7 +79,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/15"
+              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
               aria-label="Abrir menu"
             >
               <Menu size={24} />
@@ -97,13 +87,13 @@ export function Header() {
           </div>
         </div>
         {searchOpen && (
-          <div className="border-t border-white/20 bg-orange">
+          <div className="border-t border-neutral-200 bg-white">
             <div className="container-x py-3">
               <input
                 autoFocus
                 type="search"
                 placeholder="Buscar seguros, planos, consórcio..."
-                className="w-full h-11 rounded-lg border border-white/30 bg-white/95 px-4 focus:border-white focus:outline-none focus:ring-2 focus:ring-white/40"
+                className="w-full h-11 rounded-lg border border-neutral-300 bg-white px-4 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/30"
               />
             </div>
           </div>
@@ -113,12 +103,12 @@ export function Header() {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col">
-          <div className="container-x flex h-20 items-center justify-between bg-orange">
+          <div className="container-x flex h-20 items-center justify-between" style={{ borderBottom: "1px solid #E8E8E8" }}>
             <HeaderLogo size={44} />
             <button
               type="button"
               onClick={() => setMobileOpen(false)}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/15"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
               aria-label="Fechar menu"
             >
               <X size={24} />
@@ -131,6 +121,8 @@ export function Header() {
                 to={l.to}
                 onClick={() => setMobileOpen(false)}
                 className="flex items-center gap-3 rounded-lg px-4 py-4 text-lg font-semibold hover:bg-neutral-100"
+                style={{ color: "#1A1A1A" }}
+                activeProps={{ style: { color: "#FF6B00" } }}
               >
                 {"hubColor" in l && l.hubColor && (
                   <span className="h-2 w-2 rounded-full" style={{ backgroundColor: l.hubColor }} />
