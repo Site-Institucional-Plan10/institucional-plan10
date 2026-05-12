@@ -66,8 +66,8 @@ export function HeroCarousel({ slides, intervalMs = 6000, minHeightClass = "min-
         );
       })}
 
-      <div className={cn("relative container-x grid gap-10 lg:grid-cols-2 lg:items-center py-20 md:py-28", minHeightClass)}>
-        <div className="text-white">
+      <div className={cn("relative container-x grid gap-10 lg:grid-cols-2 lg:items-center py-20 md:py-28", minHeightClass)} style={{ zIndex: 10 }}>
+        <div className="text-white" style={{ position: "relative", zIndex: 10 }}>
           <p
             className="mb-5 uppercase"
             style={{ color: "rgba(255,255,255,0.78)", letterSpacing: "0.1em", fontSize: "0.75rem", fontWeight: 600 }}
