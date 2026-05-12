@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
-export const WHATSAPP_URL = "https://wa.me/551140001010";
-export const WHATSAPP_DISPLAY = "+55 11 4000-1010";
+export const WHATSAPP_URL = "https://wa.me/5511938012222";
+export const WHATSAPP_DISPLAY = "(11) 9 3801 2222";
 
 export function WhatsAppButton() {
   return (
