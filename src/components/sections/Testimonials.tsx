@@ -45,11 +45,9 @@ export function Testimonials({ filter }: { filter?: string }) {
         <div className="flex animate-marquee w-max">
           {row1.map((t, i) => <Card key={`a-${i}`} t={t} />)}
         </div>
-        {!filter && (
-          <div className="flex animate-marquee w-max" style={{ animationDirection: "reverse" }}>
-            {row2.map((t, i) => <Card key={`b-${i}`} t={t} />)}
-          </div>
-        )}
+        <div className="flex animate-marquee-reverse w-max">
+          {row2.map((t, i) => <Card key={`b-${i}`} t={t} />)}
+        </div>
       </div>
     </section>
   );
