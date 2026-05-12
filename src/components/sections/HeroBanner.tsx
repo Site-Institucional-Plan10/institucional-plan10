@@ -87,6 +87,16 @@ export function HeroBanner() {
               style={bgStyle}
               aria-hidden={!isActive}
             >
+              {slide.id === 1 && (
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    zIndex: 1,
+                    background:
+                      "linear-gradient(105deg, rgba(10,4,0,0.82) 0%, rgba(140,55,0,0.55) 50%, rgba(255,107,0,0.28) 100%)",
+                  }}
+                />
+              )}
               {/* Symbol watermark */}
               <div className="absolute inset-0 flex items-center justify-end opacity-[0.08] pointer-events-none">
                 <Plan10Logo variant="symbol" size={600} />
