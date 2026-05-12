@@ -1,22 +1,15 @@
 import { useState } from "react";
-import { MessageCircle, Check, ArrowRight } from "lucide-react";
-import type { VerticalConfig, VerticalId } from "@/data/verticals";
+import { Check, ArrowRight } from "lucide-react";
+import type { VerticalConfig } from "@/data/verticals";
 import { Button } from "@/components/ui/Plan10Button";
 import { Toggle } from "@/components/ui/primitives";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { SUSEPDisclaimer } from "@/components/common/SUSEPDisclaimer";
-import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
 import { RedirectPopup } from "@/components/common/RedirectPopup";
-
-const hubLogoMap: Record<VerticalId, string> = {
-  seguros: "/assets/logos/logo-seguros.png",
-  saude: "/assets/logos/logo-saude-odonto.png",
-  consorcios: "/assets/logos/logo-consorcios.png",
-  financas: "/assets/logos/logo-financas.png",
-  servicos: "/assets/logos/logo-servicos.png",
-};
+import { HeroCarousel } from "@/components/sections/HeroCarousel";
+import { verticalHeroSlides } from "@/data/heroSlides";
 
 interface VerticalPageProps {
   vertical: VerticalConfig;
@@ -58,31 +51,13 @@ export function VerticalPageTemplate({
     { title: "Contratação", desc: "Acompanhamento completo." },
   ];
 
+  const heroSlides = verticalHeroSlides[vertical.id];
+
   return (
     <>
-      {/* 1. Hero */}
-      <section className="pt-28 pb-16 md:pt-32 md:pb-20" style={{ backgroundColor: vertical.hubColor }}>
-        <div className="container-x text-white">
-          <span className="font-eyebrow text-white/80">{vertical.name}</span>
-          <h1 className="font-display mt-4 max-w-3xl" style={{ color: "#fff" }}>{vertical.chamada}</h1>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="lg">
-                <MessageCircle size={18} />
-                Falar com Especialista
-              </Button>
-            </a>
-            <a href="#contato">
-              <Button
-                variant="ghost"
-                size="lg"
-                className="bg-white/10 text-white hover:bg-white/20 border border-white/30"
-              >
-                Solicitar contato
-              </Button>
-            </a>
-          </div>
-        </div>
+      {/* 1. Hero carousel */}
+      <section className="pt-20">
+        <HeroCarousel slides={heroSlides} />
       </section>
 
       {/* 2. Banners de campanha */}
