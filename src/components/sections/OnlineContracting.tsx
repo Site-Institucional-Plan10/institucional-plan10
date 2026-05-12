@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Info } from "lucide-react";
 import { verticals } from "@/data/verticals";
-import { Button } from "@/components/ui/Plan10Button";
 import { RedirectPopup } from "@/components/common/RedirectPopup";
 import { cn } from "@/lib/utils";
 
@@ -96,8 +95,6 @@ export function OnlineContracting() {
         targetUrl={popup?.url || ""}
         partnerName={popup?.partner || ""}
       />
-      {/* unused import guard */}
-      <span className="hidden"><Button variant="primary">x</Button></span>
     </section>
   );
 }
