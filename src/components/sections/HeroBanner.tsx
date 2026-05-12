@@ -18,7 +18,7 @@ interface HeroSlide {
 const heroBanners: HeroSlide[] = [
   {
     id: 1,
-    backgroundImage: null,
+    backgroundImage: "/assets/images/hero-veleiro.jpg",
     placeholderBg: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)",
     badge: "Corretora multimodal · Credenciada SUSEP",
     headline: ["Seu futuro", "muito mais", "tranquilo."],
@@ -75,7 +75,7 @@ export function HeroBanner() {
         {heroBanners.map((slide, i) => {
           const isActive = i === active;
           const bgStyle: React.CSSProperties = slide.backgroundImage
-            ? { backgroundImage: `url(${slide.backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }
+            ? { backgroundImage: `url(${slide.backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center 40%", backgroundRepeat: "no-repeat" }
             : { background: slide.placeholderBg };
           return (
             <div
@@ -87,6 +87,16 @@ export function HeroBanner() {
               style={bgStyle}
               aria-hidden={!isActive}
             >
+              {slide.id === 1 && (
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    zIndex: 1,
+                    background:
+                      "linear-gradient(105deg, rgba(10,4,0,0.82) 0%, rgba(140,55,0,0.55) 50%, rgba(255,107,0,0.28) 100%)",
+                  }}
+                />
+              )}
               {/* Symbol watermark */}
               <div className="absolute inset-0 flex items-center justify-end opacity-[0.08] pointer-events-none">
                 <Plan10Logo variant="symbol" size={600} />
