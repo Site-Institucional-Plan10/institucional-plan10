@@ -63,13 +63,8 @@ export function VerticalPageTemplate({
       {/* 1. Hero */}
       <section className="pt-28 pb-16 md:pt-32 md:pb-20" style={{ backgroundColor: vertical.hubColor }}>
         <div className="container-x text-white">
-          <img
-            src={hubLogoMap[vertical.id]}
-            alt={`Plan10 ${vertical.name}`}
-            style={{ height: 88, width: "auto", filter: "brightness(0) invert(1)" }}
-            className="object-contain"
-          />
-          <h1 className="font-display mt-8 max-w-3xl" style={{ color: "#fff" }}>{vertical.chamada}</h1>
+          <span className="font-eyebrow text-white/80">{vertical.name}</span>
+          <h1 className="font-display mt-4 max-w-3xl" style={{ color: "#fff" }}>{vertical.chamada}</h1>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="lg">
