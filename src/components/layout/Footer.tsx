@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
-import { Plan10Logo } from "@/components/ui/Plan10Logo";
+
 import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
 
 export function Footer() {
