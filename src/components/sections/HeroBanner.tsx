@@ -11,7 +11,7 @@ const homeSlides: HeroSlide[] = [
     badge: "Corretora multimodal · Credenciada SUSEP",
     headlineLines: ["Seu futuro", "muito mais", "tranquilo."],
     headlineAccent: "tranquilo.",
-    subheadline: "Mais de 40 produtos em um só lugar: seguros, saúde, consórcio e finanças.",
+    subheadline: "Mais de 40 produtos em um só lugar: seguros, saúde, consórcio, serviços e finanças.",
     ctaSecondaryLabel: "Conhecer Soluções",
     ctaSecondaryHref: "#verticais",
   },
