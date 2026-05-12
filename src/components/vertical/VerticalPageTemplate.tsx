@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { MessageCircle, Check, ArrowRight } from "lucide-react";
-import type { VerticalConfig } from "@/data/verticals";
-import { Plan10Logo } from "@/components/ui/Plan10Logo";
+import type { VerticalConfig, VerticalId } from "@/data/verticals";
 import { Button } from "@/components/ui/Plan10Button";
 import { Toggle } from "@/components/ui/primitives";
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -10,6 +9,14 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { SUSEPDisclaimer } from "@/components/common/SUSEPDisclaimer";
 import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
 import { RedirectPopup } from "@/components/common/RedirectPopup";
+
+const hubLogoMap: Record<VerticalId, string> = {
+  seguros: "/assets/logos/logo-seguros.png",
+  saude: "/assets/logos/logo-saude-odonto.png",
+  consorcios: "/assets/logos/logo-consorcios.png",
+  financas: "/assets/logos/logo-financas.png",
+  servicos: "/assets/logos/logo-servicos.png",
+};
 
 interface VerticalPageProps {
   vertical: VerticalConfig;
@@ -56,7 +63,12 @@ export function VerticalPageTemplate({
       {/* 1. Hero */}
       <section className="pt-28 pb-16 md:pt-32 md:pb-20" style={{ backgroundColor: vertical.hubColor }}>
         <div className="container-x text-white">
-          <Plan10Logo variant="full" hubColor="#fff" hubLabel={vertical.hubLabel} size={140} light />
+          <img
+            src={hubLogoMap[vertical.id]}
+            alt={`Plan10 ${vertical.name}`}
+            style={{ height: 88, width: "auto", filter: "brightness(0) invert(1)" }}
+            className="object-contain"
+          />
           <h1 className="font-display mt-8 max-w-3xl" style={{ color: "#fff" }}>{vertical.chamada}</h1>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
