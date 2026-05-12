@@ -8,8 +8,10 @@ const hubLogoMap: Record<string, string> = {
   "/servicos-24h": "/assets/logos/logo-servicos.png",
 };
 
-export function useHubLogo(): { src: string | null; isHub: boolean } {
+const DEFAULT_LOGO = "/assets/logos/logo-plan10.png";
+
+export function useHubLogo(): { src: string; isHub: boolean } {
   const path = useRouterState({ select: (s) => s.location.pathname });
-  const src = hubLogoMap[path] ?? null;
-  return { src, isHub: !!src };
+  const hub = hubLogoMap[path];
+  return { src: hub ?? DEFAULT_LOGO, isHub: !!hub };
 }
