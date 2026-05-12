@@ -12,7 +12,7 @@ const navLinks = [
   { to: "/quem-somos", label: "Quem Somos" },
   { to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
   { to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
-  { to: "/consorcios", label: "Consórcio", hubColor: "#9857F2" },
+  { to: "/consorcios", label: "Consórcios", hubColor: "#9857F2" },
   { to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
   { to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { to: "/blog", label: "Blog" },
