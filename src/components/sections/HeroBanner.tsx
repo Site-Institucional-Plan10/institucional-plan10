@@ -18,7 +18,7 @@ interface HeroSlide {
 const heroBanners: HeroSlide[] = [
   {
     id: 1,
-    backgroundImage: null,
+    backgroundImage: "/assets/images/hero-veleiro.jpg",
     placeholderBg: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)",
     badge: "Corretora multimodal · Credenciada SUSEP",
     headline: ["Seu futuro", "muito mais", "tranquilo."],
