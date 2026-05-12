@@ -75,7 +75,7 @@ export function HeroBanner() {
         {heroBanners.map((slide, i) => {
           const isActive = i === active;
           const bgStyle: React.CSSProperties = slide.backgroundImage
-            ? { backgroundImage: `url(${slide.backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }
+            ? { backgroundImage: `url(${slide.backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center 40%", backgroundRepeat: "no-repeat" }
             : { background: slide.placeholderBg };
           return (
             <div
