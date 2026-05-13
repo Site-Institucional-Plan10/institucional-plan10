@@ -102,7 +102,7 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
                 <MessageCircle className="text-orange mt-0.5" size={20} />
                 <div>
                   <div className="font-semibold">WhatsApp</div>
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="font-spec text-neutral-700 hover:text-orange">
+                  <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer" className="font-spec text-neutral-700 hover:text-orange">
                     {WHATSAPP_DISPLAY}
                   </a>
                 </div>
