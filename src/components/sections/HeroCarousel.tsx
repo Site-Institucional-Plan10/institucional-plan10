@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
-import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
-import { cn } from "@/lib/utils";
+import { cn, getWhatsAppUrl, getVerticalContextFromPath } from "@/lib/utils";
 
 export interface HeroSlide {
   id: number | string;
