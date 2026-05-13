@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
-import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
+import { WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 export function Footer() {
   return (
@@ -47,7 +48,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 WhatsApp:{" "}
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="font-spec hover:text-orange">
+                <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer" className="font-spec hover:text-orange">
                   {WHATSAPP_DISPLAY}
                 </a>
               </li>

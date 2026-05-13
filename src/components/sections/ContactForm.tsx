@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Lock, Mail, MessageCircle, Clock } from "lucide-react";
+import { Lock, Mail, MessageCircle, Clock, Plus, Minus } from "lucide-react";
 import { Input, Textarea, Select } from "@/components/ui/primitives";
 import { Button } from "@/components/ui/Plan10Button";
 import { useContactForm } from "@/hooks/useContactForm";
-import { maskPhoneBR } from "@/lib/utils";
-import { WHATSAPP_DISPLAY, WHATSAPP_URL } from "@/components/common/WhatsAppButton";
+import { maskPhoneBR, getWhatsAppUrl } from "@/lib/utils";
+import { WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
 
 interface ContactFormProps {
   source: string;
@@ -27,6 +28,7 @@ const subjectOptions = [
 export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fale Conosco", subtitle }: ContactFormProps) {
   const { form, status, errorMessage, onSubmit } = useContactForm(defaultSubject);
   const { register, handleSubmit, formState: { errors }, setValue, watch } = form;
+  const [showMessage, setShowMessage] = useState(false);
 
   const phoneValue = watch("phone");
 
@@ -58,7 +60,27 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
             ) : (
               <Select label="Assunto" options={subjectOptions} {...register("subject")} error={errors.subject?.message} />
             )}
-            <Textarea label="Mensagem" {...register("message")} error={errors.message?.message} />
+
+            {!showMessage ? (
+              <button
+                type="button"
+                onClick={() => setShowMessage(true)}
+                className="inline-flex items-center gap-2 self-start text-sm font-semibold text-orange hover:underline"
+              >
+                <Plus size={14} /> Adicionar mensagem (opcional)
+              </button>
+            ) : (
+              <div className="grid gap-2">
+                <Textarea label="Mensagem" {...register("message")} error={errors.message?.message} />
+                <button
+                  type="button"
+                  onClick={() => setShowMessage(false)}
+                  className="inline-flex items-center gap-2 self-start text-xs font-semibold text-neutral-500 hover:text-orange"
+                >
+                  <Minus size={12} /> Remover mensagem
+                </button>
+              </div>
+            )}
 
             <label className="flex items-start gap-3 text-sm text-neutral-700">
               <input
@@ -79,6 +101,7 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
             <Button type="submit" disabled={status === "submitting"} className="w-full sm:w-auto">
               {status === "submitting" ? "Enviando..." : "Enviar mensagem"}
             </Button>
+            <p className="text-xs text-neutral-500">🕐 Respondemos em até 24h úteis.</p>
 
             {status === "success" && (
               <div className="rounded-lg bg-green-50 border border-green-200 p-4 text-sm text-green-800">
@@ -101,7 +124,7 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
                 <MessageCircle className="text-orange mt-0.5" size={20} />
                 <div>
                   <div className="font-semibold">WhatsApp</div>
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="font-spec text-neutral-700 hover:text-orange">
+                  <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer" className="font-spec text-neutral-700 hover:text-orange">
                     {WHATSAPP_DISPLAY}
                   </a>
                 </div>

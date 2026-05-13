@@ -10,20 +10,17 @@ export function VerticalCards() {
       <div className="container-x">
         <div className="max-w-3xl">
           <p className="font-eyebrow text-orange mb-3">Ecossistema</p>
-          <h2 className="font-h1 mb-4">Ecossistema Plan10</h2>
-          <p className="text-neutral-700">
-            Soluções completas para cada etapa da vida financeira e proteção patrimonial da sua família.
-          </p>
+          <h2 className="font-h1">Ecossistema Plan10</h2>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-10 grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-5">
           {verticals.map((v) => {
             const Icon = iconMap[v.icon as keyof typeof iconMap];
             return (
               <Link
                 key={v.id}
                 to={v.slug}
-                className="group relative flex flex-col rounded-2xl bg-white p-6 border border-neutral-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all overflow-hidden"
+                className="group relative flex flex-col rounded-2xl bg-white p-5 border border-neutral-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all overflow-hidden"
               >
                 <div
                   className="absolute top-0 left-0 right-0 h-1 group-hover:w-full group-hover:h-full group-hover:opacity-5 transition-all duration-300"
@@ -36,8 +33,10 @@ export function VerticalCards() {
                   {Icon && <Icon size={24} />}
                 </div>
                 <h3 className="relative font-h3 mb-2">{v.name}</h3>
-                <p className="relative text-sm text-neutral-700 mb-4">{v.chamada}</p>
-                <ul className="relative space-y-1.5 text-sm text-neutral-700 mb-5">
+                <p className="relative text-sm text-neutral-700 mb-3">{v.chamada}</p>
+                <ul
+                  className="relative space-y-1.5 text-sm text-neutral-700 mb-4 max-h-0 opacity-0 overflow-hidden group-hover:max-h-40 group-hover:opacity-100 transition-all duration-300 ease-out"
+                >
                   {v.features.map((f) => (
                     <li key={f} className="flex items-start gap-2">
                       <Check size={14} className="mt-1 flex-shrink-0" style={{ color: v.hubColor }} />

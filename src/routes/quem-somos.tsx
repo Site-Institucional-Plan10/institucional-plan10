@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Button } from "@/components/ui/Plan10Button";
-import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
@@ -82,7 +82,7 @@ function QuemSomos() {
             <Link to="/">
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-ink">Conheça nossas soluções</Button>
             </Link>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer">
               <Button variant="primary"><MessageCircle size={18} />Falar com especialista</Button>
             </a>
           </div>
