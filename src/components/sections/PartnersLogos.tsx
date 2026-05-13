@@ -16,7 +16,7 @@ export function PartnersLogos() {
     const doubled = [...items, ...items];
     return (
       <div className="overflow-hidden">
-        <div className={reverse ? "flex gap-4 animate-marquee-reverse w-max" : "flex gap-4 animate-marquee-slow w-max"}>
+        <div className="flex gap-4 animate-marquee-slow w-max" style={reverse ? { animationDirection: "reverse" } : undefined}>
           {doubled.map((p, i) => (
             <LogoBox key={`${p}-${i}`} name={p} />
           ))}
