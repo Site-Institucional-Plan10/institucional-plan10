@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
-import { WHATSAPP_URL, WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
+import { WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 export function Footer() {
   return (
