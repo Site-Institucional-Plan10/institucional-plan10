@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Link, useNavigate } from "@tanstack/react-router";
-import { Menu, Search, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "@tanstack/react-router";
+import { Menu, MessageCircle, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 import { verticals } from "@/data/verticals";
 
@@ -18,13 +19,37 @@ const navLinks = [
   { to: "/blog", label: "Blog" },
 ] as const;
 
-function HeaderLogo({ size = 48 }: { size?: number }) {
+// Mobile menu structure with dividers
+type MobileItem =
+  | { kind: "link"; to: string; label: string; hubColor?: string }
+  | { kind: "divider" };
+
+const mobileItems: MobileItem[] = [
+  { kind: "link", to: "/", label: "Home" },
+  { kind: "link", to: "/quem-somos", label: "Quem Somos" },
+  { kind: "divider" },
+  { kind: "link", to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
+  { kind: "link", to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
+  { kind: "link", to: "/consorcios", label: "Consórcios", hubColor: "#9857F2" },
+  { kind: "link", to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
+  { kind: "link", to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
+  { kind: "divider" },
+  { kind: "link", to: "/blog", label: "Blog" },
+  { kind: "link", to: "/fale-conosco", label: "Fale Conosco" },
+];
+
+function HeaderLogo({ size = 48, light = false }: { size?: number; light?: boolean }) {
   const { src } = useHubLogo();
   return (
     <img
       src={src}
       alt="Plan10"
-      style={{ height: size, width: "auto", objectFit: "contain" }}
+      style={{
+        height: size,
+        width: "auto",
+        objectFit: "contain",
+        filter: light ? "brightness(0) invert(1)" : undefined,
+      }}
     />
   );
 }
@@ -199,6 +224,34 @@ function SearchBox({ onClose }: { onClose: () => void }) {
 export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileClosing, setMobileClosing] = useState(false);
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  function handleLogoClick(e: React.MouseEvent) {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
+  function closeMobile() {
+    setMobileClosing(true);
+    setTimeout(() => {
+      setMobileOpen(false);
+      setMobileClosing(false);
+    }, 260);
+  }
+
+  // Escape to close mobile menu
+  useEffect(() => {
+    if (!mobileOpen) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") closeMobile();
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [mobileOpen]);
 
   return (
     <>
@@ -207,7 +260,12 @@ export function Header() {
         style={{ borderBottom: "1px solid #E8E8E8" }}
       >
         <div className="container-x flex h-20 items-center justify-between gap-4">
-          <Link to="/" className="flex-shrink-0" aria-label="Plan10 — Home">
+          <Link
+            to="/"
+            onClick={handleLogoClick}
+            className="flex-shrink-0 cursor-pointer"
+            aria-label="Plan10 — Home"
+          >
             <HeaderLogo size={48} />
           </Link>
 
@@ -259,44 +317,121 @@ export function Header() {
 
       {/* Mobile menu overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 bg-white lg:hidden flex flex-col">
-          <div className="container-x flex h-20 items-center justify-between" style={{ borderBottom: "1px solid #E8E8E8" }}>
-            <HeaderLogo size={44} />
+        <div
+          className="fixed inset-0 z-50 lg:hidden flex flex-col"
+          style={{
+            background: "#1A1A1A",
+            animation: `${mobileClosing ? "slideOutRight" : "slideInRight"} 280ms cubic-bezier(0.4,0,0.2,1) forwards`,
+          }}
+        >
+          <style>{`
+            @keyframes slideInRight {
+              from { transform: translateX(100%); opacity: 0; }
+              to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+              from { transform: translateX(0); opacity: 1; }
+              to { transform: translateX(100%); opacity: 0; }
+            }
+          `}</style>
+
+          <div className="flex items-center justify-between pt-6 px-6">
+            <Link
+              to="/"
+              onClick={(e) => {
+                handleLogoClick(e);
+                closeMobile();
+              }}
+              aria-label="Plan10 — Home"
+              className="cursor-pointer"
+            >
+              <HeaderLogo size={40} light />
+            </Link>
             <button
               type="button"
-              onClick={() => setMobileOpen(false)}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
+              onClick={closeMobile}
+              className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10"
               aria-label="Fechar menu"
             >
-              <X size={24} />
+              <X size={28} />
             </button>
           </div>
-          <nav className="container-x flex flex-col gap-1 py-4">
-            {navLinks.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-3 rounded-lg px-4 py-4 text-lg font-semibold hover:bg-neutral-100"
-                style={{ color: "#1A1A1A" }}
-                activeProps={{ style: { color: "#FF6B00" } }}
-              >
-                {"hubColor" in l && l.hubColor && (
-                  <span className="h-2 w-2 rounded-full" style={{ backgroundColor: l.hubColor }} />
-                )}
-                {l.label}
-              </Link>
-            ))}
-            <Link
-              to="/fale-conosco"
-              onClick={() => setMobileOpen(false)}
-              className="mt-4"
-            >
-              <Button variant="secondary" className="w-full">Fale Conosco</Button>
-            </Link>
+
+          <nav className="flex-1 flex flex-col justify-center gap-1 mt-6">
+            {mobileItems.map((item, i) => {
+              if (item.kind === "divider") {
+                return (
+                  <div
+                    key={`div-${i}`}
+                    className="mx-8 my-3"
+                    style={{ height: 1, background: "rgba(255,255,255,0.12)" }}
+                  />
+                );
+              }
+              const isActive = pathname === item.to;
+              return (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={(e) => {
+                    if (item.to === "/") handleLogoClick(e);
+                    closeMobile();
+                  }}
+                  className="mobile-nav-item"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 12,
+                    padding: "18px 32px",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    color: isActive ? "#FF6B00" : "#FFFFFF",
+                    textDecoration: "none",
+                    borderLeft: `3px solid ${isActive ? "#FF6B00" : "transparent"}`,
+                    transition: "border-color 150ms, color 150ms",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderLeftColor = "#FF6B00";
+                    e.currentTarget.style.color = "#FF6B00";
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      e.currentTarget.style.borderLeftColor = "transparent";
+                      e.currentTarget.style.color = "#FFFFFF";
+                    }
+                  }}
+                >
+                  {item.hubColor && (
+                    <span
+                      style={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: "50%",
+                        backgroundColor: item.hubColor,
+                        display: "inline-block",
+                        flexShrink: 0,
+                      }}
+                    />
+                  )}
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
-          <div className="container-x mt-auto pb-8 text-sm text-neutral-500">
-            {verticals.length} hubs · 24/7
+
+          <div className="mt-auto pb-8 px-8">
+            <a
+              href={getWhatsAppUrl("home")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobile}
+              className="flex items-center justify-center gap-2 w-full rounded-lg py-4 font-semibold text-white transition hover:opacity-90"
+              style={{ background: "#FF6B00" }}
+            >
+              <MessageCircle size={20} />
+              Falar com especialista
+            </a>
           </div>
         </div>
       )}
