@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ChevronDown, MessageCircle } from "lucide-react";
+import { cn, getWhatsAppUrl } from "@/lib/utils";
 
 interface FAQItem {
   title: string;
@@ -15,12 +15,20 @@ const defaultItems: FAQItem[] = [
   { title: "Quais seguradoras vocês trabalham?", content: "Trabalhamos com as principais seguradoras do mercado brasileiro. Veja a lista completa na seção Parceiros." },
 ];
 
-export function FAQSection({ items, title = "Perguntas Frequentes" }: { items?: FAQItem[]; title?: string }) {
+export function FAQSection({
+  items,
+  title = "Perguntas Frequentes",
+  whatsappContext = "default",
+}: {
+  items?: FAQItem[];
+  title?: string;
+  whatsappContext?: string;
+}) {
   const list = items ?? defaultItems;
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-12 md:py-20">
       <div className="container-x max-w-3xl mx-auto">
         <p className="font-eyebrow text-orange mb-3">Dúvidas</p>
         <h2 className="font-h1 mb-8">{title}</h2>
@@ -41,7 +49,7 @@ export function FAQSection({ items, title = "Perguntas Frequentes" }: { items?: 
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center gap-4 px-6 py-5 text-left"
+                  className="flex w-full items-center gap-4 px-5 py-4 text-left"
                   aria-expanded={isOpen}
                 >
                   <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-orange text-white text-[13px] font-bold">
@@ -59,7 +67,7 @@ export function FAQSection({ items, title = "Perguntas Frequentes" }: { items?: 
                   style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                 >
                   <div className="overflow-hidden">
-                    <div className="pl-[72px] pr-6 pb-5 text-neutral-700 leading-[1.7]">
+                    <div className="pl-[60px] pr-5 pb-4 text-neutral-700 leading-[1.7]">
                       {item.content}
                     </div>
                   </div>
@@ -67,6 +75,19 @@ export function FAQSection({ items, title = "Perguntas Frequentes" }: { items?: 
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-xl border border-neutral-200 bg-neutral-100 p-5">
+          <p className="font-semibold text-ink">Não encontrou o que procura?</p>
+          <a
+            href={getWhatsAppUrl(whatsappContext)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white hover:bg-orange-hover transition"
+          >
+            <MessageCircle size={16} />
+            Falar com um especialista →
+          </a>
         </div>
       </div>
     </section>
