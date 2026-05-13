@@ -13,7 +13,7 @@ export function WhatsAppButton() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group fixed z-50 flex items-center justify-center rounded-full bg-[#25D366] text-white animate-whatsapp-pulse"
+      className="group fixed z-50 flex items-center justify-center rounded-full bg-[#25D366] text-white animate-whatsapp-pulse cursor-pointer transition-[transform,box-shadow] duration-200 ease-out hover:scale-110 hover:shadow-[0_8px_28px_rgba(37,211,102,0.5)]"
       style={{ bottom: 28, right: 28, width: 64, height: 64 }}
       aria-label="Fale agora pelo WhatsApp"
     >
