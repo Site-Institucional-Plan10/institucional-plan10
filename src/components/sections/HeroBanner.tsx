@@ -25,7 +25,7 @@ const homeSlides: HeroSlide[] = [
     headlineLines: ["Proteção,", "saúde e", "planejamento."],
     headlineAccent: "planejamento.",
     subheadline: "Consultoria independente para pessoa física e jurídica em 5 grandes áreas.",
-    ctaSecondaryLabel: "Conhecer Soluções",
+    ctaSecondaryLabel: "Conheça Nossas Soluções",
     ctaSecondaryHref: "#verticais",
   },
 ];
