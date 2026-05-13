@@ -48,7 +48,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 WhatsApp:{" "}
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="font-spec hover:text-orange">
+                <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer" className="font-spec hover:text-orange">
                   {WHATSAPP_DISPLAY}
                 </a>
               </li>
