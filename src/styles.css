@@ -83,8 +83,15 @@
   @media (min-width: 640px) { .container-x { padding-inline: 1.5rem; } }
   @media (min-width: 1024px) { .container-x { padding-inline: 2rem; } }
 
-  .section-y { padding-block: 4rem; }
-  @media (min-width: 768px) { .section-y { padding-block: 6rem; } }
+  .section-y { padding-block: 3rem; }
+  @media (min-width: 768px) { .section-y { padding-block: 5rem; } }
+
+  @keyframes marquee-slow {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee-slow { animation: marquee-slow 60s linear infinite; }
+  .animate-marquee-slow:hover { animation-play-state: paused; }
 
   @keyframes pulse-ring {
     0%, 100% { transform: scale(1); }
