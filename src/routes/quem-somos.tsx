@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Button } from "@/components/ui/Plan10Button";
-import { WHATSAPP_URL } from "@/components/common/WhatsAppButton";
+import { getWhatsAppUrl } from "@/lib/utils";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
