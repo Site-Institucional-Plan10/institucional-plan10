@@ -85,7 +85,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-x py-6 flex flex-col md:flex-row gap-2 md:gap-4 items-center justify-between text-xs text-neutral-300">
           <span>© 2026 Plan10 Corretora. Uma empresa Plan Group.</span>
-          <span>Desenvolvido por Next Assessoria</span>
+          <span>Criado por <a href="https://www.nextassessoria.com/" target="_blank" rel="noopener noreferrer" className="hover:text-orange transition">Next Assessoria</a></span>
         </div>
       </div>
     </footer>
