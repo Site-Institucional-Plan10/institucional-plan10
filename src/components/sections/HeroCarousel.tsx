@@ -24,8 +24,10 @@ interface HeroCarouselProps {
   minHeightClass?: string;
 }
 
-export function HeroCarousel({ slides, intervalMs = 6000, minHeightClass = "min-h-[560px]" }: HeroCarouselProps) {
+export function HeroCarousel({ slides, intervalMs = 6000, minHeightClass = "min-h-[480px] md:min-h-[560px]" }: HeroCarouselProps) {
   const [active, setActive] = useState(0);
+  const { pathname } = useLocation();
+  const waHref = getWhatsAppUrl(getVerticalContextFromPath(pathname));
   const pausedRef = useRef(false);
 
   useEffect(() => {
