@@ -1,12 +1,16 @@
 import { MessageCircle } from "lucide-react";
+import { useLocation } from "@tanstack/react-router";
+import { getWhatsAppUrl, getVerticalContextFromPath } from "@/lib/utils";
 
-export const WHATSAPP_URL = "https://wa.me/5511938012222";
-export const WHATSAPP_DISPLAY = "(11) 9 3801 2222";
+export const WHATSAPP_DISPLAY = "(11) 94000 1010";
 
 export function WhatsAppButton() {
+  const { pathname } = useLocation();
+  const ctx = getVerticalContextFromPath(pathname);
+  const href = getWhatsAppUrl(ctx);
   return (
     <a
-      href={WHATSAPP_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="group fixed z-50 flex items-center justify-center rounded-full bg-[#25D366] text-white animate-whatsapp-pulse"
