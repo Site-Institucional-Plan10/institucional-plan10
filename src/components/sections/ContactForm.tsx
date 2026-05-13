@@ -1,10 +1,11 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Lock, Mail, MessageCircle, Clock } from "lucide-react";
+import { Lock, Mail, MessageCircle, Clock, Plus, Minus } from "lucide-react";
 import { Input, Textarea, Select } from "@/components/ui/primitives";
 import { Button } from "@/components/ui/Plan10Button";
 import { useContactForm } from "@/hooks/useContactForm";
-import { maskPhoneBR } from "@/lib/utils";
-import { WHATSAPP_DISPLAY, WHATSAPP_URL } from "@/components/common/WhatsAppButton";
+import { maskPhoneBR, getWhatsAppUrl } from "@/lib/utils";
+import { WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
 
 interface ContactFormProps {
   source: string;
