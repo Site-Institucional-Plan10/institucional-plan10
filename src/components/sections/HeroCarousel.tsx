@@ -68,7 +68,7 @@ export function HeroCarousel({ slides, intervalMs = 6000, minHeightClass = "min-
         );
       })}
 
-      <div className={cn("relative container-x grid gap-10 lg:grid-cols-2 lg:items-center py-20 md:py-28", minHeightClass)} style={{ zIndex: 10 }}>
+      <div className={cn("relative container-x grid gap-10 lg:grid-cols-2 lg:items-center py-12 md:py-28", minHeightClass)} style={{ zIndex: 10 }}>
         <div className="text-white" style={{ position: "relative", zIndex: 10 }}>
           <p
             className="mb-5 uppercase"
@@ -76,7 +76,7 @@ export function HeroCarousel({ slides, intervalMs = 6000, minHeightClass = "min-
           >
             {current.badge}
           </p>
-          <h1 className="font-display" style={{ fontWeight: 800 }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight">
             {current.headlineLines.map((line, idx) => (
               <span
                 key={idx}
@@ -87,11 +87,11 @@ export function HeroCarousel({ slides, intervalMs = 6000, minHeightClass = "min-
               </span>
             ))}
           </h1>
-          <p className="mt-6 text-lg max-w-xl leading-[1.7]" style={{ color: "rgba(255,255,255,0.88)" }}>
+          <p className="mt-4 md:mt-6 text-base md:text-lg max-w-xl leading-[1.6]" style={{ color: "rgba(255,255,255,0.88)" }}>
             {current.subheadline}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+          <div className="mt-6 md:mt-8 flex flex-wrap gap-3">
+            <a href={waHref} target="_blank" rel="noopener noreferrer">
               <Button variant="primary" size="lg">
                 <MessageCircle size={18} />
                 Falar com Especialista
