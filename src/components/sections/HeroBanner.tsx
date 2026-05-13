@@ -12,7 +12,7 @@ const homeSlides: HeroSlide[] = [
     headlineLines: ["Seu futuro", "muito mais", "tranquilo."],
     headlineAccent: "tranquilo.",
     subheadline: "Mais de 40 produtos em um só lugar: seguros, saúde, consórcio, serviços e finanças.",
-    ctaSecondaryLabel: "Conhecer Soluções",
+    ctaSecondaryLabel: "Conheça Nossas Soluções",
     ctaSecondaryHref: "#verticais",
   },
   {
@@ -25,7 +25,7 @@ const homeSlides: HeroSlide[] = [
     headlineLines: ["Proteção,", "saúde e", "planejamento."],
     headlineAccent: "planejamento.",
     subheadline: "Consultoria independente para pessoa física e jurídica em 5 grandes áreas.",
-    ctaSecondaryLabel: "Conhecer Soluções",
+    ctaSecondaryLabel: "Conheça Nossas Soluções",
     ctaSecondaryHref: "#verticais",
   },
 ];
