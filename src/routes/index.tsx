@@ -36,7 +36,7 @@ function HomePage() {
       <div id="contato">
         <ContactForm source="home" subtitle="Conte seu cenário. Em até 24h úteis um especialista te retorna." />
       </div>
-      <FAQSection />
+      <FAQSection whatsappContext="home" />
     </>
   );
 }
