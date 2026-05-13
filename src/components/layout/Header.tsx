@@ -232,11 +232,11 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 pr-1 md:pr-0">
             <button
               type="button"
               onClick={() => setSearchOpen((s) => !s)}
-              className="hidden md:flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100 transition"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100 transition"
               aria-label="Buscar"
             >
               <Search size={20} />
