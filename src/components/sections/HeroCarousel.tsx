@@ -254,7 +254,7 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
 function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; waHref: string; minHeightClass: string }) {
   return (
     <SlideShell background={slide.background} minHeightClass={minHeightClass}>
-      <div className={cn("container-x grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center py-14 md:py-20", minHeightClass)}>
+      <div className={cn("container-x grid gap-7 lg:gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center pt-16 pb-24 md:py-20", minHeightClass)}>
         {/* Circle image — mobile first (above text), desktop right */}
         <div className="order-1 lg:order-2 flex justify-center">
           <div
