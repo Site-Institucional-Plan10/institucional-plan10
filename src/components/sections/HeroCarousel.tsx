@@ -1,11 +1,44 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { useLocation } from "@tanstack/react-router";
-import { MessageCircle, Shield, Heart, Building2, TrendingUp, Clock, Check } from "lucide-react";
+import { Link, useLocation } from "@tanstack/react-router";
+import {
+  MessageCircle,
+  Shield,
+  Heart,
+  Building2,
+  TrendingUp,
+  Clock,
+  Check,
+  ShieldCheck,
+  HeartPulse,
+  Landmark,
+  Banknote,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { cn, getWhatsAppUrl, getVerticalContextFromPath } from "@/lib/utils";
 
-type IconName = "Shield" | "Heart" | "Building2" | "TrendingUp" | "Clock";
-const iconMap: Record<IconName, typeof Shield> = { Shield, Heart, Building2, TrendingUp, Clock };
+type IconName =
+  | "Shield"
+  | "Heart"
+  | "Building2"
+  | "TrendingUp"
+  | "Clock"
+  | "ShieldCheck"
+  | "HeartPulse"
+  | "Landmark"
+  | "Banknote";
+const iconMap: Record<IconName, typeof Shield> = {
+  Shield,
+  Heart,
+  Building2,
+  TrendingUp,
+  Clock,
+  ShieldCheck,
+  HeartPulse,
+  Landmark,
+  Banknote,
+};
 
 export interface HeroSlideCentered {
   id: string | number;
@@ -18,7 +51,7 @@ export interface HeroSlideCentered {
   headlineLines: string[];
   headlineAccent?: string;
   subheadline: string;
-  pills?: { icon: IconName; label: string; color: string }[];
+  pills?: { icon: IconName; label: string; color: string; route?: string }[];
   ctaSecondaryLabel?: string;
   ctaSecondaryHref?: string;
 }
@@ -26,7 +59,7 @@ export interface HeroSlideCentered {
 export interface HeroSlideSplit {
   id: string | number;
   layout: "split";
-  background: string; // full CSS background (gradient)
+  background: string;
   hubColor: string;
   circleImage: string;
   eyebrow: string;
@@ -37,7 +70,6 @@ export interface HeroSlideSplit {
   ctaSecondaryHref?: string;
 }
 
-// Legacy shape (still used by some pages) — treated as centered
 export interface HeroSlideLegacy {
   id: string | number;
   backgroundImage: string;
@@ -78,8 +110,13 @@ function normalizeSlide(s: HeroSlide): HeroSlideCentered | HeroSlideSplit {
   };
 }
 
-export function HeroCarousel({ slides, intervalMs = 7000, minHeightClass = "min-h-[560px] md:min-h-[640px]" }: HeroCarouselProps) {
+export function HeroCarousel({
+  slides,
+  intervalMs = 7000,
+  minHeightClass = "min-h-[100svh] md:min-h-[640px]",
+}: HeroCarouselProps) {
   const [active, setActive] = useState(0);
+  const [tick, setTick] = useState(0);
   const { pathname } = useLocation();
   const waHref = getWhatsAppUrl(getVerticalContextFromPath(pathname));
   const pausedRef = useRef(false);
@@ -89,13 +126,24 @@ export function HeroCarousel({ slides, intervalMs = 7000, minHeightClass = "min-
       if (!pausedRef.current) setActive((i) => (i + 1) % slides.length);
     }, intervalMs);
     return () => clearInterval(t);
-  }, [slides.length, intervalMs]);
+  }, [slides.length, intervalMs, tick]);
+
+  const go = (i: number) => {
+    setActive(((i % slides.length) + slides.length) % slides.length);
+    setTick((t) => t + 1);
+  };
+  const handlePrev = () => go(active - 1);
+  const handleNext = () => go(active + 1);
 
   return (
     <div
       className="relative overflow-hidden"
-      onMouseEnter={() => { pausedRef.current = true; }}
-      onMouseLeave={() => { pausedRef.current = false; }}
+      onMouseEnter={() => {
+        pausedRef.current = true;
+      }}
+      onMouseLeave={() => {
+        pausedRef.current = false;
+      }}
     >
       <div className={cn("relative", minHeightClass)}>
         {slides.map((raw, i) => {
@@ -120,12 +168,30 @@ export function HeroCarousel({ slides, intervalMs = 7000, minHeightClass = "min-
         })}
       </div>
 
+      {/* Prev / Next arrows */}
+      <button
+        type="button"
+        onClick={handlePrev}
+        aria-label="Banner anterior"
+        className="hero-arrow hero-arrow-left"
+      >
+        <ChevronLeft size={22} strokeWidth={2.5} />
+      </button>
+      <button
+        type="button"
+        onClick={handleNext}
+        aria-label="Próximo banner"
+        className="hero-arrow hero-arrow-right"
+      >
+        <ChevronRight size={22} strokeWidth={2.5} />
+      </button>
+
       {/* Dots */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:left-8 flex gap-2 z-20">
+      <div className="hero-dots flex gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => setActive(i)}
+            onClick={() => go(i)}
             aria-label={`Slide ${i + 1}`}
             className={cn(
               "h-2 w-2 rounded-full border border-white/80 transition",
@@ -138,7 +204,15 @@ export function HeroCarousel({ slides, intervalMs = 7000, minHeightClass = "min-
   );
 }
 
-function SlideShell({ children, background, bgImage, bgPosition, overlay1, overlay2, minHeightClass }: {
+function SlideShell({
+  children,
+  background,
+  bgImage,
+  bgPosition,
+  overlay1,
+  overlay2,
+  minHeightClass,
+}: {
   children: ReactNode;
   background?: string;
   bgImage?: string;
@@ -161,23 +235,44 @@ function SlideShell({ children, background, bgImage, bgPosition, overlay1, overl
           : { background }
       }
     >
-      {overlay1 && <div className="absolute inset-0 pointer-events-none" style={{ background: overlay1, zIndex: 1 }} />}
-      {overlay2 && <div className="absolute inset-0 pointer-events-none" style={{ background: overlay2, zIndex: 2 }} />}
-      <div className="relative" style={{ zIndex: 10 }}>{children}</div>
+      {overlay1 && (
+        <div className="absolute inset-0 pointer-events-none" style={{ background: overlay1, zIndex: 1 }} />
+      )}
+      {overlay2 && (
+        <div className="absolute inset-0 pointer-events-none" style={{ background: overlay2, zIndex: 2 }} />
+      )}
+      <div className="relative" style={{ zIndex: 10 }}>
+        {children}
+      </div>
     </div>
   );
 }
 
-function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCentered; waHref: string; minHeightClass: string }) {
+function CenteredSlide({
+  slide,
+  waHref,
+  minHeightClass,
+}: {
+  slide: HeroSlideCentered;
+  waHref: string;
+  minHeightClass: string;
+}) {
   return (
     <SlideShell
       bgImage={slide.backgroundImage}
       bgPosition={slide.backgroundPosition}
       overlay1={slide.overlayLayer1 ?? "rgba(5, 8, 35, 0.88)"}
-      overlay2={slide.overlayLayer2 ?? "radial-gradient(ellipse at center, rgba(26,79,160,0.25) 0%, transparent 70%)"}
+      overlay2={
+        slide.overlayLayer2 ?? "radial-gradient(ellipse at center, rgba(26,79,160,0.25) 0%, transparent 70%)"
+      }
       minHeightClass={minHeightClass}
     >
-      <div className={cn("container-x flex flex-col items-center justify-center text-center text-white py-16 md:py-24", minHeightClass)}>
+      <div
+        className={cn(
+          "container-x flex flex-col items-center justify-center text-center text-white py-16 md:py-24",
+          minHeightClass,
+        )}
+      >
         <p
           className="mb-5 uppercase"
           style={{ color: "#FF6B00", letterSpacing: "0.15em", fontSize: "0.75rem", fontWeight: 700 }}
@@ -186,40 +281,55 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
         </p>
         <h1
           className="font-extrabold tracking-tight"
-          style={{ fontSize: "clamp(1.8rem, 5vw, 3.5rem)", lineHeight: 1.14 }}
+          style={{ fontSize: "clamp(1.65rem, 5vw, 3.5rem)", lineHeight: 1.14 }}
         >
           {slide.headlineLines.map((line, idx) => (
-            <span key={idx} className="block" style={{ color: line === slide.headlineAccent ? "#FF6B00" : "#FFFFFF" }}>
+            <span
+              key={idx}
+              className="block"
+              style={{ color: line === slide.headlineAccent ? "#FF6B00" : "#FFFFFF" }}
+            >
               {line}
             </span>
           ))}
         </h1>
-        <p className="mt-5 text-base md:text-lg" style={{ color: "rgba(255,255,255,0.75)", maxWidth: 560, lineHeight: 1.6 }}>
+        <p
+          className="mt-5 text-base md:text-lg"
+          style={{ color: "rgba(255,255,255,0.75)", maxWidth: 560, lineHeight: 1.6 }}
+        >
           {slide.subheadline}
         </p>
 
         {slide.pills && slide.pills.length > 0 && (
-          <div className="mt-8 grid grid-cols-2 gap-3 max-w-md">
+          <div
+            className="mt-8 grid grid-cols-2 w-full"
+            style={{ gap: 10, maxWidth: 420 }}
+          >
             {slide.pills.map((p) => {
               const Ico = iconMap[p.icon];
-              return (
-                <span
-                  key={p.label}
-                  className="inline-flex items-center justify-center gap-2"
-                  style={{
-                    padding: "10px 20px",
-                    borderRadius: 999,
-                    border: "1px solid rgba(255,255,255,0.20)",
-                    background: "rgba(255,255,255,0.07)",
-                    backdropFilter: "blur(8px)",
-                    color: "white",
-                    fontSize: "0.8rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.08em",
-                  }}
-                >
-                  {Ico && <Ico size={16} style={{ color: p.color }} strokeWidth={2} />}
-                  {p.label}
+              const content = (
+                <>
+                  {Ico && <Ico size={18} style={{ color: p.color }} strokeWidth={2} />}
+                  <span
+                    style={{
+                      fontSize: "0.78rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.10em",
+                      color: "white",
+                    }}
+                  >
+                    {p.label}
+                  </span>
+                </>
+              );
+              const className = "hub-badge";
+              return p.route ? (
+                <Link key={p.label} to={p.route} className={className}>
+                  {content}
+                </Link>
+              ) : (
+                <span key={p.label} className={className}>
+                  {content}
                 </span>
               );
             })}
@@ -239,7 +349,11 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto justify-center"
-                style={{ border: "1.5px solid rgba(255,255,255,0.60)", color: "#FFFFFF", background: "transparent" }}
+                style={{
+                  border: "1.5px solid rgba(255,255,255,0.60)",
+                  color: "#FFFFFF",
+                  background: "transparent",
+                }}
               >
                 {slide.ctaSecondaryLabel ?? "Saiba mais"}
               </Button>
@@ -251,14 +365,48 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
   );
 }
 
-function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; waHref: string; minHeightClass: string }) {
+function SplitSlide({
+  slide,
+  waHref,
+  minHeightClass,
+}: {
+  slide: HeroSlideSplit;
+  waHref: string;
+  minHeightClass: string;
+}) {
   return (
     <SlideShell background={slide.background} minHeightClass={minHeightClass}>
-      <div className={cn("container-x grid gap-7 lg:gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center pt-16 pb-24 md:py-20", minHeightClass)}>
-        {/* Circle image — mobile first (above text), desktop right */}
-        <div className="order-1 lg:order-2 flex justify-center">
+      <div
+        className={cn(
+          "container-x grid gap-7 lg:gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center pt-24 pb-24 md:py-20",
+          minHeightClass,
+        )}
+      >
+        {/* Eyebrow + Headline (mobile order 1) */}
+        <div className="order-1 lg:order-1 text-white text-center lg:text-left">
+          <p
+            className="mb-4 uppercase"
+            style={{
+              color: slide.hubColor,
+              fontSize: "0.72rem",
+              letterSpacing: "0.12em",
+              fontWeight: 700,
+            }}
+          >
+            {slide.eyebrow}
+          </p>
+          <h1
+            className="font-extrabold"
+            style={{ fontSize: "clamp(1.65rem, 5vw, 3rem)", lineHeight: 1.18, color: "#FFFFFF" }}
+          >
+            {slide.headline}
+          </h1>
+        </div>
+
+        {/* Circle image (mobile order 2, desktop right column) */}
+        <div className="order-2 lg:order-2 lg:row-span-2 flex justify-center lg:items-center">
           <div
-            className="relative overflow-hidden w-[220px] h-[220px] md:w-[400px] md:h-[400px]"
+            className="relative overflow-hidden w-[230px] h-[230px] md:w-[400px] md:h-[400px]"
             style={{
               borderRadius: "50%",
               border: "2px solid rgba(255, 107, 0, 0.5)",
@@ -274,28 +422,16 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
           </div>
         </div>
 
-        {/* Text */}
-        <div className="order-2 lg:order-1 text-white text-center lg:text-left">
+        {/* Microcopy + CTAs (mobile order 3) */}
+        <div className="order-3 lg:order-1 text-white text-center lg:text-left">
           <p
-            className="mb-4 uppercase"
-            style={{ color: slide.hubColor, fontSize: "0.72rem", letterSpacing: "0.12em", fontWeight: 700 }}
-          >
-            {slide.eyebrow}
-          </p>
-          <h1
-            className="font-extrabold"
-            style={{ fontSize: "clamp(1.6rem, 5vw, 3rem)", lineHeight: 1.18, color: "#FFFFFF" }}
-          >
-            {slide.headline}
-          </h1>
-          <p
-            className="mt-5 mx-auto lg:mx-0 hidden md:block"
+            className="mt-2 mx-auto lg:mx-0 hidden md:block"
             style={{ color: "rgba(255,255,255,0.72)", fontSize: "1rem", maxWidth: 480, lineHeight: 1.6 }}
           >
             {slide.subheadline}
           </p>
 
-          <ul className="mt-6 flex flex-col sm:flex-row sm:flex-wrap gap-x-5 gap-y-2 justify-center lg:justify-start">
+          <ul className="mt-2 md:mt-6 flex flex-col items-center sm:items-start sm:flex-row sm:flex-wrap gap-x-5 gap-y-2 justify-center lg:justify-start">
             {slide.microcopy.map((m) => (
               <li
                 key={m}
@@ -308,7 +444,7 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
             ))}
           </ul>
 
-          <div className="mt-7 flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start w-full">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start w-full">
             <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                 <MessageCircle size={18} />
@@ -321,7 +457,11 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
                   variant="ghost"
                   size="lg"
                   className="w-full sm:w-auto justify-center"
-                  style={{ border: "1.5px solid rgba(255,255,255,0.60)", color: "#FFFFFF", background: "transparent" }}
+                  style={{
+                    border: "1.5px solid rgba(255,255,255,0.60)",
+                    color: "#FFFFFF",
+                    background: "transparent",
+                  }}
                 >
                   {slide.ctaSecondaryLabel ?? "Saiba mais"}
                 </Button>
