@@ -121,7 +121,7 @@ export function HeroCarousel({ slides, intervalMs = 7000, minHeightClass = "min-
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-4 sm:left-6 lg:left-8 flex gap-2 z-20">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:left-8 flex gap-2 z-20">
         {slides.map((_, i) => (
           <button
             key={i}
