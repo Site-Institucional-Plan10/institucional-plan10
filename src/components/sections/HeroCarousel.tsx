@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode, type TouchEvent as ReactTouchEvent } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import {
   MessageCircle,
