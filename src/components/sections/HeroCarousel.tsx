@@ -464,7 +464,7 @@ function SplitSlide({
             ))}
           </ul>
 
-          <div className="order-5 mt-4 flex flex-col sm:flex-row flex-wrap gap-3 w-full md:w-auto">
+          <div className="order-6 mt-4 flex flex-col sm:flex-row flex-wrap gap-3 w-full md:w-auto">
             <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                 <MessageCircle size={18} />
