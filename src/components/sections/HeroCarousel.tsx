@@ -451,7 +451,7 @@ function SplitSlide({
             {slide.subheadline}
           </p>
 
-          <ul className="order-4 mt-2 flex flex-col items-center md:items-start sm:flex-row md:flex-row sm:flex-wrap gap-x-5 gap-y-2 w-full md:w-auto">
+          <ul className="order-5 mt-2 flex flex-col items-center md:items-start sm:flex-row md:flex-row sm:flex-wrap gap-x-5 gap-y-2 w-full md:w-auto">
             {slide.microcopy.map((m) => (
               <li
                 key={m}
