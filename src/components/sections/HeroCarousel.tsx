@@ -137,11 +137,11 @@ export function HeroCarousel({
   const handlePrev = () => go(active - 1);
   const handleNext = () => go(active + 1);
 
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = (e: ReactTouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
     touchStartY.current = e.touches[0].clientY;
   };
-  const handleTouchEnd = (e: React.TouchEvent) => {
+  const handleTouchEnd = (e: ReactTouchEvent) => {
     const diffX = touchStartX.current - e.changedTouches[0].clientX;
     const diffY = Math.abs(touchStartY.current - e.changedTouches[0].clientY);
     if (Math.abs(diffX) > 40 && diffY < 60) {
