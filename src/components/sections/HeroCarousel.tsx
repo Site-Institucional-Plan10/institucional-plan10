@@ -120,6 +120,8 @@ export function HeroCarousel({
   const { pathname } = useLocation();
   const waHref = getWhatsAppUrl(getVerticalContextFromPath(pathname));
   const pausedRef = useRef(false);
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -135,6 +137,19 @@ export function HeroCarousel({
   const handlePrev = () => go(active - 1);
   const handleNext = () => go(active + 1);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const diffX = touchStartX.current - e.changedTouches[0].clientX;
+    const diffY = Math.abs(touchStartY.current - e.changedTouches[0].clientY);
+    if (Math.abs(diffX) > 40 && diffY < 60) {
+      if (diffX > 0) handleNext();
+      else handlePrev();
+    }
+  };
+
   return (
     <div
       className="relative overflow-hidden"
@@ -144,6 +159,8 @@ export function HeroCarousel({
       onMouseLeave={() => {
         pausedRef.current = false;
       }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <div className={cn("relative", minHeightClass)}>
         {slides.map((raw, i) => {
