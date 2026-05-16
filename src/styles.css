@@ -172,16 +172,37 @@
 
 /* Hero dots */
 .hero-dots {
-  position: absolute;
+  position: absolute !important;
   bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   z-index: 20;
   pointer-events: auto;
 }
 
 @media (max-width: 767px) {
+  .hero-arrow,
   .hero-arrow-left,
-  .hero-arrow-right { display: none; }
-  .hero-dots { bottom: 20px; }
+  .hero-arrow-right {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  .hero-dots { bottom: 12px !important; }
+  .hero-banner-inner {
+    padding-bottom: 56px !important;
+    min-height: 100svh;
+    box-sizing: border-box;
+  }
+  .hero-banner-ctas {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+    position: relative;
+    z-index: 10;
+  }
+  .hero-banner-ctas > * {
+    width: 100% !important;
+    justify-content: center;
+  }
 }

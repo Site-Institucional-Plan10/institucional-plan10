@@ -383,18 +383,18 @@ function CenteredSlide({
 }
 
 const imagePositions: Record<string, string> = {
-  "hero-home-1.png": "center 55%",
+  "hero-home-1.png": "center 52%",
   "hero-home-2.jpg": "center 50%",
-  "hero-seguros-1.png": "35% center",
-  "hero-seguros-2.png": "center 30%",
-  "hero-saude-1.png": "center 25%",
-  "hero-saude-2.jpg": "center 20%",
-  "hero-consorcios-1.png": "60% 40%",
-  "hero-consorcios-2.png": "40% center",
-  "hero-financas-1.png": "center 35%",
-  "hero-financas-2.png": "center 20%",
-  "hero-servicos-1.png": "45% center",
-  "hero-servicos-2.png": "center 40%",
+  "hero-seguros-1.png": "32% 52%",
+  "hero-seguros-2.png": "center 22%",
+  "hero-saude-1.png": "center 18%",
+  "hero-saude-2.jpg": "center 15%",
+  "hero-consorcios-1.png": "68% 38%",
+  "hero-consorcios-2.png": "42% center",
+  "hero-financas-1.png": "center 30%",
+  "hero-financas-2.png": "center 12%",
+  "hero-servicos-1.png": "42% 48%",
+  "hero-servicos-2.png": "center 42%",
 };
 
 function getImagePosition(src: string): string {
@@ -415,12 +415,12 @@ function SplitSlide({
     <SlideShell background={slide.background} minHeightClass={minHeightClass}>
       <div
         className={cn(
-          "container-x flex flex-col md:flex-row md:items-center md:justify-between gap-7 md:gap-12 pt-24 pb-24 md:py-20",
+          "hero-banner-inner container-x flex flex-col md:flex-row md:items-center md:justify-between gap-7 md:gap-12 pt-24 pb-24 md:py-20",
           minHeightClass,
         )}
       >
-        {/* LEFT column: all text + CTAs (desktop), reordered on mobile */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left text-white order-1 md:order-1 w-full md:basis-[52%] md:flex-none gap-4">
+        {/* LEFT column on desktop: all text + CTAs */}
+        <div className="hero-banner-text flex flex-col items-center md:items-start text-center md:text-left text-white order-1 md:order-1 w-full md:basis-[52%] md:flex-none gap-4">
           <p
             className="uppercase order-1"
             style={{
@@ -464,7 +464,7 @@ function SplitSlide({
             ))}
           </ul>
 
-          <div className="order-6 mt-4 flex flex-col sm:flex-row flex-wrap gap-3 w-full md:w-auto">
+          <div className="hero-banner-ctas order-6 mt-4 flex flex-col sm:flex-row flex-wrap gap-3 w-full md:w-auto">
             <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                 <MessageCircle size={18} />
@@ -490,8 +490,8 @@ function SplitSlide({
           </div>
         </div>
 
-        {/* RIGHT column: circle (desktop only — mobile circle is inside left column) */}
-        <div className="hidden md:flex md:basis-[44%] md:flex-none justify-center items-center">
+        {/* RIGHT column on desktop: circle */}
+        <div className="hero-banner-visual hidden md:flex md:order-2 md:basis-[44%] md:flex-none justify-center items-center">
           <CircleImage src={slide.circleImage} sizeClass="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]" />
         </div>
       </div>
