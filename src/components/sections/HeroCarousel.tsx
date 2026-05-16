@@ -186,7 +186,7 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
         </p>
         <h1
           className="font-extrabold tracking-tight"
-          style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", lineHeight: 1.12 }}
+          style={{ fontSize: "clamp(1.8rem, 5vw, 3.5rem)", lineHeight: 1.14 }}
         >
           {slide.headlineLines.map((line, idx) => (
             <span key={idx} className="block" style={{ color: line === slide.headlineAccent ? "#FF6B00" : "#FFFFFF" }}>
