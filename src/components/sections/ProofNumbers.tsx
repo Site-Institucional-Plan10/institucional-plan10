@@ -115,22 +115,24 @@ export function ProofNumbers({ compact = false }: { compact?: boolean }) {
             return (
               <div
                 key={label}
-                className={`text-center text-white px-4 ${
+                className={`text-center text-white px-2 md:px-4 ${
                   isLastOdd ? "col-span-2 md:col-span-1" : ""
                 } ${i < items.length - 1 ? "md:border-r" : ""}`}
                 style={{
-                  borderColor: "rgba(255,255,255,0.15)",
+                  borderColor: "rgba(255,255,255,0.20)",
                 }}
               >
                 <Icon
-                  size={28}
+                  size={compact ? 22 : 28}
                   strokeWidth={1.5}
-                  className="mx-auto mb-3 text-white/95"
+                  className="mx-auto mb-2 md:mb-3 text-white/80"
                 />
                 <div
-                  className="font-extrabold leading-none"
+                  className="font-extrabold leading-none whitespace-nowrap"
                   style={{
-                    fontSize: "clamp(2rem, 4vw, 3rem)",
+                    fontSize: compact
+                      ? "clamp(1.4rem, 2vw, 1.9rem)"
+                      : "clamp(1.6rem, 2.5vw, 2.4rem)",
                     fontWeight: 800,
                   }}
                 >

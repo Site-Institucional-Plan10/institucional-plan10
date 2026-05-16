@@ -121,7 +121,7 @@ export function HeroCarousel({ slides, intervalMs = 7000, minHeightClass = "min-
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-4 sm:left-6 lg:left-8 flex gap-2 z-20">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 lg:left-8 flex gap-2 z-20">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -186,7 +186,7 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
         </p>
         <h1
           className="font-extrabold tracking-tight"
-          style={{ fontSize: "clamp(2.2rem, 5vw, 3.5rem)", lineHeight: 1.12 }}
+          style={{ fontSize: "clamp(1.8rem, 5vw, 3.5rem)", lineHeight: 1.14 }}
         >
           {slide.headlineLines.map((line, idx) => (
             <span key={idx} className="block" style={{ color: line === slide.headlineAccent ? "#FF6B00" : "#FFFFFF" }}>
@@ -226,18 +226,19 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
           </div>
         )}
 
-        <div className="mt-7 flex flex-wrap justify-center gap-3">
-          <a href={waHref} target="_blank" rel="noopener noreferrer">
-            <Button variant="primary" size="lg">
+        <div className="mt-7 flex flex-col sm:flex-row flex-wrap justify-center gap-3 w-full sm:w-auto">
+          <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
               <MessageCircle size={18} />
               Falar com Especialista
             </Button>
           </a>
           {slide.ctaSecondaryHref && (
-            <a href={slide.ctaSecondaryHref}>
+            <a href={slide.ctaSecondaryHref} className="w-full sm:w-auto">
               <Button
                 variant="ghost"
                 size="lg"
+                className="w-full sm:w-auto justify-center"
                 style={{ border: "1.5px solid rgba(255,255,255,0.60)", color: "#FFFFFF", background: "transparent" }}
               >
                 {slide.ctaSecondaryLabel ?? "Saiba mais"}
@@ -253,14 +254,12 @@ function CenteredSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideCent
 function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; waHref: string; minHeightClass: string }) {
   return (
     <SlideShell background={slide.background} minHeightClass={minHeightClass}>
-      <div className={cn("container-x grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center py-14 md:py-20", minHeightClass)}>
+      <div className={cn("container-x grid gap-7 lg:gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center pt-16 pb-24 md:py-20", minHeightClass)}>
         {/* Circle image — mobile first (above text), desktop right */}
         <div className="order-1 lg:order-2 flex justify-center">
           <div
-            className="relative overflow-hidden"
+            className="relative overflow-hidden w-[220px] h-[220px] md:w-[400px] md:h-[400px]"
             style={{
-              width: "min(400px, 78vw)",
-              height: "min(400px, 78vw)",
               borderRadius: "50%",
               border: "2px solid rgba(255, 107, 0, 0.5)",
               boxShadow:
@@ -285,12 +284,12 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
           </p>
           <h1
             className="font-extrabold"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.12, color: "#FFFFFF" }}
+            style={{ fontSize: "clamp(1.6rem, 5vw, 3rem)", lineHeight: 1.18, color: "#FFFFFF" }}
           >
             {slide.headline}
           </h1>
           <p
-            className="mt-5 mx-auto lg:mx-0"
+            className="mt-5 mx-auto lg:mx-0 hidden md:block"
             style={{ color: "rgba(255,255,255,0.72)", fontSize: "1rem", maxWidth: 480, lineHeight: 1.6 }}
           >
             {slide.subheadline}
@@ -309,18 +308,19 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
             ))}
           </ul>
 
-          <div className="mt-7 flex flex-wrap gap-3 justify-center lg:justify-start">
-            <a href={waHref} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="lg">
+          <div className="mt-7 flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start w-full">
+            <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                 <MessageCircle size={18} />
                 Falar com Especialista
               </Button>
             </a>
             {slide.ctaSecondaryHref && (
-              <a href={slide.ctaSecondaryHref}>
+              <a href={slide.ctaSecondaryHref} className="w-full sm:w-auto">
                 <Button
                   variant="ghost"
                   size="lg"
+                  className="w-full sm:w-auto justify-center"
                   style={{ border: "1.5px solid rgba(255,255,255,0.60)", color: "#FFFFFF", background: "transparent" }}
                 >
                   {slide.ctaSecondaryLabel ?? "Saiba mais"}
