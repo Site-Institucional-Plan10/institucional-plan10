@@ -320,7 +320,7 @@ export function Header() {
         <div
           className="fixed inset-0 z-50 lg:hidden flex flex-col"
           style={{
-            background: "#1A1A1A",
+            background: "#111111",
             animation: `${mobileClosing ? "slideOutRight" : "slideInRight"} 280ms cubic-bezier(0.4,0,0.2,1) forwards`,
           }}
         >
@@ -335,7 +335,7 @@ export function Header() {
             }
           `}</style>
 
-          <div className="flex items-center justify-between pt-6 px-6">
+          <div className="flex items-center justify-between pt-5 px-6">
             <Link
               to="/"
               onClick={(e) => {
@@ -345,7 +345,7 @@ export function Header() {
               aria-label="Plan10 — Home"
               className="cursor-pointer"
             >
-              <HeaderLogo size={40} light />
+              <HeaderLogo size={36} light />
             </Link>
             <button
               type="button"
@@ -353,18 +353,17 @@ export function Header() {
               className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10"
               aria-label="Fechar menu"
             >
-              <X size={28} />
+              <X size={26} />
             </button>
           </div>
 
-          <nav className="flex-1 flex flex-col justify-center gap-1 mt-6">
+          <nav className="flex-1 overflow-y-auto px-6 mt-6">
             {mobileItems.map((item, i) => {
               if (item.kind === "divider") {
                 return (
                   <div
                     key={`div-${i}`}
-                    className="mx-8 my-3"
-                    style={{ height: 1, background: "rgba(255,255,255,0.12)" }}
+                    style={{ height: 1, background: "rgba(255,255,255,0.08)", margin: "4px 0" }}
                   />
                 );
               }
@@ -377,60 +376,48 @@ export function Header() {
                     if (item.to === "/") handleLogoClick(e);
                     closeMobile();
                   }}
-                  className="mobile-nav-item"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 12,
-                    padding: "18px 32px",
-                    fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    fontSize: "1.25rem",
-                    fontWeight: 600,
-                    color: isActive ? "#FF6B00" : "#FFFFFF",
+                    display: "block",
+                    padding: "13px 0",
+                    fontSize: "1.05rem",
+                    fontWeight: isActive ? 600 : 500,
+                    color: isActive ? "#FF6B00" : "rgba(255,255,255,0.85)",
                     textDecoration: "none",
-                    borderLeft: `3px solid ${isActive ? "#FF6B00" : "transparent"}`,
-                    transition: "border-color 150ms, color 150ms",
+                    transition: "color 150ms",
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderLeftColor = "#FF6B00";
-                    e.currentTarget.style.color = "#FF6B00";
-                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "#FF6B00"; }}
                   onMouseLeave={(e) => {
-                    if (!isActive) {
-                      e.currentTarget.style.borderLeftColor = "transparent";
-                      e.currentTarget.style.color = "#FFFFFF";
-                    }
+                    if (!isActive) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
                   }}
                 >
-                  {item.hubColor && (
-                    <span
-                      style={{
-                        width: 8,
-                        height: 8,
-                        borderRadius: "50%",
-                        backgroundColor: item.hubColor,
-                        display: "inline-block",
-                        flexShrink: 0,
-                      }}
-                    />
-                  )}
                   {item.label}
                 </Link>
               );
             })}
           </nav>
 
-          <div className="mt-auto pb-8 px-8">
+          <div className="px-6 pb-8">
             <a
-              href={getWhatsAppUrl("home")}
+              href={getWhatsAppUrl("default")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobile}
-              className="flex items-center justify-center gap-2 w-full rounded-lg py-4 font-semibold text-white transition hover:opacity-90"
-              style={{ background: "#FF6B00" }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 10,
+                width: "100%",
+                padding: "14px",
+                backgroundColor: "#25D366",
+                color: "white",
+                borderRadius: "12px",
+                fontWeight: 700,
+                fontSize: "0.95rem",
+              }}
             >
               <MessageCircle size={20} />
-              Falar com especialista
+              Falar com Especialista
             </a>
           </div>
         </div>

@@ -1,73 +1,105 @@
-import { useEffect, useState } from "react";
 import { HeroCarousel, type HeroSlide } from "./HeroCarousel";
+
+const verticalGradients = {
+  seguros: "linear-gradient(135deg, #05101E 0%, #0A1F3D 100%)",
+  saude: "linear-gradient(135deg, #03140A 0%, #071F0F 100%)",
+  consorcios: "linear-gradient(135deg, #0E051E 0%, #1A0B32 100%)",
+  financas: "linear-gradient(135deg, #040D20 0%, #081A35 100%)",
+  servicos: "linear-gradient(135deg, #031018 0%, #062030 100%)",
+};
 
 const homeSlides: HeroSlide[] = [
   {
-    id: 1,
+    id: "home-brand",
+    layout: "centered",
     backgroundImage: "/assets/banners/hero-home-1.png",
     backgroundPosition: "center 35%",
-    overlayLayer1: "rgba(0, 0, 0, 0.48)",
-    overlayLayer2: "linear-gradient(105deg, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.00) 100%)",
-    badge: "Corretora multimodal · Credenciada SUSEP",
-    headlineLines: ["Seu futuro", "muito mais", "tranquilo."],
-    headlineAccent: "tranquilo.",
-    subheadline: "Mais de 40 produtos em um só lugar: seguros, saúde, consórcio, serviços e finanças.",
+    overlayLayer1: "rgba(5, 8, 35, 0.88)",
+    overlayLayer2: "radial-gradient(ellipse at center, rgba(26,79,160,0.25) 0%, transparent 70%)",
+    eyebrow: "PLAN10 CORRETORA · CREDENCIADA SUSEP",
+    headlineLines: ["Seu futuro", "muito mais tranquilo."],
+    headlineAccent: "muito mais tranquilo.",
+    subheadline: "Mais de 40 soluções de proteção, saúde e planejamento em um só lugar.",
+    pills: [
+      { icon: "Shield", label: "SEGUROS", color: "#3D8BF2" },
+      { icon: "Heart", label: "SAÚDE", color: "#24BF5B" },
+      { icon: "Building2", label: "CONSÓRCIO", color: "#9857F2" },
+      { icon: "TrendingUp", label: "FINANÇAS", color: "#C5D0D9" },
+    ],
     ctaSecondaryLabel: "Conheça Nossas Soluções",
     ctaSecondaryHref: "#verticais",
   },
   {
-    id: 2,
-    backgroundImage: "/assets/banners/hero-home-2.jpg",
-    backgroundPosition: "center 50%",
-    overlayLayer1: "rgba(0, 5, 20, 0.55)",
-    overlayLayer2: "linear-gradient(105deg, rgba(0,5,20,0.45) 0%, rgba(26,79,160,0.20) 60%, rgba(0,0,0,0.00) 100%)",
-    badge: "Proteção completa para sua família",
-    headlineLines: ["Proteção,", "saúde e", "planejamento."],
-    headlineAccent: "planejamento.",
-    subheadline: "Consultoria independente para pessoa física e jurídica em 5 grandes áreas.",
-    ctaSecondaryLabel: "Conheça Nossas Soluções",
-    ctaSecondaryHref: "#verticais",
+    id: "home-seguros",
+    layout: "split",
+    background: verticalGradients.seguros,
+    hubColor: "#3D8BF2",
+    circleImage: "/assets/banners/hero-seguros-1.png",
+    eyebrow: "SEGUROS GERAIS · PLAN10",
+    headline: "Proteção patrimonial completa para o que mais importa.",
+    subheadline: "Auto, residencial, vida e empresarial. Compare entre seguradoras e contrate com suporte total.",
+    microcopy: ["Mais de 30 tipos de seguro", "Comparação gratuita", "Suporte em sinistros"],
+    ctaSecondaryLabel: "Ver Seguros",
+    ctaSecondaryHref: "/seguros",
+  },
+  {
+    id: "home-saude",
+    layout: "split",
+    background: verticalGradients.saude,
+    hubColor: "#24BF5B",
+    circleImage: "/assets/banners/hero-saude-1.png",
+    eyebrow: "SAÚDE & ODONTO · PLAN10",
+    headline: "Proteção para você, sua família ou empresa.",
+    subheadline: "Planos individuais, familiares e empresariais com consultoria gratuita e comparação entre operadoras.",
+    microcopy: ["Análise gratuita", "Migração sem perda de cobertura", "PME e grandes empresas"],
+    ctaSecondaryLabel: "Ver Saúde",
+    ctaSecondaryHref: "/saude",
+  },
+  {
+    id: "home-consorcios",
+    layout: "split",
+    background: verticalGradients.consorcios,
+    hubColor: "#9857F2",
+    circleImage: "/assets/banners/hero-consorcios-1.png",
+    eyebrow: "CONSÓRCIO · PLAN10",
+    headline: "Realize o sonho do imóvel próprio sem pagar juros.",
+    subheadline: "Imóveis, veículos e serviços. Consultoria especializada na escolha do grupo e estratégia de lance.",
+    microcopy: ["Zero juros", "Use seu FGTS", "Acompanhamento até a contemplação"],
+    ctaSecondaryLabel: "Ver Consórcios",
+    ctaSecondaryHref: "/consorcios",
+  },
+  {
+    id: "home-financas",
+    layout: "split",
+    background: verticalGradients.financas,
+    hubColor: "#1A4FA0",
+    circleImage: "/assets/banners/hero-financas-1.png",
+    eyebrow: "PRODUTOS FINANCEIROS · PLAN10",
+    headline: "Crédito e soluções financeiras com análise consultiva.",
+    subheadline: "Comparamos as melhores condições do mercado para você tomar a decisão certa.",
+    microcopy: ["Análise do perfil gratuita", "Redução de juros", "Pessoa física e jurídica"],
+    ctaSecondaryLabel: "Ver Finanças",
+    ctaSecondaryHref: "/financas",
+  },
+  {
+    id: "home-servicos",
+    layout: "split",
+    background: verticalGradients.servicos,
+    hubColor: "#27DEF2",
+    circleImage: "/assets/banners/hero-servicos-1.png",
+    eyebrow: "SERVIÇOS 24H · PLAN10",
+    headline: "Assistência rápida quando você mais precisa.",
+    subheadline: "Guincho, chaveiro, troca de pneu e muito mais. Profissionais qualificados 24 horas por dia.",
+    microcopy: ["Atendimento 24/7", "Chegamos em até 50 min", "+2.000 atendimentos"],
+    ctaSecondaryLabel: "Ver Serviços 24h",
+    ctaSecondaryHref: "/servicos-24h",
   },
 ];
 
-const stripBanners = [
-  { kind: "Institucional", text: "Seu futuro muito mais tranquilo." },
-  { kind: "Destaque", text: "[Produto em destaque — placeholder]" },
-  { kind: "Promoção", text: "[Promoção da semana — placeholder]" },
-  { kind: "Novidade", text: "[Novidade — placeholder]" },
-  { kind: "Aviso", text: "[Avisos — placeholder]" },
-];
-
 export function HeroBanner() {
-  const [stripIdx, setStripIdx] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setStripIdx((i) => (i + 1) % stripBanners.length), 4000);
-    return () => clearInterval(t);
-  }, []);
-
   return (
     <section className="pt-20">
-      <HeroCarousel slides={homeSlides} />
-
-      {/* Banner strip — rotating */}
-      <div className="bg-ink text-white">
-        <div className="container-x py-4 flex items-center gap-4 overflow-hidden">
-          <span className="font-eyebrow text-orange flex-shrink-0">{stripBanners[stripIdx].kind}</span>
-          <p key={stripIdx} className="text-sm md:text-base truncate">
-            {stripBanners[stripIdx].text}
-          </p>
-          <div className="ml-auto hidden md:flex gap-1.5 flex-shrink-0">
-            {stripBanners.map((_, i) => (
-              <span
-                key={i}
-                className="h-1.5 w-6 rounded-full transition"
-                style={{ backgroundColor: i === stripIdx ? "#FF6B00" : "rgba(255,255,255,0.2)" }}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <HeroCarousel slides={homeSlides} intervalMs={7000} />
     </section>
   );
 }
