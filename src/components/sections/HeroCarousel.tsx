@@ -307,18 +307,19 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
             ))}
           </ul>
 
-          <div className="mt-7 flex flex-wrap gap-3 justify-center lg:justify-start">
-            <a href={waHref} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="lg">
+          <div className="mt-7 flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start w-full">
+            <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                 <MessageCircle size={18} />
                 Falar com Especialista
               </Button>
             </a>
             {slide.ctaSecondaryHref && (
-              <a href={slide.ctaSecondaryHref}>
+              <a href={slide.ctaSecondaryHref} className="w-full sm:w-auto">
                 <Button
                   variant="ghost"
                   size="lg"
+                  className="w-full sm:w-auto justify-center"
                   style={{ border: "1.5px solid rgba(255,255,255,0.60)", color: "#FFFFFF", background: "transparent" }}
                 >
                   {slide.ctaSecondaryLabel ?? "Saiba mais"}
