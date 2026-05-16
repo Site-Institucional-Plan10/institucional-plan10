@@ -60,15 +60,6 @@ export function VerticalPageTemplate({
         <HeroCarousel slides={heroSlides} />
       </section>
 
-      {/* 2. Banners de campanha */}
-      <section className="py-6 bg-neutral-100 border-y border-neutral-200">
-        <div className="container-x flex flex-wrap items-center gap-4 text-sm text-neutral-700">
-          {/* Banners de campanha — atualizar conforme promoções ativas */}
-          <span className="font-eyebrow" style={{ color: vertical.hubColor }}>Campanha</span>
-          <span>[Banner de campanha — placeholder]</span>
-        </div>
-      </section>
-
       {extraTop}
 
       {/* 3. Toggle PF/PJ */}
