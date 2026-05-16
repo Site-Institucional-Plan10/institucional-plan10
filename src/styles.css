@@ -181,14 +181,7 @@
 }
 
 @media (max-width: 767px) {
-  .hero-arrow {
-    width: 36px;
-    height: 36px;
-    top: auto;
-    bottom: 60px;
-    transform: none;
-  }
-  .hero-arrow:hover { transform: scale(1.08); }
-  .hero-arrow-left { left: 16px; }
-  .hero-arrow-right { right: 16px; }
+  .hero-arrow-left,
+  .hero-arrow-right { display: none; }
+  .hero-dots { bottom: 20px; }
 }
