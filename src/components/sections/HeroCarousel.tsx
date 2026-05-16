@@ -257,10 +257,8 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
         {/* Circle image — mobile first (above text), desktop right */}
         <div className="order-1 lg:order-2 flex justify-center">
           <div
-            className="relative overflow-hidden"
+            className="relative overflow-hidden w-[220px] h-[220px] md:w-[400px] md:h-[400px]"
             style={{
-              width: "min(400px, 78vw)",
-              height: "min(400px, 78vw)",
               borderRadius: "50%",
               border: "2px solid rgba(255, 107, 0, 0.5)",
               boxShadow:
