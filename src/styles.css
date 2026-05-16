@@ -61,11 +61,15 @@
     font-family: var(--font-sans);
     font-weight: 400;
     line-height: 1.6;
+    letter-spacing: 0.01em;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans);
     color: var(--color-ink);
-    line-height: 1.15;
+    line-height: 1.12;
+  }
+  @media (max-width: 767px) {
+    .whatsapp-floating { display: none !important; }
   }
 }
 
@@ -75,7 +79,7 @@
   .font-h1 { font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; letter-spacing: -0.015em; }
   .font-h2 { font-weight: 600; font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2; }
   .font-h3 { font-weight: 600; font-size: clamp(1.25rem, 2vw, 1.75rem); line-height: 1.25; }
-  .font-eyebrow { font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  .font-eyebrow { font-weight: 600; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; }
   .font-body { font-weight: 400; font-size: 1rem; line-height: 1.6; }
   .font-small { font-weight: 400; font-size: 0.875rem; }
 

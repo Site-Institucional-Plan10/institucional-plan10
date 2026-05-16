@@ -20,7 +20,12 @@ export function VerticalCards() {
               <Link
                 key={v.id}
                 to={v.slug}
-                className="group relative flex flex-col rounded-2xl bg-white p-5 border border-neutral-200 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all overflow-hidden"
+                className="group relative flex flex-col rounded-2xl p-5 border border-neutral-200 hover:-translate-y-1 transition-all overflow-hidden"
+                style={{
+                  background: "linear-gradient(160deg, #FFFFFF 0%, #F8F8F8 100%)",
+                  borderLeft: `3px solid ${v.hubColor}`,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                }}
               >
                 <div
                   className="absolute top-0 left-0 right-0 h-1 group-hover:w-full group-hover:h-full group-hover:opacity-5 transition-all duration-300"
