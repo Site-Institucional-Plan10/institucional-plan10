@@ -382,6 +382,26 @@ function CenteredSlide({
   );
 }
 
+const imagePositions: Record<string, string> = {
+  "hero-home-1.png": "center 55%",
+  "hero-home-2.jpg": "center 50%",
+  "hero-seguros-1.png": "35% center",
+  "hero-seguros-2.png": "center 30%",
+  "hero-saude-1.png": "center 25%",
+  "hero-saude-2.jpg": "center 20%",
+  "hero-consorcios-1.png": "60% 40%",
+  "hero-consorcios-2.png": "40% center",
+  "hero-financas-1.png": "center 35%",
+  "hero-financas-2.png": "center 20%",
+  "hero-servicos-1.png": "45% center",
+  "hero-servicos-2.png": "center 40%",
+};
+
+function getImagePosition(src: string): string {
+  const filename = src.split("/").pop() ?? "";
+  return imagePositions[filename] ?? "center center";
+}
+
 function SplitSlide({
   slide,
   waHref,
@@ -395,14 +415,14 @@ function SplitSlide({
     <SlideShell background={slide.background} minHeightClass={minHeightClass}>
       <div
         className={cn(
-          "container-x grid gap-7 lg:gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center pt-24 pb-24 md:py-20",
+          "container-x flex flex-col md:flex-row md:items-center md:justify-between gap-7 md:gap-12 pt-24 pb-24 md:py-20",
           minHeightClass,
         )}
       >
-        {/* Eyebrow + Headline (mobile order 1) */}
-        <div className="order-1 lg:order-1 text-white text-center lg:text-left">
+        {/* LEFT column: all text + CTAs (desktop), reordered on mobile */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left text-white order-1 md:order-1 w-full md:basis-[52%] md:flex-none gap-4">
           <p
-            className="mb-4 uppercase"
+            className="uppercase order-1"
             style={{
               color: slide.hubColor,
               fontSize: "0.72rem",
@@ -413,42 +433,25 @@ function SplitSlide({
             {slide.eyebrow}
           </p>
           <h1
-            className="font-extrabold"
-            style={{ fontSize: "clamp(1.65rem, 5vw, 3rem)", lineHeight: 1.18, color: "#FFFFFF" }}
+            className="font-extrabold order-2"
+            style={{ fontSize: "clamp(1.6rem, 5vw, 3rem)", lineHeight: 1.18, color: "#FFFFFF" }}
           >
             {slide.headline}
           </h1>
-        </div>
 
-        {/* Circle image (mobile order 2, desktop right column) */}
-        <div className="order-2 lg:order-2 lg:row-span-2 flex justify-center lg:items-center">
-          <div
-            className="relative overflow-hidden w-[230px] h-[230px] md:w-[400px] md:h-[400px]"
-            style={{
-              borderRadius: "50%",
-              border: "2px solid rgba(255, 107, 0, 0.5)",
-              boxShadow:
-                "0 0 0 10px rgba(255, 107, 0, 0.07), 0 0 0 22px rgba(255, 107, 0, 0.03), 0 32px 80px rgba(0, 0, 0, 0.6)",
-            }}
-          >
-            <img
-              src={slide.circleImage}
-              alt=""
-              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
-            />
+          {/* Circle on mobile only - inserted between headline (order-2) and microcopy (order-4) */}
+          <div className="order-3 md:hidden flex justify-center w-full">
+            <CircleImage src={slide.circleImage} size={240} />
           </div>
-        </div>
 
-        {/* Microcopy + CTAs (mobile order 3) */}
-        <div className="order-3 lg:order-1 text-white text-center lg:text-left">
           <p
-            className="mt-2 mx-auto lg:mx-0 hidden md:block"
+            className="hidden md:block order-4"
             style={{ color: "rgba(255,255,255,0.72)", fontSize: "1rem", maxWidth: 480, lineHeight: 1.6 }}
           >
             {slide.subheadline}
           </p>
 
-          <ul className="mt-2 md:mt-6 flex flex-col items-center sm:items-start sm:flex-row sm:flex-wrap gap-x-5 gap-y-2 justify-center lg:justify-start">
+          <ul className="order-4 mt-2 flex flex-col items-center md:items-start sm:flex-row md:flex-row sm:flex-wrap gap-x-5 gap-y-2 w-full md:w-auto">
             {slide.microcopy.map((m) => (
               <li
                 key={m}
@@ -461,7 +464,7 @@ function SplitSlide({
             ))}
           </ul>
 
-          <div className="mt-6 flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start w-full">
+          <div className="order-5 mt-4 flex flex-col sm:flex-row flex-wrap gap-3 w-full md:w-auto">
             <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                 <MessageCircle size={18} />
@@ -486,7 +489,48 @@ function SplitSlide({
             )}
           </div>
         </div>
+
+        {/* RIGHT column: circle (desktop only — mobile circle is inside left column) */}
+        <div className="hidden md:flex md:basis-[44%] md:flex-none justify-center items-center">
+          <CircleImage src={slide.circleImage} sizeClass="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]" />
+        </div>
       </div>
     </SlideShell>
   );
 }
+
+function CircleImage({
+  src,
+  size,
+  sizeClass,
+}: {
+  src: string;
+  size?: number;
+  sizeClass?: string;
+}) {
+  return (
+    <div
+      className={cn("relative overflow-hidden", sizeClass)}
+      style={{
+        width: size,
+        height: size,
+        borderRadius: "50%",
+        border: "2px solid rgba(255, 107, 0, 0.5)",
+        boxShadow:
+          "0 0 0 10px rgba(255, 107, 0, 0.07), 0 0 0 22px rgba(255, 107, 0, 0.03), 0 32px 80px rgba(0, 0, 0, 0.6)",
+      }}
+    >
+      <img
+        src={src}
+        alt=""
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: getImagePosition(src),
+        }}
+      />
+    </div>
+  );
+}
+
