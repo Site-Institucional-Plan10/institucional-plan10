@@ -283,12 +283,12 @@ function SplitSlide({ slide, waHref, minHeightClass }: { slide: HeroSlideSplit; 
           </p>
           <h1
             className="font-extrabold"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.12, color: "#FFFFFF" }}
+            style={{ fontSize: "clamp(1.6rem, 5vw, 3rem)", lineHeight: 1.18, color: "#FFFFFF" }}
           >
             {slide.headline}
           </h1>
           <p
-            className="mt-5 mx-auto lg:mx-0"
+            className="mt-5 mx-auto lg:mx-0 hidden md:block"
             style={{ color: "rgba(255,255,255,0.72)", fontSize: "1rem", maxWidth: 480, lineHeight: 1.6 }}
           >
             {slide.subheadline}
