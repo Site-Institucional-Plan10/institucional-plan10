@@ -21,6 +21,7 @@ import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as ConsorciosRouteImport } from './routes/consorcios'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
 const TermosRoute = TermosRouteImport.update({
@@ -83,6 +84,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 const ApiContactRoute = ApiContactRouteImport.update({
   id: '/api/contact',
   path: '/api/contact',
@@ -91,7 +97,7 @@ const ApiContactRoute = ApiContactRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/consorcios': typeof ConsorciosRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
@@ -103,10 +109,11 @@ export interface FileRoutesByFullPath {
   '/servicos-24h': typeof Servicos24hRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/consorcios': typeof ConsorciosRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
@@ -118,11 +125,12 @@ export interface FileRoutesByTo {
   '/servicos-24h': typeof Servicos24hRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/consorcios': typeof ConsorciosRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   '/servicos-24h': typeof Servicos24hRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/servicos-24h'
     | '/termos'
     | '/api/contact'
+    | '/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/servicos-24h'
     | '/termos'
     | '/api/contact'
+    | '/blog/$slug'
   id:
     | '__root__'
     | '/'
@@ -181,11 +192,12 @@ export interface FileRouteTypes {
     | '/servicos-24h'
     | '/termos'
     | '/api/contact'
+    | '/blog/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ConsorciosRoute: typeof ConsorciosRoute
   FaleConoscoRoute: typeof FaleConoscoRoute
   FinancasRoute: typeof FinancasRoute
@@ -285,6 +297,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/api/contact': {
       id: '/api/contact'
       path: '/api/contact'
@@ -295,9 +314,19 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ConsorciosRoute: ConsorciosRoute,
   FaleConoscoRoute: FaleConoscoRoute,
   FinancasRoute: FinancasRoute,
@@ -313,3 +342,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
