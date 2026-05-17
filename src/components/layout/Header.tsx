@@ -10,23 +10,24 @@ import { verticals } from "@/data/verticals";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/quem-somos", label: "Quem Somos" },
+  { to: "/quem-somos", label: "Quem somos" },
   { to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
   { to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
   { to: "/consorcios", label: "Consórcios", hubColor: "#9857F2" },
   { to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
   { to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { to: "/blog", label: "Blog" },
+  { to: "/", label: "Contrate online", hash: "contrate-online", accent: true as const },
 ] as const;
 
 // Mobile menu structure with dividers
 type MobileItem =
-  | { kind: "link"; to: string; label: string; hubColor?: string }
+  | { kind: "link"; to: string; label: string; hubColor?: string; hash?: string; accent?: boolean }
   | { kind: "divider" };
 
 const mobileItems: MobileItem[] = [
   { kind: "link", to: "/", label: "Home" },
-  { kind: "link", to: "/quem-somos", label: "Quem Somos" },
+  { kind: "link", to: "/quem-somos", label: "Quem somos" },
   { kind: "divider" },
   { kind: "link", to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
   { kind: "link", to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
@@ -35,7 +36,8 @@ const mobileItems: MobileItem[] = [
   { kind: "link", to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { kind: "divider" },
   { kind: "link", to: "/blog", label: "Blog" },
-  { kind: "link", to: "/fale-conosco", label: "Fale Conosco" },
+  { kind: "link", to: "/", label: "Contrate online", hash: "contrate-online", accent: true },
+  { kind: "link", to: "/fale-conosco", label: "Fale conosco" },
 ];
 
 function HeaderLogo({ size = 48, light = false }: { size?: number; light?: boolean }) {
@@ -272,10 +274,11 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((l) => (
               <Link
-                key={l.to}
+                key={`${l.to}-${l.label}`}
                 to={l.to}
+                hash={"hash" in l ? l.hash : undefined}
                 className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5"
-                style={{ color: "#1A1A1A" }}
+                style={{ color: "accent" in l && l.accent ? "#FF6B00" : "#1A1A1A" }}
                 activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
               >
                 {"hubColor" in l && l.hubColor && (
