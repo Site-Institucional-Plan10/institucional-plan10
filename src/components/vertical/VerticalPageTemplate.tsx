@@ -6,7 +6,6 @@ import { Toggle } from "@/components/ui/primitives";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { SUSEPDisclaimer } from "@/components/common/SUSEPDisclaimer";
 import { RedirectPopup } from "@/components/common/RedirectPopup";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { verticalHeroSlides } from "@/data/heroSlides";
@@ -125,6 +124,7 @@ export function VerticalPageTemplate({
                       </Button>
                     </a>
                   )}
+                  {/* eslint-disable-next-line @typescript-eslint/no-unused-vars */}
                 </div>
               );
             })}
@@ -202,17 +202,12 @@ export function VerticalPageTemplate({
           defaultSubject={vertical.name}
           lockedSubject
           title={`Fale com a área de ${vertical.name}`}
-          subtitle="Em até 24h úteis um especialista te liga para entender seu cenário."
+          subtitle="Em até 24h úteis um consultor entra em contato para entender seu cenário."
         />
       </div>
 
       {/* 9. FAQ */}
       <FAQSection items={faqItems} whatsappContext={vertical.id} />
-
-      {/* 10. SUSEP disclaimer */}
-      <section className="py-8 bg-neutral-100">
-        <SUSEPDisclaimer />
-      </section>
 
       <RedirectPopup
         isOpen={!!popup}

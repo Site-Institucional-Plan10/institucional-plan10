@@ -21,7 +21,7 @@ export const whatsappMessages: Record<string, string> = {
   seguros: "Olá! Vim pelo site da Plan10 e gostaria de cotar um seguro.",
   saude: "Olá! Vim pelo site da Plan10 e gostaria de cotar um plano de saúde.",
   consorcios: "Olá! Vim pelo site da Plan10 e gostaria de informações sobre consórcio.",
-  financas: "Olá! Vim pelo site da Plan10 e gostaria de informações sobre crédito e finanças.",
+  financas: "Olá! Vim pelo site da Plan10 e gostaria de informações sobre planejamento financeiro.",
   servicos: "Olá! Vim pelo site da Plan10 e gostaria de acionar um serviço de assistência.",
   default: "Olá! Vim pelo site da Plan10 e gostaria de mais informações.",
 };
