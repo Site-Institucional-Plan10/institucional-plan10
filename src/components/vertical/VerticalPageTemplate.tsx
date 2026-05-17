@@ -124,7 +124,6 @@ export function VerticalPageTemplate({
                       </Button>
                     </a>
                   )}
-                  {/* eslint-disable-next-line @typescript-eslint/no-unused-vars */}
                 </div>
               );
             })}
