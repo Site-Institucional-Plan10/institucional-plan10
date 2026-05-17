@@ -7,7 +7,6 @@ const benefits = [
   { Icon: LifeBuoy, title: "Suporte em sinistros", desc: "Acompanhamento do início ao fim do processo." },
   { Icon: Eye, title: "Transparência total", desc: "Sem letra miúda. Tudo explicado em português claro." },
   { Icon: Briefcase, title: "Portfólio completo", desc: "Mais de 40 produtos em um só lugar." },
-  { Icon: ShieldCheck, title: "Credenciada SUSEP", desc: "Atuação regulamentada e fiscalizada." },
   { Icon: Award, title: "Parcerias reconhecidas", desc: "Credenciada pelas principais seguradoras do país." },
 ];
 
@@ -17,7 +16,7 @@ export function WhyPlan10() {
       <div className="container-x">
         <div className="max-w-3xl">
           <p className="font-eyebrow text-orange mb-3">Diferenciais</p>
-          <h2 className="font-h1 mb-4">Por que Escolher a Plan10</h2>
+          <h2 className="font-h1 mb-4">Por que escolher a Plan10</h2>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map(({ Icon, title, desc }) => (

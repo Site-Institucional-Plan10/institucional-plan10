@@ -10,12 +10,12 @@ export function OnlineContracting() {
   const current = verticals.find((v) => v.id === active)!;
 
   return (
-    <section className="py-24 bg-ink text-white">
+    <section id="contrate-online" className="py-24 bg-ink text-white">
       <div className="container-x">
         <div className="max-w-3xl">
           <p className="font-eyebrow text-orange mb-3">Loja Virtual</p>
           <h2 className="font-h1 text-white mb-4" style={{ fontWeight: 800 }}>
-            Contratação Online
+            Contratação online
           </h2>
           <p className="text-white/70 leading-[1.7]">
             Acesse diretamente os portais das nossas parceiras.

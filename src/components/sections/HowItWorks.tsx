@@ -19,7 +19,7 @@ export function HowItWorks() {
       <div className="container-x">
         <div className="max-w-3xl">
           <p className="font-eyebrow text-orange mb-3">Processo</p>
-          <h2 className="font-h1 mb-4">Como Funciona Nossa Consultoria</h2>
+          <h2 className="font-h1 mb-4">Como funciona nossa consultoria</h2>
         </div>
         <div className="mt-14 grid gap-10 md:grid-cols-5 relative">
           {steps.map(({ Icon, title, desc }, i) => (

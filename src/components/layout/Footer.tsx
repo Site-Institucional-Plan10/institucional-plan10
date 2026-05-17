@@ -24,7 +24,7 @@ const sections: FooterSection[] = [
   {
     title: "Institucional",
     links: [
-      { label: "Quem Somos", to: "/quem-somos" },
+      { label: "Quem somos", to: "/quem-somos" },
       { label: "Missão, Visão e Valores", to: "/quem-somos" },
       { label: "Depoimentos", to: "/", hash: "depoimentos" },
       { label: "Contato", to: "/fale-conosco" },
@@ -97,7 +97,6 @@ export function Footer() {
               Proteção, cuidados com a saúde e planejamento patrimonial em um só lugar.
             </p>
           </div>
-          <p className="font-spec" style={{ color: "rgba(255,255,255,0.45)" }}>SUSEP Nº [a definir]</p>
         </div>
 
         {/* Desktop — 4 columns */}

@@ -11,8 +11,8 @@ export interface SearchItem {
 export const searchIndex: SearchItem[] = [
   // PÁGINAS PRINCIPAIS
   { id: "home", label: "Home", description: "Página inicial da Plan10", category: "Páginas", route: "/", keywords: ["home", "início", "principal"] },
-  { id: "quem-somos", label: "Quem Somos", description: "Conheça a história e os valores da Plan10", category: "Páginas", route: "/quem-somos", keywords: ["quem somos", "sobre", "história", "missão", "visão", "valores", "equipe"] },
-  { id: "fale-conosco", label: "Fale Conosco", description: "Entre em contato com a Plan10", category: "Páginas", route: "/fale-conosco", keywords: ["contato", "fale conosco", "mensagem", "whatsapp", "email"] },
+  { id: "quem-somos", label: "Quem somos", description: "Conheça a história e os valores da Plan10", category: "Páginas", route: "/quem-somos", keywords: ["quem somos", "sobre", "história", "missão", "visão", "valores", "equipe"] },
+  { id: "fale-conosco", label: "Fale conosco", description: "Entre em contato com a Plan10", category: "Páginas", route: "/fale-conosco", keywords: ["contato", "fale conosco", "mensagem", "whatsapp", "email"] },
   { id: "blog", label: "Blog Plan10", description: "Artigos, cases e dicas sobre seguros e finanças", category: "Páginas", route: "/blog", keywords: ["blog", "artigos", "notícias", "dicas", "cases"] },
 
   // SEGUROS
