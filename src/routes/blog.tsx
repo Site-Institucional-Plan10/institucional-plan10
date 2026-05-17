@@ -1,6 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState, useMemo } from "react";
 import { verticals } from "@/data/verticals";
+import { blogArticles } from "@/data/blogArticles";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -15,8 +16,12 @@ export const Route = createFileRoute("/blog")({
 });
 
 function BlogPage() {
-  const [active, setActive] = useState<string>("seguros");
-  const current = verticals.find((v) => v.id === active)!;
+  const [active, setActive] = useState<string>("todos");
+
+  const filtered = useMemo(() => {
+    if (active === "todos") return blogArticles;
+    return blogArticles.filter((a) => a.hub === active);
+  }, [active]);
 
   return (
     <>
@@ -29,6 +34,17 @@ function BlogPage() {
 
       <section className="py-8 sticky top-20 bg-white z-30 border-b border-neutral-200">
         <div className="container-x flex flex-wrap gap-2">
+          <button
+            onClick={() => setActive("todos")}
+            className="rounded-full px-5 py-2 text-sm font-semibold transition border-2"
+            style={{
+              borderColor: "#1A1A1A",
+              backgroundColor: active === "todos" ? "#1A1A1A" : "transparent",
+              color: active === "todos" ? "#fff" : "#1A1A1A",
+            }}
+          >
+            Todos
+          </button>
           {verticals.map((v) => (
             <button
               key={v.id}
@@ -48,28 +64,40 @@ function BlogPage() {
 
       <section className="section-y">
         <div className="container-x">
-          {/* TODO: conectar ao CMS quando disponível */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((n) => (
-              <article key={n} className="rounded-2xl border border-neutral-200 bg-white overflow-hidden hover:shadow-md transition">
-                <div className="aspect-video bg-neutral-100" />
-                <div className="p-6">
-                  <span
-                    className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase mb-3"
-                    style={{ backgroundColor: `${current.hubColor}1A`, color: current.hubColor }}
-                  >
-                    {current.name}
-                  </span>
-                  <h3 className="font-semibold text-lg mb-2">Título do artigo {n} — placeholder</h3>
-                  <p className="text-sm text-neutral-700 mb-4">Resumo do artigo. Conteúdo placeholder para layout.</p>
-                  <div className="flex items-center justify-between text-xs text-neutral-500">
-                    <span>11 de maio de 2026</span>
-                    <a href="#" className="font-semibold text-orange">Ler mais →</a>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          {filtered.length === 0 ? (
+            <p className="text-neutral-600">Nenhum artigo nesta categoria ainda.</p>
+          ) : (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {filtered.map((article) => {
+                const v = verticals.find((vv) => vv.id === article.hub)!;
+                return (
+                  <article key={article.slug} className="rounded-2xl border border-neutral-200 bg-white overflow-hidden hover:shadow-md transition flex flex-col">
+                    <div className="aspect-video bg-neutral-100" />
+                    <div className="p-6 flex-1 flex flex-col">
+                      <span
+                        className="inline-block self-start rounded-full px-3 py-1 text-xs font-bold uppercase mb-3"
+                        style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
+                      >
+                        {v.name}
+                      </span>
+                      <h3 className="font-semibold text-lg mb-2">{article.title}</h3>
+                      <p className="text-sm text-neutral-700 mb-4 flex-1">{article.summary}</p>
+                      <div className="flex items-center justify-between text-xs text-neutral-500">
+                        <span>{article.date}</span>
+                        <Link
+                          to="/blog/$slug"
+                          params={{ slug: article.slug }}
+                          className="font-semibold text-orange"
+                        >
+                          Ler mais →
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
     </>

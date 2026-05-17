@@ -17,12 +17,11 @@ const navLinks = [
   { to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
   { to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { to: "/blog", label: "Blog" },
-  { to: "/", label: "Contrate online", hash: "contrate-online", accent: true as const },
 ] as const;
 
 // Mobile menu structure with dividers
 type MobileItem =
-  | { kind: "link"; to: string; label: string; hubColor?: string; hash?: string; accent?: boolean }
+  | { kind: "link"; to: string; label: string; hubColor?: string }
   | { kind: "divider" };
 
 const mobileItems: MobileItem[] = [
@@ -36,7 +35,6 @@ const mobileItems: MobileItem[] = [
   { kind: "link", to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { kind: "divider" },
   { kind: "link", to: "/blog", label: "Blog" },
-  { kind: "link", to: "/", label: "Contrate online", hash: "contrate-online", accent: true },
   { kind: "link", to: "/fale-conosco", label: "Fale conosco" },
 ];
 
@@ -276,9 +274,8 @@ export function Header() {
               <Link
                 key={`${l.to}-${l.label}`}
                 to={l.to}
-                hash={"hash" in l ? l.hash : undefined}
-                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5"
-                style={{ color: "accent" in l && l.accent ? "#FF6B00" : "#1A1A1A" }}
+                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
+                style={{ color: "#1A1A1A" }}
                 activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
               >
                 {"hubColor" in l && l.hubColor && (
@@ -302,8 +299,8 @@ export function Header() {
             >
               <Search size={20} />
             </button>
-            <Link to="/fale-conosco" className="hidden md:inline-flex">
-              <Button variant="secondary" size="sm">Fale Conosco</Button>
+            <Link to="/fale-conosco" className="hidden md:inline-flex flex-shrink-0">
+              <Button variant="secondary" size="sm" className="whitespace-nowrap">Fale Conosco</Button>
             </Link>
             <button
               type="button"
@@ -370,29 +367,27 @@ export function Header() {
                   />
                 );
               }
-              const isActive = pathname === item.to && !item.hash;
-              const accent = item.accent;
+              const isActive = pathname === item.to;
               return (
                 <Link
                   key={`${item.to}-${item.label}`}
                   to={item.to}
-                  hash={item.hash}
                   onClick={(e) => {
-                    if (item.to === "/" && !item.hash) handleLogoClick(e);
+                    if (item.to === "/") handleLogoClick(e);
                     closeMobile();
                   }}
                   style={{
                     display: "block",
                     padding: "13px 0",
                     fontSize: "1.05rem",
-                    fontWeight: isActive || accent ? 600 : 500,
-                    color: isActive || accent ? "#FF6B00" : "rgba(255,255,255,0.85)",
+                    fontWeight: isActive ? 600 : 500,
+                    color: isActive ? "#FF6B00" : "rgba(255,255,255,0.85)",
                     textDecoration: "none",
                     transition: "color 150ms",
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = "#FF6B00"; }}
                   onMouseLeave={(e) => {
-                    if (!isActive && !accent) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
+                    if (!isActive) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
                   }}
                 >
                   {item.label}
