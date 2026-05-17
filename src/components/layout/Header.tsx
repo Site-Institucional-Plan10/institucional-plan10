@@ -299,8 +299,8 @@ export function Header() {
             >
               <Search size={20} />
             </button>
-            <Link to="/fale-conosco" className="hidden md:inline-flex">
-              <Button variant="secondary" size="sm">Fale Conosco</Button>
+            <Link to="/fale-conosco" className="hidden md:inline-flex flex-shrink-0">
+              <Button variant="secondary" size="sm" className="whitespace-nowrap">Fale Conosco</Button>
             </Link>
             <button
               type="button"
