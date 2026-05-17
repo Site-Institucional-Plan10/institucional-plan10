@@ -274,9 +274,8 @@ export function Header() {
               <Link
                 key={`${l.to}-${l.label}`}
                 to={l.to}
-                hash={"hash" in l ? l.hash : undefined}
-                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5"
-                style={{ color: "accent" in l && l.accent ? "#FF6B00" : "#1A1A1A" }}
+                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
+                style={{ color: "#1A1A1A" }}
                 activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
               >
                 {"hubColor" in l && l.hubColor && (
