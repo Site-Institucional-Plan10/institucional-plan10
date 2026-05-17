@@ -60,16 +60,13 @@ export function HowItWorks() {
               <h2 className="font-h1 mb-4">Como funciona nossa consultoria</h2>
             </div>
             <div className="mt-10 flex flex-col gap-6">
-              {steps.map(({ Icon, title, desc }, i) => (
+              {steps.map(({ title, desc }, i) => (
                 <div key={title} className="flex items-start gap-4">
                   <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-orange text-white text-base font-bold">
                     {i + 1}
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Icon size={20} className="text-blue" />
-                      <h3 className="font-semibold">{title}</h3>
-                    </div>
+                    <h3 className="font-semibold mb-1">{title}</h3>
                     <p className="text-sm text-neutral-700">{desc}</p>
                   </div>
                 </div>
