@@ -367,29 +367,27 @@ export function Header() {
                   />
                 );
               }
-              const isActive = pathname === item.to && !item.hash;
-              const accent = item.accent;
+              const isActive = pathname === item.to;
               return (
                 <Link
                   key={`${item.to}-${item.label}`}
                   to={item.to}
-                  hash={item.hash}
                   onClick={(e) => {
-                    if (item.to === "/" && !item.hash) handleLogoClick(e);
+                    if (item.to === "/") handleLogoClick(e);
                     closeMobile();
                   }}
                   style={{
                     display: "block",
                     padding: "13px 0",
                     fontSize: "1.05rem",
-                    fontWeight: isActive || accent ? 600 : 500,
-                    color: isActive || accent ? "#FF6B00" : "rgba(255,255,255,0.85)",
+                    fontWeight: isActive ? 600 : 500,
+                    color: isActive ? "#FF6B00" : "rgba(255,255,255,0.85)",
                     textDecoration: "none",
                     transition: "color 150ms",
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = "#FF6B00"; }}
                   onMouseLeave={(e) => {
-                    if (!isActive && !accent) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
+                    if (!isActive) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
                   }}
                 >
                   {item.label}
