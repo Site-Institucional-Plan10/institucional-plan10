@@ -17,7 +17,6 @@ const navLinks = [
   { to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
   { to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { to: "/blog", label: "Blog" },
-  { to: "/", label: "Contrate online", hash: "contrate-online", accent: true as const },
 ] as const;
 
 // Mobile menu structure with dividers
