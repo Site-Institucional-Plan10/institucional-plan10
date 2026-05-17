@@ -422,7 +422,7 @@ export function Header() {
               }}
             >
               <MessageCircle size={20} />
-              Falar com Especialista
+              Fale com nosso consultor
             </a>
           </div>
         </div>
