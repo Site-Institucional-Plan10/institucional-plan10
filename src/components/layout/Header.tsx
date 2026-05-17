@@ -35,7 +35,6 @@ const mobileItems: MobileItem[] = [
   { kind: "link", to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { kind: "divider" },
   { kind: "link", to: "/blog", label: "Blog" },
-  { kind: "link", to: "/", label: "Contrate online", hash: "contrate-online", accent: true },
   { kind: "link", to: "/fale-conosco", label: "Fale conosco" },
 ];
 
