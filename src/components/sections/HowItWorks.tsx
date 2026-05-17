@@ -1,12 +1,11 @@
-import { Search, GitCompare, Lightbulb, FileSignature, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 
 const steps = [
-  { Icon: Search, title: "Entendimento do seu perfil", desc: "Conversamos para mapear o cenário real." },
-  { Icon: GitCompare, title: "Comparação inteligente", desc: "Cotamos com várias seguradoras e instituições." },
-  { Icon: Lightbulb, title: "Recomendação personalizada", desc: "Sugestões com prós e contras claros." },
-  { Icon: FileSignature, title: "Contratação assistida", desc: "Acompanhamos toda a documentação." },
-  { Icon: Headphones, title: "Suporte contínuo", desc: "Estamos com você em renovações e sinistros." },
+  { title: "Entendimento do seu perfil", desc: "Conversamos para mapear o cenário real." },
+  { title: "Comparação inteligente", desc: "Cotamos com várias seguradoras e instituições." },
+  { title: "Recomendação personalizada", desc: "Sugestões com prós e contras claros." },
+  { title: "Contratação assistida", desc: "Acompanhamos toda a documentação." },
+  { title: "Suporte contínuo", desc: "Estamos com você em renovações e sinistros." },
 ];
 
 export function HowItWorks() {
@@ -61,16 +60,13 @@ export function HowItWorks() {
               <h2 className="font-h1 mb-4">Como funciona nossa consultoria</h2>
             </div>
             <div className="mt-10 flex flex-col gap-6">
-              {steps.map(({ Icon, title, desc }, i) => (
+              {steps.map(({ title, desc }, i) => (
                 <div key={title} className="flex items-start gap-4">
                   <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-orange text-white text-base font-bold">
                     {i + 1}
                   </div>
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <Icon size={20} className="text-blue" />
-                      <h3 className="font-semibold">{title}</h3>
-                    </div>
+                    <h3 className="font-semibold mb-1">{title}</h3>
                     <p className="text-sm text-neutral-700">{desc}</p>
                   </div>
                 </div>
