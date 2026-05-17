@@ -8,7 +8,7 @@ interface FAQItem {
 }
 
 const defaultItems: FAQItem[] = [
-  { title: "A Plan10 é uma seguradora?", content: "Não. A Plan10 é uma corretora multimodal credenciada pela SUSEP que conecta você às melhores seguradoras e instituições do país." },
+  { title: "A Plan10 é uma seguradora?", content: "Não. A Plan10 é uma corretora multimodal que conecta você às melhores seguradoras e instituições do país." },
   { title: "Quanto custa a consultoria?", content: "A consultoria Plan10 é gratuita. Você só paga pelo produto contratado, com o mesmo preço da seguradora." },
   { title: "Atendem todo o Brasil?", content: "Sim. O atendimento é digital e chega a todo o território nacional." },
   { title: "Como funciona o suporte em sinistro?", content: "Acompanhamos o processo do início ao fim, ajudando na documentação e comunicação com a seguradora." },
@@ -17,7 +17,7 @@ const defaultItems: FAQItem[] = [
 
 export function FAQSection({
   items,
-  title = "Perguntas Frequentes",
+  title = "Perguntas frequentes",
   whatsappContext = "default",
 }: {
   items?: FAQItem[];
@@ -86,7 +86,7 @@ export function FAQSection({
             className="inline-flex items-center gap-2 rounded-full bg-orange px-5 py-3 text-sm font-semibold text-white hover:bg-orange-hover transition"
           >
             <MessageCircle size={16} />
-            Falar com um especialista →
+            Fale com nosso consultor →
           </a>
         </div>
       </div>

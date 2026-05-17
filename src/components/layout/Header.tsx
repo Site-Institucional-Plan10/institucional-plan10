@@ -10,23 +10,24 @@ import { verticals } from "@/data/verticals";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/quem-somos", label: "Quem Somos" },
+  { to: "/quem-somos", label: "Quem somos" },
   { to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
   { to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
   { to: "/consorcios", label: "Consórcios", hubColor: "#9857F2" },
   { to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
   { to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { to: "/blog", label: "Blog" },
+  { to: "/", label: "Contrate online", hash: "contrate-online", accent: true as const },
 ] as const;
 
 // Mobile menu structure with dividers
 type MobileItem =
-  | { kind: "link"; to: string; label: string; hubColor?: string }
+  | { kind: "link"; to: string; label: string; hubColor?: string; hash?: string; accent?: boolean }
   | { kind: "divider" };
 
 const mobileItems: MobileItem[] = [
   { kind: "link", to: "/", label: "Home" },
-  { kind: "link", to: "/quem-somos", label: "Quem Somos" },
+  { kind: "link", to: "/quem-somos", label: "Quem somos" },
   { kind: "divider" },
   { kind: "link", to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
   { kind: "link", to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
@@ -35,7 +36,8 @@ const mobileItems: MobileItem[] = [
   { kind: "link", to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { kind: "divider" },
   { kind: "link", to: "/blog", label: "Blog" },
-  { kind: "link", to: "/fale-conosco", label: "Fale Conosco" },
+  { kind: "link", to: "/", label: "Contrate online", hash: "contrate-online", accent: true },
+  { kind: "link", to: "/fale-conosco", label: "Fale conosco" },
 ];
 
 function HeaderLogo({ size = 48, light = false }: { size?: number; light?: boolean }) {
@@ -272,10 +274,11 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((l) => (
               <Link
-                key={l.to}
+                key={`${l.to}-${l.label}`}
                 to={l.to}
+                hash={"hash" in l ? l.hash : undefined}
                 className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5"
-                style={{ color: "#1A1A1A" }}
+                style={{ color: "accent" in l && l.accent ? "#FF6B00" : "#1A1A1A" }}
                 activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
               >
                 {"hubColor" in l && l.hubColor && (
@@ -367,27 +370,29 @@ export function Header() {
                   />
                 );
               }
-              const isActive = pathname === item.to;
+              const isActive = pathname === item.to && !item.hash;
+              const accent = item.accent;
               return (
                 <Link
-                  key={item.to}
+                  key={`${item.to}-${item.label}`}
                   to={item.to}
+                  hash={item.hash}
                   onClick={(e) => {
-                    if (item.to === "/") handleLogoClick(e);
+                    if (item.to === "/" && !item.hash) handleLogoClick(e);
                     closeMobile();
                   }}
                   style={{
                     display: "block",
                     padding: "13px 0",
                     fontSize: "1.05rem",
-                    fontWeight: isActive ? 600 : 500,
-                    color: isActive ? "#FF6B00" : "rgba(255,255,255,0.85)",
+                    fontWeight: isActive || accent ? 600 : 500,
+                    color: isActive || accent ? "#FF6B00" : "rgba(255,255,255,0.85)",
                     textDecoration: "none",
                     transition: "color 150ms",
                   }}
                   onMouseEnter={(e) => { e.currentTarget.style.color = "#FF6B00"; }}
                   onMouseLeave={(e) => {
-                    if (!isActive) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
+                    if (!isActive && !accent) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
                   }}
                 >
                   {item.label}
@@ -417,7 +422,7 @@ export function Header() {
               }}
             >
               <MessageCircle size={20} />
-              Falar com Especialista
+              Fale com nosso consultor
             </a>
           </div>
         </div>

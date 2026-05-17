@@ -25,7 +25,7 @@ const subjectOptions = [
   { value: "Outro", label: "Outro" },
 ];
 
-export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fale Conosco", subtitle }: ContactFormProps) {
+export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fale conosco", subtitle }: ContactFormProps) {
   const { form, status, errorMessage, onSubmit } = useContactForm(defaultSubject);
   const { register, handleSubmit, formState: { errors }, setValue, watch } = form;
   const [showMessage, setShowMessage] = useState(false);
@@ -101,7 +101,7 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
             <Button type="submit" disabled={status === "submitting"} className="w-full sm:w-auto">
               {status === "submitting" ? "Enviando..." : "Enviar mensagem"}
             </Button>
-            <p className="text-xs text-neutral-500">🕐 Respondemos em até 24h úteis.</p>
+            <p className="text-xs text-neutral-500 inline-flex items-center gap-1.5"><Clock size={14} />Diagnóstico sem compromisso. Respondemos em até 24h úteis.</p>
 
             {status === "success" && (
               <div className="rounded-lg bg-green-50 border border-green-200 p-4 text-sm text-green-800">

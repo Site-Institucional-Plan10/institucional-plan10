@@ -16,18 +16,17 @@ const homeSlides: HeroSlide[] = [
     backgroundPosition: "center 35%",
     overlayLayer1: "rgba(5, 8, 35, 0.88)",
     overlayLayer2: "radial-gradient(ellipse at center, rgba(26,79,160,0.25) 0%, transparent 70%)",
-    eyebrow: "PLAN10 CORRETORA · CREDENCIADA SUSEP",
+    eyebrow: "PLAN10 | CONSULTORIA DE PROTEÇÃO INTEGRADA",
     headlineLines: ["Seu futuro", "muito mais tranquilo."],
     headlineAccent: "muito mais tranquilo.",
-    subheadline: "Mais de 40 soluções de proteção, saúde e planejamento em um só lugar.",
+    subheadline:
+      "Soluções de proteção, saúde e planejamento para pessoas e empresas que valorizam excelência.",
     pills: [
       { icon: "ShieldCheck", label: "SEGUROS", color: "#3D8BF2", route: "/seguros" },
       { icon: "HeartPulse", label: "SAÚDE", color: "#24BF5B", route: "/saude" },
       { icon: "Landmark", label: "CONSÓRCIO", color: "#9857F2", route: "/consorcios" },
       { icon: "Banknote", label: "FINANÇAS", color: "#C5D0D9", route: "/financas" },
     ],
-    ctaSecondaryLabel: "Conheça Nossas Soluções",
-    ctaSecondaryHref: "#verticais",
   },
   {
     id: "home-seguros",
@@ -39,7 +38,7 @@ const homeSlides: HeroSlide[] = [
     headline: "Proteção patrimonial completa para o que mais importa.",
     subheadline: "Auto, residencial, vida e empresarial. Compare entre seguradoras e contrate com suporte total.",
     microcopy: ["Mais de 30 tipos de seguro", "Comparação gratuita", "Suporte em sinistros"],
-    ctaSecondaryLabel: "Ver Seguros",
+    ctaSecondaryLabel: "Conheça a consultoria",
     ctaSecondaryHref: "/seguros",
   },
   {
@@ -52,7 +51,7 @@ const homeSlides: HeroSlide[] = [
     headline: "Proteção para você, sua família ou empresa.",
     subheadline: "Planos individuais, familiares e empresariais com consultoria gratuita e comparação entre operadoras.",
     microcopy: ["Análise gratuita", "Migração sem perda de cobertura", "PME e grandes empresas"],
-    ctaSecondaryLabel: "Ver Saúde",
+    ctaSecondaryLabel: "Conheça a consultoria",
     ctaSecondaryHref: "/saude",
   },
   {
@@ -63,9 +62,9 @@ const homeSlides: HeroSlide[] = [
     circleImage: "/assets/banners/hero-consorcios-1.png",
     eyebrow: "CONSÓRCIO · PLAN10",
     headline: "Realize o sonho do imóvel próprio sem pagar juros.",
-    subheadline: "Imóveis, veículos e serviços. Consultoria especializada na escolha do grupo e estratégia de lance.",
+    subheadline: "Imóveis, veículos e serviços. Consultoria com foco na escolha do grupo e estratégia de lance.",
     microcopy: ["Zero juros", "Use seu FGTS", "Acompanhamento até a contemplação"],
-    ctaSecondaryLabel: "Ver Consórcios",
+    ctaSecondaryLabel: "Conheça a consultoria",
     ctaSecondaryHref: "/consorcios",
   },
   {
@@ -78,7 +77,7 @@ const homeSlides: HeroSlide[] = [
     headline: "Crédito e soluções financeiras com análise consultiva.",
     subheadline: "Comparamos as melhores condições do mercado para você tomar a decisão certa.",
     microcopy: ["Análise do perfil gratuita", "Redução de juros", "Pessoa física e jurídica"],
-    ctaSecondaryLabel: "Ver Finanças",
+    ctaSecondaryLabel: "Conheça a consultoria",
     ctaSecondaryHref: "/financas",
   },
   {
@@ -91,7 +90,7 @@ const homeSlides: HeroSlide[] = [
     headline: "Assistência rápida quando você mais precisa.",
     subheadline: "Guincho, chaveiro, troca de pneu e muito mais. Profissionais qualificados 24 horas por dia.",
     microcopy: ["Atendimento 24/7", "Chegamos em até 50 min", "+2.000 atendimentos"],
-    ctaSecondaryLabel: "Ver Serviços 24h",
+    ctaSecondaryLabel: "Conheça a consultoria",
     ctaSecondaryHref: "/servicos-24h",
   },
 ];

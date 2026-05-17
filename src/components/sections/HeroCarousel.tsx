@@ -357,7 +357,7 @@ function CenteredSlide({
           <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
             <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
               <MessageCircle size={18} />
-              Falar com Especialista
+              Fale com nosso consultor
             </Button>
           </a>
           {slide.ctaSecondaryHref && (
@@ -468,7 +468,7 @@ function SplitSlide({
             <a href={waHref} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto justify-center">
                 <MessageCircle size={18} />
-                Falar com Especialista
+                Fale com nosso consultor
               </Button>
             </a>
             {slide.ctaSecondaryHref && (

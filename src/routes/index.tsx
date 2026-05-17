@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Plan10 | Seguros, Saúde, Consórcio e Finanças — Corretora Multimodal" },
-      { name: "description", content: "Mais de 40 produtos em um só lugar. Corretora multimodal credenciada pela SUSEP." },
+      { name: "description", content: "Mais de 40 soluções de proteção, saúde e planejamento em um só lugar." },
       { property: "og:title", content: "Plan10 — Seu futuro muito mais tranquilo" },
       { property: "og:description", content: "Seguros, saúde, consórcio, finanças e serviços 24h." },
     ],
@@ -34,7 +34,7 @@ function HomePage() {
       <OnlineContracting />
       <PartnersLogos />
       <div id="contato">
-        <ContactForm source="home" subtitle="Conte seu cenário. Em até 24h úteis um especialista te retorna." />
+        <ContactForm source="home" subtitle="Em até 24h úteis um consultor entra em contato para entender seu cenário." />
       </div>
       <FAQSection whatsappContext="home" />
     </>

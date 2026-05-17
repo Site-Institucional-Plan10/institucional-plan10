@@ -29,7 +29,7 @@ function SegurosPage() {
         "Suporte em sinistros do início ao fim",
         "Acompanhamento de renovação anual",
         "Orientação sobre coberturas",
-        "Atendimento humano por especialistas",
+        "Atendimento humano por consultores",
       ]}
       faqItems={[
         { title: "Quais seguradoras vocês trabalham?", content: "Trabalhamos com Porto Seguro, SulAmérica, Mapfre, AIG, Liberty e AGF, entre outras." },

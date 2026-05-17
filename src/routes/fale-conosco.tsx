@@ -21,7 +21,7 @@ function FaleConosco() {
       <section className="pt-32 pb-12 bg-ink text-white">
         <div className="container-x">
           <p className="font-eyebrow text-orange mb-3">Contato</p>
-          <h1 className="font-display max-w-3xl" style={{ color: "#fff" }}>Fale Conosco</h1>
+          <h1 className="font-display max-w-3xl" style={{ color: "#fff" }}>Fale conosco</h1>
           <p className="mt-4 text-neutral-300 max-w-2xl">
             Deixe sua mensagem. A Plan10 retorna em até 24h úteis.
           </p>

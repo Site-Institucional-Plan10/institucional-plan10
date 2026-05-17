@@ -21,7 +21,7 @@ function QuemSomos() {
     <>
       <section className="pt-32 pb-16" style={{ backgroundColor: "#1A4FA0" }}>
         <div className="container-x text-white">
-          <p className="font-eyebrow text-orange mb-3">Quem Somos</p>
+          <p className="font-eyebrow text-orange mb-3">Quem somos</p>
           <h1 className="font-display max-w-3xl" style={{ color: "#fff" }}>Cuidar do que importa.</h1>
         </div>
       </section>
@@ -83,7 +83,7 @@ function QuemSomos() {
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-ink">Conheça nossas soluções</Button>
             </Link>
             <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary"><MessageCircle size={18} />Falar com especialista</Button>
+              <Button variant="primary"><MessageCircle size={18} />Fale com nosso consultor</Button>
             </a>
           </div>
         </div>
