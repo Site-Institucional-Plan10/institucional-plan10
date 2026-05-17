@@ -12,10 +12,10 @@ const row2Logos = [
   { name: "Amil", src: "/assets/partners/logo-amil.webp" },
   { name: "Hapvida", src: "/assets/partners/logo-hapvida.png" },
   { name: "Grupo NotreDame Intermédica", src: "/assets/partners/logo-notredame.png" },
-  { name: "Embracon", src: "/assets/partners/logo-embracon.jpg" },
-  { name: "Porto Bank", src: "/assets/partners/logo-porto-bank.jpg" },
-  { name: "CarSystem", src: "/assets/partners/logo-carsystem.jpg" },
-  { name: "Ituran", src: "/assets/partners/logo-ituran.jpg" },
+  { name: "Embracon", src: "/assets/partners/logo-embracon.png" },
+  { name: "Porto Bank", src: "/assets/partners/logo-porto-bank.png" },
+  { name: "CarSystem", src: "/assets/partners/logo-carsystem.png" },
+  { name: "Ituran", src: "/assets/partners/logo-ituran.png" },
 ];
 
 const cardStyle: React.CSSProperties = {
