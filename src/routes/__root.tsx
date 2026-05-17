@@ -13,6 +13,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { VerticalTabBar } from "@/components/layout/VerticalTabBar";
+import { MobileVerticalStrip } from "@/components/layout/MobileVerticalStrip";
 import { CookieBanner } from "@/components/common/CookieBanner";
 
 function NotFoundComponent() {
@@ -104,6 +105,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
+      <MobileVerticalStrip />
       <main className="min-h-screen pt-0 vertical-page-main">
         <Outlet />
       </main>
