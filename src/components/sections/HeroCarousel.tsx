@@ -393,7 +393,7 @@ const imagePositions: Record<string, string> = {
   "hero-consorcios-2.png": "42% center",
   "hero-financas-1.png": "center 30%",
   "hero-financas-2.png": "center 12%",
-  "hero-servicos-1.png": "42% 48%",
+  "hero-servicos-1.png": "38% 50%",
   "hero-servicos-2.png": "center 42%",
 };
 
