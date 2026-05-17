@@ -21,7 +21,7 @@ const navLinks = [
 
 // Mobile menu structure with dividers
 type MobileItem =
-  | { kind: "link"; to: string; label: string; hubColor?: string; hash?: string; accent?: boolean }
+  | { kind: "link"; to: string; label: string; hubColor?: string }
   | { kind: "divider" };
 
 const mobileItems: MobileItem[] = [
