@@ -527,10 +527,7 @@ function CircleImage({
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          objectPosition: src.includes("hero-seguros-1") ? "30% 50%" : getImagePosition(src),
-          ...(src.includes("hero-seguros-1")
-            ? { transform: "scale(1.5)", transformOrigin: "30% 50%" }
-            : {}),
+          objectPosition: src.includes("hero-seguros-1") ? "45% 50%" : getImagePosition(src),
         }}
       />
     </div>
