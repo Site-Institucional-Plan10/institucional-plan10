@@ -13,6 +13,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { VerticalTabBar } from "@/components/layout/VerticalTabBar";
+import { MobileVerticalStrip } from "@/components/layout/MobileVerticalStrip";
 import { CookieBanner } from "@/components/common/CookieBanner";
 
 function NotFoundComponent() {
