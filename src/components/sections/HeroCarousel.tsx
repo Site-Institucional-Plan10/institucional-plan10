@@ -385,7 +385,7 @@ function CenteredSlide({
 const imagePositions: Record<string, string> = {
   "hero-home-1.png": "center 52%",
   "hero-home-2.jpg": "center 50%",
-  "hero-seguros-1.png": "28% 58%",
+  "hero-seguros-1.png": "12% 55%",
   "hero-seguros-2.png": "center 22%",
   "hero-saude-1.png": "center 18%",
   "hero-saude-2.jpg": "center 15%",
@@ -393,7 +393,7 @@ const imagePositions: Record<string, string> = {
   "hero-consorcios-2.png": "42% center",
   "hero-financas-1.png": "center 30%",
   "hero-financas-2.png": "center 12%",
-  "hero-servicos-1.png": "38% 50%",
+  "hero-servicos-1.png": "18% 50%",
   "hero-servicos-2.png": "center 42%",
 };
 
