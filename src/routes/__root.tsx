@@ -105,6 +105,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Header />
+      <MobileVerticalStrip />
       <main className="min-h-screen pt-0 vertical-page-main">
         <Outlet />
       </main>
