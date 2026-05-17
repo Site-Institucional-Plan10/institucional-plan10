@@ -18,7 +18,7 @@ export function WhyPlan10() {
           <p className="font-eyebrow text-orange mb-3">Diferenciais</p>
           <h2 className="font-h1 mb-4">Por que escolher a Plan10</h2>
         </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" style={{ justifyContent: "center", justifyItems: "center" }}>
           {benefits.map(({ Icon, title, desc }) => (
             <div key={title} className="rounded-2xl bg-white p-6 border border-neutral-200">
               <Icon size={40} className="text-orange mb-4" />
