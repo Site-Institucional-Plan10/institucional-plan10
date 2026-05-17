@@ -1,6 +1,4 @@
-import { partnerGroups } from "@/data/partners";
-
-const seguradoras = [
+const row1Logos = [
   { name: "Porto", src: "/assets/partners/logo-porto.png" },
   { name: "Bradesco Seguros", src: "/assets/partners/logo-bradesco.png" },
   { name: "SulAmérica", src: "/assets/partners/logo-sulamerica.png" },
@@ -10,38 +8,52 @@ const seguradoras = [
   { name: "AGF Brasil", src: "/assets/partners/logo-agf.png" },
 ];
 
+const row2Logos = [
+  { name: "Amil", src: "/assets/partners/logo-amil.webp" },
+  { name: "Hapvida", src: "/assets/partners/logo-hapvida.png" },
+  { name: "Grupo NotreDame Intermédica", src: "/assets/partners/logo-notredame.png" },
+  { name: "Embracon", src: "/assets/partners/logo-embracon.jpg" },
+  { name: "Porto Bank", src: "/assets/partners/logo-porto-bank.jpg" },
+  { name: "CarSystem", src: "/assets/partners/logo-carsystem.jpg" },
+  { name: "Ituran", src: "/assets/partners/logo-ituran.jpg" },
+];
+
+const cardStyle: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  background: "#FFFFFF",
+  borderRadius: "10px",
+  padding: "16px 24px",
+  width: "160px",
+  height: "80px",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+  flexShrink: 0,
+  marginRight: "16px",
+};
+
+const imgStyle: React.CSSProperties = {
+  maxHeight: "44px",
+  maxWidth: "120px",
+  width: "auto",
+  height: "auto",
+  objectFit: "contain",
+  filter: "none",
+};
+
 export function PartnersLogos() {
-  const others = partnerGroups
-    .filter((g) => g.label !== "Seguradoras")
-    .flatMap((g) => g.items);
-  const half = Math.ceil(others.length / 2);
-  const row1 = others.slice(0, half);
-  const row2 = others.slice(half);
-
-  const LogoBox = ({ name }: { name: string }) => (
-    <div className="flex h-[60px] w-[160px] flex-shrink-0 items-center justify-center rounded-lg border-2 border-dashed border-neutral-300 bg-white text-sm font-semibold text-neutral-500">
-      {name}
-    </div>
-  );
-
-  const Row = ({ items, reverse = false }: { items: string[]; reverse?: boolean }) => {
-    const doubled = [...items, ...items];
-    return (
-      <div className="overflow-hidden">
-        <div
-          className="flex gap-4 animate-marquee-slow w-max"
-          style={reverse ? { animationDirection: "reverse" } : undefined}
-        >
-          {doubled.map((p, i) => (
-            <LogoBox key={`${p}-${i}`} name={p} />
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   return (
     <section className="section-y bg-neutral-100">
+      <style>{`
+        @keyframes partners-marquee-left {
+          from { transform: translateX(0); }
+          to   { transform: translateX(-50%); }
+        }
+        @keyframes partners-marquee-right {
+          from { transform: translateX(-50%); }
+          to   { transform: translateX(0); }
+        }
+      `}</style>
       <div className="container-x">
         <div className="max-w-3xl mb-8">
           <p className="font-eyebrow text-orange mb-3">Parceiros</p>
@@ -49,40 +61,49 @@ export function PartnersLogos() {
         </div>
 
         <div className="space-y-4">
-          <div className="flex gap-4 flex-wrap justify-center md:justify-start">
-            {seguradoras.map((logo) => (
-              <div
-                key={logo.name}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  background: "#FFFFFF",
-                  borderRadius: "10px",
-                  padding: "16px 24px",
-                  width: "160px",
-                  height: "80px",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-                  flexShrink: 0,
-                }}
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  style={{
-                    maxHeight: "44px",
-                    maxWidth: "120px",
-                    width: "auto",
-                    height: "auto",
-                    objectFit: "contain",
-                    filter: "none",
-                  }}
-                />
-              </div>
-            ))}
+          <div className="overflow-hidden">
+            <div
+              style={{
+                display: "flex",
+                width: "max-content",
+                animation: "partners-marquee-left 40s linear infinite",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.animationPlayState = "paused")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.animationPlayState = "running")
+              }
+            >
+              {[...row1Logos, ...row1Logos].map((logo, i) => (
+                <div key={`r1-${i}`} style={cardStyle}>
+                  <img src={logo.src} alt={logo.name} style={imgStyle} />
+                </div>
+              ))}
+            </div>
           </div>
-          <Row items={row1} />
-          <Row items={row2} reverse />
+
+          <div className="overflow-hidden">
+            <div
+              style={{
+                display: "flex",
+                width: "max-content",
+                animation: "partners-marquee-right 40s linear infinite",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.animationPlayState = "paused")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.animationPlayState = "running")
+              }
+            >
+              {[...row2Logos, ...row2Logos].map((logo, i) => (
+                <div key={`r2-${i}`} style={cardStyle}>
+                  <img src={logo.src} alt={logo.name} style={imgStyle} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
