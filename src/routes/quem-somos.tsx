@@ -7,34 +7,81 @@ import { getWhatsAppUrl } from "@/lib/utils";
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
     meta: [
-      { title: "Quem Somos | Plan10 — Desde 2016, Corretora Multimodal" },
-      { name: "description", content: "A Plan10 é uma corretora multimodal especializada em soluções integradas. Cuidar do que importa." },
+      { title: "Quem Somos | Plan10 — Consultoria de Proteção Integrada" },
+      { name: "description", content: "A Plan10 é uma consultoria multimodal independente, transparente e orientada por dados. Cuidar do que importa." },
       { property: "og:title", content: "Quem Somos — Plan10" },
-      { property: "og:description", content: "Conheça a Plan10: independente, transparente e orientada por dados." },
+      { property: "og:description", content: "Consultoria de proteção integrada para pessoas, famílias e empresas." },
     ],
   }),
   component: QuemSomos,
 });
 
+const valores = ["Proximidade", "Clareza", "Cuidado", "Pluralidade", "Constância"];
+
 function QuemSomos() {
   return (
     <>
-      <section className="pt-32 pb-16" style={{ backgroundColor: "#1A4FA0" }}>
+      {/* Section 1 — Refined hero */}
+      <section
+        className="pt-32 pb-20"
+        style={{ background: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)" }}
+      >
         <div className="container-x text-white">
-          <p className="font-eyebrow text-orange mb-3">Quem somos</p>
-          <h1 className="font-display max-w-3xl" style={{ color: "#fff" }}>Cuidar do que importa.</h1>
+          <p
+            className="mb-4 uppercase"
+            style={{
+              color: "rgba(255,255,255,0.55)",
+              letterSpacing: "0.14em",
+              fontSize: "0.78rem",
+              fontWeight: 700,
+            }}
+          >
+            Sobre a Plan10
+          </p>
+          <h1
+            className="font-extrabold"
+            style={{
+              color: "#fff",
+              fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
+              lineHeight: 1.1,
+              maxWidth: 760,
+            }}
+          >
+            Cuidar do que importa.
+          </h1>
+          <p
+            className="mt-6"
+            style={{
+              color: "rgba(255,255,255,0.75)",
+              maxWidth: 560,
+              fontSize: "1.05rem",
+              lineHeight: 1.6,
+            }}
+          >
+            Consultoria de proteção integrada para pessoas, famílias e empresas que valorizam excelência.
+          </p>
         </div>
       </section>
 
+      {/* Section 2 — Institutional text + proof numbers */}
       <section className="section-y">
-        <div className="container-x grid gap-12 lg:grid-cols-2">
+        <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-lg text-neutral-700 leading-relaxed">
-              A Plan10 é uma corretora multimodal especializada em soluções integradas de seguros, proteção pessoal, familiar, patrimonial e empresarial, consórcios e planos de saúde e odontológicos. Atuamos de forma independente, transparente e orientada por dados, conectando pessoas, famílias e empresas às melhores seguradoras e instituições do país.
+              A Plan10 é uma consultoria multimodal especializada em soluções integradas de seguros, proteção pessoal, familiar, patrimonial e empresarial, consórcios e planos de saúde e odontológicos.
             </p>
-            <div className="mt-8 rounded-2xl bg-orange/10 border-l-4 border-orange p-6">
+            <p className="mt-5 text-lg text-neutral-700 leading-relaxed">
+              Atuamos de forma independente, transparente e orientada por dados, conectando pessoas, famílias e empresas às melhores seguradoras e instituições do país.
+            </p>
+            <div
+              className="mt-8 rounded-2xl p-6"
+              style={{
+                background: "rgba(255, 107, 0, 0.08)",
+                borderLeft: "4px solid #FF6B00",
+              }}
+            >
               <p className="font-h3" style={{ color: "#1A1A1A" }}>
-                Cuidar do que importa: protegendo pessoas, famílias e empresas com inteligência e compromisso real.
+                Nosso propósito: cuidar do que importa, protegendo pessoas, famílias e empresas com inteligência e compromisso real.
               </p>
             </div>
           </div>
@@ -44,47 +91,120 @@ function QuemSomos() {
         </div>
       </section>
 
-      <section className="section-y bg-neutral-100">
+      {/* Section 3 — Mission / Vision / Values */}
+      <section className="section-y" style={{ background: "#F8F8F8" }}>
         <div className="container-x grid gap-6 md:grid-cols-3">
           {[
-            { title: "Missão", text: "Reunir, em um só lugar, as melhores soluções para proteger e planejar o que importa para cada família e cada negócio." },
-            { title: "Visão", text: "Ser a corretora multimodal mais próxima e confiável do Brasil, onde decidir o futuro é simples." },
-            { title: "Valores", text: "Proximidade · Clareza · Cuidado · Pluralidade · Constância" },
+            {
+              label: "Missão",
+              text: "Reunir, em um só lugar, as melhores soluções para proteger e planejar o que importa para cada família e cada negócio.",
+            },
+            {
+              label: "Visão",
+              text: "Ser a consultoria de proteção mais próxima e confiável do Brasil, onde decidir o futuro é simples.",
+            },
+            {
+              label: "Valores",
+              text: "Proximidade · Clareza · Cuidado · Pluralidade · Constância",
+              pills: valores,
+            },
           ].map((c) => (
-            <div key={c.title} className="rounded-2xl bg-white p-8 border border-neutral-200">
-              <h3 className="font-h3 text-orange mb-3">{c.title}</h3>
-              <p className="text-neutral-700">{c.text}</p>
+            <div
+              key={c.label}
+              style={{
+                background: "#FFFFFF",
+                borderTop: "3px solid #FF6B00",
+                borderRadius: "0 0 12px 12px",
+                padding: "28px 24px",
+                boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+              }}
+            >
+              <p
+                className="uppercase mb-3"
+                style={{
+                  color: "#FF6B00",
+                  letterSpacing: "0.12em",
+                  fontSize: "0.72rem",
+                  fontWeight: 700,
+                }}
+              >
+                {c.label}
+              </p>
+              <p className="text-neutral-700 leading-relaxed">{c.text}</p>
+              {c.pills && (
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {c.pills.map((p) => (
+                    <span
+                      key={p}
+                      style={{
+                        background: "rgba(255, 107, 0, 0.12)",
+                        color: "#B84A00",
+                        padding: "4px 12px",
+                        borderRadius: 999,
+                        fontSize: "0.75rem",
+                        fontWeight: 600,
+                      }}
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
       </section>
 
-      <section className="section-y">
-        <div className="container-x">
-          <h2 className="font-h2 mb-8">Time</h2>
-          {/* Fotos e nomes da equipe — aguardar envio do cliente */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((n) => (
-              <div key={n} className="rounded-2xl border border-dashed border-neutral-300 bg-white p-6 text-center">
-                <div className="mx-auto h-24 w-24 rounded-full bg-neutral-100" />
-                <div className="mt-4 font-semibold">Nome do membro</div>
-                <div className="text-sm text-neutral-500">Cargo</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-y bg-ink text-white">
-        <div className="container-x flex flex-col md:flex-row gap-4 items-center justify-between">
-          <h3 className="font-h2">Vamos conversar?</h3>
-          <div className="flex gap-3">
-            <Link to="/">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-ink">Conheça nossas soluções</Button>
-            </Link>
+      {/* Section 4 — Premium closing CTA */}
+      <section className="py-16" style={{ background: "#1A1A1A" }}>
+        <div className="container-x text-center">
+          <p
+            className="uppercase mb-3"
+            style={{
+              color: "rgba(255,255,255,0.45)",
+              letterSpacing: "0.14em",
+              fontSize: "0.72rem",
+              fontWeight: 700,
+            }}
+          >
+            Inicie uma conversa
+          </p>
+          <h2
+            className="font-bold"
+            style={{ color: "#fff", fontSize: "2rem", lineHeight: 1.2 }}
+          >
+            Pronto para estruturar sua proteção?
+          </h2>
+          <p
+            className="mt-4 mx-auto"
+            style={{
+              color: "rgba(255,255,255,0.70)",
+              maxWidth: 560,
+              lineHeight: 1.6,
+            }}
+          >
+            Nossos consultores estão disponíveis para entender seu cenário e propor a solução mais adequada.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary"><MessageCircle size={18} />Fale com nosso consultor</Button>
+              <Button variant="primary" size="lg">
+                <MessageCircle size={18} />
+                Fale com nosso consultor
+              </Button>
             </a>
+            <Link to="/">
+              <Button
+                variant="ghost"
+                size="lg"
+                style={{
+                  border: "1.5px solid rgba(255,255,255,0.60)",
+                  color: "#FFFFFF",
+                  background: "transparent",
+                }}
+              >
+                Conheça nossas soluções
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
