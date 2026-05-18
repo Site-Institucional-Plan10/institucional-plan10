@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
+import { saudePF, saudePJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
 
 export const Route = createFileRoute("/saude")({
