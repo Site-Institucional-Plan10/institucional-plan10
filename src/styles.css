@@ -188,12 +188,45 @@
     visibility: hidden !important;
     pointer-events: none !important;
   }
-  .hero-dots { bottom: 12px !important; }
+
+  .hero-dots {
+    position: absolute !important;
+    bottom: 16px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 20;
+  }
+
+  /* Standardize all hero banners on mobile */
   .hero-banner-inner {
-    padding-bottom: 56px !important;
     min-height: 100svh;
+    padding: 88px 20px 64px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
     box-sizing: border-box;
   }
+
+  /* Banner 1 (main brand, no circle): center vertically */
+  .hero-banner-main {
+    justify-content: center;
+  }
+  .hero-banner-main .hub-badges-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* Circle: identical size across all banners */
+  .hero-banner-circle {
+    width: 220px !important;
+    height: 220px !important;
+    flex-shrink: 0;
+  }
+
+  /* CTAs */
   .hero-banner-ctas {
     flex-direction: column !important;
     width: 100% !important;
@@ -204,6 +237,11 @@
   .hero-banner-ctas > * {
     width: 100% !important;
     justify-content: center;
+  }
+  .hero-banner-ctas > a > * {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    border-radius: 12px;
   }
 }
 

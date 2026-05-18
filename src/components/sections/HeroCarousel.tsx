@@ -286,7 +286,7 @@ function CenteredSlide({
     >
       <div
         className={cn(
-          "container-x flex flex-col items-center justify-center text-center text-white py-16 md:py-24",
+          "hero-banner-main hero-banner-inner container-x flex flex-col items-center justify-center text-center text-white py-16 md:py-24",
           minHeightClass,
         )}
       >
@@ -319,7 +319,7 @@ function CenteredSlide({
 
         {slide.pills && slide.pills.length > 0 && (
           <div
-            className="mt-8 grid grid-cols-2 w-full"
+            className="hub-badges-grid mt-8 grid grid-cols-2 w-full"
             style={{ gap: 10, maxWidth: 420 }}
           >
             {slide.pills.map((p) => {
@@ -510,7 +510,7 @@ function CircleImage({
 }) {
   return (
     <div
-      className={cn("relative overflow-hidden", sizeClass)}
+      className={cn("hero-banner-circle relative overflow-hidden", sizeClass)}
       style={{
         width: size,
         height: size,
