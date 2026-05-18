@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
+import { saudePF, saudePJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
 
 export const Route = createFileRoute("/saude")({
@@ -22,6 +23,8 @@ function SaudePage() {
       toggleEnabled
       toggleLabels={{ left: "Para você", right: "Para empresa" }}
       productsTitle="Planos de Saúde e Odonto"
+      productGroupsPF={saudePF}
+      productGroupsPJ={saudePJ}
       freeServices={[
         "Análise de perfil para planos de saúde",
         "Comparação entre operadoras",

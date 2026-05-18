@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
+import { consorciosPF, consorciosPJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
 
 export const Route = createFileRoute("/consorcios")({
@@ -161,6 +162,10 @@ function ConsorciosPage() {
     <VerticalPageTemplate
       vertical={v}
       productsTitle="Segmentos de Consórcio"
+      toggleEnabled
+      toggleLabels={{ left: "Para você", right: "Para empresas" }}
+      productGroupsPF={consorciosPF}
+      productGroupsPJ={consorciosPJ}
       extraTop={
         <section className="py-8 bg-white">
           <div className="container-x">
