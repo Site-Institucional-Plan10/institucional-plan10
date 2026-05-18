@@ -162,6 +162,10 @@ function ConsorciosPage() {
     <VerticalPageTemplate
       vertical={v}
       productsTitle="Segmentos de Consórcio"
+      toggleEnabled
+      toggleLabels={{ left: "Para você", right: "Para empresas" }}
+      productGroupsPF={consorciosPF}
+      productGroupsPJ={consorciosPJ}
       extraTop={
         <section className="py-8 bg-white">
           <div className="container-x">
