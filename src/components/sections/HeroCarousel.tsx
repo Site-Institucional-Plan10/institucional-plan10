@@ -319,7 +319,7 @@ function CenteredSlide({
 
         {slide.pills && slide.pills.length > 0 && (
           <div
-            className="mt-8 grid grid-cols-2 w-full"
+            className="hub-badges-grid mt-8 grid grid-cols-2 w-full"
             style={{ gap: 10, maxWidth: 420 }}
           >
             {slide.pills.map((p) => {
