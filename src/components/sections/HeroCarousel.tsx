@@ -286,7 +286,7 @@ function CenteredSlide({
     >
       <div
         className={cn(
-          "container-x flex flex-col items-center justify-center text-center text-white py-16 md:py-24",
+          "hero-banner-main hero-banner-inner container-x flex flex-col items-center justify-center text-center text-white py-16 md:py-24",
           minHeightClass,
         )}
       >
