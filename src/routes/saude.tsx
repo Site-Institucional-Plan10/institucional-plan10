@@ -23,6 +23,8 @@ function SaudePage() {
       toggleEnabled
       toggleLabels={{ left: "Para você", right: "Para empresa" }}
       productsTitle="Planos de Saúde e Odonto"
+      productGroupsPF={saudePF}
+      productGroupsPJ={saudePJ}
       freeServices={[
         "Análise de perfil para planos de saúde",
         "Comparação entre operadoras",
