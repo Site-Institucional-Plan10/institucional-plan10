@@ -24,6 +24,8 @@ export function WhyPlan10() {
           .why-plan10-card {
             display: flex;
             flex-direction: column;
+            width: 100% !important;
+            justify-self: stretch !important;
             min-height: 140px;
             padding: 20px;
             align-items: flex-start;
