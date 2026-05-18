@@ -510,7 +510,7 @@ function CircleImage({
 }) {
   return (
     <div
-      className={cn("relative overflow-hidden", sizeClass)}
+      className={cn("hero-banner-circle relative overflow-hidden", sizeClass)}
       style={{
         width: size,
         height: size,
