@@ -9,6 +9,8 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { RedirectPopup } from "@/components/common/RedirectPopup";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { verticalHeroSlides } from "@/data/heroSlides";
+import { ProductCard } from "@/components/vertical/ProductCard";
+import type { ProductGroup } from "@/data/products";
 
 interface VerticalPageProps {
   vertical: VerticalConfig;
@@ -21,6 +23,9 @@ interface VerticalPageProps {
   belowProducts?: React.ReactNode;
   productsTitle?: string;
   enableDirectContracting?: boolean;
+  productGroupsPF?: ProductGroup[];
+  productGroupsPJ?: ProductGroup[];
+  productHubColorOverride?: string;
 }
 
 export function VerticalPageTemplate({
