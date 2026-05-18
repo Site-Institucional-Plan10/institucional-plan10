@@ -33,6 +33,7 @@ export function HowItWorks() {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: center 68%;
           display: block;
         }
         .how-it-works-image::after {
@@ -49,6 +50,9 @@ export function HowItWorks() {
           }
           .how-it-works-image {
             aspect-ratio: 16 / 9;
+          }
+          .how-it-works-image img {
+            object-position: center 72%;
           }
         }
       `}</style>
