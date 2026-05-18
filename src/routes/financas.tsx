@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Info } from "lucide-react";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
+import { financasPF, financasPJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
 
 export const Route = createFileRoute("/financas")({
