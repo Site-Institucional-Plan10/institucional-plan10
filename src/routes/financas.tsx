@@ -22,6 +22,11 @@ function FinancasPage() {
     <VerticalPageTemplate
       vertical={v}
       productsTitle="Produtos Financeiros"
+      toggleEnabled
+      toggleLabels={{ left: "Para você", right: "Para empresas" }}
+      productGroupsPF={financasPF}
+      productGroupsPJ={financasPJ}
+      productHubColorOverride="#1A4FA0"
       belowProducts={
         <section className="py-10 bg-white">
           <div className="container-x">
