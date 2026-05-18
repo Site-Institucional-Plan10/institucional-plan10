@@ -39,6 +39,9 @@ export function VerticalPageTemplate({
   belowProducts,
   productsTitle = "Nossos Produtos",
   enableDirectContracting,
+  productGroupsPF,
+  productGroupsPJ,
+  productHubColorOverride,
 }: VerticalPageProps) {
   const [tab, setTab] = useState("pf");
   const [popup, setPopup] = useState<{ url: string; partner: string } | null>(null);
