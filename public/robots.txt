@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://institucional-plan10.lovable.app/sitemap.xml

@@ -1,0 +1,23 @@
+# Plan10
+
+> Corretora multimodal credenciada. Seguros, saúde, consórcio, finanças e serviços 24h em um só lugar, com consultoria humana e independente.
+
+A Plan10 é uma consultoria multimodal independente que conecta clientes às principais seguradoras, operadoras e instituições financeiras do Brasil. Atendimento humano, comparação imparcial e suporte do início ao fim.
+
+## Pages
+
+- [Home](/): Visão geral das verticais e propostas de valor.
+- [Quem Somos](/quem-somos): História, valores e células de atendimento da Plan10.
+- [Seguros](/seguros): Seguros auto, vida, residencial, viagem e empresarial.
+- [Saúde](/saude): Planos de saúde e odontológicos para pessoa física, família e empresa.
+- [Consórcio](/consorcios): Consórcios de imóveis, veículos e serviços, sem juros.
+- [Finanças](/financas): Crédito, financiamento e consultoria financeira.
+- [Serviços 24h](/servicos-24h): Assistência veicular e residencial 24/7.
+- [Blog](/blog): Artigos sobre seguros, saúde, consórcio e finanças.
+- [Fale Conosco](/fale-conosco): Canal de contato com retorno em até 24h úteis.
+
+## Optional
+
+- [Política de Privacidade](/privacidade)
+- [LGPD](/lgpd)
+- [Termos de Uso](/termos)

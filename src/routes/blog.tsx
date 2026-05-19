@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { verticals } from "@/data/verticals";
 import { blogArticles } from "@/data/blogArticles";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -10,7 +11,9 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: "Conteúdos sobre seguros, saúde, consórcio e finanças por Plan10." },
       { property: "og:title", content: "Blog Plan10" },
       { property: "og:description", content: "Conteúdo, biblioteca e cases reais." },
+      { property: "og:url", content: canonical("/blog") },
     ],
+    links: [{ rel: "canonical", href: canonical("/blog") }],
   }),
   component: BlogPage,
 });

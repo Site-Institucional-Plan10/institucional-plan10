@@ -2,8 +2,43 @@ import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { blogArticles } from "@/data/blogArticles";
 import { verticals } from "@/data/verticals";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
+  head: ({ params }) => {
+    const article = blogArticles.find((a) => a.slug === params.slug);
+    const url = canonical(`/blog/${params.slug}`);
+    const title = article ? `${article.title} | Blog Plan10` : "Blog Plan10";
+    const description = article?.summary ?? "Conteúdos sobre seguros, saúde, consórcio e finanças.";
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: article?.title ?? "Blog Plan10" },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: url },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: article
+        ? [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Article",
+                headline: article.title,
+                description: article.summary,
+                datePublished: article.date,
+                author: { "@type": "Organization", name: "Plan10" },
+                publisher: { "@type": "Organization", name: "Plan10" },
+                mainEntityOfPage: url,
+              }),
+            },
+          ]
+        : [],
+    };
+  },
   component: BlogArticlePage,
 });
 

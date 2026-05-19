@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/termos")({
   head: () => ({
@@ -7,7 +8,9 @@ export const Route = createFileRoute("/termos")({
       { name: "description", content: "Termos de uso do site da Plan10." },
       { property: "og:title", content: "Termos de Uso — Plan10" },
       { property: "og:description", content: "Regras de utilização do site." },
+      { property: "og:url", content: canonical("/termos") },
     ],
+    links: [{ rel: "canonical", href: canonical("/termos") }],
   }),
   component: TermosPage,
 });

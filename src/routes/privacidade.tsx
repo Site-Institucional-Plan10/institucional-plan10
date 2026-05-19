@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
@@ -7,7 +8,9 @@ export const Route = createFileRoute("/privacidade")({
       { name: "description", content: "Política de Privacidade da Plan10 conforme LGPD." },
       { property: "og:title", content: "Política de Privacidade — Plan10" },
       { property: "og:description", content: "Como tratamos seus dados pessoais." },
+      { property: "og:url", content: canonical("/privacidade") },
     ],
+    links: [{ rel: "canonical", href: canonical("/privacidade") }],
   }),
   component: PrivacidadePage,
 });

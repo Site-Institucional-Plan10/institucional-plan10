@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/lgpd")({
   head: () => ({
@@ -7,7 +8,9 @@ export const Route = createFileRoute("/lgpd")({
       { name: "description", content: "Como a Plan10 cumpre a Lei Geral de Proteção de Dados." },
       { property: "og:title", content: "LGPD — Plan10" },
       { property: "og:description", content: "Base legal, finalidade e direitos dos titulares." },
+      { property: "og:url", content: canonical("/lgpd") },
     ],
+    links: [{ rel: "canonical", href: canonical("/lgpd") }],
   }),
   component: LgpdPage,
 });

@@ -3,6 +3,13 @@ import { Info } from "lucide-react";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
 import { financasPF, financasPJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
+import { canonical, faqJsonLd } from "@/lib/seo";
+
+const financasFaq = [
+  { title: "Vocês fazem empréstimo direto?", content: "Não. A Plan10 conecta você às instituições financeiras parceiras com as melhores condições." },
+  { title: "Posso refinanciar dívidas?", content: "Sim. Avaliamos portabilidade e reestruturação caso a caso." },
+  { title: "Atendem empresas?", content: "Sim. Crédito empresarial e consultoria financeira para PMEs e grandes empresas." },
+];
 
 export const Route = createFileRoute("/financas")({
   head: () => ({
@@ -11,7 +18,10 @@ export const Route = createFileRoute("/financas")({
       { name: "description", content: "Crédito, financiamento e soluções financeiras com análise consultiva." },
       { property: "og:title", content: "Finanças — Plan10" },
       { property: "og:description", content: "Consultoria independente em produtos financeiros." },
+      { property: "og:url", content: canonical("/financas") },
     ],
+    links: [{ rel: "canonical", href: canonical("/financas") }],
+    scripts: [{ type: "application/ld+json", children: faqJsonLd(financasFaq) }],
   }),
   component: FinancasPage,
 });
@@ -47,11 +57,7 @@ function FinancasPage() {
         "Reestruturação de dívidas",
         "Consultoria empresarial",
       ]}
-      faqItems={[
-        { title: "Vocês fazem empréstimo direto?", content: "Não. A Plan10 conecta você às instituições financeiras parceiras com as melhores condições." },
-        { title: "Posso refinanciar dívidas?", content: "Sim. Avaliamos portabilidade e reestruturação caso a caso." },
-        { title: "Atendem empresas?", content: "Sim. Crédito empresarial e consultoria financeira para PMEs e grandes empresas." },
-      ]}
+      faqItems={financasFaq}
     />
   );
 }

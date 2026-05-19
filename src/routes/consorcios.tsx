@@ -3,15 +3,25 @@ import { createFileRoute } from "@tanstack/react-router";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
 import { consorciosPF, consorciosPJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
+import { canonical, faqJsonLd } from "@/lib/seo";
+
+const consorciosFaq = [
+  { title: "Consórcio tem juros?", content: "Não. O consórcio cobra apenas taxa de administração e fundo de reserva — sem juros." },
+  { title: "Posso usar FGTS?", content: "Sim. O FGTS pode ser usado em consórcios imobiliários nas condições previstas." },
+  { title: "Quanto tempo leva para ser contemplado?", content: "Depende do plano e do tipo de contemplação. Avaliamos isso na consultoria." },
+];
 
 export const Route = createFileRoute("/consorcios")({
   head: () => ({
     meta: [
-      { title: "Consórcio sem Juros | Plan10 — Imóveis, Veículos e Serviços" },
+      { title: "Consórcio sem Juros | Plan10 — Imóveis e Veículos" },
       { name: "description", content: "Planejamento sem juros para imóveis, veículos e serviços." },
       { property: "og:title", content: "Consórcio — Plan10" },
       { property: "og:description", content: "Financiamento tem juros. Consórcio não." },
+      { property: "og:url", content: canonical("/consorcios") },
     ],
+    links: [{ rel: "canonical", href: canonical("/consorcios") }],
+    scripts: [{ type: "application/ld+json", children: faqJsonLd(consorciosFaq) }],
   }),
   component: ConsorciosPage,
 });
@@ -575,23 +585,7 @@ function ConsorciosPage() {
         "Orientação para uso de FGTS",
         "Consultoria para investimento via consórcio",
       ]}
-      faqItems={[
-        {
-          title: "Consórcio tem juros?",
-          content:
-            "Não. O consórcio cobra apenas taxa de administração e fundo de reserva — sem juros.",
-        },
-        {
-          title: "Posso usar FGTS?",
-          content:
-            "Sim. O FGTS pode ser usado em consórcios imobiliários nas condições previstas.",
-        },
-        {
-          title: "Quanto tempo leva para ser contemplado?",
-          content:
-            "Depende do plano e do tipo de contemplação. Avaliamos isso na consultoria.",
-        },
-      ]}
+      faqItems={consorciosFaq}
     />
   );
 }
