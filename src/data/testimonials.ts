@@ -65,10 +65,3 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-export const verticalTestimonialIds: Record<string, string[]> = {
-  seguros: ["depo-01", "depo-02", "depo-03"],
-  saude: ["depo-04", "depo-02"],
-  consorcios: ["depo-06", "depo-02"],
-  financas: ["depo-05", "depo-04"],
-  servicos: ["depo-05", "depo-06"],
-};
