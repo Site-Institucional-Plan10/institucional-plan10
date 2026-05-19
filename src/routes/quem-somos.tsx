@@ -193,6 +193,76 @@ function QuemSomos() {
         </div>
       </section>
 
+      {/* Section 3.5 — Nosso time */}
+      <section
+        style={{
+          background: "linear-gradient(180deg, #FAFAFA 0%, #F4F4F4 100%)",
+          padding: "80px 0",
+        }}
+      >
+        <div className="container-x">
+          <div className="max-w-3xl mb-12">
+            <p
+              className="uppercase mb-3"
+              style={{
+                color: "#FF6B00",
+                letterSpacing: "0.14em",
+                fontSize: "0.78rem",
+                fontWeight: 700,
+              }}
+            >
+              Nossa equipe
+            </p>
+            <h2 className="font-h2 mb-4" style={{ color: "#1A1A1A" }}>
+              Consultores especializados por área
+            </h2>
+            <p className="text-neutral-700 leading-relaxed">
+              Cada vertical da Plan10 é conduzida por uma célula de consultores com formação técnica específica e anos de experiência no mercado.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {teamCells.map(({ Icon, color, area, description }) => (
+              <div
+                key={area}
+                style={{
+                  background: "#FFFFFF",
+                  borderRadius: 16,
+                  padding: "28px 24px",
+                  borderTop: `3px solid ${color}`,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 12,
+                }}
+              >
+                <Icon size={40} color={color} strokeWidth={1.5} />
+                <h3
+                  style={{
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontWeight: 600,
+                    color: "#1A1A1A",
+                    fontSize: "1rem",
+                  }}
+                >
+                  {area}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontWeight: 400,
+                    color: "#666666",
+                    fontSize: "0.875rem",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Section 4 — Premium closing CTA */}
       <section className="py-16" style={{ background: "#1A1A1A" }}>
         <div className="container-x text-center">
