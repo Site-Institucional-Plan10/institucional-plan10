@@ -3,15 +3,18 @@ import { MessageCircle, Shield, Heart, Building2, Landmark, Clock } from "lucide
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
     meta: [
-      { title: "Quem Somos | Plan10 — Consultoria de Proteção Integrada" },
-      { name: "description", content: "A Plan10 é uma consultoria multimodal independente, transparente e orientada por dados. Cuidar do que importa." },
+      { title: "Quem Somos | Plan10 — Consultoria Integrada" },
+      { name: "description", content: "A Plan10 é uma consultoria multimodal independente, transparente e orientada por dados." },
       { property: "og:title", content: "Quem Somos — Plan10" },
       { property: "og:description", content: "Consultoria de proteção integrada para pessoas, famílias e empresas." },
+      { property: "og:url", content: canonical("/quem-somos") },
     ],
+    links: [{ rel: "canonical", href: canonical("/quem-somos") }],
   }),
   component: QuemSomos,
 });

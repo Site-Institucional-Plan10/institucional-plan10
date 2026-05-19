@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Input } from "@/components/ui/primitives";
 import { Button } from "@/components/ui/Plan10Button";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/fale-conosco")({
   head: () => ({
@@ -10,7 +11,9 @@ export const Route = createFileRoute("/fale-conosco")({
       { name: "description", content: "Entre em contato com a Plan10. Atendimento humano em até 24h úteis." },
       { property: "og:title", content: "Fale Conosco — Plan10" },
       { property: "og:description", content: "Deixe sua mensagem. A Plan10 retorna em até 24h úteis." },
+      { property: "og:url", content: canonical("/fale-conosco") },
     ],
+    links: [{ rel: "canonical", href: canonical("/fale-conosco") }],
   }),
   component: FaleConosco,
 });
