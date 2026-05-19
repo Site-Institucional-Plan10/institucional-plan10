@@ -1,10 +1,6 @@
 import { Quote } from "lucide-react";
 import { testimonials, type Testimonial } from "@/data/testimonials";
 
-function getInitials(name: string) {
-  return name.split(" ").map((p) => p[0]).join("").slice(0, 2).toUpperCase();
-}
-
 function Card({ t }: { t: Testimonial }) {
   return (
     <div className="flex-shrink-0 w-[320px] md:w-[380px] rounded-2xl bg-white p-6 border border-neutral-200 shadow-sm mr-6">
@@ -12,23 +8,47 @@ function Card({ t }: { t: Testimonial }) {
       <p className="mt-3 text-sm text-neutral-700 leading-relaxed">{t.text}</p>
       <div className="mt-5 flex items-center gap-3">
         <div
-          className="flex h-10 w-10 items-center justify-center rounded-full text-white font-bold text-sm"
-          style={{ backgroundColor: t.hubColor }}
+          style={{
+            width: 56,
+            height: 56,
+            borderRadius: "50%",
+            overflow: "hidden",
+            flexShrink: 0,
+            border: `2px solid ${t.hubColor}`,
+          }}
         >
-          {getInitials(t.name)}
+          <img
+            src={t.photo}
+            alt={t.name}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center 20%",
+            }}
+          />
         </div>
         <div>
           <div className="font-semibold text-sm">{t.name}</div>
-          <div className="text-xs uppercase tracking-wider" style={{ color: t.hubColor }}>{t.hub}</div>
+          <div className="text-xs text-neutral-500">{t.role}</div>
         </div>
       </div>
     </div>
   );
 }
 
-export function Testimonials({ filter }: { filter?: string }) {
-  const list = filter ? testimonials.filter((t) => t.hub === filter) : testimonials;
-  // Duplicate for seamless marquee
+export function Testimonials({ filter, ids }: { filter?: string; ids?: string[] }) {
+  let list: Testimonial[];
+  if (ids && ids.length) {
+    list = ids
+      .map((id) => testimonials.find((t) => t.id === id))
+      .filter((t): t is Testimonial => Boolean(t));
+  } else if (filter) {
+    list = testimonials.filter((t) => t.hub === filter);
+  } else {
+    list = testimonials;
+  }
+
   const row1 = [...list, ...list];
   const row2 = [...list.slice().reverse(), ...list.slice().reverse()];
 
@@ -40,7 +60,6 @@ export function Testimonials({ filter }: { filter?: string }) {
           <h2 className="font-h1 mb-4">O que nossos clientes dizem</h2>
         </div>
       </div>
-      {/* PLACEHOLDER — substituir por depoimentos reais com foto quando disponíveis */}
       <div className="mt-10 space-y-6 overflow-hidden">
         <div className="flex animate-marquee w-max">
           {row1.map((t, i) => <Card key={`a-${i}`} t={t} />)}

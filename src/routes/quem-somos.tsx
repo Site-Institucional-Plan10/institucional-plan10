@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Shield, Heart, Building2, Landmark, Clock } from "lucide-react";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
@@ -17,6 +17,44 @@ export const Route = createFileRoute("/quem-somos")({
 });
 
 const valores = ["Proximidade", "Clareza", "Cuidado", "Pluralidade", "Constância"];
+
+const teamCells = [
+  {
+    Icon: Shield,
+    color: "#3D8BF2",
+    area: "Célula de Seguros",
+    description:
+      "Consultores especializados em proteção patrimonial, seguros de vida, automóvel, residencial e empresarial. Atuação independente com acesso às principais seguradoras do país.",
+  },
+  {
+    Icon: Heart,
+    color: "#24BF5B",
+    area: "Célula de Saúde",
+    description:
+      "Especialistas em planos de saúde e odontológicos para pessoa física e jurídica. Análise comparativa entre operadoras com foco no custo-benefício ideal para cada perfil.",
+  },
+  {
+    Icon: Building2,
+    color: "#9857F2",
+    area: "Célula de Consórcio",
+    description:
+      "Consultores dedicados ao planejamento de consórcio imobiliário, de veículos e serviços. Suporte estratégico na escolha do grupo, análise de lance e acompanhamento até a contemplação.",
+  },
+  {
+    Icon: Landmark,
+    color: "#1A4FA0",
+    area: "Célula de Finanças",
+    description:
+      "Equipe de inteligência financeira focada em crédito, investimentos, previdência e garantias. Análise independente das melhores condições disponíveis no mercado para pessoa física e jurídica.",
+  },
+  {
+    Icon: Clock,
+    color: "#27DEF2",
+    area: "Célula de Serviços",
+    description:
+      "Equipe operacional de assistência 24 horas para veículos e residências. Profissionais qualificados e credenciados com tempo médio de atendimento de 30 a 50 minutos.",
+  },
+];
 
 function QuemSomos() {
   return (
@@ -152,6 +190,76 @@ function QuemSomos() {
               )}
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Section 3.5 — Nosso time */}
+      <section
+        style={{
+          background: "linear-gradient(180deg, #FAFAFA 0%, #F4F4F4 100%)",
+          padding: "80px 0",
+        }}
+      >
+        <div className="container-x">
+          <div className="max-w-3xl mb-12">
+            <p
+              className="uppercase mb-3"
+              style={{
+                color: "#FF6B00",
+                letterSpacing: "0.14em",
+                fontSize: "0.78rem",
+                fontWeight: 700,
+              }}
+            >
+              Nossa equipe
+            </p>
+            <h2 className="font-h2 mb-4" style={{ color: "#1A1A1A" }}>
+              Consultores especializados por área
+            </h2>
+            <p className="text-neutral-700 leading-relaxed">
+              Cada vertical da Plan10 é conduzida por uma célula de consultores com formação técnica específica e anos de experiência no mercado.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {teamCells.map(({ Icon, color, area, description }) => (
+              <div
+                key={area}
+                style={{
+                  background: "#FFFFFF",
+                  borderRadius: 16,
+                  padding: "28px 24px",
+                  borderTop: `3px solid ${color}`,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 12,
+                }}
+              >
+                <Icon size={40} color={color} strokeWidth={1.5} />
+                <h3
+                  style={{
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontWeight: 600,
+                    color: "#1A1A1A",
+                    fontSize: "1rem",
+                  }}
+                >
+                  {area}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontWeight: 400,
+                    color: "#666666",
+                    fontSize: "0.875rem",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

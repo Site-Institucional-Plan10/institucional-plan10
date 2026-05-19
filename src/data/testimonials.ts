@@ -1,38 +1,74 @@
 export interface Testimonial {
+  id: string;
   name: string;
+  role: string;
+  photo: string;
+  text: string;
   hub: string;
   hubColor: string;
-  text: string;
 }
 
 export const testimonials: Testimonial[] = [
-  // Seguros
-  { name: "Mariana S.", hub: "seguros", hubColor: "#3D8BF2", text: "Economizei 28% no meu seguro auto sem abrir mão de nenhuma cobertura." },
-  { name: "João P.", hub: "seguros", hubColor: "#3D8BF2", text: "Seguro empresarial mais completo que já contratei. Suporte excelente." },
-  { name: "Fernanda R.", hub: "seguros", hubColor: "#3D8BF2", text: "O processo foi simples e rápido. Recomendo a todos." },
-  { name: "Carlos M.", hub: "seguros", hubColor: "#3D8BF2", text: "Compararam várias seguradoras e encontraram a melhor opção para mim." },
-
-  // Saúde
-  { name: "Juliana R.", hub: "saude", hubColor: "#24BF5B", text: "Encontrei um plano melhor e mais barato com a orientação da Plan10." },
-  { name: "Eduardo T.", hub: "saude", hubColor: "#24BF5B", text: "Economizei 22% no plano PME da minha empresa. Vale muito a consultoria." },
-  { name: "Ana P.", hub: "saude", hubColor: "#24BF5B", text: "Migrei de plano sem perder nenhuma cobertura. Processo sem burocracia." },
-  { name: "Rafael S.", hub: "saude", hubColor: "#24BF5B", text: "A equipe me explicou tudo com clareza antes de eu assinar." },
-
-  // Consórcio
-  { name: "Fernanda A.", hub: "consorcios", hubColor: "#9857F2", text: "Comprei meu primeiro imóvel via consórcio. O acompanhamento foi excepcional." },
-  { name: "Rafael M.", hub: "consorcios", hubColor: "#9857F2", text: "Fui contemplado mais rápido do que esperava. Ótima orientação de lance." },
-  { name: "Lucas B.", hub: "consorcios", hubColor: "#9857F2", text: "Usaram meu FGTS da forma mais inteligente possível. Muito profissional." },
-  { name: "Camila F.", hub: "consorcios", hubColor: "#9857F2", text: "Sem juros e com suporte do início ao fim. Não tem como errar." },
-
-  // Finanças
-  { name: "Patrícia L.", hub: "financas", hubColor: "#1A4FA0", text: "Taxa muito melhor do que qualquer banco me ofereceu. Recomendo." },
-  { name: "Carlos E.", hub: "financas", hubColor: "#1A4FA0", text: "Reorganizei minhas finanças com a orientação da Plan10 em poucas semanas." },
-  { name: "Beatriz N.", hub: "financas", hubColor: "#1A4FA0", text: "Portabilidade feita sem complicação. Economizo todo mês agora." },
-  { name: "André T.", hub: "financas", hubColor: "#1A4FA0", text: "Análise gratuita e sem compromisso. Me sentei e saí com a solução certa." },
-
-  // Serviços 24h
-  { name: "Roberto F.", hub: "servicos", hubColor: "#27DEF2", text: "Guincho chegou em 20 minutos. Serviço rápido e muito profissional." },
-  { name: "Ana C.", hub: "servicos", hubColor: "#27DEF2", text: "Chaveiro eficiente e cordial. Resolveu em minutos." },
-  { name: "Marcos V.", hub: "servicos", hubColor: "#27DEF2", text: "Atendimento 24h de verdade. Me ajudaram às 2h da manhã sem problema." },
-  { name: "Juliana K.", hub: "servicos", hubColor: "#27DEF2", text: "Profissionais qualificados e pontuais. Não fico sem este serviço." },
+  {
+    id: "depo-01",
+    name: "Diego Kaupp",
+    role: "Empresário",
+    photo: "/assets/testimonials/testimonial-diego-kaupp.jpg",
+    text: "Sempre atenciosos e prestativos. Seja seguro de auto, vida, saúde, etc.... Só faço com eles! Recomendo.",
+    hub: "seguros",
+    hubColor: "#3D8BF2",
+  },
+  {
+    id: "depo-02",
+    name: "Marlene Saggiomo e Júlio Domingos Vieira",
+    role: "Do lar / Aposentado",
+    photo: "/assets/testimonials/testimonial-marlene-julio.jpg",
+    text: "Somos clientes desde 2014. Profissional e especialistas no seguimento. Atendimento de primeira linha. Dedicados e prestativos. Aconselho e recomendo. Excelente em todos os aspectos.",
+    hub: "seguros",
+    hubColor: "#3D8BF2",
+  },
+  {
+    id: "depo-03",
+    name: "Johnny Neves",
+    role: "Empresário",
+    photo: "/assets/testimonials/testimonial-johnny-neves.jpg",
+    text: "Sempre faço meus seguros com eles. Excelente profissionais. Recomendo sempre. Parabéns e obrigado pelos serviços prestados.",
+    hub: "seguros",
+    hubColor: "#3D8BF2",
+  },
+  {
+    id: "depo-04",
+    name: "Dra. Mara Lúcia Peçanha",
+    role: "Advogada",
+    photo: "/assets/testimonials/testimonial-dra-mara.jpg",
+    text: "Gostaria de deixar o meu agradecimento pelo ótimo serviço prestado. Sempre fui atendida muito bem e prontamente. Muito obrigada.",
+    hub: "saude",
+    hubColor: "#24BF5B",
+  },
+  {
+    id: "depo-05",
+    name: "Antônio Carlos da Conceição",
+    role: "Secretário — Palácio dos Bandeirantes",
+    photo: "/assets/testimonials/testimonial-antonio-carlos.jpg",
+    text: "Sempre fui muito bem atendido, com rapidez e eficiência. Melhor custo benefício não existe. Parabéns à equipe.",
+    hub: "financas",
+    hubColor: "#1A4FA0",
+  },
+  {
+    id: "depo-06",
+    name: "Ademario R. de Oliveira",
+    role: "Administrador",
+    photo: "/assets/testimonials/testimonial-ademario.jpg",
+    text: "Já há alguns anos sou atendido por essa equipe. Uma boa consultoria com ótimo atendimento. Recomendo.",
+    hub: "consorcios",
+    hubColor: "#9857F2",
+  },
 ];
+
+export const verticalTestimonialIds: Record<string, string[]> = {
+  seguros: ["depo-01", "depo-02", "depo-03"],
+  saude: ["depo-04", "depo-02"],
+  consorcios: ["depo-06", "depo-02"],
+  financas: ["depo-05", "depo-04"],
+  servicos: ["depo-05", "depo-06"],
+};
