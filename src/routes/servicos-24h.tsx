@@ -83,11 +83,7 @@ function Servicos24hPage() {
         "Equipe própria e parceira credenciada",
         "Acompanhamento em tempo real",
       ]}
-      faqItems={[
-        { title: "Preciso ter seguro para contratar?", content: "Não. Os serviços podem ser contratados de forma avulsa ou vinculada a um seguro." },
-        { title: "O atendimento é realmente 24/7?", content: "Sim. Operamos todos os dias do ano, 24 horas." },
-        { title: "Quais serviços estão incluídos?", content: "Guincho, troca de pneu, chaveiro, elétrica, encanamento e mais." },
-      ]}
+      faqItems={servicosFaq}
     />
   );
 }
