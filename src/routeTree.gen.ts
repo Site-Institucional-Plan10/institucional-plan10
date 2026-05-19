@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermosRouteImport } from './routes/termos'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as Servicos24hRouteImport } from './routes/servicos-24h'
 import { Route as SegurosRouteImport } from './routes/seguros'
 import { Route as SaudeRouteImport } from './routes/saude'
@@ -27,6 +28,11 @@ import { Route as ApiContactRouteImport } from './routes/api/contact'
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
   path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Servicos24hRoute = Servicos24hRouteImport.update({
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/saude': typeof SaudeRoute
   '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -123,6 +130,7 @@ export interface FileRoutesByTo {
   '/saude': typeof SaudeRoute
   '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/saude': typeof SaudeRoute
   '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
     | '/saude'
     | '/seguros'
     | '/servicos-24h'
+    | '/sitemap.xml'
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/saude'
     | '/seguros'
     | '/servicos-24h'
+    | '/sitemap.xml'
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
@@ -190,6 +201,7 @@ export interface FileRouteTypes {
     | '/saude'
     | '/seguros'
     | '/servicos-24h'
+    | '/sitemap.xml'
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
@@ -207,6 +219,7 @@ export interface RootRouteChildren {
   SaudeRoute: typeof SaudeRoute
   SegurosRoute: typeof SegurosRoute
   Servicos24hRoute: typeof Servicos24hRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermosRoute: typeof TermosRoute
   ApiContactRoute: typeof ApiContactRoute
 }
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       path: '/termos'
       fullPath: '/termos'
       preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/servicos-24h': {
@@ -336,9 +356,20 @@ const rootRouteChildren: RootRouteChildren = {
   SaudeRoute: SaudeRoute,
   SegurosRoute: SegurosRoute,
   Servicos24hRoute: Servicos24hRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermosRoute: TermosRoute,
   ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
