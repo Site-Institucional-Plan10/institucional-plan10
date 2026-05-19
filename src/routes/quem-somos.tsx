@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Shield, Heart, Building2, Landmark, Clock } from "lucide-react";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
@@ -17,6 +17,44 @@ export const Route = createFileRoute("/quem-somos")({
 });
 
 const valores = ["Proximidade", "Clareza", "Cuidado", "Pluralidade", "Constância"];
+
+const teamCells = [
+  {
+    Icon: Shield,
+    color: "#3D8BF2",
+    area: "Célula de Seguros",
+    description:
+      "Consultores especializados em proteção patrimonial, seguros de vida, automóvel, residencial e empresarial. Atuação independente com acesso às principais seguradoras do país.",
+  },
+  {
+    Icon: Heart,
+    color: "#24BF5B",
+    area: "Célula de Saúde",
+    description:
+      "Especialistas em planos de saúde e odontológicos para pessoa física e jurídica. Análise comparativa entre operadoras com foco no custo-benefício ideal para cada perfil.",
+  },
+  {
+    Icon: Building2,
+    color: "#9857F2",
+    area: "Célula de Consórcio",
+    description:
+      "Consultores dedicados ao planejamento de consórcio imobiliário, de veículos e serviços. Suporte estratégico na escolha do grupo, análise de lance e acompanhamento até a contemplação.",
+  },
+  {
+    Icon: Landmark,
+    color: "#1A4FA0",
+    area: "Célula de Finanças",
+    description:
+      "Equipe de inteligência financeira focada em crédito, investimentos, previdência e garantias. Análise independente das melhores condições disponíveis no mercado para pessoa física e jurídica.",
+  },
+  {
+    Icon: Clock,
+    color: "#27DEF2",
+    area: "Célula de Serviços",
+    description:
+      "Equipe operacional de assistência 24 horas para veículos e residências. Profissionais qualificados e credenciados com tempo médio de atendimento de 30 a 50 minutos.",
+  },
+];
 
 function QuemSomos() {
   return (
