@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Truck, Circle, Key, Zap, Droplets, Clock } from "lucide-react";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
 import { getVertical } from "@/data/verticals";
+import { canonical, faqJsonLd } from "@/lib/seo";
 
 const services = [
   { Icon: Truck, label: "Guincho" },
@@ -11,6 +12,12 @@ const services = [
   { Icon: Droplets, label: "Encanamento" },
 ];
 
+const servicosFaq = [
+  { title: "Preciso ter seguro para contratar?", content: "Não. Os serviços podem ser contratados de forma avulsa ou vinculada a um seguro." },
+  { title: "O atendimento é realmente 24/7?", content: "Sim. Operamos todos os dias do ano, 24 horas." },
+  { title: "Quais serviços estão incluídos?", content: "Guincho, troca de pneu, chaveiro, elétrica, encanamento e mais." },
+];
+
 export const Route = createFileRoute("/servicos-24h")({
   head: () => ({
     meta: [
@@ -18,7 +25,10 @@ export const Route = createFileRoute("/servicos-24h")({
       { name: "description", content: "Assistência rápida para residência e veículos, 24/7." },
       { property: "og:title", content: "Serviços 24h — Plan10" },
       { property: "og:description", content: "Atendimento em 30 a 50 minutos." },
+      { property: "og:url", content: canonical("/servicos-24h") },
     ],
+    links: [{ rel: "canonical", href: canonical("/servicos-24h") }],
+    scripts: [{ type: "application/ld+json", children: faqJsonLd(servicosFaq) }],
   }),
   component: Servicos24hPage,
 });

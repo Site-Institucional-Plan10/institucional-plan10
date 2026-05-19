@@ -57,11 +57,7 @@ function FinancasPage() {
         "Reestruturação de dívidas",
         "Consultoria empresarial",
       ]}
-      faqItems={[
-        { title: "Vocês fazem empréstimo direto?", content: "Não. A Plan10 conecta você às instituições financeiras parceiras com as melhores condições." },
-        { title: "Posso refinanciar dívidas?", content: "Sim. Avaliamos portabilidade e reestruturação caso a caso." },
-        { title: "Atendem empresas?", content: "Sim. Crédito empresarial e consultoria financeira para PMEs e grandes empresas." },
-      ]}
+      faqItems={financasFaq}
     />
   );
 }
