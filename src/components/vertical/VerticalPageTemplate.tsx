@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/Plan10Button";
 import { Toggle } from "@/components/ui/primitives";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { verticalTestimonialIds } from "@/data/testimonials";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { RedirectPopup } from "@/components/common/RedirectPopup";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
@@ -232,7 +233,7 @@ export function VerticalPageTemplate({
       </section>
 
       {/* 7. Testimonials */}
-      <Testimonials filter={vertical.id} />
+      <Testimonials ids={verticalTestimonialIds[vertical.id]} />
 
       {/* 8. Contact form */}
       <div id="contato">
