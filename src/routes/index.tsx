@@ -28,7 +28,10 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Seguros, saúde, consórcio, finanças e serviços 24h." },
       { property: "og:url", content: canonical("/") },
     ],
-    links: [{ rel: "canonical", href: canonical("/") }],
+    links: [
+      { rel: "canonical", href: canonical("/") },
+      { rel: "preload", as: "image", href: "/assets/banners/hero-home-1.png", fetchpriority: "high" },
+    ],
     scripts: [{ type: "application/ld+json", children: faqJsonLd(homeFaq) }],
   }),
   component: HomePage,

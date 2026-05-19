@@ -33,7 +33,7 @@ export const Input = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputE
           id={inputId}
           ref={ref}
           className={cn(
-            "h-11 rounded-lg border border-neutral-300 bg-white px-4 text-base text-ink placeholder:text-neutral-500 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20 transition",
+            "h-11 rounded-lg border border-neutral-300 bg-white px-4 text-base text-ink placeholder:text-neutral-600 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20 transition",
             error && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
             className,
           )}
@@ -58,7 +58,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaHTMLAttributes<H
           ref={ref}
           rows={5}
           className={cn(
-            "rounded-lg border border-neutral-300 bg-white px-4 py-3 text-base text-ink placeholder:text-neutral-500 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20 transition resize-y",
+            "rounded-lg border border-neutral-300 bg-white px-4 py-3 text-base text-ink placeholder:text-neutral-600 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/20 transition resize-y",
             error && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
             className,
           )}
