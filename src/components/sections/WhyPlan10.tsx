@@ -1,4 +1,5 @@
-import { UserCheck, BarChart3, Users, LifeBuoy, Eye, Briefcase, ShieldCheck, Award } from "lucide-react";
+import { UserCheck, BarChart3, Users, LifeBuoy, Eye, Briefcase, Award } from "lucide-react";
+import { MobileCarousel } from "@/components/common/MobileCarousel";
 
 const benefits = [
   { Icon: UserCheck, title: "Consultoria independente", desc: "Análise sem vínculo com uma única seguradora." },
