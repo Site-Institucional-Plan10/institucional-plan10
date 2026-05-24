@@ -22,6 +22,7 @@ import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as ConsorciosRouteImport } from './routes/consorcios'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SegurosBlindagemPatrimonialRouteImport } from './routes/seguros/blindagem-patrimonial'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
@@ -90,6 +91,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SegurosBlindagemPatrimonialRoute =
+  SegurosBlindagemPatrimonialRouteImport.update({
+    id: '/blindagem-patrimonial',
+    path: '/blindagem-patrimonial',
+    getParentRoute: () => SegurosRoute,
+  } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -111,12 +118,13 @@ export interface FileRoutesByFullPath {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRoute
+  '/seguros': typeof SegurosRouteWithChildren
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/seguros/blindagem-patrimonial': typeof SegurosBlindagemPatrimonialRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -128,12 +136,13 @@ export interface FileRoutesByTo {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRoute
+  '/seguros': typeof SegurosRouteWithChildren
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/seguros/blindagem-patrimonial': typeof SegurosBlindagemPatrimonialRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -146,12 +155,13 @@ export interface FileRoutesById {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRoute
+  '/seguros': typeof SegurosRouteWithChildren
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/seguros/blindagem-patrimonial': typeof SegurosBlindagemPatrimonialRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -171,6 +181,7 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/seguros/blindagem-patrimonial'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -188,6 +199,7 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/seguros/blindagem-patrimonial'
   id:
     | '__root__'
     | '/'
@@ -205,6 +217,7 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/seguros/blindagem-patrimonial'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -217,7 +230,7 @@ export interface RootRouteChildren {
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuemSomosRoute: typeof QuemSomosRoute
   SaudeRoute: typeof SaudeRoute
-  SegurosRoute: typeof SegurosRoute
+  SegurosRoute: typeof SegurosRouteWithChildren
   Servicos24hRoute: typeof Servicos24hRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermosRoute: typeof TermosRoute
@@ -317,6 +330,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/seguros/blindagem-patrimonial': {
+      id: '/seguros/blindagem-patrimonial'
+      path: '/blindagem-patrimonial'
+      fullPath: '/seguros/blindagem-patrimonial'
+      preLoaderRoute: typeof SegurosBlindagemPatrimonialRouteImport
+      parentRoute: typeof SegurosRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -344,6 +364,17 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
+interface SegurosRouteChildren {
+  SegurosBlindagemPatrimonialRoute: typeof SegurosBlindagemPatrimonialRoute
+}
+
+const SegurosRouteChildren: SegurosRouteChildren = {
+  SegurosBlindagemPatrimonialRoute: SegurosBlindagemPatrimonialRoute,
+}
+
+const SegurosRouteWithChildren =
+  SegurosRoute._addFileChildren(SegurosRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
@@ -354,7 +385,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacidadeRoute: PrivacidadeRoute,
   QuemSomosRoute: QuemSomosRoute,
   SaudeRoute: SaudeRoute,
-  SegurosRoute: SegurosRoute,
+  SegurosRoute: SegurosRouteWithChildren,
   Servicos24hRoute: Servicos24hRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermosRoute: TermosRoute,
@@ -363,3 +394,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
