@@ -1,5 +1,5 @@
 import { UserCheck, BarChart3, Users, LifeBuoy, Eye, Briefcase, Award } from "lucide-react";
-import { MobileCarousel } from "@/components/common/MobileCarousel";
+import { SnapCarousel } from "@/components/common/SnapCarousel";
 
 const benefits = [
   { Icon: UserCheck, title: "Consultoria independente", desc: "Análise sem vínculo com uma única seguradora." },
@@ -27,14 +27,13 @@ export function WhyPlan10() {
           <p className="font-eyebrow text-orange mb-3">Nossos diferenciais</p>
           <h2 className="font-h1 mb-4">Por que escolher a Plan10</h2>
         </div>
-        {/* Desktop grid */}
-        <div className="hidden md:grid mt-12 gap-6 sm:grid-cols-2 lg:grid-cols-4" style={{ justifyContent: "center", justifyItems: "center" }}>
-          {cards}
-        </div>
       </div>
-      {/* Mobile carousel */}
       <div className="mt-8">
-        <MobileCarousel items={cards} ariaLabel="Por que escolher a Plan10" />
+        <SnapCarousel
+          items={cards}
+          ariaLabel="Por que escolher a Plan10"
+          dataAttr="data-why-carousel"
+        />
       </div>
     </section>
   );

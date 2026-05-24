@@ -24,34 +24,58 @@ export function VerticalCards() {
           }
           .ecossistema-grid > :last-child {
             grid-column: span 2;
-            max-width: 50%;
+            max-width: 60%;
             margin: 0 auto;
             width: 100%;
           }
           .ecossistema-card {
-            flex-direction: row !important;
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 8px !important;
+            padding: 14px !important;
+          }
+          .ecossistema-card .ecossistema-mobile-row {
+            display: flex !important;
             align-items: center !important;
-            gap: 12px !important;
-            padding: 12px 14px !important;
+            gap: 10px !important;
           }
           .ecossistema-card .ecossistema-icon-wrap {
-            width: 40px !important;
-            height: 40px !important;
+            width: 36px !important;
+            height: 36px !important;
             margin-bottom: 0 !important;
             border-radius: 10px !important;
+            flex-shrink: 0;
           }
           .ecossistema-card .ecossistema-mobile-label {
             display: block !important;
             font-weight: 600;
             font-size: 0.95rem;
             color: #1A1A1A;
+            line-height: 1.2;
+          }
+          .ecossistema-card .ecossistema-mobile-desc {
+            display: block !important;
+            font-size: 0.72rem;
+            line-height: 1.35;
+            color: #444444;
+          }
+          .ecossistema-card .ecossistema-mobile-link {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            margin-top: 2px;
           }
           .ecossistema-card .ecossistema-desktop-only {
             display: none !important;
           }
         }
         @media (min-width: 768px) {
-          .ecossistema-mobile-label { display: none; }
+          .ecossistema-mobile-label,
+          .ecossistema-mobile-row,
+          .ecossistema-mobile-desc,
+          .ecossistema-mobile-link { display: none !important; }
         }
       `}</style>
       <div className="container-x">
@@ -78,13 +102,19 @@ export function VerticalCards() {
                   className="ecossistema-desktop-only absolute top-0 left-0 right-0 h-1 group-hover:w-full group-hover:h-full group-hover:opacity-5 transition-all duration-300"
                   style={{ backgroundColor: v.hubColor }}
                 />
-                <div
-                  className="ecossistema-icon-wrap relative flex h-12 w-12 items-center justify-center rounded-xl mb-4"
-                  style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
-                >
-                  {Icon && <Icon size={24} />}
+                <div className="ecossistema-mobile-row">
+                  <div
+                    className="ecossistema-icon-wrap relative flex h-12 w-12 items-center justify-center rounded-xl mb-4"
+                    style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
+                  >
+                    {Icon && <Icon size={24} />}
+                  </div>
+                  <span className="ecossistema-mobile-label">{mobileLabels[v.id] ?? v.name}</span>
                 </div>
-                <span className="ecossistema-mobile-label">{mobileLabels[v.id] ?? v.name}</span>
+                <p className="ecossistema-mobile-desc">{v.chamada}</p>
+                <span className="ecossistema-mobile-link" style={{ color: v.hubColor }}>
+                  Saiba mais <ArrowRight size={12} />
+                </span>
                 <h3 className="ecossistema-desktop-only relative font-h3 mb-2">{v.name}</h3>
                 <p className="ecossistema-desktop-only relative text-sm text-neutral-700 mb-3">{v.chamada}</p>
                 <ul

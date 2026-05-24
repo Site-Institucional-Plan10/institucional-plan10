@@ -13,6 +13,7 @@ import { verticalHeroSlides } from "@/data/heroSlides";
 import { ProductCard } from "@/components/vertical/ProductCard";
 import type { ProductGroup } from "@/data/products";
 import { MobileCarousel } from "@/components/common/MobileCarousel";
+import { SnapCarousel } from "@/components/common/SnapCarousel";
 
 interface VerticalPageProps {
   vertical: VerticalConfig;
@@ -89,25 +90,6 @@ export function VerticalPageTemplate({
 
       {/* 4. Products grid */}
       <section className="section-y">
-        <style>{`
-          [data-product-carousel]::-webkit-scrollbar { display: none; }
-          @media (max-width: 767px) {
-            [data-product-carousel] {
-              display: flex !important;
-              overflow-x: auto;
-              scroll-snap-type: x mandatory;
-              gap: 12px;
-              padding: 4px 16px 8px;
-              margin: 0 -16px;
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-            }
-            [data-product-carousel] > * {
-              flex: 0 0 85%;
-              scroll-snap-align: start;
-            }
-          }
-        `}</style>
         <div className="container-x">
           <div className="text-center mb-8">
             <p className="font-eyebrow text-orange mb-3">Catálogo completo</p>
@@ -128,8 +110,10 @@ export function VerticalPageTemplate({
                         {group.groupTitle}
                       </h3>
                     </div>
-                    <div data-product-carousel className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                      {group.products.map((product) => (
+                    <SnapCarousel
+                      ariaLabel={group.groupTitle}
+                      dataAttr="data-products-carousel"
+                      items={group.products.map((product) => (
                         <ProductCard
                           key={product.id}
                           name={product.name}
@@ -138,7 +122,7 @@ export function VerticalPageTemplate({
                           hubColor={hubColor}
                         />
                       ))}
-                    </div>
+                    />
                   </div>
                 );
               })}
