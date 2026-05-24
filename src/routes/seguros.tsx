@@ -18,6 +18,9 @@ const segurosFaq = [
 ];
 
 export const Route = createFileRoute("/seguros")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    cat: typeof search.cat === "string" ? search.cat : null,
+  }),
   head: () => ({
     meta: [
       { title: "Seguros Gerais | Plan10 — Auto, Vida e Residencial" },
@@ -29,8 +32,14 @@ export const Route = createFileRoute("/seguros")({
     links: [{ rel: "canonical", href: canonical("/seguros") }],
     scripts: [{ type: "application/ld+json", children: faqJsonLd(segurosFaq) }],
   }),
-  component: SegurosPage,
+  component: SegurosRouteComponent,
 });
+
+function SegurosRouteComponent() {
+  const { cat } = Route.useSearch();
+  if (cat) return <SegurosCategoryPage categoryId={cat} />;
+  return <SegurosPage />;
+}
 
 function SegurosPage() {
   const v = getVertical("seguros");
