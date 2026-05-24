@@ -30,8 +30,8 @@ function BlogPage() {
     <>
       <section className="pt-32 pb-12 bg-neutral-100">
         <div className="container-x">
-          <p className="font-eyebrow text-orange mb-3">Conteúdo</p>
-          <h1 className="font-display">Blog Plan10 | Biblioteca | Cases</h1>
+          <p className="font-eyebrow text-orange mb-3">Conteúdo Plan10</p>
+          <h1 className="font-display">Fique por dentro do mercado</h1>
         </div>
       </section>
 
