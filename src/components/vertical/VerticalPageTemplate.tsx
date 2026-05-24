@@ -39,7 +39,7 @@ export function VerticalPageTemplate({
   faqItems,
   extraTop,
   belowProducts,
-  productsTitle = "Nossos Produtos",
+  productsTitle = "Encontre o produto certo para você",
   enableDirectContracting,
   productGroupsPF,
   productGroupsPJ,
@@ -89,8 +89,30 @@ export function VerticalPageTemplate({
 
       {/* 4. Products grid */}
       <section className="section-y">
+        <style>{`
+          [data-product-carousel]::-webkit-scrollbar { display: none; }
+          @media (max-width: 767px) {
+            [data-product-carousel] {
+              display: flex !important;
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              gap: 12px;
+              padding: 4px 16px 8px;
+              margin: 0 -16px;
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+            [data-product-carousel] > * {
+              flex: 0 0 85%;
+              scroll-snap-align: start;
+            }
+          }
+        `}</style>
         <div className="container-x">
-          <h2 className="font-h2 mb-8 text-center">{productsTitle}</h2>
+          <div className="text-center mb-8">
+            <p className="font-eyebrow text-orange mb-3">Catálogo completo</p>
+            <h2 className="font-h2">{productsTitle}</h2>
+          </div>
           {productGroupsPF || productGroupsPJ ? (
             <div className="flex flex-col gap-12">
               {((tab === "pj" ? productGroupsPJ : productGroupsPF) || []).map((group) => {
