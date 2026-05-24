@@ -125,7 +125,12 @@ export function SegurosCategoryPage({ categoryId }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {differentials.map((d) => (
               <div key={d.title} className="rounded-2xl bg-white border border-neutral-200 p-6">
-                <div className="text-3xl mb-3">{d.icon}</div>
+                <div
+                  className="inline-flex items-center justify-center mb-3 rounded-xl"
+                  style={{ width: 40, height: 40, background: `${cat.hubColor}18` }}
+                >
+                  <d.Icon size={20} color={cat.hubColor} strokeWidth={1.8} />
+                </div>
                 <h3 className="font-semibold text-lg text-ink mb-2">{d.title}</h3>
                 <p className="text-sm text-neutral-700 leading-relaxed">{d.desc}</p>
               </div>
