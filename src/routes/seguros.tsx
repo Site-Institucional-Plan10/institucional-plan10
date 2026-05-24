@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { SegurosCategoriesGrid } from "@/components/seguros/SegurosCategoriesGrid";
+import { SegurosCategoryPage } from "@/components/seguros/SegurosCategoryPage";
 import { getVertical } from "@/data/verticals";
 import { canonical, faqJsonLd } from "@/lib/seo";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
