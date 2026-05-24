@@ -41,6 +41,11 @@ const imgStyle: React.CSSProperties = {
   filter: "none",
 };
 
+const handleImgError: React.ReactEventHandler<HTMLImageElement> = (e) => {
+  e.currentTarget.style.opacity = "0";
+  e.currentTarget.style.visibility = "hidden";
+};
+
 export function PartnersLogos() {
   return (
     <section className="section-y bg-neutral-100">
