@@ -23,8 +23,8 @@ export function SegurosCategoriesGrid() {
             return (
               <Link
                 key={cat.id}
-                to="/seguros/$categoryId"
-                params={{ categoryId: cat.id }}
+                to="/seguros"
+                search={{ cat: cat.id }}
                 className="group flex flex-col rounded-2xl bg-white border border-neutral-200 p-6 transition-all duration-200"
                 style={{ boxShadow: "0 2px 10px rgba(0,0,0,0.05)" }}
                 onMouseEnter={(e) => {
