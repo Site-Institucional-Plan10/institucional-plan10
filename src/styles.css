@@ -197,33 +197,59 @@
     z-index: 20;
   }
 
-  /* Standardize all hero banners on mobile — vertically centered, content lifted */
+  /* Standardize all hero banners on mobile — fit content within viewport */
   .hero-banner-inner {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
-    min-height: unset !important;
-    height: auto !important;
-    padding: 116px 20px 100px !important;
-    gap: 14px !important;
+    min-height: 100svh !important;
+    height: 100svh !important;
+    padding: 80px 20px 52px !important;
+    gap: 8px !important;
     box-sizing: border-box !important;
+    overflow: hidden !important;
   }
 
   .hero-banner-main {
     justify-content: center;
   }
   .hero-banner-main .hub-badges-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    width: 100%;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .hero-banner-main .hub-badge {
+    padding: 10px 8px !important;
+    font-size: 0.75rem !important;
+    border-radius: 8px !important;
   }
 
-  /* Circle: 190px on mobile so content fits */
+  /* Eyebrow / headline / microcopy tightening */
+  .hero-banner-inner p[class*="uppercase"] {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.1em !important;
+    margin: 0 !important;
+  }
+  .hero-banner-inner h1 {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+  .hero-banner-text ul {
+    font-size: 0.78rem !important;
+    gap: 4px !important;
+    margin: 0 !important;
+  }
+  .hero-banner-text ul li {
+    font-size: 0.78rem !important;
+  }
+
+  /* Circle: 165px on mobile so content fits */
   .hero-banner-circle {
-    width: 190px !important;
-    height: 190px !important;
+    width: 165px !important;
+    height: 165px !important;
     flex-shrink: 0;
   }
 
@@ -231,8 +257,8 @@
   .hero-banner-ctas {
     flex-direction: column !important;
     width: 100% !important;
-    gap: 10px !important;
-    margin-bottom: 0 !important;
+    gap: 8px !important;
+    margin: 0 !important;
     position: relative;
     z-index: 10;
   }
@@ -243,9 +269,21 @@
   .hero-banner-ctas button,
   .hero-banner-ctas a {
     width: 100% !important;
-    padding: 14px 16px !important;
-    font-size: 0.9rem !important;
+    padding: 13px 16px !important;
+    font-size: 0.88rem !important;
     border-radius: 12px !important;
+  }
+
+  /* Hide secondary CTA on split-layout banners (those with a circle).
+     Banner 1 (centered/main with hub grid) keeps both CTAs. */
+  .hero-banner-text .hero-banner-ctas a:last-child:not(:first-child),
+  .hero-banner-text .hero-banner-ctas button:last-child:not(:first-child) {
+    display: none !important;
+  }
+
+  .hero-dots {
+    bottom: 10px !important;
+    z-index: 30 !important;
   }
 }
 
