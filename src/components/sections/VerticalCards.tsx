@@ -1,15 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { Shield, Heart, Building2, TrendingUp, Clock, ArrowRight, Check } from "lucide-react";
+import { ShieldCheck, HeartPulse, Landmark, Banknote, Clock, ArrowRight } from "lucide-react";
 import { verticals } from "@/data/verticals";
 
-const iconMap = { Shield, Heart, Building2, TrendingUp, Clock };
-
-const mobileLabels: Record<string, string> = {
-  seguros: "Seguros",
-  saude: "Saúde & Odonto",
-  consorcios: "Consórcios",
-  financas: "Finanças",
-  servicos: "Serviços",
+const iconMap: Record<string, React.ComponentType<{ size?: number; color?: string; strokeWidth?: number }>> = {
+  seguros: ShieldCheck,
+  saude: HeartPulse,
+  consorcios: Landmark,
+  financas: Banknote,
+  servicos: Clock,
 };
 
 export function VerticalCards() {
@@ -28,54 +26,6 @@ export function VerticalCards() {
             margin: 0 auto;
             width: 100%;
           }
-          .ecossistema-card {
-            flex-direction: column !important;
-            align-items: stretch !important;
-            gap: 8px !important;
-            padding: 14px !important;
-          }
-          .ecossistema-card .ecossistema-mobile-row {
-            display: flex !important;
-            align-items: center !important;
-            gap: 10px !important;
-          }
-          .ecossistema-card .ecossistema-icon-wrap {
-            width: 36px !important;
-            height: 36px !important;
-            margin-bottom: 0 !important;
-            border-radius: 10px !important;
-            flex-shrink: 0;
-          }
-          .ecossistema-card .ecossistema-mobile-label {
-            display: block !important;
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: #1A1A1A;
-            line-height: 1.2;
-          }
-          .ecossistema-card .ecossistema-mobile-desc {
-            display: block !important;
-            font-size: 0.72rem;
-            line-height: 1.35;
-            color: #444444;
-          }
-          .ecossistema-card .ecossistema-mobile-link {
-            display: inline-flex !important;
-            align-items: center;
-            gap: 4px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            margin-top: 2px;
-          }
-          .ecossistema-card .ecossistema-desktop-only {
-            display: none !important;
-          }
-        }
-        @media (min-width: 768px) {
-          .ecossistema-mobile-label,
-          .ecossistema-mobile-row,
-          .ecossistema-mobile-desc,
-          .ecossistema-mobile-link { display: none !important; }
         }
       `}</style>
       <div className="container-x">
@@ -86,49 +36,104 @@ export function VerticalCards() {
 
         <div className="ecossistema-grid mt-10 grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-5">
           {verticals.map((v) => {
-            const Icon = iconMap[v.icon as keyof typeof iconMap];
+            const Icon = iconMap[v.id] ?? ShieldCheck;
             return (
               <Link
                 key={v.id}
                 to={v.slug}
-                className="ecossistema-card group relative flex flex-col rounded-2xl p-5 border border-neutral-200 hover:-translate-y-1 transition-all overflow-hidden"
                 style={{
-                  background: "linear-gradient(160deg, #FFFFFF 0%, #F8F8F8 100%)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 12,
+                  padding: "18px 16px 20px",
+                  borderRadius: 14,
+                  border: "1px solid #E8E8E8",
+                  background: "#FFFFFF",
+                  boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
+                  height: "100%",
+                  boxSizing: "border-box",
+                  textDecoration: "none",
+                  transition: "transform 180ms ease, box-shadow 180ms ease",
                   borderLeft: `3px solid ${v.hubColor}`,
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-3px)";
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.10)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 1px 8px rgba(0,0,0,0.05)";
                 }}
               >
-                <div
-                  className="ecossistema-desktop-only absolute top-0 left-0 right-0 h-1 group-hover:w-full group-hover:h-full group-hover:opacity-5 transition-all duration-300"
-                  style={{ backgroundColor: v.hubColor }}
-                />
-                <div className="ecossistema-mobile-row">
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <div
-                    className="ecossistema-icon-wrap relative flex h-12 w-12 items-center justify-center rounded-xl mb-4"
-                    style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
+                    style={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: 10,
+                      background: `${v.hubColor}18`,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
                   >
-                    {Icon && <Icon size={24} />}
+                    <Icon size={20} color={v.hubColor} strokeWidth={1.8} />
                   </div>
-                  <span className="ecossistema-mobile-label">{mobileLabels[v.id] ?? v.name}</span>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 2, minWidth: 0 }}>
+                    <p
+                      style={{
+                        fontSize: "0.6rem",
+                        fontWeight: 700,
+                        color: v.hubColor,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                        margin: 0,
+                        lineHeight: 1.2,
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {v.hubLabel}
+                    </p>
+                    <h3
+                      style={{
+                        fontSize: "0.92rem",
+                        fontWeight: 700,
+                        color: "#1A1A1A",
+                        margin: 0,
+                        lineHeight: 1.25,
+                      }}
+                    >
+                      {v.name}
+                    </h3>
+                  </div>
                 </div>
-                <p className="ecossistema-mobile-desc">{v.chamada}</p>
-                <span className="ecossistema-mobile-link" style={{ color: v.hubColor }}>
-                  Saiba mais <ArrowRight size={12} />
-                </span>
-                <h3 className="ecossistema-desktop-only relative font-h3 mb-2">{v.name}</h3>
-                <p className="ecossistema-desktop-only relative text-sm text-neutral-700 mb-3">{v.chamada}</p>
-                <ul
-                  className="ecossistema-desktop-only relative space-y-1.5 text-sm text-neutral-700 mb-4 max-h-0 opacity-0 overflow-hidden group-hover:max-h-40 group-hover:opacity-100 transition-all duration-300 ease-out"
+
+                <p
+                  style={{
+                    fontSize: "0.78rem",
+                    color: "#666666",
+                    lineHeight: 1.55,
+                    margin: 0,
+                    flex: 1,
+                  }}
                 >
-                  {v.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2">
-                      <Check size={14} className="mt-1 flex-shrink-0" style={{ color: v.hubColor }} />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <span className="ecossistema-desktop-only relative mt-auto inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: v.hubColor }}>
-                  Conhecer <ArrowRight size={16} />
+                  {v.chamada}
+                </p>
+
+                <span
+                  style={{
+                    fontSize: "0.78rem",
+                    fontWeight: 700,
+                    color: v.hubColor,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 4,
+                  }}
+                >
+                  Conhecer <ArrowRight size={13} />
                 </span>
               </Link>
             );
