@@ -134,7 +134,7 @@ export function ProofNumbers({ compact = false }: { compact?: boolean }) {
                 key={label}
                 className={`text-center text-white px-2 md:px-4 ${
                   isLastOdd ? "col-span-2 md:col-span-1" : ""
-                } ${i < items.length - 1 ? "md:border-r" : ""}`}
+                } ${i < items.length - 1 ? "md:border-r numbers-divider" : ""}`}
                 style={{
                   borderColor: "rgba(255,255,255,0.20)",
                 }}
