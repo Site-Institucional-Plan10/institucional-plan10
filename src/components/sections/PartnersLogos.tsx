@@ -41,6 +41,11 @@ const imgStyle: React.CSSProperties = {
   filter: "none",
 };
 
+const handleImgError: React.ReactEventHandler<HTMLImageElement> = (e) => {
+  e.currentTarget.style.opacity = "0";
+  e.currentTarget.style.visibility = "hidden";
+};
+
 export function PartnersLogos() {
   return (
     <section className="section-y bg-neutral-100">
@@ -77,7 +82,7 @@ export function PartnersLogos() {
             >
               {[...row1Logos, ...row1Logos].map((logo, i) => (
                 <div key={`r1-${i}`} style={cardStyle}>
-                  <img src={logo.src} alt={logo.name} style={imgStyle} />
+                  <img src={logo.src} alt={logo.name} style={imgStyle} onError={handleImgError} />
                 </div>
               ))}
             </div>
@@ -99,7 +104,7 @@ export function PartnersLogos() {
             >
               {[...row2Logos, ...row2Logos].map((logo, i) => (
                 <div key={`r2-${i}`} style={cardStyle}>
-                  <img src={logo.src} alt={logo.name} style={imgStyle} />
+                  <img src={logo.src} alt={logo.name} style={imgStyle} onError={handleImgError} />
                 </div>
               ))}
             </div>

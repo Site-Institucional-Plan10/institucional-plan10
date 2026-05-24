@@ -167,14 +167,16 @@ export function Footer() {
         {/* Social icons */}
         <div className="mt-8 flex gap-3">
           {[
-            { Icon: Instagram, label: "Instagram" },
-            { Icon: Facebook, label: "Facebook" },
-            { Icon: Linkedin, label: "LinkedIn" },
-            { Icon: Youtube, label: "YouTube" },
-          ].map(({ Icon, label }) => (
+            { Icon: Instagram, label: "Instagram Plan10", href: "https://www.instagram.com/plan10seguros/" },
+            { Icon: Facebook, label: "Facebook Plan10", href: "https://www.facebook.com/plan10seguros/" },
+            { Icon: Linkedin, label: "LinkedIn", href: "#" },
+            { Icon: Youtube, label: "YouTube", href: "#" },
+          ].map(({ Icon, label, href }) => (
             <a
               key={label}
-              href="#"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={label}
               className="flex h-10 w-10 items-center justify-center rounded-full transition"
               style={{ background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.7)" }}
