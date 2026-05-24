@@ -197,41 +197,42 @@
     z-index: 20;
   }
 
-  /* Standardize all hero banners on mobile — tight, content-driven spacing */
+  /* Standardize all hero banners on mobile — vertically centered, content lifted */
   .hero-banner-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
     min-height: unset !important;
     height: auto !important;
-    padding: 72px 20px 48px !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 16px;
-    box-sizing: border-box;
+    padding: 116px 20px 100px !important;
+    gap: 14px !important;
+    box-sizing: border-box !important;
   }
 
-  /* Banner 1 (main brand, no circle): center vertically */
   .hero-banner-main {
     justify-content: center;
   }
   .hero-banner-main .hub-badges-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 12px;
     width: 100%;
   }
 
-  /* Circle: identical size across all banners */
+  /* Circle: 190px on mobile so content fits */
   .hero-banner-circle {
-    width: 200px !important;
-    height: 200px !important;
+    width: 190px !important;
+    height: 190px !important;
     flex-shrink: 0;
   }
 
-  /* CTAs */
+  /* CTAs — full width, always visible */
   .hero-banner-ctas {
     flex-direction: column !important;
     width: 100% !important;
     gap: 10px !important;
+    margin-bottom: 0 !important;
     position: relative;
     z-index: 10;
   }
@@ -239,10 +240,12 @@
     width: 100% !important;
     justify-content: center;
   }
-  .hero-banner-ctas > a > * {
-    padding: 14px 20px;
-    font-size: 0.95rem;
-    border-radius: 12px;
+  .hero-banner-ctas button,
+  .hero-banner-ctas a {
+    width: 100% !important;
+    padding: 14px 16px !important;
+    font-size: 0.9rem !important;
+    border-radius: 12px !important;
   }
 }
 
