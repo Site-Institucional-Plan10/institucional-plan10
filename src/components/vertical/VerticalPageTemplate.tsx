@@ -12,6 +12,7 @@ import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { verticalHeroSlides } from "@/data/heroSlides";
 import { ProductCard } from "@/components/vertical/ProductCard";
 import type { ProductGroup } from "@/data/products";
+import { MobileCarousel } from "@/components/common/MobileCarousel";
 
 interface VerticalPageProps {
   vertical: VerticalConfig;
