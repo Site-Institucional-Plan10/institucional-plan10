@@ -128,7 +128,7 @@ export function VerticalPageTemplate({
                         {group.groupTitle}
                       </h3>
                     </div>
-                    <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div data-product-carousel className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
                       {group.products.map((product) => (
                         <ProductCard
                           key={product.id}
