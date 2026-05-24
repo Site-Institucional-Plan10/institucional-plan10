@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Plan10Button";
+import { MobileCarousel } from "@/components/common/MobileCarousel";
 
 const steps = [
   { title: "Entendimento do seu perfil", desc: "Conversamos para mapear o cenário real." },
