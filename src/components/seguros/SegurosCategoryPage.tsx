@@ -16,6 +16,13 @@ import {
   Globe,
   TrendingUp,
   PawPrint,
+  User,
+  Building2,
+  Search,
+  Users,
+  Zap,
+  BarChart2,
+  ShieldCheck,
 } from "lucide-react";
 import { seguroCategories } from "@/data/seguros";
 import { ProductCard } from "@/components/vertical/ProductCard";
@@ -30,11 +37,11 @@ interface Props {
 }
 
 const differentials = [
-  { icon: "🔍", title: "Análise independente", desc: "Comparamos todas as opções disponíveis no mercado sem vínculo exclusivo com nenhuma seguradora." },
-  { icon: "🤝", title: "Consultoria personalizada", desc: "Cada cliente recebe uma análise de perfil gratuita e uma proposta sob medida para sua realidade." },
-  { icon: "⚡", title: "Agilidade na contratação", desc: "Processo simplificado, documentação orientada e contratação em até 24h para a maioria dos produtos." },
-  { icon: "📊", title: "Relatórios e transparência", desc: "Relatório mensal de performance e reunião de estratégia para clientes com apólices ativas." },
-  { icon: "🛡️", title: "Suporte em sinistros", desc: "Nossa equipe acompanha o processo do início ao fim para que você não fique sozinho no momento crítico." },
+  { Icon: Search, title: "Análise independente", desc: "Comparamos todas as opções disponíveis no mercado sem vínculo exclusivo com nenhuma seguradora." },
+  { Icon: Users, title: "Consultoria personalizada", desc: "Cada cliente recebe uma análise de perfil gratuita e uma proposta sob medida para sua realidade." },
+  { Icon: Zap, title: "Agilidade na contratação", desc: "Processo simplificado, documentação orientada e contratação em até 24h para a maioria dos produtos." },
+  { Icon: BarChart2, title: "Relatórios e transparência", desc: "Relatório mensal de performance e reunião de estratégia para clientes com apólices ativas." },
+  { Icon: ShieldCheck, title: "Suporte em sinistros", desc: "Nossa equipe acompanha o processo do início ao fim para que você não fique sozinho no momento crítico." },
 ];
 
 const processSteps = [
@@ -118,7 +125,12 @@ export function SegurosCategoryPage({ categoryId }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {differentials.map((d) => (
               <div key={d.title} className="rounded-2xl bg-white border border-neutral-200 p-6">
-                <div className="text-3xl mb-3">{d.icon}</div>
+                <div
+                  className="inline-flex items-center justify-center mb-3 rounded-xl"
+                  style={{ width: 40, height: 40, background: `${cat.hubColor}18` }}
+                >
+                  <d.Icon size={20} color={cat.hubColor} strokeWidth={1.8} />
+                </div>
                 <h3 className="font-semibold text-lg text-ink mb-2">{d.title}</h3>
                 <p className="text-sm text-neutral-700 leading-relaxed">{d.desc}</p>
               </div>
@@ -150,9 +162,20 @@ export function SegurosCategoryPage({ categoryId }: Props) {
                   background: toggle === tab ? "#FF6B00" : "transparent",
                   color: toggle === tab ? "#FFFFFF" : "#444444",
                   boxShadow: toggle === tab ? "0 4px 14px rgba(255,107,0,0.35)" : "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
                 }}
               >
-                {tab === "pf" ? "👤 Para Você" : "🏢 Para Empresas"}
+                {tab === "pf" ? (
+                  <>
+                    <User size={15} strokeWidth={2} style={{ flexShrink: 0 }} /> Para Você
+                  </>
+                ) : (
+                  <>
+                    <Building2 size={15} strokeWidth={2} style={{ flexShrink: 0 }} /> Para Empresas
+                  </>
+                )}
               </button>
             ))}
           </div>
