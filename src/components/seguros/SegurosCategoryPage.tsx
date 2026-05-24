@@ -162,9 +162,20 @@ export function SegurosCategoryPage({ categoryId }: Props) {
                   background: toggle === tab ? "#FF6B00" : "transparent",
                   color: toggle === tab ? "#FFFFFF" : "#444444",
                   boxShadow: toggle === tab ? "0 4px 14px rgba(255,107,0,0.35)" : "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
                 }}
               >
-                {tab === "pf" ? "👤 Para Você" : "🏢 Para Empresas"}
+                {tab === "pf" ? (
+                  <>
+                    <User size={15} strokeWidth={2} style={{ flexShrink: 0 }} /> Para Você
+                  </>
+                ) : (
+                  <>
+                    <Building2 size={15} strokeWidth={2} style={{ flexShrink: 0 }} /> Para Empresas
+                  </>
+                )}
               </button>
             ))}
           </div>
