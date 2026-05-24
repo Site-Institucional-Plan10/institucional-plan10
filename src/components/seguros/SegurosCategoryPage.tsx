@@ -16,6 +16,13 @@ import {
   Globe,
   TrendingUp,
   PawPrint,
+  User,
+  Building2,
+  Search,
+  Users,
+  Zap,
+  BarChart2,
+  ShieldCheck,
 } from "lucide-react";
 import { seguroCategories } from "@/data/seguros";
 import { ProductCard } from "@/components/vertical/ProductCard";
@@ -30,11 +37,11 @@ interface Props {
 }
 
 const differentials = [
-  { icon: "🔍", title: "Análise independente", desc: "Comparamos todas as opções disponíveis no mercado sem vínculo exclusivo com nenhuma seguradora." },
-  { icon: "🤝", title: "Consultoria personalizada", desc: "Cada cliente recebe uma análise de perfil gratuita e uma proposta sob medida para sua realidade." },
-  { icon: "⚡", title: "Agilidade na contratação", desc: "Processo simplificado, documentação orientada e contratação em até 24h para a maioria dos produtos." },
-  { icon: "📊", title: "Relatórios e transparência", desc: "Relatório mensal de performance e reunião de estratégia para clientes com apólices ativas." },
-  { icon: "🛡️", title: "Suporte em sinistros", desc: "Nossa equipe acompanha o processo do início ao fim para que você não fique sozinho no momento crítico." },
+  { Icon: Search, title: "Análise independente", desc: "Comparamos todas as opções disponíveis no mercado sem vínculo exclusivo com nenhuma seguradora." },
+  { Icon: Users, title: "Consultoria personalizada", desc: "Cada cliente recebe uma análise de perfil gratuita e uma proposta sob medida para sua realidade." },
+  { Icon: Zap, title: "Agilidade na contratação", desc: "Processo simplificado, documentação orientada e contratação em até 24h para a maioria dos produtos." },
+  { Icon: BarChart2, title: "Relatórios e transparência", desc: "Relatório mensal de performance e reunião de estratégia para clientes com apólices ativas." },
+  { Icon: ShieldCheck, title: "Suporte em sinistros", desc: "Nossa equipe acompanha o processo do início ao fim para que você não fique sozinho no momento crítico." },
 ];
 
 const processSteps = [
