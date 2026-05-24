@@ -39,7 +39,7 @@ export function VerticalPageTemplate({
   faqItems,
   extraTop,
   belowProducts,
-  productsTitle = "Nossos Produtos",
+  productsTitle = "Encontre o produto certo para você",
   enableDirectContracting,
   productGroupsPF,
   productGroupsPJ,
@@ -89,8 +89,30 @@ export function VerticalPageTemplate({
 
       {/* 4. Products grid */}
       <section className="section-y">
+        <style>{`
+          [data-product-carousel]::-webkit-scrollbar { display: none; }
+          @media (max-width: 767px) {
+            [data-product-carousel] {
+              display: flex !important;
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              gap: 12px;
+              padding: 4px 16px 8px;
+              margin: 0 -16px;
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+            [data-product-carousel] > * {
+              flex: 0 0 85%;
+              scroll-snap-align: start;
+            }
+          }
+        `}</style>
         <div className="container-x">
-          <h2 className="font-h2 mb-8 text-center">{productsTitle}</h2>
+          <div className="text-center mb-8">
+            <p className="font-eyebrow text-orange mb-3">Catálogo completo</p>
+            <h2 className="font-h2">{productsTitle}</h2>
+          </div>
           {productGroupsPF || productGroupsPJ ? (
             <div className="flex flex-col gap-12">
               {((tab === "pj" ? productGroupsPJ : productGroupsPF) || []).map((group) => {
@@ -106,7 +128,7 @@ export function VerticalPageTemplate({
                         {group.groupTitle}
                       </h3>
                     </div>
-                    <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div data-product-carousel className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
                       {group.products.map((product) => (
                         <ProductCard
                           key={product.id}
@@ -215,7 +237,10 @@ export function VerticalPageTemplate({
       {/* 6. How it works */}
       <section className="section-y">
         <div className="container-x">
-          <h2 className="font-h2 mb-10">Como funciona</h2>
+          <div className="mb-10">
+            <p className="font-eyebrow text-orange mb-3">O processo</p>
+            <h2 className="font-h2">Da consulta à contratação</h2>
+          </div>
           <div className="hidden md:grid gap-4 md:gap-6 md:grid-cols-4">
             {defaultSteps.map((s, i) => (
               <div key={s.title} className="rounded-2xl border border-neutral-200 bg-white p-5">

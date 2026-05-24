@@ -61,8 +61,8 @@ export function PartnersLogos() {
       `}</style>
       <div className="container-x">
         <div className="max-w-3xl mb-8">
-          <p className="font-eyebrow text-orange mb-3">Parceiros</p>
-          <h2 className="font-h1">Parceiros</h2>
+          <p className="font-eyebrow text-orange mb-3">Nossas parcerias</p>
+          <h2 className="font-h1">Empresas que confiam no nosso trabalho</h2>
         </div>
 
         <div className="space-y-4">

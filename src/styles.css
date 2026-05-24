@@ -197,10 +197,11 @@
     z-index: 20;
   }
 
-  /* Standardize all hero banners on mobile */
+  /* Standardize all hero banners on mobile — tight, content-driven spacing */
   .hero-banner-inner {
-    min-height: 100svh;
-    padding: 88px 20px 64px !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding: 72px 20px 48px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,8 +222,8 @@
 
   /* Circle: identical size across all banners */
   .hero-banner-circle {
-    width: 220px !important;
-    height: 220px !important;
+    width: 200px !important;
+    height: 200px !important;
     flex-shrink: 0;
   }
 

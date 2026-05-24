@@ -56,7 +56,7 @@ export function Testimonials({ filter, ids }: { filter?: string; ids?: string[] 
     <section className="section-y bg-neutral-100">
       <div className="container-x">
         <div className="max-w-3xl">
-          <p className="font-eyebrow text-orange mb-3">Depoimentos</p>
+          <p className="font-eyebrow text-orange mb-3">Clientes que confiam na Plan10</p>
           <h2 className="font-h1 mb-4">O que nossos clientes dizem</h2>
         </div>
       </div>

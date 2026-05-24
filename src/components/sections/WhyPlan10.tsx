@@ -24,7 +24,7 @@ export function WhyPlan10() {
     <section className="section-y bg-neutral-100">
       <div className="container-x">
         <div className="max-w-3xl">
-          <p className="font-eyebrow text-orange mb-3">Diferenciais</p>
+          <p className="font-eyebrow text-orange mb-3">Nossos diferenciais</p>
           <h2 className="font-h1 mb-4">Por que escolher a Plan10</h2>
         </div>
         {/* Desktop grid */}
