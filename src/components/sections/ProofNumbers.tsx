@@ -77,12 +77,22 @@ export function ProofNumbers({ compact = false }: { compact?: boolean }) {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden"
+      data-section="numeros"
+      className="numbers-section relative overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)",
         padding: compact ? "40px 0" : "80px 0",
       }}
     >
+      <style>{`
+        @media (max-width: 767px) {
+          .numbers-section {
+            padding-top: 40px !important;
+            padding-bottom: 40px !important;
+          }
+          .numbers-section .numbers-divider { border-right: 0 !important; }
+        }
+      `}</style>
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -93,18 +103,25 @@ export function ProofNumbers({ compact = false }: { compact?: boolean }) {
       />
       <div className="container-x relative">
         {!compact && (
-          <div
-            className="text-center"
-            style={{
-              fontSize: "0.7rem",
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              fontWeight: 600,
-              color: "rgba(255,255,255,0.55)",
-              marginBottom: 40,
-            }}
-          >
-            Plan10 em Números
+          <div className="text-center mb-10">
+            <div
+              style={{
+                fontSize: "0.7rem",
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                fontWeight: 600,
+                color: "rgba(255,255,255,0.55)",
+                marginBottom: 12,
+              }}
+            >
+              Plan10 em Números
+            </div>
+            <h2
+              className="text-white font-extrabold"
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.25rem)", lineHeight: 1.2 }}
+            >
+              Resultados que falam por si
+            </h2>
           </div>
         )}
 
