@@ -102,13 +102,19 @@ export function VerticalCards() {
                   className="ecossistema-desktop-only absolute top-0 left-0 right-0 h-1 group-hover:w-full group-hover:h-full group-hover:opacity-5 transition-all duration-300"
                   style={{ backgroundColor: v.hubColor }}
                 />
-                <div
-                  className="ecossistema-icon-wrap relative flex h-12 w-12 items-center justify-center rounded-xl mb-4"
-                  style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
-                >
-                  {Icon && <Icon size={24} />}
+                <div className="ecossistema-mobile-row">
+                  <div
+                    className="ecossistema-icon-wrap relative flex h-12 w-12 items-center justify-center rounded-xl mb-4"
+                    style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
+                  >
+                    {Icon && <Icon size={24} />}
+                  </div>
+                  <span className="ecossistema-mobile-label">{mobileLabels[v.id] ?? v.name}</span>
                 </div>
-                <span className="ecossistema-mobile-label">{mobileLabels[v.id] ?? v.name}</span>
+                <p className="ecossistema-mobile-desc">{v.chamada}</p>
+                <span className="ecossistema-mobile-link" style={{ color: v.hubColor }}>
+                  Saiba mais <ArrowRight size={12} />
+                </span>
                 <h3 className="ecossistema-desktop-only relative font-h3 mb-2">{v.name}</h3>
                 <p className="ecossistema-desktop-only relative text-sm text-neutral-700 mb-3">{v.chamada}</p>
                 <ul
