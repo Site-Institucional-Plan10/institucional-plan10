@@ -24,34 +24,58 @@ export function VerticalCards() {
           }
           .ecossistema-grid > :last-child {
             grid-column: span 2;
-            max-width: 50%;
+            max-width: 60%;
             margin: 0 auto;
             width: 100%;
           }
           .ecossistema-card {
-            flex-direction: row !important;
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 8px !important;
+            padding: 14px !important;
+          }
+          .ecossistema-card .ecossistema-mobile-row {
+            display: flex !important;
             align-items: center !important;
-            gap: 12px !important;
-            padding: 12px 14px !important;
+            gap: 10px !important;
           }
           .ecossistema-card .ecossistema-icon-wrap {
-            width: 40px !important;
-            height: 40px !important;
+            width: 36px !important;
+            height: 36px !important;
             margin-bottom: 0 !important;
             border-radius: 10px !important;
+            flex-shrink: 0;
           }
           .ecossistema-card .ecossistema-mobile-label {
             display: block !important;
             font-weight: 600;
             font-size: 0.95rem;
             color: #1A1A1A;
+            line-height: 1.2;
+          }
+          .ecossistema-card .ecossistema-mobile-desc {
+            display: block !important;
+            font-size: 0.72rem;
+            line-height: 1.35;
+            color: #444444;
+          }
+          .ecossistema-card .ecossistema-mobile-link {
+            display: inline-flex !important;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            margin-top: 2px;
           }
           .ecossistema-card .ecossistema-desktop-only {
             display: none !important;
           }
         }
         @media (min-width: 768px) {
-          .ecossistema-mobile-label { display: none; }
+          .ecossistema-mobile-label,
+          .ecossistema-mobile-row,
+          .ecossistema-mobile-desc,
+          .ecossistema-mobile-link { display: none !important; }
         }
       `}</style>
       <div className="container-x">
