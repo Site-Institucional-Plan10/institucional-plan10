@@ -31,7 +31,13 @@ interface Props {
 export function SegurosCategoryPage({ categoryId }: Props) {
   const [toggle, setToggle] = useState<"pf" | "pj">("pf");
   const cat = seguroCategories.find((c) => c.id === categoryId);
-  if (!cat) return null;
+  if (!cat) {
+    return (
+      <div className="pt-32 pb-20 container-x text-center">
+        <h1 className="font-h2 mb-3">Categoria não encontrada.</h1>
+      </div>
+    );
+  }
 
   const Icon = iconMap[cat.icon] ?? Shield;
   const activeGroups = toggle === "pf" ? cat.pf : cat.pj;
