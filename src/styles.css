@@ -191,7 +191,7 @@
 
   .hero-dots {
     position: absolute !important;
-    bottom: 16px !important;
+    bottom: 12px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 20;
