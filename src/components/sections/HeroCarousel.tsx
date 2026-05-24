@@ -113,7 +113,7 @@ function normalizeSlide(s: HeroSlide): HeroSlideCentered | HeroSlideSplit {
 export function HeroCarousel({
   slides,
   intervalMs = 7000,
-  minHeightClass = "min-h-[100svh] md:min-h-[640px]",
+  minHeightClass = "min-h-[560px] md:min-h-[640px]",
 }: HeroCarouselProps) {
   const [active, setActive] = useState(0);
   const [tick, setTick] = useState(0);
