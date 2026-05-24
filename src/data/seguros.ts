@@ -753,8 +753,517 @@ export const seguroCategories: SeguroCategory[] = [
     ],
   },
 
-  // ─── CATEGORIES 7-12 ARE ADDED IN PROMPT PART 2 ──────────────────────────
-  // Do NOT close the array or export yet — wait for Part 2.
+  // ─── 7. LOGÍSTICA & TRANSPORTE ───────────────────────────────────────────
+  {
+    id: "logistica-transporte",
+    route: "/seguros/logistica-transporte",
+    eyebrow: "TRANSPORTE DE CARGAS E EMBARCAÇÕES",
+    title: "Logística & Transporte",
+    description:
+      "Soluções para movimentação de cargas, frotas de transporte e responsabilidade do transportador — do bem pessoal até operações de comércio exterior.",
+    hubColor: "#3D8BF2",
+    icon: "Truck",
+    pf: [
+      {
+        groupTitle: "Transporte e mobilidade pessoal",
+        products: [
+          {
+            id: "seg-log-pf-01",
+            name: "Proteção de bens pessoais em mudança",
+            description:
+              "Móveis, obras de arte, joias e pertences cobertos durante o transporte. Cada item precioso chega ao destino com a mesma integridade com que saiu.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-log-pf-02",
+            name: "Proteção de embarcações de lazer",
+            description:
+              "Cobre casco, RC e tripulação de lancha, veleiro ou jet ski — para que cada saída ao mar seja uma experiência sem preocupações.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-log-pf-03",
+            name: "Proteção de aeronaves particulares",
+            description:
+              "Proteção para o ativo aeronáutico: casco, RC e acidentes com passageiros, estruturada para o exigente padrão da aviação executiva premium.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+    pj: [
+      {
+        groupTitle: "Transporte e logística empresarial",
+        products: [
+          {
+            id: "seg-log-pj-01",
+            name: "Proteção de cargas nacionais",
+            description:
+              "Cobertura obrigatória para mercadorias em trânsito nacional com gestão centralizada de sinistros e políticas adaptáveis ao perfil logístico da operação.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-log-pj-02",
+            name: "Proteção de cargas internacionais",
+            description:
+              "Cobertura para importação e exportação por modal aéreo, marítimo e rodoviário com cláusulas Institute Cargo Clauses e gestão especializada.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-log-pj-03",
+            name: "Proteção do transportador rodoviário",
+            description:
+              "RCTR-C e RCF-DC para transportadoras: conformidade regulatória e proteção financeira para operações rodoviárias de qualquer porte.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-log-pj-04",
+            name: "Proteção de operadores logísticos e armazéns",
+            description:
+              "Cobre responsabilidades durante movimentação e armazenagem, protegendo a operação logística de indenizações que comprometem o resultado.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-log-pj-05",
+            name: "Proteção de embarcações comerciais",
+            description:
+              "Casco, RC e tripulação para embarcações comerciais, navios e frotas de pesca e transporte aquaviário com coberturas técnicas estruturadas.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-log-pj-06",
+            name: "Proteção de aeronaves comerciais e executivas",
+            description:
+              "Casco e RC para táxi aéreo, frota corporativa e aviação agrícola, com acesso às melhores resseguradoras do mercado global.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── 8. RURAL & AGRONEGÓCIO ──────────────────────────────────────────────
+  {
+    id: "rural-agronegocio",
+    route: "/seguros/rural-agronegocio",
+    eyebrow: "PROTEÇÃO DA ATIVIDADE RURAL",
+    title: "Rural & Agronegócio",
+    description:
+      "Proteção da atividade rural com cobertura agrícola, pecuária, florestal e aquícola, integradas ao planejamento patrimonial do produtor.",
+    hubColor: "#3D8BF2",
+    icon: "Leaf",
+    pf: [
+      {
+        groupTitle: "Proteção para produtor rural",
+        products: [
+          {
+            id: "seg-rural-pf-01",
+            name: "Proteção do produtor rural",
+            description:
+              "Cobertura integrada para benfeitorias, máquinas, lavouras e rebanhos — dando ao produtor de alto padrão a tranquilidade para focar na produção.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pf-02",
+            name: "Proteção de lavoura e safra",
+            description:
+              "Sua safra protegida contra intempéries, pragas e doenças. Fenômenos climáticos e imprevistos não comprometem o resultado do seu trabalho no campo.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pf-03",
+            name: "Proteção de animais de produção",
+            description:
+              "Cobertura para cavalos, bovinos de elite e animais de alto valor zootécnico contra mortalidade por acidente e doença, com avaliação técnica rigorosa.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pf-04",
+            name: "Proteção do patrimônio rural",
+            description:
+              "Sede, imóveis e benfeitorias rurais protegidos com cobertura completa, preservando o legado rural e a continuidade da atividade produtiva.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+    pj: [
+      {
+        groupTitle: "Proteção para empresas do agronegócio",
+        products: [
+          {
+            id: "seg-rural-pj-01",
+            name: "Proteção integrada do agronegócio",
+            description:
+              "Solução integrada para fazendas, agroindústrias e tradings: benfeitorias, máquinas, lavouras e rebanhos com profundidade técnica e visão de longo prazo.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pj-02",
+            name: "Proteção de lavouras e safras empresariais",
+            description:
+              "Pré-requisito para financiamento agrícola: protege áreas e safras contra intempéries, pragas e doenças em escala empresarial.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pj-03",
+            name: "Proteção de rebanhos e pecuária",
+            description:
+              "Cobertura empresarial para pecuária bovina, suína e avícola — mortalidade e perdas por doença garantindo continuidade das operações.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pj-04",
+            name: "Proteção de florestas plantadas",
+            description:
+              "Áreas florestais de celulose, papel e reflorestamento cobertas contra incêndio, raio e explosão durante toda a maturação do investimento.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pj-05",
+            name: "Proteção de operações aquícolas",
+            description:
+              "Cobertura para piscicultura, carcinicultura e ostreicultura contra mortandade e perdas estruturais neste setor de alto valor agregado.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-rural-pj-06",
+            name: "Garantia de crédito rural",
+            description:
+              "Atua como garantia em financiamentos rurais, vinculando produção ou bens ao crédito e habilitando o produtor a acessar as melhores condições do mercado.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── 9. VIAGEM & MOBILIDADE GLOBAL ───────────────────────────────────────
+  {
+    id: "viagem-mobilidade",
+    route: "/seguros/viagem-mobilidade",
+    eyebrow: "VIAGENS NACIONAIS E INTERNACIONAIS",
+    title: "Viagem & Mobilidade Global",
+    description:
+      "Proteção em deslocamentos nacionais e internacionais: saúde, bagagem, RC e cancelamento para cada tipo de viajante.",
+    hubColor: "#3D8BF2",
+    icon: "Plane",
+    pf: [
+      {
+        groupTitle: "Proteção para viajantes",
+        products: [
+          {
+            id: "seg-viag-pf-01",
+            name: "Proteção em viagens internacionais",
+            description:
+              "Cobertura médica global irrestrita, assistência 24h em qualquer país, traslado aeromédico, bagagem extraviada e proteção jurídica — explore o mundo com liberdade total.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-viag-pf-02",
+            name: "Proteção para intercâmbio e estudos no exterior",
+            description:
+              "Cobertura médica integral, assistência jurídica e suporte logístico para permanências prolongadas — concentre-se na experiência, não nos imprevistos.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-viag-pf-03",
+            name: "Proteção para esportes e aventura",
+            description:
+              "Adrenalina e aventura fazem parte do seu estilo de vida. Cobertura para acidentes em esportes radicais e atividades de alto risco.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-viag-pf-04",
+            name: "Proteção contra cancelamento de viagem",
+            description:
+              "Indenização por despesas não reembolsáveis em caso de cancelamento por doença, acidente ou força maior — sua viagem planejada não vira prejuízo.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+    pj: [
+      {
+        groupTitle: "Mobilidade corporativa",
+        products: [
+          {
+            id: "seg-viag-pj-01",
+            name: "Proteção em viagens corporativas (Business Travel)",
+            description:
+              "Cobertura médica global, assistência 24h, repatriação e suporte jurídico integrados à política corporativa de mobilidade e conformidade internacional.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-viag-pj-02",
+            name: "Proteção de expatriados e mobilidade global",
+            description:
+              "Cobertura médica integral, suporte logístico e assistência jurídica para colaboradores em permanência prolongada no exterior — pilar dos programas de expatriação.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-viag-pj-03",
+            name: "Proteção de atletas e equipes profissionais",
+            description:
+              "Cobre atletas e equipes durante competições e treinamentos, viabilizando operações esportivas de alto nível com a segurança que patrocinadores exigem.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-viag-pj-04",
+            name: "Proteção contra cancelamento de eventos",
+            description:
+              "Indenização por despesas não reembolsáveis em cancelamentos corporativos — a decisão de cancelar não resulta em prejuízo financeiro adicional.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── 10. GRANDES RISCOS & NEGÓCIOS ───────────────────────────────────────
+  {
+    id: "grandes-riscos",
+    route: "/seguros/grandes-riscos",
+    eyebrow: "RISCOS ESPECIAIS E ALTO PATRIMÔNIO",
+    title: "Grandes Riscos & Negócios",
+    description:
+      "Soluções para grandes exposições e nichos técnicos exclusivos — de operações de petróleo e gás a programas customizados para Family Offices.",
+    hubColor: "#3D8BF2",
+    icon: "Globe",
+    pf: [
+      {
+        groupTitle: "Proteção de alto patrimônio",
+        products: [
+          {
+            id: "seg-gr-pf-01",
+            name: "Proteção integrada para alto patrimônio",
+            description:
+              "Programa sob medida reunindo vida, RC, kidnap & ransom e cobertura internacional em estrutura exclusiva para Family Offices e Private Wealth.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-gr-pf-02",
+            name: "Proteção contra sequestro e extorsão",
+            description:
+              "Perfis de alta visibilidade pública merecem proteção especializada. Cobre sequestro, extorsão e detenção ilegal com equipe de resposta a crises e total discrição.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+    pj: [
+      {
+        groupTitle: "Grandes riscos empresariais",
+        products: [
+          {
+            id: "seg-gr-pj-01",
+            name: "Proteção de operações de petróleo e gás",
+            description:
+              "Cobertura para plataformas, oleodutos, refinarias e operações upstream, midstream e downstream — estruturada via resseguro internacional.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-gr-pj-02",
+            name: "Proteção de riscos nucleares",
+            description:
+              "Instalações nucleares com cobertura altamente especializada, regulada pela CNEN e SUSEP, em parceria com as principais resseguradoras globais.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-gr-pj-03",
+            name: "Proteção de satélites e riscos aeroespaciais",
+            description:
+              "Cobertura para fabricação, lançamento e operação em órbita — para empresas e agências que operam na fronteira da tecnologia e inovação aeroespacial.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-gr-pj-04",
+            name: "Proteção customizada para alto patrimônio",
+            description:
+              "Programa estruturado reunindo vida, RC, D&O, kidnap & ransom e cobertura internacional para Family Offices, holdings e grupos empresariais complexos.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-gr-pj-05",
+            name: "Proteção de executivos contra sequestro (K&R)",
+            description:
+              "Cobertura K&R com equipe de resposta a crises de classe mundial e total discrição operacional — protegendo quem a empresa não pode se dar ao luxo de perder.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-gr-pj-06",
+            name: "Proteção de garantia estendida de produtos",
+            description:
+              "Extensão da garantia do fabricante como diferencial competitivo para varejistas e fabricantes que querem fidelizar clientes com experiência premium.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── 11. PREVIDÊNCIA & ACUMULAÇÃO ────────────────────────────────────────
+  {
+    id: "previdencia-acumulacao",
+    route: "/seguros/previdencia-acumulacao",
+    eyebrow: "PLANEJAMENTO DE LONGO PRAZO",
+    title: "Previdência & Acumulação",
+    description:
+      "Acumulação financeira de longo prazo integrada ao planejamento sucessório, tributário e à estratégia de aposentadoria. Estruturada com fundos exclusivos e governança.",
+    hubColor: "#3D8BF2",
+    icon: "TrendingUp",
+    pf: [
+      {
+        groupTitle: "Planejamento e acumulação pessoal",
+        products: [
+          {
+            id: "seg-prev-pf-01",
+            name: "Plano de previdência com benefício fiscal (PGBL)",
+            description:
+              "Deduz até 12% da renda bruta tributável no IR, acumulando recursos de longo prazo com a disciplina de quem planeja o futuro com método e visão estratégica.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-prev-pf-02",
+            name: "Plano de previdência e sucessão (VGBL)",
+            description:
+              "Fundos exclusivos, portabilidade flexível e gestão personalizada integrando acumulação financeira ao planejamento sucessório da família.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-prev-pf-03",
+            name: "Previdência para filhos e netos",
+            description:
+              "Acumulação de longo prazo para educação internacional, primeira aquisição de patrimônio e independência financeira — com o cuidado de quem pensa em gerações.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-prev-pf-04",
+            name: "Acumulação com capital garantido",
+            description:
+              "Estrutura dotal combinando acumulação disciplinada com garantia contratual de recebimento para planejamento sucessório com previsibilidade.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-prev-pf-05",
+            name: "Capitalização programática",
+            description:
+              "Poupança com propósito e sorteios: acumulação mensal com a chance de antecipar objetivos para quem quer construir reservas com disciplina.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+    pj: [
+      {
+        groupTitle: "Previdência corporativa",
+        products: [
+          {
+            id: "seg-prev-pj-01",
+            name: "Previdência empresarial coletiva (PGBL)",
+            description:
+              "Benefício fiscal de até 12% da renda bruta em programas de remuneração diferida, fortalecendo a proposta de valor e fidelizando executivos estratégicos.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-prev-pj-02",
+            name: "Previdência corporativa e sucessória (VGBL)",
+            description:
+              "Fundos exclusivos e portabilidade flexível integrando acumulação de longo prazo a remuneração diferida e transmissão de patrimônio empresarial.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-prev-pj-03",
+            name: "Capitalização empresarial e garantia locação",
+            description:
+              "Ferramenta versátil: garantia locatícia, incentivo comercial e fidelização de canais com liquidez programada e custo reduzido.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─── 12. PROTEÇÃO ANIMAL & PET ────────────────────────────────────────────
+  {
+    id: "protecao-animal",
+    route: "/seguros/protecao-animal",
+    eyebrow: "PETS, EQUINOS E ANIMAIS DE VALOR",
+    title: "Proteção Animal & Pet",
+    description:
+      "Proteção para animais de estimação, esportivos e de alto valor zootécnico — saúde veterinária, RC e mortalidade para famílias premium, criadores e haras.",
+    hubColor: "#3D8BF2",
+    icon: "PawPrint",
+    pf: [
+      {
+        groupTitle: "Proteção para pets e animais",
+        products: [
+          {
+            id: "seg-pet-pf-01",
+            name: "Plano de saúde para o seu pet",
+            description:
+              "Consultas, exames, internação e cirurgias de cães e gatos com acesso à rede de clínicas e hospitais veterinários de referência.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-pet-pf-02",
+            name: "Proteção de vida do seu pet",
+            description:
+              "Indenização em caso de morte por acidente ou doença, além de cobertura para serviços funerários pet — para que você não enfrente esse momento sozinho.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-pet-pf-03",
+            name: "Proteção de responsabilidade do seu pet",
+            description:
+              "Cobre RC do animal por danos materiais e corporais a terceiros — protegendo você de eventuais indenizações sem que isso afete o seu patrimônio.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-pet-pf-04",
+            name: "Proteção de equinos e cavalos de valor",
+            description:
+              "Mortalidade, invalidez e custos veterinários especializados para cavalos de alto valor esportivo, genético ou de lazer.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-pet-pf-05",
+            name: "Proteção do pet em viagem",
+            description:
+              "Assistência veterinária emergencial e suporte logístico para animais em viagens nacionais e internacionais — mobilidade premium para famílias com pets.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+    pj: [
+      {
+        groupTitle: "Proteção animal empresarial",
+        products: [
+          {
+            id: "seg-pet-pj-01",
+            name: "Plano de saúde pet como benefício corporativo",
+            description:
+              "Saúde pet coletiva cobrindo procedimentos veterinários, internações e cirurgias para pets dos colaboradores — benefício diferenciado para atrair novas gerações.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-pet-pj-02",
+            name: "Proteção de responsabilidade de estabelecimentos pet",
+            description:
+              "Pet shops, hotéis e creches pet: cobertura para danos a terceiros durante a prestação de serviços, protegendo negócio e reputação.",
+            imageSlot: true,
+          },
+          {
+            id: "seg-pet-pj-03",
+            name: "Proteção de equinos empresariais — haras e leilões",
+            description:
+              "Mortalidade, invalidez e custos veterinários de plantéis inteiros para haras, coudelarias e operadores de leilões equinos.",
+            imageSlot: true,
+          },
+        ],
+      },
+    ],
+  },
 ];
-// NOTE: This file is incomplete — Part 2 will add categories 7-12 before closing.
-// After running Part 2, the seguroCategories array will be complete.
+
