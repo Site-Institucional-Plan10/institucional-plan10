@@ -216,7 +216,7 @@ export function VerticalPageTemplate({
       <section className="section-y">
         <div className="container-x">
           <h2 className="font-h2 mb-10">Como funciona</h2>
-          <div className="grid gap-4 md:gap-6 md:grid-cols-4">
+          <div className="hidden md:grid gap-4 md:gap-6 md:grid-cols-4">
             {defaultSteps.map((s, i) => (
               <div key={s.title} className="rounded-2xl border border-neutral-200 bg-white p-5">
                 <div
@@ -229,6 +229,23 @@ export function VerticalPageTemplate({
                 <p className="text-sm text-neutral-700">{s.desc}</p>
               </div>
             ))}
+          </div>
+          <div className="-mx-4 md:hidden">
+            <MobileCarousel
+              ariaLabel="Como funciona"
+              items={defaultSteps.map((s, i) => (
+                <div className="rounded-2xl border border-neutral-200 bg-white p-5 h-full">
+                  <div
+                    className="flex h-10 w-10 items-center justify-center rounded-full text-white font-bold mb-4"
+                    style={{ backgroundColor: vertical.hubColor }}
+                  >
+                    {i + 1}
+                  </div>
+                  <h3 className="font-semibold mb-2">{s.title}</h3>
+                  <p className="text-sm text-neutral-700">{s.desc}</p>
+                </div>
+              ))}
+            />
           </div>
         </div>
       </section>
