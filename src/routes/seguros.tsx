@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
+import { SegurosCategoriesGrid } from "@/components/seguros/SegurosCategoriesGrid";
 import { getVertical } from "@/data/verticals";
 import { canonical, faqJsonLd } from "@/lib/seo";
 
@@ -32,6 +33,7 @@ function SegurosPage() {
       toggleEnabled
       toggleLabels={{ left: "Pessoa Física", right: "Pessoa Jurídica" }}
       productsTitle="Categorias de Seguros"
+      extraTop={<SegurosCategoriesGrid />}
       enableDirectContracting
       freeServices={[
         "Análise gratuita do perfil de risco",
