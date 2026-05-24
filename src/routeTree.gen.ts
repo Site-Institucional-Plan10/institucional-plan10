@@ -22,6 +22,18 @@ import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as ConsorciosRouteImport } from './routes/consorcios'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SegurosVidaLegadoFamiliarRouteImport } from './routes/seguros/vida-legado-familiar'
+import { Route as SegurosViagemMobilidadeRouteImport } from './routes/seguros/viagem-mobilidade'
+import { Route as SegurosRuralAgronegocioRouteImport } from './routes/seguros/rural-agronegocio'
+import { Route as SegurosResponsabilidadeProfissionalRouteImport } from './routes/seguros/responsabilidade-profissional'
+import { Route as SegurosProtecaoDigitalRouteImport } from './routes/seguros/protecao-digital'
+import { Route as SegurosProtecaoAnimalRouteImport } from './routes/seguros/protecao-animal'
+import { Route as SegurosPrevidenciaAcumulacaoRouteImport } from './routes/seguros/previdencia-acumulacao'
+import { Route as SegurosMobilidadeInteligenteRouteImport } from './routes/seguros/mobilidade-inteligente'
+import { Route as SegurosLogisticaTransporteRouteImport } from './routes/seguros/logistica-transporte'
+import { Route as SegurosGrandesRiscosRouteImport } from './routes/seguros/grandes-riscos'
+import { Route as SegurosGarantiasCreditoRouteImport } from './routes/seguros/garantias-credito'
+import { Route as SegurosBlindagemPatrimonialRouteImport } from './routes/seguros/blindagem-patrimonial'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
@@ -90,6 +102,72 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SegurosVidaLegadoFamiliarRoute =
+  SegurosVidaLegadoFamiliarRouteImport.update({
+    id: '/vida-legado-familiar',
+    path: '/vida-legado-familiar',
+    getParentRoute: () => SegurosRoute,
+  } as any)
+const SegurosViagemMobilidadeRoute = SegurosViagemMobilidadeRouteImport.update({
+  id: '/viagem-mobilidade',
+  path: '/viagem-mobilidade',
+  getParentRoute: () => SegurosRoute,
+} as any)
+const SegurosRuralAgronegocioRoute = SegurosRuralAgronegocioRouteImport.update({
+  id: '/rural-agronegocio',
+  path: '/rural-agronegocio',
+  getParentRoute: () => SegurosRoute,
+} as any)
+const SegurosResponsabilidadeProfissionalRoute =
+  SegurosResponsabilidadeProfissionalRouteImport.update({
+    id: '/responsabilidade-profissional',
+    path: '/responsabilidade-profissional',
+    getParentRoute: () => SegurosRoute,
+  } as any)
+const SegurosProtecaoDigitalRoute = SegurosProtecaoDigitalRouteImport.update({
+  id: '/protecao-digital',
+  path: '/protecao-digital',
+  getParentRoute: () => SegurosRoute,
+} as any)
+const SegurosProtecaoAnimalRoute = SegurosProtecaoAnimalRouteImport.update({
+  id: '/protecao-animal',
+  path: '/protecao-animal',
+  getParentRoute: () => SegurosRoute,
+} as any)
+const SegurosPrevidenciaAcumulacaoRoute =
+  SegurosPrevidenciaAcumulacaoRouteImport.update({
+    id: '/previdencia-acumulacao',
+    path: '/previdencia-acumulacao',
+    getParentRoute: () => SegurosRoute,
+  } as any)
+const SegurosMobilidadeInteligenteRoute =
+  SegurosMobilidadeInteligenteRouteImport.update({
+    id: '/mobilidade-inteligente',
+    path: '/mobilidade-inteligente',
+    getParentRoute: () => SegurosRoute,
+  } as any)
+const SegurosLogisticaTransporteRoute =
+  SegurosLogisticaTransporteRouteImport.update({
+    id: '/logistica-transporte',
+    path: '/logistica-transporte',
+    getParentRoute: () => SegurosRoute,
+  } as any)
+const SegurosGrandesRiscosRoute = SegurosGrandesRiscosRouteImport.update({
+  id: '/grandes-riscos',
+  path: '/grandes-riscos',
+  getParentRoute: () => SegurosRoute,
+} as any)
+const SegurosGarantiasCreditoRoute = SegurosGarantiasCreditoRouteImport.update({
+  id: '/garantias-credito',
+  path: '/garantias-credito',
+  getParentRoute: () => SegurosRoute,
+} as any)
+const SegurosBlindagemPatrimonialRoute =
+  SegurosBlindagemPatrimonialRouteImport.update({
+    id: '/blindagem-patrimonial',
+    path: '/blindagem-patrimonial',
+    getParentRoute: () => SegurosRoute,
+  } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -111,12 +189,24 @@ export interface FileRoutesByFullPath {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRoute
+  '/seguros': typeof SegurosRouteWithChildren
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/seguros/blindagem-patrimonial': typeof SegurosBlindagemPatrimonialRoute
+  '/seguros/garantias-credito': typeof SegurosGarantiasCreditoRoute
+  '/seguros/grandes-riscos': typeof SegurosGrandesRiscosRoute
+  '/seguros/logistica-transporte': typeof SegurosLogisticaTransporteRoute
+  '/seguros/mobilidade-inteligente': typeof SegurosMobilidadeInteligenteRoute
+  '/seguros/previdencia-acumulacao': typeof SegurosPrevidenciaAcumulacaoRoute
+  '/seguros/protecao-animal': typeof SegurosProtecaoAnimalRoute
+  '/seguros/protecao-digital': typeof SegurosProtecaoDigitalRoute
+  '/seguros/responsabilidade-profissional': typeof SegurosResponsabilidadeProfissionalRoute
+  '/seguros/rural-agronegocio': typeof SegurosRuralAgronegocioRoute
+  '/seguros/viagem-mobilidade': typeof SegurosViagemMobilidadeRoute
+  '/seguros/vida-legado-familiar': typeof SegurosVidaLegadoFamiliarRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -128,12 +218,24 @@ export interface FileRoutesByTo {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRoute
+  '/seguros': typeof SegurosRouteWithChildren
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/seguros/blindagem-patrimonial': typeof SegurosBlindagemPatrimonialRoute
+  '/seguros/garantias-credito': typeof SegurosGarantiasCreditoRoute
+  '/seguros/grandes-riscos': typeof SegurosGrandesRiscosRoute
+  '/seguros/logistica-transporte': typeof SegurosLogisticaTransporteRoute
+  '/seguros/mobilidade-inteligente': typeof SegurosMobilidadeInteligenteRoute
+  '/seguros/previdencia-acumulacao': typeof SegurosPrevidenciaAcumulacaoRoute
+  '/seguros/protecao-animal': typeof SegurosProtecaoAnimalRoute
+  '/seguros/protecao-digital': typeof SegurosProtecaoDigitalRoute
+  '/seguros/responsabilidade-profissional': typeof SegurosResponsabilidadeProfissionalRoute
+  '/seguros/rural-agronegocio': typeof SegurosRuralAgronegocioRoute
+  '/seguros/viagem-mobilidade': typeof SegurosViagemMobilidadeRoute
+  '/seguros/vida-legado-familiar': typeof SegurosVidaLegadoFamiliarRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -146,12 +248,24 @@ export interface FileRoutesById {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRoute
+  '/seguros': typeof SegurosRouteWithChildren
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/seguros/blindagem-patrimonial': typeof SegurosBlindagemPatrimonialRoute
+  '/seguros/garantias-credito': typeof SegurosGarantiasCreditoRoute
+  '/seguros/grandes-riscos': typeof SegurosGrandesRiscosRoute
+  '/seguros/logistica-transporte': typeof SegurosLogisticaTransporteRoute
+  '/seguros/mobilidade-inteligente': typeof SegurosMobilidadeInteligenteRoute
+  '/seguros/previdencia-acumulacao': typeof SegurosPrevidenciaAcumulacaoRoute
+  '/seguros/protecao-animal': typeof SegurosProtecaoAnimalRoute
+  '/seguros/protecao-digital': typeof SegurosProtecaoDigitalRoute
+  '/seguros/responsabilidade-profissional': typeof SegurosResponsabilidadeProfissionalRoute
+  '/seguros/rural-agronegocio': typeof SegurosRuralAgronegocioRoute
+  '/seguros/viagem-mobilidade': typeof SegurosViagemMobilidadeRoute
+  '/seguros/vida-legado-familiar': typeof SegurosVidaLegadoFamiliarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -171,6 +285,18 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/seguros/blindagem-patrimonial'
+    | '/seguros/garantias-credito'
+    | '/seguros/grandes-riscos'
+    | '/seguros/logistica-transporte'
+    | '/seguros/mobilidade-inteligente'
+    | '/seguros/previdencia-acumulacao'
+    | '/seguros/protecao-animal'
+    | '/seguros/protecao-digital'
+    | '/seguros/responsabilidade-profissional'
+    | '/seguros/rural-agronegocio'
+    | '/seguros/viagem-mobilidade'
+    | '/seguros/vida-legado-familiar'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -188,6 +314,18 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/seguros/blindagem-patrimonial'
+    | '/seguros/garantias-credito'
+    | '/seguros/grandes-riscos'
+    | '/seguros/logistica-transporte'
+    | '/seguros/mobilidade-inteligente'
+    | '/seguros/previdencia-acumulacao'
+    | '/seguros/protecao-animal'
+    | '/seguros/protecao-digital'
+    | '/seguros/responsabilidade-profissional'
+    | '/seguros/rural-agronegocio'
+    | '/seguros/viagem-mobilidade'
+    | '/seguros/vida-legado-familiar'
   id:
     | '__root__'
     | '/'
@@ -205,6 +343,18 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/seguros/blindagem-patrimonial'
+    | '/seguros/garantias-credito'
+    | '/seguros/grandes-riscos'
+    | '/seguros/logistica-transporte'
+    | '/seguros/mobilidade-inteligente'
+    | '/seguros/previdencia-acumulacao'
+    | '/seguros/protecao-animal'
+    | '/seguros/protecao-digital'
+    | '/seguros/responsabilidade-profissional'
+    | '/seguros/rural-agronegocio'
+    | '/seguros/viagem-mobilidade'
+    | '/seguros/vida-legado-familiar'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -217,7 +367,7 @@ export interface RootRouteChildren {
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuemSomosRoute: typeof QuemSomosRoute
   SaudeRoute: typeof SaudeRoute
-  SegurosRoute: typeof SegurosRoute
+  SegurosRoute: typeof SegurosRouteWithChildren
   Servicos24hRoute: typeof Servicos24hRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermosRoute: typeof TermosRoute
@@ -317,6 +467,90 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/seguros/vida-legado-familiar': {
+      id: '/seguros/vida-legado-familiar'
+      path: '/vida-legado-familiar'
+      fullPath: '/seguros/vida-legado-familiar'
+      preLoaderRoute: typeof SegurosVidaLegadoFamiliarRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/viagem-mobilidade': {
+      id: '/seguros/viagem-mobilidade'
+      path: '/viagem-mobilidade'
+      fullPath: '/seguros/viagem-mobilidade'
+      preLoaderRoute: typeof SegurosViagemMobilidadeRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/rural-agronegocio': {
+      id: '/seguros/rural-agronegocio'
+      path: '/rural-agronegocio'
+      fullPath: '/seguros/rural-agronegocio'
+      preLoaderRoute: typeof SegurosRuralAgronegocioRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/responsabilidade-profissional': {
+      id: '/seguros/responsabilidade-profissional'
+      path: '/responsabilidade-profissional'
+      fullPath: '/seguros/responsabilidade-profissional'
+      preLoaderRoute: typeof SegurosResponsabilidadeProfissionalRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/protecao-digital': {
+      id: '/seguros/protecao-digital'
+      path: '/protecao-digital'
+      fullPath: '/seguros/protecao-digital'
+      preLoaderRoute: typeof SegurosProtecaoDigitalRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/protecao-animal': {
+      id: '/seguros/protecao-animal'
+      path: '/protecao-animal'
+      fullPath: '/seguros/protecao-animal'
+      preLoaderRoute: typeof SegurosProtecaoAnimalRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/previdencia-acumulacao': {
+      id: '/seguros/previdencia-acumulacao'
+      path: '/previdencia-acumulacao'
+      fullPath: '/seguros/previdencia-acumulacao'
+      preLoaderRoute: typeof SegurosPrevidenciaAcumulacaoRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/mobilidade-inteligente': {
+      id: '/seguros/mobilidade-inteligente'
+      path: '/mobilidade-inteligente'
+      fullPath: '/seguros/mobilidade-inteligente'
+      preLoaderRoute: typeof SegurosMobilidadeInteligenteRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/logistica-transporte': {
+      id: '/seguros/logistica-transporte'
+      path: '/logistica-transporte'
+      fullPath: '/seguros/logistica-transporte'
+      preLoaderRoute: typeof SegurosLogisticaTransporteRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/grandes-riscos': {
+      id: '/seguros/grandes-riscos'
+      path: '/grandes-riscos'
+      fullPath: '/seguros/grandes-riscos'
+      preLoaderRoute: typeof SegurosGrandesRiscosRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/garantias-credito': {
+      id: '/seguros/garantias-credito'
+      path: '/garantias-credito'
+      fullPath: '/seguros/garantias-credito'
+      preLoaderRoute: typeof SegurosGarantiasCreditoRouteImport
+      parentRoute: typeof SegurosRoute
+    }
+    '/seguros/blindagem-patrimonial': {
+      id: '/seguros/blindagem-patrimonial'
+      path: '/blindagem-patrimonial'
+      fullPath: '/seguros/blindagem-patrimonial'
+      preLoaderRoute: typeof SegurosBlindagemPatrimonialRouteImport
+      parentRoute: typeof SegurosRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -344,6 +578,40 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
+interface SegurosRouteChildren {
+  SegurosBlindagemPatrimonialRoute: typeof SegurosBlindagemPatrimonialRoute
+  SegurosGarantiasCreditoRoute: typeof SegurosGarantiasCreditoRoute
+  SegurosGrandesRiscosRoute: typeof SegurosGrandesRiscosRoute
+  SegurosLogisticaTransporteRoute: typeof SegurosLogisticaTransporteRoute
+  SegurosMobilidadeInteligenteRoute: typeof SegurosMobilidadeInteligenteRoute
+  SegurosPrevidenciaAcumulacaoRoute: typeof SegurosPrevidenciaAcumulacaoRoute
+  SegurosProtecaoAnimalRoute: typeof SegurosProtecaoAnimalRoute
+  SegurosProtecaoDigitalRoute: typeof SegurosProtecaoDigitalRoute
+  SegurosResponsabilidadeProfissionalRoute: typeof SegurosResponsabilidadeProfissionalRoute
+  SegurosRuralAgronegocioRoute: typeof SegurosRuralAgronegocioRoute
+  SegurosViagemMobilidadeRoute: typeof SegurosViagemMobilidadeRoute
+  SegurosVidaLegadoFamiliarRoute: typeof SegurosVidaLegadoFamiliarRoute
+}
+
+const SegurosRouteChildren: SegurosRouteChildren = {
+  SegurosBlindagemPatrimonialRoute: SegurosBlindagemPatrimonialRoute,
+  SegurosGarantiasCreditoRoute: SegurosGarantiasCreditoRoute,
+  SegurosGrandesRiscosRoute: SegurosGrandesRiscosRoute,
+  SegurosLogisticaTransporteRoute: SegurosLogisticaTransporteRoute,
+  SegurosMobilidadeInteligenteRoute: SegurosMobilidadeInteligenteRoute,
+  SegurosPrevidenciaAcumulacaoRoute: SegurosPrevidenciaAcumulacaoRoute,
+  SegurosProtecaoAnimalRoute: SegurosProtecaoAnimalRoute,
+  SegurosProtecaoDigitalRoute: SegurosProtecaoDigitalRoute,
+  SegurosResponsabilidadeProfissionalRoute:
+    SegurosResponsabilidadeProfissionalRoute,
+  SegurosRuralAgronegocioRoute: SegurosRuralAgronegocioRoute,
+  SegurosViagemMobilidadeRoute: SegurosViagemMobilidadeRoute,
+  SegurosVidaLegadoFamiliarRoute: SegurosVidaLegadoFamiliarRoute,
+}
+
+const SegurosRouteWithChildren =
+  SegurosRoute._addFileChildren(SegurosRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
@@ -354,7 +622,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacidadeRoute: PrivacidadeRoute,
   QuemSomosRoute: QuemSomosRoute,
   SaudeRoute: SaudeRoute,
-  SegurosRoute: SegurosRoute,
+  SegurosRoute: SegurosRouteWithChildren,
   Servicos24hRoute: Servicos24hRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermosRoute: TermosRoute,
@@ -363,3 +631,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
