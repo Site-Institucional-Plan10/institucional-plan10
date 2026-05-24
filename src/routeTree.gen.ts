@@ -22,7 +22,6 @@ import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as ConsorciosRouteImport } from './routes/consorcios'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SegurosCategoryIdRouteImport } from './routes/seguros/$categoryId'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
@@ -91,11 +90,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SegurosCategoryIdRoute = SegurosCategoryIdRouteImport.update({
-  id: '/$categoryId',
-  path: '/$categoryId',
-  getParentRoute: () => SegurosRoute,
-} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -117,13 +111,12 @@ export interface FileRoutesByFullPath {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRouteWithChildren
+  '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/seguros/$categoryId': typeof SegurosCategoryIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -135,13 +128,12 @@ export interface FileRoutesByTo {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRouteWithChildren
+  '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/seguros/$categoryId': typeof SegurosCategoryIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -154,13 +146,12 @@ export interface FileRoutesById {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
-  '/seguros': typeof SegurosRouteWithChildren
+  '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/seguros/$categoryId': typeof SegurosCategoryIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -180,7 +171,6 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
-    | '/seguros/$categoryId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -198,7 +188,6 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
-    | '/seguros/$categoryId'
   id:
     | '__root__'
     | '/'
@@ -216,7 +205,6 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
-    | '/seguros/$categoryId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -229,7 +217,7 @@ export interface RootRouteChildren {
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuemSomosRoute: typeof QuemSomosRoute
   SaudeRoute: typeof SaudeRoute
-  SegurosRoute: typeof SegurosRouteWithChildren
+  SegurosRoute: typeof SegurosRoute
   Servicos24hRoute: typeof Servicos24hRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermosRoute: typeof TermosRoute
@@ -329,13 +317,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/seguros/$categoryId': {
-      id: '/seguros/$categoryId'
-      path: '/$categoryId'
-      fullPath: '/seguros/$categoryId'
-      preLoaderRoute: typeof SegurosCategoryIdRouteImport
-      parentRoute: typeof SegurosRoute
-    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -363,17 +344,6 @@ const BlogRouteChildren: BlogRouteChildren = {
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
-interface SegurosRouteChildren {
-  SegurosCategoryIdRoute: typeof SegurosCategoryIdRoute
-}
-
-const SegurosRouteChildren: SegurosRouteChildren = {
-  SegurosCategoryIdRoute: SegurosCategoryIdRoute,
-}
-
-const SegurosRouteWithChildren =
-  SegurosRoute._addFileChildren(SegurosRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
@@ -384,7 +354,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacidadeRoute: PrivacidadeRoute,
   QuemSomosRoute: QuemSomosRoute,
   SaudeRoute: SaudeRoute,
-  SegurosRoute: SegurosRouteWithChildren,
+  SegurosRoute: SegurosRoute,
   Servicos24hRoute: Servicos24hRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermosRoute: TermosRoute,
@@ -393,3 +363,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
