@@ -64,7 +64,7 @@ export function HowItWorks() {
               <p className="font-eyebrow text-orange mb-3">Processo</p>
               <h2 className="font-h1 mb-4">Como funciona nossa consultoria</h2>
             </div>
-            <div className="mt-10 flex flex-col gap-6">
+            <div className="mt-10 hidden md:flex flex-col gap-6">
               {steps.map(({ title, desc }, i) => (
                 <div key={title} className="flex items-start gap-4">
                   <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-orange text-white text-base font-bold">
@@ -76,6 +76,20 @@ export function HowItWorks() {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="mt-8 -mx-4">
+              <MobileCarousel
+                ariaLabel="Como funciona nossa consultoria"
+                items={steps.map(({ title, desc }, i) => (
+                  <div className="rounded-2xl border border-neutral-200 bg-white p-6 h-full">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange text-white text-base font-bold mb-4">
+                      {i + 1}
+                    </div>
+                    <h3 className="font-semibold mb-2">{title}</h3>
+                    <p className="text-sm text-neutral-700">{desc}</p>
+                  </div>
+                ))}
+              />
             </div>
             <div className="mt-10">
               <Button variant="primary" size="lg" onClick={scrollToForm}>
