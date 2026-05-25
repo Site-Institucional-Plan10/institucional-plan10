@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Linkedin, Youtube, ChevronDown } from "lucide-react";
+import { Instagram, Facebook, ChevronDown } from "lucide-react";
 
 import { WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
 import { getWhatsAppUrl } from "@/lib/utils";
@@ -169,8 +169,6 @@ export function Footer() {
           {[
             { Icon: Instagram, label: "Instagram Plan10", href: "https://www.instagram.com/plan10seguros/" },
             { Icon: Facebook, label: "Facebook Plan10", href: "https://www.facebook.com/plan10seguros/" },
-            { Icon: Linkedin, label: "LinkedIn", href: "#" },
-            { Icon: Youtube, label: "YouTube", href: "#" },
           ].map(({ Icon, label, href }) => (
             <a
               key={label}
