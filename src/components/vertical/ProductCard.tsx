@@ -26,7 +26,7 @@ export function ProductCard({ name, description, category, hubColor }: ProductCa
         e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.06)";
       }}
     >
-      {/* Image slot — placeholder for future photo */}
+      {/* Image slot, placeholder for future photo */}
       <div
         className="w-full flex items-center justify-center"
         style={{

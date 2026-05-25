@@ -41,7 +41,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-bp-pf-01",
             name: "Proteção do seu imóvel premium",
             description:
-              "Seu imóvel é muito mais do que um endereço — é a expressão do seu patrimônio. Cobertura ampla e personalizada para residências diferenciadas, com assistência 24h e coberturas customizadas.",
+              "Seu imóvel é muito mais do que um endereço, é a expressão do seu patrimônio. Cobertura ampla e personalizada para residências diferenciadas, com assistência 24h e coberturas customizadas.",
             imageSlot: true,
           },
           {
@@ -104,7 +104,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-bp-pj-02",
             name: "Proteção coletiva do condomínio",
             description:
-              "Cobertura da estrutura coletiva, danos a terceiros e responsabilidades da administração — protegendo a gestão e o valor de edifícios corporativos de alto padrão.",
+              "Cobertura da estrutura coletiva, danos a terceiros e responsabilidades da administração, protegendo a gestão e o valor de edifícios corporativos de alto padrão.",
             imageSlot: true,
           },
           {
@@ -160,7 +160,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-bp-pj-10",
             name: "Proteção de usinas e sistemas solares",
             description:
-              "Usinas fotovoltaicas cobertas contra danos materiais, queda de raio, surtos elétricos e lucros cessantes — garantindo retorno do investimento em energia limpa.",
+              "Usinas fotovoltaicas cobertas contra danos materiais, queda de raio, surtos elétricos e lucros cessantes, garantindo retorno do investimento em energia limpa.",
             imageSlot: true,
           },
         ],
@@ -268,7 +268,7 @@ export const seguroCategories: SeguroCategory[] = [
           },
           {
             id: "seg-mob-pj-05",
-            name: "Proteção veicular internacional — Mercosul",
+            name: "Proteção veicular internacional, Mercosul",
             description:
               "Garantia obrigatória de RC ampliada para frotas em trânsito internacional, com emissão ágil e gestão centralizada.",
             imageSlot: true,
@@ -317,7 +317,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-vida-pf-02",
             name: "Proteção de vida por prazo definido",
             description:
-              "Proteção precisa para obrigações financeiras temporárias — financiamentos, investimentos — com capital exato para essa finalidade.",
+              "Proteção precisa para obrigações financeiras temporárias, financiamentos, investimentos, com capital exato para essa finalidade.",
             imageSlot: true,
           },
           {
@@ -401,7 +401,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-vida-pf-14",
             name: "Proteção pessoal e proteção do pet",
             description:
-              "Cobertura veterinária, assistência doméstica e proteção de RC do animal — porque cuidar bem é cuidar de tudo o que você ama.",
+              "Cobertura veterinária, assistência doméstica e proteção de RC do animal, porque cuidar bem é cuidar de tudo o que você ama.",
             imageSlot: true,
           },
         ],
@@ -450,7 +450,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-vida-pj-06",
             name: "Proteção coletiva de renda do colaborador",
             description:
-              "Renda mensal substitutiva para colaboradores afastados por acidente ou doença — benefício diferenciador na política de retenção de talentos.",
+              "Renda mensal substitutiva para colaboradores afastados por acidente ou doença, benefício diferenciador na política de retenção de talentos.",
             imageSlot: true,
           },
           {
@@ -478,7 +478,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-vida-pj-10",
             name: "Assistência médica empresarial",
             description:
-              "Planos com ampla rede credenciada, cobertura nacional e opções premium para diferentes níveis hierárquicos — pilar central da política de benefícios.",
+              "Planos com ampla rede credenciada, cobertura nacional e opções premium para diferentes níveis hierárquicos, pilar central da política de benefícios.",
             imageSlot: true,
           },
           {
@@ -581,7 +581,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-rc-pj-06",
             name: "Proteção de eventos corporativos",
             description:
-              "Cancelamento, RC do organizador, danos à infraestrutura e acidentes com participantes — para que cada evento reforce a imagem da empresa.",
+              "Cancelamento, RC do organizador, danos à infraestrutura e acidentes com participantes, para que cada evento reforce a imagem da empresa.",
             imageSlot: true,
           },
         ],
@@ -717,7 +717,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-cyber-pf-02",
             name: "Proteção contra golpes e fraudes online",
             description:
-              "Golpes via Pix, transferências fraudulentas e engenharia social indenizados com agilidade — complemento essencial à sua estratégia de segurança digital.",
+              "Golpes via Pix, transferências fraudulentas e engenharia social indenizados com agilidade, complemento essencial à sua estratégia de segurança digital.",
             imageSlot: true,
           },
         ],
@@ -731,7 +731,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-cyber-pj-01",
             name: "Proteção de riscos cibernéticos empresariais",
             description:
-              "Cobre resposta a incidentes, notificações à ANPD, RC por violação de LGPD e lucros cessantes cibernéticos — protegendo operação, imagem e dados dos clientes.",
+              "Cobre resposta a incidentes, notificações à ANPD, RC por violação de LGPD e lucros cessantes cibernéticos, protegendo operação, imagem e dados dos clientes.",
             imageSlot: true,
           },
           {
@@ -745,7 +745,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-cyber-pj-03",
             name: "Proteção por violação de dados (LGPD)",
             description:
-              "Cobre multas regulatórias da ANPD, custos de defesa e indenizações a titulares em incidentes de dados — obrigação legal com risco financeiro real.",
+              "Cobre multas regulatórias da ANPD, custos de defesa e indenizações a titulares em incidentes de dados, obrigação legal com risco financeiro real.",
             imageSlot: true,
           },
         ],
@@ -760,7 +760,7 @@ export const seguroCategories: SeguroCategory[] = [
     eyebrow: "TRANSPORTE DE CARGAS E EMBARCAÇÕES",
     title: "Logística & Transporte",
     description:
-      "Soluções para movimentação de cargas, frotas de transporte e responsabilidade do transportador — do bem pessoal até operações de comércio exterior.",
+      "Soluções para movimentação de cargas, frotas de transporte e responsabilidade do transportador, do bem pessoal até operações de comércio exterior.",
     hubColor: "#3D8BF2",
     icon: "Truck",
     pf: [
@@ -778,7 +778,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-log-pf-02",
             name: "Proteção de embarcações de lazer",
             description:
-              "Cobre casco, RC e tripulação de lancha, veleiro ou jet ski — para que cada saída ao mar seja uma experiência sem preocupações.",
+              "Cobre casco, RC e tripulação de lancha, veleiro ou jet ski, para que cada saída ao mar seja uma experiência sem preocupações.",
             imageSlot: true,
           },
           {
@@ -860,7 +860,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-rural-pf-01",
             name: "Proteção do produtor rural",
             description:
-              "Cobertura integrada para benfeitorias, máquinas, lavouras e rebanhos — dando ao produtor de alto padrão a tranquilidade para focar na produção.",
+              "Cobertura integrada para benfeitorias, máquinas, lavouras e rebanhos, dando ao produtor de alto padrão a tranquilidade para focar na produção.",
             imageSlot: true,
           },
           {
@@ -909,7 +909,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-rural-pj-03",
             name: "Proteção de rebanhos e pecuária",
             description:
-              "Cobertura empresarial para pecuária bovina, suína e avícola — mortalidade e perdas por doença garantindo continuidade das operações.",
+              "Cobertura empresarial para pecuária bovina, suína e avícola, mortalidade e perdas por doença garantindo continuidade das operações.",
             imageSlot: true,
           },
           {
@@ -956,14 +956,14 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-viag-pf-01",
             name: "Proteção em viagens internacionais",
             description:
-              "Cobertura médica global irrestrita, assistência 24h em qualquer país, traslado aeromédico, bagagem extraviada e proteção jurídica — explore o mundo com liberdade total.",
+              "Cobertura médica global irrestrita, assistência 24h em qualquer país, traslado aeromédico, bagagem extraviada e proteção jurídica, explore o mundo com liberdade total.",
             imageSlot: true,
           },
           {
             id: "seg-viag-pf-02",
             name: "Proteção para intercâmbio e estudos no exterior",
             description:
-              "Cobertura médica integral, assistência jurídica e suporte logístico para permanências prolongadas — concentre-se na experiência, não nos imprevistos.",
+              "Cobertura médica integral, assistência jurídica e suporte logístico para permanências prolongadas, concentre-se na experiência, não nos imprevistos.",
             imageSlot: true,
           },
           {
@@ -977,7 +977,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-viag-pf-04",
             name: "Proteção contra cancelamento de viagem",
             description:
-              "Indenização por despesas não reembolsáveis em caso de cancelamento por doença, acidente ou força maior — sua viagem planejada não vira prejuízo.",
+              "Indenização por despesas não reembolsáveis em caso de cancelamento por doença, acidente ou força maior, sua viagem planejada não vira prejuízo.",
             imageSlot: true,
           },
         ],
@@ -998,7 +998,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-viag-pj-02",
             name: "Proteção de expatriados e mobilidade global",
             description:
-              "Cobertura médica integral, suporte logístico e assistência jurídica para colaboradores em permanência prolongada no exterior — pilar dos programas de expatriação.",
+              "Cobertura médica integral, suporte logístico e assistência jurídica para colaboradores em permanência prolongada no exterior, pilar dos programas de expatriação.",
             imageSlot: true,
           },
           {
@@ -1012,7 +1012,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-viag-pj-04",
             name: "Proteção contra cancelamento de eventos",
             description:
-              "Indenização por despesas não reembolsáveis em cancelamentos corporativos — a decisão de cancelar não resulta em prejuízo financeiro adicional.",
+              "Indenização por despesas não reembolsáveis em cancelamentos corporativos, a decisão de cancelar não resulta em prejuízo financeiro adicional.",
             imageSlot: true,
           },
         ],
@@ -1027,7 +1027,7 @@ export const seguroCategories: SeguroCategory[] = [
     eyebrow: "RISCOS ESPECIAIS E ALTO PATRIMÔNIO",
     title: "Grandes Riscos & Negócios",
     description:
-      "Soluções para grandes exposições e nichos técnicos exclusivos — de operações de petróleo e gás a programas customizados para Family Offices.",
+      "Soluções para grandes exposições e nichos técnicos exclusivos, de operações de petróleo e gás a programas customizados para Family Offices.",
     hubColor: "#3D8BF2",
     icon: "Globe",
     pf: [
@@ -1059,7 +1059,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-gr-pj-01",
             name: "Proteção de operações de petróleo e gás",
             description:
-              "Cobertura para plataformas, oleodutos, refinarias e operações upstream, midstream e downstream — estruturada via resseguro internacional.",
+              "Cobertura para plataformas, oleodutos, refinarias e operações upstream, midstream e downstream, estruturada via resseguro internacional.",
             imageSlot: true,
           },
           {
@@ -1073,7 +1073,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-gr-pj-03",
             name: "Proteção de satélites e riscos aeroespaciais",
             description:
-              "Cobertura para fabricação, lançamento e operação em órbita — para empresas e agências que operam na fronteira da tecnologia e inovação aeroespacial.",
+              "Cobertura para fabricação, lançamento e operação em órbita, para empresas e agências que operam na fronteira da tecnologia e inovação aeroespacial.",
             imageSlot: true,
           },
           {
@@ -1087,7 +1087,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-gr-pj-05",
             name: "Proteção de executivos contra sequestro (K&R)",
             description:
-              "Cobertura K&R com equipe de resposta a crises de classe mundial e total discrição operacional — protegendo quem a empresa não pode se dar ao luxo de perder.",
+              "Cobertura K&R com equipe de resposta a crises de classe mundial e total discrição operacional, protegendo quem a empresa não pode se dar ao luxo de perder.",
             imageSlot: true,
           },
           {
@@ -1134,7 +1134,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-prev-pf-03",
             name: "Previdência para filhos e netos",
             description:
-              "Acumulação de longo prazo para educação internacional, primeira aquisição de patrimônio e independência financeira — com o cuidado de quem pensa em gerações.",
+              "Acumulação de longo prazo para educação internacional, primeira aquisição de patrimônio e independência financeira, com o cuidado de quem pensa em gerações.",
             imageSlot: true,
           },
           {
@@ -1191,7 +1191,7 @@ export const seguroCategories: SeguroCategory[] = [
     eyebrow: "PETS, EQUINOS E ANIMAIS DE VALOR",
     title: "Proteção Animal & Pet",
     description:
-      "Proteção para animais de estimação, esportivos e de alto valor zootécnico — saúde veterinária, RC e mortalidade para famílias premium, criadores e haras.",
+      "Proteção para animais de estimação, esportivos e de alto valor zootécnico, saúde veterinária, RC e mortalidade para famílias premium, criadores e haras.",
     hubColor: "#3D8BF2",
     icon: "PawPrint",
     pf: [
@@ -1209,14 +1209,14 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-pet-pf-02",
             name: "Proteção de vida do seu pet",
             description:
-              "Indenização em caso de morte por acidente ou doença, além de cobertura para serviços funerários pet — para que você não enfrente esse momento sozinho.",
+              "Indenização em caso de morte por acidente ou doença, além de cobertura para serviços funerários pet, para que você não enfrente esse momento sozinho.",
             imageSlot: true,
           },
           {
             id: "seg-pet-pf-03",
             name: "Proteção de responsabilidade do seu pet",
             description:
-              "Cobre RC do animal por danos materiais e corporais a terceiros — protegendo você de eventuais indenizações sem que isso afete o seu patrimônio.",
+              "Cobre RC do animal por danos materiais e corporais a terceiros, protegendo você de eventuais indenizações sem que isso afete o seu patrimônio.",
             imageSlot: true,
           },
           {
@@ -1230,7 +1230,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-pet-pf-05",
             name: "Proteção do pet em viagem",
             description:
-              "Assistência veterinária emergencial e suporte logístico para animais em viagens nacionais e internacionais — mobilidade premium para famílias com pets.",
+              "Assistência veterinária emergencial e suporte logístico para animais em viagens nacionais e internacionais, mobilidade premium para famílias com pets.",
             imageSlot: true,
           },
         ],
@@ -1244,7 +1244,7 @@ export const seguroCategories: SeguroCategory[] = [
             id: "seg-pet-pj-01",
             name: "Plano de saúde pet como benefício corporativo",
             description:
-              "Saúde pet coletiva cobrindo procedimentos veterinários, internações e cirurgias para pets dos colaboradores — benefício diferenciado para atrair novas gerações.",
+              "Saúde pet coletiva cobrindo procedimentos veterinários, internações e cirurgias para pets dos colaboradores, benefício diferenciado para atrair novas gerações.",
             imageSlot: true,
           },
           {
@@ -1256,7 +1256,7 @@ export const seguroCategories: SeguroCategory[] = [
           },
           {
             id: "seg-pet-pj-03",
-            name: "Proteção de equinos empresariais — haras e leilões",
+            name: "Proteção de equinos empresariais, haras e leilões",
             description:
               "Mortalidade, invalidez e custos veterinários de plantéis inteiros para haras, coudelarias e operadores de leilões equinos.",
             imageSlot: true,

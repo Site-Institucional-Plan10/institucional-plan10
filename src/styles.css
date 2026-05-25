@@ -197,7 +197,7 @@
     z-index: 20;
   }
 
-  /* Standardize all hero banners on mobile — compact, all elements visible,
+  /* Standardize all hero banners on mobile, compact, all elements visible,
      dots overlaid at bottom inside the banner. */
   .hero-banner-inner {
     display: flex !important;
@@ -253,7 +253,7 @@
     flex-shrink: 0;
   }
 
-  /* CTAs — full width, stacked, always visible (both primary + secondary) */
+  /* CTAs, full width, stacked, always visible (both primary + secondary) */
   .hero-banner-ctas {
     display: flex !important;
     flex-direction: column !important;

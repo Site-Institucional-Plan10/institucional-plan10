@@ -99,7 +99,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Desktop — 4 columns */}
+        {/* Desktop, 4 columns */}
         <div className="hidden md:grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {sections.map((s) => (
             <div key={s.title}>
@@ -113,7 +113,7 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Mobile — accordion */}
+        {/* Mobile, accordion */}
         <div className="md:hidden">
           {sections.map((s, i) => {
             const open = openIdx === i;

@@ -6,7 +6,7 @@ export const Route = createFileRoute("/lgpd")({
     meta: [
       { title: "LGPD | Plan10" },
       { name: "description", content: "Como a Plan10 cumpre a Lei Geral de Proteção de Dados." },
-      { property: "og:title", content: "LGPD — Plan10" },
+      { property: "og:title", content: "LGPD, Plan10" },
       { property: "og:description", content: "Base legal, finalidade e direitos dos titulares." },
       { property: "og:url", content: canonical("/lgpd") },
     ],

@@ -7,9 +7,9 @@ import { canonical } from "@/lib/seo";
 export const Route = createFileRoute("/fale-conosco")({
   head: () => ({
     meta: [
-      { title: "Fale Conosco | Plan10 — Atendimento em até 24h úteis" },
+      { title: "Fale Conosco | Plan10, Atendimento em até 24h úteis" },
       { name: "description", content: "Entre em contato com a Plan10. Atendimento humano em até 24h úteis." },
-      { property: "og:title", content: "Fale Conosco — Plan10" },
+      { property: "og:title", content: "Fale Conosco, Plan10" },
       { property: "og:description", content: "Deixe sua mensagem. A Plan10 retorna em até 24h úteis." },
       { property: "og:url", content: canonical("/fale-conosco") },
     ],
@@ -36,7 +36,7 @@ function FaleConosco() {
       <section className="section-y">
         <div className="container-x max-w-2xl">
           <p className="font-eyebrow text-orange mb-3">Newsletter</p>
-          <h2 className="font-h2 mb-4">Receba novidades — P10 News</h2>
+          <h2 className="font-h2 mb-4">Receba novidades, P10 News</h2>
           <p className="text-neutral-700 mb-6">Conteúdos relevantes sobre proteção, saúde e planejamento financeiro.</p>
           <form className="grid gap-3 sm:grid-cols-3">
             <Input placeholder="Nome" />

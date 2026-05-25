@@ -264,7 +264,7 @@ export function Header() {
             to="/"
             onClick={handleLogoClick}
             className="flex-shrink-0 cursor-pointer"
-            aria-label="Plan10 — Home"
+            aria-label="Plan10, Home"
           >
             <HeaderLogo size={48} />
           </Link>
@@ -342,7 +342,7 @@ export function Header() {
                 handleLogoClick(e);
                 closeMobile();
               }}
-              aria-label="Plan10 — Home"
+              aria-label="Plan10, Home"
               className="cursor-pointer"
             >
               <HeaderLogo size={36} light />

@@ -12,7 +12,7 @@ const schema = z.object({
 });
 
 // Simple in-memory IP rate limit (5 req/hour per IP).
-// Note: per-instance memory only — for stricter limits, use a KV/database.
+// Note: per-instance memory only, for stricter limits, use a KV/database.
 const ipHits = new Map<string, { count: number; reset: number }>();
 const HOUR = 60 * 60 * 1000;
 
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/api/contact")({
         // 'contact-form-internal' (para contato@plan10.com.br). Em seguida,
         // substitua o bloco abaixo por chamadas a sendTransactionalEmail.
         // Por LGPD, não persistimos os dados além do necessário para envio.
-        console.log(`[contact] ${data.source || "site"} — ${data.subject} — ${data.email}`);
+        console.log(`[contact] ${data.source || "site"}, ${data.subject}, ${data.email}`);
 
         return Response.json({ ok: true });
       },

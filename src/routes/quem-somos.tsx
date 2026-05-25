@@ -8,9 +8,9 @@ import { canonical } from "@/lib/seo";
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
     meta: [
-      { title: "Quem Somos | Plan10 — Consultoria Integrada" },
+      { title: "Quem Somos | Plan10, Consultoria Integrada" },
       { name: "description", content: "A Plan10 é uma consultoria multimodal independente, transparente e orientada por dados." },
-      { property: "og:title", content: "Quem Somos — Plan10" },
+      { property: "og:title", content: "Quem Somos, Plan10" },
       { property: "og:description", content: "Consultoria de proteção integrada para pessoas, famílias e empresas." },
       { property: "og:url", content: canonical("/quem-somos") },
     ],
@@ -62,7 +62,7 @@ const teamCells = [
 function QuemSomos() {
   return (
     <>
-      {/* Section 1 — Refined hero */}
+      {/* Section 1, Refined hero */}
       <section
         className="pt-32 pb-20"
         style={{ background: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)" }}
@@ -104,7 +104,7 @@ function QuemSomos() {
         </div>
       </section>
 
-      {/* Section 2 — Institutional text + proof numbers */}
+      {/* Section 2, Institutional text + proof numbers */}
       <section className="section-y">
         <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
@@ -132,7 +132,7 @@ function QuemSomos() {
         </div>
       </section>
 
-      {/* Section 3 — Mission / Vision / Values */}
+      {/* Section 3, Mission / Vision / Values */}
       <section className="section-y" style={{ background: "#F8F8F8" }}>
         <div className="container-x grid gap-6 md:grid-cols-3">
           {[
@@ -196,7 +196,7 @@ function QuemSomos() {
         </div>
       </section>
 
-      {/* Section 3.5 — Nosso time */}
+      {/* Section 3.5, Nosso time */}
       <section
         style={{
           background: "linear-gradient(180deg, #FAFAFA 0%, #F4F4F4 100%)",
@@ -266,7 +266,7 @@ function QuemSomos() {
         </div>
       </section>
 
-      {/* Section 4 — Premium closing CTA */}
+      {/* Section 4, Premium closing CTA */}
       <section className="py-16" style={{ background: "#1A1A1A" }}>
         <div className="container-x text-center">
           <p

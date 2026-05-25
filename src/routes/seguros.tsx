@@ -23,9 +23,9 @@ export const Route = createFileRoute("/seguros")({
   }),
   head: () => ({
     meta: [
-      { title: "Seguros Gerais | Plan10 — Auto, Vida e Residencial" },
+      { title: "Seguros Gerais | Plan10, Auto, Vida e Residencial" },
       { name: "description", content: "Proteção patrimonial completa: auto, vida, residencial, viagem e empresarial." },
-      { property: "og:title", content: "Seguros Gerais — Plan10" },
+      { property: "og:title", content: "Seguros Gerais, Plan10" },
       { property: "og:description", content: "Compare entre seguradoras com a Plan10." },
       { property: "og:url", content: canonical("/seguros") },
     ],
