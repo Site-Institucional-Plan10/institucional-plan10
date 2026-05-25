@@ -54,6 +54,9 @@ const processSteps = [
 
 export function SegurosCategoryPage({ categoryId }: Props) {
   const [toggle, setToggle] = useState<"pf" | "pj">("pf");
+  const differentialsRef = useRef<HTMLDivElement>(null);
+  const scrollDiffLeft = () => differentialsRef.current?.scrollBy({ left: -232, behavior: "smooth" });
+  const scrollDiffRight = () => differentialsRef.current?.scrollBy({ left: 232, behavior: "smooth" });
   const cat = seguroCategories.find((c) => c.id === categoryId);
 
   useEffect(() => {
