@@ -74,8 +74,7 @@ export function SegurosCategoryPage({ categoryId }: Props) {
 
   const Icon = iconMap[cat.icon] ?? Shield;
   const activeGroups = toggle === "pf" ? cat.pf : cat.pj;
-  const waMessage = `Olá! Tenho interesse em ${cat.title}. Gostaria de uma proposta personalizada.`;
-  const waHref = `${getWhatsAppUrl("seguros").split("?")[0]}?text=${encodeURIComponent(waMessage)}`;
+  const waHref = getWhatsAppUrl("seguros");
 
   return (
     <div className="pt-20">
