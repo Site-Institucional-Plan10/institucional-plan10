@@ -97,6 +97,36 @@ export function VerticalPageTemplate({
           </div>
           {productGroupsPF || productGroupsPJ ? (
             <div className="flex flex-col gap-12">
+              <style>{`
+                .plan10-products-grid {
+                  display: grid;
+                  grid-template-columns: repeat(3, minmax(0, 1fr));
+                  gap: 20px;
+                  align-items: start;
+                }
+                .plan10-products-grid .plan10-product-cell {
+                  min-width: 0;
+                  width: 100%;
+                }
+                @media (max-width: 767px) {
+                  .plan10-products-grid {
+                    display: flex;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    -webkit-overflow-scrolling: touch;
+                    gap: 12px;
+                    padding-bottom: 8px;
+                    scrollbar-width: none;
+                  }
+                  .plan10-products-grid::-webkit-scrollbar { display: none; }
+                  .plan10-products-grid .plan10-product-cell {
+                    min-width: 78vw;
+                    max-width: 300px;
+                    flex-shrink: 0;
+                    scroll-snap-align: start;
+                  }
+                }
+              `}</style>
               {((tab === "pj" ? productGroupsPJ : productGroupsPF) || []).map((group) => {
                 const hubColor = productHubColorOverride || vertical.hubColor;
                 return (
@@ -110,49 +140,9 @@ export function VerticalPageTemplate({
                         {group.groupTitle}
                       </h3>
                     </div>
-                    {/* Desktop: 3-col grid */}
-                    <div className="hidden md:grid" style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 20, alignItems: "start" }}>
+                    <div className="plan10-products-grid">
                       {group.products.map((product) => (
-                        <div key={product.id} style={{ minWidth: 0 }}>
-                          <ProductCard
-                            name={product.name}
-                            description={product.description}
-                            category={product.category}
-                            hubColor={hubColor}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    {/* Mobile: snap carousel */}
-                    <div
-                      className="md:hidden"
-                      data-product-carousel
-                      style={{
-                        overflowX: "auto",
-                        scrollSnapType: "x mandatory",
-                        WebkitOverflowScrolling: "touch",
-                        display: "flex",
-                        gap: 12,
-                        paddingBottom: 8,
-                        paddingLeft: 4,
-                        paddingRight: 4,
-                        scrollbarWidth: "none",
-                        msOverflowStyle: "none",
-                        alignItems: "stretch",
-                      }}
-                    >
-                      {group.products.map((product) => (
-                        <div
-                          key={product.id}
-                          style={{
-                            minWidth: "78vw",
-                            maxWidth: 300,
-                            scrollSnapAlign: "start",
-                            flexShrink: 0,
-                            display: "flex",
-                            flexDirection: "column",
-                          }}
-                        >
+                        <div key={product.id} className="plan10-product-cell">
                           <ProductCard
                             name={product.name}
                             description={product.description}
@@ -166,6 +156,7 @@ export function VerticalPageTemplate({
                 );
               })}
             </div>
+
           ) : (
             <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {/* Produtos a inserir conforme planilha do cliente */}
