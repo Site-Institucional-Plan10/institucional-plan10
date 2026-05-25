@@ -110,10 +110,9 @@ export function VerticalPageTemplate({
                         {group.groupTitle}
                       </h3>
                     </div>
-                    <SnapCarousel
-                      ariaLabel={group.groupTitle}
-                      dataAttr="data-products-carousel"
-                      items={group.products.map((product) => (
+                    {/* Desktop: 3-col grid */}
+                    <div className="hidden md:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                      {group.products.map((product) => (
                         <ProductCard
                           key={product.id}
                           name={product.name}
@@ -122,7 +121,46 @@ export function VerticalPageTemplate({
                           hubColor={hubColor}
                         />
                       ))}
-                    />
+                    </div>
+                    {/* Mobile: snap carousel */}
+                    <div
+                      className="md:hidden"
+                      data-product-carousel
+                      style={{
+                        overflowX: "auto",
+                        scrollSnapType: "x mandatory",
+                        WebkitOverflowScrolling: "touch",
+                        display: "flex",
+                        gap: 12,
+                        paddingBottom: 8,
+                        paddingLeft: 4,
+                        paddingRight: 4,
+                        scrollbarWidth: "none",
+                        msOverflowStyle: "none",
+                        alignItems: "stretch",
+                      }}
+                    >
+                      {group.products.map((product) => (
+                        <div
+                          key={product.id}
+                          style={{
+                            minWidth: "78vw",
+                            maxWidth: 300,
+                            scrollSnapAlign: "start",
+                            flexShrink: 0,
+                            display: "flex",
+                            flexDirection: "column",
+                          }}
+                        >
+                          <ProductCard
+                            name={product.name}
+                            description={product.description}
+                            category={product.category}
+                            hubColor={hubColor}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 );
               })}
