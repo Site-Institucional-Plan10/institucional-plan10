@@ -267,12 +267,48 @@ export function SegurosCategoryPage({ categoryId }: Props) {
                 <span className="block rounded-full" style={{ width: 6, height: 28, background: cat.hubColor }} />
                 <h3 className="font-h3 text-ink">{group.groupTitle}</h3>
               </div>
+              {/* Desktop: 3-col grid */}
+              <div className="hidden md:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                {group.products.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    name={product.name}
+                    description={product.description}
+                    category="seguros"
+                    hubColor={cat.hubColor}
+                  />
+                ))}
+              </div>
+              {/* Mobile: snap carousel */}
               <div
-                className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4"
-                style={{ scrollPaddingLeft: 16, WebkitOverflowScrolling: "touch" }}
+                className="md:hidden"
+                data-product-carousel
+                style={{
+                  overflowX: "auto",
+                  scrollSnapType: "x mandatory",
+                  WebkitOverflowScrolling: "touch",
+                  display: "flex",
+                  gap: 12,
+                  paddingBottom: 8,
+                  paddingLeft: 4,
+                  paddingRight: 4,
+                  scrollbarWidth: "none",
+                  msOverflowStyle: "none",
+                  alignItems: "stretch",
+                }}
               >
                 {group.products.map((product) => (
-                  <div key={product.id} className="snap-start shrink-0 w-[85%] sm:w-[360px]">
+                  <div
+                    key={product.id}
+                    style={{
+                      minWidth: "78vw",
+                      maxWidth: 300,
+                      scrollSnapAlign: "start",
+                      flexShrink: 0,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
                     <ProductCard
                       name={product.name}
                       description={product.description}
