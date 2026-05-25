@@ -549,7 +549,7 @@ function ConsorciosPage() {
                           (formMensagem ? `Mensagem: ${formMensagem}` : ""),
                       );
                       window.open(
-                        `https://api.whatsapp.com/send/?phone=5511940001010&text=${msg}`,
+                        `https://api.whatsapp.com/send/?phone=5511938012222&text=${msg}`,
                         "_blank",
                       );
                     }}
