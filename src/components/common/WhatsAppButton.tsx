@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { useLocation } from "@tanstack/react-router";
 import { getWhatsAppUrl, getVerticalContextFromPath } from "@/lib/utils";
 
-export const WHATSAPP_DISPLAY = "(11) 94000 1010";
+export const WHATSAPP_DISPLAY = "(11) 93801-2222";
 
 export function WhatsAppButton() {
   const { pathname } = useLocation();

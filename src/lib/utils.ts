@@ -14,7 +14,7 @@ export function maskPhoneBR(value: string): string {
   return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
 }
 
-export const WHATSAPP_NUMBER = "5511940001010";
+export const WHATSAPP_NUMBER = "5511938012222";
 
 export const whatsappMessages: Record<string, string> = {
   home: "Olá! Vim pelo site da Plan10 e gostaria de mais informações sobre os serviços de vocês.",
