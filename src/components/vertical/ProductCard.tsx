@@ -17,6 +17,8 @@ export function ProductCard({ name, description, category, hubColor }: ProductCa
     <div
       className="transition-all duration-200"
       style={{
+        minWidth: 0,
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         height: "100%",
