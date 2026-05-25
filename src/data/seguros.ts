@@ -81,7 +81,7 @@ export const seguroCategories: SeguroCategory[] = [
           },
           {
             id: "seg-bp-pf-07",
-            name: "Proteção de placas e sistema solar",
+            name: "Proteção de placas e do sistema solar",
             description:
               "Invista em energia solar com tranquilidade. Proteção do sistema de placas contra danos físicos, queda de raio e surtos elétricos.",
             imageSlot: true,
