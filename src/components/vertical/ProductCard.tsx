@@ -9,7 +9,6 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ name, description, category, hubColor }: ProductCardProps) {
-  void name;
   const href = getWhatsAppUrl(category);
 
   return (
