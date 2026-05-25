@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
+import { ChevronLeft } from "lucide-react";
 import {
   ChevronRight,
   MessageCircle,
@@ -53,6 +54,9 @@ const processSteps = [
 
 export function SegurosCategoryPage({ categoryId }: Props) {
   const [toggle, setToggle] = useState<"pf" | "pj">("pf");
+  const differentialsRef = useRef<HTMLDivElement>(null);
+  const scrollDiffLeft = () => differentialsRef.current?.scrollBy({ left: -232, behavior: "smooth" });
+  const scrollDiffRight = () => differentialsRef.current?.scrollBy({ left: 232, behavior: "smooth" });
   const cat = seguroCategories.find((c) => c.id === categoryId);
 
   useEffect(() => {
@@ -123,58 +127,90 @@ export function SegurosCategoryPage({ categoryId }: Props) {
         <div className="container-x max-w-6xl mx-auto">
           <p className="font-eyebrow text-orange mb-3 text-center">NOSSOS DIFERENCIAIS</p>
           <h2 className="font-h2 text-center mb-10">Por que contratar com a Plan10</h2>
-          <div
-            data-differentials-carousel
-            style={{
-              overflowX: "auto",
-              scrollSnapType: "x mandatory",
-              WebkitOverflowScrolling: "touch",
-              display: "flex",
-              gap: 16,
-              paddingBottom: 12,
-              paddingLeft: 4,
-              paddingRight: 4,
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-              alignItems: "stretch",
-            }}
-          >
-            {differentials.map(({ Icon, title, desc }) => (
-              <div
-                key={title}
-                style={{
-                  minWidth: "clamp(220px, 28vw, 280px)",
-                  scrollSnapAlign: "start",
-                  flexShrink: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 10,
-                  padding: "22px 20px",
-                  background: "#FFFFFF",
-                  borderRadius: 14,
-                  border: "1px solid #E8E8E8",
-                  boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
-                  boxSizing: "border-box",
-                }}
-              >
+          <div style={{ position: "relative" }}>
+            <button
+              onClick={scrollDiffLeft}
+              aria-label="Anterior"
+              className="hidden md:flex"
+              style={{
+                position: "absolute", left: -20, top: "50%",
+                transform: "translateY(-50%)", zIndex: 10,
+                width: 36, height: 36, borderRadius: "50%",
+                background: "#FFFFFF", border: "1.5px solid #E0E0E0",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
+                alignItems: "center", justifyContent: "center", cursor: "pointer",
+              }}
+            >
+              <ChevronLeft size={18} color="#444" strokeWidth={2} />
+            </button>
+
+            <div
+              ref={differentialsRef}
+              data-differentials-carousel
+              style={{
+                overflowX: "auto",
+                scrollSnapType: "x mandatory",
+                WebkitOverflowScrolling: "touch",
+                display: "flex",
+                gap: 12,
+                paddingBottom: 12,
+                paddingLeft: 4,
+                paddingRight: 4,
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                alignItems: "stretch",
+              }}
+            >
+              {differentials.map(({ Icon, title, desc }) => (
                 <div
+                  key={title}
                   style={{
-                    width: 40,
-                    height: 40,
-                    borderRadius: 10,
-                    background: `${cat.hubColor}18`,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    minWidth: 200,
+                    maxWidth: 220,
+                    scrollSnapAlign: "start",
                     flexShrink: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 10,
+                    padding: "18px 16px",
+                    background: "#FFFFFF",
+                    borderRadius: 14,
+                    border: "1px solid #E8E8E8",
+                    boxShadow: "0 1px 6px rgba(0,0,0,0.05)",
+                    boxSizing: "border-box",
                   }}
                 >
-                  <Icon size={20} color={cat.hubColor} strokeWidth={1.8} />
+                  <div
+                    style={{
+                      width: 36, height: 36, borderRadius: 8,
+                      background: `${cat.hubColor}18`,
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Icon size={18} color={cat.hubColor} strokeWidth={1.8} />
+                  </div>
+                  <p style={{ fontWeight: 700, fontSize: "0.88rem", color: "#1A1A1A", margin: 0, lineHeight: 1.3 }}>{title}</p>
+                  <p style={{ fontSize: "0.78rem", color: "#666", lineHeight: 1.55, margin: 0, flex: 1 }}>{desc}</p>
                 </div>
-                <p style={{ fontWeight: 700, fontSize: "0.95rem", color: "#1A1A1A", margin: 0 }}>{title}</p>
-                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.55, margin: 0, flex: 1 }}>{desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            <button
+              onClick={scrollDiffRight}
+              aria-label="Próximo"
+              className="hidden md:flex"
+              style={{
+                position: "absolute", right: -20, top: "50%",
+                transform: "translateY(-50%)", zIndex: 10,
+                width: 36, height: 36, borderRadius: "50%",
+                background: "#FFFFFF", border: "1.5px solid #E0E0E0",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.10)",
+                alignItems: "center", justifyContent: "center", cursor: "pointer",
+              }}
+            >
+              <ChevronRight size={18} color="#444" strokeWidth={2} />
+            </button>
           </div>
         </div>
       </section>
@@ -231,12 +267,48 @@ export function SegurosCategoryPage({ categoryId }: Props) {
                 <span className="block rounded-full" style={{ width: 6, height: 28, background: cat.hubColor }} />
                 <h3 className="font-h3 text-ink">{group.groupTitle}</h3>
               </div>
+              {/* Desktop: 3-col grid */}
+              <div className="hidden md:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                {group.products.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    name={product.name}
+                    description={product.description}
+                    category="seguros"
+                    hubColor={cat.hubColor}
+                  />
+                ))}
+              </div>
+              {/* Mobile: snap carousel */}
               <div
-                className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4"
-                style={{ scrollPaddingLeft: 16, WebkitOverflowScrolling: "touch" }}
+                className="md:hidden"
+                data-product-carousel
+                style={{
+                  overflowX: "auto",
+                  scrollSnapType: "x mandatory",
+                  WebkitOverflowScrolling: "touch",
+                  display: "flex",
+                  gap: 12,
+                  paddingBottom: 8,
+                  paddingLeft: 4,
+                  paddingRight: 4,
+                  scrollbarWidth: "none",
+                  msOverflowStyle: "none",
+                  alignItems: "stretch",
+                }}
               >
                 {group.products.map((product) => (
-                  <div key={product.id} className="snap-start shrink-0 w-[85%] sm:w-[360px]">
+                  <div
+                    key={product.id}
+                    style={{
+                      minWidth: "78vw",
+                      maxWidth: 300,
+                      scrollSnapAlign: "start",
+                      flexShrink: 0,
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
                     <ProductCard
                       name={product.name}
                       description={product.description}
