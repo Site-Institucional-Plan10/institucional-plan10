@@ -335,3 +335,6 @@
     padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
   }
 }
+
+[data-differentials-carousel]::-webkit-scrollbar,
+[data-product-carousel]::-webkit-scrollbar { display: none; }
