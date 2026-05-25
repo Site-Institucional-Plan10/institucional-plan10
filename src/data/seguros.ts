@@ -2,7 +2,6 @@ export interface SeguroProduct {
   id: string;
   name: string;
   description: string;
-  imageSlot: boolean;
 }
 
 export interface SeguroGroup {
