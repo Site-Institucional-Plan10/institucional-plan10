@@ -15,8 +15,19 @@ export function ProductCard({ name, description, category, hubColor }: ProductCa
 
   return (
     <div
-      className="flex flex-col overflow-hidden rounded-2xl bg-white border border-neutral-200 transition-all duration-200"
-      style={{ boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}
+      className="transition-all duration-200"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+        boxSizing: "border-box",
+        background: "#FFFFFF",
+        borderRadius: "14px",
+        overflow: "hidden",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+        border: "1px solid #F0F0F0",
+        borderTop: `3px solid ${hubColor}`,
+      }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = "translateY(-4px)";
         e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.12)";
@@ -26,32 +37,27 @@ export function ProductCard({ name, description, category, hubColor }: ProductCa
         e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.06)";
       }}
     >
-      {/* Image slot — placeholder for future photo */}
       <div
-        className="w-full flex items-center justify-center"
         style={{
-          aspectRatio: "16 / 10",
-          background: `linear-gradient(135deg, ${hubColor}14 0%, ${hubColor}26 100%)`,
+          padding: "18px",
+          flex: 1,
+          display: "flex",
+          flexDirection: "column",
+          gap: 10,
         }}
       >
-        <span
-          className="text-[10px] font-semibold uppercase tracking-widest"
-          style={{ color: `${hubColor}99` }}
-        >
-          IMAGEM DO PRODUTO
-        </span>
-      </div>
-
-      {/* Card body */}
-      <div className="flex flex-col flex-1 p-5">
-        <h3 className="font-semibold text-base text-ink mb-2 leading-snug">{name}</h3>
-        <p className="text-sm text-neutral-700 mb-5 flex-1 leading-relaxed">{description}</p>
+        <h3 style={{ fontWeight: 700, fontSize: "0.92rem", color: "#1A1A1A", lineHeight: 1.3, margin: 0 }}>
+          {name}
+        </h3>
+        <p style={{ fontSize: "0.8rem", color: "#666", lineHeight: 1.6, margin: 0, flex: 1 }}>
+          {description}
+        </p>
         <a
           href={href}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200"
-          style={{ background: "#FF6B00" }}
+          style={{ background: "#FF6B00", marginTop: 4 }}
           onMouseEnter={(e) => (e.currentTarget.style.background = "#E05A00")}
           onMouseLeave={(e) => (e.currentTarget.style.background = "#FF6B00")}
         >

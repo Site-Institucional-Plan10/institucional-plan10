@@ -6,7 +6,7 @@ export const Route = createFileRoute("/privacidade")({
     meta: [
       { title: "Política de Privacidade | Plan10" },
       { name: "description", content: "Política de Privacidade da Plan10 conforme LGPD." },
-      { property: "og:title", content: "Política de Privacidade — Plan10" },
+      { property: "og:title", content: "Política de Privacidade, Plan10" },
       { property: "og:description", content: "Como tratamos seus dados pessoais." },
       { property: "og:url", content: canonical("/privacidade") },
     ],

@@ -48,7 +48,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "depo-05",
     name: "Antônio Carlos da Conceição",
-    role: "Secretário — Palácio dos Bandeirantes",
+    role: "Secretário, Palácio dos Bandeirantes",
     photo: "/assets/testimonials/testimonial-antonio-carlos.jpg",
     text: "Sempre fui muito bem atendido, com rapidez e eficiência. Melhor custo benefício não existe. Parabéns à equipe.",
     hub: "financas",

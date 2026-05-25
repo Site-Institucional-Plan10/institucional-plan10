@@ -14,9 +14,9 @@ const saudeFaq = [
 export const Route = createFileRoute("/saude")({
   head: () => ({
     meta: [
-      { title: "Planos de Saúde | Plan10 — PF, Família e Empresa" },
+      { title: "Planos de Saúde | Plan10, PF, Família e Empresa" },
       { name: "description", content: "Planos de saúde e odontológicos para você, família e empresa." },
-      { property: "og:title", content: "Planos de Saúde — Plan10" },
+      { property: "og:title", content: "Planos de Saúde, Plan10" },
       { property: "og:description", content: "Encontre o plano ideal com orientação independente." },
       { property: "og:url", content: canonical("/saude") },
     ],

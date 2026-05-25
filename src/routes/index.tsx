@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Plan10 | Seguros, Saúde, Consórcio e Finanças" },
       { name: "description", content: "Mais de 40 soluções de proteção, saúde e planejamento em um só lugar." },
-      { property: "og:title", content: "Plan10 — Seu futuro muito mais tranquilo" },
+      { property: "og:title", content: "Plan10, Seu futuro muito mais tranquilo" },
       { property: "og:description", content: "Seguros, saúde, consórcio, finanças e serviços 24h." },
       { property: "og:url", content: canonical("/") },
     ],

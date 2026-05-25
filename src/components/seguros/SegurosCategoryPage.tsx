@@ -119,20 +119,60 @@ export function SegurosCategoryPage({ categoryId }: Props) {
 
       {/* Diferenciais */}
       <section className="section-y bg-neutral-50">
+        <style>{`[data-differentials-carousel]::-webkit-scrollbar { display: none; }`}</style>
         <div className="container-x max-w-6xl mx-auto">
           <p className="font-eyebrow text-orange mb-3 text-center">NOSSOS DIFERENCIAIS</p>
           <h2 className="font-h2 text-center mb-10">Por que contratar com a Plan10</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {differentials.map((d) => (
-              <div key={d.title} className="rounded-2xl bg-white border border-neutral-200 p-6">
+          <div
+            data-differentials-carousel
+            style={{
+              overflowX: "auto",
+              scrollSnapType: "x mandatory",
+              WebkitOverflowScrolling: "touch",
+              display: "flex",
+              gap: 16,
+              paddingBottom: 12,
+              paddingLeft: 4,
+              paddingRight: 4,
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              alignItems: "stretch",
+            }}
+          >
+            {differentials.map(({ Icon, title, desc }) => (
+              <div
+                key={title}
+                style={{
+                  minWidth: "clamp(220px, 28vw, 280px)",
+                  scrollSnapAlign: "start",
+                  flexShrink: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 10,
+                  padding: "22px 20px",
+                  background: "#FFFFFF",
+                  borderRadius: 14,
+                  border: "1px solid #E8E8E8",
+                  boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
+                  boxSizing: "border-box",
+                }}
+              >
                 <div
-                  className="inline-flex items-center justify-center mb-3 rounded-xl"
-                  style={{ width: 40, height: 40, background: `${cat.hubColor}18` }}
+                  style={{
+                    width: 40,
+                    height: 40,
+                    borderRadius: 10,
+                    background: `${cat.hubColor}18`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
                 >
-                  <d.Icon size={20} color={cat.hubColor} strokeWidth={1.8} />
+                  <Icon size={20} color={cat.hubColor} strokeWidth={1.8} />
                 </div>
-                <h3 className="font-semibold text-lg text-ink mb-2">{d.title}</h3>
-                <p className="text-sm text-neutral-700 leading-relaxed">{d.desc}</p>
+                <p style={{ fontWeight: 700, fontSize: "0.95rem", color: "#1A1A1A", margin: 0 }}>{title}</p>
+                <p style={{ fontSize: "0.82rem", color: "#666", lineHeight: 1.55, margin: 0, flex: 1 }}>{desc}</p>
               </div>
             ))}
           </div>

@@ -14,9 +14,9 @@ const financasFaq = [
 export const Route = createFileRoute("/financas")({
   head: () => ({
     meta: [
-      { title: "Produtos Financeiros | Plan10 — Crédito e Consultoria" },
+      { title: "Produtos Financeiros | Plan10, Crédito e Consultoria" },
       { name: "description", content: "Crédito, financiamento e soluções financeiras com análise consultiva." },
-      { property: "og:title", content: "Finanças — Plan10" },
+      { property: "og:title", content: "Finanças, Plan10" },
       { property: "og:description", content: "Consultoria independente em produtos financeiros." },
       { property: "og:url", content: canonical("/financas") },
     ],

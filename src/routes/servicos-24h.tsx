@@ -21,9 +21,9 @@ const servicosFaq = [
 export const Route = createFileRoute("/servicos-24h")({
   head: () => ({
     meta: [
-      { title: "Serviços 24h | Plan10 — Assistência Veicular e Residencial" },
+      { title: "Serviços 24h | Plan10, Assistência Veicular e Residencial" },
       { name: "description", content: "Assistência rápida para residência e veículos, 24/7." },
-      { property: "og:title", content: "Serviços 24h — Plan10" },
+      { property: "og:title", content: "Serviços 24h, Plan10" },
       { property: "og:description", content: "Atendimento em 30 a 50 minutos." },
       { property: "og:url", content: canonical("/servicos-24h") },
     ],

@@ -58,7 +58,7 @@ export const verticals: VerticalConfig[] = [
     hubLabel: "SERVIÇOS",
     slug: "/servicos-24h",
     hubColor: "#27DEF2",
-    chamada: "Casa, veículos e pet — assistência prática para o dia a dia.",
+    chamada: "Casa, veículos e pet, assistência prática para o dia a dia.",
     icon: "Clock",
     features: ["Guincho, chaveiro, elétrica", "Atendimento 24/7", "+2.000 atendimentos realizados"],
   },

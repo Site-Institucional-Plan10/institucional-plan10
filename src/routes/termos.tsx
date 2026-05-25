@@ -6,7 +6,7 @@ export const Route = createFileRoute("/termos")({
     meta: [
       { title: "Termos de Uso | Plan10" },
       { name: "description", content: "Termos de uso do site da Plan10." },
-      { property: "og:title", content: "Termos de Uso — Plan10" },
+      { property: "og:title", content: "Termos de Uso, Plan10" },
       { property: "og:description", content: "Regras de utilização do site." },
       { property: "og:url", content: canonical("/termos") },
     ],
