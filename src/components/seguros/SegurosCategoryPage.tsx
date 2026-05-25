@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-import { ChevronLeft } from "lucide-react";
 import {
   ChevronRight,
   MessageCircle,
@@ -25,6 +24,7 @@ import {
   BarChart2,
   ShieldCheck,
 } from "lucide-react";
+
 import { seguroCategories } from "@/data/seguros";
 import { ProductCard } from "@/components/vertical/ProductCard";
 import { getWhatsAppUrl } from "@/lib/utils";
