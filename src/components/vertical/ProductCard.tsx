@@ -9,9 +9,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ name, description, category, hubColor }: ProductCardProps) {
-  const message = `Olá! Tenho interesse no produto "${name}". Gostaria de receber uma proposta.`;
-  const baseUrl = getWhatsAppUrl(category);
-  const href = `${baseUrl.split("?")[0]}?text=${encodeURIComponent(message)}`;
+  const href = getWhatsAppUrl(category);
 
   return (
     <div
