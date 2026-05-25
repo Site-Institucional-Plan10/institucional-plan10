@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
+import { ChevronLeft } from "lucide-react";
 import {
   ChevronRight,
   MessageCircle,
