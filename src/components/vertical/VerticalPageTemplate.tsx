@@ -111,15 +111,16 @@ export function VerticalPageTemplate({
                       </h3>
                     </div>
                     {/* Desktop: 3-col grid */}
-                    <div className="hidden md:grid" style={{ gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+                    <div className="hidden md:grid" style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 20, alignItems: "start" }}>
                       {group.products.map((product) => (
-                        <ProductCard
-                          key={product.id}
-                          name={product.name}
-                          description={product.description}
-                          category={product.category}
-                          hubColor={hubColor}
-                        />
+                        <div key={product.id} style={{ minWidth: 0 }}>
+                          <ProductCard
+                            name={product.name}
+                            description={product.description}
+                            category={product.category}
+                            hubColor={hubColor}
+                          />
+                        </div>
                       ))}
                     </div>
                     {/* Mobile: snap carousel */}
