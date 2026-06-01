@@ -29,6 +29,7 @@ interface VerticalPageProps {
   productGroupsPF?: ProductGroup[];
   productGroupsPJ?: ProductGroup[];
   productHubColorOverride?: string;
+  productsOverride?: React.ReactNode;
 }
 
 export function VerticalPageTemplate({
@@ -45,6 +46,7 @@ export function VerticalPageTemplate({
   productGroupsPF,
   productGroupsPJ,
   productHubColorOverride,
+  productsOverride,
 }: VerticalPageProps) {
   const [tab, setTab] = useState("pf");
   const [popup, setPopup] = useState<{ url: string; partner: string } | null>(null);
@@ -95,7 +97,9 @@ export function VerticalPageTemplate({
             <p className="font-eyebrow text-orange mb-3">Catálogo completo</p>
             <h2 className="font-h2">{productsTitle}</h2>
           </div>
-          {productGroupsPF || productGroupsPJ ? (
+          {productsOverride ? (
+            productsOverride
+          ) : productGroupsPF || productGroupsPJ ? (
             <div className="flex flex-col gap-12">
               <style>{`
                 .plan10-products-grid {
