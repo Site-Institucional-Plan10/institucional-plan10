@@ -29,6 +29,7 @@ interface VerticalPageProps {
   productGroupsPF?: ProductGroup[];
   productGroupsPJ?: ProductGroup[];
   productHubColorOverride?: string;
+  productsOverride?: React.ReactNode;
 }
 
 export function VerticalPageTemplate({
