@@ -46,6 +46,7 @@ export function VerticalPageTemplate({
   productGroupsPF,
   productGroupsPJ,
   productHubColorOverride,
+  productsOverride,
 }: VerticalPageProps) {
   const [tab, setTab] = useState("pf");
   const [popup, setPopup] = useState<{ url: string; partner: string } | null>(null);
