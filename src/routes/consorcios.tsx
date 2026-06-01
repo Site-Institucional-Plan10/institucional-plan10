@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useSearch, useNavigate } from "@tanstack/react-router";
+import { Building2, Car, Truck, Sparkles } from "lucide-react";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
 import { consorciosPF, consorciosPJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
 import { canonical, faqJsonLd } from "@/lib/seo";
+import { categorias } from "@/data/consorcios";
+import ConsorcioCategoryPage from "@/components/consorcios/ConsorcioCategoryPage";
+import ConsorcioProductPage from "@/components/consorcios/ConsorcioProductPage";
+
+const iconMap = { Building2, Car, Truck, Sparkles };
 
 const consorciosFaq = [
   { title: "Consórcio tem juros?", content: "Não. O consórcio cobra apenas taxa de administração e fundo de reserva, sem juros." },
