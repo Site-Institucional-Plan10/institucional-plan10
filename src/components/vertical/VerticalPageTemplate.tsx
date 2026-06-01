@@ -97,7 +97,9 @@ export function VerticalPageTemplate({
             <p className="font-eyebrow text-orange mb-3">Catálogo completo</p>
             <h2 className="font-h2">{productsTitle}</h2>
           </div>
-          {productGroupsPF || productGroupsPJ ? (
+          {productsOverride ? (
+            productsOverride
+          ) : productGroupsPF || productGroupsPJ ? (
             <div className="flex flex-col gap-12">
               <style>{`
                 .plan10-products-grid {
