@@ -29,8 +29,79 @@ export const Route = createFileRoute("/consorcios")({
     links: [{ rel: "canonical", href: canonical("/consorcios") }],
     scripts: [{ type: "application/ld+json", children: faqJsonLd(consorciosFaq) }],
   }),
-  component: ConsorciosPage,
+  component: ConsorciosRoute,
 });
+
+function ConsorciosRoute() {
+  const search = useSearch({ strict: false }) as { cat?: string; produto?: string; tipo?: "pf" | "pj" };
+  if (search.cat && search.produto && search.tipo) {
+    return (
+      <ConsorcioProductPage
+        categoriaId={search.cat}
+        produtoId={search.produto}
+        tipo={search.tipo}
+      />
+    );
+  }
+  if (search.cat) {
+    return <ConsorcioCategoryPage categoriaId={search.cat} />;
+  }
+  return <ConsorciosPage />;
+}
+
+function CategoriasGrid() {
+  const navigate = useNavigate();
+  return (
+    <>
+      <style>{`
+        .consorcios-categorias-grid {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 20px;
+        }
+        @media (max-width: 767px) {
+          .consorcios-categorias-grid {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+          }
+        }
+      `}</style>
+      <div className="consorcios-categorias-grid">
+        {categorias.map((c) => {
+          const Icon = iconMap[c.icone as keyof typeof iconMap];
+          const clickable = c.ativo;
+          return (
+            <div
+              key={c.id}
+              onClick={
+                clickable
+                  ? () => navigate({ to: "/consorcios", search: { cat: c.rota } as any })
+                  : undefined
+              }
+              className={`bg-white rounded-xl border border-neutral-200 p-6 transition-all duration-200 ${
+                clickable ? "cursor-pointer hover:border-[#9857F2] hover:shadow-md" : "pointer-events-none"
+              }`}
+              style={{
+                borderLeft: "4px solid #9857F2",
+                opacity: clickable ? 1 : 0.6,
+              }}
+            >
+              <div className="flex items-center justify-between mb-3">
+                {Icon ? <Icon size={28} color="#9857F2" /> : null}
+                {!c.ativo && (
+                  <span className="text-xs bg-neutral-100 text-neutral-500 rounded-full px-2 py-0.5">
+                    Em breve
+                  </span>
+                )}
+              </div>
+              <h3 className="font-semibold text-lg text-neutral-900">{c.titulo}</h3>
+              <p className="text-sm text-neutral-600 mt-2">{c.descricao}</p>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
 
 const simuladorData = {
   imovel: [
