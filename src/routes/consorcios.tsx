@@ -253,6 +253,7 @@ function ConsorciosPage() {
       toggleLabels={{ left: "Para você", right: "Para empresas" }}
       productGroupsPF={consorciosPF}
       productGroupsPJ={consorciosPJ}
+      productsOverride={<CategoriasGrid />}
       extraTop={
         <section className="py-8 bg-white">
           <div className="container-x">
