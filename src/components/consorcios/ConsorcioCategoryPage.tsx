@@ -143,38 +143,121 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       `}</style>
 
       {/* A — Hero */}
-      <section className="w-full px-6 py-20 text-white" style={{ background: DARK }}>
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm tracking-widest mb-3" style={{ color: PURPLE }}>CONSÓRCIO · PLAN10</p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">{categoria.titulo}</h1>
-          <p className="text-xl md:text-2xl mb-3 text-white/90">Seu patrimônio começa com o endereço certo</p>
-          <p className="text-base md:text-lg text-white/70 max-w-3xl mb-8">
+      <section
+        style={{
+          background: DARK,
+          minHeight: 520,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          paddingTop: 96,
+          paddingBottom: 96,
+        }}
+      >
+        <div style={{ maxWidth: 800, margin: '0 auto', paddingLeft: 24, paddingRight: 24 }}>
+          <span
+            style={{
+              display: 'block',
+              color: PURPLE,
+              fontWeight: 600,
+              fontSize: '0.75rem',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              marginBottom: 16,
+            }}
+          >
+            CONSÓRCIO · PLAN10
+          </span>
+          <h1
+            style={{
+              fontSize: 'clamp(2rem, 5vw, 3.25rem)',
+              fontWeight: 800,
+              color: '#fff',
+              lineHeight: 1.15,
+              marginBottom: 16,
+            }}
+          >
+            {categoria.titulo}
+          </h1>
+          <p
+            style={{
+              fontSize: '1.125rem',
+              color: 'rgba(255,255,255,0.75)',
+              fontWeight: 400,
+              marginBottom: 24,
+            }}
+          >
+            Seu patrimônio começa com o endereço certo
+          </p>
+          <p
+            style={{
+              fontSize: '1rem',
+              color: 'rgba(255,255,255,0.60)',
+              maxWidth: 600,
+              margin: '0 auto 32px auto',
+              lineHeight: 1.7,
+            }}
+          >
             Planejamento inteligente, sem juros e com poder de compra à vista para conquistar o imóvel que traduz quem você é.
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border" style={{ borderColor: PURPLE }}>
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 8,
+              border: '1px solid rgba(152,87,242,0.4)',
+              borderRadius: 999,
+              padding: '8px 20px',
+              fontSize: '0.8125rem',
+              color: 'rgba(255,255,255,0.80)',
+              background: 'rgba(152,87,242,0.12)',
+              margin: '0 auto',
+            }}
+          >
             <Clock size={16} style={{ color: PURPLE }} />
-            <span className="text-sm">Grupos de junho com condições especiais de entrada — vagas limitadas para assessoria premium personalizada</span>
+            <span>Grupos de junho com condições especiais de entrada — vagas limitadas para assessoria premium personalizada</span>
           </div>
         </div>
       </section>
 
       {/* B — Produtos */}
-      <section id="produtos" className="w-full px-6 py-16 bg-white">
+      <section id="produtos" className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-neutral-900">Escolha seu produto</h2>
-          <div className="inline-flex bg-neutral-100 rounded-full p-1 mb-8">
-            {(['pf', 'pj'] as const).map((t) => (
-              <button
-                key={t}
-                onClick={() => setTipo(t)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition ${
-                  tipo === t ? 'text-white shadow' : 'bg-white text-neutral-700 shadow'
-                }`}
-                style={tipo === t ? { background: PURPLE } : {}}
-              >
-                {t === 'pf' ? 'Pessoa Física' : 'Pessoa Jurídica'}
-              </button>
-            ))}
+          <p
+            className="text-center font-semibold"
+            style={{
+              fontSize: '0.75rem',
+              color: '#A3A3A3',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              marginBottom: 16,
+            }}
+          >
+            SELECIONE O PERFIL
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
+            <div className="inline-flex border border-neutral-200 rounded-full p-1 bg-white shadow-sm">
+              {(['pf', 'pj'] as const).map((t) => {
+                const active = tipo === t;
+                return (
+                  <button
+                    key={t}
+                    onClick={() => setTipo(t)}
+                    className="px-8 py-3 text-sm font-semibold rounded-full transition-all duration-200"
+                    style={
+                      active
+                        ? { background: PURPLE, color: '#fff', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }
+                        : { background: 'transparent', color: '#525252' }
+                    }
+                  >
+                    {t === 'pf' ? 'Pessoa Física' : 'Pessoa Jurídica'}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <div className="consorcios-products-grid">

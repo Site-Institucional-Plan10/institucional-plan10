@@ -249,8 +249,6 @@ function ConsorciosPage() {
     <VerticalPageTemplate
       vertical={v}
       productsTitle="Segmentos de Consórcio"
-      toggleEnabled
-      toggleLabels={{ left: "Para você", right: "Para empresas" }}
       productGroupsPF={consorciosPF}
       productGroupsPJ={consorciosPJ}
       productsOverride={<CategoriasGrid />}
