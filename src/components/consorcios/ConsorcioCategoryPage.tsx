@@ -1105,16 +1105,34 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* M — Cross-selling */}
-      <section className="w-full px-6 py-16 bg-white">
+      <section
+        style={{
+          background: 'linear-gradient(135deg, #9857F2 0%, #7C3AED 100%)',
+          padding: '80px 24px',
+        }}
+      >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-neutral-900">Proteja, mantenha e potencialize seu patrimônio</h2>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff', marginBottom: 40 }}>
+            Proteja, mantenha e potencialize seu patrimônio
+          </h2>
           <div className="consorcios-3col">
             {crossSelling.map((c, i) => (
-              <div key={i} className="p-6 rounded-xl border">
-                <c.Icon size={28} style={{ color: PURPLE }} />
-                <h3 className="font-semibold mt-4 text-neutral-900">{c.titulo}</h3>
-                <p className="text-sm text-neutral-600 mt-2">{c.desc}</p>
-                <a href={c.link} className="inline-block mt-4 text-sm font-medium" style={{ color: PURPLE }}>
+              <div
+                key={i}
+                style={{
+                  padding: 24,
+                  borderRadius: 12,
+                  background: 'rgba(255,255,255,0.12)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 12,
+                }}
+              >
+                <c.Icon size={28} color="#fff" />
+                <h3 style={{ fontWeight: 600, color: '#fff' }}>{c.titulo}</h3>
+                <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.80)', lineHeight: 1.6 }}>{c.desc}</p>
+                <a href={c.link} style={{ fontSize: '0.875rem', fontWeight: 600, color: '#fff' }}>
                   Explorar →
                 </a>
               </div>
