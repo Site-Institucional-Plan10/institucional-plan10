@@ -15,7 +15,9 @@ import {
   Coins,
   CheckCircle2,
   X,
+  Quote,
 } from 'lucide-react';
+
 import { categorias, produtosPF, produtosPJ, type ConsorcioProduct } from '@/data/consorcios';
 
 interface ConsorcioCategoryPageProps {
