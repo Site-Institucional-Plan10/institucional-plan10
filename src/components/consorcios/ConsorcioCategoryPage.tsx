@@ -229,7 +229,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
             }}
           >
             <Clock size={16} style={{ color: PURPLE }} />
-            <span>Grupos de junho com condições especiais de entrada — vagas limitadas para assessoria premium personalizada</span>
+            <span>Grupos de junho com condições especiais de entrada: vagas limitadas para assessoria premium personalizada</span>
           </div>
         </div>
       </section>
