@@ -731,15 +731,26 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* H, Depoimentos */}
+      {/* H — Depoimentos */}
       <section style={{ background: '#fff', padding: '80px 24px' }}>
         <style>{`
           .depoimentos-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 24px;
-            max-width: 900px;
+            max-width: 980px;
             margin: 0 auto;
+            align-items: stretch;
+          }
+          .depoimento-card {
+            background: #ffffff;
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
           }
           @media (max-width: 767px) {
             .depoimentos-grid {
@@ -748,48 +759,71 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               scroll-snap-type: x mandatory;
               gap: 16px;
               margin: 0 -24px;
-              padding-left: 24px;
-              padding-right: 24px;
-              padding-bottom: 12px;
+              padding: 4px 24px 16px 24px;
+              -webkit-overflow-scrolling: touch;
             }
-            .depoimentos-grid > * {
-              min-width: 80vw;
-              scroll-snap-align: start;
+            .depoimentos-grid::-webkit-scrollbar { display: none; }
+            .depoimento-card {
+              min-width: 82vw;
+              max-width: 82vw;
+              scroll-snap-align: center;
               flex-shrink: 0;
+              height: auto;
+            }
+          }
+          .depoimentos-dots { display: none; }
+          @media (max-width: 767px) {
+            .depoimentos-dots {
+              display: flex;
+              justify-content: center;
+              gap: 6px;
+              margin-top: 8px;
             }
           }
         `}</style>
-        <h2
-          style={{
-            textAlign: 'center',
-            fontSize: '1.75rem',
-            fontWeight: 800,
-            color: DARK,
-            marginBottom: 40,
-          }}
-        >
-          O que nossos clientes dizem
-        </h2>
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
+          <span
+            style={{
+              display: 'block',
+              fontSize: '0.75rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              fontWeight: 600,
+              color: PURPLE,
+              marginBottom: 12,
+            }}
+          >
+            DEPOIMENTOS
+          </span>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: DARK }}>
+            O que nossos clientes dizem
+          </h2>
+        </div>
         <div className="depoimentos-grid">
           {depoimentos.map((d, i) => (
-            <div
-              key={i}
-              style={{
-                padding: 24,
-                borderRadius: 12,
-                background: '#F9FAFB',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 12,
-              }}
-            >
-              <p className="italic text-neutral-700">"{d.texto}"</p>
-              <p className="font-semibold text-neutral-900" style={{ marginTop: 'auto' }}>{d.autor}</p>
-              <p className="text-sm text-neutral-500">{d.cargo}</p>
+            <div key={i} className="depoimento-card">
+              <Quote size={28} color={PURPLE} style={{ marginBottom: 16, flexShrink: 0 }} />
+              <p style={{ fontSize: '0.9375rem', color: '#374151', lineHeight: 1.7, flex: 1, marginBottom: 20 }}>
+                "{d.texto}"
+              </p>
+              <div style={{ marginTop: 'auto' }}>
+                <p style={{ fontWeight: 600, color: '#111827', fontSize: '0.875rem' }}>{d.autor}</p>
+                <p style={{ fontSize: '0.8125rem', color: '#6B7280' }}>{d.cargo}</p>
+              </div>
             </div>
           ))}
         </div>
+        <div className="depoimentos-dots">
+          {depoimentos.map((_, i) => (
+            <div
+              key={i}
+              style={{ width: 6, height: 6, borderRadius: '50%', background: '#E5E7EB' }}
+            />
+          ))}
+        </div>
       </section>
+
+
 
       {/* I, Comparison */}
       <section style={{ background: DARK, padding: '80px 24px' }}>
