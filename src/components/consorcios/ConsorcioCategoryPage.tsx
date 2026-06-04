@@ -150,13 +150,23 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
           paddingTop: 96,
           paddingBottom: 96,
         }}
       >
-        <div style={{ maxWidth: 800, margin: '0 auto', paddingLeft: 24, paddingRight: 24 }}>
+        <div
+          style={{
+            maxWidth: 800,
+            margin: '0 auto',
+            paddingLeft: 24,
+            paddingRight: 24,
+            textAlign: 'left',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            width: '100%',
+          }}
+        >
           <span
             style={{
               display: 'block',
@@ -196,7 +206,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               fontSize: '1rem',
               color: 'rgba(255,255,255,0.60)',
               maxWidth: 600,
-              margin: '0 auto 32px auto',
+              margin: '0 0 32px 0',
               lineHeight: 1.7,
             }}
           >
@@ -213,7 +223,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               fontSize: '0.8125rem',
               color: 'rgba(255,255,255,0.80)',
               background: 'rgba(152,87,242,0.12)',
-              margin: '0 auto',
+              margin: 0,
             }}
           >
             <Clock size={16} style={{ color: PURPLE }} />
