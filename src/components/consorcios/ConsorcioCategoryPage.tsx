@@ -13,6 +13,8 @@ import {
   Shield,
   Wrench,
   Coins,
+  CheckCircle2,
+  X,
 } from 'lucide-react';
 import { categorias, produtosPF, produtosPJ, type ConsorcioProduct } from '@/data/consorcios';
 
