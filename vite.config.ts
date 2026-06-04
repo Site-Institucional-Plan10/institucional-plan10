@@ -30,7 +30,7 @@ export default defineConfig({
             const fs = require("fs") as typeof import("fs");
             const content = fs.readFileSync(id, "utf-8");
             return content.replace(
-              /@import\s+(?:url\()?["]https:\/\/fonts\.googleapis\.com[^"]*["]\)?;?\n?/g,
+              /@import\s+(?:url\()?["']https:\/\/fonts\.googleapis\.com[^"']*["']\)?;?\n?/g,
               "",
             );
           }
