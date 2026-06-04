@@ -12,4 +12,28 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
+  vite: {
+    css: {
+      transformer: "lightningcss",
+      lightningcss: {
+        drafts: {
+          customMedia: true,
+        },
+      },
+    },
+    plugins: [
+      {
+        name: "strip-google-fonts-import",
+        enforce: "pre",
+        transform(code: string, id: string) {
+          if (id.includes("styles.css")) {
+            return {
+              code: code.replace(/@import\s+(?:url\()?['"]https:\/\/fonts\.googleapis\.com[^'"]*['"]\)?;?/g, ""),
+              map: null,
+            };
+          }
+        },
+      },
+    ],
+  },
 });
