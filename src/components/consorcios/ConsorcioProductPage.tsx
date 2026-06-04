@@ -129,25 +129,8 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         <span className="text-neutral-700 font-medium">{produto.titulo}</span>
       </nav>
 
-      {/* Gatilho temporal */}
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 24 }}>
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 8,
-            border: '1px solid rgba(152,87,242,0.35)',
-            borderRadius: 999,
-            padding: '8px 20px',
-            fontSize: '0.8125rem',
-            color: '#6B21A8',
-            background: 'rgba(152,87,242,0.08)',
-          }}
-        >
-          <Clock size={14} color={PURPLE} />
-          <span>{produto.gatilhoTemporal}</span>
-        </div>
-      </div>
+      {/* Gatilho temporal moved into hero left column below */}
+
 
       {/* Hero (two-column on desktop) */}
       <section style={{ background: '#fff', paddingTop: 16, paddingBottom: 80 }}>
