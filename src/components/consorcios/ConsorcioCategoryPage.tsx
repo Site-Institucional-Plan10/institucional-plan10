@@ -25,7 +25,7 @@ interface ConsorcioCategoryPageProps {
 const WHATSAPP_BASE = 'https://api.whatsapp.com/send/?phone=5511938012222&text=';
 const PURPLE = '#9857F2';
 const DARK = '#0D1B4B';
-const ORANGE = '#FF6B00';
+
 
 const rotatingPhrases = [
   'O imóvel certo não é apenas onde você mora — é onde sua história ganha o cenário que merece.',
