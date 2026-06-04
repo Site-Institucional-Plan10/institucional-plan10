@@ -732,7 +732,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* H — Depoimentos */}
+      {/* H - Depoimentos */}
       <section style={{ background: '#fff', padding: '80px 24px' }}>
         <style>{`
           .depoimentos-grid {
