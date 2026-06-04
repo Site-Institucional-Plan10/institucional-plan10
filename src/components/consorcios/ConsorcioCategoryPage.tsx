@@ -348,40 +348,140 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* E — CTA form */}
-      <section className="w-full px-6 py-16 text-white" style={{ background: DARK }}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">Cada patrimônio tem uma história. Conte-nos a sua.</h2>
-          <p className="text-white/80 mb-8">Receba uma proposta sob medida para o imóvel que traduz quem você é.</p>
-          <div className="consorcios-form-grid mb-4">
+      <section
+        style={{
+          background: '#fff',
+          borderTop: '1px solid #E5E7EB',
+          borderBottom: '1px solid #E5E7EB',
+          padding: '80px 24px',
+        }}
+      >
+        <style>{`
+          .cta-form-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            width: 100%;
+            margin-bottom: 16px;
+          }
+          @media (max-width: 767px) {
+            .cta-form-grid {
+              grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+          }
+          .cta-input {
+            border: 1px solid #D1D5DB;
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 0.9375rem;
+            color: #111827;
+            outline: none;
+            transition: border-color 150ms ease, box-shadow 150ms ease;
+            background: #fff;
+            width: 100%;
+          }
+          .cta-input:focus {
+            border-color: #9857F2;
+            box-shadow: 0 0 0 3px rgba(152,87,242,0.12);
+          }
+          .cta-submit {
+            background: #9857F2;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 40px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 150ms ease;
+          }
+          .cta-submit:hover {
+            background: #7C3AED;
+          }
+        `}</style>
+        <div
+          style={{
+            maxWidth: 720,
+            margin: '0 auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
+          }}
+        >
+          <span
+            style={{
+              display: 'block',
+              textTransform: 'uppercase',
+              fontSize: '0.75rem',
+              letterSpacing: '0.12em',
+              fontWeight: 600,
+              color: PURPLE,
+              marginBottom: 12,
+            }}
+          >
+            CONSULTORIA GRATUITA
+          </span>
+          <h2
+            style={{
+              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontWeight: 800,
+              color: DARK,
+              marginBottom: 12,
+            }}
+          >
+            Cada patrimônio tem uma história. Conte-nos a sua.
+          </h2>
+          <p
+            style={{
+              fontSize: '1rem',
+              color: '#6B7280',
+              marginBottom: 40,
+              maxWidth: 480,
+            }}
+          >
+            Receba uma proposta sob medida para o imóvel que traduz quem você é.
+          </p>
+          <div className="cta-form-grid">
             <input
+              className="cta-input"
               value={form.nome}
               onChange={(e) => setForm({ ...form, nome: e.target.value })}
               placeholder="Nome completo"
-              className="px-4 py-3 rounded-lg text-neutral-900"
             />
             <input
+              className="cta-input"
               value={form.telefone}
               onChange={(e) => setForm({ ...form, telefone: e.target.value })}
               placeholder="Telefone (WhatsApp)"
-              className="px-4 py-3 rounded-lg text-neutral-900"
             />
             <input
+              className="cta-input"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="E-mail"
-              className="px-4 py-3 rounded-lg text-neutral-900"
             />
           </div>
-          <div
-            onClick={submitForm}
-            className="inline-block px-8 py-3 rounded-lg text-white font-semibold cursor-pointer"
-            style={{ background: ORANGE }}
-          >
+          <button onClick={submitForm} className="cta-submit">
+            <MessageCircle size={18} />
             Falar com meu consultor imobiliário
-          </div>
-          <div className="flex items-center gap-2 mt-4 text-sm text-white/70">
-            <Lock size={14} />
-            <span>Seus dados estão protegidos pela LGPD. Atendimento humano e personalizado.</span>
+          </button>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 6,
+              marginTop: 16,
+            }}
+          >
+            <Lock size={14} style={{ color: '#9B9B9B' }} />
+            <span style={{ fontSize: '0.8125rem', color: '#9B9B9B' }}>
+              Seus dados estão protegidos pela LGPD. Atendimento humano e personalizado.
+            </span>
           </div>
         </div>
       </section>
