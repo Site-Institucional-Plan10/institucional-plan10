@@ -942,7 +942,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* J — Gestor dedicado */}
-      <section className="w-full px-6 py-16 bg-neutral-100">
+      <section className="w-full px-6" style={{ background: '#F9FAFB', paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-3xl mx-auto text-center">
           <div className="w-20 h-20 rounded-full bg-neutral-300 mx-auto flex items-center justify-center">
             <User size={40} className="text-neutral-500" />
