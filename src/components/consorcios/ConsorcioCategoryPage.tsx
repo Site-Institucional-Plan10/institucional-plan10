@@ -995,7 +995,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* L — FAQ */}
-      <section style={{ background: '#fff', padding: '80px 24px' }}>
+      <section style={{ background: '#F5F0FF', padding: '80px 24px' }}>
         <style>{`
           .faq-answer {
             max-height: 0;
