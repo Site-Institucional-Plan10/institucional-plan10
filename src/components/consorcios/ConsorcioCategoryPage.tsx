@@ -282,7 +282,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
                   display: 'flex',
                   flexDirection: 'column',
                   height: '100%',
-                  minWidth: window.innerWidth < 768 ? '78vw' : undefined,
+                  minWidth: typeof window !== 'undefined' && window.innerWidth < 768 ? '78vw' : undefined,
                   scrollSnapAlign: 'start',
                 }}
                 onClick={() => goProduto(p)}
