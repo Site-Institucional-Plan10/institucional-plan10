@@ -150,9 +150,29 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
             <p style={{ fontSize: '1.125rem', color: PURPLE, fontWeight: 500, marginBottom: 24 }}>
               {produto.subtitulo}
             </p>
-            <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.75, marginBottom: 32, maxWidth: 680 }}>
+            <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.75, marginBottom: 16, maxWidth: 680 }}>
               {produto.descricaoLonga[0]}
             </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 24, marginBottom: 24 }}>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  border: '1px solid rgba(152,87,242,0.35)',
+                  borderRadius: 999,
+                  padding: '10px 18px',
+                  background: 'rgba(152,87,242,0.08)',
+                  maxWidth: 'fit-content',
+                }}
+              >
+                <Clock size={15} color={PURPLE} style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: '0.8125rem', color: '#6B21A8', lineHeight: 1.4, fontWeight: 500 }}>
+                  {produto.gatilhoTemporal}
+                </span>
+              </div>
+            </div>
+
             <a
               href={waProduto}
               target="_blank"
