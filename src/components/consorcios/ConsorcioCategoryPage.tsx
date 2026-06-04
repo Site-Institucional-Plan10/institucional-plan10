@@ -964,7 +964,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* K — Próximos passos */}
-      <section className="w-full px-6 py-16 bg-white">
+      <section className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-6xl mx-auto consorcios-3col">
           <div className="p-6 rounded-xl border text-center cursor-pointer" onClick={scrollToProducts}>
             <Search size={28} style={{ color: PURPLE }} className="mx-auto" />
