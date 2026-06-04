@@ -28,9 +28,9 @@ const DARK = '#0D1B4B';
 
 
 const rotatingPhrases = [
-  'O imóvel certo não é apenas onde você mora — é onde sua história ganha o cenário que merece.',
+  'O imóvel certo não é apenas onde você mora. É onde sua história ganha o cenário que merece.',
   'Planejamento inteligente transforma sonho em endereço. Sem juros. Sem pressa. Com propósito.',
-  'Quem pensa em gerações não compra imóvel — constrói patrimônio.',
+  'Quem pensa em gerações não compra imóvel, constrói patrimônio.',
 ];
 
 const gallery = [
