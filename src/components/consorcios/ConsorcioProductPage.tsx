@@ -14,6 +14,7 @@ const WHATSAPP_BASE = 'https://api.whatsapp.com/send/?phone=5511938012222&text='
 const PURPLE = '#9857F2';
 const DARK = '#0D1B4B';
 const ORANGE = '#FF6B00';
+const LILAC = '#F5F0FF';
 
 function LucideIcon({ name, size = 20, color }: { name: string; size?: number; color?: string }) {
   const Cmp = (Icons as any)[name] || Icons.Sparkles;
@@ -27,6 +28,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
   const produto = source.find((p) => p.categoriaId === categoriaId && p.id === produtoId);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [ctaHover, setCtaHover] = useState(false);
+  const [currentStep, setCurrentStep] = useState(1);
 
   if (!produto || !categoria) {
     return (
@@ -43,6 +45,9 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
     );
   }
 
+  const totalSteps = produto.comoFunciona.length;
+  const stepData = produto.comoFunciona[currentStep - 1];
+
   const waProduto = WHATSAPP_BASE + encodeURIComponent(
     `Olá! Vim pelo site da Plan10 e gostaria de saber mais sobre ${produto.titulo}.`,
   );
@@ -56,38 +61,67 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
   return (
     <div className="w-full">
       <style>{`
+        .product-hero-layout {
+          display: block;
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 48px 24px 0 24px;
+        }
+        .product-hero-photo {
+          width: 100%;
+          height: 240px;
+          background: #E5E7EB;
+          border-radius: 16px;
+          overflow: hidden;
+        }
+        @media (min-width: 768px) {
+          .product-hero-layout {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 48px;
+            align-items: start;
+          }
+          .product-hero-photo { height: 380px; }
+        }
         .consorcios-diferenciais-grid {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
           gap: 24px;
-          max-width: 800px;
+          max-width: 860px;
           margin: 0 auto;
         }
         @media (max-width: 767px) {
           .consorcios-diferenciais-grid {
             grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 16px;
           }
         }
-        .consorcios-cross-grid {
+        .cross-selling-grid {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 24px;
+          gap: 20px;
+          max-width: 860px;
+          margin: 0 auto;
         }
         @media (max-width: 767px) {
-          .consorcios-cross-grid { grid-template-columns: 1fr; }
+          .cross-selling-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 16px; }
         }
-        .consorcios-comofunciona-grid {
-          display: grid;
-          grid-template-columns: repeat(5, minmax(0, 1fr));
+        .como-funciona-mobile { display: none; }
+        .como-funciona-desktop {
+          display: flex;
+          flex-direction: column;
           gap: 24px;
+          max-width: 640px;
+          margin: 0 auto;
         }
         @media (max-width: 767px) {
-          .consorcios-comofunciona-grid { grid-template-columns: 1fr; }
+          .como-funciona-mobile { display: block; max-width: 480px; margin: 0 auto; }
+          .como-funciona-desktop { display: none; }
         }
       `}</style>
 
-      {/* 1 — Breadcrumb */}
-      <nav style={{ maxWidth: 800, margin: '0 auto', padding: '24px 24px 0 24px' }} className="text-sm text-neutral-400">
+      {/* Breadcrumb */}
+      <nav style={{ maxWidth: 900, margin: '0 auto', padding: '24px 24px 0 24px' }} className="text-sm text-neutral-400">
         <a href="/consorcios" className="hover:underline">Consórcios</a>
         <span> › </span>
         <button onClick={goCategoria} className="hover:underline">{categoria.titulo}</button>
@@ -95,7 +129,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         <span className="text-neutral-700 font-medium">{produto.titulo}</span>
       </nav>
 
-      {/* 2 — Gatilho temporal */}
+      {/* Gatilho temporal */}
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: 24 }}>
         <div
           style={{
@@ -115,64 +149,84 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         </div>
       </div>
 
-      {/* 3+4+5 — Hero block */}
-      <section style={{ background: '#fff', paddingTop: 48, paddingBottom: 0 }}>
-        <div style={{ maxWidth: 800, margin: '0 auto', paddingLeft: 24, paddingRight: 24, textAlign: 'left' }}>
-          <h1
-            style={{
-              fontSize: 'clamp(1.75rem, 4vw, 2.75rem)',
-              fontWeight: 800,
-              color: DARK,
-              lineHeight: 1.2,
-              marginBottom: 12,
-            }}
-          >
-            {produto.titulo}
-          </h1>
-          <p style={{ fontSize: '1.125rem', color: PURPLE, fontWeight: 500, marginBottom: 24 }}>
-            {produto.subtitulo}
-          </p>
-          <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.75, marginBottom: 32 }}>
-            {produto.descricaoLonga[0]}
-          </p>
-          {/* TODO: hero photo */}
-          <div
-            style={{
-              width: '100%',
-              maxWidth: 800,
-              margin: '0 auto',
-              height: 420,
-              background: '#E5E7EB',
-              borderRadius: 16,
-              overflow: 'hidden',
-            }}
-          />
-          {produto.descricaoLonga[1] && (
-            <p
+      {/* Hero (two-column on desktop) */}
+      <section style={{ background: '#fff', paddingTop: 16, paddingBottom: 80 }}>
+        <div className="product-hero-layout">
+          <div>
+            <h1
               style={{
-                fontSize: '1rem',
-                color: '#374151',
-                lineHeight: 1.75,
-                paddingTop: 32,
-                maxWidth: 800,
-                margin: '0 auto',
+                fontSize: 'clamp(1.75rem, 4vw, 2.75rem)',
+                fontWeight: 800,
+                color: DARK,
+                lineHeight: 1.2,
+                marginBottom: 12,
               }}
             >
-              {produto.descricaoLonga[1]}
+              {produto.titulo}
+            </h1>
+            <p style={{ fontSize: '1.125rem', color: PURPLE, fontWeight: 500, marginBottom: 24 }}>
+              {produto.subtitulo}
             </p>
-          )}
+            <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.75, marginBottom: 32, maxWidth: 680 }}>
+              {produto.descricaoLonga[0]}
+            </p>
+            <a
+              href={waProduto}
+              target="_blank"
+              rel="noreferrer"
+              onMouseEnter={() => setCtaHover(true)}
+              onMouseLeave={() => setCtaHover(false)}
+              style={{
+                background: ctaHover ? '#E05A00' : ORANGE,
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: '0.9375rem',
+                padding: '14px 28px',
+                borderRadius: 999,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                cursor: 'pointer',
+                transition: 'background 200ms',
+              }}
+            >
+              <MessageCircle size={18} />
+              {produto.cta}
+            </a>
+          </div>
+          <div>
+            {/* TODO: hero photo */}
+            <div className="product-hero-photo" />
+            {produto.descricaoLonga[1] && (
+              <p
+                style={{
+                  fontSize: '0.9375rem',
+                  color: '#374151',
+                  lineHeight: 1.75,
+                  paddingTop: 24,
+                }}
+              >
+                {produto.descricaoLonga[1]}
+              </p>
+            )}
+          </div>
         </div>
       </section>
 
-      {/* 6 — Diferenciais */}
-      <section style={{ background: '#F9FAFB', padding: '64px 24px' }}>
+      {/* Diferenciais */}
+      <section
+        style={{
+          background: 'linear-gradient(135deg, #0D1B4B 0%, #1a2f6b 100%)',
+          padding: '80px 24px',
+        }}
+      >
         <h2
           style={{
             textAlign: 'center',
             fontSize: '1.5rem',
             fontWeight: 700,
-            color: DARK,
-            marginBottom: 48,
+            color: '#fff',
+            marginBottom: 40,
           }}
         >
           Por que escolher este consórcio
@@ -182,10 +236,10 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
             <div
               key={i}
               style={{
-                background: '#fff',
+                background: 'rgba(255,255,255,0.08)',
                 borderRadius: 12,
                 padding: 24,
-                border: '1px solid #E5E7EB',
+                border: '1px solid rgba(255,255,255,0.12)',
                 display: 'flex',
                 gap: 16,
                 alignItems: 'flex-start',
@@ -196,61 +250,61 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
                   width: 40,
                   height: 40,
                   borderRadius: 8,
-                  background: 'rgba(152,87,242,0.10)',
+                  background: 'rgba(255,255,255,0.12)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   flexShrink: 0,
                 }}
               >
-                <LucideIcon name={d.icone} size={20} color={PURPLE} />
+                <LucideIcon name={d.icone} size={20} color="#fff" />
               </div>
               <div>
-                <h3 style={{ fontWeight: 600, color: '#111827', fontSize: '0.9375rem', marginBottom: 4 }}>
+                <h3 style={{ fontWeight: 600, color: '#fff', fontSize: '0.9375rem', marginBottom: 8 }}>
                   {d.titulo}
                 </h3>
-                <p style={{ fontSize: '0.875rem', color: '#6B7280', lineHeight: 1.6 }}>{d.descricao}</p>
+                <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.70)', lineHeight: 1.6 }}>{d.descricao}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 7 — Para quem é indicado */}
-      <section style={{ maxWidth: 800, margin: '0 auto', padding: '48px 24px' }}>
-        <div
-          style={{
-            background: 'rgba(152,87,242,0.05)',
-            borderLeft: `4px solid ${PURPLE}`,
-            borderRadius: 12,
-            padding: '24px 28px',
-          }}
-        >
-          <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 12 }}>
-            <UserCheck size={18} color={PURPLE} />
-            <span style={{ fontWeight: 700, color: DARK, fontSize: '0.9375rem' }}>Para quem é indicado</span>
+      {/* Para quem é indicado */}
+      <section style={{ background: LILAC, padding: '80px 24px' }}>
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+          <div
+            style={{
+              background: '#fff',
+              borderLeft: `4px solid ${PURPLE}`,
+              borderRadius: 12,
+              padding: '24px 28px',
+            }}
+          >
+            <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 12 }}>
+              <UserCheck size={18} color={PURPLE} />
+              <span style={{ fontWeight: 700, color: DARK, fontSize: '0.9375rem' }}>Para quem é indicado</span>
+            </div>
+            <p style={{ fontSize: '0.9375rem', color: '#374151', lineHeight: 1.75 }}>{produto.paraQuemEIndicado}</p>
           </div>
-          <p style={{ fontSize: '0.9375rem', color: '#374151', lineHeight: 1.7 }}>{produto.paraQuemEIndicado}</p>
         </div>
       </section>
 
-      {/* 8 — Foto secundária */}
-      <div style={{ maxWidth: 1152, margin: '0 auto', padding: '0 24px' }}>
+      {/* Foto secundária */}
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '80px 24px 0 24px' }}>
         {/* TODO: secondary photo */}
         <div style={{ width: '100%', borderRadius: 16, background: '#E5E7EB', height: 320 }} />
       </div>
 
-      {/* 9 — CTA principal */}
-      <section style={{ background: DARK, padding: '64px 24px', textAlign: 'center' }}>
+      {/* CTA principal */}
+      <section style={{ background: DARK, padding: '80px 24px', textAlign: 'center', marginTop: 80 }}>
         <div style={{ maxWidth: 560, margin: '0 auto' }}>
           <a
             href={waProduto}
             target="_blank"
             rel="noreferrer"
-            onMouseEnter={() => setCtaHover(true)}
-            onMouseLeave={() => setCtaHover(false)}
             style={{
-              background: ctaHover ? '#E05A00' : ORANGE,
+              background: ORANGE,
               color: '#fff',
               fontWeight: 700,
               fontSize: '1rem',
@@ -260,7 +314,6 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
               alignItems: 'center',
               gap: 8,
               cursor: 'pointer',
-              transition: 'background 200ms',
             }}
           >
             <MessageCircle size={18} />
@@ -269,27 +322,51 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         </div>
       </section>
 
-      {/* 10 — Cross-selling */}
-      <section className="w-full px-6 py-12 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-neutral-900">Complete sua jornada</h2>
-          <div className="consorcios-cross-grid">
-            {produto.crossSelling.map((c, i) => (
-              <div key={i} className="p-6 rounded-xl border">
-                <LucideIcon name={c.icone} size={28} color={PURPLE} />
-                <h3 className="font-semibold mt-4 text-neutral-900">{c.titulo}</h3>
-                <p className="text-sm text-neutral-600 mt-2">{c.descricao}</p>
-                <a href={c.link} className="inline-block mt-4 text-sm font-medium" style={{ color: PURPLE }}>
-                  Explorar →
-                </a>
-              </div>
-            ))}
-          </div>
+      {/* Cross-selling */}
+      <section
+        style={{
+          background: 'linear-gradient(135deg, #9857F2 0%, #7C3AED 100%)',
+          padding: '80px 24px',
+        }}
+      >
+        <h2
+          style={{
+            textAlign: 'center',
+            fontSize: '1.5rem',
+            fontWeight: 700,
+            color: '#fff',
+            marginBottom: 40,
+          }}
+        >
+          Complete sua jornada
+        </h2>
+        <div className="cross-selling-grid">
+          {produto.crossSelling.map((c, i) => (
+            <div
+              key={i}
+              style={{
+                padding: 24,
+                borderRadius: 12,
+                background: 'rgba(255,255,255,0.12)',
+                border: '1px solid rgba(255,255,255,0.15)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
+              }}
+            >
+              <LucideIcon name={c.icone} size={28} color="#fff" />
+              <h3 style={{ fontWeight: 600, color: '#fff' }}>{c.titulo}</h3>
+              <p style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.80)', lineHeight: 1.6 }}>{c.descricao}</p>
+              <a href={c.link} style={{ fontSize: '0.875rem', fontWeight: 600, color: '#fff' }}>
+                Explorar →
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* 11 — Depoimento */}
-      <section style={{ background: '#F9FAFB', padding: '64px 24px' }}>
+      {/* Depoimento */}
+      <section style={{ background: LILAC, padding: '80px 24px' }}>
         <div
           style={{
             maxWidth: 640,
@@ -312,7 +389,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
           >
             "{produto.depoimento.texto}"
           </p>
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
             <p style={{ fontWeight: 600, color: '#111827' }}>{produto.depoimento.autor}</p>
             <p className="text-sm" style={{ color: '#6B7280' }}>
               {produto.depoimento.cargo} · {produto.depoimento.cidade}
@@ -321,28 +398,22 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         </div>
       </section>
 
-      {/* 12 — Como funciona */}
-      <section style={{ padding: '64px 24px' }}>
+      {/* Como funciona */}
+      <section style={{ background: '#fff', padding: '80px 24px' }}>
         <h2
           style={{
             textAlign: 'center',
             fontSize: '1.5rem',
             fontWeight: 700,
             color: DARK,
-            marginBottom: 48,
+            marginBottom: 40,
           }}
         >
           Como funciona
         </h2>
-        <div
-          style={{
-            maxWidth: 640,
-            margin: '0 auto',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 24,
-          }}
-        >
+
+        {/* Desktop */}
+        <div className="como-funciona-desktop">
           {produto.comoFunciona.map((s) => (
             <div key={s.step} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
               <div
@@ -362,17 +433,118 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
               >
                 {s.step}
               </div>
-              <div>
-                <p style={{ fontWeight: 600, color: '#111827', marginBottom: 4 }}>{s.titulo}</p>
-                <p style={{ fontSize: '0.875rem', color: '#6B7280' }}>{s.descricao}</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                <p style={{ fontWeight: 600, color: '#111827' }}>{s.titulo}</p>
+                <p style={{ fontSize: '0.875rem', color: '#6B7280', lineHeight: 1.6 }}>{s.descricao}</p>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Mobile stepper */}
+        <div className="como-funciona-mobile">
+          <p style={{ textAlign: 'center', fontSize: '0.875rem', color: PURPLE, fontWeight: 600 }}>
+            Passo {currentStep} de {totalSteps}
+          </p>
+          <div
+            style={{
+              width: '100%',
+              height: 4,
+              background: '#E5E7EB',
+              borderRadius: 999,
+              marginTop: 8,
+              overflow: 'hidden',
+            }}
+          >
+            <div
+              style={{
+                width: `${(currentStep / totalSteps) * 100}%`,
+                height: '100%',
+                background: PURPLE,
+                borderRadius: 999,
+                transition: 'width 300ms ease',
+              }}
+            />
+          </div>
+          <div
+            style={{
+              background: '#fff',
+              border: '1px solid #E5E7EB',
+              borderRadius: 16,
+              padding: '32px 24px',
+              textAlign: 'center',
+              marginTop: 16,
+            }}
+          >
+            <div
+              style={{
+                width: 48,
+                height: 48,
+                borderRadius: '50%',
+                background: PURPLE,
+                color: '#fff',
+                fontWeight: 800,
+                fontSize: '1.125rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto 16px auto',
+              }}
+            >
+              {stepData.step}
+            </div>
+            <p style={{ fontWeight: 700, color: DARK, fontSize: '1rem', marginBottom: 8 }}>{stepData.titulo}</p>
+            <p style={{ fontSize: '0.9375rem', color: '#6B7280', lineHeight: 1.6 }}>{stepData.descricao}</p>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginTop: 20,
+            }}
+          >
+            <button
+              onClick={() => setCurrentStep((s) => Math.max(1, s - 1))}
+              disabled={currentStep === 1}
+              style={{
+                border: '1px solid #E5E7EB',
+                background: '#fff',
+                color: '#6B7280',
+                padding: '10px 20px',
+                borderRadius: 999,
+                fontSize: '0.875rem',
+                opacity: currentStep === 1 ? 0.3 : 1,
+                pointerEvents: currentStep === 1 ? 'none' : 'auto',
+                cursor: 'pointer',
+              }}
+            >
+              Anterior
+            </button>
+            <button
+              onClick={() => {
+                if (currentStep === totalSteps) setCurrentStep(1);
+                else setCurrentStep((s) => s + 1);
+              }}
+              style={{
+                background: PURPLE,
+                color: '#fff',
+                padding: '10px 20px',
+                borderRadius: 999,
+                fontSize: '0.875rem',
+                fontWeight: 600,
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              {currentStep === totalSteps ? 'Concluído' : 'Próximo'}
+            </button>
+          </div>
+        </div>
       </section>
 
-      {/* 13 — FAQ */}
-      <section style={{ background: '#F9FAFB', padding: '64px 24px' }}>
+      {/* FAQ */}
+      <section style={{ background: '#F9FAFB', padding: '80px 24px' }}>
         <h2
           style={{
             textAlign: 'center',
@@ -384,7 +556,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         >
           Perguntas frequentes
         </h2>
-        <div style={{ maxWidth: 640, margin: '0 auto' }}>
+        <div style={{ maxWidth: 680, margin: '0 auto' }}>
           {produto.faq.map((f, i) => (
             <div key={i} style={{ borderBottom: '1px solid #E5E7EB', padding: '20px 0' }}>
               <div
@@ -394,6 +566,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   cursor: 'pointer',
+                  gap: 12,
                 }}
               >
                 <span style={{ fontWeight: 600, color: '#111827', fontSize: '0.9375rem' }}>{f.pergunta}</span>
@@ -403,11 +576,12 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
                   style={{
                     transition: 'transform 200ms',
                     transform: openFaq === i ? 'rotate(180deg)' : 'rotate(0deg)',
+                    flexShrink: 0,
                   }}
                 />
               </div>
               {openFaq === i && (
-                <p style={{ fontSize: '0.9375rem', color: '#6B7280', lineHeight: 1.7, paddingTop: 12 }}>
+                <p style={{ fontSize: '0.9375rem', color: '#6B7280', lineHeight: 1.75, paddingTop: 12 }}>
                   {f.resposta}
                 </p>
               )}
@@ -416,8 +590,8 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         </div>
       </section>
 
-      {/* 14 — Próximos passos */}
-      <section style={{ padding: '64px 24px', textAlign: 'center' }}>
+      {/* Próximos passos */}
+      <section style={{ padding: '80px 24px', textAlign: 'center', background: '#fff' }}>
         <h2
           style={{
             fontSize: '1.5rem',
@@ -428,7 +602,16 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         >
           Escolha seu próximo passo
         </h2>
-        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div
+          style={{
+            display: 'flex',
+            gap: 12,
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            maxWidth: 640,
+            margin: '0 auto',
+          }}
+        >
           <button
             onClick={goCategoria}
             style={{
