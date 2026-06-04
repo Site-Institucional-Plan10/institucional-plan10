@@ -861,16 +861,37 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
             </div>
             <div
               style={{
-                fontSize: '0.875rem',
-                fontWeight: 700,
-                color: PURPLE,
                 display: 'flex',
-                alignItems: 'center',
+                flexDirection: 'column',
                 gap: 6,
+                alignItems: 'flex-start',
               }}
             >
-              <div style={{ width: 8, height: 8, borderRadius: '50%', background: PURPLE }} />
-              Plan 10 Premium
+              <div
+                style={{
+                  fontSize: '0.875rem',
+                  fontWeight: 700,
+                  color: PURPLE,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                }}
+              >
+                <div style={{ width: 8, height: 8, borderRadius: '50%', background: PURPLE }} />
+                Plan 10 Premium
+              </div>
+              <span
+                style={{
+                  background: PURPLE,
+                  color: '#fff',
+                  fontSize: '0.75rem',
+                  fontWeight: 700,
+                  padding: '2px 10px',
+                  borderRadius: 999,
+                }}
+              >
+                Melhor escolha
+              </span>
             </div>
             <div
               style={{
@@ -888,26 +909,32 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               <div
                 style={{
                   fontSize: '0.875rem',
-                  color: 'rgba(255,255,255,0.90)',
+                  color: '#fff',
+                  fontWeight: 500,
                   display: 'flex',
                   alignItems: 'flex-start',
                   gap: 8,
+                  background: 'rgba(152,87,242,0.15)',
+                  borderLeft: `3px solid ${PURPLE}`,
+                  borderRadius: 8,
+                  padding: '10px 12px',
                 }}
               >
-                <CheckCircle2 size={16} style={{ color: PURPLE, flexShrink: 0, marginTop: 1 }} />
+                <CheckCircle2 size={16} style={{ color: '#C084FC', flexShrink: 0, marginTop: 2 }} />
                 <span>{r[1]}</span>
               </div>
               <div
                 style={{
                   fontSize: '0.875rem',
-                  color: 'rgba(255,255,255,0.40)',
+                  color: 'rgba(255,255,255,0.35)',
                   display: 'flex',
                   alignItems: 'flex-start',
                   gap: 8,
+                  padding: '10px 12px',
                 }}
               >
-                <X size={16} style={{ color: 'rgba(255,255,255,0.25)', flexShrink: 0, marginTop: 1 }} />
-                <span>{r[2]}</span>
+                <X size={16} style={{ color: 'rgba(255,255,255,0.30)', flexShrink: 0, marginTop: 2 }} />
+                <span style={{ textDecoration: 'line-through' }}>{r[2]}</span>
               </div>
             </div>
           ))}
