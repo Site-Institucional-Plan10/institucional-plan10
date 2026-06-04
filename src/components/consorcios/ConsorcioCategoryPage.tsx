@@ -436,29 +436,127 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* I — Comparison */}
-      <section className="w-full px-6 py-16 bg-neutral-50">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-neutral-900">Plan 10 vs mercado tradicional</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-white rounded-xl overflow-hidden">
-              <thead>
-                <tr className="bg-neutral-100">
-                  <th className="text-left p-4 font-semibold">Critério</th>
-                  <th className="text-left p-4 font-semibold bg-purple-50" style={{ color: PURPLE }}>Plan 10 Premium</th>
-                  <th className="text-left p-4 font-semibold">Mercado tradicional</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparacao.map((r, i) => (
-                  <tr key={i} className="border-t">
-                    <td className="p-4 font-medium">{r[0]}</td>
-                    <td className="p-4 bg-purple-50" style={{ color: PURPLE }}>✓ {r[1]}</td>
-                    <td className="p-4 text-neutral-600">{r[2]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+      <section style={{ background: DARK, padding: '80px 24px' }}>
+        <style>{`
+          .comparison-table-header {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            background: rgba(255,255,255,0.05);
+            padding: 16px 24px;
+          }
+          .comparison-table-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            padding: 20px 24px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            align-items: start;
+            transition: background 150ms ease;
+          }
+          .comparison-table-row:hover {
+            background: rgba(255,255,255,0.04);
+          }
+          @media (max-width: 640px) {
+            .comparison-table-row,
+            .comparison-table-header {
+              grid-template-columns: 1fr;
+              gap: 8px;
+            }
+          }
+        `}</style>
+        <h2
+          style={{
+            textAlign: 'center',
+            fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+            fontWeight: 800,
+            color: '#fff',
+            marginBottom: 8,
+          }}
+        >
+          Plan 10 vs mercado tradicional
+        </h2>
+        <p
+          style={{
+            fontSize: '1rem',
+            color: 'rgba(255,255,255,0.60)',
+            textAlign: 'center',
+            marginBottom: 48,
+          }}
+        >
+          Por que o consórcio Plan 10 é a escolha inteligente
+        </p>
+        <div
+          style={{
+            maxWidth: 800,
+            margin: '0 auto',
+            borderRadius: 16,
+            overflow: 'hidden',
+            border: '1px solid rgba(255,255,255,0.10)',
+          }}
+        >
+          <div className="comparison-table-header">
+            <div
+              style={{
+                fontSize: '0.75rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: 'rgba(255,255,255,0.40)',
+                fontWeight: 600,
+              }}
+            >
+              Critério
+            </div>
+            <div
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                color: PURPLE,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+              }}
+            >
+              <div style={{ width: 8, height: 8, borderRadius: '50%', background: PURPLE }} />
+              Plan 10 Premium
+            </div>
+            <div
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 600,
+                color: 'rgba(255,255,255,0.40)',
+              }}
+            >
+              Mercado tradicional
+            </div>
           </div>
+          {comparacao.map((r, i) => (
+            <div key={i} className="comparison-table-row">
+              <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'rgba(255,255,255,0.80)' }}>{r[0]}</div>
+              <div
+                style={{
+                  fontSize: '0.875rem',
+                  color: 'rgba(255,255,255,0.90)',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: 8,
+                }}
+              >
+                <CheckCircle2 size={16} style={{ color: PURPLE, flexShrink: 0, marginTop: 1 }} />
+                <span>{r[1]}</span>
+              </div>
+              <div
+                style={{
+                  fontSize: '0.875rem',
+                  color: 'rgba(255,255,255,0.40)',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: 8,
+                }}
+              >
+                <X size={16} style={{ color: 'rgba(255,255,255,0.25)', flexShrink: 0, marginTop: 1 }} />
+                <span>{r[2]}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
