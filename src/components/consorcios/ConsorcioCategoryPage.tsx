@@ -13,6 +13,8 @@ import {
   Shield,
   Wrench,
   Coins,
+  CheckCircle2,
+  X,
 } from 'lucide-react';
 import { categorias, produtosPF, produtosPJ, type ConsorcioProduct } from '@/data/consorcios';
 
@@ -23,7 +25,7 @@ interface ConsorcioCategoryPageProps {
 const WHATSAPP_BASE = 'https://api.whatsapp.com/send/?phone=5511938012222&text=';
 const PURPLE = '#9857F2';
 const DARK = '#0D1B4B';
-const ORANGE = '#FF6B00';
+
 
 const rotatingPhrases = [
   'O imóvel certo não é apenas onde você mora — é onde sua história ganha o cenário que merece.',
@@ -150,13 +152,23 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center',
           paddingTop: 96,
           paddingBottom: 96,
         }}
       >
-        <div style={{ maxWidth: 800, margin: '0 auto', paddingLeft: 24, paddingRight: 24 }}>
+        <div
+          style={{
+            maxWidth: 800,
+            margin: '0 auto',
+            paddingLeft: 24,
+            paddingRight: 24,
+            textAlign: 'left',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            width: '100%',
+          }}
+        >
           <span
             style={{
               display: 'block',
@@ -196,7 +208,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               fontSize: '1rem',
               color: 'rgba(255,255,255,0.60)',
               maxWidth: 600,
-              margin: '0 auto 32px auto',
+              margin: '0 0 32px 0',
               lineHeight: 1.7,
             }}
           >
@@ -213,7 +225,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               fontSize: '0.8125rem',
               color: 'rgba(255,255,255,0.80)',
               background: 'rgba(152,87,242,0.12)',
-              margin: '0 auto',
+              margin: 0,
             }}
           >
             <Clock size={16} style={{ color: PURPLE }} />
@@ -336,40 +348,140 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* E — CTA form */}
-      <section className="w-full px-6 py-16 text-white" style={{ background: DARK }}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">Cada patrimônio tem uma história. Conte-nos a sua.</h2>
-          <p className="text-white/80 mb-8">Receba uma proposta sob medida para o imóvel que traduz quem você é.</p>
-          <div className="consorcios-form-grid mb-4">
+      <section
+        style={{
+          background: '#fff',
+          borderTop: '1px solid #E5E7EB',
+          borderBottom: '1px solid #E5E7EB',
+          padding: '80px 24px',
+        }}
+      >
+        <style>{`
+          .cta-form-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            width: 100%;
+            margin-bottom: 16px;
+          }
+          @media (max-width: 767px) {
+            .cta-form-grid {
+              grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+          }
+          .cta-input {
+            border: 1px solid #D1D5DB;
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 0.9375rem;
+            color: #111827;
+            outline: none;
+            transition: border-color 150ms ease, box-shadow 150ms ease;
+            background: #fff;
+            width: 100%;
+          }
+          .cta-input:focus {
+            border-color: #9857F2;
+            box-shadow: 0 0 0 3px rgba(152,87,242,0.12);
+          }
+          .cta-submit {
+            background: #9857F2;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 40px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 150ms ease;
+          }
+          .cta-submit:hover {
+            background: #7C3AED;
+          }
+        `}</style>
+        <div
+          style={{
+            maxWidth: 720,
+            margin: '0 auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
+          }}
+        >
+          <span
+            style={{
+              display: 'block',
+              textTransform: 'uppercase',
+              fontSize: '0.75rem',
+              letterSpacing: '0.12em',
+              fontWeight: 600,
+              color: PURPLE,
+              marginBottom: 12,
+            }}
+          >
+            CONSULTORIA GRATUITA
+          </span>
+          <h2
+            style={{
+              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontWeight: 800,
+              color: DARK,
+              marginBottom: 12,
+            }}
+          >
+            Cada patrimônio tem uma história. Conte-nos a sua.
+          </h2>
+          <p
+            style={{
+              fontSize: '1rem',
+              color: '#6B7280',
+              marginBottom: 40,
+              maxWidth: 480,
+            }}
+          >
+            Receba uma proposta sob medida para o imóvel que traduz quem você é.
+          </p>
+          <div className="cta-form-grid">
             <input
+              className="cta-input"
               value={form.nome}
               onChange={(e) => setForm({ ...form, nome: e.target.value })}
               placeholder="Nome completo"
-              className="px-4 py-3 rounded-lg text-neutral-900"
             />
             <input
+              className="cta-input"
               value={form.telefone}
               onChange={(e) => setForm({ ...form, telefone: e.target.value })}
               placeholder="Telefone (WhatsApp)"
-              className="px-4 py-3 rounded-lg text-neutral-900"
             />
             <input
+              className="cta-input"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="E-mail"
-              className="px-4 py-3 rounded-lg text-neutral-900"
             />
           </div>
-          <div
-            onClick={submitForm}
-            className="inline-block px-8 py-3 rounded-lg text-white font-semibold cursor-pointer"
-            style={{ background: ORANGE }}
-          >
+          <button onClick={submitForm} className="cta-submit">
+            <MessageCircle size={18} />
             Falar com meu consultor imobiliário
-          </div>
-          <div className="flex items-center gap-2 mt-4 text-sm text-white/70">
-            <Lock size={14} />
-            <span>Seus dados estão protegidos pela LGPD. Atendimento humano e personalizado.</span>
+          </button>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 6,
+              marginTop: 16,
+            }}
+          >
+            <Lock size={14} style={{ color: '#9B9B9B' }} />
+            <span style={{ fontSize: '0.8125rem', color: '#9B9B9B' }}>
+              Seus dados estão protegidos pela LGPD. Atendimento humano e personalizado.
+            </span>
           </div>
         </div>
       </section>
@@ -424,29 +536,127 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* I — Comparison */}
-      <section className="w-full px-6 py-16 bg-neutral-50">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-neutral-900">Plan 10 vs mercado tradicional</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-white rounded-xl overflow-hidden">
-              <thead>
-                <tr className="bg-neutral-100">
-                  <th className="text-left p-4 font-semibold">Critério</th>
-                  <th className="text-left p-4 font-semibold bg-purple-50" style={{ color: PURPLE }}>Plan 10 Premium</th>
-                  <th className="text-left p-4 font-semibold">Mercado tradicional</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparacao.map((r, i) => (
-                  <tr key={i} className="border-t">
-                    <td className="p-4 font-medium">{r[0]}</td>
-                    <td className="p-4 bg-purple-50" style={{ color: PURPLE }}>✓ {r[1]}</td>
-                    <td className="p-4 text-neutral-600">{r[2]}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+      <section style={{ background: DARK, padding: '80px 24px' }}>
+        <style>{`
+          .comparison-table-header {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            background: rgba(255,255,255,0.05);
+            padding: 16px 24px;
+          }
+          .comparison-table-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            padding: 20px 24px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            align-items: start;
+            transition: background 150ms ease;
+          }
+          .comparison-table-row:hover {
+            background: rgba(255,255,255,0.04);
+          }
+          @media (max-width: 640px) {
+            .comparison-table-row,
+            .comparison-table-header {
+              grid-template-columns: 1fr;
+              gap: 8px;
+            }
+          }
+        `}</style>
+        <h2
+          style={{
+            textAlign: 'center',
+            fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+            fontWeight: 800,
+            color: '#fff',
+            marginBottom: 8,
+          }}
+        >
+          Plan 10 vs mercado tradicional
+        </h2>
+        <p
+          style={{
+            fontSize: '1rem',
+            color: 'rgba(255,255,255,0.60)',
+            textAlign: 'center',
+            marginBottom: 48,
+          }}
+        >
+          Por que o consórcio Plan 10 é a escolha inteligente
+        </p>
+        <div
+          style={{
+            maxWidth: 800,
+            margin: '0 auto',
+            borderRadius: 16,
+            overflow: 'hidden',
+            border: '1px solid rgba(255,255,255,0.10)',
+          }}
+        >
+          <div className="comparison-table-header">
+            <div
+              style={{
+                fontSize: '0.75rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: 'rgba(255,255,255,0.40)',
+                fontWeight: 600,
+              }}
+            >
+              Critério
+            </div>
+            <div
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                color: PURPLE,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+              }}
+            >
+              <div style={{ width: 8, height: 8, borderRadius: '50%', background: PURPLE }} />
+              Plan 10 Premium
+            </div>
+            <div
+              style={{
+                fontSize: '0.875rem',
+                fontWeight: 600,
+                color: 'rgba(255,255,255,0.40)',
+              }}
+            >
+              Mercado tradicional
+            </div>
           </div>
+          {comparacao.map((r, i) => (
+            <div key={i} className="comparison-table-row">
+              <div style={{ fontSize: '0.875rem', fontWeight: 600, color: 'rgba(255,255,255,0.80)' }}>{r[0]}</div>
+              <div
+                style={{
+                  fontSize: '0.875rem',
+                  color: 'rgba(255,255,255,0.90)',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: 8,
+                }}
+              >
+                <CheckCircle2 size={16} style={{ color: PURPLE, flexShrink: 0, marginTop: 1 }} />
+                <span>{r[1]}</span>
+              </div>
+              <div
+                style={{
+                  fontSize: '0.875rem',
+                  color: 'rgba(255,255,255,0.40)',
+                  display: 'flex',
+                  alignItems: 'flex-start',
+                  gap: 8,
+                }}
+              >
+                <X size={16} style={{ color: 'rgba(255,255,255,0.25)', flexShrink: 0, marginTop: 1 }} />
+                <span>{r[2]}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -504,27 +714,112 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* L — FAQ */}
-      <section className="w-full px-6 py-16 bg-neutral-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-neutral-900">Perguntas frequentes</h2>
-          <div>
-            {faqs.map((f, i) => (
-              <div key={i} className="border-b">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between py-4 text-left"
+      <section style={{ background: '#fff', padding: '80px 24px' }}>
+        <style>{`
+          .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 300ms ease, opacity 200ms ease, padding 200ms ease;
+          }
+          .faq-answer.open {
+            max-height: 600px;
+            opacity: 1;
+          }
+        `}</style>
+        <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <span
+            style={{
+              display: 'block',
+              fontSize: '0.75rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              fontWeight: 600,
+              color: PURPLE,
+              marginBottom: 12,
+              textAlign: 'center',
+            }}
+          >
+            TIRE SUAS DÚVIDAS
+          </span>
+          <h2
+            style={{
+              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontWeight: 800,
+              color: DARK,
+              textAlign: 'center',
+            }}
+          >
+            Perguntas frequentes
+          </h2>
+        </div>
+        <div style={{ maxWidth: 680, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {faqs.map((f, i) => {
+            const isOpen = openFaq === i;
+            return (
+              <div
+                key={i}
+                style={{
+                  background: '#F9FAFB',
+                  border: `1px solid ${isOpen ? PURPLE : '#E5E7EB'}`,
+                  borderRadius: 12,
+                  overflow: 'hidden',
+                  transition: 'border-color 200ms ease, box-shadow 200ms ease',
+                  boxShadow: isOpen ? '0 0 0 3px rgba(152,87,242,0.08)' : 'none',
+                }}
+              >
+                <div
+                  onClick={() => setOpenFaq(isOpen ? null : i)}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    padding: '20px 24px',
+                    cursor: 'pointer',
+                    gap: 16,
+                  }}
                 >
-                  <span className="font-medium text-neutral-900">{f.p}</span>
-                  <ChevronDown
-                    size={20}
-                    className="transition-transform"
-                    style={{ transform: openFaq === i ? 'rotate(180deg)' : 'rotate(0)' }}
-                  />
-                </button>
-                {openFaq === i && <p className="pb-4 text-neutral-600">{f.r}</p>}
+                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#111827', lineHeight: 1.4, flex: 1 }}>
+                    {f.p}
+                  </span>
+                  <div
+                    style={{
+                      flexShrink: 0,
+                      width: 28,
+                      height: 28,
+                      borderRadius: '50%',
+                      background: 'rgba(152,87,242,0.10)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <ChevronDown
+                      size={16}
+                      style={{
+                        color: PURPLE,
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                        transition: 'transform 200ms ease',
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className={`faq-answer${isOpen ? ' open' : ''}`}>
+                  <div
+                    style={{
+                      padding: '16px 24px 20px 24px',
+                      fontSize: '0.9375rem',
+                      color: '#6B7280',
+                      lineHeight: 1.75,
+                      borderTop: '1px solid #E5E7EB',
+                    }}
+                  >
+                    {f.r}
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
