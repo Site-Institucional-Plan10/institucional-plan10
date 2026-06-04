@@ -1041,7 +1041,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               <div
                 key={i}
                 style={{
-                  background: '#F9FAFB',
+                  background: '#fff',
                   border: `1px solid ${isOpen ? PURPLE : '#E5E7EB'}`,
                   borderRadius: 12,
                   overflow: 'hidden',
