@@ -145,7 +145,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         .fade-in { transition: opacity 300ms ease; }
       `}</style>
 
-      {/* A — Hero */}
+      {/* A, Hero */}
       <section
         style={{
           background: DARK,
@@ -235,7 +235,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* B — Produtos */}
+      {/* B, Produtos */}
       <section id="produtos" className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-neutral-900">Escolha seu produto</h2>
@@ -318,7 +318,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* C — Rotating phrases */}
+      {/* C, Rotating phrases */}
       <section
         className="w-full px-6"
         style={{
@@ -336,7 +336,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* D — Photo gallery */}
+      {/* D, Photo gallery */}
       <section className="w-full px-6 py-16 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-neutral-900">Cada conquista tem uma história</h2>
@@ -357,7 +357,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* E — CTA form */}
+      {/* E, CTA form */}
       <section
         style={{
           background: '#fff',
@@ -496,7 +496,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* F — Diferenciais */}
+      {/* F, Diferenciais */}
       <section
         style={{
           background: 'linear-gradient(135deg, #0D1B4B 0%, #1a2f6b 100%)',
@@ -586,7 +586,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* G — Como funciona */}
+      {/* G, Como funciona */}
       <section style={{ background: '#F5F0FF', padding: '80px 24px' }}>
         <style>{`
           .como-funciona-mobile { display: none; }
@@ -729,7 +729,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* H — Depoimentos */}
+      {/* H, Depoimentos */}
       <section style={{ background: '#fff', padding: '80px 24px' }}>
         <style>{`
           .depoimentos-grid {
@@ -789,7 +789,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* I — Comparison */}
+      {/* I, Comparison */}
       <section style={{ background: DARK, padding: '80px 24px' }}>
         <style>{`
           .comparison-table-header {
@@ -941,7 +941,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* J — Gestor dedicado */}
+      {/* J, Gestor dedicado */}
       <section className="w-full px-6" style={{ background: '#F9FAFB', paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-3xl mx-auto text-center">
           <div className="w-20 h-20 rounded-full bg-neutral-300 mx-auto flex items-center justify-center">
@@ -963,7 +963,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* K — Próximos passos */}
+      {/* K, Próximos passos */}
       <section className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-6xl mx-auto consorcios-3col">
           <div className="p-6 rounded-xl border text-center cursor-pointer" onClick={scrollToProducts}>
@@ -994,7 +994,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* L — FAQ */}
+      {/* L, FAQ */}
       <section style={{ background: '#F5F0FF', padding: '80px 24px' }}>
         <style>{`
           .faq-answer {
@@ -1104,7 +1104,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         </div>
       </section>
 
-      {/* M — Cross-selling */}
+      {/* M, Cross-selling */}
       <section
         style={{
           background: 'linear-gradient(135deg, #9857F2 0%, #7C3AED 100%)',
