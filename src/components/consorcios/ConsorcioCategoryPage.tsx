@@ -516,27 +516,112 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* L — FAQ */}
-      <section className="w-full px-6 py-16 bg-neutral-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-neutral-900">Perguntas frequentes</h2>
-          <div>
-            {faqs.map((f, i) => (
-              <div key={i} className="border-b">
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between py-4 text-left"
+      <section style={{ background: '#fff', padding: '80px 24px' }}>
+        <style>{`
+          .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 300ms ease, opacity 200ms ease, padding 200ms ease;
+          }
+          .faq-answer.open {
+            max-height: 600px;
+            opacity: 1;
+          }
+        `}</style>
+        <div style={{ textAlign: 'center', marginBottom: 48 }}>
+          <span
+            style={{
+              display: 'block',
+              fontSize: '0.75rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              fontWeight: 600,
+              color: PURPLE,
+              marginBottom: 12,
+              textAlign: 'center',
+            }}
+          >
+            TIRE SUAS DÚVIDAS
+          </span>
+          <h2
+            style={{
+              fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+              fontWeight: 800,
+              color: DARK,
+              textAlign: 'center',
+            }}
+          >
+            Perguntas frequentes
+          </h2>
+        </div>
+        <div style={{ maxWidth: 680, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 12 }}>
+          {faqs.map((f, i) => {
+            const isOpen = openFaq === i;
+            return (
+              <div
+                key={i}
+                style={{
+                  background: '#F9FAFB',
+                  border: `1px solid ${isOpen ? PURPLE : '#E5E7EB'}`,
+                  borderRadius: 12,
+                  overflow: 'hidden',
+                  transition: 'border-color 200ms ease, box-shadow 200ms ease',
+                  boxShadow: isOpen ? '0 0 0 3px rgba(152,87,242,0.08)' : 'none',
+                }}
+              >
+                <div
+                  onClick={() => setOpenFaq(isOpen ? null : i)}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    padding: '20px 24px',
+                    cursor: 'pointer',
+                    gap: 16,
+                  }}
                 >
-                  <span className="font-medium text-neutral-900">{f.p}</span>
-                  <ChevronDown
-                    size={20}
-                    className="transition-transform"
-                    style={{ transform: openFaq === i ? 'rotate(180deg)' : 'rotate(0)' }}
-                  />
-                </button>
-                {openFaq === i && <p className="pb-4 text-neutral-600">{f.r}</p>}
+                  <span style={{ fontSize: '0.9375rem', fontWeight: 600, color: '#111827', lineHeight: 1.4, flex: 1 }}>
+                    {f.p}
+                  </span>
+                  <div
+                    style={{
+                      flexShrink: 0,
+                      width: 28,
+                      height: 28,
+                      borderRadius: '50%',
+                      background: 'rgba(152,87,242,0.10)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <ChevronDown
+                      size={16}
+                      style={{
+                        color: PURPLE,
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+                        transition: 'transform 200ms ease',
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className={`faq-answer${isOpen ? ' open' : ''}`}>
+                  <div
+                    style={{
+                      padding: '16px 24px 20px 24px',
+                      fontSize: '0.9375rem',
+                      color: '#6B7280',
+                      lineHeight: 1.75,
+                      borderTop: '1px solid #E5E7EB',
+                    }}
+                  >
+                    {f.r}
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
