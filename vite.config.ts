@@ -24,14 +24,17 @@ export default defineConfig({
     plugins: [
       {
         name: "strip-google-fonts-import",
-        enforce: "pre",
-        transform(code: string, id: string) {
-          if (id.includes("styles.css")) {
-            return {
-              code: code.replace(/@import\s+(?:url\()?['"]https:\/\/fonts\.googleapis\.com[^'"]*['"]\)?;?/g, ""),
-              map: null,
-            };
+        enforce: "pre" as const,
+        load(id: string) {
+          if (id.endsWith("styles.css")) {
+            const fs = require("fs") as typeof import("fs");
+            const content = fs.readFileSync(id, "utf-8");
+            return content.replace(
+              /@import\s+(?:url\()?["]https:\/\/fonts\.googleapis\.com[^"]*["]\)?;?\n?/g,
+              "",
+            );
           }
+          return null;
         },
       },
     ],
