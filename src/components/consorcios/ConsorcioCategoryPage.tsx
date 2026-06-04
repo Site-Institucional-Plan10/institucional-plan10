@@ -88,6 +88,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
   const [phraseIdx, setPhraseIdx] = useState(0);
   const [fade, setFade] = useState(true);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [currentStep, setCurrentStep] = useState(1);
   const [form, setForm] = useState({ nome: '', telefone: '', email: '' });
 
   useEffect(() => {
