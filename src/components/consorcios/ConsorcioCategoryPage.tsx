@@ -319,7 +319,16 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* C — Rotating phrases */}
-      <section className="w-full px-6 py-12 bg-neutral-50">
+      <section
+        className="w-full px-6"
+        style={{
+          background: '#F5F0FF',
+          borderTop: '1px solid rgba(152,87,242,0.12)',
+          borderBottom: '1px solid rgba(152,87,242,0.12)',
+          paddingTop: 80,
+          paddingBottom: 80,
+        }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <p className={`text-xl italic text-neutral-600 fade-in ${fade ? 'opacity-100' : 'opacity-0'}`}>
             {rotatingPhrases[phraseIdx]}
