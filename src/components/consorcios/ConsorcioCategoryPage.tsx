@@ -362,12 +362,13 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       {/* E, CTA form */}
       <section
         style={{
-          background: '#fff',
+          background: '#F9FAFB',
           borderTop: '1px solid #E5E7EB',
           borderBottom: '1px solid #E5E7EB',
           padding: '80px 24px',
         }}
       >
+
         <style>{`
           .cta-form-grid {
             display: grid;
