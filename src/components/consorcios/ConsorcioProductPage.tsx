@@ -665,7 +665,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
       </section>
 
       {/* Ecossistema tagline */}
-      <section style={{ background: PURPLE, padding: '32px 24px', textAlign: 'center' }}>
+      <section style={{ background: 'linear-gradient(135deg, #9857F2 0%, #7C3AED 100%)', padding: '32px 24px', textAlign: 'center' }}>
         <p
           style={{
             color: '#fff',
