@@ -129,25 +129,8 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         <span className="text-neutral-700 font-medium">{produto.titulo}</span>
       </nav>
 
-      {/* Gatilho temporal */}
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 24 }}>
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 8,
-            border: '1px solid rgba(152,87,242,0.35)',
-            borderRadius: 999,
-            padding: '8px 20px',
-            fontSize: '0.8125rem',
-            color: '#6B21A8',
-            background: 'rgba(152,87,242,0.08)',
-          }}
-        >
-          <Clock size={14} color={PURPLE} />
-          <span>{produto.gatilhoTemporal}</span>
-        </div>
-      </div>
+      {/* Gatilho temporal moved into hero left column below */}
+
 
       {/* Hero (two-column on desktop) */}
       <section style={{ background: '#fff', paddingTop: 16, paddingBottom: 80 }}>
@@ -167,9 +150,29 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
             <p style={{ fontSize: '1.125rem', color: PURPLE, fontWeight: 500, marginBottom: 24 }}>
               {produto.subtitulo}
             </p>
-            <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.75, marginBottom: 32, maxWidth: 680 }}>
+            <p style={{ fontSize: '1rem', color: '#374151', lineHeight: 1.75, marginBottom: 16, maxWidth: 680 }}>
               {produto.descricaoLonga[0]}
             </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 24, marginBottom: 24 }}>
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 8,
+                  border: '1px solid rgba(152,87,242,0.35)',
+                  borderRadius: 999,
+                  padding: '10px 18px',
+                  background: 'rgba(152,87,242,0.08)',
+                  maxWidth: 'fit-content',
+                }}
+              >
+                <Clock size={15} color={PURPLE} style={{ flexShrink: 0 }} />
+                <span style={{ fontSize: '0.8125rem', color: '#6B21A8', lineHeight: 1.4, fontWeight: 500 }}>
+                  {produto.gatilhoTemporal}
+                </span>
+              </div>
+            </div>
+
             <a
               href={waProduto}
               target="_blank"
@@ -662,7 +665,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
       </section>
 
       {/* Ecossistema tagline */}
-      <section style={{ background: PURPLE, padding: '32px 24px', textAlign: 'center' }}>
+      <section style={{ background: 'linear-gradient(135deg, #9857F2 0%, #7C3AED 100%)', padding: '32px 24px', textAlign: 'center' }}>
         <p
           style={{
             color: '#fff',

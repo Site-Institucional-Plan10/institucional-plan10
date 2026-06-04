@@ -31,7 +31,7 @@ export const categorias: ConsorcioCategoria[] = [
     id: 'imobiliario-premium',
     titulo: 'Imobiliário Premium',
     descricao:
-      'Apartamentos, coberturas, fazendas, imóveis corporativos e de investimento — poder de compra à vista sem juros bancários.',
+      'Apartamentos, coberturas, fazendas, imóveis corporativos e de investimento, poder de compra à vista sem juros bancários.',
     icone: 'Building2',
     rota: 'imobiliario-premium',
     ativo: true,
@@ -58,7 +58,7 @@ export const categorias: ConsorcioCategoria[] = [
     id: 'servicos',
     titulo: 'Serviços',
     descricao:
-      'Procedimentos estéticos, cursos, viagens, eletrodomésticos e muito mais — realize com planejamento e sem juros.',
+      'Procedimentos estéticos, cursos, viagens, eletrodomésticos e muito mais, realize com planejamento e sem juros.',
     icone: 'Sparkles',
     rota: 'servicos',
     ativo: false,
@@ -76,11 +76,11 @@ export const produtosPF: ConsorcioProduct[] = [
     descricaoBreve:
       'Coberturas, lofts e apartamentos premium com poder de compra à vista e contemplação previsível.',
     descricaoLonga: [
-      'Imagine acordar todas as manhãs contemplando a cidade a partir de uma cobertura com pé-direito duplo, sabendo que cada metro quadrado daquele espaço foi conquistado de forma planejada, sem juros bancários e com parcelas que respeitam o ritmo do seu patrimônio. Esse cenário deixou de ser privilégio de quem dispõe de capital imediato — é o novo caminho inteligente para quem pensa grande e age com estratégia.',
-      'O consórcio de imóvel residencial de luxo oferece cartas de crédito com poder de compra à vista para apartamentos premium, lofts exclusivos e coberturas em endereços icônicos. Sem juros, sem burocracia tradicional e com flexibilidade de lances — livre, fixo ou embutido —, você transforma planejamento em conquista. Contemplações por sorteio e lance garantem previsibilidade, enquanto a assessoria dedicada acompanha cada etapa até a entrega das chaves.',
+      'Imagine acordar todas as manhãs contemplando a cidade a partir de uma cobertura com pé-direito duplo, sabendo que cada metro quadrado daquele espaço foi conquistado de forma planejada, sem juros bancários e com parcelas que respeitam o ritmo do seu patrimônio. Esse cenário deixou de ser privilégio de quem dispõe de capital imediato, é o novo caminho inteligente para quem pensa grande e age com estratégia.',
+      'O consórcio de imóvel residencial de luxo oferece cartas de crédito com poder de compra à vista para apartamentos premium, lofts exclusivos e coberturas em endereços icônicos. Sem juros, sem burocracia tradicional e com flexibilidade de lances, livre, fixo ou embutido, você transforma planejamento em conquista. Contemplações por sorteio e lance garantem previsibilidade, enquanto a assessoria dedicada acompanha cada etapa até a entrega das chaves.',
     ],
     gatilhoTemporal:
-      'Grupos de junho com assessoria premium personalizada — últimas vagas para acompanhamento individual',
+      'Grupos de junho com assessoria premium personalizada, últimas vagas para acompanhamento individual',
     diferenciais: [
       {
         icone: 'Home',
@@ -114,7 +114,7 @@ export const produtosPF: ConsorcioProduct[] = [
       },
     ],
     paraQuemEIndicado:
-      'Profissionais liberais, executivos e famílias com patrimônio em formação ou consolidação que desejam adquirir o primeiro imóvel de luxo — ou fazer upgrade — de forma planejada, sem comprometer liquidez nem assumir dívidas bancárias de longo prazo.',
+      'Profissionais liberais, executivos e famílias com patrimônio em formação ou consolidação que desejam adquirir o primeiro imóvel de luxo, ou fazer upgrade, de forma planejada, sem comprometer liquidez nem assumir dívidas bancárias de longo prazo.',
     cta: 'Quero minha consultoria imobiliária',
     comoFunciona: [
       {
@@ -158,7 +158,7 @@ export const produtosPF: ConsorcioProduct[] = [
         pergunta:
           'O que acontece se eu não for contemplado rapidamente?',
         resposta:
-          'Você continua participando dos sorteios mensais e pode ajustar sua estratégia de lance com seu gestor. Não há perda — o patrimônio se acumula mês a mês.',
+          'Você continua participando dos sorteios mensais e pode ajustar sua estratégia de lance com seu gestor. Não há perda, o patrimônio se acumula mês a mês.',
       },
       {
         pergunta: 'Preciso ter o imóvel definido antes de entrar?',
@@ -190,7 +190,7 @@ export const produtosPF: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem conquista o imóvel dos sonhos, também protege com seguro sob medida, mantém com assistência 24h e potencializa com consultoria patrimonial — tudo no ecossistema Plan 10.',
+      'Quem conquista o imóvel dos sonhos, também protege com seguro sob medida, mantém com assistência 24h e potencializa com consultoria patrimonial, tudo no ecossistema Plan 10.',
   },
   {
     id: 'construir-reformar',
@@ -200,9 +200,9 @@ export const produtosPF: ConsorcioProduct[] = [
     subtitulo:
       'Cada detalhe do seu lar pensado com exclusividade e sem pressa',
     descricaoBreve:
-      'Do alicerce ao acabamento no seu ritmo — carta para terreno, materiais e mão de obra.',
+      'Do alicerce ao acabamento no seu ritmo, carta para terreno, materiais e mão de obra.',
     descricaoLonga: [
-      'E se você pudesse transformar cada ambiente da sua casa exatamente como sempre imaginou — sem abrir mão da qualidade dos materiais, sem pressão de prazos bancários e sem juros que corroem o investimento? O consórcio para construção e reforma coloca nas suas mãos o orçamento completo para que o projeto dos seus sonhos saia do papel no seu ritmo.',
+      'E se você pudesse transformar cada ambiente da sua casa exatamente como sempre imaginou, sem abrir mão da qualidade dos materiais, sem pressão de prazos bancários e sem juros que corroem o investimento? O consórcio para construção e reforma coloca nas suas mãos o orçamento completo para que o projeto dos seus sonhos saia do papel no seu ritmo.',
       'A carta de crédito permite investir em terreno, materiais nobres e mão de obra especializada com liberação conforme o cronograma da obra. Cada etapa é financiada de forma programada, garantindo previsibilidade sem alavancagem bancária. Lances livre, fixo ou embutido permitem antecipar a contemplação conforme seu fluxo financeiro. Do alicerce ao acabamento, sua obra avança com tranquilidade.',
     ],
     gatilhoTemporal:
@@ -230,7 +230,7 @@ export const produtosPF: ConsorcioProduct[] = [
         icone: 'Pencil',
         titulo: 'Liberdade criativa total',
         descricao:
-          'Seu projeto, seus acabamentos, seu ritmo — sem restrições de padrão.',
+          'Seu projeto, seus acabamentos, seu ritmo, sem restrições de padrão.',
       },
     ],
     paraQuemEIndicado:
@@ -273,7 +273,7 @@ export const produtosPF: ConsorcioProduct[] = [
       {
         pergunta: 'A carta cobre terreno e construção juntos?',
         resposta:
-          'Sim. A carta é utilizável para compra de terreno, materiais de construção e mão de obra — tudo com um único consórcio.',
+          'Sim. A carta é utilizável para compra de terreno, materiais de construção e mão de obra, tudo com um único consórcio.',
       },
       {
         pergunta: 'E se a obra custar mais que o previsto?',
@@ -283,7 +283,7 @@ export const produtosPF: ConsorcioProduct[] = [
       {
         pergunta: 'Posso reformar em vez de construir?',
         resposta:
-          'Sim. A carta aceita reformas de alto padrão — incluindo projeto, demolição, materiais e acabamento.',
+          'Sim. A carta aceita reformas de alto padrão, incluindo projeto, demolição, materiais e acabamento.',
       },
     ],
     crossSelling: [
@@ -308,7 +308,7 @@ export const produtosPF: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem constrói com inteligência, também protege com seguro de obra, mantém com assistência 24h e planeja com consultoria patrimonial — tudo no ecossistema Plan 10.',
+      'Quem constrói com inteligência, também protege com seguro de obra, mantém com assistência 24h e planeja com consultoria patrimonial, tudo no ecossistema Plan 10.',
   },
   {
     id: 'investimento-imobiliario',
@@ -316,21 +316,21 @@ export const produtosPF: ConsorcioProduct[] = [
     tipo: 'pf',
     titulo: 'Investimento imobiliário exclusivo',
     subtitulo:
-      'Patrimônio que trabalha por você — renda passiva com solidez e visão de longo prazo',
+      'Patrimônio que trabalha por você, renda passiva com solidez e visão de longo prazo',
     descricaoBreve:
-      'Patrimônio que trabalha por você — renda passiva com diversificação inteligente.',
+      'Patrimônio que trabalha por você, renda passiva com diversificação inteligente.',
     descricaoLonga: [
-      'O mercado imobiliário brasileiro de alto padrão valorizou, em média, acima da inflação nos últimos cinco anos nas capitais com maior IDH. Para investidores que pensam em gerações — não em ciclos —, o consórcio imobiliário combina poder de compra à vista, ausência de juros e flexibilidade para escolher o ativo certo no momento certo.',
+      'O mercado imobiliário brasileiro de alto padrão valorizou, em média, acima da inflação nos últimos cinco anos nas capitais com maior IDH. Para investidores que pensam em gerações, não em ciclos, o consórcio imobiliário combina poder de compra à vista, ausência de juros e flexibilidade para escolher o ativo certo no momento certo.',
       'A carta de crédito para investimento não restringe a destinação do imóvel: locação residencial ou comercial, revenda estratégica, multipropriedade ou composição de portfólio para renda passiva. Com assessoria dedicada, você identifica oportunidades com alto potencial de valorização sem alavancagem bancária.',
     ],
     gatilhoTemporal:
-      'Novos grupos de investimento com condições exclusivas — ideal para quem quer diversificar ainda no primeiro semestre',
+      'Novos grupos de investimento com condições exclusivas, ideal para quem quer diversificar ainda no primeiro semestre',
     diferenciais: [
       {
         icone: 'Target',
         titulo: 'Liberdade de destinação',
         descricao:
-          'Locação, revenda, multipropriedade ou portfólio — sem restrição de uso após a aquisição.',
+          'Locação, revenda, multipropriedade ou portfólio, sem restrição de uso após a aquisição.',
       },
       {
         icone: 'BarChart2',
@@ -342,7 +342,7 @@ export const produtosPF: ConsorcioProduct[] = [
         icone: 'Gem',
         titulo: 'Poder de negociação à vista',
         descricao:
-          'Carta contemplada equivale a pagamento integral — descontos expressivos em lançamentos.',
+          'Carta contemplada equivale a pagamento integral, descontos expressivos em lançamentos.',
       },
       {
         icone: 'Lock',
@@ -382,7 +382,7 @@ export const produtosPF: ConsorcioProduct[] = [
     ],
     depoimento: {
       texto:
-        'Achava que cobertura em Moema era um sonho distante. Em 14 meses fui contemplado por lance e negociei como pagador à vista — consegui um desconto que nenhum financiamento daria.',
+        'Achava que cobertura em Moema era um sonho distante. Em 14 meses fui contemplado por lance e negociei como pagador à vista, consegui um desconto que nenhum financiamento daria.',
       autor: 'Ricardo M.',
       cargo: 'Médico Cirurgião',
       cidade: 'São Paulo',
@@ -391,7 +391,7 @@ export const produtosPF: ConsorcioProduct[] = [
       {
         pergunta: 'Posso comprar para alugar?',
         resposta:
-          'Sim. Não há restrição de destinação — locação residencial, comercial, temporada ou multipropriedade.',
+          'Sim. Não há restrição de destinação, locação residencial, comercial, temporada ou multipropriedade.',
       },
       {
         pergunta: 'Consórcio compete com fundos imobiliários?',
@@ -428,7 +428,7 @@ export const produtosPF: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem investe em imóveis com inteligência, também protege com seguro patrimonial, diversifica com garantia de locação e planeja com consultoria sucessória — tudo no ecossistema Plan 10.',
+      'Quem investe em imóveis com inteligência, também protege com seguro patrimonial, diversifica com garantia de locação e planeja com consultoria sucessória, tudo no ecossistema Plan 10.',
   },
   {
     id: 'fazenda-sitio',
@@ -436,15 +436,15 @@ export const produtosPF: ConsorcioProduct[] = [
     tipo: 'pf',
     titulo: 'Fazenda e sítio dos sonhos',
     subtitulo:
-      'O refúgio que conecta você à essência — paz, natureza e liberdade sem fronteiras',
+      'O refúgio que conecta você à essência, paz, natureza e liberdade sem fronteiras',
     descricaoBreve:
-      'O refúgio que conecta sua família à natureza — chácaras, sítios e fazendas em todo o Brasil.',
+      'O refúgio que conecta sua família à natureza, chácaras, sítios e fazendas em todo o Brasil.',
     descricaoLonga: [
-      'Existe um lugar onde o relógio desacelera, os filhos correm descalços pela grama e o pôr do sol é espetáculo diário visto da varanda. Esse lugar não é um resort — é patrimônio familiar, é raiz, é legado. O consórcio para fazendas e sítios transforma o sonho do campo em planejamento concreto, com poder de compra à vista e sem juros bancários.',
+      'Existe um lugar onde o relógio desacelera, os filhos correm descalços pela grama e o pôr do sol é espetáculo diário visto da varanda. Esse lugar não é um resort, é patrimônio familiar, é raiz, é legado. O consórcio para fazendas e sítios transforma o sonho do campo em planejamento concreto, com poder de compra à vista e sem juros bancários.',
       'A carta de crédito aceita fazendas, sítios, chácaras e propriedades rurais com matrícula regularizada em todo o território nacional. Seja para lazer familiar, início de operação agropecuária ou investimento em terras, a flexibilidade do consórcio permite escolher a propriedade no timing certo e negociar como pagador integral.',
     ],
     gatilhoTemporal:
-      'Propriedades rurais com valorização acelerada em regiões premium — condições especiais para novos grupos de junho',
+      'Propriedades rurais com valorização acelerada em regiões premium, condições especiais para novos grupos de junho',
     diferenciais: [
       {
         icone: 'TrendingUp',
@@ -511,7 +511,7 @@ export const produtosPF: ConsorcioProduct[] = [
       {
         pergunta: 'A carta serve para chácaras e sítios menores?',
         resposta:
-          'Sim. Qualquer propriedade rural com matrícula regularizada — de chácaras de lazer a fazendas produtivas.',
+          'Sim. Qualquer propriedade rural com matrícula regularizada, de chácaras de lazer a fazendas produtivas.',
       },
       {
         pergunta: 'Posso usar para iniciar uma operação agrícola?',
@@ -548,7 +548,7 @@ export const produtosPF: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem conquista terra com visão, também protege com seguro rural, mantém com assistência 24h e cresce com consultoria de agronegócio — tudo no ecossistema Plan 10.',
+      'Quem conquista terra com visão, também protege com seguro rural, mantém com assistência 24h e cresce com consultoria de agronegócio, tudo no ecossistema Plan 10.',
   },
   {
     id: 'imovel-veraneio',
@@ -556,15 +556,15 @@ export const produtosPF: ConsorcioProduct[] = [
     tipo: 'pf',
     titulo: 'Imóvel de veraneio, férias e lazer',
     subtitulo:
-      'Memórias que se constroem em metros quadrados — seu lugar no paraíso',
+      'Memórias que se constroem em metros quadrados, seu lugar no paraíso',
     descricaoBreve:
-      'Memórias em metros quadrados — casa de praia ou multipropriedade com renda em temporada.',
+      'Memórias em metros quadrados, casa de praia ou multipropriedade com renda em temporada.',
     descricaoLonga: [
-      'As férias mais memoráveis da sua vida não acontecem em um hotel — acontecem no seu próprio recanto, onde seus filhos conhecem cada trilha, onde o barulho do mar é o despertador e onde cada cômodo guarda uma história da família. Transformar esse sonho em endereço permanente é mais acessível do que parece — e começa com planejamento inteligente.',
-      'O consórcio para imóveis de veraneio e lazer aceita casa de praia, apart-hotel, condo-hotel e multipropriedade em destinos premium de todo o Brasil. Além do refúgio emocional, o imóvel gera renda nos períodos sem uso pessoal — locação por temporada que transforma o patrimônio em ativo produtivo.',
+      'As férias mais memoráveis da sua vida não acontecem em um hotel, acontecem no seu próprio recanto, onde seus filhos conhecem cada trilha, onde o barulho do mar é o despertador e onde cada cômodo guarda uma história da família. Transformar esse sonho em endereço permanente é mais acessível do que parece, e começa com planejamento inteligente.',
+      'O consórcio para imóveis de veraneio e lazer aceita casa de praia, apart-hotel, condo-hotel e multipropriedade em destinos premium de todo o Brasil. Além do refúgio emocional, o imóvel gera renda nos períodos sem uso pessoal, locação por temporada que transforma o patrimônio em ativo produtivo.',
     ],
     gatilhoTemporal:
-      'Destinos premium com lançamentos exclusivos neste semestre — garanta sua assessoria antes da temporada',
+      'Destinos premium com lançamentos exclusivos neste semestre, garanta sua assessoria antes da temporada',
     diferenciais: [
       {
         icone: 'Repeat',
@@ -582,7 +582,7 @@ export const produtosPF: ConsorcioProduct[] = [
         icone: 'Hotel',
         titulo: 'Formatos flexíveis',
         descricao:
-          'Casa de praia, apart-hotel, condo-hotel ou multipropriedade — conforme seu estilo.',
+          'Casa de praia, apart-hotel, condo-hotel ou multipropriedade, conforme seu estilo.',
       },
       {
         icone: 'Heart',
@@ -622,7 +622,7 @@ export const produtosPF: ConsorcioProduct[] = [
     ],
     depoimento: {
       texto:
-        'Compramos nosso apart-hotel em Trancoso e nos primeiros 12 meses a renda de temporada cobriu mais da metade da parcela. Férias no nosso lugar e renda quando não estamos — exatamente o que nosso gestor prometeu.',
+        'Compramos nosso apart-hotel em Trancoso e nos primeiros 12 meses a renda de temporada cobriu mais da metade da parcela. Férias no nosso lugar e renda quando não estamos, exatamente o que nosso gestor prometeu.',
       autor: 'Ana Paula e Renato G.',
       cargo: 'Casal',
       cidade: 'Brasília',
@@ -632,17 +632,17 @@ export const produtosPF: ConsorcioProduct[] = [
         pergunta:
           'O imóvel pode gerar renda quando não estou usando?',
         resposta:
-          'Sim. Com administração de locação por temporada, o imóvel gera receita nos períodos sem uso pessoal — especialmente em alta temporada.',
+          'Sim. Com administração de locação por temporada, o imóvel gera receita nos períodos sem uso pessoal, especialmente em alta temporada.',
       },
       {
         pergunta: 'Apart-hotel e condo-hotel são boas opções?',
         resposta:
-          'Excelentes. Esses formatos oferecem gestão profissional inclusa, pool hoteleiro e manutenção sem preocupação — ideais para renda passiva com zero gestão.',
+          'Excelentes. Esses formatos oferecem gestão profissional inclusa, pool hoteleiro e manutenção sem preocupação, ideais para renda passiva com zero gestão.',
       },
       {
         pergunta: 'Posso usar para multipropriedade?',
         resposta:
-          'Sim. A carta aceita multipropriedade em empreendimentos regularizados — acesso a múltiplos destinos com uma única cota.',
+          'Sim. A carta aceita multipropriedade em empreendimentos regularizados, acesso a múltiplos destinos com uma única cota.',
       },
     ],
     crossSelling: [
@@ -669,7 +669,7 @@ export const produtosPF: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem conquista seu lugar no paraíso, também protege com seguro de temporada, rentabiliza com administração de locação e viaja com seguro premium — tudo no ecossistema Plan 10.',
+      'Quem conquista seu lugar no paraíso, também protege com seguro de temporada, rentabiliza com administração de locação e viaja com seguro premium, tudo no ecossistema Plan 10.',
   },
 ];
 
@@ -680,15 +680,15 @@ export const produtosPJ: ConsorcioProduct[] = [
     tipo: 'pj',
     titulo: 'Imóvel corporativo estratégico',
     subtitulo:
-      'Sede própria com inteligência financeira — ativo no balanço, capital de giro preservado',
+      'Sede própria com inteligência financeira, ativo no balanço, capital de giro preservado',
     descricaoBreve:
-      'Sede própria com inteligência financeira — ativo no balanço, capital de giro preservado.',
+      'Sede própria com inteligência financeira, ativo no balanço, capital de giro preservado.',
     descricaoLonga: [
-      'Empresas brasileiras com sede própria apresentam indicadores de permanência e retenção de talentos significativamente superiores às que operam em espaços alugados. Mais que endereço, a sede é declaração de solidez para clientes, investidores e colaboradores. O consórcio corporativo transforma aluguel em patrimônio estratégico — sem consumir linhas de crédito bancário nem comprometer capital de giro.',
+      'Empresas brasileiras com sede própria apresentam indicadores de permanência e retenção de talentos significativamente superiores às que operam em espaços alugados. Mais que endereço, a sede é declaração de solidez para clientes, investidores e colaboradores. O consórcio corporativo transforma aluguel em patrimônio estratégico, sem consumir linhas de crédito bancário nem comprometer capital de giro.',
       'A carta de crédito aceita lajes corporativas, salas comerciais, galpões logísticos e centros de distribuição com poder de compra à vista. Consórcio não aparece como dívida no balanço, preserva limites de crédito e transforma despesa operacional recorrente em ativo imobilizado.',
     ],
     gatilhoTemporal:
-      'Lajes corporativas com condições diferenciadas para novos grupos — ideal para empresas que planejam expansão no segundo semestre',
+      'Lajes corporativas com condições diferenciadas para novos grupos, ideal para empresas que planejam expansão no segundo semestre',
     diferenciais: [
       {
         icone: 'Building2',
@@ -804,7 +804,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem conquista sede própria com visão, também protege com seguro empresarial, atrai talentos com benefícios corporativos e garante renda com locação segura — tudo no ecossistema Plan 10.',
+      'Quem conquista sede própria com visão, também protege com seguro empresarial, atrai talentos com benefícios corporativos e garante renda com locação segura, tudo no ecossistema Plan 10.',
   },
   {
     id: 'retrofit-modernizacao',
@@ -812,7 +812,7 @@ export const produtosPJ: ConsorcioProduct[] = [
     tipo: 'pj',
     titulo: 'Retrofit e modernização empresarial',
     subtitulo:
-      'Reposicione sua marca, ganhe eficiência operacional — sem crédito bancário caro',
+      'Reposicione sua marca, ganhe eficiência operacional, sem crédito bancário caro',
     descricaoBreve:
       'Reposicione sua marca com investimento programado e sem crédito bancário caro.',
     descricaoLonga: [
@@ -826,7 +826,7 @@ export const produtosPJ: ConsorcioProduct[] = [
         icone: 'Layers',
         titulo: 'Carta cobre todo o escopo',
         descricao:
-          'Da demolição ao acabamento — projeto, materiais e execução em um único consórcio.',
+          'Da demolição ao acabamento, projeto, materiais e execução em um único consórcio.',
       },
       {
         icone: 'CalendarCheck',
@@ -924,7 +924,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem moderniza com planejamento, também protege com seguro de obra, economiza com eficiência energética e atrai talentos com benefícios corporativos — tudo no ecossistema Plan 10.',
+      'Quem moderniza com planejamento, também protege com seguro de obra, economiza com eficiência energética e atrai talentos com benefícios corporativos, tudo no ecossistema Plan 10.',
   },
   {
     id: 'patrimonio-produtivo',
@@ -932,15 +932,15 @@ export const produtosPJ: ConsorcioProduct[] = [
     tipo: 'pj',
     titulo: 'Patrimônio imobiliário produtivo',
     subtitulo:
-      'Ativo gerador de renda recorrente — diversificação corporativa com solidez imobiliária',
+      'Ativo gerador de renda recorrente, diversificação corporativa com solidez imobiliária',
     descricaoBreve:
-      'Ativo gerador de renda recorrente — galpões, lotes industriais, salas comerciais.',
+      'Ativo gerador de renda recorrente, galpões, lotes industriais, salas comerciais.',
     descricaoLonga: [
-      'Sua empresa depende de imóveis para operar — mas esses imóveis estão no balanço de quem? Cada mês de aluguel é receita transferida para o patrimônio do locador. O consórcio para patrimônio imobiliário produtivo inverte essa equação: transforma despesa recorrente em ativo gerador de renda, sem consumir linhas bancárias e sem avalistas.',
-      'A carta de crédito aceita galpão logístico, lote industrial e sala comercial sem restrição de destinação — locação, operação própria ou revenda estratégica. Alienação fiduciária do próprio bem adquirido elimina a necessidade de garantias corporativas cruzadas.',
+      'Sua empresa depende de imóveis para operar, mas esses imóveis estão no balanço de quem? Cada mês de aluguel é receita transferida para o patrimônio do locador. O consórcio para patrimônio imobiliário produtivo inverte essa equação: transforma despesa recorrente em ativo gerador de renda, sem consumir linhas bancárias e sem avalistas.',
+      'A carta de crédito aceita galpão logístico, lote industrial e sala comercial sem restrição de destinação, locação, operação própria ou revenda estratégica. Alienação fiduciária do próprio bem adquirido elimina a necessidade de garantias corporativas cruzadas.',
     ],
     gatilhoTemporal:
-      'Galpões logísticos em regiões estratégicas com valorização acelerada — condições especiais para grupos de junho',
+      'Galpões logísticos em regiões estratégicas com valorização acelerada, condições especiais para grupos de junho',
     diferenciais: [
       {
         icone: 'TrendingUp',
@@ -952,19 +952,19 @@ export const produtosPJ: ConsorcioProduct[] = [
         icone: 'Shuffle',
         titulo: 'Sem restrição de destinação',
         descricao:
-          'Locação, operação própria ou revenda — a empresa decide o melhor uso conforme a estratégia.',
+          'Locação, operação própria ou revenda, a empresa decide o melhor uso conforme a estratégia.',
       },
       {
         icone: 'Lock',
         titulo: 'Garantia simplificada',
         descricao:
-          'Alienação fiduciária do próprio bem — sem avalistas corporativos ou garantias cruzadas.',
+          'Alienação fiduciária do próprio bem, sem avalistas corporativos ou garantias cruzadas.',
       },
       {
         icone: 'CreditCard',
         titulo: 'Linhas bancárias preservadas',
         descricao:
-          'Consórcio não consome limite de crédito — capital de giro permanece intacto.',
+          'Consórcio não consome limite de crédito, capital de giro permanece intacto.',
       },
     ],
     paraQuemEIndicado:
@@ -1006,7 +1006,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       {
         pergunta: 'Posso comprar para alugar para terceiros?',
         resposta:
-          'Sim. Sem restrição de destinação — locação para terceiros, operação própria ou revenda. A empresa decide conforme a estratégia.',
+          'Sim. Sem restrição de destinação, locação para terceiros, operação própria ou revenda. A empresa decide conforme a estratégia.',
       },
       {
         pergunta: 'Galpão logístico é um bom investimento?',
@@ -1016,7 +1016,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       {
         pergunta: 'Preciso dar garantias corporativas?',
         resposta:
-          'Não. A alienação fiduciária é do próprio bem adquirido — sem avalistas, sem garantias cruzadas, sem comprometer outros ativos da empresa.',
+          'Não. A alienação fiduciária é do próprio bem adquirido, sem avalistas, sem garantias cruzadas, sem comprometer outros ativos da empresa.',
       },
     ],
     crossSelling: [
@@ -1043,7 +1043,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem diversifica patrimônio com inteligência, também protege com seguro empresarial, garante renda com locação segura e cresce com crédito complementar — tudo no ecossistema Plan 10.',
+      'Quem diversifica patrimônio com inteligência, também protege com seguro empresarial, garante renda com locação segura e cresce com crédito complementar, tudo no ecossistema Plan 10.',
   },
   {
     id: 'terra-produtiva-rural',
@@ -1051,15 +1051,15 @@ export const produtosPJ: ConsorcioProduct[] = [
     tipo: 'pj',
     titulo: 'Terra produtiva e rural',
     subtitulo:
-      'Expansão territorial planejada — ativo de longo prazo que combina produção e valorização',
+      'Expansão territorial planejada, ativo de longo prazo que combina produção e valorização',
     descricaoBreve:
-      'Expansão territorial planejada — alternativa inteligente ao crédito rural tradicional.',
+      'Expansão territorial planejada, alternativa inteligente ao crédito rural tradicional.',
     descricaoLonga: [
-      'O agronegócio brasileiro responde por mais de um quarto do PIB nacional e projeta crescimento consistente nas próximas décadas. Para empresas do setor, a aquisição de terras produtivas via consórcio elimina a dependência de crédito rural sazonal e permite expansão territorial programada — sem juros bancários, sem vinculação a safra e sem comprometer o fluxo de caixa da operação.',
-      'A carta de crédito aceita terras agrícolas, fazendas produtivas e propriedades rurais com matrícula regularizada em todo o território nacional. Plantio próprio, arrendamento ou reserva patrimonial — a empresa define a destinação conforme a estratégia.',
+      'O agronegócio brasileiro responde por mais de um quarto do PIB nacional e projeta crescimento consistente nas próximas décadas. Para empresas do setor, a aquisição de terras produtivas via consórcio elimina a dependência de crédito rural sazonal e permite expansão territorial programada, sem juros bancários, sem vinculação a safra e sem comprometer o fluxo de caixa da operação.',
+      'A carta de crédito aceita terras agrícolas, fazendas produtivas e propriedades rurais com matrícula regularizada em todo o território nacional. Plantio próprio, arrendamento ou reserva patrimonial, a empresa define a destinação conforme a estratégia.',
     ],
     gatilhoTemporal:
-      'Terras produtivas em regiões de expansão agrícola com condições especiais — aproveite os novos grupos de junho',
+      'Terras produtivas em regiões de expansão agrícola com condições especiais, aproveite os novos grupos de junho',
     diferenciais: [
       {
         icone: 'TrendingUp',
@@ -1125,7 +1125,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       {
         pergunta: 'Posso usar para arrendar a terra?',
         resposta:
-          'Sim. Sem restrição de destinação — produção própria, arrendamento para terceiros ou reserva patrimonial.',
+          'Sim. Sem restrição de destinação, produção própria, arrendamento para terceiros ou reserva patrimonial.',
       },
       {
         pergunta: 'Cooperativas podem participar?',
@@ -1162,7 +1162,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem expande com visão, também protege com seguro agrícola, equipa com seguro de maquinário e planeja com consultoria tributária rural — tudo no ecossistema Plan 10.',
+      'Quem expande com visão, também protege com seguro agrícola, equipa com seguro de maquinário e planeja com consultoria tributária rural, tudo no ecossistema Plan 10.',
   },
   {
     id: 'hospedagem-corporativa',
@@ -1170,7 +1170,7 @@ export const produtosPJ: ConsorcioProduct[] = [
     tipo: 'pj',
     titulo: 'Hospedagem corporativa estratégica',
     subtitulo:
-      'Renda recorrente, benefício executivo e ativo no balanço — tudo em um único investimento',
+      'Renda recorrente, benefício executivo e ativo no balanço, tudo em um único investimento',
     descricaoBreve:
       'Renda recorrente, benefício executivo e ativo no balanço em um único investimento.',
     descricaoLonga: [
@@ -1178,7 +1178,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       'A carta de crédito aceita imóvel hoteleiro, unidades de condo-hotel e multipropriedade corporativa em destinos estratégicos. Um ativo que entrega valor em três frentes simultâneas: hospedagem executiva própria, renda recorrente via pool hoteleiro e patrimônio valorizado no balanço.',
     ],
     gatilhoTemporal:
-      'Condo-hotéis em destinos executivos com pool hoteleiro garantido — condições especiais para novos grupos de junho',
+      'Condo-hotéis em destinos executivos com pool hoteleiro garantido, condições especiais para novos grupos de junho',
     diferenciais: [
       {
         icone: 'Hotel',
@@ -1255,7 +1255,7 @@ export const produtosPJ: ConsorcioProduct[] = [
       {
         pergunta: 'Multipropriedade corporativa funciona?',
         resposta:
-          'Sim. A multipropriedade dá acesso a múltiplos destinos com uma única cota — ideal para empresas com executivos em diferentes regiões.',
+          'Sim. A multipropriedade dá acesso a múltiplos destinos com uma única cota, ideal para empresas com executivos em diferentes regiões.',
       },
     ],
     crossSelling: [
@@ -1282,6 +1282,6 @@ export const produtosPJ: ConsorcioProduct[] = [
       },
     ],
     ecossistema:
-      'Quem transforma viagem em patrimônio, também protege executivos com seguro viagem, atrai talentos com benefícios premium e diversifica com sede própria — tudo no ecossistema Plan 10.',
+      'Quem transforma viagem em patrimônio, também protege executivos com seguro viagem, atrai talentos com benefícios premium e diversifica com sede própria, tudo no ecossistema Plan 10.',
   },
 ];
