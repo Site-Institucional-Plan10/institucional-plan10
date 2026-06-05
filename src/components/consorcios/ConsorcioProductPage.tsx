@@ -70,8 +70,6 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         }
         .product-hero-photo {
           width: 100%;
-          height: 240px;
-          background: #E5E7EB;
           border-radius: 16px;
           overflow: hidden;
         }
