@@ -197,8 +197,9 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
             </a>
           </div>
           <div>
-            {/* TODO: hero photo */}
-            <div className="product-hero-photo" />
+            <div className="product-hero-photo">
+              <ConsorcioImage src={produto.fotoPrincipal} alt={produto.titulo} aspectRatio="16/10" />
+            </div>
             {produto.descricaoLonga[1] && (
               <p
                 style={{
