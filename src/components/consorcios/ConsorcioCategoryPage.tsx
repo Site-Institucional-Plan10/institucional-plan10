@@ -344,13 +344,16 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
           <h2 className="text-3xl font-bold mb-8 text-neutral-900">Cada conquista tem uma história</h2>
           {/* TODO: replace with real photos */}
           <div className="consorcios-gallery">
-            {gallery.map((g, i) => (
-              <div
-                key={i}
-                className={`relative rounded-xl bg-neutral-200 overflow-hidden ${g.tall ? 'tall' : ''}`}
-                style={{ height: g.tall ? undefined : 200 }}
-              >
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+            {imobiliarioPremiumGallery.galeria.map((g, i) => (
+              <div key={i} className="gallery-item">
+                <ConsorcioImage src={g.src} alt={g.legenda} aspectRatio="4/3" />
+                <div
+                  className="absolute inset-x-0 bottom-0 p-4"
+                  style={{
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)',
+                    pointerEvents: 'none',
+                  }}
+                >
                   <p className="text-white text-sm">{g.legenda}</p>
                 </div>
               </div>
