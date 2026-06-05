@@ -69,37 +69,49 @@ function CategoriasGrid() {
             grid-template-columns: repeat(1, minmax(0, 1fr));
           }
         }
+        .consorcio-card-active {
+          transition: border-color 200ms ease, box-shadow 200ms ease;
+        }
+        .consorcio-card-active:hover {
+          border-color: #9857F2;
+          box-shadow: 0 4px 16px rgba(152,87,242,0.12);
+        }
       `}</style>
       <div className="consorcios-categorias-grid">
         {categorias.map((c) => {
           const Icon = iconMap[c.icone as keyof typeof iconMap];
-          const clickable = c.ativo;
+          const isActive = c.ativo;
           return (
             <div
               key={c.id}
               onClick={
-                clickable
+                isActive
                   ? () => navigate({ to: "/consorcios", search: { cat: c.rota } as any })
                   : undefined
               }
-              className={`bg-white rounded-xl border border-neutral-200 p-6 transition-all duration-200 ${
-                clickable ? "cursor-pointer hover:border-[#9857F2] hover:shadow-md" : "pointer-events-none"
+              className={`bg-white rounded-xl border border-neutral-200 p-6 ${
+                isActive ? "cursor-pointer consorcio-card-active" : "cursor-default pointer-events-none"
               }`}
               style={{
                 borderLeft: "4px solid #9857F2",
-                opacity: clickable ? 1 : 0.6,
+                opacity: isActive ? 1 : 0.6,
               }}
             >
               <div className="flex items-center justify-between mb-3">
                 {Icon ? <Icon size={28} color="#9857F2" /> : null}
-                {!c.ativo && (
+                {!isActive && (
                   <span className="text-xs bg-neutral-100 text-neutral-500 rounded-full px-2 py-0.5">
                     Em breve
                   </span>
                 )}
               </div>
               <h3 className="font-semibold text-lg text-neutral-900">{c.titulo}</h3>
-              <p className="text-sm text-neutral-600 mt-2">{c.descricao}</p>
+              <p className="text-sm text-neutral-600 mt-2 mb-4">{c.descricao}</p>
+              {isActive && (
+                <span className="text-sm font-semibold" style={{ color: "#9857F2" }}>
+                  Ver opções &rarr;
+                </span>
+              )}
             </div>
           );
         })}
