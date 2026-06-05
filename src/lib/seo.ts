@@ -1,4 +1,4 @@
-export const SITE_URL = "https://institucional-plan10.lovable.app";
+export const SITE_URL = "https://institucional-plan10.contato-e43.workers.dev";
 
 export function canonical(path: string) {
   return `${SITE_URL}${path}`;
