@@ -6,7 +6,6 @@ import {
   Trophy,
   BarChart2,
   Handshake,
-  User,
   Search,
   MessageCircle,
   ChevronDown,
@@ -18,7 +17,8 @@ import {
   Quote,
 } from 'lucide-react';
 
-import { categorias, produtosPF, produtosPJ, type ConsorcioProduct } from '@/data/consorcios';
+import { categorias, produtosPF, produtosPJ, imobiliarioPremiumGallery, type ConsorcioProduct } from '@/data/consorcios';
+import ConsorcioImage from './ConsorcioImage';
 
 interface ConsorcioCategoryPageProps {
   categoriaId: string;
@@ -35,11 +35,6 @@ const rotatingPhrases = [
   'Quem pensa em gerações não compra imóvel, constrói patrimônio.',
 ];
 
-const gallery = [
-  { legenda: 'Cada metro quadrado planejado para quem pensa grande.', tall: true },
-  { legenda: 'O refúgio que conecta gerações à essência.', tall: false },
-  { legenda: 'Sede própria como declaração de solidez.', tall: false },
-];
 
 const diferenciais = [
   { Icon: Trophy, titulo: 'Assessoria dedicada do início à contemplação', desc: 'Um especialista acompanha cada etapa do seu plano, com transparência total.' },
@@ -132,11 +127,10 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         @media (max-width: 767px) {
           .consorcios-products-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 12px; }
         }
-        .consorcios-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px; gap: 16px; }
-        .consorcios-gallery .tall { grid-row: span 2; height: 416px; }
+        .consorcios-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .consorcios-gallery .gallery-item { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
         @media (max-width: 767px) {
-          .consorcios-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
-          .consorcios-gallery .tall { height: 240px; }
+          .consorcios-gallery { grid-template-columns: 1fr; }
         }
         .consorcios-form-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
         @media (max-width: 767px) { .consorcios-form-grid { grid-template-columns: 1fr; } }
@@ -344,13 +338,16 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
           <h2 className="text-3xl font-bold mb-8 text-neutral-900">Cada conquista tem uma história</h2>
           {/* TODO: replace with real photos */}
           <div className="consorcios-gallery">
-            {gallery.map((g, i) => (
-              <div
-                key={i}
-                className={`relative rounded-xl bg-neutral-200 overflow-hidden ${g.tall ? 'tall' : ''}`}
-                style={{ height: g.tall ? undefined : 200 }}
-              >
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+            {imobiliarioPremiumGallery.galeria.map((g, i) => (
+              <div key={i} className="gallery-item">
+                <ConsorcioImage src={g.src} alt={g.legenda} aspectRatio="4/3" />
+                <div
+                  className="absolute inset-x-0 bottom-0 p-4"
+                  style={{
+                    background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)',
+                    pointerEvents: 'none',
+                  }}
+                >
                   <p className="text-white text-sm">{g.legenda}</p>
                 </div>
               </div>
@@ -981,8 +978,21 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       {/* J, Gestor dedicado */}
       <section className="w-full px-6" style={{ background: '#F9FAFB', paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-3xl mx-auto text-center">
-          <div className="w-20 h-20 rounded-full bg-neutral-300 mx-auto flex items-center justify-center">
-            <User size={40} className="text-neutral-500" />
+          <div
+            style={{
+              width: 96,
+              height: 96,
+              borderRadius: '50%',
+              overflow: 'hidden',
+              margin: '0 auto',
+              border: `3px solid ${PURPLE}`,
+            }}
+          >
+            <ConsorcioImage
+              src={imobiliarioPremiumGallery.gestor.foto}
+              alt={imobiliarioPremiumGallery.gestor.nome}
+              aspectRatio="1/1"
+            />
           </div>
           <p className="mt-6 text-lg italic text-neutral-700">
             "Cada cliente Premium é acompanhado por mim do primeiro contato até a entrega das chaves. Aqui, planejamento patrimonial é assunto sério e pessoal."

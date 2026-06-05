@@ -3,6 +3,7 @@ import { useNavigate } from '@tanstack/react-router';
 import * as Icons from 'lucide-react';
 import { Clock, UserCheck, ChevronDown, Quote, MessageCircle } from 'lucide-react';
 import { categorias, produtosPF, produtosPJ } from '@/data/consorcios';
+import ConsorcioImage from './ConsorcioImage';
 
 interface ConsorcioProductPageProps {
   categoriaId: string;
@@ -69,8 +70,6 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         }
         .product-hero-photo {
           width: 100%;
-          height: 240px;
-          background: #E5E7EB;
           border-radius: 16px;
           overflow: hidden;
         }
@@ -81,7 +80,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
             gap: 48px;
             align-items: start;
           }
-          .product-hero-photo { height: 380px; }
+          
         }
         .consorcios-diferenciais-grid {
           display: grid;
@@ -198,8 +197,9 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
             </a>
           </div>
           <div>
-            {/* TODO: hero photo */}
-            <div className="product-hero-photo" />
+            <div className="product-hero-photo">
+              <ConsorcioImage src={produto.fotoPrincipal} alt={produto.titulo} aspectRatio="16/10" />
+            </div>
             {produto.descricaoLonga[1] && (
               <p
                 style={{
@@ -295,8 +295,9 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
 
       {/* Foto secundária */}
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '80px 24px 0 24px' }}>
-        {/* TODO: secondary photo */}
-        <div style={{ width: '100%', borderRadius: 16, background: '#E5E7EB', height: 320 }} />
+        <div style={{ width: '100%', borderRadius: 16, overflow: 'hidden' }}>
+          <ConsorcioImage src={produto.fotoSecundaria} alt={`${produto.titulo} — imagem complementar`} aspectRatio="16/10" />
+        </div>
       </div>
 
       {/* CTA principal */}

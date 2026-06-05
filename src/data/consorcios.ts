@@ -24,6 +24,8 @@ export interface ConsorcioProduct {
   faq: { pergunta: string; resposta: string }[];
   crossSelling: { icone: string; titulo: string; descricao: string; link: string }[];
   ecossistema: string;
+  fotoPrincipal?: string;
+  fotoSecundaria?: string;
 }
 
 export const categorias: ConsorcioCategoria[] = [
@@ -191,6 +193,8 @@ export const produtosPF: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem conquista o imóvel dos sonhos, também protege com seguro sob medida, mantém com assistência 24h e potencializa com consultoria patrimonial, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-meu-imovel-residencial-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-meu-imovel-residencial-secundaria.jpg',
   },
   {
     id: 'construir-reformar',
@@ -309,6 +313,8 @@ export const produtosPF: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem constrói com inteligência, também protege com seguro de obra, mantém com assistência 24h e planeja com consultoria patrimonial, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-construir-reformar-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-construir-reformar-secundaria.jpg',
   },
   {
     id: 'investimento-imobiliario',
@@ -429,6 +435,8 @@ export const produtosPF: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem investe em imóveis com inteligência, também protege com seguro patrimonial, diversifica com garantia de locação e planeja com consultoria sucessória, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-investimento-imobiliario-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-investimento-imobiliario-secundaria.jpg',
   },
   {
     id: 'fazenda-sitio',
@@ -549,6 +557,8 @@ export const produtosPF: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem conquista terra com visão, também protege com seguro rural, mantém com assistência 24h e cresce com consultoria de agronegócio, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-fazenda-sitio-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-fazenda-sitio-secundaria.jpg',
   },
   {
     id: 'imovel-veraneio',
@@ -670,6 +680,8 @@ export const produtosPF: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem conquista seu lugar no paraíso, também protege com seguro de temporada, rentabiliza com administração de locação e viaja com seguro premium, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-imovel-veraneio-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-imovel-veraneio-secundaria.jpg',
   },
 ];
 
@@ -805,6 +817,8 @@ export const produtosPJ: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem conquista sede própria com visão, também protege com seguro empresarial, atrai talentos com benefícios corporativos e garante renda com locação segura, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-imovel-corporativo-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-imovel-corporativo-secundaria.jpg',
   },
   {
     id: 'retrofit-modernizacao',
@@ -925,6 +939,8 @@ export const produtosPJ: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem moderniza com planejamento, também protege com seguro de obra, economiza com eficiência energética e atrai talentos com benefícios corporativos, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-retrofit-modernizacao-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-retrofit-modernizacao-secundaria.jpg',
   },
   {
     id: 'patrimonio-produtivo',
@@ -1044,6 +1060,8 @@ export const produtosPJ: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem diversifica patrimônio com inteligência, também protege com seguro empresarial, garante renda com locação segura e cresce com crédito complementar, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-patrimonio-produtivo-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-patrimonio-produtivo-secundaria.jpg',
   },
   {
     id: 'terra-produtiva-rural',
@@ -1163,6 +1181,8 @@ export const produtosPJ: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem expande com visão, também protege com seguro agrícola, equipa com seguro de maquinário e planeja com consultoria tributária rural, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-terra-produtiva-rural-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-terra-produtiva-rural-secundaria.jpg',
   },
   {
     id: 'hospedagem-corporativa',
@@ -1283,5 +1303,22 @@ export const produtosPJ: ConsorcioProduct[] = [
     ],
     ecossistema:
       'Quem transforma viagem em patrimônio, também protege executivos com seguro viagem, atrai talentos com benefícios premium e diversifica com sede própria, tudo no ecossistema Plan 10.',
+    fotoPrincipal: '/assets/consorcios/produto-hospedagem-corporativa-principal.jpg',
+    fotoSecundaria: '/assets/consorcios/produto-hospedagem-corporativa-secundaria.jpg',
   },
 ];
+
+export const imobiliarioPremiumGallery = {
+  galeria: [
+    { src: '/assets/consorcios/galeria-cobertura.jpg', legenda: 'Cada metro quadrado planejado para quem pensa grande.' },
+    { src: '/assets/consorcios/galeria-fazenda.jpg', legenda: 'O refúgio que conecta gerações à essência.' },
+    { src: '/assets/consorcios/galeria-corporativo.jpg', legenda: 'Sede própria como declaração de solidez.' },
+    { src: '/assets/consorcios/galeria-praia.jpg', legenda: 'Seu endereço no paraíso, com renda nos períodos sem uso.' },
+    { src: '/assets/consorcios/galeria-obra.jpg', legenda: 'Sua obra, seu projeto, seu ritmo.' },
+    { src: '/assets/consorcios/galeria-rural.jpg', legenda: 'Terra produtiva, ativo que transcende gerações.' },
+  ],
+  gestor: {
+    foto: '/assets/consorcios/gestor-plan10.jpg',
+    nome: 'Seu gestor Plan 10 Premium',
+  },
+};
