@@ -329,9 +329,23 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <p className={`text-xl italic text-neutral-600 fade-in ${fade ? 'opacity-100' : 'opacity-0'}`}>
+          <p key={phraseIdx} className="text-xl italic text-neutral-600 rotating-phrase">
             {rotatingPhrases[phraseIdx]}
           </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginTop: 24 }}>
+            {rotatingPhrases.map((_, i) => (
+              <div
+                key={i}
+                style={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: '50%',
+                  background: i === phraseIdx ? '#9857F2' : '#E5E7EB',
+                  transition: 'background 300ms ease',
+                }}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
