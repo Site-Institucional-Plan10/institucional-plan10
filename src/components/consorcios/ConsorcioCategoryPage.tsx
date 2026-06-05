@@ -984,8 +984,21 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       {/* J, Gestor dedicado */}
       <section className="w-full px-6" style={{ background: '#F9FAFB', paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-3xl mx-auto text-center">
-          <div className="w-20 h-20 rounded-full bg-neutral-300 mx-auto flex items-center justify-center">
-            <User size={40} className="text-neutral-500" />
+          <div
+            style={{
+              width: 96,
+              height: 96,
+              borderRadius: '50%',
+              overflow: 'hidden',
+              margin: '0 auto',
+              border: `3px solid ${PURPLE}`,
+            }}
+          >
+            <ConsorcioImage
+              src={imobiliarioPremiumGallery.gestor.foto}
+              alt={imobiliarioPremiumGallery.gestor.nome}
+              aspectRatio="1/1"
+            />
           </div>
           <p className="mt-6 text-lg italic text-neutral-700">
             "Cada cliente Premium é acompanhado por mim do primeiro contato até a entrega das chaves. Aqui, planejamento patrimonial é assunto sério e pessoal."
