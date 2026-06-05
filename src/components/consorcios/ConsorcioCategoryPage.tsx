@@ -291,7 +291,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
             </div>
           </div>
 
-          <div className="consorcios-products-grid">
+          <div className="consorcios-products-grid" ref={productsGridRef}>
             {produtos.map((p) => (
               <div
                 key={p.id}
@@ -301,8 +301,6 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
                   display: 'flex',
                   flexDirection: 'column',
                   height: '100%',
-                  minWidth: typeof window !== 'undefined' && window.innerWidth < 768 ? '78vw' : undefined,
-                  scrollSnapAlign: 'start',
                 }}
                 onClick={() => goProduto(p)}
               >
