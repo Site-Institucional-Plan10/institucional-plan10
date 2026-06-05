@@ -135,7 +135,12 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       <style>{`
         .consorcios-products-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
         @media (max-width: 767px) {
-          .consorcios-products-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 12px; }
+          .consorcios-products-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 12px; padding-left: 16px; padding-right: 16px; }
+          .consorcios-products-grid > * { flex: 0 0 85%; min-width: 0; scroll-snap-align: start; }
+          .products-dots { display: flex; justify-content: center; gap: 6px; margin-top: 16px; }
+        }
+        @media (min-width: 768px) {
+          .products-dots { display: none; }
         }
         .consorcios-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .consorcios-gallery .gallery-item { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
