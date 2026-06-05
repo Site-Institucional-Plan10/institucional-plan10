@@ -331,6 +331,20 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
               <p className="text-neutral-500">Nenhum produto disponível para esta categoria/tipo.</p>
             )}
           </div>
+          <div className="products-dots">
+            {produtos.map((_, i) => (
+              <div
+                key={i}
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: '50%',
+                  background: i === activeProductIdx ? PURPLE : '#E5E7EB',
+                  transition: 'background 300ms ease',
+                }}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
