@@ -235,7 +235,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* B, Produtos */}
-      <section id="produtos" className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
+      <section id="produtos-consorcio" className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-neutral-900">Escolha seu produto</h2>
           <p
