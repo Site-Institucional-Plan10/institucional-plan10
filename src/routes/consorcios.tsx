@@ -18,6 +18,11 @@ const consorciosFaq = [
 ];
 
 export const Route = createFileRoute("/consorcios")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    cat: (search.cat as string) || undefined,
+    produto: (search.produto as string) || undefined,
+    tipo: (search.tipo as "pf" | "pj") || undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Consórcio sem Juros | Plan10, Imóveis e Veículos" },
