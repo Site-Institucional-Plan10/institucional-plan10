@@ -58,6 +58,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
   const waGestor = WHATSAPP_BASE + encodeURIComponent('Olá! Quero falar com meu gestor Plan 10.');
 
   const goCategoria = () => navigate({ to: '/consorcios', search: { cat: categoriaId } as any });
+  const goConsorcios = () => navigate({ to: '/consorcios' });
 
   return (
     <div className="w-full">
