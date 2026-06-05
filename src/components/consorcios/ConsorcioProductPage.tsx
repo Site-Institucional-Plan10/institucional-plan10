@@ -295,8 +295,9 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
 
       {/* Foto secundária */}
       <div style={{ maxWidth: 900, margin: '0 auto', padding: '80px 24px 0 24px' }}>
-        {/* TODO: secondary photo */}
-        <div style={{ width: '100%', borderRadius: 16, background: '#E5E7EB', height: 320 }} />
+        <div style={{ width: '100%', borderRadius: 16, overflow: 'hidden' }}>
+          <ConsorcioImage src={produto.fotoSecundaria} alt={`${produto.titulo} — imagem complementar`} aspectRatio="16/10" />
+        </div>
       </div>
 
       {/* CTA principal */}
