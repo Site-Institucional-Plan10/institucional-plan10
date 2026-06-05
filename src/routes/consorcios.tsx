@@ -4,8 +4,8 @@ import { Building2, Car, Truck, Sparkles } from "lucide-react";
 import { VerticalPageTemplate } from "@/components/vertical/VerticalPageTemplate";
 import { consorciosPF, consorciosPJ } from "@/data/products";
 import { getVertical } from "@/data/verticals";
-import { canonical, faqJsonLd } from "@/lib/seo";
-import { categorias } from "@/data/consorcios";
+import { canonical, faqJsonLd, SITE_URL } from "@/lib/seo";
+import { categorias, produtosPF, produtosPJ } from "@/data/consorcios";
 import ConsorcioCategoryPage from "@/components/consorcios/ConsorcioCategoryPage";
 import ConsorcioProductPage from "@/components/consorcios/ConsorcioProductPage";
 
@@ -17,13 +17,82 @@ const consorciosFaq = [
   { title: "Quanto tempo leva para ser contemplado?", content: "Depende do plano e do tipo de contemplação. Avaliamos isso na consultoria." },
 ];
 
-export const Route = createFileRoute("/consorcios")({
-  validateSearch: (search: Record<string, unknown>) => ({
-    cat: (search.cat as string) || undefined,
-    produto: (search.produto as string) || undefined,
-    tipo: (search.tipo as "pf" | "pj") || undefined,
-  }),
-  head: () => ({
+type ConsorciosSearch = { cat?: string; produto?: string; tipo?: "pf" | "pj" };
+
+function truncate(s: string, n: number) {
+  return s.length <= n ? s : s.slice(0, n - 1).trimEnd() + "…";
+}
+
+function buildHead(search: ConsorciosSearch) {
+  const { cat, produto, tipo } = search;
+
+  // Product page
+  if (cat && produto && tipo) {
+    const list = tipo === "pj" ? produtosPJ : produtosPF;
+    const p = list.find((x) => x.categoriaId === cat && x.id === produto && x.tipo === tipo);
+    if (p) {
+      const title = `${p.titulo} | Consórcio Imobiliário | Plan 10`;
+      const description = truncate(p.descricaoBreve, 155);
+      const url = `${SITE_URL}/consorcios?cat=${cat}&produto=${produto}&tipo=${tipo}`;
+      return {
+        meta: [
+          { title },
+          { name: "description", content: description },
+          { property: "og:title", content: p.titulo },
+          { property: "og:description", content: p.descricaoBreve },
+          { property: "og:url", content: url },
+          { property: "og:type", content: "product" },
+          { name: "twitter:title", content: p.titulo },
+          { name: "twitter:description", content: p.descricaoBreve },
+        ],
+        links: [{ rel: "canonical", href: url }],
+      };
+    }
+  }
+
+  // Category page
+  if (cat === "imobiliario-premium") {
+    const title = "Consórcio Imobiliário Premium | Plan 10";
+    const description =
+      "Conquiste apartamentos, coberturas, fazendas e imóveis corporativos com poder de compra à vista e zero juros. Assessoria premium Plan 10.";
+    const url = `${SITE_URL}/consorcios?cat=imobiliario-premium`;
+    return {
+      meta: [
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  }
+
+  if (cat) {
+    const c = categorias.find((x) => x.rota === cat || x.id === cat);
+    if (c) {
+      const title = `Consórcio ${c.titulo} | Plan 10`;
+      const description = c.descricao;
+      const url = `${SITE_URL}/consorcios?cat=${cat}`;
+      return {
+        meta: [
+          { title },
+          { name: "description", content: description },
+          { property: "og:title", content: title },
+          { property: "og:description", content: description },
+          { property: "og:url", content: url },
+          { name: "twitter:title", content: title },
+          { name: "twitter:description", content: description },
+        ],
+        links: [{ rel: "canonical", href: url }],
+      };
+    }
+  }
+
+  // Base page
+  return {
     meta: [
       { title: "Consórcio sem Juros | Plan10, Imóveis e Veículos" },
       { name: "description", content: "Planejamento sem juros para imóveis, veículos e serviços." },
@@ -33,7 +102,17 @@ export const Route = createFileRoute("/consorcios")({
     ],
     links: [{ rel: "canonical", href: canonical("/consorcios") }],
     scripts: [{ type: "application/ld+json", children: faqJsonLd(consorciosFaq) }],
+  };
+}
+
+export const Route = createFileRoute("/consorcios")({
+  validateSearch: (search: Record<string, unknown>): ConsorciosSearch => ({
+    cat: (search.cat as string) || undefined,
+    produto: (search.produto as string) || undefined,
+    tipo: (search.tipo as "pf" | "pj") || undefined,
   }),
+  loaderDeps: ({ search }) => search,
+  head: ({ match }) => buildHead((match.search ?? {}) as ConsorciosSearch),
   component: ConsorciosRoute,
 });
 
