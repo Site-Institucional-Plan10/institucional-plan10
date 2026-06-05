@@ -58,6 +58,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
   const waGestor = WHATSAPP_BASE + encodeURIComponent('Olá! Quero falar com meu gestor Plan 10.');
 
   const goCategoria = () => navigate({ to: '/consorcios', search: { cat: categoriaId } as any });
+  const goConsorcios = () => navigate({ to: '/consorcios' });
 
   return (
     <div className="w-full">
@@ -119,9 +120,20 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
         }
       `}</style>
 
+      {/* Back link */}
+      <div style={{ maxWidth: 900, margin: '0 auto', padding: '16px 24px 0 24px' }}>
+        <button
+          onClick={goCategoria}
+          className="text-sm hover:underline"
+          style={{ color: PURPLE, fontWeight: 500 }}
+        >
+          ← Voltar para {categoria.titulo}
+        </button>
+      </div>
+
       {/* Breadcrumb */}
       <nav style={{ maxWidth: 900, margin: '0 auto', padding: '24px 24px 0 24px' }} className="text-sm text-neutral-400">
-        <a href="/consorcios" className="hover:underline">Consórcios</a>
+        <button onClick={goConsorcios} className="hover:underline">Consórcios</button>
         <span> › </span>
         <button onClick={goCategoria} className="hover:underline">{categoria.titulo}</button>
         <span> › </span>

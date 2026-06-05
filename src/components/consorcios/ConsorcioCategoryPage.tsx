@@ -90,12 +90,8 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
 
   useEffect(() => {
     const id = setInterval(() => {
-      setFade(false);
-      setTimeout(() => {
-        setPhraseIdx((i) => (i + 1) % rotatingPhrases.length);
-        setFade(true);
-      }, 300);
-    }, 4000);
+      setPhraseIdx((i) => (i + 1) % rotatingPhrases.length);
+    }, 5000);
     return () => clearInterval(id);
   }, []);
 
@@ -109,7 +105,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
   };
 
   const scrollToProducts = () => {
-    document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('produtos-consorcio')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const submitForm = () => {
@@ -139,6 +135,13 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         .consorcios-4col { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
         @media (max-width: 767px) { .consorcios-4col { grid-template-columns: 1fr; } }
         .fade-in { transition: opacity 300ms ease; }
+        @keyframes phrase-fade-in {
+          from { opacity: 0; transform: translateY(8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .rotating-phrase {
+          animation: phrase-fade-in 500ms ease;
+        }
       `}</style>
 
       {/* A, Hero */}
@@ -232,7 +235,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       </section>
 
       {/* B, Produtos */}
-      <section id="produtos" className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
+      <section id="produtos-consorcio" className="w-full px-6 bg-white" style={{ paddingTop: 80, paddingBottom: 80 }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-neutral-900">Escolha seu produto</h2>
           <p
@@ -326,9 +329,23 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <p className={`text-xl italic text-neutral-600 fade-in ${fade ? 'opacity-100' : 'opacity-0'}`}>
+          <p key={phraseIdx} className="text-xl italic text-neutral-600 rotating-phrase">
             {rotatingPhrases[phraseIdx]}
           </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 8, marginTop: 24 }}>
+            {rotatingPhrases.map((_, i) => (
+              <div
+                key={i}
+                style={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: '50%',
+                  background: i === phraseIdx ? '#9857F2' : '#E5E7EB',
+                  transition: 'background 300ms ease',
+                }}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
