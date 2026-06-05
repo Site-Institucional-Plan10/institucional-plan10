@@ -87,6 +87,20 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [form, setForm] = useState({ nome: '', telefone: '', email: '' });
+  const [activeProductIdx, setActiveProductIdx] = useState(0);
+  const productsGridRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const el = productsGridRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const cardWidth = el.firstElementChild?.getBoundingClientRect().width || el.clientWidth * 0.85;
+      const idx = Math.round(el.scrollLeft / (cardWidth + 16));
+      setActiveProductIdx(Math.min(idx, produtos.length - 1));
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [produtos.length]);
 
   useEffect(() => {
     const id = setInterval(() => {
