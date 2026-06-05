@@ -80,7 +80,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
             gap: 48px;
             align-items: start;
           }
-          .product-hero-photo { height: 380px; }
+          
         }
         .consorcios-diferenciais-grid {
           display: grid;
