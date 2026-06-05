@@ -18,7 +18,8 @@ import {
   Quote,
 } from 'lucide-react';
 
-import { categorias, produtosPF, produtosPJ, type ConsorcioProduct } from '@/data/consorcios';
+import { categorias, produtosPF, produtosPJ, imobiliarioPremiumGallery, type ConsorcioProduct } from '@/data/consorcios';
+import ConsorcioImage from './ConsorcioImage';
 
 interface ConsorcioCategoryPageProps {
   categoriaId: string;
