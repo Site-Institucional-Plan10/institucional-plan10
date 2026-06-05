@@ -90,12 +90,8 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
 
   useEffect(() => {
     const id = setInterval(() => {
-      setFade(false);
-      setTimeout(() => {
-        setPhraseIdx((i) => (i + 1) % rotatingPhrases.length);
-        setFade(true);
-      }, 300);
-    }, 4000);
+      setPhraseIdx((i) => (i + 1) % rotatingPhrases.length);
+    }, 5000);
     return () => clearInterval(id);
   }, []);
 
@@ -139,6 +135,13 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
         .consorcios-4col { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
         @media (max-width: 767px) { .consorcios-4col { grid-template-columns: 1fr; } }
         .fade-in { transition: opacity 300ms ease; }
+        @keyframes phrase-fade-in {
+          from { opacity: 0; transform: translateY(8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .rotating-phrase {
+          animation: phrase-fade-in 500ms ease;
+        }
       `}</style>
 
       {/* A, Hero */}
