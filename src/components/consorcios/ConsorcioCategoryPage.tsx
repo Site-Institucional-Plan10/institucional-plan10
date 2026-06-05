@@ -6,7 +6,6 @@ import {
   Trophy,
   BarChart2,
   Handshake,
-  User,
   Search,
   MessageCircle,
   ChevronDown,
