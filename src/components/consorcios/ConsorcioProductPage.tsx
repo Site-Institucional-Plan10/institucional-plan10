@@ -3,6 +3,7 @@ import { useNavigate } from '@tanstack/react-router';
 import * as Icons from 'lucide-react';
 import { Clock, UserCheck, ChevronDown, Quote, MessageCircle } from 'lucide-react';
 import { categorias, produtosPF, produtosPJ } from '@/data/consorcios';
+import ConsorcioImage from './ConsorcioImage';
 
 interface ConsorcioProductPageProps {
   categoriaId: string;
