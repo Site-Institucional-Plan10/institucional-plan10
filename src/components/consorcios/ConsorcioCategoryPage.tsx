@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from '@tanstack/react-router';
 import {
   Clock,
@@ -87,6 +87,8 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [form, setForm] = useState({ nome: '', telefone: '', email: '' });
+  const [activeProductIdx, setActiveProductIdx] = useState(0);
+  const productsGridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -99,6 +101,18 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
     () => (tipo === 'pf' ? produtosPF : produtosPJ).filter((p) => p.categoriaId === categoriaId),
     [tipo, categoriaId],
   );
+
+  useEffect(() => {
+    const el = productsGridRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const cardWidth = el.firstElementChild?.getBoundingClientRect().width || el.clientWidth * 0.85;
+      const idx = Math.round(el.scrollLeft / (cardWidth + 16));
+      setActiveProductIdx(Math.min(idx, produtos.length - 1));
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, [produtos.length]);
 
   const goProduto = (p: ConsorcioProduct) => {
     navigate({ to: '/consorcios', search: { cat: categoriaId, produto: p.id, tipo } as any });
@@ -121,7 +135,12 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       <style>{`
         .consorcios-products-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
         @media (max-width: 767px) {
-          .consorcios-products-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 12px; }
+          .consorcios-products-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 12px; padding-left: 16px; padding-right: 16px; }
+          .consorcios-products-grid > * { flex: 0 0 85%; min-width: 0; scroll-snap-align: start; }
+          .products-dots { display: flex; justify-content: center; gap: 6px; margin-top: 16px; }
+        }
+        @media (min-width: 768px) {
+          .products-dots { display: none; }
         }
         .consorcios-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .consorcios-gallery .gallery-item { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 4/3; }
@@ -272,7 +291,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
             </div>
           </div>
 
-          <div className="consorcios-products-grid">
+          <div className="consorcios-products-grid" ref={productsGridRef}>
             {produtos.map((p) => (
               <div
                 key={p.id}
@@ -282,8 +301,6 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
                   display: 'flex',
                   flexDirection: 'column',
                   height: '100%',
-                  minWidth: typeof window !== 'undefined' && window.innerWidth < 768 ? '78vw' : undefined,
-                  scrollSnapAlign: 'start',
                 }}
                 onClick={() => goProduto(p)}
               >
@@ -313,6 +330,20 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
             {produtos.length === 0 && (
               <p className="text-neutral-500">Nenhum produto disponível para esta categoria/tipo.</p>
             )}
+          </div>
+          <div className="products-dots">
+            {produtos.map((_, i) => (
+              <div
+                key={i}
+                style={{
+                  width: 6,
+                  height: 6,
+                  borderRadius: '50%',
+                  background: i === activeProductIdx ? PURPLE : '#E5E7EB',
+                  transition: 'background 300ms ease',
+                }}
+              />
+            ))}
           </div>
         </div>
       </section>
