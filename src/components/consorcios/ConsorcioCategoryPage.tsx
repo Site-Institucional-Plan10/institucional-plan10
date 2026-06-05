@@ -449,10 +449,28 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
           >
             Do apartamento dos sonhos à fazenda da família, cada carta Plan 10 vira um endereço com significado.
           </p>
-          <div className="consorcios-gallery">
-            {imobiliarioPremiumGallery.galeria.map((g, i) => (
-              <div key={i} className="gallery-item">
-                <ConsorcioImage src={g.src} alt={g.legenda} aspectRatio="4/3" />
+          <div className="galeria-mosaico">
+            {imobiliarioPremiumGallery.galeria.slice(0, 5).map((g, i) => (
+              <div
+                key={i}
+                className={`galeria-mosaico-item-${i}`}
+                style={{
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderRadius: 12,
+                }}
+              >
+                <img
+                  src={g.src}
+                  alt={g.legenda}
+                  loading="lazy"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                  }}
+                />
                 <div
                   className="absolute inset-x-0 bottom-0 p-4"
                   style={{
