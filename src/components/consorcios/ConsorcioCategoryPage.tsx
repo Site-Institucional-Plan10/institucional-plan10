@@ -109,7 +109,7 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
   };
 
   const scrollToProducts = () => {
-    document.getElementById('produtos')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('produtos-consorcio')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const submitForm = () => {
