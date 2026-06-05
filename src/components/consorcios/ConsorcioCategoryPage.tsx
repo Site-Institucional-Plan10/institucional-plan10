@@ -35,11 +35,6 @@ const rotatingPhrases = [
   'Quem pensa em gerações não compra imóvel, constrói patrimônio.',
 ];
 
-const gallery = [
-  { legenda: 'Cada metro quadrado planejado para quem pensa grande.', tall: true },
-  { legenda: 'O refúgio que conecta gerações à essência.', tall: false },
-  { legenda: 'Sede própria como declaração de solidez.', tall: false },
-];
 
 const diferenciais = [
   { Icon: Trophy, titulo: 'Assessoria dedicada do início à contemplação', desc: 'Um especialista acompanha cada etapa do seu plano, com transparência total.' },
