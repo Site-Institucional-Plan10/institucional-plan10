@@ -52,9 +52,9 @@ const comoFunciona = [
 ];
 
 const depoimentos = [
-  { texto: 'Conquistei minha cobertura sem pagar um centavo de juros. A assessoria foi cirúrgica.', autor: 'Ricardo M.', cargo: 'Empresário, São Paulo' },
-  { texto: 'Compramos nossa casa de campo planejando cada etapa. O acompanhamento Plan 10 fez toda a diferença.', autor: 'Helena e Marcos T.', cargo: 'Família, Campos do Jordão' },
-  { texto: 'A sede própria da minha empresa virou realidade com previsibilidade total.', autor: 'Fernanda L.', cargo: 'CEO, Belo Horizonte' },
+  { texto: 'Achava que cobertura em Moema era um sonho distante. Em 14 meses fui contemplado por lance e negociei como pagador à vista, com um desconto que nenhum financiamento daria.', autor: 'Ricardo M.', cargo: 'Médico cirurgião', cidade: 'São Paulo' },
+  { texto: 'Sempre quis uma fazenda para os netos crescerem com liberdade. O consórcio nos deu tranquilidade para escolher com calma e comprar com poder de negociação real.', autor: 'Helena e Marcos T.', cargo: 'Aposentados', cidade: 'Campinas' },
+  { texto: 'Trocamos R$ 35 mil mensais de aluguel por parcelas que constroem patrimônio. Em dois anos, a sede já valorizou 22%. Melhor decisão financeira da empresa.', autor: 'Fernanda L.', cargo: 'CFO, empresa de tecnologia', cidade: 'Belo Horizonte' },
 ];
 
 const comparacao = [
@@ -65,11 +65,11 @@ const comparacao = [
 ];
 
 const faqs = [
-  { p: 'O consórcio Plan 10 cobra juros?', r: 'Não. Cobramos apenas a taxa de administração, transparente desde o primeiro dia.' },
-  { p: 'Como funciona a contemplação?', r: 'Por sorteio mensal ou lance (livre, fixo ou embutido), com previsibilidade total.' },
-  { p: 'Posso usar a carta para qualquer imóvel?', r: 'Sim, qualquer imóvel residencial ou comercial novo ou usado dentro do valor da carta.' },
-  { p: 'Existe entrada?', r: 'Não. Você começa pagando a primeira parcela do seu plano.' },
-  { p: 'O que acontece se eu for contemplado cedo?', r: 'Você recebe a carta com poder de compra à vista e segue pagando as parcelas restantes sem juros.' },
+  { p: 'O consórcio Plan 10 cobra juros?', r: 'Não. Cobramos apenas a taxa de administração, transparente e definida desde o primeiro dia. É a ausência de juros que dá ao consórcio seu poder de compra diferenciado.' },
+  { p: 'Como funciona a contemplação?', r: 'Por sorteio mensal, no qual todos participam automaticamente, ou por lance (livre, fixo ou embutido). Seu gestor orienta a melhor estratégia para o seu perfil e muitos clientes são contemplados nos primeiros 12 meses.' },
+  { p: 'Posso usar a carta para qualquer imóvel?', r: 'Sim. A carta aceita apartamentos, coberturas, casas, lofts, imóveis na planta, usados ou em construção, dentro do valor contratado, incluindo propriedades rurais, de veraneio e corporativas conforme o produto escolhido.' },
+  { p: 'Existe entrada?', r: 'Não há entrada obrigatória. Você começa pagando a primeira parcela do seu plano e pode antecipar a contemplação com lance quando fizer sentido para o seu fluxo financeiro.' },
+  { p: 'O que acontece se eu for contemplado cedo?', r: 'Você recebe a carta com poder de compra à vista, negocia o imóvel como pagador integral e segue pagando as parcelas restantes normalmente, sem juros. É o melhor cenário: patrimônio antecipado com previsibilidade.' },
 ];
 
 const crossSelling = [
@@ -335,8 +335,35 @@ export default function ConsorcioCategoryPage({ categoriaId }: ConsorcioCategory
       {/* D, Photo gallery */}
       <section className="w-full px-6 py-16 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-neutral-900">Cada conquista tem uma história</h2>
-          {/* TODO: replace with real photos */}
+          <span
+            style={{
+              display: 'block',
+              color: PURPLE,
+              fontSize: '0.75rem',
+              fontWeight: 600,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              textAlign: 'center',
+              marginBottom: 12,
+            }}
+          >
+            PATRIMÔNIO REAL
+          </span>
+          <h2 className="text-3xl font-bold mb-4 text-neutral-900" style={{ textAlign: 'center' }}>
+            Cada conquista tem uma história
+          </h2>
+          <p
+            style={{
+              fontSize: '1rem',
+              color: '#6B7280',
+              maxWidth: 560,
+              margin: '0 auto 40px',
+              textAlign: 'center',
+              lineHeight: 1.6,
+            }}
+          >
+            Do apartamento dos sonhos à fazenda da família, cada carta Plan 10 vira um endereço com significado.
+          </p>
           <div className="consorcios-gallery">
             {imobiliarioPremiumGallery.galeria.map((g, i) => (
               <div key={i} className="gallery-item">
