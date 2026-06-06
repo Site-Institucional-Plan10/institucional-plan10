@@ -61,7 +61,7 @@ export default function ConsorcioProductPage({ categoriaId, produtoId, tipo }: C
   const goConsorcios = () => navigate({ to: '/consorcios' });
 
   return (
-    <div className="w-full">
+    <div className="w-full" style={{ paddingTop: '96px' }}>
       <style>{`
         .product-hero-layout {
           display: block;
