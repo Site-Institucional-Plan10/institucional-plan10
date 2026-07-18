@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { solutions } from "@/data/solutions";
-import { PageTheme, HUB_PALETTE, paletteFor } from "@/components/plan10/PageTheme";
+import { PageTheme, HUB_PALETTE, paletteFor, logoFor } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/solucoes/")({
   head: () => ({
