@@ -34,6 +34,19 @@ export function paletteFor(slug: string): Palette {
   return PALETTES[slug] ?? PALETTES.saude;
 }
 
+// Logo por solução (arquivos em public/assets/logos)
+export const SOLUTION_LOGOS: Record<string, string> = {
+  saude: "/assets/logos/logo-saude-odonto.png",
+  protecao: "/assets/logos/logo-seguros.png",
+  financeiras: "/assets/logos/logo-financas.png",
+  crescimento: "/assets/logos/logo-consorcios.png",
+  assistencia: "/assets/logos/logo-servicos.png",
+};
+
+export function logoFor(slug: string): string | undefined {
+  return SOLUTION_LOGOS[slug];
+}
+
 // Global stylesheet — injected once by PageTheme. Scoped under .plan10-scope.
 const CSS = `
 .plan10-scope {
