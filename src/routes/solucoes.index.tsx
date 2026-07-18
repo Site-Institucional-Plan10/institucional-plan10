@@ -3,7 +3,7 @@ import { solutions } from "@/data/solutions";
 import { Plan10Section, Eyebrow, Display, H2 } from "@/components/plan10/Shell";
 import { FONTS } from "@/lib/plan10";
 
-export const Route = createFileRoute("/solucoes")({
+export const Route = createFileRoute("/solucoes/")({
   head: () => ({
     meta: [
       { title: "Soluções Plan10, consultoria em proteção e planejamento" },
