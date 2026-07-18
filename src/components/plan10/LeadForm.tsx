@@ -83,7 +83,7 @@ export function LeadForm({ interesse, perfilInicial = "PF", origem }: Props) {
       )}
       <div className="actions">
         <button type="submit" disabled={state === "sending"} className="btn btn-primary" style={{ opacity: state === "sending" ? 0.7 : 1 }}>
-          {state === "sending" ? "Enviando..." : "Falar com um consultor"}
+          {state === "sending" ? "Enviando..." : "Solicitar consultoria"}
         </button>
         <a
           href={`https://wa.me/5511938012222?text=${encodeURIComponent(`Olá! Tenho interesse em ${interesse}.`)}`}
