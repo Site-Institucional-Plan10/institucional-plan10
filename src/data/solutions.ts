@@ -54,6 +54,12 @@ export interface Solucao {
   categorias: Categoria[];
 }
 
+const pickLiberada = (slug: string): Solucao => {
+  const found = (solucoesLiberadas as unknown as Solucao[]).find((s) => s.slug === slug);
+  if (!found) throw new Error(`Solução liberada não encontrada: ${slug}`);
+  return found;
+};
+
 export const solutions: Solucao[] = [
   {
     slug: "saude",
