@@ -411,8 +411,6 @@ const CSS = `
 .plan10-scope { overflow-x: hidden; }
 `;
 
-let cssInjected = false;
-
 export function PageTheme({
   slug,
   palette,
@@ -427,8 +425,7 @@ export function PageTheme({
   style?: CSSProperties;
 }) {
   const p = palette ?? (slug ? paletteFor(slug) : PALETTES.saude);
-  const vars: CSSProperties = {
-    // @ts-expect-error CSS vars
+  const vars = {
     "--hero": p.hero,
     "--ve": p.ve,
     "--card": p.card,
@@ -436,21 +433,9 @@ export function PageTheme({
     "--vs": p.vs,
     "--vp": p.vp,
     "--va": p.va,
-  };
-  // Inline once per page tree
-  if (typeof document !== "undefined" && !cssInjected) {
-    const id = "plan10-ds-v31";
-    if (!document.getElementById(id)) {
-      const el = document.createElement("style");
-      el.id = id;
-      el.textContent = CSS;
-      document.head.appendChild(el);
-    }
-    cssInjected = true;
-  }
+  } as CSSProperties;
   return (
     <div className={`plan10-scope ${className ?? ""}`} style={{ ...vars, ...style }}>
-      {/* SSR-safe stylesheet include */}
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       {children}
     </div>
