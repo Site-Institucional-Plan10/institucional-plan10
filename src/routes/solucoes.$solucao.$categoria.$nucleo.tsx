@@ -5,7 +5,7 @@ import { PageTheme } from "@/components/plan10/PageTheme";
 import { PerfilToggle } from "@/components/plan10/PerfilToggle";
 import { ProductCard } from "@/components/plan10/ProductCard";
 import { LeadForm } from "@/components/plan10/LeadForm";
-import { FaqAccordion } from "@/components/plan10/FaqAccordion";
+
 import { FONTS, whatsappUrl } from "@/lib/plan10";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
