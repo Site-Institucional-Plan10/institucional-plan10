@@ -120,16 +120,18 @@ function NucleoPage() {
         </div>
       </section>
 
-      {/* Por que + fechamento */}
+      {/* Como escolher + fechamento */}
       <section className="sec">
         <div className="wrap" style={{ maxWidth: 900 }}>
-          <p className="eyebrow" style={{ color: "var(--vp)" }}>Por que este caminho</p>
+          <p className="eyebrow" style={{ color: "var(--vp)" }}>Como escolher</p>
           <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.35rem, 2.4vw, 1.8rem)", lineHeight: 1.35, fontWeight: 500, color: "var(--preto)", margin: "10px 0 0" }}>
             {n.porque}
           </p>
-          <p style={{ fontFamily: "var(--fb)", fontSize: "1rem", lineHeight: 1.65, color: "var(--ctxt)", margin: "20px 0 0", paddingTop: 18, borderTop: "1px solid var(--c2)" }}>
-            {n.fechamento}
-          </p>
+          {n.fechamento && (
+            <p style={{ fontFamily: "var(--fb)", fontSize: "1rem", lineHeight: 1.65, color: "var(--ctxt)", margin: "20px 0 0", paddingTop: 18, borderTop: "1px solid var(--c2)" }}>
+              {n.fechamento}
+            </p>
+          )}
         </div>
       </section>
 
@@ -163,17 +165,6 @@ function NucleoPage() {
                 </a>
               ))}
             </div>
-          </div>
-        </section>
-      )}
-
-      {/* FAQ */}
-      {faqAll.length > 0 && (
-        <section className="sec">
-          <div className="wrap" style={{ maxWidth: 860 }}>
-            <p className="eyebrow" style={{ color: "var(--vp)" }}>Perguntas frequentes</p>
-            <h2 className="p10-h2" style={{ marginBottom: 20 }}>Antes de decidir</h2>
-            <FaqAccordion items={faqAll} />
           </div>
         </section>
       )}
