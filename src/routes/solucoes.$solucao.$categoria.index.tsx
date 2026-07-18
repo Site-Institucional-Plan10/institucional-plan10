@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { type Solucao, type Categoria } from "@/data/solutions";
-import { Plan10Section, Eyebrow, Display, Breadcrumb } from "@/components/plan10/Shell";
-import { FONTS } from "@/lib/plan10";
 import { Route as CategoriaRoute } from "./solucoes.$solucao.$categoria";
+import { PageTheme } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria/")({
   component: CategoriaPage,
@@ -11,60 +10,46 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria/")({
 function CategoriaPage() {
   const { solucao: s, categoria: c } = CategoriaRoute.useLoaderData() as { solucao: Solucao; categoria: Categoria };
   return (
-    <>
-      <Plan10Section cor={s.cor}>
-        <Breadcrumb
-          items={[
-            { label: "Soluções", to: "/solucoes" },
-            { label: s.nome, to: "/solucoes/$solucao", params: { solucao: s.slug } },
-            { label: c.nome },
-          ]}
-        />
-        <div style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 820 }}>
-          <Eyebrow color={s.cor.accent}>{s.nome}</Eyebrow>
-          <Display>{c.nome}</Display>
-          {c.hero && (
-            <p style={{ fontFamily: FONTS.body, fontSize: "1.1rem", lineHeight: 1.65, opacity: 0.84, margin: 0 }}>
-              {c.hero}
-            </p>
-          )}
+    <PageTheme slug={s.slug}>
+      <header className="p10-hero">
+        <div className="p10-hero-inner">
+          <p className="eyebrow">{s.nome}</p>
+          <h1>{c.nome}</h1>
+          {c.hero && <p className="lede">{c.hero}</p>}
         </div>
-      </Plan10Section>
+      </header>
 
-      <section style={{ background: s.cor.soft, padding: "clamp(48px, 8vw, 96px) clamp(20px, 4vw, 40px)" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gap: 20, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
-          {c.nucleos.map((n) => (
-            <Link
-              key={n.slug}
-              to="/solucoes/$solucao/$categoria/$nucleo"
-              params={{ solucao: s.slug, categoria: c.slug, nucleo: n.slug }}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 14,
-                padding: 32,
-                background: "#FFFFFF",
-                color: "#10141A",
-                textDecoration: "none",
-                borderRadius: 8,
-                border: "1px solid rgba(16,20,26,0.08)",
-                borderTop: `2px solid ${s.cor.primary}`,
-                minHeight: 220,
-              }}
-            >
-              <h2 style={{ fontFamily: FONTS.display, fontSize: "1.5rem", fontWeight: 500, margin: 0, lineHeight: 1.2 }}>
-                {n.nome}
-              </h2>
-              <p style={{ fontFamily: FONTS.body, fontSize: "0.95rem", lineHeight: 1.6, opacity: 0.78, margin: 0 }}>
-                {n.hero}
-              </p>
-              <span style={{ marginTop: "auto", fontFamily: FONTS.eyebrow, fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase", color: s.cor.primary }}>
-                Ver opções →
-              </span>
-            </Link>
-          ))}
+      <nav className="p10-crumb" aria-label="Trilha">
+        <div className="p10-crumb-inner">
+          <Link to="/solucoes">Soluções</Link>
+          <span className="sep">/</span>
+          <Link to="/solucoes/$solucao" params={{ solucao: s.slug }}>{s.nome}</Link>
+          <span className="sep">/</span>
+          <span className="current">{c.nome}</span>
+        </div>
+      </nav>
+
+      <section className="sec sec-alt">
+        <div className="wrap">
+          <p className="eyebrow" style={{ color: "var(--vp)" }}>Núcleos</p>
+          <h2 className="p10-h2" style={{ marginBottom: 24 }}>Escolha um núcleo para explorar</h2>
+          <div className="p10-cards">
+            {c.nucleos.map((n) => (
+              <Link
+                key={n.slug}
+                to="/solucoes/$solucao/$categoria/$nucleo"
+                params={{ solucao: s.slug, categoria: c.slug, nucleo: n.slug }}
+                className="p10-card"
+              >
+                <p className="eyebrow" style={{ color: "var(--vp)" }}>Núcleo</p>
+                <h3>{n.nome}</h3>
+                <p>{n.hero}</p>
+                <span className="arrow">Ver opções →</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
-    </>
+    </PageTheme>
   );
 }
