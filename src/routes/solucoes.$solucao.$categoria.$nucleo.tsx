@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { findNucleo, type Solucao, type Categoria, type Nucleo } from "@/data/solutions";
-import { Plan10Section, Eyebrow, Display, H2, Breadcrumb, Pill } from "@/components/plan10/Shell";
+import { PageTheme } from "@/components/plan10/PageTheme";
 import { PerfilToggle } from "@/components/plan10/PerfilToggle";
 import { ProductCard } from "@/components/plan10/ProductCard";
 import { LeadForm } from "@/components/plan10/LeadForm";
@@ -43,183 +43,140 @@ function NucleoPage() {
   };
   const [perfil, setPerfil] = useState<"PF" | "PJ">("PF");
   const filtered = useMemo(() => n.products.filter((p) => p.perfil === perfil), [n, perfil]);
-
-  const faqAll = useMemo(
-    () => n.products.flatMap((p) => p.faq),
+  const faqAll = useMemo(() => n.products.flatMap((p) => p.faq), [n]);
+  const cross = useMemo(
+    () => Array.from(new Set(n.products.flatMap((p) => p.crossSelling))).slice(0, 4),
     [n],
   );
 
   const scrollTo = (id: string) => {
     if (typeof document === "undefined") return;
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <>
-      {/* 1. Breadcrumb + Hero */}
-      <Plan10Section cor={s.cor}>
-        <Breadcrumb
-          items={[
-            { label: "Soluções", to: "/solucoes" },
-            { label: s.nome, to: "/solucoes/$solucao", params: { solucao: s.slug } },
-            { label: c.nome, to: "/solucoes/$solucao/$categoria", params: { solucao: s.slug, categoria: c.slug } },
-            { label: n.nome },
-          ]}
-        />
-        <div style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 820 }}>
-          <Eyebrow color={s.cor.accent}>{c.nome}</Eyebrow>
-          <Display>{n.nome}</Display>
-          <p style={{ fontFamily: FONTS.body, fontSize: "1.15rem", lineHeight: 1.6, opacity: 0.88, margin: 0 }}>
-            {n.hero}
-          </p>
-        </div>
-
-        {/* 2. Abertura consultiva */}
-        <div
-          style={{
-            marginTop: 40,
-            padding: "24px 28px",
-            borderLeft: `2px solid ${s.cor.accent}`,
-            background: "rgba(246,241,231,0.04)",
-            borderRadius: "0 8px 8px 0",
-            maxWidth: 820,
-          }}
-        >
-          <p style={{ fontFamily: FONTS.body, fontSize: "1rem", lineHeight: 1.65, margin: 0, opacity: 0.82 }}>
-            {n.aberturaConsultiva}
-          </p>
-        </div>
-
-        {/* 3. Seletor */}
-        <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 14 }}>
-          <p style={{ fontFamily: FONTS.eyebrow, fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(246,241,231,0.6)", margin: 0 }}>
-            Perfil
-          </p>
-          <PerfilToggle value={perfil} onChange={setPerfil} accent={s.cor.accent} />
-        </div>
-
-        {/* 4. Bloco de valor */}
-        {n.blocoValor.length > 0 && (
-          <div style={{ marginTop: 40, display: "flex", flexWrap: "wrap", gap: 10 }}>
-            {n.blocoValor.map((b) => (
-              <Pill key={b} color={s.cor.accent}>{b}</Pill>
-            ))}
-          </div>
-        )}
-      </Plan10Section>
-
-      {/* 5. Produtos embutidos */}
-      <Plan10Section cor={s.cor} style={{ paddingTop: 0 }}>
-        <div id="opcoes" style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 20, flexWrap: "wrap" }}>
-            <H2>Opções disponíveis</H2>
-            <span style={{ fontFamily: FONTS.eyebrow, fontSize: "0.75rem", letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.6 }}>
-              {filtered.length} {filtered.length === 1 ? "opção" : "opções"} para {perfil === "PF" ? "você" : "empresa"}
-            </span>
-          </div>
-          {filtered.length === 0 ? (
-            <p style={{ fontFamily: FONTS.body, opacity: 0.7, margin: 0 }}>
-              Ainda não há opções nesse perfil. Troque o seletor ou fale com um consultor.
-            </p>
-          ) : (
-            <div style={{ display: "grid", gap: 20, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
-              {filtered.map((p) => (
-                <ProductCard
-                  key={p.id}
-                  product={p}
-                  accent={s.cor.accent}
-                  primary={s.cor.primary}
-                  nucleoNome={n.nome}
-                  onPrimary={() => scrollTo("contato")}
-                />
+    <PageTheme slug={s.slug}>
+      {/* Hero */}
+      <header className="p10-hero">
+        <div className="p10-hero-inner">
+          <p className="eyebrow">{c.nome}</p>
+          <h1>{n.nome}</h1>
+          <p className="lede">{n.hero}</p>
+          {n.blocoValor.length > 0 && (
+            <div className="pills" style={{ marginTop: 6 }}>
+              {n.blocoValor.map((b) => (
+                <span key={b} className="pill">{b}</span>
               ))}
             </div>
           )}
         </div>
-      </Plan10Section>
+      </header>
 
-      {/* 6 e 7. Por que + fechamento */}
-      <section style={{ background: s.cor.soft, padding: "clamp(56px, 9vw, 112px) clamp(20px, 4vw, 40px)" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexDirection: "column", gap: 28 }}>
-          <p style={{ fontFamily: FONTS.eyebrow, fontSize: "0.75rem", letterSpacing: "0.16em", textTransform: "uppercase", color: s.cor.primary, margin: 0 }}>
-            Por que este caminho
+      {/* Breadcrumb */}
+      <nav className="p10-crumb" aria-label="Trilha">
+        <div className="p10-crumb-inner">
+          <Link to="/solucoes">Soluções</Link>
+          <span className="sep">/</span>
+          <Link to="/solucoes/$solucao" params={{ solucao: s.slug }}>{s.nome}</Link>
+          <span className="sep">/</span>
+          <Link to="/solucoes/$solucao/$categoria" params={{ solucao: s.slug, categoria: c.slug }}>{c.nome}</Link>
+          <span className="sep">/</span>
+          <span className="current">{n.nome}</span>
+        </div>
+      </nav>
+
+      {/* Abertura consultiva */}
+      <section className="sec">
+        <div className="wrap" style={{ maxWidth: 820 }}>
+          <p className="eyebrow" style={{ color: "var(--vp)" }}>Abertura consultiva</p>
+          <p className="p10-lede" style={{ fontSize: "1.05rem", color: "var(--preto)" }}>{n.aberturaConsultiva}</p>
+        </div>
+      </section>
+
+      {/* Toggle + Produtos */}
+      <section className="sec sec-alt" id="opcoes">
+        <div className="wrap">
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, marginBottom: 20 }}>
+            <div>
+              <p className="eyebrow" style={{ color: "var(--vp)" }}>Opções disponíveis</p>
+              <h2 className="p10-h2">Para você ou para empresa</h2>
+            </div>
+            <PerfilToggle value={perfil} onChange={setPerfil} />
+          </div>
+          <p style={{ fontFamily: "var(--fl)", fontSize: ".75rem", letterSpacing: ".14em", textTransform: "uppercase", color: "var(--ctxt)", margin: "0 0 16px" }}>
+            {filtered.length} {filtered.length === 1 ? "opção" : "opções"} para {perfil === "PF" ? "você" : "empresa"}
           </p>
-          <p style={{ fontFamily: FONTS.display, fontSize: "clamp(1.4rem, 2.6vw, 1.9rem)", lineHeight: 1.35, fontWeight: 500, color: "#10141A", margin: 0 }}>
+          {filtered.length === 0 ? (
+            <p style={{ fontFamily: "var(--fb)", color: "var(--ctxt)" }}>
+              Ainda não há opções nesse perfil. Troque o seletor ou fale com um consultor.
+            </p>
+          ) : (
+            <div className="prod-list">
+              {filtered.map((p) => (
+                <ProductCard key={p.id} product={p} nucleoNome={n.nome} onPrimary={() => scrollTo("contato")} />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Por que + fechamento */}
+      <section className="sec">
+        <div className="wrap" style={{ maxWidth: 900 }}>
+          <p className="eyebrow" style={{ color: "var(--vp)" }}>Por que este caminho</p>
+          <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.35rem, 2.4vw, 1.8rem)", lineHeight: 1.35, fontWeight: 500, color: "var(--preto)", margin: "10px 0 0" }}>
             {n.porque}
           </p>
-          <p style={{ fontFamily: FONTS.body, fontSize: "1.05rem", lineHeight: 1.65, color: "rgba(16,20,26,0.72)", margin: 0, borderTop: `1px solid ${s.cor.primary}33`, paddingTop: 20 }}>
+          <p style={{ fontFamily: "var(--fb)", fontSize: "1rem", lineHeight: 1.65, color: "var(--ctxt)", margin: "20px 0 0", paddingTop: 18, borderTop: "1px solid var(--c2)" }}>
             {n.fechamento}
           </p>
         </div>
       </section>
 
-      {/* 8. Formulário */}
-      <Plan10Section cor={s.cor}>
-        <div id="contato" style={{ display: "grid", gap: 40, gridTemplateColumns: "minmax(0,1fr) minmax(0,1fr)", alignItems: "start" }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 16, minWidth: 0 }}>
-            <Eyebrow color={s.cor.accent}>Fale com a Plan10</Eyebrow>
-            <H2>Um consultor retorna com o próximo passo</H2>
-            <p style={{ fontFamily: FONTS.body, fontSize: "1rem", lineHeight: 1.65, opacity: 0.82, margin: 0 }}>
-              Conte seu momento. A resposta é orientada, sem excesso comercial.
-            </p>
+      {/* Formulário em seção escura */}
+      <section className="sec sec-dark" id="contato">
+        <div className="wrap" style={{ display: "grid", gap: 32, gridTemplateColumns: "1fr", alignItems: "start" }}>
+          <div>
+            <p className="eyebrow">Fale com a Plan10</p>
+            <h2 className="p10-h2">Um consultor retorna com o próximo passo</h2>
+            <p className="p10-lede">Conte seu momento. A resposta é orientada, sem excesso comercial.</p>
           </div>
-          <LeadForm
-            interesse={n.nome}
-            perfilInicial={perfil}
-            accent={s.cor.accent}
-            primary={s.cor.primary}
-            origem={`/solucoes/${s.slug}/${c.slug}/${n.slug}`}
-          />
+          <LeadForm interesse={n.nome} perfilInicial={perfil} origem={`/solucoes/${s.slug}/${c.slug}/${n.slug}`} />
         </div>
-      </Plan10Section>
+      </section>
 
-      {/* 9. Cross-selling */}
-      {(() => {
-        const cross = Array.from(new Set(n.products.flatMap((p) => p.crossSelling))).slice(0, 2);
-        if (!cross.length) return null;
-        return (
-          <section style={{ background: "#10141A", padding: "clamp(40px, 6vw, 72px) clamp(20px, 4vw, 40px)", color: "#F6F1E7" }}>
-            <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
-              <p style={{ fontFamily: FONTS.eyebrow, fontSize: "0.72rem", letterSpacing: "0.16em", textTransform: "uppercase", color: "#C9A83C", margin: 0 }}>
-                Conexões próximas
-              </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-                {cross.map((cs) => (
-                  <a
-                    key={cs}
-                    href={whatsappUrl(`Olá! Também tenho interesse em ${cs}.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      padding: "10px 18px",
-                      borderRadius: 8,
-                      border: "1px solid rgba(246,241,231,0.2)",
-                      color: "#F6F1E7",
-                      fontFamily: FONTS.body,
-                      fontSize: "0.9rem",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {cs}
-                  </a>
-                ))}
-              </div>
+      {/* Cross-selling */}
+      {cross.length > 0 && (
+        <section className="sec sec-alt">
+          <div className="wrap">
+            <p className="eyebrow" style={{ color: "var(--vp)" }}>Conexões próximas</p>
+            <h2 className="p10-h2" style={{ marginBottom: 16 }}>Também pode fazer sentido</h2>
+            <div className="cross">
+              {cross.map((cs) => (
+                <a
+                  key={cs}
+                  href={whatsappUrl(`Olá! Também tenho interesse em ${cs}.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {cs}
+                </a>
+              ))}
             </div>
-          </section>
-        );
-      })()}
-
-      {/* 10. FAQ */}
-      {faqAll.length > 0 && (
-        <Plan10Section cor={s.cor}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 24, maxWidth: 860 }}>
-            <Eyebrow color={s.cor.accent}>Perguntas frequentes</Eyebrow>
-            <H2>Antes de decidir</H2>
-            <FaqAccordion items={faqAll} accent={s.cor.accent} />
           </div>
-        </Plan10Section>
+        </section>
       )}
-    </>
+
+      {/* FAQ */}
+      {faqAll.length > 0 && (
+        <section className="sec">
+          <div className="wrap" style={{ maxWidth: 860 }}>
+            <p className="eyebrow" style={{ color: "var(--vp)" }}>Perguntas frequentes</p>
+            <h2 className="p10-h2" style={{ marginBottom: 20 }}>Antes de decidir</h2>
+            <FaqAccordion items={faqAll} />
+          </div>
+        </section>
+      )}
+    </PageTheme>
   );
 }

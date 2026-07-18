@@ -1,36 +1,27 @@
 import { useState } from "react";
 import { submitLead } from "@/lib/leads";
-import { FONTS } from "@/lib/plan10";
 
 interface Props {
   interesse: string;
   perfilInicial?: "PF" | "PJ";
-  accent: string;
-  primary: string;
   origem?: string;
 }
 
-export function LeadForm({ interesse, perfilInicial = "PF", accent, primary, origem }: Props) {
+const WA = (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+    <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.5-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5 0-.2 0-.4-.1-.5-.1-.1-.6-1.5-.9-2.1-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.3c1.4.8 3.1 1.3 5 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+  </svg>
+);
+
+export function LeadForm({ interesse, perfilInicial = "PF", origem }: Props) {
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [email, setEmail] = useState("");
-  const [perfil, setPerfil] = useState<"PF" | "PJ">(perfilInicial);
+  const [perfil] = useState<"PF" | "PJ">(perfilInicial);
   const [mensagem, setMensagem] = useState("");
   const [consent, setConsent] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "ok" | "err">("idle");
   const [errMsg, setErrMsg] = useState("");
-
-  const inputStyle: React.CSSProperties = {
-    width: "100%",
-    padding: "12px 14px",
-    borderRadius: 8,
-    background: "rgba(246,241,231,0.05)",
-    border: "1px solid rgba(246,241,231,0.15)",
-    color: "#F6F1E7",
-    fontFamily: FONTS.body,
-    fontSize: "0.95rem",
-    outline: "none",
-  };
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -45,16 +36,7 @@ export function LeadForm({ interesse, perfilInicial = "PF", accent, primary, ori
     }
     setState("sending");
     try {
-      await submitLead({
-        nome,
-        whatsapp,
-        email,
-        perfil,
-        interesse,
-        mensagem,
-        consentimento: consent,
-        origem,
-      });
+      await submitLead({ nome, whatsapp, email, perfil, interesse, mensagem, consentimento: consent, origem });
       setState("ok");
     } catch (err) {
       setState("err");
@@ -64,139 +46,54 @@ export function LeadForm({ interesse, perfilInicial = "PF", accent, primary, ori
 
   if (state === "ok") {
     return (
-      <div
-        style={{
-          padding: 32,
-          borderRadius: 8,
-          border: `1px solid ${accent}`,
-          fontFamily: FONTS.body,
-          color: "#F6F1E7",
-          background: "rgba(246,241,231,0.03)",
-        }}
-      >
-        Recebemos seu interesse. Um consultor Plan10 vai retornar com o próximo passo.
+      <div className="p10-form" style={{ textAlign: "center" }}>
+        <p style={{ color: "#fff", fontFamily: "var(--fb)", fontSize: "1rem", margin: 0 }}>
+          Recebemos seu interesse. Um consultor Plan10 vai retornar com o próximo passo.
+        </p>
       </div>
     );
   }
 
-  const eyebrow: React.CSSProperties = {
-    fontFamily: FONTS.eyebrow,
-    fontSize: "0.72rem",
-    letterSpacing: "0.14em",
-    textTransform: "uppercase",
-    color: "rgba(246,241,231,0.7)",
-    margin: "0 0 6px",
-    display: "block",
-  };
-
   return (
-    <form
-      onSubmit={onSubmit}
-      style={{ display: "grid", gap: 16, color: "#F6F1E7", maxWidth: 640 }}
-      noValidate
-    >
+    <form onSubmit={onSubmit} className="p10-form" noValidate>
       <label>
-        <span style={eyebrow}>Nome</span>
-        <input style={inputStyle} value={nome} onChange={(e) => setNome(e.target.value)} required />
+        <span className="eyebrow">Nome</span>
+        <input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome completo" required />
       </label>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      <div className="row">
         <label>
-          <span style={eyebrow}>WhatsApp</span>
-          <input
-            style={inputStyle}
-            value={whatsapp}
-            onChange={(e) => setWhatsapp(e.target.value)}
-            required
-            inputMode="tel"
-          />
+          <span className="eyebrow">WhatsApp</span>
+          <input value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} inputMode="tel" placeholder="(11) 90000-0000" required />
         </label>
         <label>
-          <span style={eyebrow}>E-mail</span>
-          <input
-            style={inputStyle}
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+          <span className="eyebrow">E-mail</span>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" required />
         </label>
       </div>
-      <div>
-        <span style={eyebrow}>Perfil</span>
-        <div style={{ display: "flex", gap: 8 }}>
-          {(["PF", "PJ"] as const).map((k) => (
-            <button
-              type="button"
-              key={k}
-              onClick={() => setPerfil(k)}
-              style={{
-                padding: "10px 16px",
-                borderRadius: 6,
-                border: `1px solid ${perfil === k ? accent : "rgba(246,241,231,0.2)"}`,
-                background: perfil === k ? accent : "transparent",
-                color: perfil === k ? "#10141A" : "#F6F1E7",
-                fontFamily: FONTS.eyebrow,
-                fontSize: "0.78rem",
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                cursor: "pointer",
-                fontWeight: 600,
-              }}
-            >
-              {k === "PF" ? "Para você" : "Para empresa"}
-            </button>
-          ))}
-        </div>
-      </div>
       <label>
-        <span style={eyebrow}>Interesse</span>
-        <input style={inputStyle} value={interesse} readOnly />
+        <span className="eyebrow">Mensagem (opcional)</span>
+        <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
       </label>
-      <label>
-        <span style={eyebrow}>Mensagem (opcional)</span>
-        <textarea
-          style={{ ...inputStyle, minHeight: 96, resize: "vertical" }}
-          value={mensagem}
-          onChange={(e) => setMensagem(e.target.value)}
-        />
-      </label>
-      <label style={{ display: "flex", gap: 10, alignItems: "flex-start", fontFamily: FONTS.body, fontSize: "0.88rem", lineHeight: 1.5 }}>
-        <input
-          type="checkbox"
-          checked={consent}
-          onChange={(e) => setConsent(e.target.checked)}
-          style={{ marginTop: 4 }}
-        />
-        <span style={{ opacity: 0.85 }}>
-          Concordo com o tratamento dos meus dados conforme a Política de Privacidade da Plan10, para o retorno de um consultor.
-        </span>
+      <label className="check">
+        <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
+        <span>Concordo com o tratamento dos meus dados conforme a Política de Privacidade da Plan10.</span>
       </label>
       {errMsg && (
-        <p style={{ fontFamily: FONTS.body, fontSize: "0.88rem", color: "#E07840", margin: 0 }}>
-          {errMsg}
-        </p>
+        <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
       )}
-      <button
-        type="submit"
-        disabled={state === "sending"}
-        style={{
-          justifySelf: "start",
-          padding: "14px 26px",
-          borderRadius: 8,
-          background: primary,
-          color: "#F6F1E7",
-          fontFamily: FONTS.eyebrow,
-          fontSize: "0.85rem",
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          fontWeight: 600,
-          border: "none",
-          cursor: state === "sending" ? "wait" : "pointer",
-          opacity: state === "sending" ? 0.7 : 1,
-        }}
-      >
-        {state === "sending" ? "Enviando..." : "Falar com um consultor"}
-      </button>
+      <div className="actions">
+        <button type="submit" disabled={state === "sending"} className="btn btn-primary" style={{ opacity: state === "sending" ? 0.7 : 1 }}>
+          {state === "sending" ? "Enviando..." : "Falar com um consultor"}
+        </button>
+        <a
+          href={`https://wa.me/5511938012222?text=${encodeURIComponent(`Olá! Tenho interesse em ${interesse}.`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-wa"
+        >
+          {WA} WhatsApp
+        </a>
+      </div>
     </form>
   );
 }
