@@ -30,7 +30,7 @@ export const Route = createFileRoute("/solucoes/$solucao")({
 });
 
 function SolucaoPage() {
-  const { solucao: s } = Route.useLoaderData();
+  const { solucao: s } = Route.useLoaderData() as { solucao: Solucao };
   const activeCats = s.categorias.filter((c) => c.nucleos.length > 0);
   const wipCats = s.categorias.filter((c) => c.nucleos.length === 0);
 

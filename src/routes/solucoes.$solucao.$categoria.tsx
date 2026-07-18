@@ -31,7 +31,7 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria")({
 });
 
 function CategoriaPage() {
-  const { solucao: s, categoria: c } = Route.useLoaderData();
+  const { solucao: s, categoria: c } = Route.useLoaderData() as { solucao: Solucao; categoria: Categoria };
   return (
     <>
       <Plan10Section cor={s.cor}>

@@ -36,7 +36,11 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
 });
 
 function NucleoPage() {
-  const { solucao: s, categoria: c, nucleo: n } = Route.useLoaderData();
+  const { solucao: s, categoria: c, nucleo: n } = Route.useLoaderData() as {
+    solucao: Solucao;
+    categoria: Categoria;
+    nucleo: Nucleo;
+  };
   const [perfil, setPerfil] = useState<"PF" | "PJ">("PF");
   const filtered = useMemo(() => n.products.filter((p) => p.perfil === perfil), [n, perfil]);
 
