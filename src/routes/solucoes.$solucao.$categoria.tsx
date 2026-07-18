@@ -1,10 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { findCategoria } from "@/data/solutions";
+import { findCategoria, type Solucao, type Categoria } from "@/data/solutions";
 import { Plan10Section, Eyebrow, Display, Breadcrumb } from "@/components/plan10/Shell";
 import { FONTS } from "@/lib/plan10";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria")({
-  loader: ({ params }) => {
+  loader: ({ params }): { solucao: Solucao; categoria: Categoria } => {
     const found = findCategoria(params.solucao, params.categoria);
     if (!found) throw notFound();
     return found;

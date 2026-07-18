@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermosRouteImport } from './routes/termos'
+import { Route as SolucoesRouteImport } from './routes/solucoes'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as Servicos24hRouteImport } from './routes/servicos-24h'
 import { Route as SegurosRouteImport } from './routes/seguros'
@@ -22,12 +23,20 @@ import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as ConsorciosRouteImport } from './routes/consorcios'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolucoesSolucaoRouteImport } from './routes/solucoes.$solucao'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
+import { Route as SolucoesSolucaoCategoriaRouteImport } from './routes/solucoes.$solucao.$categoria'
+import { Route as SolucoesSolucaoCategoriaNucleoRouteImport } from './routes/solucoes.$solucao.$categoria.$nucleo'
 
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
   path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesRoute = SolucoesRouteImport.update({
+  id: '/solucoes',
+  path: '/solucoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -90,6 +99,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesSolucaoRoute = SolucoesSolucaoRouteImport.update({
+  id: '/$solucao',
+  path: '/$solucao',
+  getParentRoute: () => SolucoesRoute,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -100,6 +114,18 @@ const ApiContactRoute = ApiContactRouteImport.update({
   path: '/api/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesSolucaoCategoriaRoute =
+  SolucoesSolucaoCategoriaRouteImport.update({
+    id: '/$categoria',
+    path: '/$categoria',
+    getParentRoute: () => SolucoesSolucaoRoute,
+  } as any)
+const SolucoesSolucaoCategoriaNucleoRoute =
+  SolucoesSolucaoCategoriaNucleoRouteImport.update({
+    id: '/$nucleo',
+    path: '/$nucleo',
+    getParentRoute: () => SolucoesSolucaoCategoriaRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -114,9 +140,13 @@ export interface FileRoutesByFullPath {
   '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/solucoes': typeof SolucoesRouteWithChildren
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
+  '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
+  '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -131,9 +161,13 @@ export interface FileRoutesByTo {
   '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/solucoes': typeof SolucoesRouteWithChildren
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
+  '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
+  '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -149,9 +183,13 @@ export interface FileRoutesById {
   '/seguros': typeof SegurosRoute
   '/servicos-24h': typeof Servicos24hRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/solucoes': typeof SolucoesRouteWithChildren
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
+  '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
+  '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -168,9 +206,13 @@ export interface FileRouteTypes {
     | '/seguros'
     | '/servicos-24h'
     | '/sitemap.xml'
+    | '/solucoes'
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/solucoes/$solucao'
+    | '/solucoes/$solucao/$categoria'
+    | '/solucoes/$solucao/$categoria/$nucleo'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -185,9 +227,13 @@ export interface FileRouteTypes {
     | '/seguros'
     | '/servicos-24h'
     | '/sitemap.xml'
+    | '/solucoes'
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/solucoes/$solucao'
+    | '/solucoes/$solucao/$categoria'
+    | '/solucoes/$solucao/$categoria/$nucleo'
   id:
     | '__root__'
     | '/'
@@ -202,9 +248,13 @@ export interface FileRouteTypes {
     | '/seguros'
     | '/servicos-24h'
     | '/sitemap.xml'
+    | '/solucoes'
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/solucoes/$solucao'
+    | '/solucoes/$solucao/$categoria'
+    | '/solucoes/$solucao/$categoria/$nucleo'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -220,6 +270,7 @@ export interface RootRouteChildren {
   SegurosRoute: typeof SegurosRoute
   Servicos24hRoute: typeof Servicos24hRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SolucoesRoute: typeof SolucoesRouteWithChildren
   TermosRoute: typeof TermosRoute
   ApiContactRoute: typeof ApiContactRoute
 }
@@ -231,6 +282,13 @@ declare module '@tanstack/react-router' {
       path: '/termos'
       fullPath: '/termos'
       preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes': {
+      id: '/solucoes'
+      path: '/solucoes'
+      fullPath: '/solucoes'
+      preLoaderRoute: typeof SolucoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -317,6 +375,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/$solucao': {
+      id: '/solucoes/$solucao'
+      path: '/$solucao'
+      fullPath: '/solucoes/$solucao'
+      preLoaderRoute: typeof SolucoesSolucaoRouteImport
+      parentRoute: typeof SolucoesRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -331,6 +396,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/$solucao/$categoria': {
+      id: '/solucoes/$solucao/$categoria'
+      path: '/$categoria'
+      fullPath: '/solucoes/$solucao/$categoria'
+      preLoaderRoute: typeof SolucoesSolucaoCategoriaRouteImport
+      parentRoute: typeof SolucoesSolucaoRoute
+    }
+    '/solucoes/$solucao/$categoria/$nucleo': {
+      id: '/solucoes/$solucao/$categoria/$nucleo'
+      path: '/$nucleo'
+      fullPath: '/solucoes/$solucao/$categoria/$nucleo'
+      preLoaderRoute: typeof SolucoesSolucaoCategoriaNucleoRouteImport
+      parentRoute: typeof SolucoesSolucaoCategoriaRoute
+    }
   }
 }
 
@@ -343,6 +422,44 @@ const BlogRouteChildren: BlogRouteChildren = {
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface SolucoesSolucaoCategoriaRouteChildren {
+  SolucoesSolucaoCategoriaNucleoRoute: typeof SolucoesSolucaoCategoriaNucleoRoute
+}
+
+const SolucoesSolucaoCategoriaRouteChildren: SolucoesSolucaoCategoriaRouteChildren =
+  {
+    SolucoesSolucaoCategoriaNucleoRoute: SolucoesSolucaoCategoriaNucleoRoute,
+  }
+
+const SolucoesSolucaoCategoriaRouteWithChildren =
+  SolucoesSolucaoCategoriaRoute._addFileChildren(
+    SolucoesSolucaoCategoriaRouteChildren,
+  )
+
+interface SolucoesSolucaoRouteChildren {
+  SolucoesSolucaoCategoriaRoute: typeof SolucoesSolucaoCategoriaRouteWithChildren
+}
+
+const SolucoesSolucaoRouteChildren: SolucoesSolucaoRouteChildren = {
+  SolucoesSolucaoCategoriaRoute: SolucoesSolucaoCategoriaRouteWithChildren,
+}
+
+const SolucoesSolucaoRouteWithChildren = SolucoesSolucaoRoute._addFileChildren(
+  SolucoesSolucaoRouteChildren,
+)
+
+interface SolucoesRouteChildren {
+  SolucoesSolucaoRoute: typeof SolucoesSolucaoRouteWithChildren
+}
+
+const SolucoesRouteChildren: SolucoesRouteChildren = {
+  SolucoesSolucaoRoute: SolucoesSolucaoRouteWithChildren,
+}
+
+const SolucoesRouteWithChildren = SolucoesRoute._addFileChildren(
+  SolucoesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -357,19 +474,10 @@ const rootRouteChildren: RootRouteChildren = {
   SegurosRoute: SegurosRoute,
   Servicos24hRoute: Servicos24hRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SolucoesRoute: SolucoesRouteWithChildren,
   TermosRoute: TermosRoute,
   ApiContactRoute: ApiContactRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

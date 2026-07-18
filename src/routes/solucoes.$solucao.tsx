@@ -1,10 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { findSolucao } from "@/data/solutions";
-import { Plan10Section, Eyebrow, Display, H2, Breadcrumb } from "@/components/plan10/Shell";
+import { findSolucao, type Solucao } from "@/data/solutions";
+import { Plan10Section, Eyebrow, Display, Breadcrumb } from "@/components/plan10/Shell";
 import { FONTS } from "@/lib/plan10";
 
 export const Route = createFileRoute("/solucoes/$solucao")({
-  loader: ({ params }) => {
+  loader: ({ params }): { solucao: Solucao } => {
     const s = findSolucao(params.solucao);
     if (!s) throw notFound();
     return { solucao: s };
