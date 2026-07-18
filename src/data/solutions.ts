@@ -189,34 +189,9 @@ export const solutions: Solucao[] = [
       "Proteger é organizar riscos com critério, sem excesso nem lacuna.",
     categorias: [],
   },
-  {
-    slug: "financeiras",
-    nome: "Soluções financeiras",
-    cor: { bg: "#10141A", primary: "#5A6B7B", accent: "#C9A83C", soft: "#F1EFE9" },
-    hero: "Planejamento financeiro com serenidade e precisão",
-    subHero: "Consórcio, investimentos e planejamento sob medida.",
-    aberturaConsultiva:
-      "Decisões financeiras premium exigem tempo, contexto e método.",
-    categorias: [],
-  },
-  {
-    slug: "crescimento",
-    nome: "Crescimento",
-    cor: { bg: "#3D2870", primary: "#7B5BB5", accent: "#9B7ED4", soft: "#F2EEF9" },
-    hero: "Educação, carreira e desenvolvimento contínuo",
-    subHero: "Caminhos para evoluir em cada estágio da vida.",
-    aberturaConsultiva: "Crescer requer suporte, direção e ambiente.",
-    categorias: [],
-  },
-  {
-    slug: "assistencia",
-    nome: "Assistência",
-    cor: { bg: "#3D1A00", primary: "#C45C2E", accent: "#E07840", soft: "#FAF0EA" },
-    hero: "Suporte prático para o dia a dia",
-    subHero: "Assistências que resolvem quando você precisa.",
-    aberturaConsultiva: "Assistência é sobre estar por perto na hora certa.",
-    categorias: [],
-  },
+  pickLiberada("financeiras"),
+  pickLiberada("crescimento"),
+  pickLiberada("assistencia"),
 ];
 
 export function findSolucao(slug: string): Solucao | undefined {
