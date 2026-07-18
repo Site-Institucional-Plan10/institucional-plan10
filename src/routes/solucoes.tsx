@@ -66,19 +66,30 @@ function SolucoesIndex() {
                     color: s.cor.accent,
                   }}
                 >
-                Solução
-              </span>
-              <h2 style={{ fontFamily: FONTS.display, fontSize: "1.6rem", fontWeight: 500, margin: 0, lineHeight: 1.15 }}>
-                {s.nome}
-              </h2>
-              <p style={{ fontFamily: FONTS.body, fontSize: "0.95rem", lineHeight: 1.55, opacity: 0.82, margin: 0 }}>
-                {s.subHero}
-              </p>
-              <span style={{ marginTop: "auto", fontFamily: FONTS.eyebrow, fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase", color: s.cor.accent }}>
-                Conhecer →
-              </span>
-            </Link>
-          ))}
+                  {ativa ? "Solução" : "Em preparação"}
+                </span>
+                <h2 style={{ fontFamily: FONTS.display, fontSize: "1.6rem", fontWeight: 500, margin: 0, lineHeight: 1.15, color: "#F6F1E7" }}>
+                  {s.nome}
+                </h2>
+                <p style={{ fontFamily: FONTS.body, fontSize: "0.95rem", lineHeight: 1.55, opacity: 0.9, margin: 0, color: "#F6F1E7" }}>
+                  {s.subHero}
+                </p>
+                <span style={{ marginTop: "auto", fontFamily: FONTS.eyebrow, fontSize: "0.75rem", letterSpacing: "0.12em", textTransform: "uppercase", color: s.cor.accent }}>
+                  {ativa ? "Conhecer →" : "Em breve"}
+                </span>
+              </>
+            );
+            return ativa ? (
+              <Link key={s.slug} to="/solucoes/$solucao" params={{ solucao: s.slug }} style={cardStyle}>
+                {body}
+              </Link>
+            ) : (
+              <div key={s.slug} aria-disabled="true" style={cardStyle}>
+                {body}
+              </div>
+            );
+          })}
+
         </div>
       </section>
 
