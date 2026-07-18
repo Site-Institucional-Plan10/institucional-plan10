@@ -42,6 +42,20 @@ export function ProductCard({ product, nucleoNome, onPrimary }: Props) {
         </p>
       )}
 
+      {product.faq && product.faq.length > 0 && (
+        <details className="prod-faq">
+          <summary>Perguntas frequentes ({product.faq.length})</summary>
+          <div className="prod-faq-list">
+            {product.faq.map((f, i) => (
+              <div key={i} className="prod-faq-item">
+                <p className="q">{f.q}</p>
+                <p className="a">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </details>
+      )}
+
       <div className="prod-ctas">
         {hasLink ? (
           <a href={product.linkPorto} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
