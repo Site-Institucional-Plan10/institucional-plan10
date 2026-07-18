@@ -27,7 +27,9 @@ import { Route as SolucoesIndexRouteImport } from './routes/solucoes.index'
 import { Route as SolucoesSolucaoRouteImport } from './routes/solucoes.$solucao'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
+import { Route as SolucoesSolucaoIndexRouteImport } from './routes/solucoes.$solucao.index'
 import { Route as SolucoesSolucaoCategoriaRouteImport } from './routes/solucoes.$solucao.$categoria'
+import { Route as SolucoesSolucaoCategoriaIndexRouteImport } from './routes/solucoes.$solucao.$categoria.index'
 import { Route as SolucoesSolucaoCategoriaNucleoRouteImport } from './routes/solucoes.$solucao.$categoria.$nucleo'
 
 const TermosRoute = TermosRouteImport.update({
@@ -120,11 +122,22 @@ const ApiContactRoute = ApiContactRouteImport.update({
   path: '/api/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesSolucaoIndexRoute = SolucoesSolucaoIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SolucoesSolucaoRoute,
+} as any)
 const SolucoesSolucaoCategoriaRoute =
   SolucoesSolucaoCategoriaRouteImport.update({
     id: '/$categoria',
     path: '/$categoria',
     getParentRoute: () => SolucoesSolucaoRoute,
+  } as any)
+const SolucoesSolucaoCategoriaIndexRoute =
+  SolucoesSolucaoCategoriaIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => SolucoesSolucaoCategoriaRoute,
   } as any)
 const SolucoesSolucaoCategoriaNucleoRoute =
   SolucoesSolucaoCategoriaNucleoRouteImport.update({
@@ -153,7 +166,9 @@ export interface FileRoutesByFullPath {
   '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
   '/solucoes/': typeof SolucoesIndexRoute
   '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
+  '/solucoes/$solucao/': typeof SolucoesSolucaoIndexRoute
   '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
+  '/solucoes/$solucao/$categoria/': typeof SolucoesSolucaoCategoriaIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -171,10 +186,10 @@ export interface FileRoutesByTo {
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
-  '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
   '/solucoes': typeof SolucoesIndexRoute
-  '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
+  '/solucoes/$solucao': typeof SolucoesSolucaoIndexRoute
   '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
+  '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -197,7 +212,9 @@ export interface FileRoutesById {
   '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
   '/solucoes/': typeof SolucoesIndexRoute
   '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
+  '/solucoes/$solucao/': typeof SolucoesSolucaoIndexRoute
   '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
+  '/solucoes/$solucao/$categoria/': typeof SolucoesSolucaoCategoriaIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -221,7 +238,9 @@ export interface FileRouteTypes {
     | '/solucoes/$solucao'
     | '/solucoes/'
     | '/solucoes/$solucao/$categoria'
+    | '/solucoes/$solucao/'
     | '/solucoes/$solucao/$categoria/$nucleo'
+    | '/solucoes/$solucao/$categoria/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -239,10 +258,10 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
-    | '/solucoes/$solucao'
     | '/solucoes'
-    | '/solucoes/$solucao/$categoria'
+    | '/solucoes/$solucao'
     | '/solucoes/$solucao/$categoria/$nucleo'
+    | '/solucoes/$solucao/$categoria'
   id:
     | '__root__'
     | '/'
@@ -264,7 +283,9 @@ export interface FileRouteTypes {
     | '/solucoes/$solucao'
     | '/solucoes/'
     | '/solucoes/$solucao/$categoria'
+    | '/solucoes/$solucao/'
     | '/solucoes/$solucao/$categoria/$nucleo'
+    | '/solucoes/$solucao/$categoria/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -413,12 +434,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/$solucao/': {
+      id: '/solucoes/$solucao/'
+      path: '/'
+      fullPath: '/solucoes/$solucao/'
+      preLoaderRoute: typeof SolucoesSolucaoIndexRouteImport
+      parentRoute: typeof SolucoesSolucaoRoute
+    }
     '/solucoes/$solucao/$categoria': {
       id: '/solucoes/$solucao/$categoria'
       path: '/$categoria'
       fullPath: '/solucoes/$solucao/$categoria'
       preLoaderRoute: typeof SolucoesSolucaoCategoriaRouteImport
       parentRoute: typeof SolucoesSolucaoRoute
+    }
+    '/solucoes/$solucao/$categoria/': {
+      id: '/solucoes/$solucao/$categoria/'
+      path: '/'
+      fullPath: '/solucoes/$solucao/$categoria/'
+      preLoaderRoute: typeof SolucoesSolucaoCategoriaIndexRouteImport
+      parentRoute: typeof SolucoesSolucaoCategoriaRoute
     }
     '/solucoes/$solucao/$categoria/$nucleo': {
       id: '/solucoes/$solucao/$categoria/$nucleo'
@@ -442,11 +477,13 @@ const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface SolucoesSolucaoCategoriaRouteChildren {
   SolucoesSolucaoCategoriaNucleoRoute: typeof SolucoesSolucaoCategoriaNucleoRoute
+  SolucoesSolucaoCategoriaIndexRoute: typeof SolucoesSolucaoCategoriaIndexRoute
 }
 
 const SolucoesSolucaoCategoriaRouteChildren: SolucoesSolucaoCategoriaRouteChildren =
   {
     SolucoesSolucaoCategoriaNucleoRoute: SolucoesSolucaoCategoriaNucleoRoute,
+    SolucoesSolucaoCategoriaIndexRoute: SolucoesSolucaoCategoriaIndexRoute,
   }
 
 const SolucoesSolucaoCategoriaRouteWithChildren =
@@ -456,10 +493,12 @@ const SolucoesSolucaoCategoriaRouteWithChildren =
 
 interface SolucoesSolucaoRouteChildren {
   SolucoesSolucaoCategoriaRoute: typeof SolucoesSolucaoCategoriaRouteWithChildren
+  SolucoesSolucaoIndexRoute: typeof SolucoesSolucaoIndexRoute
 }
 
 const SolucoesSolucaoRouteChildren: SolucoesSolucaoRouteChildren = {
   SolucoesSolucaoCategoriaRoute: SolucoesSolucaoCategoriaRouteWithChildren,
+  SolucoesSolucaoIndexRoute: SolucoesSolucaoIndexRoute,
 }
 
 const SolucoesSolucaoRouteWithChildren = SolucoesSolucaoRoute._addFileChildren(
