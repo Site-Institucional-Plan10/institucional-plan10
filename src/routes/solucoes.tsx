@@ -39,33 +39,33 @@ function SolucoesIndex() {
 
       <section style={{ background: "#F6F1E7", padding: "clamp(48px, 8vw, 96px) clamp(20px, 4vw, 40px)" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gap: 20, gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
-          {solutions.map((s) => (
-            <Link
-              key={s.slug}
-              to="/solucoes/$solucao"
-              params={{ solucao: s.slug }}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 16,
-                padding: 32,
-                background: s.cor.bg,
-                color: "#F6F1E7",
-                borderRadius: 8,
-                textDecoration: "none",
-                borderTop: `2px solid ${s.cor.accent}`,
-                minHeight: 220,
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: FONTS.eyebrow,
-                  fontSize: "0.72rem",
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: s.cor.accent,
-                }}
-              >
+          {solutions.map((s) => {
+            const ativa = s.categorias.some((c) => c.nucleos.length > 0);
+            const cardStyle = {
+              display: "flex",
+              flexDirection: "column" as const,
+              gap: 16,
+              padding: 32,
+              background: s.cor.bg,
+              color: "#F6F1E7",
+              borderRadius: 8,
+              textDecoration: "none",
+              borderTop: `2px solid ${s.cor.accent}`,
+              minHeight: 220,
+              opacity: ativa ? 1 : 0.9,
+              cursor: ativa ? "pointer" : "default",
+            };
+            const body = (
+              <>
+                <span
+                  style={{
+                    fontFamily: FONTS.eyebrow,
+                    fontSize: "0.72rem",
+                    letterSpacing: "0.16em",
+                    textTransform: "uppercase",
+                    color: s.cor.accent,
+                  }}
+                >
                 Solução
               </span>
               <h2 style={{ fontFamily: FONTS.display, fontSize: "1.6rem", fontWeight: 500, margin: 0, lineHeight: 1.15 }}>
