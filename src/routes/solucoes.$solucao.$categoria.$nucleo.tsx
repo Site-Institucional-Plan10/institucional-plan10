@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { createFileRoute, notFound } from "@tanstack/react-router";
-import { findNucleo } from "@/data/solutions";
+import { findNucleo, type Solucao, type Categoria, type Nucleo } from "@/data/solutions";
 import { Plan10Section, Eyebrow, Display, H2, Breadcrumb, Pill } from "@/components/plan10/Shell";
 import { PerfilToggle } from "@/components/plan10/PerfilToggle";
 import { ProductCard } from "@/components/plan10/ProductCard";
