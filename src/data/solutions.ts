@@ -1,3 +1,5 @@
+import { solucoesLiberadas } from "./solucoes-liberadas";
+
 export interface Product {
   id: string;
   nome: string;
