@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { type Solucao } from "@/data/solutions";
 import { Route as SolucaoRoute } from "./solucoes.$solucao";
-import { PageTheme } from "@/components/plan10/PageTheme";
+import { PageTheme, logoFor } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
   component: SolucaoPage,
@@ -11,11 +11,13 @@ function SolucaoPage() {
   const { solucao } = SolucaoRoute.useLoaderData() as { solucao: Solucao };
   const activeCats = solucao.categorias.filter((c) => c.nucleos.length > 0);
   const wipCats = solucao.categorias.filter((c) => c.nucleos.length === 0);
+  const logo = logoFor(solucao.slug);
 
   return (
     <PageTheme slug={solucao.slug}>
       <header className="p10-hero">
         <div className="p10-hero-inner">
+          {logo && <img src={logo} alt={`Logo ${solucao.nome}`} className="p10-hero-logo" />}
           <p className="eyebrow">Solução Plan10</p>
           <h1>{solucao.hero}</h1>
           <p className="lede">{solucao.subHero}</p>
