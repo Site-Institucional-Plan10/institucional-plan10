@@ -2,15 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { type Solucao } from "@/data/solutions";
 import { Plan10Section, Eyebrow, Display, Breadcrumb } from "@/components/plan10/Shell";
 import { FONTS } from "@/lib/plan10";
+import { Route as SolucaoRoute } from "./solucoes.$solucao";
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
   component: SolucaoPage,
 });
 
 function SolucaoPage() {
-  const { solucao: s } = Route.useRouteContext({ select: () => ({}) }) as never;
-  const loaderData = Route.useLoaderData({ strict: false }) as { solucao: Solucao } | undefined;
-  const solucao = loaderData?.solucao ?? s;
+  const { solucao } = SolucaoRoute.useLoaderData() as { solucao: Solucao };
   const activeCats = solucao.categorias.filter((c) => c.nucleos.length > 0);
   const wipCats = solucao.categorias.filter((c) => c.nucleos.length === 0);
 
