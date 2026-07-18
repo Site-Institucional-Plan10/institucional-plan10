@@ -31,8 +31,8 @@ function CategoriaPage() {
 
       <section className="sec sec-alt">
         <div className="wrap">
-          <p className="eyebrow" style={{ color: "var(--vp)" }}>Núcleos</p>
-          <h2 className="p10-h2" style={{ marginBottom: 24 }}>Escolha um núcleo para explorar</h2>
+          <p className="eyebrow" style={{ color: "var(--vp)" }}>Modalidades</p>
+          <h2 className="p10-h2" style={{ marginBottom: 24 }}>Escolha uma modalidade para explorar</h2>
           <div className="p10-cards">
             {c.nucleos.map((n) => (
               <Link
@@ -41,7 +41,7 @@ function CategoriaPage() {
                 params={{ solucao: s.slug, categoria: c.slug, nucleo: n.slug }}
                 className="p10-card"
               >
-                <p className="eyebrow" style={{ color: "var(--vp)" }}>Núcleo</p>
+                <p className="eyebrow" style={{ color: "var(--vp)" }}>Modalidade</p>
                 <h3>{n.nome}</h3>
                 <p>{n.hero}</p>
                 <span className="arrow">Ver opções →</span>

@@ -45,7 +45,7 @@ function NucleoPage() {
   const filtered = useMemo(() => n.products.filter((p) => p.perfil === perfil), [n, perfil]);
   const faqAll = useMemo(() => n.products.flatMap((p) => p.faq), [n]);
   const cross = useMemo(
-    () => Array.from(new Set(n.products.flatMap((p) => p.crossSelling))).slice(0, 4),
+    () => Array.from(new Set(n.products.flatMap((p) => p.crossSelling))).slice(0, 2),
     [n],
   );
 
