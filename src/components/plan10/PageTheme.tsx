@@ -338,6 +338,8 @@ const CSS = `
 .plan10-scope .p10-cards { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .plan10-scope .p10-cards { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 1024px) { .plan10-scope .p10-cards { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+.plan10-scope .p10-card-logo { height: 40px; width: auto; max-width: 160px; object-fit: contain; object-position: left center; margin-bottom: 6px; }
+.plan10-scope .p10-card.disabled .p10-card-logo { opacity: .45; filter: grayscale(1); }
 .plan10-scope .p10-card {
   background: #fff;
   border: 1px solid var(--c2);
