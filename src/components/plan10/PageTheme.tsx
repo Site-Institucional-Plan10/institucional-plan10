@@ -84,18 +84,24 @@ const CSS = `
 .plan10-scope .p10-hero {
   background: linear-gradient(150deg, var(--hero) 0%, var(--card) 55%, var(--vp) 100%);
   color: #fff;
-  padding: 52px 20px 44px;
+  padding: 72px 20px 56px;
+  overflow: visible;
 }
-.plan10-scope .p10-hero-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+@media (min-width: 768px) {
+  .plan10-scope .p10-hero { padding: 96px 40px 72px; }
+}
+.plan10-scope .p10-hero-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
 .plan10-scope .p10-hero-logo {
-  height: 56px;
+  display: block;
+  height: 44px;
   width: auto;
   max-width: 220px;
   object-fit: contain;
-  margin-bottom: 4px;
+  margin: 0 0 24px;
+  align-self: flex-start;
   filter: drop-shadow(0 2px 10px rgba(0,0,0,.25));
 }
-@media (min-width: 768px) { .plan10-scope .p10-hero-logo { height: 72px; max-width: 260px; } }
+@media (min-width: 768px) { .plan10-scope .p10-hero-logo { height: 56px; max-width: 260px; } }
 .plan10-scope .p10-hero h1 {
   font-family: var(--fd);
   font-size: clamp(1.85rem, 4.4vw, 3rem);
