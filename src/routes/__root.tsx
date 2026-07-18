@@ -117,7 +117,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,opsz,wght@0,6..30,300;0,6..30,400;0,6..30,500;0,6..30,600;0,6..30,700;0,6..30,800;1,6..30,400&family=JetBrains+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,opsz,wght@0,6..30,300;0,6..30,400;0,6..30,500;0,6..30,600;0,6..30,700;0,6..30,800;1,6..30,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <HeadContent />
