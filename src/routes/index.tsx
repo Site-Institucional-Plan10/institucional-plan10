@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: canonical("/") },
-      { rel: "preload", as: "image", href: "/assets/banners/hero-home-1.png", fetchpriority: "high" },
+      { rel: "preload", as: "image", href: "/assets/banners/hero-home-1.png", fetchPriority: "high" },
     ],
     scripts: [{ type: "application/ld+json", children: faqJsonLd(homeFaq) }],
   }),
