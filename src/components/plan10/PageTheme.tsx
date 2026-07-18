@@ -34,6 +34,19 @@ export function paletteFor(slug: string): Palette {
   return PALETTES[slug] ?? PALETTES.saude;
 }
 
+// Logo por solução (arquivos em public/assets/logos)
+export const SOLUTION_LOGOS: Record<string, string> = {
+  saude: "/assets/logos/logo-saude-odonto.png",
+  protecao: "/assets/logos/logo-seguros.png",
+  financeiras: "/assets/logos/logo-financas.png",
+  crescimento: "/assets/logos/logo-consorcios.png",
+  assistencia: "/assets/logos/logo-servicos.png",
+};
+
+export function logoFor(slug: string): string | undefined {
+  return SOLUTION_LOGOS[slug];
+}
+
 // Global stylesheet — injected once by PageTheme. Scoped under .plan10-scope.
 const CSS = `
 .plan10-scope {
@@ -74,6 +87,15 @@ const CSS = `
   padding: 52px 20px 44px;
 }
 .plan10-scope .p10-hero-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.plan10-scope .p10-hero-logo {
+  height: 56px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,.25));
+}
+@media (min-width: 768px) { .plan10-scope .p10-hero-logo { height: 72px; max-width: 260px; } }
 .plan10-scope .p10-hero h1 {
   font-family: var(--fd);
   font-size: clamp(1.85rem, 4.4vw, 3rem);
@@ -316,6 +338,8 @@ const CSS = `
 .plan10-scope .p10-cards { display: grid; gap: 16px; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .plan10-scope .p10-cards { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 1024px) { .plan10-scope .p10-cards { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+.plan10-scope .p10-card-logo { height: 40px; width: auto; max-width: 160px; object-fit: contain; object-position: left center; margin-bottom: 6px; }
+.plan10-scope .p10-card.disabled .p10-card-logo { opacity: .45; filter: grayscale(1); }
 .plan10-scope .p10-card {
   background: #fff;
   border: 1px solid var(--c2);
