@@ -61,7 +61,7 @@ function NucleoPage() {
         <div className="p10-hero-inner">
           <p className="eyebrow">{c.nome}</p>
           <h1>{n.nome}</h1>
-          <p className="lede">{n.hero}</p>
+          {n.hero && <p className="lede">{n.hero}</p>}
           {n.blocoValor.length > 0 && (
             <div className="pills" style={{ marginTop: 6 }}>
               {n.blocoValor.map((b) => (
