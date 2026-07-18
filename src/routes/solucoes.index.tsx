@@ -45,6 +45,7 @@ function SolucoesIndex() {
           {solutions.map((s) => {
             const ativa = s.categorias.some((c) => c.nucleos.length > 0);
             const p = paletteFor(s.slug);
+            const logo = logoFor(s.slug);
             const cardVars = {
               "--vp": p.vp,
               "--va": p.va,
@@ -58,6 +59,7 @@ function SolucoesIndex() {
                   className="p10-card"
                   style={cardVars}
                 >
+                  {logo && <img src={logo} alt={`Logo ${s.nome}`} className="p10-card-logo" />}
                   <p className="eyebrow" style={{ color: p.vp }}>Solução</p>
                   <h3>{s.nome}</h3>
                   <p>{s.subHero}</p>
@@ -67,6 +69,7 @@ function SolucoesIndex() {
             }
             return (
               <div key={s.slug} className="p10-card disabled" aria-disabled="true">
+                {logo && <img src={logo} alt={`Logo ${s.nome}`} className="p10-card-logo" />}
                 <p className="eyebrow" style={{ color: "#8A7A3A" }}>Em preparação</p>
                 <h3>{s.nome}</h3>
                 <p>{s.subHero}</p>
