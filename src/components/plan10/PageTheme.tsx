@@ -248,6 +248,34 @@ const CSS = `
   font-weight: 600;
 }
 
+.plan10-scope .prod-item .prod-faq { border-top: 1px solid var(--c2); padding-top: 10px; margin-top: 2px; }
+.plan10-scope .prod-item .prod-faq > summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--fl);
+  font-size: .72rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--vp);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.plan10-scope .prod-item .prod-faq > summary::-webkit-details-marker { display: none; }
+.plan10-scope .prod-item .prod-faq > summary::after {
+  content: '+';
+  margin-left: auto;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--vp);
+}
+.plan10-scope .prod-item .prod-faq[open] > summary::after { content: '−'; }
+.plan10-scope .prod-item .prod-faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.plan10-scope .prod-item .prod-faq-item .q { font-family: var(--fb); font-size: .88rem; font-weight: 600; color: var(--preto); margin: 0 0 4px; }
+.plan10-scope .prod-item .prod-faq-item .a { font-family: var(--fb); font-size: .86rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
+
+
 /* Buttons */
 .plan10-scope .btn {
   display: inline-flex;
