@@ -55,7 +55,7 @@ function SolucaoPage() {
                 params={{ solucao: solucao.slug, categoria: c.slug }}
                 className="p10-card"
               >
-                <p className="eyebrow" style={{ color: "var(--vp)" }}>Categoria</p>
+                <p className="eyebrow" style={{ color: "var(--vp)" }}>Caminho</p>
                 <h3>{c.nome}</h3>
                 {c.hero && <p>{c.hero}</p>}
                 <span className="arrow">Explorar →</span>
