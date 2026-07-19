@@ -1,5 +1,5 @@
-// Plan10 · dados gerados do catálogo 00.2 (Financeiras, Crescimento, Assistência)
-// Régua de linguagem aplicada. Saúde e Proteção entram depois.
+// Plan10 · dados gerados do catálogo 00.2 (5 soluções)
+// Régua de linguagem aplicada.
 
 export const solucoesLiberadas = [
   {
@@ -6111,6 +6111,9356 @@ export const solucoesLiberadas = [
                 "crossSelling": [
                   "Proteção à vida e ao patrimônio",
                   "Assistência de mobilidade"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "protecao",
+    "nome": "Proteção à vida e ao patrimônio",
+    "cor": {
+      "bg": "#1C4E80",
+      "primary": "#2B6CB0",
+      "accent": "#5BA3D9",
+      "soft": "#F0F6FC"
+    },
+    "hero": "Proteger o que importa começa por entender o que está exposto.",
+    "subHero": "Vida, patrimônio, riscos, responsabilidades e continuidade em uma leitura consultiva integrada.",
+    "aberturaConsultiva": "Proteger é organizar riscos com critério, sem excesso nem lacuna.",
+    "categorias": [
+      {
+        "slug": "agronegocio-e-campo",
+        "nome": "Agronegócio e campo",
+        "hero": "Agronegócio, benfeitoria rural, safra e produção e vida rural e animais.",
+        "nucleos": [
+          {
+            "slug": "agronegocio",
+            "nome": "Agronegócio",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para agronegócio com clareza.",
+            "blocoValor": [
+              "Agro"
+            ],
+            "porque": "Leitura da exposição, seguradora/parceiro, abrangência, limites, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-agricola-empresarial",
+                "nome": "Seguro agrícola empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para agronegócio, com leitura de produção, patrimônio rural e continuidade da operação.",
+                "caracteristicas": [
+                  "Análise de exposição",
+                  "Coberturas e limites conforme apólice",
+                  "Critérios de elegibilidade",
+                  "Orientação consultiva para contratação"
+                ],
+                "itensInclusos": [
+                  "Coberturas contratadas",
+                  "Limites de indenização",
+                  "Franquias quando aplicável",
+                  "Assistências previstas",
+                  "Suporte em evento coberto"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para agronegócio com clareza.",
+                "beneficios": "Mais clareza para escolher, melhor leitura da exposição e próximo passo definido com apoio consultivo.",
+                "fechamento": "Seguro agrícola empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro agrícola empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade."
+                  },
+                  {
+                    "q": "O que validar antes de contratar?",
+                    "a": "Coberturas, limites, exclusões, franquias, carências quando aplicáveis e documentação exigida."
+                  },
+                  {
+                    "q": "Como escolher o formato?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-aquicola-empresarial",
+                "nome": "Seguro aquícola empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para agronegócio, com leitura de produção, patrimônio rural e continuidade da operação.",
+                "caracteristicas": [
+                  "Análise de exposição",
+                  "Coberturas e limites conforme apólice",
+                  "Critérios de elegibilidade",
+                  "Orientação consultiva para contratação"
+                ],
+                "itensInclusos": [
+                  "Coberturas contratadas",
+                  "Limites de indenização",
+                  "Franquias quando aplicável",
+                  "Assistências previstas",
+                  "Suporte em evento coberto"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para agronegócio com clareza.",
+                "beneficios": "Mais clareza para escolher, melhor leitura da exposição e próximo passo definido com apoio consultivo.",
+                "fechamento": "Seguro aquícola empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro aquícola empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade."
+                  },
+                  {
+                    "q": "O que validar antes de contratar?",
+                    "a": "Coberturas, limites, exclusões, franquias, carências quando aplicáveis e documentação exigida."
+                  },
+                  {
+                    "q": "Como escolher o formato?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-florestas-empresarial",
+                "nome": "Seguro florestas empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para agronegócio, com leitura de produção, patrimônio rural e continuidade da operação.",
+                "caracteristicas": [
+                  "Análise de exposição",
+                  "Coberturas e limites conforme apólice",
+                  "Critérios de elegibilidade",
+                  "Orientação consultiva para contratação"
+                ],
+                "itensInclusos": [
+                  "Coberturas contratadas",
+                  "Limites de indenização",
+                  "Franquias quando aplicável",
+                  "Assistências previstas",
+                  "Suporte em evento coberto"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para agronegócio com clareza.",
+                "beneficios": "Mais clareza para escolher, melhor leitura da exposição e próximo passo definido com apoio consultivo.",
+                "fechamento": "Seguro florestas empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro florestas empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade."
+                  },
+                  {
+                    "q": "O que validar antes de contratar?",
+                    "a": "Coberturas, limites, exclusões, franquias, carências quando aplicáveis e documentação exigida."
+                  },
+                  {
+                    "q": "Como escolher o formato?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-pecuario-empresarial",
+                "nome": "Seguro pecuário empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para agronegócio, com leitura de produção, patrimônio rural e continuidade da operação.",
+                "caracteristicas": [
+                  "Análise de exposição",
+                  "Coberturas e limites conforme apólice",
+                  "Critérios de elegibilidade",
+                  "Orientação consultiva para contratação"
+                ],
+                "itensInclusos": [
+                  "Coberturas contratadas",
+                  "Limites de indenização",
+                  "Franquias quando aplicável",
+                  "Assistências previstas",
+                  "Suporte em evento coberto"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para agronegócio com clareza.",
+                "beneficios": "Mais clareza para escolher, melhor leitura da exposição e próximo passo definido com apoio consultivo.",
+                "fechamento": "Seguro pecuário empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro pecuário empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade."
+                  },
+                  {
+                    "q": "O que validar antes de contratar?",
+                    "a": "Coberturas, limites, exclusões, franquias, carências quando aplicáveis e documentação exigida."
+                  },
+                  {
+                    "q": "Como escolher o formato?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "benfeitoria-rural",
+            "nome": "Benfeitoria rural",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para benfeitoria rural, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Agro"
+            ],
+            "porque": "Tipo de estrutura, valor de reposição, franquias e prazo de atendimento em sinistro, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-animais-empresarial",
+                "nome": "Seguro de animais empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para benfeitorias, estruturas e bens físicos da operação rural empresarial, como galpões, silos, cercas e casas de máquinas.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem rural",
+                  "Definição de cobertura conforme uso e localização da propriedade",
+                  "Apólice com limites e franquias específicos",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Vendaval, granizo e danos elétricos",
+                  "Roubo e furto qualificado de bens fixos",
+                  "Desmoronamento",
+                  "Assistência para reparo emergencial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para benfeitoria rural, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação rural sem interrupção por dano estrutural, com reposição ou reparo do bem coberto e menor exposição financeira do negócio.",
+                "fechamento": "Seguro de animais empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de animais empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a benfeitoria rural."
+                  },
+                  {
+                    "q": "O que está coberto em caso de dano à estrutura rural?",
+                    "a": "Incêndio, raio, explosão, vendaval, granizo, danos elétricos, roubo qualificado de bens fixos e desmoronamento, conforme apólice contratada."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de animais empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-de-benfeitorias-rurais-empresarial",
+                "nome": "Seguro de benfeitorias rurais empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para benfeitorias, estruturas e bens físicos da operação rural empresarial, como galpões, silos, cercas e casas de máquinas.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem rural",
+                  "Definição de cobertura conforme uso e localização da propriedade",
+                  "Apólice com limites e franquias específicos",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Vendaval, granizo e danos elétricos",
+                  "Roubo e furto qualificado de bens fixos",
+                  "Desmoronamento",
+                  "Assistência para reparo emergencial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para benfeitoria rural, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação rural sem interrupção por dano estrutural, com reposição ou reparo do bem coberto e menor exposição financeira do negócio.",
+                "fechamento": "Seguro de benfeitorias rurais empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de benfeitorias rurais empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a benfeitoria rural."
+                  },
+                  {
+                    "q": "O que está coberto em caso de dano à estrutura rural?",
+                    "a": "Incêndio, raio, explosão, vendaval, granizo, danos elétricos, roubo qualificado de bens fixos e desmoronamento, conforme apólice contratada."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de benfeitorias rurais empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-penhor-rural-empresarial",
+                "nome": "Seguro penhor rural empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para benfeitorias, estruturas e bens físicos da operação rural empresarial, como galpões, silos, cercas e casas de máquinas.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem rural",
+                  "Definição de cobertura conforme uso e localização da propriedade",
+                  "Apólice com limites e franquias específicos",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Vendaval, granizo e danos elétricos",
+                  "Roubo e furto qualificado de bens fixos",
+                  "Desmoronamento",
+                  "Assistência para reparo emergencial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para benfeitoria rural, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação rural sem interrupção por dano estrutural, com reposição ou reparo do bem coberto e menor exposição financeira do negócio.",
+                "fechamento": "Seguro penhor rural empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro penhor rural empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a benfeitoria rural."
+                  },
+                  {
+                    "q": "O que está coberto em caso de dano à estrutura rural?",
+                    "a": "Incêndio, raio, explosão, vendaval, granizo, danos elétricos, roubo qualificado de bens fixos e desmoronamento, conforme apólice contratada."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro penhor rural empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-vida-rural-empresarial",
+                "nome": "Seguro vida rural empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para benfeitorias, estruturas e bens físicos da operação rural empresarial, como galpões, silos, cercas e casas de máquinas.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem rural",
+                  "Definição de cobertura conforme uso e localização da propriedade",
+                  "Apólice com limites e franquias específicos",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Vendaval, granizo e danos elétricos",
+                  "Roubo e furto qualificado de bens fixos",
+                  "Desmoronamento",
+                  "Assistência para reparo emergencial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para benfeitoria rural, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação rural sem interrupção por dano estrutural, com reposição ou reparo do bem coberto e menor exposição financeira do negócio.",
+                "fechamento": "Seguro vida rural empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro vida rural empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a benfeitoria rural."
+                  },
+                  {
+                    "q": "O que está coberto em caso de dano à estrutura rural?",
+                    "a": "Incêndio, raio, explosão, vendaval, granizo, danos elétricos, roubo qualificado de bens fixos e desmoronamento, conforme apólice contratada."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro vida rural empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "safra-e-producao",
+            "nome": "Safra e produção",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger safra e produção, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Agro"
+            ],
+            "porque": "Fase produtiva, histórico de perdas, área protegida e cobertura climática disponível, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-agricola",
+                "nome": "Seguro agrícola",
+                "perfil": "PF",
+                "descricao": "Proteção para a produção agrícola, aquícola, florestal ou pecuária diante de perdas por eventos climáticos, biológicos ou operacionais.",
+                "caracteristicas": [
+                  "Enquadramento por cultura, atividade e área plantada ou criada",
+                  "Cobertura conforme a fase produtiva",
+                  "Vistoria e laudo técnico em caso de sinistro",
+                  "Indenização conforme apólice"
+                ],
+                "itensInclusos": [
+                  "Perda de produção por evento climático",
+                  "Pragas e doenças cobertas",
+                  "Frustração de safra",
+                  "Danos a rebanho, viveiro ou plantio",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger safra e produção, com orientação consultiva antes da contratação.",
+                "beneficios": "Redução do impacto financeiro de perdas na produção e mais previsibilidade para planejar o próximo ciclo produtivo.",
+                "fechamento": "Seguro agrícola ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro agrícola é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a safra e produção."
+                  },
+                  {
+                    "q": "Quais eventos climáticos e biológicos são cobertos?",
+                    "a": "Perda de produção por evento climático, pragas e doenças previstas em apólice, e frustração de safra, conforme condições contratadas."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro agrícola?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-aquicola",
+                "nome": "Seguro aquícola",
+                "perfil": "PF",
+                "descricao": "Proteção para a produção agrícola, aquícola, florestal ou pecuária diante de perdas por eventos climáticos, biológicos ou operacionais.",
+                "caracteristicas": [
+                  "Enquadramento por cultura, atividade e área plantada ou criada",
+                  "Cobertura conforme a fase produtiva",
+                  "Vistoria e laudo técnico em caso de sinistro",
+                  "Indenização conforme apólice"
+                ],
+                "itensInclusos": [
+                  "Perda de produção por evento climático",
+                  "Pragas e doenças cobertas",
+                  "Frustração de safra",
+                  "Danos a rebanho, viveiro ou plantio",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger safra e produção, com orientação consultiva antes da contratação.",
+                "beneficios": "Redução do impacto financeiro de perdas na produção e mais previsibilidade para planejar o próximo ciclo produtivo.",
+                "fechamento": "Seguro aquícola ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro aquícola é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a safra e produção."
+                  },
+                  {
+                    "q": "Quais eventos climáticos e biológicos são cobertos?",
+                    "a": "Perda de produção por evento climático, pragas e doenças previstas em apólice, e frustração de safra, conforme condições contratadas."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro aquícola?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-florestas",
+                "nome": "Seguro florestas",
+                "perfil": "PF",
+                "descricao": "Proteção para a produção agrícola, aquícola, florestal ou pecuária diante de perdas por eventos climáticos, biológicos ou operacionais.",
+                "caracteristicas": [
+                  "Enquadramento por cultura, atividade e área plantada ou criada",
+                  "Cobertura conforme a fase produtiva",
+                  "Vistoria e laudo técnico em caso de sinistro",
+                  "Indenização conforme apólice"
+                ],
+                "itensInclusos": [
+                  "Perda de produção por evento climático",
+                  "Pragas e doenças cobertas",
+                  "Frustração de safra",
+                  "Danos a rebanho, viveiro ou plantio",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger safra e produção, com orientação consultiva antes da contratação.",
+                "beneficios": "Redução do impacto financeiro de perdas na produção e mais previsibilidade para planejar o próximo ciclo produtivo.",
+                "fechamento": "Seguro florestas ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro florestas é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a safra e produção."
+                  },
+                  {
+                    "q": "Quais eventos climáticos e biológicos são cobertos?",
+                    "a": "Perda de produção por evento climático, pragas e doenças previstas em apólice, e frustração de safra, conforme condições contratadas."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro florestas?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-pecuario",
+                "nome": "Seguro pecuário",
+                "perfil": "PF",
+                "descricao": "Proteção para a produção agrícola, aquícola, florestal ou pecuária diante de perdas por eventos climáticos, biológicos ou operacionais.",
+                "caracteristicas": [
+                  "Enquadramento por cultura, atividade e área plantada ou criada",
+                  "Cobertura conforme a fase produtiva",
+                  "Vistoria e laudo técnico em caso de sinistro",
+                  "Indenização conforme apólice"
+                ],
+                "itensInclusos": [
+                  "Perda de produção por evento climático",
+                  "Pragas e doenças cobertas",
+                  "Frustração de safra",
+                  "Danos a rebanho, viveiro ou plantio",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger safra e produção, com orientação consultiva antes da contratação.",
+                "beneficios": "Redução do impacto financeiro de perdas na produção e mais previsibilidade para planejar o próximo ciclo produtivo.",
+                "fechamento": "Seguro pecuário ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro pecuário é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a safra e produção."
+                  },
+                  {
+                    "q": "Quais eventos climáticos e biológicos são cobertos?",
+                    "a": "Perda de produção por evento climático, pragas e doenças previstas em apólice, e frustração de safra, conforme condições contratadas."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro pecuário?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "vida-rural-e-animais",
+            "nome": "Vida rural e animais",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger vida rural e animais, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Agro"
+            ],
+            "porque": "Tipo de bem ou animal protegido, porte da propriedade e finalidade da cobertura, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-benfeitorias-rurais",
+                "nome": "Seguro benfeitorias rurais",
+                "perfil": "PF",
+                "descricao": "Proteção para bens rurais, benfeitorias, animais e vida no campo voltada a produtores individuais.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem, rebanho ou plantel",
+                  "Definição de cobertura por atividade e porte da propriedade",
+                  "Apólice individual com limites definidos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Danos a benfeitorias rurais",
+                  "Perda de animais por doença ou acidente",
+                  "Penhor rural como garantia de financiamento",
+                  "Cobertura de vida do produtor rural"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger vida rural e animais, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança patrimonial e continuidade da atividade rural individual diante de perdas inesperadas.",
+                "fechamento": "Seguro benfeitorias rurais ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro benfeitorias rurais é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida rural e animais."
+                  },
+                  {
+                    "q": "A cobertura inclui perda de animais e penhor rural?",
+                    "a": "Sim, conforme apólice: perda de animais por doença ou acidente, benfeitorias rurais e penhor rural vinculado a financiamento."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro benfeitorias rurais?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-de-animais",
+                "nome": "Seguro de animais",
+                "perfil": "PF",
+                "descricao": "Proteção para bens rurais, benfeitorias, animais e vida no campo voltada a produtores individuais.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem, rebanho ou plantel",
+                  "Definição de cobertura por atividade e porte da propriedade",
+                  "Apólice individual com limites definidos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Danos a benfeitorias rurais",
+                  "Perda de animais por doença ou acidente",
+                  "Penhor rural como garantia de financiamento",
+                  "Cobertura de vida do produtor rural"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger vida rural e animais, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança patrimonial e continuidade da atividade rural individual diante de perdas inesperadas.",
+                "fechamento": "Seguro de animais ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de animais é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida rural e animais."
+                  },
+                  {
+                    "q": "A cobertura inclui perda de animais e penhor rural?",
+                    "a": "Sim, conforme apólice: perda de animais por doença ou acidente, benfeitorias rurais e penhor rural vinculado a financiamento."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de animais?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-penhor-rural",
+                "nome": "Seguro penhor rural",
+                "perfil": "PF",
+                "descricao": "Proteção para bens rurais, benfeitorias, animais e vida no campo voltada a produtores individuais.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem, rebanho ou plantel",
+                  "Definição de cobertura por atividade e porte da propriedade",
+                  "Apólice individual com limites definidos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Danos a benfeitorias rurais",
+                  "Perda de animais por doença ou acidente",
+                  "Penhor rural como garantia de financiamento",
+                  "Cobertura de vida do produtor rural"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger vida rural e animais, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança patrimonial e continuidade da atividade rural individual diante de perdas inesperadas.",
+                "fechamento": "Seguro penhor rural ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro penhor rural é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida rural e animais."
+                  },
+                  {
+                    "q": "A cobertura inclui perda de animais e penhor rural?",
+                    "a": "Sim, conforme apólice: perda de animais por doença ou acidente, benfeitorias rurais e penhor rural vinculado a financiamento."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro penhor rural?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-vida-rural",
+                "nome": "Seguro vida rural",
+                "perfil": "PF",
+                "descricao": "Proteção para bens rurais, benfeitorias, animais e vida no campo voltada a produtores individuais.",
+                "caracteristicas": [
+                  "Vistoria e enquadramento do bem, rebanho ou plantel",
+                  "Definição de cobertura por atividade e porte da propriedade",
+                  "Apólice individual com limites definidos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Danos a benfeitorias rurais",
+                  "Perda de animais por doença ou acidente",
+                  "Penhor rural como garantia de financiamento",
+                  "Cobertura de vida do produtor rural"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger vida rural e animais, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança patrimonial e continuidade da atividade rural individual diante de perdas inesperadas.",
+                "fechamento": "Seguro vida rural ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro vida rural é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida rural e animais."
+                  },
+                  {
+                    "q": "A cobertura inclui perda de animais e penhor rural?",
+                    "a": "Sim, conforme apólice: perda de animais por doença ou acidente, benfeitorias rurais e penhor rural vinculado a financiamento."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro vida rural?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "nauticos-e-aeronauticos",
+        "nome": "Náuticos e aeronáuticos",
+        "hero": "Aeronaves e embarcações.",
+        "nucleos": [
+          {
+            "slug": "aeronaves",
+            "nome": "Aeronaves",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger aeronaves, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Proteção"
+            ],
+            "porque": "Tipo de aeronave, uso (particular ou comercial), horas de voo e limite de responsabilidade civil, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-aeronave-comercial",
+                "nome": "Seguro aeronave comercial",
+                "perfil": "PJ",
+                "descricao": "Proteção para aeronaves particulares ou comerciais, com cobertura de casco, responsabilidade civil e operação de voo.",
+                "caracteristicas": [
+                  "Vistoria técnica da aeronave",
+                  "Enquadramento por tipo, uso e horas de voo",
+                  "Definição de cobertura de casco e RC aeronáutica",
+                  "Acionamento por sinistro em solo ou em voo"
+                ],
+                "itensInclusos": [
+                  "Casco integral ou parcial",
+                  "Responsabilidade civil a terceiros e passageiros",
+                  "Perda total ou parcial da aeronave",
+                  "Assistência em pane ou acidente",
+                  "Cobertura de tripulação"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para aeronaves, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Proteção patrimonial da aeronave e cobertura de responsabilidade em operações de voo, com respaldo técnico especializado.",
+                "fechamento": "Seguro aeronave comercial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro aeronave comercial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a aeronaves."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade civil a passageiros e terceiros?",
+                    "a": "Sim, a apólice pode incluir responsabilidade civil a passageiros e a terceiros, além da cobertura de casco da aeronave."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro aeronave comercial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-helicoptero",
+                "nome": "Seguro helicóptero",
+                "perfil": "PF",
+                "descricao": "Proteção para aeronaves particulares ou comerciais, com cobertura de casco, responsabilidade civil e operação de voo.",
+                "caracteristicas": [
+                  "Vistoria técnica da aeronave",
+                  "Enquadramento por tipo, uso e horas de voo",
+                  "Definição de cobertura de casco e RC aeronáutica",
+                  "Acionamento por sinistro em solo ou em voo"
+                ],
+                "itensInclusos": [
+                  "Casco integral ou parcial",
+                  "Responsabilidade civil a terceiros e passageiros",
+                  "Perda total ou parcial da aeronave",
+                  "Assistência em pane ou acidente",
+                  "Cobertura de tripulação"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger aeronaves, com orientação consultiva antes da contratação.",
+                "beneficios": "Proteção patrimonial da aeronave e cobertura de responsabilidade em operações de voo, com respaldo técnico especializado.",
+                "fechamento": "Seguro helicóptero ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro helicóptero é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a aeronaves."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade civil a passageiros e terceiros?",
+                    "a": "Sim, a apólice pode incluir responsabilidade civil a passageiros e a terceiros, além da cobertura de casco da aeronave."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro helicóptero?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-jato",
+                "nome": "Seguro jato",
+                "perfil": "PF",
+                "descricao": "Proteção para aeronaves particulares ou comerciais, com cobertura de casco, responsabilidade civil e operação de voo.",
+                "caracteristicas": [
+                  "Vistoria técnica da aeronave",
+                  "Enquadramento por tipo, uso e horas de voo",
+                  "Definição de cobertura de casco e RC aeronáutica",
+                  "Acionamento por sinistro em solo ou em voo"
+                ],
+                "itensInclusos": [
+                  "Casco integral ou parcial",
+                  "Responsabilidade civil a terceiros e passageiros",
+                  "Perda total ou parcial da aeronave",
+                  "Assistência em pane ou acidente",
+                  "Cobertura de tripulação"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger aeronaves, com orientação consultiva antes da contratação.",
+                "beneficios": "Proteção patrimonial da aeronave e cobertura de responsabilidade em operações de voo, com respaldo técnico especializado.",
+                "fechamento": "Seguro jato ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro jato é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a aeronaves."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade civil a passageiros e terceiros?",
+                    "a": "Sim, a apólice pode incluir responsabilidade civil a passageiros e a terceiros, além da cobertura de casco da aeronave."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro jato?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-turbo-helice",
+                "nome": "Seguro turbo hélice",
+                "perfil": "PF",
+                "descricao": "Proteção para aeronaves particulares ou comerciais, com cobertura de casco, responsabilidade civil e operação de voo.",
+                "caracteristicas": [
+                  "Vistoria técnica da aeronave",
+                  "Enquadramento por tipo, uso e horas de voo",
+                  "Definição de cobertura de casco e RC aeronáutica",
+                  "Acionamento por sinistro em solo ou em voo"
+                ],
+                "itensInclusos": [
+                  "Casco integral ou parcial",
+                  "Responsabilidade civil a terceiros e passageiros",
+                  "Perda total ou parcial da aeronave",
+                  "Assistência em pane ou acidente",
+                  "Cobertura de tripulação"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger aeronaves, com orientação consultiva antes da contratação.",
+                "beneficios": "Proteção patrimonial da aeronave e cobertura de responsabilidade em operações de voo, com respaldo técnico especializado.",
+                "fechamento": "Seguro turbo hélice ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro turbo hélice é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a aeronaves."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade civil a passageiros e terceiros?",
+                    "a": "Sim, a apólice pode incluir responsabilidade civil a passageiros e a terceiros, além da cobertura de casco da aeronave."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro turbo hélice?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "embarcacoes",
+            "nome": "Embarcações",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger embarcações, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Proteção"
+            ],
+            "porque": "Porte da embarcação, tipo de navegação (marítima, fluvial ou lacustre) e equipamentos protegidos, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-nautico-para-cargas-e-operacoes",
+                "nome": "Seguro náutico para cargas e operações",
+                "perfil": "PJ",
+                "descricao": "Proteção para embarcações particulares ou comerciais, cobrindo casco, motor, equipamentos e responsabilidade civil náutica.",
+                "caracteristicas": [
+                  "Vistoria da embarcação",
+                  "Enquadramento por porte, uso e tipo de navegação",
+                  "Definição de cobertura de casco e RC náutica",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Casco e máquinas",
+                  "Equipamentos e acessórios náuticos",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência em reboque e resgate",
+                  "P&I para operação comercial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para embarcações, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade do uso ou da operação da embarcação, com respaldo financeiro em avarias, perda ou responsabilidade a terceiros.",
+                "fechamento": "Seguro náutico para cargas e operações ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro náutico para cargas e operações é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a embarcações."
+                  },
+                  {
+                    "q": "A cobertura inclui reboque e resgate em caso de avaria?",
+                    "a": "Sim, a apólice pode prever assistência de reboque e resgate, além da cobertura de casco, máquinas e equipamentos náuticos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro náutico para cargas e operações?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-navio-e-p-i",
+                "nome": "Seguro navio e P&I",
+                "perfil": "PJ",
+                "descricao": "Proteção para embarcações particulares ou comerciais, cobrindo casco, motor, equipamentos e responsabilidade civil náutica.",
+                "caracteristicas": [
+                  "Vistoria da embarcação",
+                  "Enquadramento por porte, uso e tipo de navegação",
+                  "Definição de cobertura de casco e RC náutica",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Casco e máquinas",
+                  "Equipamentos e acessórios náuticos",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência em reboque e resgate",
+                  "P&I para operação comercial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para embarcações, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade do uso ou da operação da embarcação, com respaldo financeiro em avarias, perda ou responsabilidade a terceiros.",
+                "fechamento": "Seguro navio e P&I ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro navio e P&I é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a embarcações."
+                  },
+                  {
+                    "q": "A cobertura inclui reboque e resgate em caso de avaria?",
+                    "a": "Sim, a apólice pode prever assistência de reboque e resgate, além da cobertura de casco, máquinas e equipamentos náuticos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro navio e P&I?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-iates",
+                "nome": "Seguro iates",
+                "perfil": "PF",
+                "descricao": "Proteção para embarcações particulares ou comerciais, cobrindo casco, motor, equipamentos e responsabilidade civil náutica.",
+                "caracteristicas": [
+                  "Vistoria da embarcação",
+                  "Enquadramento por porte, uso e tipo de navegação",
+                  "Definição de cobertura de casco e RC náutica",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Casco e máquinas",
+                  "Equipamentos e acessórios náuticos",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência em reboque e resgate",
+                  "P&I para operação comercial"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger embarcações, com orientação consultiva antes da contratação.",
+                "beneficios": "Continuidade do uso ou da operação da embarcação, com respaldo financeiro em avarias, perda ou responsabilidade a terceiros.",
+                "fechamento": "Seguro iates ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro iates é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a embarcações."
+                  },
+                  {
+                    "q": "A cobertura inclui reboque e resgate em caso de avaria?",
+                    "a": "Sim, a apólice pode prever assistência de reboque e resgate, além da cobertura de casco, máquinas e equipamentos náuticos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro iates?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-jet-ski",
+                "nome": "Seguro jet ski",
+                "perfil": "PF",
+                "descricao": "Proteção para embarcações particulares ou comerciais, cobrindo casco, motor, equipamentos e responsabilidade civil náutica.",
+                "caracteristicas": [
+                  "Vistoria da embarcação",
+                  "Enquadramento por porte, uso e tipo de navegação",
+                  "Definição de cobertura de casco e RC náutica",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Casco e máquinas",
+                  "Equipamentos e acessórios náuticos",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência em reboque e resgate",
+                  "P&I para operação comercial"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger embarcações, com orientação consultiva antes da contratação.",
+                "beneficios": "Continuidade do uso ou da operação da embarcação, com respaldo financeiro em avarias, perda ou responsabilidade a terceiros.",
+                "fechamento": "Seguro jet ski ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro jet ski é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a embarcações."
+                  },
+                  {
+                    "q": "A cobertura inclui reboque e resgate em caso de avaria?",
+                    "a": "Sim, a apólice pode prever assistência de reboque e resgate, além da cobertura de casco, máquinas e equipamentos náuticos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro jet ski?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-lancha",
+                "nome": "Seguro lancha",
+                "perfil": "PF",
+                "descricao": "Proteção para embarcações particulares ou comerciais, cobrindo casco, motor, equipamentos e responsabilidade civil náutica.",
+                "caracteristicas": [
+                  "Vistoria da embarcação",
+                  "Enquadramento por porte, uso e tipo de navegação",
+                  "Definição de cobertura de casco e RC náutica",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Casco e máquinas",
+                  "Equipamentos e acessórios náuticos",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência em reboque e resgate",
+                  "P&I para operação comercial"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger embarcações, com orientação consultiva antes da contratação.",
+                "beneficios": "Continuidade do uso ou da operação da embarcação, com respaldo financeiro em avarias, perda ou responsabilidade a terceiros.",
+                "fechamento": "Seguro lancha ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro lancha é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a embarcações."
+                  },
+                  {
+                    "q": "A cobertura inclui reboque e resgate em caso de avaria?",
+                    "a": "Sim, a apólice pode prever assistência de reboque e resgate, além da cobertura de casco, máquinas e equipamentos náuticos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro lancha?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-nautico-particular",
+                "nome": "Seguro náutico particular",
+                "perfil": "PF",
+                "descricao": "Proteção para embarcações particulares ou comerciais, cobrindo casco, motor, equipamentos e responsabilidade civil náutica.",
+                "caracteristicas": [
+                  "Vistoria da embarcação",
+                  "Enquadramento por porte, uso e tipo de navegação",
+                  "Definição de cobertura de casco e RC náutica",
+                  "Acionamento em caso de sinistro"
+                ],
+                "itensInclusos": [
+                  "Casco e máquinas",
+                  "Equipamentos e acessórios náuticos",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência em reboque e resgate",
+                  "P&I para operação comercial"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger embarcações, com orientação consultiva antes da contratação.",
+                "beneficios": "Continuidade do uso ou da operação da embarcação, com respaldo financeiro em avarias, perda ou responsabilidade a terceiros.",
+                "fechamento": "Seguro náutico particular ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro náutico particular é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a embarcações."
+                  },
+                  {
+                    "q": "A cobertura inclui reboque e resgate em caso de avaria?",
+                    "a": "Sim, a apólice pode prever assistência de reboque e resgate, além da cobertura de casco, máquinas e equipamentos náuticos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro náutico particular?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "garantias-e-contratos",
+        "nome": "Garantias e contratos",
+        "hero": "Crédito interno e exportação, fiança locatícia, garantia contratual, garantia licitação e outras modalidades.",
+        "nucleos": [
+          {
+            "slug": "credito-interno-e-exportacao",
+            "nome": "Crédito interno e exportação",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para crédito interno e exportação, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Garantias"
+            ],
+            "porque": "Perfil da carteira, limite por comprador, países envolvidos e histórico de inadimplência, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-credito-interno-e-credito-a-exportacao",
+                "nome": "Seguro de Crédito Interno e Crédito à Exportação",
+                "perfil": "PJ",
+                "descricao": "Garantia que protege o recebimento de créditos comerciais no mercado interno ou em operações de exportação.",
+                "caracteristicas": [
+                  "Análise da carteira e do risco de crédito",
+                  "Definição de limites por comprador ou país",
+                  "Apólice de crédito com cobertura definida",
+                  "Indenização em caso de inadimplência coberta"
+                ],
+                "itensInclusos": [
+                  "Cobertura de inadimplência comercial",
+                  "Risco de crédito à exportação",
+                  "Limites por comprador ou país",
+                  "Suporte em cobrança e recuperação de crédito"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para crédito interno e exportação, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança para vender a prazo e expandir operações comerciais sem ampliar a exposição ao risco de inadimplência.",
+                "fechamento": "Seguro de Crédito Interno e Crédito à Exportação ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Crédito Interno e Crédito à Exportação é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a crédito interno e exportação."
+                  },
+                  {
+                    "q": "A cobertura vale para vendas no mercado interno e para exportação?",
+                    "a": "Sim, a apólice pode cobrir operações no mercado interno, exportação, ou ambas, conforme os limites definidos por comprador ou país."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Crédito Interno e Crédito à Exportação?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "fianca-locaticia",
+            "nome": "Fiança locatícia",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para fiança locatícia, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Garantias"
+            ],
+            "porque": "Valor do aluguel, prazo do contrato, escopo de cobertura e análise cadastral do locatário, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-fianca-empresarial",
+                "nome": "Seguro fiança empresarial",
+                "perfil": "PJ",
+                "descricao": "Garantia que substitui o fiador tradicional em contratos de locação empresarial ou residencial.",
+                "caracteristicas": [
+                  "Análise cadastral do locatário",
+                  "Emissão de apólice conforme valor do aluguel e prazo do contrato",
+                  "Cobertura durante a vigência da locação",
+                  "Acionamento em caso de inadimplência"
+                ],
+                "itensInclusos": [
+                  "Cobertura de aluguéis em atraso",
+                  "Encargos e multas contratuais",
+                  "Danos ao imóvel conforme apólice",
+                  "Despesas de ação de despejo quando previstas"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para fiança locatícia, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Processo de locação mais ágil, sem necessidade de fiador, com respaldo financeiro para o proprietário.",
+                "fechamento": "Seguro fiança empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro fiança empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a fiança locatícia."
+                  },
+                  {
+                    "q": "A cobertura inclui danos ao imóvel além do aluguel em atraso?",
+                    "a": "Depende do escopo contratado: além de aluguéis em atraso, a apólice pode incluir encargos, multas e danos ao imóvel, conforme condições."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro fiança empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              },
+              {
+                "id": "seguro-fianca-locaticia",
+                "nome": "Seguro fiança locatícia",
+                "perfil": "PF",
+                "descricao": "Garantia que substitui o fiador tradicional em contratos de locação empresarial ou residencial.",
+                "caracteristicas": [
+                  "Análise cadastral do locatário",
+                  "Emissão de apólice conforme valor do aluguel e prazo do contrato",
+                  "Cobertura durante a vigência da locação",
+                  "Acionamento em caso de inadimplência"
+                ],
+                "itensInclusos": [
+                  "Cobertura de aluguéis em atraso",
+                  "Encargos e multas contratuais",
+                  "Danos ao imóvel conforme apólice",
+                  "Despesas de ação de despejo quando previstas"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger fiança locatícia, com orientação consultiva antes da contratação.",
+                "beneficios": "Processo de locação mais ágil, sem necessidade de fiador, com respaldo financeiro para o proprietário.",
+                "fechamento": "Seguro fiança locatícia ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro fiança locatícia é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a fiança locatícia."
+                  },
+                  {
+                    "q": "A cobertura inclui danos ao imóvel além do aluguel em atraso?",
+                    "a": "Depende do escopo contratado: além de aluguéis em atraso, a apólice pode incluir encargos, multas e danos ao imóvel, conforme condições."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro fiança locatícia?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "garantia-contratual",
+            "nome": "Garantia contratual",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para garantia contratual, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Garantias"
+            ],
+            "porque": "Percentual garantido, prazo de execução do contrato e tipo de obrigação coberta, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-garantia-contratual-empresarial",
+                "nome": "Seguro garantia contratual empresarial",
+                "perfil": "PJ",
+                "descricao": "Garantia que assegura o cumprimento de obrigações contratuais entre empresas ou entre pessoa física e contratante.",
+                "caracteristicas": [
+                  "Análise do contrato e da obrigação garantida",
+                  "Emissão de apólice com percentual garantido",
+                  "Acompanhamento da execução contratual",
+                  "Acionamento em inadimplemento"
+                ],
+                "itensInclusos": [
+                  "Cobertura de inadimplemento contratual",
+                  "Multas e penalidades previstas",
+                  "Substituição ou conclusão da obrigação",
+                  "Suporte documental para acionamento"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para garantia contratual, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança para contratante e contratado durante a execução do contrato, com respaldo formal em caso de descumprimento.",
+                "fechamento": "Seguro garantia contratual empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro garantia contratual empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a garantia contratual."
+                  },
+                  {
+                    "q": "O que acontece se o contrato não for cumprido?",
+                    "a": "A apólice cobre o inadimplemento contratual conforme o percentual garantido, podendo incluir multas e penalidades previstas em contrato."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro garantia contratual empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              },
+              {
+                "id": "seguro-garantia-contratual",
+                "nome": "Seguro garantia contratual",
+                "perfil": "PF",
+                "descricao": "Garantia que assegura o cumprimento de obrigações contratuais entre empresas ou entre pessoa física e contratante.",
+                "caracteristicas": [
+                  "Análise do contrato e da obrigação garantida",
+                  "Emissão de apólice com percentual garantido",
+                  "Acompanhamento da execução contratual",
+                  "Acionamento em inadimplemento"
+                ],
+                "itensInclusos": [
+                  "Cobertura de inadimplemento contratual",
+                  "Multas e penalidades previstas",
+                  "Substituição ou conclusão da obrigação",
+                  "Suporte documental para acionamento"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger garantia contratual, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para contratante e contratado durante a execução do contrato, com respaldo formal em caso de descumprimento.",
+                "fechamento": "Seguro garantia contratual ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro garantia contratual é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a garantia contratual."
+                  },
+                  {
+                    "q": "O que acontece se o contrato não for cumprido?",
+                    "a": "A apólice cobre o inadimplemento contratual conforme o percentual garantido, podendo incluir multas e penalidades previstas em contrato."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro garantia contratual?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "garantia-licitacao",
+            "nome": "Garantia licitação",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para garantia licitação, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Garantias"
+            ],
+            "porque": "Exigência específica do edital, percentual de garantia e prazo de execução do contrato público, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-garantia-de-licitacao",
+                "nome": "Seguro garantia de licitação",
+                "perfil": "PJ",
+                "descricao": "Garantia exigida em processos licitatórios, assegurando o cumprimento da proposta e das obrigações do contrato público.",
+                "caracteristicas": [
+                  "Análise do edital e da proposta",
+                  "Emissão da apólice conforme exigência do órgão licitante",
+                  "Acompanhamento da execução contratual",
+                  "Acionamento em descumprimento"
+                ],
+                "itensInclusos": [
+                  "Cobertura de descumprimento de proposta",
+                  "Garantia de execução do contrato administrativo",
+                  "Substituição ou indenização conforme edital"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para garantia licitação, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Viabiliza a participação em licitações com respaldo financeiro e conformidade às exigências do edital.",
+                "fechamento": "Seguro garantia de licitação ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro garantia de licitação é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a garantia licitação."
+                  },
+                  {
+                    "q": "A garantia atende às exigências de qualquer edital?",
+                    "a": "A apólice é emitida conforme a exigência específica do edital e o percentual de garantia solicitado pelo órgão licitante."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro garantia de licitação?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "garantia-judicial",
+            "nome": "Garantia judicial",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para garantia judicial, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Garantias"
+            ],
+            "porque": "Valor determinado pelo juízo, tipo de processo e prazo de vigência da garantia, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-garantia-judicial-empresarial",
+                "nome": "Seguro garantia judicial empresarial",
+                "perfil": "PJ",
+                "descricao": "Garantia utilizada para substituir depósito em dinheiro em processos judiciais, como penhora ou recurso.",
+                "caracteristicas": [
+                  "Análise do processo e do valor a garantir",
+                  "Emissão de apólice judicial",
+                  "Registro nos autos do processo",
+                  "Acionamento conforme decisão judicial"
+                ],
+                "itensInclusos": [
+                  "Substituição de depósito judicial",
+                  "Cobertura do valor determinado pelo juízo",
+                  "Suporte documental para apresentação em juízo"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para garantia judicial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Preserva o caixa da empresa ou da pessoa durante o processo judicial, sem imobilizar recursos em depósito.",
+                "fechamento": "Seguro garantia judicial empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro garantia judicial empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a garantia judicial."
+                  },
+                  {
+                    "q": "A garantia judicial substitui totalmente o depósito em dinheiro?",
+                    "a": "Sim, conforme aceite do juízo, a apólice pode substituir o depósito em dinheiro exigido no processo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro garantia judicial empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              },
+              {
+                "id": "seguro-garantia-judicial",
+                "nome": "Seguro garantia judicial",
+                "perfil": "PF",
+                "descricao": "Garantia utilizada para substituir depósito em dinheiro em processos judiciais, como penhora ou recurso.",
+                "caracteristicas": [
+                  "Análise do processo e do valor a garantir",
+                  "Emissão de apólice judicial",
+                  "Registro nos autos do processo",
+                  "Acionamento conforme decisão judicial"
+                ],
+                "itensInclusos": [
+                  "Substituição de depósito judicial",
+                  "Cobertura do valor determinado pelo juízo",
+                  "Suporte documental para apresentação em juízo"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger garantia judicial, com orientação consultiva antes da contratação.",
+                "beneficios": "Preserva o caixa da empresa ou da pessoa durante o processo judicial, sem imobilizar recursos em depósito.",
+                "fechamento": "Seguro garantia judicial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro garantia judicial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a garantia judicial."
+                  },
+                  {
+                    "q": "A garantia judicial substitui totalmente o depósito em dinheiro?",
+                    "a": "Sim, conforme aceite do juízo, a apólice pode substituir o depósito em dinheiro exigido no processo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro garantia judicial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "leilao-e-arremate",
+            "nome": "Leilão e arremate",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para leilão e arremate, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Garantias"
+            ],
+            "porque": "Valor do lance, exigência do leiloeiro e prazo para conclusão do arremate, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-leilao-empresarial",
+                "nome": "Seguro de Leilão Empresarial",
+                "perfil": "PJ",
+                "descricao": "Garantia que assegura o cumprimento das obrigações do arrematante em processos de leilão.",
+                "caracteristicas": [
+                  "Análise do edital de leilão e do valor do lance",
+                  "Emissão de apólice conforme exigência do leiloeiro",
+                  "Acompanhamento até a conclusão do processo",
+                  "Acionamento em descumprimento"
+                ],
+                "itensInclusos": [
+                  "Cobertura de inadimplemento do arrematante",
+                  "Garantia do valor do lance",
+                  "Suporte documental junto ao leiloeiro"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para leilão e arremate, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Permite participar de leilões com respaldo financeiro e conformidade às regras do processo.",
+                "fechamento": "Seguro de Leilão Empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Leilão Empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a leilão e arremate."
+                  },
+                  {
+                    "q": "A garantia cobre o valor total do lance arrematado?",
+                    "a": "A cobertura é definida conforme o percentual de garantia exigido no edital do leilão e o valor do lance."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Leilão Empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              },
+              {
+                "id": "seguro-de-leilao-arremate",
+                "nome": "Seguro de Leilão (arremate)",
+                "perfil": "PF",
+                "descricao": "Garantia que assegura o cumprimento das obrigações do arrematante em processos de leilão.",
+                "caracteristicas": [
+                  "Análise do edital de leilão e do valor do lance",
+                  "Emissão de apólice conforme exigência do leiloeiro",
+                  "Acompanhamento até a conclusão do processo",
+                  "Acionamento em descumprimento"
+                ],
+                "itensInclusos": [
+                  "Cobertura de inadimplemento do arrematante",
+                  "Garantia do valor do lance",
+                  "Suporte documental junto ao leiloeiro"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger leilão e arremate, com orientação consultiva antes da contratação.",
+                "beneficios": "Permite participar de leilões com respaldo financeiro e conformidade às regras do processo.",
+                "fechamento": "Seguro de Leilão (arremate) ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar garantia adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Leilão (arremate) é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a leilão e arremate."
+                  },
+                  {
+                    "q": "A garantia cobre o valor total do lance arrematado?",
+                    "a": "A cobertura é definida conforme o percentual de garantia exigido no edital do leilão e o valor do lance."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Leilão (arremate)?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Crescimento e mobilidade"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "grandes-riscos",
+        "nome": "Grandes riscos",
+        "hero": "Alto patrimônio, risco especial, risco estruturado, risco técnico e outras modalidades.",
+        "nucleos": [
+          {
+            "slug": "alto-patrimonio",
+            "nome": "Alto patrimônio",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger alto patrimônio, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Grandes riscos"
+            ],
+            "porque": "Nível de exposição pessoal, patrimônio protegido e necessidade de suporte especializado em crise, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-riscos-pessoais-individuais-alto-patrimonio",
+                "nome": "Seguro de Riscos Pessoais Individuais (alto patrimônio)",
+                "perfil": "PF",
+                "descricao": "Proteção especializada para patrimônio pessoal de alto valor e riscos à integridade física do titular e da família.",
+                "caracteristicas": [
+                  "Análise de perfil e exposição patrimonial",
+                  "Desenho de cobertura sob medida",
+                  "Apólice individual de alto valor",
+                  "Acionamento com suporte dedicado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de bens de alto valor",
+                  "Proteção contra sequestro e resgate",
+                  "Assistência especializada em crise",
+                  "Suporte jurídico em sinistro"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger alto patrimônio, com orientação consultiva antes da contratação.",
+                "beneficios": "Proteção discreta e sob medida para patrimônio e integridade familiar, com resposta rápida em situações de crise.",
+                "fechamento": "Seguro de Riscos Pessoais Individuais (alto patrimônio) ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Riscos Pessoais Individuais (alto patrimônio) é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a alto patrimônio."
+                  },
+                  {
+                    "q": "A cobertura inclui suporte em caso de sequestro e resgate?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir sequestro e resgate, além de assistência especializada em situações de crise."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Riscos Pessoais Individuais (alto patrimônio)?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-sequestro-e-resgate-k-r",
+                "nome": "Seguro sequestro e resgate K&R",
+                "perfil": "PF",
+                "descricao": "Proteção especializada para patrimônio pessoal de alto valor e riscos à integridade física do titular e da família.",
+                "caracteristicas": [
+                  "Análise de perfil e exposição patrimonial",
+                  "Desenho de cobertura sob medida",
+                  "Apólice individual de alto valor",
+                  "Acionamento com suporte dedicado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de bens de alto valor",
+                  "Proteção contra sequestro e resgate",
+                  "Assistência especializada em crise",
+                  "Suporte jurídico em sinistro"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger alto patrimônio, com orientação consultiva antes da contratação.",
+                "beneficios": "Proteção discreta e sob medida para patrimônio e integridade familiar, com resposta rápida em situações de crise.",
+                "fechamento": "Seguro sequestro e resgate K&R ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro sequestro e resgate K&R é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a alto patrimônio."
+                  },
+                  {
+                    "q": "A cobertura inclui suporte em caso de sequestro e resgate?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir sequestro e resgate, além de assistência especializada em situações de crise."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro sequestro e resgate K&R?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "risco-especial",
+            "nome": "Risco especial",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger risco especial, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Grandes riscos"
+            ],
+            "porque": "Setor de atuação, regulação aplicável e limite técnico de responsabilidade, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-riscos-aeroespaciais",
+                "nome": "Seguro riscos aeroespaciais",
+                "perfil": "PF",
+                "descricao": "Proteção para riscos especiais de alta complexidade técnica, como operações aeroespaciais e instalações nucleares.",
+                "caracteristicas": [
+                  "Análise técnica especializada da operação",
+                  "Desenho de cobertura conforme normas do setor",
+                  "Apólice de risco especial",
+                  "Acionamento com suporte técnico dedicado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de responsabilidade e danos específicos do setor",
+                  "Limites conforme regulação aplicável",
+                  "Suporte técnico especializado em sinistro"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger risco especial, com orientação consultiva antes da contratação.",
+                "beneficios": "Viabiliza a operação de atividades de altíssima complexidade com respaldo técnico e financeiro adequado ao risco.",
+                "fechamento": "Seguro riscos aeroespaciais ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro riscos aeroespaciais é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco especial."
+                  },
+                  {
+                    "q": "Que tipo de operação é elegível para esta cobertura?",
+                    "a": "Operações de alta complexidade técnica no setor aeroespacial ou nuclear, avaliadas conforme regulação e normas específicas do setor."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro riscos aeroespaciais?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-riscos-nucleares",
+                "nome": "Seguro riscos nucleares",
+                "perfil": "PF",
+                "descricao": "Proteção para riscos especiais de alta complexidade técnica, como operações aeroespaciais e instalações nucleares.",
+                "caracteristicas": [
+                  "Análise técnica especializada da operação",
+                  "Desenho de cobertura conforme normas do setor",
+                  "Apólice de risco especial",
+                  "Acionamento com suporte técnico dedicado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de responsabilidade e danos específicos do setor",
+                  "Limites conforme regulação aplicável",
+                  "Suporte técnico especializado em sinistro"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger risco especial, com orientação consultiva antes da contratação.",
+                "beneficios": "Viabiliza a operação de atividades de altíssima complexidade com respaldo técnico e financeiro adequado ao risco.",
+                "fechamento": "Seguro riscos nucleares ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro riscos nucleares é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco especial."
+                  },
+                  {
+                    "q": "Que tipo de operação é elegível para esta cobertura?",
+                    "a": "Operações de alta complexidade técnica no setor aeroespacial ou nuclear, avaliadas conforme regulação e normas específicas do setor."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro riscos nucleares?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "risco-estruturado",
+            "nome": "Risco estruturado",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para risco estruturado, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Grandes riscos"
+            ],
+            "porque": "Tipo de operação, nível de exposição corporativa ou pessoal e limite de indenização necessário, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-riscos-individuais-empresariais-estruturado",
+                "nome": "Seguro de Riscos Individuais Empresariais (estruturado)",
+                "perfil": "PJ",
+                "descricao": "Solução de proteção estruturada sob medida para riscos corporativos complexos, incluindo operações societárias e riscos pessoais de executivos.",
+                "caracteristicas": [
+                  "Análise de exposição corporativa ou pessoal",
+                  "Estruturação de cobertura sob medida",
+                  "Apólice estruturada com limites específicos",
+                  "Acionamento com suporte especializado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de riscos individuais de executivos",
+                  "Proteção em operações de M&A",
+                  "Sequestro e resgate corporativo",
+                  "Suporte jurídico e de crise"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para risco estruturado, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Estrutura de proteção sob medida que acompanha operações e riscos complexos da empresa e de seus executivos.",
+                "fechamento": "Seguro de Riscos Individuais Empresariais (estruturado) ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Riscos Individuais Empresariais (estruturado) é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco estruturado."
+                  },
+                  {
+                    "q": "A cobertura pode acompanhar uma operação de M&A?",
+                    "a": "Sim, existe estrutura específica para operações de M&A (Representations & Warranties), além de riscos individuais e corporativos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Riscos Individuais Empresariais (estruturado)?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-k-r-empresarial-executivos-e-familias",
+                "nome": "Seguro K&R Empresarial (executivos e famílias)",
+                "perfil": "PJ",
+                "descricao": "Solução de proteção estruturada sob medida para riscos corporativos complexos, incluindo operações societárias e riscos pessoais de executivos.",
+                "caracteristicas": [
+                  "Análise de exposição corporativa ou pessoal",
+                  "Estruturação de cobertura sob medida",
+                  "Apólice estruturada com limites específicos",
+                  "Acionamento com suporte especializado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de riscos individuais de executivos",
+                  "Proteção em operações de M&A",
+                  "Sequestro e resgate corporativo",
+                  "Suporte jurídico e de crise"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para risco estruturado, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Estrutura de proteção sob medida que acompanha operações e riscos complexos da empresa e de seus executivos.",
+                "fechamento": "Seguro K&R Empresarial (executivos e famílias) ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro K&R Empresarial (executivos e famílias) é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco estruturado."
+                  },
+                  {
+                    "q": "A cobertura pode acompanhar uma operação de M&A?",
+                    "a": "Sim, existe estrutura específica para operações de M&A (Representations & Warranties), além de riscos individuais e corporativos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro K&R Empresarial (executivos e famílias)?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-k-r-executivos",
+                "nome": "Seguro K&R executivos",
+                "perfil": "PJ",
+                "descricao": "Solução de proteção estruturada sob medida para riscos corporativos complexos, incluindo operações societárias e riscos pessoais de executivos.",
+                "caracteristicas": [
+                  "Análise de exposição corporativa ou pessoal",
+                  "Estruturação de cobertura sob medida",
+                  "Apólice estruturada com limites específicos",
+                  "Acionamento com suporte especializado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de riscos individuais de executivos",
+                  "Proteção em operações de M&A",
+                  "Sequestro e resgate corporativo",
+                  "Suporte jurídico e de crise"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para risco estruturado, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Estrutura de proteção sob medida que acompanha operações e riscos complexos da empresa e de seus executivos.",
+                "fechamento": "Seguro K&R executivos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro K&R executivos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco estruturado."
+                  },
+                  {
+                    "q": "A cobertura pode acompanhar uma operação de M&A?",
+                    "a": "Sim, existe estrutura específica para operações de M&A (Representations & Warranties), além de riscos individuais e corporativos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro K&R executivos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-m-a-representations-warranties",
+                "nome": "Seguro M&A / Representations & Warranties",
+                "perfil": "PJ",
+                "descricao": "Solução de proteção estruturada sob medida para riscos corporativos complexos, incluindo operações societárias e riscos pessoais de executivos.",
+                "caracteristicas": [
+                  "Análise de exposição corporativa ou pessoal",
+                  "Estruturação de cobertura sob medida",
+                  "Apólice estruturada com limites específicos",
+                  "Acionamento com suporte especializado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de riscos individuais de executivos",
+                  "Proteção em operações de M&A",
+                  "Sequestro e resgate corporativo",
+                  "Suporte jurídico e de crise"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para risco estruturado, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Estrutura de proteção sob medida que acompanha operações e riscos complexos da empresa e de seus executivos.",
+                "fechamento": "Seguro M&A / Representations & Warranties ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro M&A / Representations & Warranties é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco estruturado."
+                  },
+                  {
+                    "q": "A cobertura pode acompanhar uma operação de M&A?",
+                    "a": "Sim, existe estrutura específica para operações de M&A (Representations & Warranties), além de riscos individuais e corporativos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro M&A / Representations & Warranties?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-riscos-estruturados",
+                "nome": "Seguro riscos estruturados",
+                "perfil": "PJ",
+                "descricao": "Solução de proteção estruturada sob medida para riscos corporativos complexos, incluindo operações societárias e riscos pessoais de executivos.",
+                "caracteristicas": [
+                  "Análise de exposição corporativa ou pessoal",
+                  "Estruturação de cobertura sob medida",
+                  "Apólice estruturada com limites específicos",
+                  "Acionamento com suporte especializado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de riscos individuais de executivos",
+                  "Proteção em operações de M&A",
+                  "Sequestro e resgate corporativo",
+                  "Suporte jurídico e de crise"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para risco estruturado, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Estrutura de proteção sob medida que acompanha operações e riscos complexos da empresa e de seus executivos.",
+                "fechamento": "Seguro riscos estruturados ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro riscos estruturados é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco estruturado."
+                  },
+                  {
+                    "q": "A cobertura pode acompanhar uma operação de M&A?",
+                    "a": "Sim, existe estrutura específica para operações de M&A (Representations & Warranties), além de riscos individuais e corporativos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro riscos estruturados?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "risco-tecnico",
+            "nome": "Risco técnico",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para risco técnico, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Grandes riscos"
+            ],
+            "porque": "Fase do projeto, complexidade técnica e valor de equipamentos ou obra protegida, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-riscos-de-engenharia",
+                "nome": "Seguro riscos de engenharia",
+                "perfil": "PJ",
+                "descricao": "Proteção para riscos técnicos de engenharia e operações industriais de petróleo e gás.",
+                "caracteristicas": [
+                  "Análise técnica da obra ou operação",
+                  "Desenho de cobertura conforme fase do projeto",
+                  "Apólice de risco técnico",
+                  "Acionamento com suporte de engenharia"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos à obra em construção ou montagem",
+                  "Responsabilidade civil da operação",
+                  "Perda de equipamentos técnicos",
+                  "Suporte técnico especializado"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para risco técnico, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade de projetos técnicos e industriais complexos com respaldo financeiro para danos e paralisações.",
+                "fechamento": "Seguro riscos de engenharia ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro riscos de engenharia é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco técnico."
+                  },
+                  {
+                    "q": "A cobertura vale durante toda a fase de construção e montagem?",
+                    "a": "Sim, a apólice pode ser estruturada por fase do projeto, incluindo construção, montagem e, quando aplicável, operação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro riscos de engenharia?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-seguro-oil-gas",
+                "nome": "Seguro Seguro Oil & Gas",
+                "perfil": "PJ",
+                "descricao": "Proteção para riscos técnicos de engenharia e operações industriais de petróleo e gás.",
+                "caracteristicas": [
+                  "Análise técnica da obra ou operação",
+                  "Desenho de cobertura conforme fase do projeto",
+                  "Apólice de risco técnico",
+                  "Acionamento com suporte de engenharia"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos à obra em construção ou montagem",
+                  "Responsabilidade civil da operação",
+                  "Perda de equipamentos técnicos",
+                  "Suporte técnico especializado"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para risco técnico, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade de projetos técnicos e industriais complexos com respaldo financeiro para danos e paralisações.",
+                "fechamento": "Seguro Seguro Oil & Gas ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro Seguro Oil & Gas é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a risco técnico."
+                  },
+                  {
+                    "q": "A cobertura vale durante toda a fase de construção e montagem?",
+                    "a": "Sim, a apólice pode ser estruturada por fase do projeto, incluindo construção, montagem e, quando aplicável, operação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro Seguro Oil & Gas?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "fraudes-corporativas",
+            "nome": "Fraudes corporativas",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para fraudes corporativas, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Grandes riscos"
+            ],
+            "porque": "Processo financeiro exposto, limite de indenização e histórico de incidentes da empresa, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "protecao-de-meios-de-pagamento-corporativos",
+                "nome": "Proteção de Meios de Pagamento Corporativos",
+                "perfil": "PJ",
+                "descricao": "Proteção contra fraudes financeiras e uso indevido de meios de pagamento corporativos.",
+                "caracteristicas": [
+                  "Análise dos processos financeiros da empresa",
+                  "Desenho de cobertura conforme exposição a fraude",
+                  "Apólice de fraude corporativa",
+                  "Acionamento em evento identificado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de fraude interna e externa",
+                  "Uso indevido de meios de pagamento",
+                  "Perdas financeiras diretas",
+                  "Suporte na apuração do evento"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para fraudes corporativas, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz o impacto financeiro de fraudes corporativas e agrega camada de proteção aos processos de pagamento.",
+                "fechamento": "Proteção de Meios de Pagamento Corporativos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Proteção de Meios de Pagamento Corporativos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a fraudes corporativas."
+                  },
+                  {
+                    "q": "A cobertura inclui fraude interna, cometida por colaboradores?",
+                    "a": "Conforme apólice, a cobertura pode incluir fraude interna e externa, além do uso indevido de meios de pagamento corporativos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Proteção de Meios de Pagamento Corporativos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-fraude-corporativa",
+                "nome": "Seguro fraude corporativa",
+                "perfil": "PJ",
+                "descricao": "Proteção contra fraudes financeiras e uso indevido de meios de pagamento corporativos.",
+                "caracteristicas": [
+                  "Análise dos processos financeiros da empresa",
+                  "Desenho de cobertura conforme exposição a fraude",
+                  "Apólice de fraude corporativa",
+                  "Acionamento em evento identificado"
+                ],
+                "itensInclusos": [
+                  "Cobertura de fraude interna e externa",
+                  "Uso indevido de meios de pagamento",
+                  "Perdas financeiras diretas",
+                  "Suporte na apuração do evento"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para fraudes corporativas, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz o impacto financeiro de fraudes corporativas e agrega camada de proteção aos processos de pagamento.",
+                "fechamento": "Seguro fraude corporativa ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro fraude corporativa é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a fraudes corporativas."
+                  },
+                  {
+                    "q": "A cobertura inclui fraude interna, cometida por colaboradores?",
+                    "a": "Conforme apólice, a cobertura pode incluir fraude interna e externa, além do uso indevido de meios de pagamento corporativos."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro fraude corporativa?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "fraudes-digitais",
+            "nome": "Fraudes digitais",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger fraudes digitais, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Grandes riscos"
+            ],
+            "porque": "Perfil de uso digital, limite de cobertura por evento e prazo para comunicação do incidente, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-contra-fraude",
+                "nome": "Seguro contra fraude",
+                "perfil": "PF",
+                "descricao": "Proteção pessoal contra fraudes digitais, golpes financeiros e estornos indevidos.",
+                "caracteristicas": [
+                  "Análise do perfil de uso digital",
+                  "Definição de cobertura conforme exposição",
+                  "Apólice pessoal contra fraude",
+                  "Acionamento após identificação do golpe"
+                ],
+                "itensInclusos": [
+                  "Cobertura de golpes financeiros digitais",
+                  "Estornos indevidos",
+                  "Fraudes em transações eletrônicas",
+                  "Suporte na comunicação do incidente"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger fraudes digitais, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso de serviços digitais e financeiros, com respaldo em caso de golpe ou fraude.",
+                "fechamento": "Seguro contra fraude ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro contra fraude é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a fraudes digitais."
+                  },
+                  {
+                    "q": "O que fazer imediatamente após identificar um golpe?",
+                    "a": "É recomendado comunicar o incidente o quanto antes, dentro do prazo previsto em apólice, para viabilizar o acionamento da cobertura."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro contra fraude?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-protecao-contra-golpe-e-estorno",
+                "nome": "Seguro proteção contra golpe e estorno",
+                "perfil": "PF",
+                "descricao": "Proteção pessoal contra fraudes digitais, golpes financeiros e estornos indevidos.",
+                "caracteristicas": [
+                  "Análise do perfil de uso digital",
+                  "Definição de cobertura conforme exposição",
+                  "Apólice pessoal contra fraude",
+                  "Acionamento após identificação do golpe"
+                ],
+                "itensInclusos": [
+                  "Cobertura de golpes financeiros digitais",
+                  "Estornos indevidos",
+                  "Fraudes em transações eletrônicas",
+                  "Suporte na comunicação do incidente"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger fraudes digitais, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso de serviços digitais e financeiros, com respaldo em caso de golpe ou fraude.",
+                "fechamento": "Seguro proteção contra golpe e estorno ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro proteção contra golpe e estorno é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a fraudes digitais."
+                  },
+                  {
+                    "q": "O que fazer imediatamente após identificar um golpe?",
+                    "a": "É recomendado comunicar o incidente o quanto antes, dentro do prazo previsto em apólice, para viabilizar o acionamento da cobertura."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro proteção contra golpe e estorno?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "riscos-ciberneticos",
+            "nome": "Riscos cibernéticos",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger riscos cibernéticos, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Grandes riscos"
+            ],
+            "porque": "Exposição digital, volume de dados protegidos e necessidade de suporte técnico em incidente, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-cyber-empresarial",
+                "nome": "Seguro cyber empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção contra incidentes cibernéticos, com cobertura para empresas, pessoas físicas e operações financeiras digitais.",
+                "caracteristicas": [
+                  "Análise da exposição digital e de dados",
+                  "Desenho de cobertura conforme perfil de risco cibernético",
+                  "Apólice cyber",
+                  "Acionamento com suporte técnico especializado em incidente"
+                ],
+                "itensInclusos": [
+                  "Cobertura de vazamento de dados",
+                  "Interrupção de operação por ataque cibernético",
+                  "Responsabilidade civil digital",
+                  "Suporte técnico e jurídico em incidente"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para riscos cibernéticos, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Resposta mais rápida a incidentes cibernéticos e redução do impacto financeiro e reputacional de um ataque.",
+                "fechamento": "Seguro cyber empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro cyber empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a riscos cibernéticos."
+                  },
+                  {
+                    "q": "A cobertura inclui suporte técnico em caso de vazamento de dados?",
+                    "a": "Sim, a apólice pode incluir suporte técnico e jurídico especializado para resposta a incidentes de vazamento de dados."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro cyber empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-cyber-pessoal",
+                "nome": "Seguro cyber pessoal",
+                "perfil": "PF",
+                "descricao": "Proteção contra incidentes cibernéticos, com cobertura para empresas, pessoas físicas e operações financeiras digitais.",
+                "caracteristicas": [
+                  "Análise da exposição digital e de dados",
+                  "Desenho de cobertura conforme perfil de risco cibernético",
+                  "Apólice cyber",
+                  "Acionamento com suporte técnico especializado em incidente"
+                ],
+                "itensInclusos": [
+                  "Cobertura de vazamento de dados",
+                  "Interrupção de operação por ataque cibernético",
+                  "Responsabilidade civil digital",
+                  "Suporte técnico e jurídico em incidente"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger riscos cibernéticos, com orientação consultiva antes da contratação.",
+                "beneficios": "Resposta mais rápida a incidentes cibernéticos e redução do impacto financeiro e reputacional de um ataque.",
+                "fechamento": "Seguro cyber pessoal ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro cyber pessoal é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a riscos cibernéticos."
+                  },
+                  {
+                    "q": "A cobertura inclui suporte técnico em caso de vazamento de dados?",
+                    "a": "Sim, a apólice pode incluir suporte técnico e jurídico especializado para resposta a incidentes de vazamento de dados."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro cyber pessoal?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-protecao-financeira-digital",
+                "nome": "Seguro proteção financeira digital",
+                "perfil": "PF",
+                "descricao": "Proteção contra incidentes cibernéticos, com cobertura para empresas, pessoas físicas e operações financeiras digitais.",
+                "caracteristicas": [
+                  "Análise da exposição digital e de dados",
+                  "Desenho de cobertura conforme perfil de risco cibernético",
+                  "Apólice cyber",
+                  "Acionamento com suporte técnico especializado em incidente"
+                ],
+                "itensInclusos": [
+                  "Cobertura de vazamento de dados",
+                  "Interrupção de operação por ataque cibernético",
+                  "Responsabilidade civil digital",
+                  "Suporte técnico e jurídico em incidente"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger riscos cibernéticos, com orientação consultiva antes da contratação.",
+                "beneficios": "Resposta mais rápida a incidentes cibernéticos e redução do impacto financeiro e reputacional de um ataque.",
+                "fechamento": "Seguro proteção financeira digital ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Mapear exposição especial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro proteção financeira digital é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a riscos cibernéticos."
+                  },
+                  {
+                    "q": "A cobertura inclui suporte técnico em caso de vazamento de dados?",
+                    "a": "Sim, a apólice pode incluir suporte técnico e jurídico especializado para resposta a incidentes de vazamento de dados."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro proteção financeira digital?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "patrimonio-e-alto-valor",
+        "nome": "Patrimônio e alto valor",
+        "hero": "Acervo, alto patrimônio, condomínio, imóvel comercial e outras modalidades.",
+        "nucleos": [
+          {
+            "slug": "acervo",
+            "nome": "Acervo",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para acervo, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Valor avaliado do acervo, necessidade de transporte e periodicidade de reavaliação, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-acervo-empresarial",
+                "nome": "Seguro acervo empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para acervos, coleções e bens de valor específico, como joias, obras e itens de coleção.",
+                "caracteristicas": [
+                  "Avaliação do acervo ou item",
+                  "Definição de cobertura por peça ou conjunto",
+                  "Apólice específica de acervo",
+                  "Acionamento com laudo de avaliação"
+                ],
+                "itensInclusos": [
+                  "Cobertura contra roubo, furto e danos",
+                  "Perda total ou parcial do item",
+                  "Transporte do acervo quando aplicável",
+                  "Reavaliação periódica do valor"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para acervo, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Preserva o valor financeiro e histórico do acervo, com cobertura compatível ao valor real dos itens.",
+                "fechamento": "Seguro acervo empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro acervo empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a acervo."
+                  },
+                  {
+                    "q": "É necessário laudo de avaliação para contratar?",
+                    "a": "Sim, a cobertura é definida com base em laudo de avaliação do acervo ou item, atualizado conforme periodicidade prevista."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro acervo empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-joias-e-acervo",
+                "nome": "Seguro joias e acervo",
+                "perfil": "PF",
+                "descricao": "Proteção para acervos, coleções e bens de valor específico, como joias, obras e itens de coleção.",
+                "caracteristicas": [
+                  "Avaliação do acervo ou item",
+                  "Definição de cobertura por peça ou conjunto",
+                  "Apólice específica de acervo",
+                  "Acionamento com laudo de avaliação"
+                ],
+                "itensInclusos": [
+                  "Cobertura contra roubo, furto e danos",
+                  "Perda total ou parcial do item",
+                  "Transporte do acervo quando aplicável",
+                  "Reavaliação periódica do valor"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger acervo, com orientação consultiva antes da contratação.",
+                "beneficios": "Preserva o valor financeiro e histórico do acervo, com cobertura compatível ao valor real dos itens.",
+                "fechamento": "Seguro joias e acervo ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro joias e acervo é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a acervo."
+                  },
+                  {
+                    "q": "É necessário laudo de avaliação para contratar?",
+                    "a": "Sim, a cobertura é definida com base em laudo de avaliação do acervo ou item, atualizado conforme periodicidade prevista."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro joias e acervo?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "alto-patrimonio",
+            "nome": "Alto patrimônio",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger alto patrimônio, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Valor do patrimônio, itens de alto valor a proteger e nível de atendimento esperado, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-alto-patrimonio",
+                "nome": "Seguro alto patrimônio",
+                "perfil": "PF",
+                "descricao": "Proteção patrimonial para residências, bens e itens de alto valor com cobertura ampliada.",
+                "caracteristicas": [
+                  "Vistoria e avaliação do patrimônio",
+                  "Definição de cobertura ampliada por item e conjunto",
+                  "Apólice de alto patrimônio",
+                  "Acionamento com suporte dedicado"
+                ],
+                "itensInclusos": [
+                  "Cobertura estrutural ampliada",
+                  "Bens de alto valor dentro do imóvel",
+                  "Responsabilidade civil residencial",
+                  "Assistência especializada"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger alto patrimônio, com orientação consultiva antes da contratação.",
+                "beneficios": "Proteção compatível com o padrão e o valor real do patrimônio, com atendimento diferenciado em sinistro.",
+                "fechamento": "Seguro alto patrimônio ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro alto patrimônio é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a alto patrimônio."
+                  },
+                  {
+                    "q": "A cobertura inclui bens de alto valor dentro do imóvel?",
+                    "a": "Sim, a apólice de alto patrimônio pode incluir bens de alto valor internos ao imóvel, além da estrutura e responsabilidade civil."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro alto patrimônio?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "condominio",
+            "nome": "Condomínio",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para condomínio, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Porte do condomínio, número de unidades e áreas comuns a proteger, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-condominio",
+                "nome": "Seguro condomínio",
+                "perfil": "PJ",
+                "descricao": "Proteção para áreas comuns, estrutura e responsabilidade civil de condomínios.",
+                "caracteristicas": [
+                  "Vistoria das áreas comuns",
+                  "Definição de cobertura conforme porte do condomínio",
+                  "Apólice coletiva",
+                  "Acionamento pela administração condominial"
+                ],
+                "itensInclusos": [
+                  "Cobertura de incêndio e danos estruturais",
+                  "Responsabilidade civil do condomínio",
+                  "Danos elétricos em áreas comuns",
+                  "Assistência 24h"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para condomínio, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança patrimonial para o condomínio e menor exposição financeira para síndico e moradores.",
+                "fechamento": "Seguro condomínio ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro condomínio é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a condomínio."
+                  },
+                  {
+                    "q": "Quem aciona a apólice em caso de sinistro nas áreas comuns?",
+                    "a": "O acionamento é feito pela administração condominial (síndico ou administradora), conforme condições da apólice coletiva."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro condomínio?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "imovel-comercial",
+            "nome": "Imóvel comercial",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para imóvel comercial, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Uso do imóvel, valor do conteúdo protegido e necessidade de cobertura de perda de aluguel, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-imoveis-locaticios",
+                "nome": "Seguro imóveis locatícios",
+                "perfil": "PJ",
+                "descricao": "Proteção para imóveis comerciais locados ou de uso empresarial, incluindo estrutura e responsabilidade.",
+                "caracteristicas": [
+                  "Vistoria do imóvel comercial",
+                  "Definição de cobertura conforme uso e locação",
+                  "Apólice empresarial",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Cobertura estrutural e de conteúdo",
+                  "Responsabilidade civil do locador",
+                  "Perda de aluguel em sinistro",
+                  "Assistência emergencial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para imóvel comercial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação e da renda de locação mesmo diante de eventos que afetem o imóvel.",
+                "fechamento": "Seguro imóveis locatícios ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro imóveis locatícios é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a imóvel comercial."
+                  },
+                  {
+                    "q": "A cobertura inclui perda de renda de aluguel em caso de sinistro?",
+                    "a": "Conforme apólice, a cobertura pode incluir perda de aluguel durante o período de reparo do imóvel comercial."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro imóveis locatícios?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "imovel-residencial",
+            "nome": "Imóvel residencial",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger imóvel residencial, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Tipo de uso do imóvel (habitual, temporada ou alugado), valor do conteúdo e frequência de uso, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-casa-de-campo",
+                "nome": "Seguro casa de campo",
+                "perfil": "PF",
+                "descricao": "Proteção residencial para casas e imóveis de uso próprio, temporada ou locação.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada conforme perfil",
+                  "Definição de cobertura por tipo de uso do imóvel",
+                  "Apólice residencial",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Roubo de bens",
+                  "Danos elétricos",
+                  "Responsabilidade civil residencial",
+                  "Assistência 24h"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger imóvel residencial, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso do imóvel, com suporte imediato em danos estruturais ou perdas.",
+                "fechamento": "Seguro casa de campo ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro casa de campo é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a imóvel residencial."
+                  },
+                  {
+                    "q": "A cobertura muda conforme o tipo de imóvel (praia, campo ou alugado)?",
+                    "a": "Sim, o enquadramento considera o tipo de uso do imóvel, o que pode alterar cobertura, franquias e condições da apólice."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro casa de campo?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-casa-na-praia",
+                "nome": "Seguro casa na praia",
+                "perfil": "PF",
+                "descricao": "Proteção residencial para casas e imóveis de uso próprio, temporada ou locação.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada conforme perfil",
+                  "Definição de cobertura por tipo de uso do imóvel",
+                  "Apólice residencial",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Roubo de bens",
+                  "Danos elétricos",
+                  "Responsabilidade civil residencial",
+                  "Assistência 24h"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger imóvel residencial, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso do imóvel, com suporte imediato em danos estruturais ou perdas.",
+                "fechamento": "Seguro casa na praia ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro casa na praia é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a imóvel residencial."
+                  },
+                  {
+                    "q": "A cobertura muda conforme o tipo de imóvel (praia, campo ou alugado)?",
+                    "a": "Sim, o enquadramento considera o tipo de uso do imóvel, o que pode alterar cobertura, franquias e condições da apólice."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro casa na praia?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-imovel-alugado",
+                "nome": "Seguro imóvel alugado",
+                "perfil": "PF",
+                "descricao": "Proteção residencial para casas e imóveis de uso próprio, temporada ou locação.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada conforme perfil",
+                  "Definição de cobertura por tipo de uso do imóvel",
+                  "Apólice residencial",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Roubo de bens",
+                  "Danos elétricos",
+                  "Responsabilidade civil residencial",
+                  "Assistência 24h"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger imóvel residencial, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso do imóvel, com suporte imediato em danos estruturais ou perdas.",
+                "fechamento": "Seguro imóvel alugado ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro imóvel alugado é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a imóvel residencial."
+                  },
+                  {
+                    "q": "A cobertura muda conforme o tipo de imóvel (praia, campo ou alugado)?",
+                    "a": "Sim, o enquadramento considera o tipo de uso do imóvel, o que pode alterar cobertura, franquias e condições da apólice."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro imóvel alugado?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-residencial",
+                "nome": "Seguro residencial",
+                "perfil": "PF",
+                "descricao": "Proteção residencial para casas e imóveis de uso próprio, temporada ou locação.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada conforme perfil",
+                  "Definição de cobertura por tipo de uso do imóvel",
+                  "Apólice residencial",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Incêndio, raio e explosão",
+                  "Roubo de bens",
+                  "Danos elétricos",
+                  "Responsabilidade civil residencial",
+                  "Assistência 24h"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger imóvel residencial, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso do imóvel, com suporte imediato em danos estruturais ou perdas.",
+                "fechamento": "Seguro residencial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/RESIDENCIAESSENCIAL_DFK57J_6c0e5579f9c442a2b9ddfcd49f8a572f",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro residencial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a imóvel residencial."
+                  },
+                  {
+                    "q": "A cobertura muda conforme o tipo de imóvel (praia, campo ou alugado)?",
+                    "a": "Sim, o enquadramento considera o tipo de uso do imóvel, o que pode alterar cobertura, franquias e condições da apólice."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro residencial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "equipamento-portatil",
+            "nome": "Equipamento portátil",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger equipamento portátil, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Tipo e valor do dispositivo, uso pessoal ou corporativo e frequência de sinistros da frota, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-celular-corporativo",
+                "nome": "Seguro celular corporativo",
+                "perfil": "PJ",
+                "descricao": "Proteção para dispositivos móveis e equipamentos portáteis pessoais ou corporativos.",
+                "caracteristicas": [
+                  "Cadastro do dispositivo por IMEI ou número de série",
+                  "Definição de cobertura conforme valor do aparelho",
+                  "Apólice individual ou por frota de dispositivos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Quebra acidental",
+                  "Roubo e furto qualificado",
+                  "Danos por líquido",
+                  "Assistência para reparo ou substituição do dispositivo"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para equipamento portátil, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Menos preocupação com o uso diário do dispositivo, com reposição ágil em caso de dano ou perda.",
+                "fechamento": "Seguro celular corporativo ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/EQUIPAMENTOSPORTATEIS_DFK57J_88cf99d43321445f9ca372356026c61d",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro celular corporativo é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a equipamento portátil."
+                  },
+                  {
+                    "q": "A cobertura inclui dano por queda de líquido?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir quebra acidental e danos por líquido, além de roubo e furto qualificado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro celular corporativo?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-frota-de-dispositivos",
+                "nome": "Seguro frota de dispositivos",
+                "perfil": "PJ",
+                "descricao": "Proteção para dispositivos móveis e equipamentos portáteis pessoais ou corporativos.",
+                "caracteristicas": [
+                  "Cadastro do dispositivo por IMEI ou número de série",
+                  "Definição de cobertura conforme valor do aparelho",
+                  "Apólice individual ou por frota de dispositivos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Quebra acidental",
+                  "Roubo e furto qualificado",
+                  "Danos por líquido",
+                  "Assistência para reparo ou substituição do dispositivo"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para equipamento portátil, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Menos preocupação com o uso diário do dispositivo, com reposição ágil em caso de dano ou perda.",
+                "fechamento": "Seguro frota de dispositivos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/EQUIPAMENTOSPORTATEIS_DFK57J_88cf99d43321445f9ca372356026c61d",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro frota de dispositivos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a equipamento portátil."
+                  },
+                  {
+                    "q": "A cobertura inclui dano por queda de líquido?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir quebra acidental e danos por líquido, além de roubo e furto qualificado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro frota de dispositivos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-notebook-corporativo",
+                "nome": "Seguro notebook corporativo",
+                "perfil": "PJ",
+                "descricao": "Proteção para dispositivos móveis e equipamentos portáteis pessoais ou corporativos.",
+                "caracteristicas": [
+                  "Cadastro do dispositivo por IMEI ou número de série",
+                  "Definição de cobertura conforme valor do aparelho",
+                  "Apólice individual ou por frota de dispositivos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Quebra acidental",
+                  "Roubo e furto qualificado",
+                  "Danos por líquido",
+                  "Assistência para reparo ou substituição do dispositivo"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para equipamento portátil, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Menos preocupação com o uso diário do dispositivo, com reposição ágil em caso de dano ou perda.",
+                "fechamento": "Seguro notebook corporativo ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/EQUIPAMENTOSPORTATEIS_DFK57J_88cf99d43321445f9ca372356026c61d",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro notebook corporativo é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a equipamento portátil."
+                  },
+                  {
+                    "q": "A cobertura inclui dano por queda de líquido?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir quebra acidental e danos por líquido, além de roubo e furto qualificado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro notebook corporativo?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-celular",
+                "nome": "Seguro celular",
+                "perfil": "PF",
+                "descricao": "Proteção para dispositivos móveis e equipamentos portáteis pessoais ou corporativos.",
+                "caracteristicas": [
+                  "Cadastro do dispositivo por IMEI ou número de série",
+                  "Definição de cobertura conforme valor do aparelho",
+                  "Apólice individual ou por frota de dispositivos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Quebra acidental",
+                  "Roubo e furto qualificado",
+                  "Danos por líquido",
+                  "Assistência para reparo ou substituição do dispositivo"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger equipamento portátil, com orientação consultiva antes da contratação.",
+                "beneficios": "Menos preocupação com o uso diário do dispositivo, com reposição ágil em caso de dano ou perda.",
+                "fechamento": "Seguro celular ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGUROCELULAR_DFK57J_758c63a8a935458582165184d1c5b2f6",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro celular é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a equipamento portátil."
+                  },
+                  {
+                    "q": "A cobertura inclui dano por queda de líquido?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir quebra acidental e danos por líquido, além de roubo e furto qualificado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro celular?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-notebook",
+                "nome": "Seguro notebook",
+                "perfil": "PF",
+                "descricao": "Proteção para dispositivos móveis e equipamentos portáteis pessoais ou corporativos.",
+                "caracteristicas": [
+                  "Cadastro do dispositivo por IMEI ou número de série",
+                  "Definição de cobertura conforme valor do aparelho",
+                  "Apólice individual ou por frota de dispositivos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Quebra acidental",
+                  "Roubo e furto qualificado",
+                  "Danos por líquido",
+                  "Assistência para reparo ou substituição do dispositivo"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger equipamento portátil, com orientação consultiva antes da contratação.",
+                "beneficios": "Menos preocupação com o uso diário do dispositivo, com reposição ágil em caso de dano ou perda.",
+                "fechamento": "Seguro notebook ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGURONOTEBOOKETABLET_DFK57J_53e0e0ea9e4040ce929f39ac3fe45a77",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro notebook é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a equipamento portátil."
+                  },
+                  {
+                    "q": "A cobertura inclui dano por queda de líquido?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir quebra acidental e danos por líquido, além de roubo e furto qualificado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro notebook?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-smartwatch",
+                "nome": "Seguro smartwatch",
+                "perfil": "PF",
+                "descricao": "Proteção para dispositivos móveis e equipamentos portáteis pessoais ou corporativos.",
+                "caracteristicas": [
+                  "Cadastro do dispositivo por IMEI ou número de série",
+                  "Definição de cobertura conforme valor do aparelho",
+                  "Apólice individual ou por frota de dispositivos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Quebra acidental",
+                  "Roubo e furto qualificado",
+                  "Danos por líquido",
+                  "Assistência para reparo ou substituição do dispositivo"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger equipamento portátil, com orientação consultiva antes da contratação.",
+                "beneficios": "Menos preocupação com o uso diário do dispositivo, com reposição ágil em caso de dano ou perda.",
+                "fechamento": "Seguro smartwatch ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGUROSMARTEGAMES_DFK57J_2e6aff135cb342e693d8efa810c30ad4",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro smartwatch é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a equipamento portátil."
+                  },
+                  {
+                    "q": "A cobertura inclui dano por queda de líquido?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir quebra acidental e danos por líquido, além de roubo e furto qualificado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro smartwatch?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-tablet",
+                "nome": "Seguro tablet",
+                "perfil": "PF",
+                "descricao": "Proteção para dispositivos móveis e equipamentos portáteis pessoais ou corporativos.",
+                "caracteristicas": [
+                  "Cadastro do dispositivo por IMEI ou número de série",
+                  "Definição de cobertura conforme valor do aparelho",
+                  "Apólice individual ou por frota de dispositivos",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Quebra acidental",
+                  "Roubo e furto qualificado",
+                  "Danos por líquido",
+                  "Assistência para reparo ou substituição do dispositivo"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger equipamento portátil, com orientação consultiva antes da contratação.",
+                "beneficios": "Menos preocupação com o uso diário do dispositivo, com reposição ágil em caso de dano ou perda.",
+                "fechamento": "Seguro tablet ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGURONOTEBOOKETABLET_DFK57J_53e0e0ea9e4040ce929f39ac3fe45a77",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro tablet é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a equipamento portátil."
+                  },
+                  {
+                    "q": "A cobertura inclui dano por queda de líquido?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir quebra acidental e danos por líquido, além de roubo e furto qualificado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro tablet?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "garantia-estendida",
+            "nome": "Garantia estendida",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger garantia estendida, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Tipo de produto, valor da nota fiscal e prazo de extensão desejado, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-garantia-estendida-de-produtos",
+                "nome": "Seguro de Garantia Estendida de Produtos",
+                "perfil": "PF",
+                "descricao": "Extensão da garantia de fábrica para produtos, cobrindo defeitos após o período original.",
+                "caracteristicas": [
+                  "Cadastro do produto e da nota fiscal",
+                  "Definição do período de extensão",
+                  "Apólice de garantia estendida",
+                  "Acionamento em defeito coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura de defeito de fabricação",
+                  "Reparo ou substituição do produto",
+                  "Suporte técnico durante a vigência da extensão"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger garantia estendida, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tempo de cobertura para o produto, reduzindo o custo com reparos após o fim da garantia original.",
+                "fechamento": "Seguro de Garantia Estendida de Produtos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Garantia Estendida de Produtos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a garantia estendida."
+                  },
+                  {
+                    "q": "A garantia estendida começa a valer logo após a compra?",
+                    "a": "Não, a cobertura passa a valer após o término da garantia de fábrica, pelo período de extensão contratado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Garantia Estendida de Produtos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "maquina-e-equipamento-industrial",
+            "nome": "Máquina e equipamento industrial",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para máquina e equipamento industrial, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Tipo de equipamento, valor de reposição e impacto de uma parada na produção, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-maquinas-e-equipamentos-empresariais",
+                "nome": "Seguro máquinas e equipamentos empresariais",
+                "perfil": "PJ",
+                "descricao": "Proteção para máquinas e equipamentos utilizados na operação empresarial ou industrial.",
+                "caracteristicas": [
+                  "Vistoria técnica do equipamento",
+                  "Definição de cobertura conforme uso e valor",
+                  "Apólice empresarial",
+                  "Acionamento com suporte técnico"
+                ],
+                "itensInclusos": [
+                  "Quebra de máquina",
+                  "Danos elétricos e mecânicos",
+                  "Perda de produção decorrente de sinistro",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para máquina e equipamento industrial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação industrial com menor impacto financeiro diante de quebra ou dano ao equipamento.",
+                "fechamento": "Seguro máquinas e equipamentos empresariais ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro máquinas e equipamentos empresariais é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a máquina e equipamento industrial."
+                  },
+                  {
+                    "q": "A cobertura inclui perda de produção durante o reparo?",
+                    "a": "Conforme apólice, a cobertura pode incluir perda de produção decorrente da paralisação por quebra do equipamento."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro máquinas e equipamentos empresariais?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "sistemas-solares",
+            "nome": "Sistemas solares",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para sistemas solares, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Patrimônio"
+            ],
+            "porque": "Potência instalada, valor do investimento e componentes do sistema (painéis, inversores, estrutura), seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-para-sistema-solar-empresarial",
+                "nome": "Seguro para sistema solar empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para sistemas de energia solar residenciais ou empresariais.",
+                "caracteristicas": [
+                  "Vistoria do sistema instalado",
+                  "Definição de cobertura conforme potência e uso",
+                  "Apólice residencial ou empresarial",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Danos aos painéis e inversores",
+                  "Roubo de equipamentos",
+                  "Danos elétricos",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para sistemas solares, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Protege o investimento em energia solar e garante continuidade da geração de energia.",
+                "fechamento": "Seguro para sistema solar empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro para sistema solar empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a sistemas solares."
+                  },
+                  {
+                    "q": "A cobertura inclui roubo de painéis solares?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir roubo de equipamentos, além de danos aos painéis e inversores."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro para sistema solar empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-para-sistema-solar-residencial",
+                "nome": "Seguro para sistema solar residencial",
+                "perfil": "PF",
+                "descricao": "Proteção para sistemas de energia solar residenciais ou empresariais.",
+                "caracteristicas": [
+                  "Vistoria do sistema instalado",
+                  "Definição de cobertura conforme potência e uso",
+                  "Apólice residencial ou empresarial",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Danos aos painéis e inversores",
+                  "Roubo de equipamentos",
+                  "Danos elétricos",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger sistemas solares, com orientação consultiva antes da contratação.",
+                "beneficios": "Protege o investimento em energia solar e garante continuidade da geração de energia.",
+                "fechamento": "Seguro para sistema solar residencial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção patrimonial",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro para sistema solar residencial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a sistemas solares."
+                  },
+                  {
+                    "q": "A cobertura inclui roubo de painéis solares?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir roubo de equipamentos, além de danos aos painéis e inversores."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro para sistema solar residencial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "logistica-e-transporte",
+        "nome": "Logística e transporte",
+        "hero": "Embarcações, logística nacional e mudança.",
+        "nucleos": [
+          {
+            "slug": "embarcacoes",
+            "nome": "Embarcações",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para embarcações, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Logística"
+            ],
+            "porque": "Tipo de operação comercial, porte da embarcação e área de navegação, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-nautico-comercial",
+                "nome": "Seguro náutico comercial",
+                "perfil": "PJ",
+                "descricao": "Proteção para embarcações utilizadas em operação comercial e logística.",
+                "caracteristicas": [
+                  "Vistoria da embarcação comercial",
+                  "Definição de cobertura conforme operação",
+                  "Apólice comercial náutica",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Casco e máquinas em operação comercial",
+                  "Responsabilidade civil da operação",
+                  "Assistência em avaria"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para embarcações, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação logística náutica com respaldo financeiro em avarias e responsabilidade.",
+                "fechamento": "Seguro náutico comercial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro náutico comercial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a embarcações."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade civil na operação comercial?",
+                    "a": "Sim, a apólice comercial náutica pode incluir responsabilidade civil da operação, além de casco e máquinas."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro náutico comercial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "logistica-nacional",
+            "nome": "Logística nacional",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para logística nacional, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Logística"
+            ],
+            "porque": "Volume de cargas transportadas, tipo de mercadoria e trajeto percorrido, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-cargas-nacionais",
+                "nome": "Seguro de cargas nacionais",
+                "perfil": "PJ",
+                "descricao": "Proteção para cargas e responsabilidade civil de transportadores em operações logísticas nacionais.",
+                "caracteristicas": [
+                  "Análise da operação de transporte",
+                  "Definição de cobertura por carga e trajeto",
+                  "Apólice de transporte ou RC transportador",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de carga transportada",
+                  "Responsabilidade civil do transportador",
+                  "Roubo em trânsito",
+                  "Assistência em sinistro de carga"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para logística nacional, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança para a operação logística, reduzindo o impacto financeiro de perdas em trânsito.",
+                "fechamento": "Seguro de cargas nacionais ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de cargas nacionais é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a logística nacional."
+                  },
+                  {
+                    "q": "A cobertura inclui roubo de carga durante o trajeto?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir roubo em trânsito, além de avaria e responsabilidade civil do transportador."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de cargas nacionais?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-transportador",
+                "nome": "Seguro RC transportador",
+                "perfil": "PJ",
+                "descricao": "Proteção para cargas e responsabilidade civil de transportadores em operações logísticas nacionais.",
+                "caracteristicas": [
+                  "Análise da operação de transporte",
+                  "Definição de cobertura por carga e trajeto",
+                  "Apólice de transporte ou RC transportador",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de carga transportada",
+                  "Responsabilidade civil do transportador",
+                  "Roubo em trânsito",
+                  "Assistência em sinistro de carga"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para logística nacional, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança para a operação logística, reduzindo o impacto financeiro de perdas em trânsito.",
+                "fechamento": "Seguro RC transportador ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC transportador é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a logística nacional."
+                  },
+                  {
+                    "q": "A cobertura inclui roubo de carga durante o trajeto?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir roubo em trânsito, além de avaria e responsabilidade civil do transportador."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC transportador?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "mudanca",
+            "nome": "Mudança",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger mudança, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Logística"
+            ],
+            "porque": "Valor dos bens transportados, trajeto (nacional ou internacional) e necessidade de embalagem especializada, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-mudanca-e-bens-empresarial-nacional",
+                "nome": "Seguro mudança e bens empresarial nacional",
+                "perfil": "PJ",
+                "descricao": "Proteção para bens transportados em processos de mudança residencial ou empresarial, nacional ou internacional.",
+                "caracteristicas": [
+                  "Listagem e avaliação dos bens a transportar",
+                  "Definição de cobertura conforme trajeto",
+                  "Apólice de mudança",
+                  "Acionamento em avaria ou perda"
+                ],
+                "itensInclusos": [
+                  "Cobertura de avaria durante o transporte",
+                  "Perda total ou parcial dos bens",
+                  "Embalagem e manuseio quando aplicável"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para mudança, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais tranquilidade durante a mudança, com respaldo financeiro para bens danificados ou extraviados.",
+                "fechamento": "Seguro mudança e bens empresarial nacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro mudança e bens empresarial nacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a mudança."
+                  },
+                  {
+                    "q": "A cobertura vale para mudanças internacionais?",
+                    "a": "Sim, existe cobertura específica para transporte de mudança internacional, além das opções de mudança nacional."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro mudança e bens empresarial nacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-transporte-de-mudanca-empresarial-nacional",
+                "nome": "Seguro transporte de mudança empresarial nacional",
+                "perfil": "PJ",
+                "descricao": "Proteção para bens transportados em processos de mudança residencial ou empresarial, nacional ou internacional.",
+                "caracteristicas": [
+                  "Listagem e avaliação dos bens a transportar",
+                  "Definição de cobertura conforme trajeto",
+                  "Apólice de mudança",
+                  "Acionamento em avaria ou perda"
+                ],
+                "itensInclusos": [
+                  "Cobertura de avaria durante o transporte",
+                  "Perda total ou parcial dos bens",
+                  "Embalagem e manuseio quando aplicável"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para mudança, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais tranquilidade durante a mudança, com respaldo financeiro para bens danificados ou extraviados.",
+                "fechamento": "Seguro transporte de mudança empresarial nacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro transporte de mudança empresarial nacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a mudança."
+                  },
+                  {
+                    "q": "A cobertura vale para mudanças internacionais?",
+                    "a": "Sim, existe cobertura específica para transporte de mudança internacional, além das opções de mudança nacional."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro transporte de mudança empresarial nacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-mudanca-e-bens-pessoal-nacional",
+                "nome": "Seguro mudança e bens pessoal nacional",
+                "perfil": "PF",
+                "descricao": "Proteção para bens transportados em processos de mudança residencial ou empresarial, nacional ou internacional.",
+                "caracteristicas": [
+                  "Listagem e avaliação dos bens a transportar",
+                  "Definição de cobertura conforme trajeto",
+                  "Apólice de mudança",
+                  "Acionamento em avaria ou perda"
+                ],
+                "itensInclusos": [
+                  "Cobertura de avaria durante o transporte",
+                  "Perda total ou parcial dos bens",
+                  "Embalagem e manuseio quando aplicável"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger mudança, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade durante a mudança, com respaldo financeiro para bens danificados ou extraviados.",
+                "fechamento": "Seguro mudança e bens pessoal nacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro mudança e bens pessoal nacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a mudança."
+                  },
+                  {
+                    "q": "A cobertura vale para mudanças internacionais?",
+                    "a": "Sim, existe cobertura específica para transporte de mudança internacional, além das opções de mudança nacional."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro mudança e bens pessoal nacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-transporte-de-mudanca-internacional",
+                "nome": "Seguro transporte de mudança internacional",
+                "perfil": "PF",
+                "descricao": "Proteção para bens transportados em processos de mudança residencial ou empresarial, nacional ou internacional.",
+                "caracteristicas": [
+                  "Listagem e avaliação dos bens a transportar",
+                  "Definição de cobertura conforme trajeto",
+                  "Apólice de mudança",
+                  "Acionamento em avaria ou perda"
+                ],
+                "itensInclusos": [
+                  "Cobertura de avaria durante o transporte",
+                  "Perda total ou parcial dos bens",
+                  "Embalagem e manuseio quando aplicável"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger mudança, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade durante a mudança, com respaldo financeiro para bens danificados ou extraviados.",
+                "fechamento": "Seguro transporte de mudança internacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro transporte de mudança internacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a mudança."
+                  },
+                  {
+                    "q": "A cobertura vale para mudanças internacionais?",
+                    "a": "Sim, existe cobertura específica para transporte de mudança internacional, além das opções de mudança nacional."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro transporte de mudança internacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-transporte-de-mudanca-pessoal-nacional",
+                "nome": "Seguro transporte de mudança pessoal nacional",
+                "perfil": "PF",
+                "descricao": "Proteção para bens transportados em processos de mudança residencial ou empresarial, nacional ou internacional.",
+                "caracteristicas": [
+                  "Listagem e avaliação dos bens a transportar",
+                  "Definição de cobertura conforme trajeto",
+                  "Apólice de mudança",
+                  "Acionamento em avaria ou perda"
+                ],
+                "itensInclusos": [
+                  "Cobertura de avaria durante o transporte",
+                  "Perda total ou parcial dos bens",
+                  "Embalagem e manuseio quando aplicável"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger mudança, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade durante a mudança, com respaldo financeiro para bens danificados ou extraviados.",
+                "fechamento": "Seguro transporte de mudança pessoal nacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro transporte de mudança pessoal nacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a mudança."
+                  },
+                  {
+                    "q": "A cobertura vale para mudanças internacionais?",
+                    "a": "Sim, existe cobertura específica para transporte de mudança internacional, além das opções de mudança nacional."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro transporte de mudança pessoal nacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "renda-protegida",
+        "nome": "Renda protegida",
+        "hero": "Lucro cessante e renda protegida.",
+        "nucleos": [
+          {
+            "slug": "lucro-cessante",
+            "nome": "Lucro cessante",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para lucro cessante, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Proteção"
+            ],
+            "porque": "Faturamento médio protegido, período de indenização e despesas fixas a cobrir, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-lucros-cessantes-empresarial",
+                "nome": "Seguro lucros cessantes empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para a renda ou o lucro interrompido por sinistro que afete a operação empresarial ou profissional.",
+                "caracteristicas": [
+                  "Análise do faturamento ou renda protegida",
+                  "Definição do período de indenização",
+                  "Apólice de lucros cessantes",
+                  "Acionamento após sinistro que interrompa a atividade"
+                ],
+                "itensInclusos": [
+                  "Cobertura de faturamento não realizado",
+                  "Despesas fixas durante a paralisação",
+                  "Suporte para apuração do prejuízo"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para lucro cessante, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mantém o fluxo financeiro da empresa ou do profissional mesmo com a atividade interrompida.",
+                "fechamento": "Seguro lucros cessantes empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro lucros cessantes empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a lucro cessante."
+                  },
+                  {
+                    "q": "A cobertura inclui despesas fixas durante a paralisação?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir despesas fixas do período, além do faturamento não realizado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro lucros cessantes empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-lucros-cessantes-profissional",
+                "nome": "Seguro lucros cessantes profissional",
+                "perfil": "PF",
+                "descricao": "Proteção para a renda ou o lucro interrompido por sinistro que afete a operação empresarial ou profissional.",
+                "caracteristicas": [
+                  "Análise do faturamento ou renda protegida",
+                  "Definição do período de indenização",
+                  "Apólice de lucros cessantes",
+                  "Acionamento após sinistro que interrompa a atividade"
+                ],
+                "itensInclusos": [
+                  "Cobertura de faturamento não realizado",
+                  "Despesas fixas durante a paralisação",
+                  "Suporte para apuração do prejuízo"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger lucro cessante, com orientação consultiva antes da contratação.",
+                "beneficios": "Mantém o fluxo financeiro da empresa ou do profissional mesmo com a atividade interrompida.",
+                "fechamento": "Seguro lucros cessantes profissional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro lucros cessantes profissional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a lucro cessante."
+                  },
+                  {
+                    "q": "A cobertura inclui despesas fixas durante a paralisação?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir despesas fixas do período, além do faturamento não realizado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro lucros cessantes profissional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "renda-protegida",
+            "nome": "Renda protegida",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger renda protegida, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Proteção"
+            ],
+            "porque": "Renda a proteger, evento coberto e prazo de carência aplicável, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-doencas-graves-executivos",
+                "nome": "Seguro doenças graves executivos",
+                "perfil": "PJ",
+                "descricao": "Proteção de renda pessoal ou coletiva diante de doença grave, invalidez ou perda de capacidade laboral.",
+                "caracteristicas": [
+                  "Análise de perfil e renda a proteger",
+                  "Definição de cobertura conforme evento coberto",
+                  "Apólice individual ou coletiva",
+                  "Acionamento após diagnóstico ou evento coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura por doença grave",
+                  "Indenização por invalidez",
+                  "Complementação de renda temporária",
+                  "Suporte para continuidade educacional quando aplicável"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para renda protegida, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mantém a estabilidade financeira pessoal ou familiar diante de eventos que reduzem a capacidade de gerar renda.",
+                "fechamento": "Seguro doenças graves executivos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro doenças graves executivos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a renda protegida."
+                  },
+                  {
+                    "q": "Qual o prazo para o início da cobertura após a contratação?",
+                    "a": "Existe prazo de carência conforme evento coberto e condições da apólice, que deve ser validado antes da contratação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro doenças graves executivos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-invalidez-coletiva",
+                "nome": "Seguro invalidez coletiva",
+                "perfil": "PJ",
+                "descricao": "Proteção de renda pessoal ou coletiva diante de doença grave, invalidez ou perda de capacidade laboral.",
+                "caracteristicas": [
+                  "Análise de perfil e renda a proteger",
+                  "Definição de cobertura conforme evento coberto",
+                  "Apólice individual ou coletiva",
+                  "Acionamento após diagnóstico ou evento coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura por doença grave",
+                  "Indenização por invalidez",
+                  "Complementação de renda temporária",
+                  "Suporte para continuidade educacional quando aplicável"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para renda protegida, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mantém a estabilidade financeira pessoal ou familiar diante de eventos que reduzem a capacidade de gerar renda.",
+                "fechamento": "Seguro invalidez coletiva ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro invalidez coletiva é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a renda protegida."
+                  },
+                  {
+                    "q": "Qual o prazo para o início da cobertura após a contratação?",
+                    "a": "Existe prazo de carência conforme evento coberto e condições da apólice, que deve ser validado antes da contratação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro invalidez coletiva?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-renda-coletiva",
+                "nome": "Seguro renda coletiva",
+                "perfil": "PJ",
+                "descricao": "Proteção de renda pessoal ou coletiva diante de doença grave, invalidez ou perda de capacidade laboral.",
+                "caracteristicas": [
+                  "Análise de perfil e renda a proteger",
+                  "Definição de cobertura conforme evento coberto",
+                  "Apólice individual ou coletiva",
+                  "Acionamento após diagnóstico ou evento coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura por doença grave",
+                  "Indenização por invalidez",
+                  "Complementação de renda temporária",
+                  "Suporte para continuidade educacional quando aplicável"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para renda protegida, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mantém a estabilidade financeira pessoal ou familiar diante de eventos que reduzem a capacidade de gerar renda.",
+                "fechamento": "Seguro renda coletiva ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro renda coletiva é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a renda protegida."
+                  },
+                  {
+                    "q": "Qual o prazo para o início da cobertura após a contratação?",
+                    "a": "Existe prazo de carência conforme evento coberto e condições da apólice, que deve ser validado antes da contratação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro renda coletiva?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-doencas-graves-individual",
+                "nome": "Seguro doenças graves individual",
+                "perfil": "PF",
+                "descricao": "Proteção de renda pessoal ou coletiva diante de doença grave, invalidez ou perda de capacidade laboral.",
+                "caracteristicas": [
+                  "Análise de perfil e renda a proteger",
+                  "Definição de cobertura conforme evento coberto",
+                  "Apólice individual ou coletiva",
+                  "Acionamento após diagnóstico ou evento coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura por doença grave",
+                  "Indenização por invalidez",
+                  "Complementação de renda temporária",
+                  "Suporte para continuidade educacional quando aplicável"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger renda protegida, com orientação consultiva antes da contratação.",
+                "beneficios": "Mantém a estabilidade financeira pessoal ou familiar diante de eventos que reduzem a capacidade de gerar renda.",
+                "fechamento": "Seguro doenças graves individual ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro doenças graves individual é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a renda protegida."
+                  },
+                  {
+                    "q": "Qual o prazo para o início da cobertura após a contratação?",
+                    "a": "Existe prazo de carência conforme evento coberto e condições da apólice, que deve ser validado antes da contratação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro doenças graves individual?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-educacional",
+                "nome": "Seguro educacional",
+                "perfil": "PF",
+                "descricao": "Proteção de renda pessoal ou coletiva diante de doença grave, invalidez ou perda de capacidade laboral.",
+                "caracteristicas": [
+                  "Análise de perfil e renda a proteger",
+                  "Definição de cobertura conforme evento coberto",
+                  "Apólice individual ou coletiva",
+                  "Acionamento após diagnóstico ou evento coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura por doença grave",
+                  "Indenização por invalidez",
+                  "Complementação de renda temporária",
+                  "Suporte para continuidade educacional quando aplicável"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger renda protegida, com orientação consultiva antes da contratação.",
+                "beneficios": "Mantém a estabilidade financeira pessoal ou familiar diante de eventos que reduzem a capacidade de gerar renda.",
+                "fechamento": "Seguro educacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro educacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a renda protegida."
+                  },
+                  {
+                    "q": "Qual o prazo para o início da cobertura após a contratação?",
+                    "a": "Existe prazo de carência conforme evento coberto e condições da apólice, que deve ser validado antes da contratação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro educacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-invalidez",
+                "nome": "Seguro invalidez",
+                "perfil": "PF",
+                "descricao": "Proteção de renda pessoal ou coletiva diante de doença grave, invalidez ou perda de capacidade laboral.",
+                "caracteristicas": [
+                  "Análise de perfil e renda a proteger",
+                  "Definição de cobertura conforme evento coberto",
+                  "Apólice individual ou coletiva",
+                  "Acionamento após diagnóstico ou evento coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura por doença grave",
+                  "Indenização por invalidez",
+                  "Complementação de renda temporária",
+                  "Suporte para continuidade educacional quando aplicável"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger renda protegida, com orientação consultiva antes da contratação.",
+                "beneficios": "Mantém a estabilidade financeira pessoal ou familiar diante de eventos que reduzem a capacidade de gerar renda.",
+                "fechamento": "Seguro invalidez ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro invalidez é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a renda protegida."
+                  },
+                  {
+                    "q": "Qual o prazo para o início da cobertura após a contratação?",
+                    "a": "Existe prazo de carência conforme evento coberto e condições da apólice, que deve ser validado antes da contratação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro invalidez?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-perda-de-renda-temporaria",
+                "nome": "Seguro perda de renda temporária",
+                "perfil": "PF",
+                "descricao": "Proteção de renda pessoal ou coletiva diante de doença grave, invalidez ou perda de capacidade laboral.",
+                "caracteristicas": [
+                  "Análise de perfil e renda a proteger",
+                  "Definição de cobertura conforme evento coberto",
+                  "Apólice individual ou coletiva",
+                  "Acionamento após diagnóstico ou evento coberto"
+                ],
+                "itensInclusos": [
+                  "Cobertura por doença grave",
+                  "Indenização por invalidez",
+                  "Complementação de renda temporária",
+                  "Suporte para continuidade educacional quando aplicável"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger renda protegida, com orientação consultiva antes da contratação.",
+                "beneficios": "Mantém a estabilidade financeira pessoal ou familiar diante de eventos que reduzem a capacidade de gerar renda.",
+                "fechamento": "Seguro perda de renda temporária ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção adequada",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro perda de renda temporária é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a renda protegida."
+                  },
+                  {
+                    "q": "Qual o prazo para o início da cobertura após a contratação?",
+                    "a": "Existe prazo de carência conforme evento coberto e condições da apólice, que deve ser validado antes da contratação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro perda de renda temporária?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "responsabilidade-civil",
+        "nome": "Responsabilidade civil",
+        "hero": "D&o empresarial, responsabilidade civil empresarial, responsabilidade civil pessoal e responsabilidade civil profissional.",
+        "nucleos": [
+          {
+            "slug": "d-o-empresarial",
+            "nome": "D&O Empresarial",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para D&O empresarial, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Responsabilidade"
+            ],
+            "porque": "Estrutura societária, número de administradores cobertos e limite de indenização, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-d-o-para-executivos-e-administradores",
+                "nome": "Seguro D&O para Executivos e Administradores",
+                "perfil": "PJ",
+                "descricao": "Proteção para administradores e executivos por decisões tomadas no exercício do cargo.",
+                "caracteristicas": [
+                  "Análise da estrutura de governança",
+                  "Definição de cobertura por cargo e limite de indenização",
+                  "Apólice D&O",
+                  "Acionamento em reclamação contra administrador"
+                ],
+                "itensInclusos": [
+                  "Cobertura de defesa em processos administrativos e judiciais",
+                  "Indenização por decisões de gestão",
+                  "Cobertura para ex-administradores"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para D&O empresarial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança para atrair e reter executivos, com respaldo jurídico e financeiro para decisões de gestão.",
+                "fechamento": "Seguro D&O para Executivos e Administradores ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro D&O para Executivos e Administradores é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a D&O empresarial."
+                  },
+                  {
+                    "q": "A cobertura inclui ex-administradores da empresa?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir ex-administradores por decisões tomadas durante o exercício do cargo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro D&O para Executivos e Administradores?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "responsabilidade-civil-empresarial",
+            "nome": "Responsabilidade civil empresarial",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para responsabilidade civil empresarial, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Responsabilidade"
+            ],
+            "porque": "Atividade da empresa, exposição a terceiros e necessidade de cobertura ambiental ou de frota, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-rc-ambiental-empresarial",
+                "nome": "Seguro RC ambiental empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para a responsabilidade civil da empresa perante terceiros, decorrente de operação, produto ou serviço.",
+                "caracteristicas": [
+                  "Análise da atividade e exposição da empresa",
+                  "Definição de cobertura conforme operação",
+                  "Apólice de RC empresarial",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais a terceiros",
+                  "Responsabilidade ambiental quando aplicável",
+                  "Responsabilidade da frota empresarial",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para responsabilidade civil empresarial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz a exposição financeira da empresa diante de reclamações de terceiros decorrentes da operação.",
+                "fechamento": "Seguro RC ambiental empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC ambiental empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil empresarial."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade ambiental?",
+                    "a": "Sim, existe modalidade específica de RC ambiental empresarial para empresas com esse tipo de exposição."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC ambiental empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-empresarial-geral",
+                "nome": "Seguro RC empresarial geral",
+                "perfil": "PJ",
+                "descricao": "Proteção para a responsabilidade civil da empresa perante terceiros, decorrente de operação, produto ou serviço.",
+                "caracteristicas": [
+                  "Análise da atividade e exposição da empresa",
+                  "Definição de cobertura conforme operação",
+                  "Apólice de RC empresarial",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais a terceiros",
+                  "Responsabilidade ambiental quando aplicável",
+                  "Responsabilidade da frota empresarial",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para responsabilidade civil empresarial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz a exposição financeira da empresa diante de reclamações de terceiros decorrentes da operação.",
+                "fechamento": "Seguro RC empresarial geral ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC empresarial geral é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil empresarial."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade ambiental?",
+                    "a": "Sim, existe modalidade específica de RC ambiental empresarial para empresas com esse tipo de exposição."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC empresarial geral?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-empresarial-terceiros",
+                "nome": "Seguro RC empresarial terceiros",
+                "perfil": "PJ",
+                "descricao": "Proteção para a responsabilidade civil da empresa perante terceiros, decorrente de operação, produto ou serviço.",
+                "caracteristicas": [
+                  "Análise da atividade e exposição da empresa",
+                  "Definição de cobertura conforme operação",
+                  "Apólice de RC empresarial",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais a terceiros",
+                  "Responsabilidade ambiental quando aplicável",
+                  "Responsabilidade da frota empresarial",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para responsabilidade civil empresarial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz a exposição financeira da empresa diante de reclamações de terceiros decorrentes da operação.",
+                "fechamento": "Seguro RC empresarial terceiros ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC empresarial terceiros é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil empresarial."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade ambiental?",
+                    "a": "Sim, existe modalidade específica de RC ambiental empresarial para empresas com esse tipo de exposição."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC empresarial terceiros?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-operacao-de-frota-empresarial",
+                "nome": "Seguro RC operação de frota empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para a responsabilidade civil da empresa perante terceiros, decorrente de operação, produto ou serviço.",
+                "caracteristicas": [
+                  "Análise da atividade e exposição da empresa",
+                  "Definição de cobertura conforme operação",
+                  "Apólice de RC empresarial",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais a terceiros",
+                  "Responsabilidade ambiental quando aplicável",
+                  "Responsabilidade da frota empresarial",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para responsabilidade civil empresarial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz a exposição financeira da empresa diante de reclamações de terceiros decorrentes da operação.",
+                "fechamento": "Seguro RC operação de frota empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC operação de frota empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil empresarial."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade ambiental?",
+                    "a": "Sim, existe modalidade específica de RC ambiental empresarial para empresas com esse tipo de exposição."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC operação de frota empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-coletivo",
+                "nome": "Seguro RC profissional coletivo",
+                "perfil": "PJ",
+                "descricao": "Proteção para a responsabilidade civil da empresa perante terceiros, decorrente de operação, produto ou serviço.",
+                "caracteristicas": [
+                  "Análise da atividade e exposição da empresa",
+                  "Definição de cobertura conforme operação",
+                  "Apólice de RC empresarial",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais a terceiros",
+                  "Responsabilidade ambiental quando aplicável",
+                  "Responsabilidade da frota empresarial",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para responsabilidade civil empresarial, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz a exposição financeira da empresa diante de reclamações de terceiros decorrentes da operação.",
+                "fechamento": "Seguro RC profissional coletivo ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC profissional coletivo é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil empresarial."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade ambiental?",
+                    "a": "Sim, existe modalidade específica de RC ambiental empresarial para empresas com esse tipo de exposição."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC profissional coletivo?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "responsabilidade-civil-pessoal",
+            "nome": "Responsabilidade civil pessoal",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger responsabilidade civil pessoal, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Responsabilidade"
+            ],
+            "porque": "Número de pessoas protegidas, exposição pessoal e limite de indenização desejado, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-rc-ambiental-pessoal",
+                "nome": "Seguro RC ambiental pessoal",
+                "perfil": "PF",
+                "descricao": "Proteção pessoal ou familiar para danos causados involuntariamente a terceiros.",
+                "caracteristicas": [
+                  "Análise do perfil pessoal ou familiar",
+                  "Definição de cobertura conforme exposição",
+                  "Apólice de RC pessoal ou familiar",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais causados a terceiros",
+                  "Responsabilidade ambiental pessoal",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil pessoal, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no dia a dia, com respaldo financeiro em caso de dano involuntário a terceiros.",
+                "fechamento": "Seguro RC ambiental pessoal ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC ambiental pessoal é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil pessoal."
+                  },
+                  {
+                    "q": "A cobertura protege toda a família?",
+                    "a": "Existe modalidade de RC familiar que amplia a proteção para os membros da família, além da cobertura individual."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC ambiental pessoal?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-familiar",
+                "nome": "Seguro RC familiar",
+                "perfil": "PF",
+                "descricao": "Proteção pessoal ou familiar para danos causados involuntariamente a terceiros.",
+                "caracteristicas": [
+                  "Análise do perfil pessoal ou familiar",
+                  "Definição de cobertura conforme exposição",
+                  "Apólice de RC pessoal ou familiar",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais causados a terceiros",
+                  "Responsabilidade ambiental pessoal",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil pessoal, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no dia a dia, com respaldo financeiro em caso de dano involuntário a terceiros.",
+                "fechamento": "Seguro RC familiar ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC familiar é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil pessoal."
+                  },
+                  {
+                    "q": "A cobertura protege toda a família?",
+                    "a": "Existe modalidade de RC familiar que amplia a proteção para os membros da família, além da cobertura individual."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC familiar?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-pessoal",
+                "nome": "Seguro RC pessoal",
+                "perfil": "PF",
+                "descricao": "Proteção pessoal ou familiar para danos causados involuntariamente a terceiros.",
+                "caracteristicas": [
+                  "Análise do perfil pessoal ou familiar",
+                  "Definição de cobertura conforme exposição",
+                  "Apólice de RC pessoal ou familiar",
+                  "Acionamento em reclamação de terceiro"
+                ],
+                "itensInclusos": [
+                  "Cobertura de danos materiais e corporais causados a terceiros",
+                  "Responsabilidade ambiental pessoal",
+                  "Defesa em processos"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil pessoal, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no dia a dia, com respaldo financeiro em caso de dano involuntário a terceiros.",
+                "fechamento": "Seguro RC pessoal ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC pessoal é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil pessoal."
+                  },
+                  {
+                    "q": "A cobertura protege toda a família?",
+                    "a": "Existe modalidade de RC familiar que amplia a proteção para os membros da família, além da cobertura individual."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC pessoal?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "responsabilidade-civil-profissional",
+            "nome": "Responsabilidade civil profissional",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Responsabilidade"
+            ],
+            "porque": "Especialidade profissional, limite de indenização e prazo de retroatividade da apólice, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-d-o-para-executivos-e-administradores",
+                "nome": "Seguro D&O para Executivos e Administradores",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro D&O para Executivos e Administradores ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro D&O para Executivos e Administradores é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro D&O para Executivos e Administradores?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-advogados",
+                "nome": "Seguro RC Profissional E&O, Advogados",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Advogados ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Advogados é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Advogados?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-contadores",
+                "nome": "Seguro RC Profissional E&O, Contadores",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Contadores ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Contadores é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Contadores?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-dentistas",
+                "nome": "Seguro RC Profissional E&O, Dentistas",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Dentistas ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Dentistas é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Dentistas?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-engenheiros-e-arquitetos",
+                "nome": "Seguro RC Profissional E&O, Engenheiros e Arquitetos",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Engenheiros e Arquitetos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Engenheiros e Arquitetos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Engenheiros e Arquitetos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-medicos",
+                "nome": "Seguro RC Profissional E&O, Médicos",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Médicos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Médicos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Médicos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-outras-profissoes",
+                "nome": "Seguro RC Profissional E&O, Outras profissões",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Outras profissões ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Outras profissões é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Outras profissões?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-psicologos",
+                "nome": "Seguro RC Profissional E&O, Psicólogos",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Psicólogos ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Psicólogos é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Psicólogos?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-rc-profissional-e-o-veterinarios",
+                "nome": "Seguro RC Profissional E&O, Veterinários",
+                "perfil": "PF",
+                "descricao": "Proteção para profissionais liberais por erros, omissões ou falhas no exercício da atividade profissional (E&O).",
+                "caracteristicas": [
+                  "Análise da atividade profissional e exposição",
+                  "Definição de cobertura conforme especialidade",
+                  "Apólice de RC profissional (E&O)",
+                  "Acionamento em reclamação por erro ou omissão"
+                ],
+                "itensInclusos": [
+                  "Cobertura de erro, omissão ou negligência profissional",
+                  "Defesa em processo administrativo ou judicial",
+                  "Indenização a terceiros conforme apólice"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger responsabilidade civil profissional, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para exercer a atividade profissional, com respaldo jurídico e financeiro diante de reclamações.",
+                "fechamento": "Seguro RC Profissional E&O, Veterinários ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar responsabilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro RC Profissional E&O, Veterinários é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a responsabilidade civil profissional."
+                  },
+                  {
+                    "q": "A cobertura inclui defesa jurídica em processos por erro profissional?",
+                    "a": "Sim, a apólice de RC profissional (E&O) inclui defesa em processo administrativo ou judicial, além da indenização a terceiros."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro RC Profissional E&O, Veterinários?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Soluções financeiras",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "veiculos-e-frotas",
+        "nome": "Veículos e frotas",
+        "hero": "Automóveis, bicicleta, caminhões, carta verde e outras modalidades.",
+        "nucleos": [
+          {
+            "slug": "automoveis",
+            "nome": "Automóveis",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger automóveis, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Perfil do condutor, uso do veículo (particular, frota ou assinatura) e necessidade de carro reserva, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-frota-de-automovel-empresarial",
+                "nome": "Seguro frota de automóvel empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para automóveis particulares ou frotas empresariais, com cobertura de danos, roubo e responsabilidade.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada do veículo",
+                  "Definição de cobertura conforme perfil e uso",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Carro reserva quando previsto"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para automóveis, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais tranquilidade no uso do veículo, com suporte rápido em sinistro e menor exposição financeira.",
+                "fechamento": "Seguro frota de automóvel empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro frota de automóvel empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a automóveis."
+                  },
+                  {
+                    "q": "A cobertura inclui carro reserva durante o reparo?",
+                    "a": "Conforme apólice, a cobertura pode incluir carro reserva durante o período de reparo do veículo sinistrado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro frota de automóvel empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-auto-por-assinatura",
+                "nome": "Seguro auto por assinatura",
+                "perfil": "PF",
+                "descricao": "Proteção para automóveis particulares ou frotas empresariais, com cobertura de danos, roubo e responsabilidade.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada do veículo",
+                  "Definição de cobertura conforme perfil e uso",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Carro reserva quando previsto"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger automóveis, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso do veículo, com suporte rápido em sinistro e menor exposição financeira.",
+                "fechamento": "Seguro auto por assinatura ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro auto por assinatura é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a automóveis."
+                  },
+                  {
+                    "q": "A cobertura inclui carro reserva durante o reparo?",
+                    "a": "Conforme apólice, a cobertura pode incluir carro reserva durante o período de reparo do veículo sinistrado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro auto por assinatura?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-automovel",
+                "nome": "Seguro automóvel",
+                "perfil": "PF",
+                "descricao": "Proteção para automóveis particulares ou frotas empresariais, com cobertura de danos, roubo e responsabilidade.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada do veículo",
+                  "Definição de cobertura conforme perfil e uso",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Carro reserva quando previsto"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger automóveis, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso do veículo, com suporte rápido em sinistro e menor exposição financeira.",
+                "fechamento": "Seguro automóvel ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGUROAUTO_DFK57J_a705c3bf85724a2abe74a68bdf174d8a",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro automóvel é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a automóveis."
+                  },
+                  {
+                    "q": "A cobertura inclui carro reserva durante o reparo?",
+                    "a": "Conforme apólice, a cobertura pode incluir carro reserva durante o período de reparo do veículo sinistrado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro automóvel?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-automovel-premium",
+                "nome": "Seguro automóvel premium",
+                "perfil": "PF",
+                "descricao": "Proteção para automóveis particulares ou frotas empresariais, com cobertura de danos, roubo e responsabilidade.",
+                "caracteristicas": [
+                  "Vistoria ou contratação simplificada do veículo",
+                  "Definição de cobertura conforme perfil e uso",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Carro reserva quando previsto"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger automóveis, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade no uso do veículo, com suporte rápido em sinistro e menor exposição financeira.",
+                "fechamento": "Seguro automóvel premium ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGUROAUTO_DFK57J_a705c3bf85724a2abe74a68bdf174d8a",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro automóvel premium é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a automóveis."
+                  },
+                  {
+                    "q": "A cobertura inclui carro reserva durante o reparo?",
+                    "a": "Conforme apólice, a cobertura pode incluir carro reserva durante o período de reparo do veículo sinistrado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro automóvel premium?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "bicicleta",
+            "nome": "Bicicleta",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger bicicleta, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Valor da bicicleta, uso (urbano ou esportivo) e frequência de deslocamento, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-bicicleta",
+                "nome": "Seguro bicicleta",
+                "perfil": "PF",
+                "descricao": "Proteção para bicicletas particulares, incluindo roubo, furto e danos.",
+                "caracteristicas": [
+                  "Cadastro da bicicleta com identificação",
+                  "Definição de cobertura conforme valor e uso",
+                  "Apólice individual",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Roubo e furto qualificado",
+                  "Danos por colisão",
+                  "Assistência para reparo",
+                  "Cobertura para uso urbano ou esportivo"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger bicicleta, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para usar a bicicleta no dia a dia, com reposição em caso de roubo ou dano.",
+                "fechamento": "Seguro bicicleta ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro bicicleta é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a bicicleta."
+                  },
+                  {
+                    "q": "A cobertura vale para uso esportivo ou apenas urbano?",
+                    "a": "A cobertura pode ser ajustada conforme o uso da bicicleta, seja urbano no dia a dia ou esportivo/competitivo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro bicicleta?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "caminhoes",
+            "nome": "Caminhões",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para caminhões, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Tipo de carga transportada, trajeto percorrido e tamanho da frota, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-caminhoes-empresarial",
+                "nome": "Seguro caminhões empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para caminhões particulares ou de frota empresarial utilizados em transporte de carga.",
+                "caracteristicas": [
+                  "Vistoria do caminhão",
+                  "Definição de cobertura conforme uso e tipo de carga",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo do veículo",
+                  "Responsabilidade civil do transportador",
+                  "Assistência 24h em rodovia"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para caminhões, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação de transporte com menor exposição financeira diante de sinistros na estrada.",
+                "fechamento": "Seguro caminhões empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro caminhões empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a caminhões."
+                  },
+                  {
+                    "q": "A cobertura inclui assistência 24h em rodovia?",
+                    "a": "Sim, a apólice pode incluir assistência 24h para o caminhão em rodovia, além da cobertura do veículo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro caminhões empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-caminhao",
+                "nome": "Seguro caminhão",
+                "perfil": "PF",
+                "descricao": "Proteção para caminhões particulares ou de frota empresarial utilizados em transporte de carga.",
+                "caracteristicas": [
+                  "Vistoria do caminhão",
+                  "Definição de cobertura conforme uso e tipo de carga",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo do veículo",
+                  "Responsabilidade civil do transportador",
+                  "Assistência 24h em rodovia"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger caminhões, com orientação consultiva antes da contratação.",
+                "beneficios": "Continuidade da operação de transporte com menor exposição financeira diante de sinistros na estrada.",
+                "fechamento": "Seguro caminhão ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro caminhão é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a caminhões."
+                  },
+                  {
+                    "q": "A cobertura inclui assistência 24h em rodovia?",
+                    "a": "Sim, a apólice pode incluir assistência 24h para o caminhão em rodovia, além da cobertura do veículo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro caminhão?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "carta-verde",
+            "nome": "Carta Verde",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para carta verde, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Prazo da viagem, países a percorrer e se o uso é individual ou de frota, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-carta-verde-mercosul-para-frotas-internacionais",
+                "nome": "Seguro Carta Verde Mercosul para frotas internacionais",
+                "perfil": "PJ",
+                "descricao": "Seguro obrigatório para circulação de veículos brasileiros nos países do Mercosul.",
+                "caracteristicas": [
+                  "Emissão conforme trajeto e prazo de viagem",
+                  "Cobertura válida nos países do bloco",
+                  "Apólice individual ou de frota internacional",
+                  "Acionamento em sinistro no exterior"
+                ],
+                "itensInclusos": [
+                  "Responsabilidade civil obrigatória nos países do Mercosul",
+                  "Cobertura durante todo o trajeto internacional",
+                  "Suporte para emissão do documento"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para carta verde, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Viabiliza a viagem internacional dentro do Mercosul com a documentação e a cobertura exigidas.",
+                "fechamento": "Seguro Carta Verde Mercosul para frotas internacionais ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro Carta Verde Mercosul para frotas internacionais é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a carta verde."
+                  },
+                  {
+                    "q": "A Carta Verde é obrigatória para viajar a qualquer país do Mercosul?",
+                    "a": "Sim, é documento obrigatório para circular com veículo brasileiro nos países do bloco, com cobertura de responsabilidade civil."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro Carta Verde Mercosul para frotas internacionais?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-carta-verde",
+                "nome": "Seguro Carta Verde",
+                "perfil": "PF",
+                "descricao": "Seguro obrigatório para circulação de veículos brasileiros nos países do Mercosul.",
+                "caracteristicas": [
+                  "Emissão conforme trajeto e prazo de viagem",
+                  "Cobertura válida nos países do bloco",
+                  "Apólice individual ou de frota internacional",
+                  "Acionamento em sinistro no exterior"
+                ],
+                "itensInclusos": [
+                  "Responsabilidade civil obrigatória nos países do Mercosul",
+                  "Cobertura durante todo o trajeto internacional",
+                  "Suporte para emissão do documento"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger carta verde, com orientação consultiva antes da contratação.",
+                "beneficios": "Viabiliza a viagem internacional dentro do Mercosul com a documentação e a cobertura exigidas.",
+                "fechamento": "Seguro Carta Verde ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro Carta Verde é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a carta verde."
+                  },
+                  {
+                    "q": "A Carta Verde é obrigatória para viajar a qualquer país do Mercosul?",
+                    "a": "Sim, é documento obrigatório para circular com veículo brasileiro nos países do bloco, com cobertura de responsabilidade civil."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro Carta Verde?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "motocicletas",
+            "nome": "Motocicletas",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger motocicletas, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Perfil do condutor, uso da motocicleta e frequência de deslocamento, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-frota-de-motocicleta",
+                "nome": "Seguro frota de motocicleta",
+                "perfil": "PF",
+                "descricao": "Proteção para motocicletas particulares ou de frota, com cobertura de danos, roubo e responsabilidade.",
+                "caracteristicas": [
+                  "Vistoria da motocicleta",
+                  "Definição de cobertura conforme perfil e uso",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Equipamentos de proteção quando previstos"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger motocicletas, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para o uso diário da motocicleta, com suporte ágil em caso de sinistro.",
+                "fechamento": "Seguro frota de motocicleta ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro frota de motocicleta é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a motocicletas."
+                  },
+                  {
+                    "q": "A cobertura inclui equipamentos de proteção do condutor?",
+                    "a": "Conforme apólice, a cobertura pode incluir equipamentos de proteção previstos em contrato, além do veículo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro frota de motocicleta?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-motocicleta",
+                "nome": "Seguro motocicleta",
+                "perfil": "PF",
+                "descricao": "Proteção para motocicletas particulares ou de frota, com cobertura de danos, roubo e responsabilidade.",
+                "caracteristicas": [
+                  "Vistoria da motocicleta",
+                  "Definição de cobertura conforme perfil e uso",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Equipamentos de proteção quando previstos"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger motocicletas, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para o uso diário da motocicleta, com suporte ágil em caso de sinistro.",
+                "fechamento": "Seguro motocicleta ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro motocicleta é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a motocicletas."
+                  },
+                  {
+                    "q": "A cobertura inclui equipamentos de proteção do condutor?",
+                    "a": "Conforme apólice, a cobertura pode incluir equipamentos de proteção previstos em contrato, além do veículo."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro motocicleta?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "onibus",
+            "nome": "Ônibus",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para ônibus, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Número de passageiros transportados, trajeto operado e tamanho da frota, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-onibus-empresarial",
+                "nome": "Seguro ônibus empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para ônibus particulares ou de frota empresarial utilizados em transporte de passageiros.",
+                "caracteristicas": [
+                  "Vistoria do veículo",
+                  "Definição de cobertura conforme operação e número de passageiros",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil por passageiros e terceiros",
+                  "Assistência 24h em rodovia"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para ônibus, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação de transporte de passageiros com respaldo financeiro em sinistros.",
+                "fechamento": "Seguro ônibus empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro ônibus empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a ônibus."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade civil por passageiros?",
+                    "a": "Sim, a apólice pode incluir responsabilidade civil por danos a passageiros e a terceiros durante a operação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro ônibus empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-onibus",
+                "nome": "Seguro ônibus",
+                "perfil": "PF",
+                "descricao": "Proteção para ônibus particulares ou de frota empresarial utilizados em transporte de passageiros.",
+                "caracteristicas": [
+                  "Vistoria do veículo",
+                  "Definição de cobertura conforme operação e número de passageiros",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil por passageiros e terceiros",
+                  "Assistência 24h em rodovia"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger ônibus, com orientação consultiva antes da contratação.",
+                "beneficios": "Continuidade da operação de transporte de passageiros com respaldo financeiro em sinistros.",
+                "fechamento": "Seguro ônibus ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro ônibus é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a ônibus."
+                  },
+                  {
+                    "q": "A cobertura inclui responsabilidade civil por passageiros?",
+                    "a": "Sim, a apólice pode incluir responsabilidade civil por danos a passageiros e a terceiros durante a operação."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro ônibus?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "utilitarios-e-vans",
+            "nome": "Utilitários e vans",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para utilitários e vans, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Uso do veículo, carga transportada e tamanho da frota, quando aplicável, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-frota-de-utilitario-empresarial",
+                "nome": "Seguro frota de utilitário empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para utilitários e vans particulares ou de frota, usados em operação pessoal ou empresarial.",
+                "caracteristicas": [
+                  "Vistoria do veículo",
+                  "Definição de cobertura conforme uso e carga transportada",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Cobertura de carga quando prevista"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para utilitários e vans, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança operacional para quem depende do veículo para trabalhar ou transportar carga.",
+                "fechamento": "Seguro frota de utilitário empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro frota de utilitário empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a utilitários e vans."
+                  },
+                  {
+                    "q": "A cobertura inclui a carga transportada no utilitário ou van?",
+                    "a": "Conforme apólice, a cobertura pode incluir a carga transportada, além do veículo e da responsabilidade civil."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro frota de utilitário empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-utilitario",
+                "nome": "Seguro utilitário",
+                "perfil": "PF",
+                "descricao": "Proteção para utilitários e vans particulares ou de frota, usados em operação pessoal ou empresarial.",
+                "caracteristicas": [
+                  "Vistoria do veículo",
+                  "Definição de cobertura conforme uso e carga transportada",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil a terceiros",
+                  "Assistência 24h",
+                  "Cobertura de carga quando prevista"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger utilitários e vans, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança operacional para quem depende do veículo para trabalhar ou transportar carga.",
+                "fechamento": "Seguro utilitário ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro utilitário é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a utilitários e vans."
+                  },
+                  {
+                    "q": "A cobertura inclui a carga transportada no utilitário ou van?",
+                    "a": "Conforme apólice, a cobertura pode incluir a carga transportada, além do veículo e da responsabilidade civil."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro utilitário?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "veiculos-de-aplicativo",
+            "nome": "Veículos de aplicativo",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para veículos de aplicativo, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Volume de corridas realizadas, perfil de uso comercial e plataforma utilizada, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-para-veiculo-de-aplicativo-empresarial",
+                "nome": "Seguro para veículo de aplicativo empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção específica para veículos utilizados em plataformas de transporte por aplicativo.",
+                "caracteristicas": [
+                  "Vistoria do veículo",
+                  "Definição de cobertura conforme uso comercial por aplicativo",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo em uso comercial",
+                  "Responsabilidade civil por passageiros e terceiros",
+                  "Assistência 24h"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para veículos de aplicativo, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança para quem depende do veículo como fonte de renda em plataformas de aplicativo.",
+                "fechamento": "Seguro para veículo de aplicativo empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro para veículo de aplicativo empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a veículos de aplicativo."
+                  },
+                  {
+                    "q": "O seguro comum de automóvel cobre o uso por aplicativo?",
+                    "a": "Não necessariamente; por isso existe cobertura específica para uso comercial por aplicativo, com regras próprias de risco."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro para veículo de aplicativo empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-veiculo-plataforma-aplicativo-pessoal",
+                "nome": "Seguro veículo plataforma aplicativo pessoal",
+                "perfil": "PF",
+                "descricao": "Proteção específica para veículos utilizados em plataformas de transporte por aplicativo.",
+                "caracteristicas": [
+                  "Vistoria do veículo",
+                  "Definição de cobertura conforme uso comercial por aplicativo",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo em uso comercial",
+                  "Responsabilidade civil por passageiros e terceiros",
+                  "Assistência 24h"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger veículos de aplicativo, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança para quem depende do veículo como fonte de renda em plataformas de aplicativo.",
+                "fechamento": "Seguro veículo plataforma aplicativo pessoal ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro veículo plataforma aplicativo pessoal é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a veículos de aplicativo."
+                  },
+                  {
+                    "q": "O seguro comum de automóvel cobre o uso por aplicativo?",
+                    "a": "Não necessariamente; por isso existe cobertura específica para uso comercial por aplicativo, com regras próprias de risco."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro veículo plataforma aplicativo pessoal?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "veiculos-pesados",
+            "nome": "Veículos pesados",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para veículos pesados, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Mobilidade protegida"
+            ],
+            "porque": "Tipo de veículo pesado, operação realizada e tamanho da frota, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-veiculo-pesado-empresarial",
+                "nome": "Seguro veículo pesado empresarial",
+                "perfil": "PJ",
+                "descricao": "Proteção para veículos pesados particulares ou de frota utilizados em operação empresarial.",
+                "caracteristicas": [
+                  "Vistoria técnica do veículo pesado",
+                  "Definição de cobertura conforme uso e carga",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil da operação",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para veículos pesados, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Continuidade da operação com veículos pesados, reduzindo o impacto financeiro de sinistros.",
+                "fechamento": "Seguro veículo pesado empresarial ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro veículo pesado empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a veículos pesados."
+                  },
+                  {
+                    "q": "A cobertura inclui assistência técnica especializada em rodovia?",
+                    "a": "Sim, a apólice pode incluir assistência técnica especializada para veículos pesados em caso de pane ou sinistro."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro veículo pesado empresarial?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              },
+              {
+                "id": "seguro-veiculo-pesado",
+                "nome": "Seguro veículo pesado",
+                "perfil": "PF",
+                "descricao": "Proteção para veículos pesados particulares ou de frota utilizados em operação empresarial.",
+                "caracteristicas": [
+                  "Vistoria técnica do veículo pesado",
+                  "Definição de cobertura conforme uso e carga",
+                  "Apólice individual ou de frota",
+                  "Acionamento em sinistro"
+                ],
+                "itensInclusos": [
+                  "Colisão, incêndio e roubo",
+                  "Responsabilidade civil da operação",
+                  "Assistência técnica especializada"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger veículos pesados, com orientação consultiva antes da contratação.",
+                "beneficios": "Continuidade da operação com veículos pesados, reduzindo o impacto financeiro de sinistros.",
+                "fechamento": "Seguro veículo pesado ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Comparar proteção de mobilidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro veículo pesado é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a veículos pesados."
+                  },
+                  {
+                    "q": "A cobertura inclui assistência técnica especializada em rodovia?",
+                    "a": "Sim, a apólice pode incluir assistência técnica especializada para veículos pesados em caso de pane ou sinistro."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro veículo pesado?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Crescimento e mobilidade",
+                  "Assistência pessoal e empresarial"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "viagem",
+        "nome": "Viagem",
+        "hero": "Proteção em viagem.",
+        "nucleos": [
+          {
+            "slug": "protecao-em-viagem",
+            "nome": "Proteção em viagem",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para proteção em viagem, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Viagem"
+            ],
+            "porque": "Destino da viagem, duração e necessidade de cobertura para grupo ou pet, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-viagem-coletiva-internacional",
+                "nome": "Seguro viagem coletiva internacional",
+                "perfil": "PJ",
+                "descricao": "Proteção para viagens nacionais ou internacionais, individuais, coletivas ou com pets.",
+                "caracteristicas": [
+                  "Definição do destino e duração da viagem",
+                  "Escolha de cobertura conforme perfil e trajeto",
+                  "Apólice de viagem",
+                  "Acionamento durante a vigência da viagem"
+                ],
+                "itensInclusos": [
+                  "Assistência médica em viagem",
+                  "Cobertura de bagagem extraviada",
+                  "Cancelamento de viagem quando previsto",
+                  "Assistência veterinária para pets"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para proteção em viagem, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais tranquilidade durante a viagem, com suporte imediato em emergências médicas ou imprevistos.",
+                "fechamento": "Seguro viagem coletiva internacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Organizar proteção em viagem",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro viagem coletiva internacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a proteção em viagem."
+                  },
+                  {
+                    "q": "A cobertura inclui bagagem extraviada?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir bagagem extraviada, além de assistência médica em viagem."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro viagem coletiva internacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pessoal e empresarial",
+                  "Saúde e vida saudável"
+                ]
+              },
+              {
+                "id": "seguro-viagem-coletiva-nacional",
+                "nome": "Seguro viagem coletiva nacional",
+                "perfil": "PJ",
+                "descricao": "Proteção para viagens nacionais ou internacionais, individuais, coletivas ou com pets.",
+                "caracteristicas": [
+                  "Definição do destino e duração da viagem",
+                  "Escolha de cobertura conforme perfil e trajeto",
+                  "Apólice de viagem",
+                  "Acionamento durante a vigência da viagem"
+                ],
+                "itensInclusos": [
+                  "Assistência médica em viagem",
+                  "Cobertura de bagagem extraviada",
+                  "Cancelamento de viagem quando previsto",
+                  "Assistência veterinária para pets"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para proteção em viagem, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais tranquilidade durante a viagem, com suporte imediato em emergências médicas ou imprevistos.",
+                "fechamento": "Seguro viagem coletiva nacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Organizar proteção em viagem",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro viagem coletiva nacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a proteção em viagem."
+                  },
+                  {
+                    "q": "A cobertura inclui bagagem extraviada?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir bagagem extraviada, além de assistência médica em viagem."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro viagem coletiva nacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pessoal e empresarial",
+                  "Saúde e vida saudável"
+                ]
+              },
+              {
+                "id": "seguro-viagem-pet-coletiva",
+                "nome": "Seguro viagem PET coletiva",
+                "perfil": "PJ",
+                "descricao": "Proteção para viagens nacionais ou internacionais, individuais, coletivas ou com pets.",
+                "caracteristicas": [
+                  "Definição do destino e duração da viagem",
+                  "Escolha de cobertura conforme perfil e trajeto",
+                  "Apólice de viagem",
+                  "Acionamento durante a vigência da viagem"
+                ],
+                "itensInclusos": [
+                  "Assistência médica em viagem",
+                  "Cobertura de bagagem extraviada",
+                  "Cancelamento de viagem quando previsto",
+                  "Assistência veterinária para pets"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para proteção em viagem, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais tranquilidade durante a viagem, com suporte imediato em emergências médicas ou imprevistos.",
+                "fechamento": "Seguro viagem PET coletiva ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Organizar proteção em viagem",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro viagem PET coletiva é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a proteção em viagem."
+                  },
+                  {
+                    "q": "A cobertura inclui bagagem extraviada?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir bagagem extraviada, além de assistência médica em viagem."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro viagem PET coletiva?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pessoal e empresarial",
+                  "Saúde e vida saudável"
+                ]
+              },
+              {
+                "id": "seguro-viagem-internacional",
+                "nome": "Seguro viagem internacional",
+                "perfil": "PF",
+                "descricao": "Proteção para viagens nacionais ou internacionais, individuais, coletivas ou com pets.",
+                "caracteristicas": [
+                  "Definição do destino e duração da viagem",
+                  "Escolha de cobertura conforme perfil e trajeto",
+                  "Apólice de viagem",
+                  "Acionamento durante a vigência da viagem"
+                ],
+                "itensInclusos": [
+                  "Assistência médica em viagem",
+                  "Cobertura de bagagem extraviada",
+                  "Cancelamento de viagem quando previsto",
+                  "Assistência veterinária para pets"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger proteção em viagem, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade durante a viagem, com suporte imediato em emergências médicas ou imprevistos.",
+                "fechamento": "Seguro viagem internacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Organizar proteção em viagem",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/VIAGEM_DFK57J_f7aed589d3cc494289adcf004398e45c",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro viagem internacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a proteção em viagem."
+                  },
+                  {
+                    "q": "A cobertura inclui bagagem extraviada?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir bagagem extraviada, além de assistência médica em viagem."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro viagem internacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pessoal e empresarial",
+                  "Saúde e vida saudável"
+                ]
+              },
+              {
+                "id": "seguro-viagem-nacional",
+                "nome": "Seguro viagem nacional",
+                "perfil": "PF",
+                "descricao": "Proteção para viagens nacionais ou internacionais, individuais, coletivas ou com pets.",
+                "caracteristicas": [
+                  "Definição do destino e duração da viagem",
+                  "Escolha de cobertura conforme perfil e trajeto",
+                  "Apólice de viagem",
+                  "Acionamento durante a vigência da viagem"
+                ],
+                "itensInclusos": [
+                  "Assistência médica em viagem",
+                  "Cobertura de bagagem extraviada",
+                  "Cancelamento de viagem quando previsto",
+                  "Assistência veterinária para pets"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger proteção em viagem, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade durante a viagem, com suporte imediato em emergências médicas ou imprevistos.",
+                "fechamento": "Seguro viagem nacional ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Organizar proteção em viagem",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/VIAGEM_DFK57J_f7aed589d3cc494289adcf004398e45c",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro viagem nacional é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a proteção em viagem."
+                  },
+                  {
+                    "q": "A cobertura inclui bagagem extraviada?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir bagagem extraviada, além de assistência médica em viagem."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro viagem nacional?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pessoal e empresarial",
+                  "Saúde e vida saudável"
+                ]
+              },
+              {
+                "id": "seguro-viagem-pet",
+                "nome": "Seguro viagem PET",
+                "perfil": "PF",
+                "descricao": "Proteção para viagens nacionais ou internacionais, individuais, coletivas ou com pets.",
+                "caracteristicas": [
+                  "Definição do destino e duração da viagem",
+                  "Escolha de cobertura conforme perfil e trajeto",
+                  "Apólice de viagem",
+                  "Acionamento durante a vigência da viagem"
+                ],
+                "itensInclusos": [
+                  "Assistência médica em viagem",
+                  "Cobertura de bagagem extraviada",
+                  "Cancelamento de viagem quando previsto",
+                  "Assistência veterinária para pets"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger proteção em viagem, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais tranquilidade durante a viagem, com suporte imediato em emergências médicas ou imprevistos.",
+                "fechamento": "Seguro viagem PET ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Organizar proteção em viagem",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/VIAGEM_DFK57J_f7aed589d3cc494289adcf004398e45c",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro viagem PET é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a proteção em viagem."
+                  },
+                  {
+                    "q": "A cobertura inclui bagagem extraviada?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir bagagem extraviada, além de assistência médica em viagem."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro viagem PET?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pessoal e empresarial",
+                  "Saúde e vida saudável"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "vida",
+        "nome": "Vida",
+        "hero": "Acidentes pessoais, prestamista e crédito, funeral e vida.",
+        "nucleos": [
+          {
+            "slug": "acidentes-pessoais",
+            "nome": "Acidentes pessoais",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para acidentes pessoais, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Vida e continuidade"
+            ],
+            "porque": "Capital segurado, número de vidas protegidas e cobertura de despesas médicas emergenciais, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-de-acidentes-pessoais-coletivo-colaboradores",
+                "nome": "Seguro de Acidentes Pessoais Coletivo (Colaboradores)",
+                "perfil": "PJ",
+                "descricao": "Proteção contra consequências de acidentes pessoais, individual ou coletiva para colaboradores.",
+                "caracteristicas": [
+                  "Definição de perfil e capital segurado",
+                  "Cobertura individual ou coletiva por apólice",
+                  "Acionamento após acidente coberto"
+                ],
+                "itensInclusos": [
+                  "Indenização por morte acidental",
+                  "Invalidez permanente por acidente",
+                  "Despesas médicas emergenciais",
+                  "Assistência funeral quando prevista"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para acidentes pessoais, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Mais segurança financeira para o titular ou colaboradores diante de acidentes inesperados.",
+                "fechamento": "Seguro de Acidentes Pessoais Coletivo (Colaboradores) ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Acidentes Pessoais Coletivo (Colaboradores) é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a acidentes pessoais."
+                  },
+                  {
+                    "q": "A cobertura inclui despesas médicas emergenciais após o acidente?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir despesas médicas emergenciais, além da indenização por morte ou invalidez."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Acidentes Pessoais Coletivo (Colaboradores)?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-de-acidentes-pessoais-individual",
+                "nome": "Seguro de Acidentes Pessoais Individual",
+                "perfil": "PF",
+                "descricao": "Proteção contra consequências de acidentes pessoais, individual ou coletiva para colaboradores.",
+                "caracteristicas": [
+                  "Definição de perfil e capital segurado",
+                  "Cobertura individual ou coletiva por apólice",
+                  "Acionamento após acidente coberto"
+                ],
+                "itensInclusos": [
+                  "Indenização por morte acidental",
+                  "Invalidez permanente por acidente",
+                  "Despesas médicas emergenciais",
+                  "Assistência funeral quando prevista"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger acidentes pessoais, com orientação consultiva antes da contratação.",
+                "beneficios": "Mais segurança financeira para o titular ou colaboradores diante de acidentes inesperados.",
+                "fechamento": "Seguro de Acidentes Pessoais Individual ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Acidentes Pessoais Individual é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a acidentes pessoais."
+                  },
+                  {
+                    "q": "A cobertura inclui despesas médicas emergenciais após o acidente?",
+                    "a": "Sim, conforme apólice, a cobertura pode incluir despesas médicas emergenciais, além da indenização por morte ou invalidez."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Acidentes Pessoais Individual?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "prestamista-e-credito",
+            "nome": "Prestamista e crédito",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para prestamista e crédito, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Vida e continuidade"
+            ],
+            "porque": "Valor do saldo devedor, prazo do contrato de crédito e capital decrescente ou fixo, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-prestamista-para-carteira-de-credito",
+                "nome": "Seguro Prestamista para Carteira de Crédito",
+                "perfil": "PJ",
+                "descricao": "Proteção que quita ou reduz o saldo devedor de operações de crédito em caso de morte ou invalidez do titular.",
+                "caracteristicas": [
+                  "Vinculação à operação de crédito",
+                  "Definição de capital conforme saldo devedor",
+                  "Apólice prestamista",
+                  "Acionamento em evento coberto durante o contrato de crédito"
+                ],
+                "itensInclusos": [
+                  "Quitação do saldo devedor por morte",
+                  "Cobertura por invalidez permanente",
+                  "Cobertura vinculada à carteira de crédito, quando empresarial"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para prestamista e crédito, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Protege a família ou a instituição credora da inadimplência decorrente de morte ou invalidez do titular do crédito.",
+                "fechamento": "Seguro Prestamista para Carteira de Crédito ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro Prestamista para Carteira de Crédito é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a prestamista e crédito."
+                  },
+                  {
+                    "q": "A cobertura acompanha o saldo devedor ao longo do contrato?",
+                    "a": "Sim, o capital segurado costuma acompanhar o saldo devedor da operação de crédito ao longo da vigência."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro Prestamista para Carteira de Crédito?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-prestamista",
+                "nome": "Seguro prestamista",
+                "perfil": "PF",
+                "descricao": "Proteção que quita ou reduz o saldo devedor de operações de crédito em caso de morte ou invalidez do titular.",
+                "caracteristicas": [
+                  "Vinculação à operação de crédito",
+                  "Definição de capital conforme saldo devedor",
+                  "Apólice prestamista",
+                  "Acionamento em evento coberto durante o contrato de crédito"
+                ],
+                "itensInclusos": [
+                  "Quitação do saldo devedor por morte",
+                  "Cobertura por invalidez permanente",
+                  "Cobertura vinculada à carteira de crédito, quando empresarial"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger prestamista e crédito, com orientação consultiva antes da contratação.",
+                "beneficios": "Protege a família ou a instituição credora da inadimplência decorrente de morte ou invalidez do titular do crédito.",
+                "fechamento": "Seguro prestamista ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro prestamista é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a prestamista e crédito."
+                  },
+                  {
+                    "q": "A cobertura acompanha o saldo devedor ao longo do contrato?",
+                    "a": "Sim, o capital segurado costuma acompanhar o saldo devedor da operação de crédito ao longo da vigência."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro prestamista?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "funeral",
+            "nome": "Funeral",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas, gestores e equipes que precisam organizar proteção para funeral, com clareza sobre escopo e limites contratados.",
+            "blocoValor": [
+              "Vida e continuidade"
+            ],
+            "porque": "Número de dependentes cobertos, abrangência geográfica e escopo dos serviços funerários, seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-funeral-coletivo",
+                "nome": "Seguro funeral coletivo",
+                "perfil": "PJ",
+                "descricao": "Proteção que organiza e custeia serviços funerários para o titular e dependentes, individual ou coletiva.",
+                "caracteristicas": [
+                  "Definição de plano individual, familiar ou coletivo",
+                  "Central de acionamento em caso de óbito",
+                  "Apólice funeral",
+                  "Suporte durante todo o processo"
+                ],
+                "itensInclusos": [
+                  "Translado do corpo",
+                  "Urna e ornamentação",
+                  "Cerimônia e sepultamento ou cremação",
+                  "Assistência à família no momento do óbito"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para funeral, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Reduz o impacto emocional e logístico da família em um momento sensível, com suporte imediato e organizado.",
+                "fechamento": "Seguro funeral coletivo ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro funeral coletivo é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a funeral."
+                  },
+                  {
+                    "q": "A cobertura inclui dependentes do titular?",
+                    "a": "Conforme apólice, o plano familiar ou coletivo pode incluir dependentes do titular, além do próprio segurado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro funeral coletivo?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-funeral-familiar",
+                "nome": "Seguro funeral familiar",
+                "perfil": "PF",
+                "descricao": "Proteção que organiza e custeia serviços funerários para o titular e dependentes, individual ou coletiva.",
+                "caracteristicas": [
+                  "Definição de plano individual, familiar ou coletivo",
+                  "Central de acionamento em caso de óbito",
+                  "Apólice funeral",
+                  "Suporte durante todo o processo"
+                ],
+                "itensInclusos": [
+                  "Translado do corpo",
+                  "Urna e ornamentação",
+                  "Cerimônia e sepultamento ou cremação",
+                  "Assistência à família no momento do óbito"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger funeral, com orientação consultiva antes da contratação.",
+                "beneficios": "Reduz o impacto emocional e logístico da família em um momento sensível, com suporte imediato e organizado.",
+                "fechamento": "Seguro funeral familiar ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro funeral familiar é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a funeral."
+                  },
+                  {
+                    "q": "A cobertura inclui dependentes do titular?",
+                    "a": "Conforme apólice, o plano familiar ou coletivo pode incluir dependentes do titular, além do próprio segurado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro funeral familiar?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "vida",
+            "nome": "Vida",
+            "hero": "",
+            "aberturaConsultiva": "Para pessoas e famílias que precisam proteger vida, com orientação consultiva antes da contratação.",
+            "blocoValor": [
+              "Vida e continuidade"
+            ],
+            "porque": "Capital segurado, beneficiários definidos e vigência desejada (temporária ou vitalícia), seguradora/parceiro, exclusões, franquias, documentação e apoio em evento coberto.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "seguro-vida-em-grupo",
+                "nome": "Seguro vida em grupo",
+                "perfil": "PJ",
+                "descricao": "Proteção financeira para dependentes ou beneficiários em caso de morte do titular, individual, em grupo ou vitalícia.",
+                "caracteristicas": [
+                  "Definição de capital segurado e beneficiários",
+                  "Escolha de vigência (temporária, vitalícia ou por prazo definido)",
+                  "Apólice individual ou em grupo",
+                  "Acionamento por morte do titular"
+                ],
+                "itensInclusos": [
+                  "Indenização por morte natural ou acidental",
+                  "Cobertura vitalícia ou por prazo definido",
+                  "Cobertura em grupo para colaboradores ou sócios (Keyman)"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para vida, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Garante segurança financeira para a família ou para a continuidade do negócio em caso de falecimento do titular.",
+                "fechamento": "Seguro vida em grupo ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro vida em grupo é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida."
+                  },
+                  {
+                    "q": "A cobertura pode ser vitalícia ou apenas por prazo definido?",
+                    "a": "Existem ambas as modalidades: cobertura vitalícia (Whole Life) e cobertura por prazo definido, conforme perfil e objetivo do segurado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro vida em grupo?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-vida-individual",
+                "nome": "Seguro vida individual",
+                "perfil": "PF",
+                "descricao": "Proteção financeira para dependentes ou beneficiários em caso de morte do titular, individual, em grupo ou vitalícia.",
+                "caracteristicas": [
+                  "Definição de capital segurado e beneficiários",
+                  "Escolha de vigência (temporária, vitalícia ou por prazo definido)",
+                  "Apólice individual ou em grupo",
+                  "Acionamento por morte do titular"
+                ],
+                "itensInclusos": [
+                  "Indenização por morte natural ou acidental",
+                  "Cobertura vitalícia ou por prazo definido",
+                  "Cobertura em grupo para colaboradores ou sócios (Keyman)"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger vida, com orientação consultiva antes da contratação.",
+                "beneficios": "Garante segurança financeira para a família ou para a continuidade do negócio em caso de falecimento do titular.",
+                "fechamento": "Seguro vida individual ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGURODEVIDAON_DFK57J_d19ab76cc41f4c92b3138a0d7496cac0",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro vida individual é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida."
+                  },
+                  {
+                    "q": "A cobertura pode ser vitalícia ou apenas por prazo definido?",
+                    "a": "Existem ambas as modalidades: cobertura vitalícia (Whole Life) e cobertura por prazo definido, conforme perfil e objetivo do segurado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro vida individual?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-vida-temporaria",
+                "nome": "Seguro vida temporária",
+                "perfil": "PF",
+                "descricao": "Proteção financeira para dependentes ou beneficiários em caso de morte do titular, individual, em grupo ou vitalícia.",
+                "caracteristicas": [
+                  "Definição de capital segurado e beneficiários",
+                  "Escolha de vigência (temporária, vitalícia ou por prazo definido)",
+                  "Apólice individual ou em grupo",
+                  "Acionamento por morte do titular"
+                ],
+                "itensInclusos": [
+                  "Indenização por morte natural ou acidental",
+                  "Cobertura vitalícia ou por prazo definido",
+                  "Cobertura em grupo para colaboradores ou sócios (Keyman)"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger vida, com orientação consultiva antes da contratação.",
+                "beneficios": "Garante segurança financeira para a família ou para a continuidade do negócio em caso de falecimento do titular.",
+                "fechamento": "Seguro vida temporária ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "http://www.porto.vc/SEGURODEVIDAON_DFK57J_d19ab76cc41f4c92b3138a0d7496cac0",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro vida temporária é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida."
+                  },
+                  {
+                    "q": "A cobertura pode ser vitalícia ou apenas por prazo definido?",
+                    "a": "Existem ambas as modalidades: cobertura vitalícia (Whole Life) e cobertura por prazo definido, conforme perfil e objetivo do segurado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro vida temporária?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-de-vida-vitalicio-universal-whole-life",
+                "nome": "Seguro de Vida Vitalício (Universal/Whole Life)",
+                "perfil": "PF",
+                "descricao": "Proteção financeira para dependentes ou beneficiários em caso de morte do titular, individual, em grupo ou vitalícia.",
+                "caracteristicas": [
+                  "Definição de capital segurado e beneficiários",
+                  "Escolha de vigência (temporária, vitalícia ou por prazo definido)",
+                  "Apólice individual ou em grupo",
+                  "Acionamento por morte do titular"
+                ],
+                "itensInclusos": [
+                  "Indenização por morte natural ou acidental",
+                  "Cobertura vitalícia ou por prazo definido",
+                  "Cobertura em grupo para colaboradores ou sócios (Keyman)"
+                ],
+                "aQuemSeDestina": "Para pessoas e famílias que precisam proteger vida, com orientação consultiva antes da contratação.",
+                "beneficios": "Garante segurança financeira para a família ou para a continuidade do negócio em caso de falecimento do titular.",
+                "fechamento": "Seguro de Vida Vitalício (Universal/Whole Life) ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Vida Vitalício (Universal/Whole Life) é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida."
+                  },
+                  {
+                    "q": "A cobertura pode ser vitalícia ou apenas por prazo definido?",
+                    "a": "Existem ambas as modalidades: cobertura vitalícia (Whole Life) e cobertura por prazo definido, conforme perfil e objetivo do segurado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Vida Vitalício (Universal/Whole Life)?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              },
+              {
+                "id": "seguro-de-vida-com-vigencia-definida-keyman-socios",
+                "nome": "Seguro de Vida com Vigência Definida (Keyman / Sócios)",
+                "perfil": "PJ",
+                "descricao": "Proteção financeira para dependentes ou beneficiários em caso de morte do titular, individual, em grupo ou vitalícia.",
+                "caracteristicas": [
+                  "Definição de capital segurado e beneficiários",
+                  "Escolha de vigência (temporária, vitalícia ou por prazo definido)",
+                  "Apólice individual ou em grupo",
+                  "Acionamento por morte do titular"
+                ],
+                "itensInclusos": [
+                  "Indenização por morte natural ou acidental",
+                  "Cobertura vitalícia ou por prazo definido",
+                  "Cobertura em grupo para colaboradores ou sócios (Keyman)"
+                ],
+                "aQuemSeDestina": "Para empresas, gestores e equipes que precisam organizar proteção para vida, com clareza sobre escopo e limites contratados.",
+                "beneficios": "Garante segurança financeira para a família ou para a continuidade do negócio em caso de falecimento do titular.",
+                "fechamento": "Seguro de Vida com Vigência Definida (Keyman / Sócios) ganha força quando perfil, exposição e escopo são avaliados antes do próximo passo.",
+                "ctaPrimario": "Avaliar proteção de continuidade",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "A validar",
+                "faq": [
+                  {
+                    "q": "Para quem Seguro de Vida com Vigência Definida (Keyman / Sócios) é indicado?",
+                    "a": "Para perfis que precisam organizar proteção conforme exposição, bem ou responsabilidade ligada a vida."
+                  },
+                  {
+                    "q": "A cobertura pode ser vitalícia ou apenas por prazo definido?",
+                    "a": "Existem ambas as modalidades: cobertura vitalícia (Whole Life) e cobertura por prazo definido, conforme perfil e objetivo do segurado."
+                  },
+                  {
+                    "q": "Como escolher o formato de Seguro de Vida com Vigência Definida (Keyman / Sócios)?",
+                    "a": "A partir do perfil, valor protegido, frequência de uso, riscos envolvidos e orientação consultiva."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde e vida saudável",
+                  "Soluções financeiras"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "saude",
+    "nome": "Saúde e vida saudável",
+    "cor": {
+      "bg": "#0E3D2C",
+      "primary": "#2EA86E",
+      "accent": "#6BCCA0",
+      "soft": "#EDF8F2"
+    },
+    "hero": "Escolha o cuidado certo para o seu momento.",
+    "subHero": "Acesso, prevenção e acompanhamento em uma visão única do cuidado para pessoas, famílias e empresas.",
+    "aberturaConsultiva": "Cuidar da saúde abrange acesso, perfil familiar, contexto empresarial e expectativas de cuidado.",
+    "categorias": [
+      {
+        "slug": "odontologia",
+        "nome": "Odontologia",
+        "hero": "Odontologia empresarial e odontologia familiar.",
+        "nucleos": [
+          {
+            "slug": "odontologia-empresarial",
+            "nome": "Odontologia empresarial",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas que desejam oferecer benefício odontológico com boa adesão e percepção de valor.",
+            "blocoValor": [
+              "Saúde bucal",
+              "Saúde bucal e estética",
+              "Saúde bucal e ortodontia"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "plano-odontologico-empresarial",
+                "nome": "Plano odontológico empresarial",
+                "perfil": "PJ",
+                "descricao": "Benefício odontológico corporativo com acesso simples, boa adesão e valorização da equipe.",
+                "caracteristicas": [
+                  "Rede odontológica",
+                  "Consultas e prevenção",
+                  "Contratação conforme perfil"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Limpeza",
+                  "Procedimentos odontológicos conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que desejam oferecer benefício odontológico com boa adesão e percepção de valor.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-empresarial-com-estetica",
+                "nome": "Plano odontológico empresarial com estética",
+                "perfil": "PJ",
+                "descricao": "Saúde bucal corporativa com estética, ampliando bem-estar e percepção de valor para a equipe.",
+                "caracteristicas": [
+                  "Rede odontológica",
+                  "Procedimentos estéticos conforme plano",
+                  "Orientação para escolha do formato adequado"
+                ],
+                "itensInclusos": [
+                  "Avaliação odontológica",
+                  "Procedimentos estéticos elegíveis",
+                  "Acompanhamento profissional"
+                ],
+                "aQuemSeDestina": "Para empresas que desejam oferecer benefício odontológico com boa adesão e percepção de valor.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico empresarial com estética é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-empresarial-com-ortodontia",
+                "nome": "Plano odontológico empresarial com ortodontia",
+                "perfil": "PJ",
+                "descricao": "Ortodontia corporativa como benefício, com acompanhamento estruturado e valor percebido pela equipe.",
+                "caracteristicas": [
+                  "Acompanhamento ortodôntico",
+                  "Rede odontológica",
+                  "Critérios e limites conforme plano"
+                ],
+                "itensInclusos": [
+                  "Avaliação ortodôntica",
+                  "Aparelhos ou alinhadores conforme plano",
+                  "Acompanhamento periódico"
+                ],
+                "aQuemSeDestina": "Para empresas que desejam oferecer benefício odontológico com boa adesão e percepção de valor.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico empresarial com ortodontia é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-empresarial-premium",
+                "nome": "Plano odontológico empresarial premium",
+                "perfil": "PJ",
+                "descricao": "Experiência odontológica premium para empresas, com rede ampla, especialidades e atendimento qualificado.",
+                "caracteristicas": [
+                  "Rede ampliada",
+                  "Especialidades odontológicas",
+                  "Jornada de atendimento mais completa"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Limpeza",
+                  "Procedimentos odontológicos conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que desejam oferecer benefício odontológico com boa adesão e percepção de valor.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico empresarial premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-pme",
+                "nome": "Plano odontológico PME",
+                "perfil": "PJ",
+                "descricao": "Benefício odontológico para pequenas e médias empresas, com contratação simples e valor direto.",
+                "caracteristicas": [
+                  "Rede odontológica",
+                  "Consultas e prevenção",
+                  "Contratação conforme perfil"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Limpeza",
+                  "Procedimentos odontológicos conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que desejam oferecer benefício odontológico com boa adesão e percepção de valor.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico PME é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "odontologia-familiar",
+            "nome": "Odontologia familiar",
+            "hero": "",
+            "aberturaConsultiva": "Para quem busca saúde bucal, prevenção e procedimentos odontológicos com orientação clara.",
+            "blocoValor": [
+              "Saúde bucal",
+              "Saúde bucal e estética",
+              "Saúde bucal e ortodontia"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "plano-odontologico-familiar",
+                "nome": "Plano odontológico familiar",
+                "perfil": "PF",
+                "descricao": "Saúde bucal para você e sua família, do preventivo às urgências, com acesso claro e contínuo.",
+                "caracteristicas": [
+                  "Rede odontológica",
+                  "Consultas e prevenção",
+                  "Contratação conforme perfil"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Limpeza",
+                  "Procedimentos odontológicos conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem busca saúde bucal, prevenção e procedimentos odontológicos com orientação clara.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico familiar é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-familiar-com-clareamento",
+                "nome": "Plano odontológico familiar com clareamento",
+                "perfil": "PF",
+                "descricao": "Clareamento profissional para valorizar o sorriso com orientação odontológica especializada.",
+                "caracteristicas": [
+                  "Rede odontológica",
+                  "Procedimentos estéticos conforme plano",
+                  "Orientação para escolha do formato adequado"
+                ],
+                "itensInclusos": [
+                  "Avaliação odontológica",
+                  "Clareamento conforme plano",
+                  "Orientação profissional"
+                ],
+                "aQuemSeDestina": "Para quem busca saúde bucal, prevenção e procedimentos odontológicos com orientação clara.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico familiar com clareamento é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-familiar-com-estetica",
+                "nome": "Plano odontológico familiar com estética",
+                "perfil": "PF",
+                "descricao": "Estética do sorriso com orientação especializada para unir saúde bucal, harmonia e confiança.",
+                "caracteristicas": [
+                  "Rede odontológica",
+                  "Procedimentos estéticos conforme plano",
+                  "Orientação para escolha do formato adequado"
+                ],
+                "itensInclusos": [
+                  "Avaliação odontológica",
+                  "Procedimentos estéticos elegíveis",
+                  "Acompanhamento profissional"
+                ],
+                "aQuemSeDestina": "Para quem busca saúde bucal, prevenção e procedimentos odontológicos com orientação clara.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico familiar com estética é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-familiar-com-ortodontia",
+                "nome": "Plano odontológico familiar com ortodontia",
+                "perfil": "PF",
+                "descricao": "Ortodontia familiar com acompanhamento especializado para alinhar o sorriso com mais segurança.",
+                "caracteristicas": [
+                  "Acompanhamento ortodôntico",
+                  "Rede odontológica",
+                  "Critérios e limites conforme plano"
+                ],
+                "itensInclusos": [
+                  "Avaliação ortodôntica",
+                  "Aparelhos ou alinhadores conforme plano",
+                  "Acompanhamento periódico"
+                ],
+                "aQuemSeDestina": "Para quem busca saúde bucal, prevenção e procedimentos odontológicos com orientação clara.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico familiar com ortodontia é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              },
+              {
+                "id": "plano-odontologico-familiar-premium",
+                "nome": "Plano odontológico familiar premium",
+                "perfil": "PF",
+                "descricao": "Experiência odontológica familiar premium, com rede ampla, especialidades e jornada mais completa.",
+                "caracteristicas": [
+                  "Rede ampliada",
+                  "Especialidades odontológicas",
+                  "Jornada de atendimento mais completa"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Limpeza",
+                  "Procedimentos odontológicos conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem busca saúde bucal, prevenção e procedimentos odontológicos com orientação clara.",
+                "beneficios": "Mais previsibilidade para cuidar da saúde bucal, com acesso organizado e melhor experiência de uso.",
+                "fechamento": "A melhor escolha odontológica combina prevenção, acesso e perfil de uso.",
+                "ctaPrimario": "Comparar opções odontológicas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano odontológico familiar premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde familiar (Saúde)"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "saude-animal",
+        "nome": "Saúde animal",
+        "hero": "Saúde pet.",
+        "nucleos": [
+          {
+            "slug": "saude-pet",
+            "nome": "Saúde PET",
+            "hero": "",
+            "aberturaConsultiva": "Para quem deseja organizar a saúde veterinária do pet com acesso e suporte adequados.",
+            "blocoValor": [
+              "Pet",
+              "Pet e viagem"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "plano-de-saude-pet-empresarial",
+                "nome": "Plano de saúde PET empresarial",
+                "perfil": "PJ",
+                "descricao": "Saúde veterinária como benefício corporativo para colaboradores que valorizam seus animais.",
+                "caracteristicas": [
+                  "Rede veterinária",
+                  "Consultas e suporte",
+                  "Elegibilidade conforme contratação"
+                ],
+                "itensInclusos": [
+                  "Consultas veterinárias",
+                  "Exames ou procedimentos elegíveis",
+                  "Rede conforme contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que valorizam colaboradores com pets e querem ampliar o portfólio de benefícios.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pet-empresarial-premium",
+                "nome": "Plano de saúde PET empresarial premium",
+                "perfil": "PJ",
+                "descricao": "Benefício veterinário premium para empresas, com mais amplitude e percepção de valor para a equipe.",
+                "caracteristicas": [
+                  "Rede veterinária ampliada",
+                  "Especialidades",
+                  "Coberturas adicionais conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas veterinárias",
+                  "Exames ou procedimentos elegíveis",
+                  "Rede conforme contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que valorizam colaboradores com pets e querem ampliar o portfólio de benefícios.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET empresarial premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pet",
+                "nome": "Plano de saúde PET",
+                "perfil": "PF",
+                "descricao": "Saúde veterinária para o pet, com acesso a consultas, rede assistencial e suporte em momentos importantes.",
+                "caracteristicas": [
+                  "Rede veterinária",
+                  "Consultas e suporte",
+                  "Elegibilidade conforme contratação"
+                ],
+                "itensInclusos": [
+                  "Consultas veterinárias",
+                  "Exames ou procedimentos elegíveis",
+                  "Rede conforme contratação"
+                ],
+                "aQuemSeDestina": "Para quem deseja organizar a saúde veterinária do pet com acesso e suporte adequados.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pet-com-cobertura-de-viagem",
+                "nome": "Plano de saúde PET com cobertura de viagem",
+                "perfil": "PF",
+                "descricao": "Suporte veterinário em viagem, para deslocamentos mais tranquilos com o pet.",
+                "caracteristicas": [
+                  "Rede veterinária",
+                  "Apoio em deslocamento",
+                  "Regras de uso conforme plano"
+                ],
+                "itensInclusos": [
+                  "Apoio veterinário em deslocamento",
+                  "Orientação de rede",
+                  "Regras conforme plano"
+                ],
+                "aQuemSeDestina": "Para quem deseja organizar a saúde veterinária do pet com acesso e suporte adequados.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET com cobertura de viagem é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pet-com-emergencia-veterinaria",
+                "nome": "Plano de saúde PET com emergência veterinária",
+                "perfil": "PF",
+                "descricao": "Emergência veterinária para momentos que exigem resposta rápida e orientação adequada.",
+                "caracteristicas": [
+                  "Urgência veterinária",
+                  "Rede credenciada",
+                  "Orientação conforme disponibilidade regional"
+                ],
+                "itensInclusos": [
+                  "Atendimento de urgência",
+                  "Orientação veterinária",
+                  "Encaminhamento conforme rede"
+                ],
+                "aQuemSeDestina": "Para quem deseja organizar a saúde veterinária do pet com acesso e suporte adequados.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET com emergência veterinária é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pet-com-prevencao-veterinaria",
+                "nome": "Plano de saúde PET com prevenção veterinária",
+                "perfil": "PF",
+                "descricao": "Prevenção veterinária para acompanhar a saúde do pet com consultas, vacinas e orientação contínua.",
+                "caracteristicas": [
+                  "Prevenção veterinária",
+                  "Vacinas e check-ups",
+                  "Acompanhamento conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas veterinárias",
+                  "Exames ou procedimentos elegíveis",
+                  "Rede conforme contratação"
+                ],
+                "aQuemSeDestina": "Para quem deseja organizar a saúde veterinária do pet com acesso e suporte adequados.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET com prevenção veterinária é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pet-com-vacinacao",
+                "nome": "Plano de saúde PET com vacinação",
+                "perfil": "PF",
+                "descricao": "Vacinação veterinária organizada para manter a proteção do pet ao longo do ano.",
+                "caracteristicas": [
+                  "Prevenção veterinária",
+                  "Vacinas e check-ups",
+                  "Acompanhamento conforme plano"
+                ],
+                "itensInclusos": [
+                  "Vacinas elegíveis",
+                  "Controle de calendário",
+                  "Orientação veterinária"
+                ],
+                "aQuemSeDestina": "Para quem deseja organizar a saúde veterinária do pet com acesso e suporte adequados.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET com vacinação é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pet-premium",
+                "nome": "Plano de saúde PET premium",
+                "perfil": "PF",
+                "descricao": "Experiência veterinária premium, com acesso ampliado, especialidades e suporte mais completo.",
+                "caracteristicas": [
+                  "Rede veterinária ampliada",
+                  "Especialidades",
+                  "Coberturas adicionais conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas veterinárias",
+                  "Exames ou procedimentos elegíveis",
+                  "Rede conforme contratação"
+                ],
+                "aQuemSeDestina": "Para quem deseja organizar a saúde veterinária do pet com acesso e suporte adequados.",
+                "beneficios": "Mais tranquilidade para acompanhar a saúde do pet, com suporte e rede conforme contratação.",
+                "fechamento": "A saúde do pet fica mais simples quando a rede e o tipo de suporte estão claros.",
+                "ctaPrimario": "Conhecer opções para o pet",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PET premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Assistência pet (Assistência)",
+                  "Seguro pet ou viagem pet (Proteção)"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "bem-estar-e-qualidade-de-vida",
+        "nome": "Bem-estar e qualidade de vida",
+        "hero": "Medicina preventiva empresarial, gestão da nr1 e medicina preventiva familiar.",
+        "nucleos": [
+          {
+            "slug": "medicina-preventiva-empresarial",
+            "nome": "Medicina preventiva empresarial",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+            "blocoValor": [
+              "Medicamentos",
+              "Bem-estar",
+              "Prevenção"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "protecao-medicamentos",
+                "nome": "Proteção medicamentos",
+                "perfil": "PJ",
+                "descricao": "Apoio ao acesso a medicamentos, com condições, rede ou reembolso conforme regras validadas.",
+                "caracteristicas": [
+                  "Rede ou benefício associado",
+                  "Regras de elegibilidade",
+                  "Descontos ou reembolso conforme validação"
+                ],
+                "itensInclusos": [
+                  "Rede ou benefício farmacêutico",
+                  "Elegibilidade",
+                  "Regras de desconto ou reembolso"
+                ],
+                "aQuemSeDestina": "Para pessoas, famílias ou empresas que precisam organizar acesso a medicamentos conforme elegibilidade.",
+                "beneficios": "Mais equilíbrio e prevenção, com uma jornada de bem-estar mais clara e constante.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Proteção medicamentos é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde familiar (Saúde)",
+                  "Assistência pessoal (Assistência)"
+                ]
+              },
+              {
+                "id": "programa-de-bem-estar-fisico",
+                "nome": "Programa de bem-estar físico",
+                "perfil": "PJ",
+                "descricao": "Bem-estar físico para equipes, com estímulo a movimento, saúde e hábitos mais consistentes.",
+                "caracteristicas": [
+                  "Diagnóstico de necessidade",
+                  "Ações de bem-estar",
+                  "Acompanhamento conforme escopo contratado"
+                ],
+                "itensInclusos": [
+                  "Diagnóstico",
+                  "Ações orientadas",
+                  "Gestão ou acompanhamento conforme contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de bem-estar físico é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              },
+              {
+                "id": "programa-de-check-up-corporativo",
+                "nome": "Programa de check-up corporativo",
+                "perfil": "PJ",
+                "descricao": "Check-ups corporativos para acompanhar indicadores de saúde e fortalecer a prevenção.",
+                "caracteristicas": [
+                  "Avaliação preventiva",
+                  "Indicadores de saúde",
+                  "Jornada corporativa organizada"
+                ],
+                "itensInclusos": [
+                  "Exames preventivos",
+                  "Avaliação clínica",
+                  "Relatórios ou orientação conforme escopo"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de check-up corporativo é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              },
+              {
+                "id": "programa-de-prevencao-a-saude-do-colaborador",
+                "nome": "Programa de prevenção a saúde do colaborador",
+                "perfil": "PJ",
+                "descricao": "Prevenção para colaboradores, com acesso, orientação e acompanhamento mais organizado.",
+                "caracteristicas": [
+                  "Diagnóstico de necessidade",
+                  "Ações de bem-estar",
+                  "Acompanhamento conforme escopo contratado"
+                ],
+                "itensInclusos": [
+                  "Diagnóstico",
+                  "Ações orientadas",
+                  "Gestão ou acompanhamento conforme contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de prevenção a saúde do colaborador é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              },
+              {
+                "id": "programa-de-qualidade-de-vida-empresarial",
+                "nome": "Programa de qualidade de vida empresarial",
+                "perfil": "PJ",
+                "descricao": "Qualidade de vida corporativa para fortalecer saúde, presença e engajamento da equipe.",
+                "caracteristicas": [
+                  "Diagnóstico de necessidade",
+                  "Ações de bem-estar",
+                  "Acompanhamento conforme escopo contratado"
+                ],
+                "itensInclusos": [
+                  "Diagnóstico",
+                  "Ações orientadas",
+                  "Gestão ou acompanhamento conforme contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de qualidade de vida empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              },
+              {
+                "id": "programa-de-saude-mental-e-terapia",
+                "nome": "Programa de saúde mental e terapia",
+                "perfil": "PJ",
+                "descricao": "Saúde mental com orientação, acolhimento e acesso a apoio psicológico.",
+                "caracteristicas": [
+                  "Apoio psicológico",
+                  "Jornada de orientação",
+                  "Acesso conforme escopo contratado"
+                ],
+                "itensInclusos": [
+                  "Sessões ou orientação psicológica",
+                  "Canal de acesso",
+                  "Acompanhamento conforme escopo"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de saúde mental e terapia é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              },
+              {
+                "id": "programa-de-vacinacao-corporativa",
+                "nome": "Programa de vacinação corporativa",
+                "perfil": "PJ",
+                "descricao": "Vacinação corporativa organizada para ampliar prevenção e proteção coletiva.",
+                "caracteristicas": [
+                  "Campanhas de imunização",
+                  "Gestão de público elegível",
+                  "Aplicação conforme disponibilidade"
+                ],
+                "itensInclusos": [
+                  "Planejamento da campanha",
+                  "Público elegível",
+                  "Registro de aplicação conforme operação"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de vacinação corporativa é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              },
+              {
+                "id": "programa-preventivo-de-absenteismo-medico",
+                "nome": "Programa preventivo de absenteísmo médico",
+                "perfil": "PJ",
+                "descricao": "Prevenção em saúde para apoiar presença, qualidade de vida e gestão mais inteligente dos afastamentos.",
+                "caracteristicas": [
+                  "Prevenção em saúde",
+                  "Indicadores de afastamento",
+                  "Apoio à gestão da equipe"
+                ],
+                "itensInclusos": [
+                  "Diagnóstico",
+                  "Ações orientadas",
+                  "Gestão ou acompanhamento conforme contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa preventivo de absenteísmo médico é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "gestao-da-nr1",
+            "nome": "Gestão da NR1",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+            "blocoValor": [
+              "Bem-estar"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "gestao-dos-efeitos-da-nr1",
+                "nome": "Gestão dos efeitos da NR1",
+                "perfil": "PJ",
+                "descricao": "Estrutura de bem-estar corporativo para organizar prevenção, engajamento e qualidade de vida da equipe.",
+                "caracteristicas": [
+                  "Diagnóstico de necessidade",
+                  "Ações de bem-estar",
+                  "Acompanhamento conforme escopo contratado"
+                ],
+                "itensInclusos": [
+                  "Diagnóstico",
+                  "Ações orientadas",
+                  "Gestão ou acompanhamento conforme contratação"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de bem-estar é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "medicina-preventiva-familiar",
+            "nome": "Medicina preventiva familiar",
+            "hero": "",
+            "aberturaConsultiva": "Para quem busca mais prevenção, equilíbrio e qualidade de vida com orientação organizada.",
+            "blocoValor": [
+              "Medicamentos",
+              "Bem-estar",
+              "Saúde mental"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "programa-de-beneficio-farmacia",
+                "nome": "Programa de benefício farmácia",
+                "perfil": "PF",
+                "descricao": "Benefício farmácia para colaboradores, com apoio ao acesso a medicamentos e suporte recorrente.",
+                "caracteristicas": [
+                  "Rede ou benefício associado",
+                  "Regras de elegibilidade",
+                  "Descontos ou reembolso conforme validação"
+                ],
+                "itensInclusos": [
+                  "Rede ou benefício farmacêutico",
+                  "Elegibilidade",
+                  "Regras de desconto ou reembolso"
+                ],
+                "aQuemSeDestina": "Para empresas que buscam fortalecer prevenção, presença e bem-estar da equipe.",
+                "beneficios": "Mais presença, engajamento e prevenção, com ações de saúde conectadas ao dia a dia da equipe.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de benefício farmácia é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Saúde ocupacional (Saúde)"
+                ]
+              },
+              {
+                "id": "programa-de-qualidade-de-vida",
+                "nome": "Programa de qualidade de vida",
+                "perfil": "PF",
+                "descricao": "Bem-estar pessoal com atividades, orientação e hábitos saudáveis em uma jornada mais organizada.",
+                "caracteristicas": [
+                  "Diagnóstico de necessidade",
+                  "Ações de bem-estar",
+                  "Acompanhamento conforme escopo contratado"
+                ],
+                "itensInclusos": [
+                  "Diagnóstico",
+                  "Ações orientadas",
+                  "Gestão ou acompanhamento conforme contratação"
+                ],
+                "aQuemSeDestina": "Para quem busca mais prevenção, equilíbrio e qualidade de vida com orientação organizada.",
+                "beneficios": "Mais equilíbrio e prevenção, com uma jornada de bem-estar mais clara e constante.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de qualidade de vida é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde familiar (Saúde)",
+                  "Assistência pessoal (Assistência)"
+                ]
+              },
+              {
+                "id": "programa-de-qualidade-de-vida-mental",
+                "nome": "Programa de qualidade de vida mental",
+                "perfil": "PF",
+                "descricao": "Saúde mental para quem busca orientação, equilíbrio e apoio contínuo.",
+                "caracteristicas": [
+                  "Apoio psicológico",
+                  "Jornada de orientação",
+                  "Acesso conforme escopo contratado"
+                ],
+                "itensInclusos": [
+                  "Sessões ou orientação psicológica",
+                  "Canal de acesso",
+                  "Acompanhamento conforme escopo"
+                ],
+                "aQuemSeDestina": "Para quem busca mais prevenção, equilíbrio e qualidade de vida com orientação organizada.",
+                "beneficios": "Mais equilíbrio e prevenção, com uma jornada de bem-estar mais clara e constante.",
+                "fechamento": "O próximo passo é entender qual iniciativa acompanha melhor o momento e a prioridade de cuidado.",
+                "ctaPrimario": "Aprofundar opções de bem-estar",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa de qualidade de vida mental é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Saúde familiar (Saúde)",
+                  "Assistência pessoal (Assistência)"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "saude-corporativa",
+        "nome": "Saúde corporativa",
+        "hero": "Saúde do colaborador e saúde ocupacional.",
+        "nucleos": [
+          {
+            "slug": "saude-do-colaborador",
+            "nome": "Saúde do colaborador",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+            "blocoValor": [
+              "Saúde executiva",
+              "Benefícios corporativos"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "plano-de-saude-com-check-up-executivo",
+                "nome": "Plano de saúde com check-up executivo",
+                "perfil": "PJ",
+                "descricao": "Check-up executivo com avaliação completa, agilidade e visão preventiva em um único percurso.",
+                "caracteristicas": [
+                  "Check-up executivo",
+                  "Jornada preventiva",
+                  "Acesso ágil conforme plano"
+                ],
+                "itensInclusos": [
+                  "Exames preventivos",
+                  "Avaliação médica",
+                  "Relatório ou orientação conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com check-up executivo é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-com-cobertura-mundial",
+                "nome": "Plano de saúde com cobertura mundial",
+                "perfil": "PJ",
+                "descricao": "Acesso médico internacional para equipes que precisam de mobilidade e segurança.",
+                "caracteristicas": [
+                  "Cobertura internacional",
+                  "Rede qualificada",
+                  "Suporte para mobilidade executiva"
+                ],
+                "itensInclusos": [
+                  "Rede internacional",
+                  "Urgências no exterior",
+                  "Reembolso ou suporte conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com cobertura mundial é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-com-concierge-medico",
+                "nome": "Plano de saúde com concierge médico",
+                "perfil": "PJ",
+                "descricao": "Concierge médico para organizar consultas, exames e a jornada de saúde com mais fluidez.",
+                "caracteristicas": [
+                  "Concierge médico",
+                  "Organização de agenda",
+                  "Acompanhamento da jornada assistencial"
+                ],
+                "itensInclusos": [
+                  "Organização de consultas",
+                  "Apoio em exames",
+                  "Acompanhamento da jornada médica"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com concierge médico é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-com-telemedicina-corporativa",
+                "nome": "Plano de saúde com telemedicina corporativa",
+                "perfil": "PJ",
+                "descricao": "Telemedicina corporativa para oferecer acesso rápido e orientação médica à equipe.",
+                "caracteristicas": [
+                  "Atendimento remoto",
+                  "Orientação médica",
+                  "Acesso digital conforme plano"
+                ],
+                "itensInclusos": [
+                  "Pronto atendimento remoto",
+                  "Consultas por vídeo",
+                  "Prescrição digital conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com telemedicina corporativa é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-com-telemedicina-premium",
+                "nome": "Plano de saúde com telemedicina premium",
+                "perfil": "PJ",
+                "descricao": "Telemedicina premium com acesso mais ágil a especialistas e experiência assistencial qualificada.",
+                "caracteristicas": [
+                  "Atendimento remoto",
+                  "Orientação médica",
+                  "Acesso digital conforme plano"
+                ],
+                "itensInclusos": [
+                  "Pronto atendimento remoto",
+                  "Consultas por vídeo",
+                  "Prescrição digital conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com telemedicina premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-customizado",
+                "nome": "Plano de saúde customizado",
+                "perfil": "PJ",
+                "descricao": "Estrutura corporativa sob medida, alinhada ao perfil da empresa, equipe e estratégia de benefício.",
+                "caracteristicas": [
+                  "Desenho sob medida",
+                  "Perfil da equipe",
+                  "Gestão de benefício"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e gestão do benefício conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde customizado é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-empresarial",
+                "nome": "Plano de saúde empresarial",
+                "perfil": "PJ",
+                "descricao": "Saúde corporativa para colaboradores, com rede, gestão e acesso organizados para empresas.",
+                "caracteristicas": [
+                  "Rede assistencial",
+                  "Gestão de benefício",
+                  "Acesso organizado para colaboradores"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e gestão do benefício conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-empresarial-premium",
+                "nome": "Plano de saúde empresarial premium",
+                "perfil": "PJ",
+                "descricao": "Experiência corporativa premium para equipes estratégicas, com rede qualificada e acesso ampliado.",
+                "caracteristicas": [
+                  "Rede assistencial",
+                  "Gestão de benefício",
+                  "Acesso organizado para colaboradores"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e gestão do benefício conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde empresarial premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-executivo-internacional",
+                "nome": "Plano de saúde executivo internacional",
+                "perfil": "PJ",
+                "descricao": "Saúde executiva com cobertura internacional para lideranças que atuam em diferentes mercados.",
+                "caracteristicas": [
+                  "Cobertura internacional",
+                  "Rede qualificada",
+                  "Suporte para mobilidade executiva"
+                ],
+                "itensInclusos": [
+                  "Rede internacional",
+                  "Urgências no exterior",
+                  "Reembolso ou suporte conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde executivo internacional é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-pme",
+                "nome": "Plano de saúde PME",
+                "perfil": "PJ",
+                "descricao": "Estrutura de saúde para pequenas e médias empresas, com contratação simples e benefício relevante.",
+                "caracteristicas": [
+                  "Rede assistencial",
+                  "Gestão de benefício",
+                  "Acesso organizado para colaboradores"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e gestão do benefício conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde PME é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-por-adesao-empresarial",
+                "nome": "Plano de saúde por adesão empresarial",
+                "perfil": "PJ",
+                "descricao": "Saúde por adesão empresarial, com contratação coletiva e acesso organizado para equipes.",
+                "caracteristicas": [
+                  "Contratação coletiva",
+                  "Elegibilidade por perfil",
+                  "Rede conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e gestão do benefício conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde por adesão empresarial é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-por-adesao-mei",
+                "nome": "Plano de saúde por adesão MEI",
+                "perfil": "PJ",
+                "descricao": "Saúde para MEI e pequenos empreendedores, com acesso simplificado e perfil adequado.",
+                "caracteristicas": [
+                  "Contratação coletiva",
+                  "Elegibilidade por perfil",
+                  "Rede conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e gestão do benefício conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde por adesão MEI é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-por-adesao-pme",
+                "nome": "Plano de saúde por adesão PME",
+                "perfil": "PJ",
+                "descricao": "Saúde por adesão para pequenas e médias empresas, com contratação coletiva e gestão prática.",
+                "caracteristicas": [
+                  "Contratação coletiva",
+                  "Elegibilidade por perfil",
+                  "Rede conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e gestão do benefício conforme plano"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam estruturar saúde corporativa com acesso, gestão e orientação.",
+                "beneficios": "Mais clareza para oferecer saúde como benefício estratégico, com gestão e acesso mais consistentes.",
+                "fechamento": "A escolha certa conecta perfil da equipe, rede, gestão e valor percebido.",
+                "ctaPrimario": "Avaliar solução para empresas",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde por adesão PME é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Proteção de vida e renda (Proteção)"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "saude-ocupacional",
+            "nome": "Saúde ocupacional",
+            "hero": "",
+            "aberturaConsultiva": "Para empresas que precisam organizar saúde ocupacional, exames e obrigações com mais clareza.",
+            "blocoValor": [
+              "Saúde ocupacional"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "esocial-saude",
+                "nome": "eSocial saúde",
+                "perfil": "PJ",
+                "descricao": "Gestão de saúde ocupacional conectada ao eSocial, com organização de eventos e obrigações.",
+                "caracteristicas": [
+                  "Gestão de eventos",
+                  "Integração com rotinas ocupacionais",
+                  "Organização documental"
+                ],
+                "itensInclusos": [
+                  "Exames ocupacionais",
+                  "Registros obrigatórios",
+                  "Orientação técnica conforme escopo contratado"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam organizar saúde ocupacional, exames e obrigações com mais clareza.",
+                "beneficios": "Mais organização para cumprir rotinas ocupacionais, reduzir improvisos e apoiar a gestão da empresa.",
+                "fechamento": "Organizar a saúde ocupacional com antecedência dá mais clareza para a empresa avançar.",
+                "ctaPrimario": "Organizar saúde ocupacional",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem eSocial saúde é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Responsabilidade empresarial (Proteção)"
+                ]
+              },
+              {
+                "id": "pcmso-aso",
+                "nome": "PCMSO / ASO",
+                "perfil": "PJ",
+                "descricao": "Medicina ocupacional com exames, PCMSO e ASO para manter a empresa alinhada às exigências.",
+                "caracteristicas": [
+                  "Exames ocupacionais",
+                  "PCMSO e ASO",
+                  "Dia a dia conforme exigências aplicáveis"
+                ],
+                "itensInclusos": [
+                  "Exames ocupacionais",
+                  "Registros obrigatórios",
+                  "Orientação técnica conforme escopo contratado"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam organizar saúde ocupacional, exames e obrigações com mais clareza.",
+                "beneficios": "Mais organização para cumprir rotinas ocupacionais, reduzir improvisos e apoiar a gestão da empresa.",
+                "fechamento": "Organizar a saúde ocupacional com antecedência dá mais clareza para a empresa avançar.",
+                "ctaPrimario": "Organizar saúde ocupacional",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem PCMSO / ASO é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Responsabilidade empresarial (Proteção)"
+                ]
+              },
+              {
+                "id": "programa-saude-ocupacional",
+                "nome": "Programa saúde ocupacional",
+                "perfil": "PJ",
+                "descricao": "Saúde ocupacional para empresas, com exames, acompanhamento e suporte à conformidade.",
+                "caracteristicas": [
+                  "Medicina do trabalho",
+                  "Exames ocupacionais",
+                  "Acompanhamento de conformidade"
+                ],
+                "itensInclusos": [
+                  "Exames ocupacionais",
+                  "Registros obrigatórios",
+                  "Orientação técnica conforme escopo contratado"
+                ],
+                "aQuemSeDestina": "Para empresas que precisam organizar saúde ocupacional, exames e obrigações com mais clareza.",
+                "beneficios": "Mais organização para cumprir rotinas ocupacionais, reduzir improvisos e apoiar a gestão da empresa.",
+                "fechamento": "Organizar a saúde ocupacional com antecedência dá mais clareza para a empresa avançar.",
+                "ctaPrimario": "Organizar saúde ocupacional",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Programa saúde ocupacional é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Benefícios corporativos (Assistência)",
+                  "Responsabilidade empresarial (Proteção)"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "saude-e-acesso-medico",
+        "nome": "Saúde e acesso médico",
+        "hero": "Saúde familiar premium, saúde familiar e saúde individual.",
+        "nucleos": [
+          {
+            "slug": "saude-familiar-premium",
+            "nome": "Saúde familiar premium",
+            "hero": "",
+            "aberturaConsultiva": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+            "blocoValor": [
+              "Mobilidade internacional",
+              "Livre escolha médica",
+              "Saúde familiar"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "plano-de-saude-familiar-com-cobertura-internacional",
+                "nome": "Plano de saúde familiar com cobertura internacional",
+                "perfil": "PF",
+                "descricao": "Acesso médico no Brasil e no exterior, com cobertura internacional para quem vive ou viaja entre países.",
+                "caracteristicas": [
+                  "Cobertura internacional",
+                  "Rede qualificada",
+                  "Suporte em viagens ou residência no exterior"
+                ],
+                "itensInclusos": [
+                  "Consultas, exames e internações",
+                  "Urgência no exterior",
+                  "Reembolso internacional conforme plano"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais segurança para organizar a saúde da família, com rede, acesso e continuidade.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com cobertura internacional é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Seguro viagem (Proteção)",
+                  "Assistência em viagem (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-familiar-com-livre-escolha",
+                "nome": "Plano de saúde familiar com livre escolha",
+                "perfil": "PF",
+                "descricao": "Livre escolha médica com acesso a profissionais e hospitais, além de reembolso conforme o plano.",
+                "caracteristicas": [
+                  "Livre escolha médica",
+                  "Reembolso conforme plano",
+                  "Acesso a profissionais de referência"
+                ],
+                "itensInclusos": [
+                  "Consultas e exames com reembolso",
+                  "Profissionais de confiança",
+                  "Regras conforme plano"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais autonomia para escolher profissionais e manter continuidade com quem você confia.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com livre escolha é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-familiar-com-livre-escolha-executiva",
+                "nome": "Plano de saúde familiar com livre escolha executiva",
+                "perfil": "PF",
+                "descricao": "Experiência executiva com livre escolha, concierge e acesso ágil para perfis exigentes.",
+                "caracteristicas": [
+                  "Livre escolha médica",
+                  "Reembolso conforme plano",
+                  "Acesso a profissionais de referência"
+                ],
+                "itensInclusos": [
+                  "Consultas e exames com reembolso",
+                  "Profissionais de confiança",
+                  "Regras conforme plano"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais acesso, conforto e acompanhamento, com experiência assistencial de padrão superior.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com livre escolha executiva é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-familiar-com-reembolso-medico",
+                "nome": "Plano de saúde familiar com reembolso médico",
+                "perfil": "PF",
+                "descricao": "Acesso médico com reembolso para consultas e exames fora da rede, mantendo flexibilidade na escolha.",
+                "caracteristicas": [
+                  "Reembolso fora da rede",
+                  "Flexibilidade de escolha",
+                  "Regras conforme plano"
+                ],
+                "itensInclusos": [
+                  "Reembolso de consultas e exames",
+                  "Atendimento fora da rede",
+                  "Regras conforme plano"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais autonomia para escolher profissionais e manter continuidade com quem você confia.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com reembolso médico é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-familiar-premium",
+                "nome": "Plano de saúde familiar premium",
+                "perfil": "PF",
+                "descricao": "Experiência assistencial de alto padrão para a família, com hospitais de referência e cobertura ampliada.",
+                "caracteristicas": [
+                  "Rede de referência",
+                  "Cobertura ampliada",
+                  "Experiência assistencial superior"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e urgências conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais acesso, conforto e acompanhamento, com experiência assistencial de padrão superior.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde familiar premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-familiar-por-adesao-premium",
+                "nome": "Plano de saúde familiar por adesão premium",
+                "perfil": "PF",
+                "descricao": "Saúde familiar por adesão, com rede ampliada e condições vinculadas à elegibilidade.",
+                "caracteristicas": [
+                  "Contratação por adesão",
+                  "Elegibilidade por entidade",
+                  "Rede conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e urgências conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais segurança para organizar a saúde da família, com rede, acesso e continuidade.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde por adesão familiar é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "saude-familiar",
+            "nome": "Saúde familiar",
+            "hero": "",
+            "aberturaConsultiva": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+            "blocoValor": [
+              "Saúde digital",
+              "Saúde familiar",
+              "Livre escolha médica"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "plano-de-saude-familiar-com-telemedicina",
+                "nome": "Plano de saúde familiar com telemedicina",
+                "perfil": "PF",
+                "descricao": "Telemedicina com acesso rápido, prescrição digital e suporte médico sem deslocamento.",
+                "caracteristicas": [
+                  "Atendimento remoto",
+                  "Prescrição digital",
+                  "Acesso médico sem deslocamento"
+                ],
+                "itensInclusos": [
+                  "Consultas por vídeo",
+                  "Prescrição digital",
+                  "Orientação médica remota"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais agilidade para receber orientação médica, com acesso remoto quando fizer sentido.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde com telemedicina é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-familiar",
+                "nome": "Plano de saúde familiar",
+                "perfil": "PF",
+                "descricao": "Estrutura de saúde para a família, com rede ampla, consultas, exames, urgências e continuidade.",
+                "caracteristicas": [
+                  "Rede credenciada",
+                  "Consultas, exames e urgências",
+                  "Acompanhamento conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e urgências conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais segurança para organizar a saúde da família, com rede, acesso e continuidade.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde familiar é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-familiar-por-adesao",
+                "nome": "Plano de saúde familiar por adesão",
+                "perfil": "PF",
+                "descricao": "Livre escolha premium com reembolso ampliado e acesso a especialistas de referência.",
+                "caracteristicas": [
+                  "Livre escolha médica",
+                  "Reembolso conforme plano",
+                  "Acesso a profissionais de referência"
+                ],
+                "itensInclusos": [
+                  "Consultas e exames com reembolso",
+                  "Profissionais de confiança",
+                  "Regras conforme plano"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais acesso, conforto e acompanhamento, com experiência assistencial de padrão superior.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde livre escolha premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "saude-individual",
+            "nome": "Saúde individual",
+            "hero": "",
+            "aberturaConsultiva": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+            "blocoValor": [
+              "Saúde familiar"
+            ],
+            "porque": "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
+            "fechamento": "",
+            "products": [
+              {
+                "id": "plano-de-saude-individual",
+                "nome": "Plano de saúde individual",
+                "perfil": "PF",
+                "descricao": "Acesso médico individual com rede completa, urgências e acompanhamento.",
+                "caracteristicas": [
+                  "Rede credenciada",
+                  "Consultas, exames e urgências",
+                  "Acompanhamento conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e urgências conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais segurança para organizar a saúde da família, com rede, acesso e continuidade.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde individual é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-individual-premium",
+                "nome": "Plano de saúde individual premium",
+                "perfil": "PF",
+                "descricao": "Saúde familiar por adesão com rede ampla, padrão superior e elegibilidade por entidade.",
+                "caracteristicas": [
+                  "Rede de referência",
+                  "Cobertura ampliada",
+                  "Experiência assistencial superior"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e urgências conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais acesso, conforto e acompanhamento, com experiência assistencial de padrão superior.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde por adesão familiar premium é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
+                ]
+              },
+              {
+                "id": "plano-de-saude-individual-por-adesao",
+                "nome": "Plano de saúde individual por adesão",
+                "perfil": "PF",
+                "descricao": "Saúde individual por adesão, com rede credenciada e contratação vinculada à elegibilidade.",
+                "caracteristicas": [
+                  "Contratação por adesão",
+                  "Elegibilidade por entidade",
+                  "Rede conforme plano"
+                ],
+                "itensInclusos": [
+                  "Consultas",
+                  "Exames",
+                  "Internações e urgências conforme rede e contratação"
+                ],
+                "aQuemSeDestina": "Para quem precisa escolher uma solução de saúde alinhada ao perfil, uso e momento da família.",
+                "beneficios": "Mais segurança para organizar a saúde da família, com rede, acesso e continuidade.",
+                "fechamento": "O plano certo acompanha seu momento, com acesso, continuidade e orientação.",
+                "ctaPrimario": "Comparar opções de saúde",
+                "ctaSecundario": "Falar com um consultor",
+                "linkPorto": "Não se aplica",
+                "faq": [
+                  {
+                    "q": "Para quem Plano de saúde por adesão individual é indicado?",
+                    "a": "Para perfis que precisam organizar acesso, prevenção ou acompanhamento conforme necessidade."
+                  },
+                  {
+                    "q": "O que muda entre os formatos?",
+                    "a": "Rede, abrangência, elegibilidade, nível de acesso e acompanhamento."
+                  },
+                  {
+                    "q": "O que validar antes de avançar?",
+                    "a": "Rede, carências, regras de uso, abrangência, documentos e condições comerciais."
+                  }
+                ],
+                "crossSelling": [
+                  "Proteção de vida e renda (Proteção)",
+                  "Assistência familiar (Assistência)"
                 ]
               }
             ]

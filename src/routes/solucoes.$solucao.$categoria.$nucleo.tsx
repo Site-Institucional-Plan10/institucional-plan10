@@ -41,7 +41,11 @@ function NucleoPage() {
     categoria: Categoria;
     nucleo: Nucleo;
   };
-  const [perfil, setPerfil] = useState<"PF" | "PJ">("PF");
+  // Quase metade das modalidades tem opções de um perfil só. Abrir sempre em PF
+  // deixaria a página vazia nessas. O padrão passa a ser o perfil que existe.
+  const temPF = useMemo(() => n.products.some((p) => p.perfil === "PF"), [n]);
+  const temPJ = useMemo(() => n.products.some((p) => p.perfil === "PJ"), [n]);
+  const [perfil, setPerfil] = useState<"PF" | "PJ">(temPF ? "PF" : "PJ");
   const filtered = useMemo(() => n.products.filter((p) => p.perfil === perfil), [n, perfil]);
   
   const cross = useMemo(
@@ -99,16 +103,18 @@ function NucleoPage() {
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, marginBottom: 20 }}>
             <div>
               <p className="eyebrow" style={{ color: "var(--vp)" }}>Opções disponíveis</p>
-              <h2 className="p10-h2">Para você ou para empresa</h2>
+              <h2 className="p10-h2">
+                {temPF && temPJ ? "Para você ou para empresa" : temPF ? "Para você" : "Para empresa"}
+              </h2>
             </div>
-            <PerfilToggle value={perfil} onChange={setPerfil} />
+            {temPF && temPJ && <PerfilToggle value={perfil} onChange={setPerfil} />}
           </div>
           <p style={{ fontFamily: "var(--fl)", fontSize: ".75rem", letterSpacing: ".14em", textTransform: "uppercase", color: "var(--ctxt)", margin: "0 0 16px" }}>
             {filtered.length} {filtered.length === 1 ? "opção" : "opções"} para {perfil === "PF" ? "você" : "empresa"}
           </p>
           {filtered.length === 0 ? (
             <p style={{ fontFamily: "var(--fb)", color: "var(--ctxt)" }}>
-              Ainda não há opções nesse perfil. Troque o seletor ou fale com um consultor.
+              As opções deste perfil ficam disponíveis por consultoria. Fale com um consultor.
             </p>
           ) : (
             <div className="prod-list">
