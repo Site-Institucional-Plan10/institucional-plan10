@@ -1,3 +1,6 @@
+// Plan10 · dados gerados do catálogo 00.2 (Financeiras, Crescimento, Assistência)
+// Régua de linguagem aplicada. Saúde e Proteção entram depois.
+
 export const solucoesLiberadas = [
   {
     "slug": "assistencia",
@@ -15,20 +18,19 @@ export const solucoesLiberadas = [
       {
         "slug": "viagens-beneficios-e-concierge",
         "nome": "Viagens, benefícios e concierge",
-        "hero": "Viagens, benefícios e concierge organizado por perfil, uso e momento.",
+        "hero": "Benefício e bem-estar.",
         "nucleos": [
           {
             "slug": "beneficio-e-bem-estar",
             "nome": "Benefício e bem-estar",
-            "hero": "Benefício e bem-estar com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam incluir benefício pet no pacote de bem-estar corporativo, valorizando colaboradores com animais de estimação.",
             "blocoValor": [
-              "Apoio",
-              "Conveniência",
-              "Continuidade"
+              "Conveniência e benefícios",
+              "Socorro e mobilidade assistida"
             ],
-            "porque": "Reúne as opções de benefício e bem-estar em um só caminho, para escolher com critério.",
-            "fechamento": "Assistência benefício pet ganha valor quando a assistência é organizada antes da urgência virar improviso.",
+            "porque": "Escopo contratado, rede disponível, prazo de acionamento, limites de uso, elegibilidade e clareza do atendimento.",
+            "fechamento": "",
             "products": [
               {
                 "id": "assistencia-pet-beneficio",
@@ -450,20 +452,20 @@ export const solucoesLiberadas = [
       {
         "slug": "ambientes-manutencao-e-bem-estar",
         "nome": "Ambientes, manutenção e bem-estar",
-        "hero": "Ambientes, manutenção e bem-estar organizado por perfil, uso e momento.",
+        "hero": "Manutenção, instalação e conforto, emergência empresarial e emergência residencial.",
         "nucleos": [
           {
             "slug": "manutencao-instalacao-e-conforto",
             "nome": "Manutenção, instalação e conforto",
-            "hero": "Manutenção, instalação e conforto com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que precisam manter ambientes livres de pragas, com conformidade sanitária e qualidade do espaço de trabalho.",
             "blocoValor": [
-              "Apoio",
-              "Conveniência",
-              "Continuidade"
+              "Funcionamento do imóvel",
+              "Manutenção e conforto",
+              "Socorro e mobilidade assistida"
             ],
-            "porque": "Reúne as opções de manutenção, instalação e conforto em um só caminho, para escolher com critério.",
-            "fechamento": "Assistência climatização ganha valor quando a assistência é organizada antes da urgência virar improviso.",
+            "porque": "Escopo contratado, rede disponível, prazo de acionamento, limites de uso, elegibilidade e clareza do atendimento.",
+            "fechamento": "",
             "products": [
               {
                 "id": "servico-dedetizacao-empresarial",
@@ -1281,15 +1283,15 @@ export const solucoesLiberadas = [
           {
             "slug": "emergencia-empresarial",
             "nome": "Emergência empresarial",
-            "hero": "Emergência empresarial com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que precisam de suporte imediato para situações de bloqueio de acesso, preservando a continuidade da operação.",
             "blocoValor": [
-              "Apoio",
-              "Conveniência",
-              "Continuidade"
+              "Funcionamento do imóvel",
+              "Manutenção e conforto",
+              "Socorro e mobilidade assistida"
             ],
-            "porque": "Reúne as opções de emergência empresarial em um só caminho, para escolher com critério.",
-            "fechamento": "Assistência chaveiro ganha valor quando a assistência é organizada antes da urgência virar improviso.",
+            "porque": "Escopo contratado, rede disponível, prazo de acionamento, limites de uso, elegibilidade e clareza do atendimento.",
+            "fechamento": "",
             "products": [
               {
                 "id": "assistencia-chaveiro",
@@ -1653,15 +1655,14 @@ export const solucoesLiberadas = [
           {
             "slug": "emergencia-residencial",
             "nome": "Emergência residencial",
-            "hero": "Emergência residencial com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para você e sua família que precisam de suporte imediato para situações de bloqueio de acesso na residência.",
             "blocoValor": [
-              "Apoio",
-              "Conveniência",
-              "Continuidade"
+              "Funcionamento do imóvel",
+              "Manutenção e conforto"
             ],
-            "porque": "Reúne as opções de emergência residencial em um só caminho, para escolher com critério.",
-            "fechamento": "Assistência chaveiro ganha valor quando a assistência é organizada antes da urgência virar improviso.",
+            "porque": "Escopo contratado, rede disponível, prazo de acionamento, limites de uso, elegibilidade e clareza do atendimento.",
+            "fechamento": "",
             "products": [
               {
                 "id": "assistencia-chaveiro",
@@ -1981,20 +1982,19 @@ export const solucoesLiberadas = [
       {
         "slug": "seguranca-e-conectividade",
         "nome": "Segurança e conectividade",
-        "hero": "Segurança e conectividade organizado por perfil, uso e momento.",
+        "hero": "Conectividade e monitoramento.",
         "nucleos": [
           {
             "slug": "conectividade-e-monitoramento",
             "nome": "Conectividade e monitoramento",
-            "hero": "Conectividade e monitoramento com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para você e sua família que precisam de suporte tecnológico para computadores, notebooks, redes e dispositivos do dia a dia.",
             "blocoValor": [
-              "Apoio",
-              "Conveniência",
-              "Continuidade"
+              "Manutenção e conforto",
+              "Conectividade e segurança"
             ],
-            "porque": "Reúne as opções de conectividade e monitoramento em um só caminho, para escolher com critério.",
-            "fechamento": "Assistência tech ganha valor quando a assistência é organizada antes da urgência virar improviso.",
+            "porque": "Escopo contratado, rede disponível, prazo de acionamento, limites de uso, elegibilidade e clareza do atendimento.",
+            "fechamento": "",
             "products": [
               {
                 "id": "assistencia-tech",
@@ -2229,20 +2229,18 @@ export const solucoesLiberadas = [
       {
         "slug": "nauticos-e-aeronauticos",
         "nome": "Náuticos e aeronáuticos",
-        "hero": "Náuticos e aeronáuticos organizado por perfil, uso e momento.",
+        "hero": "Apoio náutico.",
         "nucleos": [
           {
             "slug": "apoio-nautico",
             "nome": "Apoio náutico",
-            "hero": "Apoio náutico com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para você que utiliza embarcações de lazer e precisa de suporte assistencial em situações de emergência ou pane náutica.",
             "blocoValor": [
-              "Apoio",
-              "Conveniência",
-              "Continuidade"
+              "Socorro e mobilidade assistida"
             ],
-            "porque": "Reúne as opções de apoio náutico em um só caminho, para escolher com critério.",
-            "fechamento": "Assistência náutica ganha valor quando a assistência é organizada antes da urgência virar improviso.",
+            "porque": "Escopo contratado, rede disponível, prazo de acionamento, limites de uso, elegibilidade e clareza do atendimento.",
+            "fechamento": "",
             "products": [
               {
                 "id": "assistencia-nautica",
@@ -2296,20 +2294,18 @@ export const solucoesLiberadas = [
       {
         "slug": "mobilidade-assistida",
         "nome": "Mobilidade assistida",
-        "hero": "Mobilidade assistida organizado por perfil, uso e momento.",
+        "hero": "Emergência veicular.",
         "nucleos": [
           {
             "slug": "emergencia-veicular",
             "nome": "Emergência veicular",
-            "hero": "Emergência veicular com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas com frota de veículos que precisam de suporte imediato para acesso bloqueado, preservando a operação logística.",
             "blocoValor": [
-              "Apoio",
-              "Conveniência",
-              "Continuidade"
+              "Socorro e mobilidade assistida"
             ],
-            "porque": "Reúne as opções de emergência veicular em um só caminho, para escolher com critério.",
-            "fechamento": "Assistência chaveiro frota ganha valor quando a assistência é organizada antes da urgência virar improviso.",
+            "porque": "Escopo contratado, rede disponível, prazo de acionamento, limites de uso, elegibilidade e clareza do atendimento.",
+            "fechamento": "",
             "products": [
               {
                 "id": "assistencia-chaveiro-frota",
@@ -2866,20 +2862,18 @@ export const solucoesLiberadas = [
       {
         "slug": "maquinas-e-equipamentos",
         "nome": "Máquinas e equipamentos",
-        "hero": "Máquinas e equipamentos organizado por perfil, uso e momento.",
+        "hero": "Equipamento pesado, expansão operacional, implemento agrícola, infraestrutura e outras modalidades.",
         "nucleos": [
           {
             "slug": "equipamento-pesado",
             "nome": "Equipamento pesado",
-            "hero": "Equipamento pesado com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar equipamento pesado com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Capacidade produtiva"
             ],
-            "porque": "Reúne as opções de equipamento pesado em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio equipamentos pesados para empresas ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-equipamentos-pesados-para-empresas",
@@ -2930,15 +2924,13 @@ export const solucoesLiberadas = [
           {
             "slug": "expansao-operacional",
             "nome": "Expansão operacional",
-            "hero": "Expansão operacional com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar expansão operacional com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Capacidade produtiva"
             ],
-            "porque": "Reúne as opções de expansão operacional em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio de expansão empresarial ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-de-expansao-empresarial",
@@ -3033,15 +3025,13 @@ export const solucoesLiberadas = [
           {
             "slug": "implemento-agricola",
             "nome": "Implemento agrícola",
-            "hero": "Implemento agrícola com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar implemento agrícola com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Capacidade produtiva"
             ],
-            "porque": "Reúne as opções de implemento agrícola em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio de implementos agrícolas empresarial ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-de-implementos-agricolas-empresarial",
@@ -3136,15 +3126,13 @@ export const solucoesLiberadas = [
           {
             "slug": "infraestrutura",
             "nome": "Infraestrutura",
-            "hero": "Infraestrutura com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar infraestrutura com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Capacidade produtiva"
             ],
-            "porque": "Reúne as opções de infraestrutura em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio infraestrutura agro empresarial ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-infraestrutura-agro-empresarial",
@@ -3239,15 +3227,13 @@ export const solucoesLiberadas = [
           {
             "slug": "maquina-e-equipamento-agricola",
             "nome": "Máquina e equipamento agrícola",
-            "hero": "Máquina e equipamento agrícola com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar máquina e equipamento agrícola com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Capacidade produtiva"
             ],
-            "porque": "Reúne as opções de máquina e equipamento agrícola em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio máquinas agrícolas empresarial ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-maquinas-agricolas-empresarial",
@@ -3342,15 +3328,13 @@ export const solucoesLiberadas = [
           {
             "slug": "maquina-e-equipamento-pesado",
             "nome": "Máquina e equipamento pesado",
-            "hero": "Máquina e equipamento pesado com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar máquina e equipamento pesado com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Capacidade produtiva"
             ],
-            "porque": "Reúne as opções de máquina e equipamento pesado em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio máquinas pesadas ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-maquinas-pesadas",
@@ -3401,15 +3385,13 @@ export const solucoesLiberadas = [
           {
             "slug": "pecuaria-e-producao",
             "nome": "Pecuária e produção",
-            "hero": "Pecuária e produção com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar pecuária e produção com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Capacidade produtiva"
             ],
-            "porque": "Reúne as opções de pecuária e produção em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio pecuária e produção animal para empresas ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-pecuaria-e-producao-animal-para-empresas",
@@ -3506,20 +3488,18 @@ export const solucoesLiberadas = [
       {
         "slug": "bens-de-valor-e-tecnologia",
         "nome": "Bens de valor e tecnologia",
-        "hero": "Bens de valor e tecnologia organizado por perfil, uso e momento.",
+        "hero": "Ativo patrimonial, ativos de valor, tecnologia e equipamentos e móveis e eletrodomésticos.",
         "nucleos": [
           {
             "slug": "ativo-patrimonial",
             "nome": "Ativo patrimonial",
-            "hero": "Ativo patrimonial com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar ativo patrimonial com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Ativos de valor e tecnologia"
             ],
-            "porque": "Reúne as opções de ativo patrimonial em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio ativos empresariais ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-ativos-empresariais",
@@ -3614,15 +3594,13 @@ export const solucoesLiberadas = [
           {
             "slug": "ativos-de-valor",
             "nome": "Ativos de valor",
-            "hero": "Ativos de valor com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar ativos de valor com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Ativos de valor e tecnologia"
             ],
-            "porque": "Reúne as opções de ativos de valor em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio interiores premium ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-interiores-premium",
@@ -3717,15 +3695,13 @@ export const solucoesLiberadas = [
           {
             "slug": "tecnologia-e-equipamentos",
             "nome": "Tecnologia e equipamentos",
-            "hero": "Tecnologia e equipamentos com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar tecnologia e equipamentos com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Ativos de valor e tecnologia"
             ],
-            "porque": "Reúne as opções de tecnologia e equipamentos em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio infraestrutura TI ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-infraestrutura-ti",
@@ -4040,15 +4016,13 @@ export const solucoesLiberadas = [
           {
             "slug": "moveis-e-eletrodomesticos",
             "nome": "Móveis e eletrodomésticos",
-            "hero": "Móveis e eletrodomésticos com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar móveis e eletrodomésticos com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Ativos de valor e tecnologia"
             ],
-            "porque": "Reúne as opções de móveis e eletrodomésticos em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio eletrodomésticos e linha branca ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-eletrodomesticos-e-linha-branca",
@@ -4145,20 +4119,18 @@ export const solucoesLiberadas = [
       {
         "slug": "nauticos-e-aeronauticos",
         "nome": "Náuticos e aeronáuticos",
-        "hero": "Náuticos e aeronáuticos organizado por perfil, uso e momento.",
+        "hero": "Aeronaves e embarcações.",
         "nucleos": [
           {
             "slug": "aeronaves",
             "nome": "Aeronaves",
-            "hero": "Aeronaves com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar aeronaves com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Aquisição premium"
             ],
-            "porque": "Reúne as opções de aeronaves em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio aeronaves comerciais ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-aeronaves-comerciais",
@@ -4253,15 +4225,13 @@ export const solucoesLiberadas = [
           {
             "slug": "embarcacoes",
             "nome": "Embarcações",
-            "hero": "Embarcações com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar embarcações com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Aquisição premium"
             ],
-            "porque": "Reúne as opções de embarcações em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio náutico para empresas ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-nautico-para-empresas",
@@ -4358,20 +4328,18 @@ export const solucoesLiberadas = [
       {
         "slug": "eventos-educacao-e-experiencias",
         "nome": "Eventos, educação e experiências",
-        "hero": "Eventos, educação e experiências organizado por perfil, uso e momento.",
+        "hero": "Educação e carreira, gestão de passivos e eventos e viagens.",
         "nucleos": [
           {
             "slug": "educacao-e-carreira",
             "nome": "Educação e carreira",
-            "hero": "Educação e carreira com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar educação e carreira com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Projetos e experiências"
             ],
-            "porque": "Reúne as opções de educação e carreira em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio de educação ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-de-educacao",
@@ -4686,15 +4654,13 @@ export const solucoesLiberadas = [
           {
             "slug": "gestao-de-passivos",
             "nome": "Gestão de passivos",
-            "hero": "Gestão de passivos com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar gestão de passivos com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Projetos e experiências"
             ],
-            "porque": "Reúne as opções de gestão de passivos em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio quitação de dividas ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-quitacao-de-dividas",
@@ -4789,15 +4755,13 @@ export const solucoesLiberadas = [
           {
             "slug": "eventos-e-viagens",
             "nome": "Eventos e viagens",
-            "hero": "Eventos e viagens com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar eventos e viagens com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Projetos e experiências"
             ],
-            "porque": "Reúne as opções de eventos e viagens em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio eventos empresariais ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-eventos-empresariais",
@@ -4982,20 +4946,18 @@ export const solucoesLiberadas = [
       {
         "slug": "imoveis-e-expansao-patrimonial",
         "nome": "Imóveis e expansão patrimonial",
-        "hero": "Imóveis e expansão patrimonial organizado por perfil, uso e momento.",
+        "hero": "Imóvel comercial, imóvel residencial, imóvel residencial de lazer e retrofit.",
         "nucleos": [
           {
             "slug": "imovel-comercial",
             "nome": "Imóvel comercial",
-            "hero": "Imóvel comercial com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar imóvel comercial com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Expansão patrimonial"
             ],
-            "porque": "Reúne as opções de imóvel comercial em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio de energia solar empresarial ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-de-energia-solar-empresarial",
@@ -5222,15 +5184,13 @@ export const solucoesLiberadas = [
           {
             "slug": "imovel-residencial",
             "nome": "Imóvel residencial",
-            "hero": "Imóvel residencial com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar imóvel residencial com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Expansão patrimonial"
             ],
-            "porque": "Reúne as opções de imóvel residencial em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio de energia solar residencial ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-de-energia-solar-residencial",
@@ -5457,15 +5417,13 @@ export const solucoesLiberadas = [
           {
             "slug": "imovel-residencial-de-lazer",
             "nome": "Imóvel residencial de lazer",
-            "hero": "Imóvel residencial de lazer com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar imóvel residencial de lazer com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Expansão patrimonial"
             ],
-            "porque": "Reúne as opções de imóvel residencial de lazer em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio imóvel de lazer ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-imovel-de-lazer",
@@ -5516,15 +5474,13 @@ export const solucoesLiberadas = [
           {
             "slug": "retrofit",
             "nome": "Retrofit",
-            "hero": "Retrofit com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar retrofit com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Expansão patrimonial"
             ],
-            "porque": "Reúne as opções de retrofit em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio hospedagem corporativa ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-hospedagem-corporativa",
@@ -5621,20 +5577,18 @@ export const solucoesLiberadas = [
       {
         "slug": "veiculos-e-frotas",
         "nome": "Veículos e frotas",
-        "hero": "Veículos e frotas organizado por perfil, uso e momento.",
+        "hero": "Automóveis, caminhões, motocicletas e utilitários e vans.",
         "nucleos": [
           {
             "slug": "automoveis",
             "nome": "Automóveis",
-            "hero": "Automóveis com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar automóveis com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Mobilidade planejada"
             ],
-            "porque": "Reúne as opções de automóveis em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio frota executiva ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-frota-executiva",
@@ -5817,15 +5771,13 @@ export const solucoesLiberadas = [
           {
             "slug": "caminhoes",
             "nome": "Caminhões",
-            "hero": "Caminhões com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar caminhões com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Mobilidade planejada"
             ],
-            "porque": "Reúne as opções de caminhões em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio para frota de caminhões leves e médios ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-para-frota-de-caminhoes-leves-e-medios",
@@ -5920,15 +5872,13 @@ export const solucoesLiberadas = [
           {
             "slug": "motocicletas",
             "nome": "Motocicletas",
-            "hero": "Motocicletas com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam planejar motocicletas com clareza, intenção e apoio consultivo.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Mobilidade planejada"
             ],
-            "porque": "Reúne as opções de motocicletas em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio frota de motos ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-frota-de-motos",
@@ -6067,15 +6017,13 @@ export const solucoesLiberadas = [
           {
             "slug": "utilitarios-e-vans",
             "nome": "Utilitários e vans",
-            "hero": "Utilitários e vans com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que desejam planejar utilitários e vans com previsibilidade, caixa organizado e visão de expansão.",
             "blocoValor": [
-              "Conquista",
-              "Mobilidade",
-              "Expansão planejada"
+              "Mobilidade planejada"
             ],
-            "porque": "Reúne as opções de utilitários e vans em um só caminho, para escolher com critério.",
-            "fechamento": "Consórcio frota de vans e utilitários ganha mais consistência quando objetivo, prazo e capacidade financeira são avaliados antes da decisão.",
+            "porque": "Parceiro, prazo, valor pretendido, regras aplicáveis, documentação, capacidade financeira e aderência ao objetivo.",
+            "fechamento": "",
             "products": [
               {
                 "id": "consorcio-frota-de-vans-e-utilitarios",
@@ -6187,20 +6135,18 @@ export const solucoesLiberadas = [
       {
         "slug": "credito-e-liquidez",
         "nome": "Crédito e liquidez",
-        "hero": "Crédito e liquidez organizado por perfil, uso e momento.",
+        "hero": "Operações de crédito.",
         "nucleos": [
           {
             "slug": "operacoes-de-credito",
-            "nome": "Operações de credito",
-            "hero": "Operações de credito com orientação clara desde a escolha.",
+            "nome": "Operações de crédito",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que precisam organizar antecipação de recebíveis com critérios claros e orientação antes do compromisso.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Crédito e liquidez"
             ],
-            "porque": "Reúne as opções de operações de credito em um só caminho, para escolher com critério.",
-            "fechamento": "Crédito imobiliário ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Taxa efetiva, prazo, garantia exigida, documentação e parceiro financeiro, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "credito-imobiliario",
@@ -6228,7 +6174,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Crédito imobiliário é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6270,7 +6216,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Crédito para capital de giro é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6312,7 +6258,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Reserva de crédito é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6354,7 +6300,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Antecipação FGTS é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6396,7 +6342,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Antecipação IR é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6438,7 +6384,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Crédito consignado é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6480,7 +6426,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Crédito pessoal é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6522,7 +6468,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Antecipação de recebíveis é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6564,7 +6510,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Desconto de duplicatas é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6606,7 +6552,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Portabilidade de crédito é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6629,20 +6575,18 @@ export const solucoesLiberadas = [
       {
         "slug": "financiamentos",
         "nome": "Financiamentos",
-        "hero": "Financiamentos organizado por perfil, uso e momento.",
+        "hero": "Operações de crédito e financiamento de bens e projetos.",
         "nucleos": [
           {
             "slug": "operacoes-de-credito",
-            "nome": "Operações de credito",
-            "hero": "Operações de credito com orientação clara desde a escolha.",
+            "nome": "Operações de crédito",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que precisam organizar desconto de duplicatas com critérios claros e orientação antes do compromisso.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Crédito e liquidez"
             ],
-            "porque": "Reúne as opções de operações de credito em um só caminho, para escolher com critério.",
-            "fechamento": "Crédito veicular ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Taxa efetiva, prazo, garantia exigida, documentação e parceiro financeiro, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "credito-veicular",
@@ -6670,7 +6614,7 @@ export const solucoesLiberadas = [
                 "faq": [
                   {
                     "q": "Para quem Crédito veicular é indicado?",
-                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de credito."
+                    "a": "Para perfis que precisam organizar decisão financeira relacionada a operações de crédito."
                   },
                   {
                     "q": "O que validar antes de contratar?",
@@ -6691,15 +6635,13 @@ export const solucoesLiberadas = [
           {
             "slug": "financiamento-de-bens-e-projetos",
             "nome": "Financiamento de bens e projetos",
-            "hero": "Financiamento de bens e projetos com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar crédito veicular de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Financiamento"
             ],
-            "porque": "Reúne as opções de financiamento de bens e projetos em um só caminho, para escolher com critério.",
-            "fechamento": "Financiamento de sistema de energia solar ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Taxa efetiva, prazo, valor de entrada, documentação e instituição financeira, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "financiamento-de-aeronave-empresarial",
@@ -7380,20 +7322,19 @@ export const solucoesLiberadas = [
       {
         "slug": "capitalizacao",
         "nome": "Capitalização",
-        "hero": "Capitalização organizado por perfil, uso e momento.",
+        "hero": "Capitalização.",
         "nucleos": [
           {
             "slug": "capitalizacao",
             "nome": "Capitalização",
-            "hero": "Capitalização com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar portabilidade de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Financiamento",
+              "Garantias financeiras"
             ],
-            "porque": "Reúne as opções de capitalização em um só caminho, para escolher com critério.",
-            "fechamento": "Título de capitalização caução empresarial ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Prazo, valor da parcela, regras de resgate e sorteio, e finalidade do título, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "titulo-de-capitalizacao-caucao-empresarial",
@@ -7562,20 +7503,18 @@ export const solucoesLiberadas = [
       {
         "slug": "garantias-financeiras",
         "nome": "Garantias financeiras",
-        "hero": "Garantias financeiras organizado por perfil, uso e momento.",
+        "hero": "Carta garantia, fiança bancária e garantias de aluguel.",
         "nucleos": [
           {
             "slug": "carta-garantia",
             "nome": "Carta garantia",
-            "hero": "Carta garantia com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar fiança bancária de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Garantias financeiras"
             ],
-            "porque": "Reúne as opções de carta garantia em um só caminho, para escolher com critério.",
-            "fechamento": "Carta de garantia empresarial ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Valor garantido, prazo, exigência do contratante e parceiro financeiro, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "carta-de-garantia-empresarial",
@@ -7662,15 +7601,13 @@ export const solucoesLiberadas = [
           {
             "slug": "fianca-bancaria",
             "nome": "Fiança bancária",
-            "hero": "Fiança bancária com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para empresas que precisam organizar capitalização para aluguel empresarial com critérios claros e orientação antes do compromisso.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Garantias financeiras"
             ],
-            "porque": "Reúne as opções de fiança bancária em um só caminho, para escolher com critério.",
-            "fechamento": "Fiança bancária empresarial ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Valor garantido, prazo, exigência do contratante e parceiro financeiro, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "fianca-bancaria-empresarial",
@@ -7757,15 +7694,14 @@ export const solucoesLiberadas = [
           {
             "slug": "garantias-de-aluguel",
             "nome": "Garantias de aluguel",
-            "hero": "Garantias de aluguel com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar caução para locação de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Garantias financeiras",
+              "Reserva e futuro"
             ],
-            "porque": "Reúne as opções de garantias de aluguel em um só caminho, para escolher com critério.",
-            "fechamento": "Capitalização para aluguel empresarial ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Valor do aluguel, prazo do contrato, escopo de cobertura e parceiro financeiro, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "capitalizacao-para-aluguel-empresarial",
@@ -7974,20 +7910,18 @@ export const solucoesLiberadas = [
       {
         "slug": "investimentos-previdencia-e-reservas",
         "nome": "Investimentos, previdência e reservas",
-        "hero": "Investimentos, previdência e reservas organizado por perfil, uso e momento.",
+        "hero": "Investimentos e patrimônio financeiro e previdência.",
         "nucleos": [
           {
             "slug": "investimentos-e-patrimonio-financeiro",
             "nome": "Investimentos e patrimônio financeiro",
-            "hero": "Investimentos e patrimônio financeiro com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar título de capitalização caução de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Reserva e futuro"
             ],
-            "porque": "Reúne as opções de investimentos e patrimônio financeiro em um só caminho, para escolher com critério.",
-            "fechamento": "COE corporativo ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Perfil de risco, horizonte, liquidez desejada e volume de recursos, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "coe-corporativo",
@@ -8274,15 +8208,13 @@ export const solucoesLiberadas = [
           {
             "slug": "previdencia",
             "nome": "Previdência",
-            "hero": "Previdência com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar multimercado de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Reserva e futuro"
             ],
-            "porque": "Reúne as opções de previdência em um só caminho, para escolher com critério.",
-            "fechamento": "PGBL corporativo ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Regime tributário, prazo, objetivo e perfil de risco dos fundos disponíveis, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "pgbl-corporativo",
@@ -8531,20 +8463,19 @@ export const solucoesLiberadas = [
       {
         "slug": "servicos-financeiros-e-contas",
         "nome": "Serviços financeiros e contas",
-        "hero": "Serviços financeiros e contas organizado por perfil, uso e momento.",
+        "hero": "Cartões de crédito, conta digital e tags, pedágio e estacionamento.",
         "nucleos": [
           {
             "slug": "cartoes-de-credito",
             "nome": "Cartões de crédito",
-            "hero": "Cartões de crédito com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar vgbl de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Reserva e futuro",
+              "Dia a dia financeira"
             ],
-            "porque": "Reúne as opções de cartões de crédito em um só caminho, para escolher com critério.",
-            "fechamento": "Cartão de crédito despesa empresarial ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Anuidade, benefícios, limite e programa de pontos ou milhas, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "cartao-de-credito-despesa-empresarial",
@@ -8831,15 +8762,13 @@ export const solucoesLiberadas = [
           {
             "slug": "conta-digital",
             "nome": "Conta digital",
-            "hero": "Conta digital com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar cartões de crédito premium de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Dia a dia financeira"
             ],
-            "porque": "Reúne as opções de conta digital em um só caminho, para escolher com critério.",
-            "fechamento": "Conta digital empresarial ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Tarifas, funcionalidades disponíveis e integração com o dia a dia financeira, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "conta-digital-empresarial",
@@ -8926,15 +8855,13 @@ export const solucoesLiberadas = [
           {
             "slug": "tags-pedagio-e-estacionamento",
             "nome": "Tags, pedágio e estacionamento",
-            "hero": "Tags, pedágio e estacionamento com orientação clara desde a escolha.",
+            "hero": "",
             "aberturaConsultiva": "Para pessoas e famílias que desejam avaliar conta digital pessoal de forma estruturada.",
             "blocoValor": [
-              "Planejamento",
-              "Liquidez",
-              "Previsibilidade"
+              "Dia a dia financeira"
             ],
-            "porque": "Reúne as opções de tags, pedágio e estacionamento em um só caminho, para escolher com critério.",
-            "fechamento": "Tag estacionamento corporativo ganha força quando perfil, objetivo, prazo e documentação são avaliados antes do próximo passo.",
+            "porque": "Cobertura de praças, tarifas e integração com a frota, e apoio consultivo na comparação.",
+            "fechamento": "",
             "products": [
               {
                 "id": "tag-estacionamento-corporativo",

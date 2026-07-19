@@ -65,30 +65,30 @@ export const solutions: Solucao[] = [
     slug: "saude",
     nome: "Saúde e vida saudável",
     cor: { bg: "#0E3D2C", primary: "#2EA86E", accent: "#6BCCA0", soft: "#EDF8F2" },
-    hero: "Saúde, bem-estar e qualidade de vida com orientação clara desde a escolha",
+    hero: "Escolha o cuidado certo para o seu momento.",
     subHero:
-      "Cuidado, prevenção e acesso à saúde organizados para pessoas, famílias e empresas.",
+      "Acesso, prevenção e acompanhamento em uma visão única do cuidado para pessoas, famílias e empresas.",
     aberturaConsultiva:
       "Cuidar da saúde abrange acesso, perfil familiar, contexto empresarial e expectativas de cuidado.",
     categorias: [
       {
         slug: "saude-e-acesso-medico",
         nome: "Saúde e acesso médico",
-        hero: "Acesso médico organizado por perfil, uso e momento.",
+        hero: "Saúde familiar premium.",
         nucleos: [
           {
             slug: "saude-familiar-premium",
             nome: "Saúde familiar premium",
-            hero: "Cuidado da família com acesso, rede e continuidade.",
+            hero: "",
             aberturaConsultiva:
               "Antes de escolher, entenda o que o seu momento pede: rede, reembolso, livre escolha ou cobertura internacional.",
             blocoValor: [
-              "Cuidado orientado",
-              "Acesso organizado",
-              "Continuidade no cuidado",
+              "Mobilidade internacional",
+              "Livre escolha médica",
+              "Saúde familiar",
             ],
             porque:
-              "Reúne as opções de saúde familiar de padrão premium em um só caminho, para escolher com critério.",
+              "Rede, abrangência, elegibilidade, carências, experiência de uso, nível de acompanhamento e adequação ao perfil.",
             fechamento:
               "O plano certo acompanha seu momento, com acesso, orientação e permanência ao longo do tempo.",
             products: [
