@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import { Menu, MessageCircle, Search, X } from "lucide-react";
+import { Menu, MessageCircle, Search, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
 import { getWhatsAppUrl } from "@/lib/utils";
+import { solutions } from "@/data/solutions";
+import { paletteFor } from "@/components/plan10/PageTheme";
 
 import { verticals } from "@/data/verticals";
 
@@ -19,14 +21,29 @@ const navLinks = [
   { to: "/blog", label: "Blog" },
 ] as const;
 
+// Solutions submenu items (DS v3.1 catalog)
+const solutionsMenu = solutions.map((s) => ({
+  slug: s.slug,
+  label: s.nome,
+  color: paletteFor(s.slug).vp,
+}));
+
 // Mobile menu structure with dividers
 type MobileItem =
   | { kind: "link"; to: string; label: string; hubColor?: string }
+  | { kind: "solucao"; slug: string; label: string; color: string }
+  | { kind: "group"; label: string }
   | { kind: "divider" };
 
 const mobileItems: MobileItem[] = [
   { kind: "link", to: "/", label: "Home" },
   { kind: "link", to: "/quem-somos", label: "Quem somos" },
+  { kind: "divider" },
+  { kind: "group", label: "Soluções" },
+  { kind: "link", to: "/solucoes", label: "Ver todas as Soluções" },
+  ...solutionsMenu.map(
+    (s): MobileItem => ({ kind: "solucao", slug: s.slug, label: s.label, color: s.color }),
+  ),
   { kind: "divider" },
   { kind: "link", to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
   { kind: "link", to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
