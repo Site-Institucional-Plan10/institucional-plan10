@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroBanner } from "@/components/sections/HeroBanner";
+import { SolutionsShowcase } from "@/components/sections/SolutionsShowcase";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { VerticalCards } from "@/components/sections/VerticalCards";
 import { WhyPlan10 } from "@/components/sections/WhyPlan10";
