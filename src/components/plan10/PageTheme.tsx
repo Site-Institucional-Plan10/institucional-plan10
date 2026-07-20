@@ -465,8 +465,26 @@ const CSS = `
 /* Block spacing rhythm */
 .plan10-scope .rhythm > * + * { margin-top: 52px; }
 
-/* Prevent horizontal scroll */
+/* Prevent horizontal scroll and card blowout on narrow viewports */
 .plan10-scope { overflow-x: hidden; }
+.plan10-scope .wrap { max-width: 1100px; width: 100%; margin: 0 auto; min-width: 0; }
+.plan10-scope .prod-list { min-width: 0; }
+.plan10-scope .prod-item { min-width: 0; max-width: 100%; }
+.plan10-scope .prod-item h3,
+.plan10-scope .prod-item .desc,
+.plan10-scope .prod-item .prod-meta,
+.plan10-scope .prod-item .prod-faq-item .q,
+.plan10-scope .prod-item .prod-faq-item .a { overflow-wrap: anywhere; word-break: break-word; }
+.plan10-scope .prod-item ul { min-width: 0; }
+.plan10-scope .prod-item ul li { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.plan10-scope .p10-toggle { flex-wrap: wrap; max-width: 100%; }
+.plan10-scope .p10-toggle button { flex: 1 1 auto; min-width: 0; }
+.plan10-scope .pills { max-width: 100%; }
+.plan10-scope .pill { max-width: 100%; overflow-wrap: anywhere; }
+.plan10-scope .p10-faq summary,
+.plan10-scope .p10-faq .ans { overflow-wrap: anywhere; word-break: break-word; }
+.plan10-scope .p10-card { min-width: 0; }
+.plan10-scope .p10-card h3, .plan10-scope .p10-card p { overflow-wrap: anywhere; }
 `;
 
 export function PageTheme({

@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import { Menu, MessageCircle, Search, X } from "lucide-react";
+import { Menu, MessageCircle, Search, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
 import { getWhatsAppUrl } from "@/lib/utils";
+import { solutions } from "@/data/solutions";
+import { paletteFor } from "@/components/plan10/PageTheme";
 
 import { verticals } from "@/data/verticals";
 
@@ -19,14 +21,29 @@ const navLinks = [
   { to: "/blog", label: "Blog" },
 ] as const;
 
+// Solutions submenu items (DS v3.1 catalog)
+const solutionsMenu = solutions.map((s) => ({
+  slug: s.slug,
+  label: s.nome,
+  color: paletteFor(s.slug).vp,
+}));
+
 // Mobile menu structure with dividers
 type MobileItem =
   | { kind: "link"; to: string; label: string; hubColor?: string }
+  | { kind: "solucao"; slug: string; label: string; color: string }
+  | { kind: "group"; label: string }
   | { kind: "divider" };
 
 const mobileItems: MobileItem[] = [
   { kind: "link", to: "/", label: "Home" },
   { kind: "link", to: "/quem-somos", label: "Quem somos" },
+  { kind: "divider" },
+  { kind: "group", label: "Soluções" },
+  { kind: "link", to: "/solucoes", label: "Ver todas as Soluções" },
+  ...solutionsMenu.map(
+    (s): MobileItem => ({ kind: "solucao", slug: s.slug, label: s.label, color: s.color }),
+  ),
   { kind: "divider" },
   { kind: "link", to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
   { kind: "link", to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
@@ -221,6 +238,122 @@ function SearchBox({ onClose }: { onClose: () => void }) {
   );
 }
 
+function SolucoesDropdown() {
+  const [open, setOpen] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelClose = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+  const scheduleClose = () => {
+    cancelClose();
+    timerRef.current = setTimeout(() => setOpen(false), 140);
+  };
+
+  useEffect(() => () => cancelClose(), []);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => { cancelClose(); setOpen(true); }}
+      onMouseLeave={scheduleClose}
+    >
+      <Link
+        to="/solucoes"
+        className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1 whitespace-nowrap"
+        style={{ color: "#1A1A1A" }}
+        activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
+        onFocus={() => setOpen(true)}
+      >
+        <span className="group-hover:text-orange transition-colors">Soluções</span>
+        <ChevronDown size={14} className="group-hover:text-orange transition-colors" />
+        <span className="absolute bottom-0 left-3 right-6 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+      </Link>
+      {open && (
+        <div
+          role="menu"
+          className="absolute left-0 top-full pt-2"
+          style={{ zIndex: 60 }}
+        >
+          <div
+            style={{
+              minWidth: 280,
+              background: "#FFFFFF",
+              border: "1px solid #E8E8E8",
+              borderRadius: 14,
+              boxShadow: "0 16px 48px rgba(0,0,0,0.14)",
+              padding: 8,
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+            }}
+          >
+            <Link
+              to="/solucoes"
+              onClick={() => setOpen(false)}
+              style={{
+                display: "block",
+                padding: "10px 12px",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: ".72rem",
+                letterSpacing: ".16em",
+                textTransform: "uppercase",
+                fontWeight: 700,
+                color: "#5A5A5A",
+                textDecoration: "none",
+                borderBottom: "1px solid #F0F0F0",
+                marginBottom: 4,
+              }}
+            >
+              Ver todas as Soluções
+            </Link>
+            {solutionsMenu.map((s) => (
+              <Link
+                key={s.slug}
+                to="/solucoes/$solucao"
+                params={{ solucao: s.slug }}
+                onClick={() => setOpen(false)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  padding: "10px 12px",
+                  borderRadius: 8,
+                  color: "#1A1A1A",
+                  fontFamily: "'Inter', system-ui, sans-serif",
+                  fontSize: ".92rem",
+                  fontWeight: 500,
+                  textDecoration: "none",
+                  transition: "background 150ms",
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "#F7F5F2"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+              >
+                <span
+                  style={{
+                    width: 10,
+                    height: 10,
+                    borderRadius: 999,
+                    background: s.color,
+                    flexShrink: 0,
+                    boxShadow: `0 0 0 2px ${s.color}22`,
+                  }}
+                />
+                {s.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+
 export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -270,24 +403,32 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((l) => (
-              <Link
-                key={`${l.to}-${l.label}`}
-                to={l.to}
-                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
-                style={{ color: "#1A1A1A" }}
-                activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
-              >
-                {"hubColor" in l && l.hubColor && (
-                  <span
-                    className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
-                    style={{ backgroundColor: l.hubColor }}
-                  />
-                )}
-                <span className="group-hover:text-orange transition-colors">{l.label}</span>
-                <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-              </Link>
-            ))}
+            {navLinks.map((l, idx) => {
+              // Insert Soluções dropdown right after "Quem somos"
+              const items: React.ReactNode[] = [];
+              items.push(
+                <Link
+                  key={`${l.to}-${l.label}`}
+                  to={l.to}
+                  className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
+                  style={{ color: "#1A1A1A" }}
+                  activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
+                >
+                  {"hubColor" in l && l.hubColor && (
+                    <span
+                      className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
+                      style={{ backgroundColor: l.hubColor }}
+                    />
+                  )}
+                  <span className="group-hover:text-orange transition-colors">{l.label}</span>
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+                </Link>,
+              );
+              if (l.label === "Quem somos") {
+                items.push(<SolucoesDropdown key="solucoes-dropdown" />);
+              }
+              return <span key={`wrap-${idx}`} className="contents">{items}</span>;
+            })}
           </nav>
 
           <div className="flex items-center gap-2 pr-1 md:pr-0">
@@ -365,6 +506,55 @@ export function Header() {
                     key={`div-${i}`}
                     style={{ height: 1, background: "rgba(255,255,255,0.08)", margin: "4px 0" }}
                   />
+                );
+              }
+              if (item.kind === "group") {
+                return (
+                  <div
+                    key={`grp-${i}`}
+                    style={{
+                      padding: "16px 0 6px",
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontSize: ".72rem",
+                      letterSpacing: ".18em",
+                      textTransform: "uppercase",
+                      fontWeight: 600,
+                      color: "rgba(255,255,255,0.45)",
+                    }}
+                  >
+                    {item.label}
+                  </div>
+                );
+              }
+              if (item.kind === "solucao") {
+                return (
+                  <Link
+                    key={`sol-${item.slug}`}
+                    to="/solucoes/$solucao"
+                    params={{ solucao: item.slug }}
+                    onClick={closeMobile}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      padding: "11px 0 11px 12px",
+                      fontSize: "1rem",
+                      fontWeight: 500,
+                      color: "rgba(255,255,255,0.85)",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: 999,
+                        background: item.color,
+                        flexShrink: 0,
+                      }}
+                    />
+                    {item.label}
+                  </Link>
                 );
               }
               const isActive = pathname === item.to;
