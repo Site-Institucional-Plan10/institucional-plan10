@@ -11,20 +11,20 @@ export function SolutionsShowcase() {
     <section
       style={{
         background: "#F7F5F2",
-        padding: "72px 20px",
+        padding: "112px 20px",
         fontFamily: "'Inter', system-ui, sans-serif",
         color: "#1A1A1A",
       }}
       aria-labelledby="solucoes-plan10-heading"
     >
       <style>{`
-        @keyframes p10ssFadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-        .p10ss-wrap { max-width: 1100px; margin: 0 auto; }
+        .p10ss-wrap { max-width: 1180px; margin: 0 auto; }
+        .p10ss-head { max-width: 760px; }
         .p10ss-eyebrow {
           font-family: 'Barlow Condensed', sans-serif;
           font-weight: 600;
           font-size: .78rem;
-          letter-spacing: .18em;
+          letter-spacing: .22em;
           text-transform: uppercase;
           color: #C9A83C;
           margin: 0;
@@ -32,73 +32,85 @@ export function SolutionsShowcase() {
         .p10ss-h2 {
           font-family: 'Playfair Display', Georgia, serif;
           font-weight: 500;
-          font-size: clamp(1.6rem, 3vw, 2.35rem);
-          line-height: 1.2;
-          letter-spacing: -.005em;
+          font-size: clamp(2rem, 4.2vw, 3.25rem);
+          line-height: 1.12;
+          letter-spacing: -.01em;
           color: #1A1A1A;
-          margin: 10px 0 0;
-          max-width: 720px;
+          margin: 18px 0 0;
         }
         .p10ss-lede {
           font-family: 'Inter', system-ui, sans-serif;
-          font-size: 1.02rem;
-          line-height: 1.65;
-          color: #5A5A5A;
-          margin: 12px 0 0;
-          max-width: 680px;
+          font-size: 1.05rem;
+          line-height: 1.7;
+          color: #4A4A4A;
+          margin: 18px 0 0;
+          max-width: 620px;
         }
         .p10ss-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 16px;
-          margin-top: 36px;
+          gap: 20px;
+          margin-top: 56px;
         }
-        @media (min-width: 640px) { .p10ss-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+        @media (min-width: 720px) { .p10ss-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; } }
         @media (min-width: 1024px) { .p10ss-grid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
         .p10ss-card {
-          background: #fff;
-          border: 1px solid #E2E2E2;
-          border-radius: 12px;
-          padding: 22px;
+          background: #FFFFFF;
+          border: 1px solid #E8E4DD;
+          border-radius: 6px;
+          padding: 32px 28px 28px;
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          min-height: 200px;
+          gap: 14px;
+          min-height: 260px;
           text-decoration: none;
           color: #1A1A1A;
-          border-top: 3px solid var(--p10ss-vp, #C9A83C);
-          box-shadow: 0 2px 14px rgba(0,0,0,.06);
-          transition: transform .22s ease, box-shadow .22s ease;
+          position: relative;
+          transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
         }
-        .p10ss-card:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(0,0,0,.10); }
+        .p10ss-card::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 3px;
+          background: var(--p10ss-vp, #C9A83C);
+          border-radius: 6px 6px 0 0;
+        }
+        .p10ss-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 18px 40px -20px rgba(0,0,0,.18);
+          border-color: #D6D0C6;
+        }
         .p10ss-card-logo {
-          height: 40px;
+          height: 44px;
           width: auto;
-          max-width: 170px;
+          max-width: 190px;
           object-fit: contain;
           object-position: left center;
-          margin-bottom: 6px;
+          margin-bottom: 4px;
         }
         .p10ss-card h3 {
           font-family: 'Playfair Display', Georgia, serif;
           font-weight: 500;
-          font-size: 1.25rem;
+          font-size: 1.4rem;
           line-height: 1.22;
-          margin: 4px 0 0;
+          margin: 6px 0 0;
           color: #1A1A1A;
+          letter-spacing: -.005em;
         }
         .p10ss-card p {
           font-family: 'Inter', system-ui, sans-serif;
-          font-size: .93rem;
-          line-height: 1.55;
-          color: #5A5A5A;
+          font-size: .95rem;
+          line-height: 1.6;
+          color: #4A4A4A;
           margin: 0;
         }
         .p10ss-card .arrow {
           margin-top: auto;
+          padding-top: 10px;
           font-family: 'Barlow Condensed', sans-serif;
-          font-size: .74rem;
-          letter-spacing: .12em;
+          font-size: .78rem;
+          letter-spacing: .16em;
           text-transform: uppercase;
           font-weight: 700;
           color: var(--p10ss-vp, #C9A83C);
@@ -107,38 +119,51 @@ export function SolutionsShowcase() {
           font-family: 'Barlow Condensed', sans-serif;
           font-weight: 600;
           font-size: .72rem;
-          letter-spacing: .16em;
+          letter-spacing: .18em;
           text-transform: uppercase;
-          color: var(--p10ss-vp, #C9A83C);
+          color: #8A8478;
           margin: 0;
         }
+        .p10ss-footer {
+          margin-top: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
         .p10ss-cta {
-          margin-top: 32px;
           display: inline-flex;
           align-items: center;
-          gap: 8px;
-          padding: 12px 22px;
-          border-radius: 8px;
-          font-family: 'Inter', system-ui, sans-serif;
-          font-weight: 700;
-          font-size: .88rem;
+          gap: 10px;
+          padding: 6px 2px;
+          font-family: 'Barlow Condensed', sans-serif;
+          font-weight: 600;
+          font-size: .95rem;
+          letter-spacing: .18em;
+          text-transform: uppercase;
           background: transparent;
-          color: #1C4E80;
-          border: 1px solid #1C4E80;
+          color: #1A1A1A;
+          border: none;
+          border-bottom: 1px solid #1A1A1A;
           text-decoration: none;
-          transition: background .22s ease, color .22s ease;
+          transition: color .22s ease, border-color .22s ease, gap .22s ease;
         }
-        .p10ss-cta:hover { background: #1C4E80; color: #fff; }
+        .p10ss-cta:hover { color: #C9A83C; border-color: #C9A83C; gap: 14px; }
+        @media (max-width: 767px) {
+          .p10ss-card { min-height: 0; padding: 26px 22px 22px; }
+          .p10ss-card h3 { font-size: 1.25rem; }
+        }
       `}</style>
       <div className="p10ss-wrap">
-        <p className="p10ss-eyebrow">As Soluções Plan10</p>
-        <h2 id="solucoes-plan10-heading" className="p10ss-h2">
-          Cinco caminhos para organizar proteção, saúde e planejamento
-        </h2>
-        <p className="p10ss-lede">
-          Cada solução reúne caminhos e modalidades organizados com critério para pessoas, famílias
-          e empresas. Escolha o ponto de partida.
-        </p>
+        <div className="p10ss-head">
+          <p className="p10ss-eyebrow">As Soluções Plan10</p>
+          <h2 id="solucoes-plan10-heading" className="p10ss-h2">
+            Cinco caminhos para organizar proteção, saúde e planejamento
+          </h2>
+          <p className="p10ss-lede">
+            Cada solução reúne caminhos e modalidades organizados com critério para pessoas,
+            famílias e empresas. Escolha o ponto de partida.
+          </p>
+        </div>
 
         <div className="p10ss-grid">
           {solutions.map((s) => {
@@ -163,9 +188,11 @@ export function SolutionsShowcase() {
           })}
         </div>
 
-        <Link to="/solucoes" className="p10ss-cta">
-          Ver todas as Soluções →
-        </Link>
+        <div className="p10ss-footer">
+          <Link to="/solucoes" className="p10ss-cta">
+            Ver todas as soluções →
+          </Link>
+        </div>
       </div>
     </section>
   );
