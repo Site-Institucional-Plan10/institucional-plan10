@@ -287,24 +287,32 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((l) => (
-              <Link
-                key={`${l.to}-${l.label}`}
-                to={l.to}
-                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
-                style={{ color: "#1A1A1A" }}
-                activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
-              >
-                {"hubColor" in l && l.hubColor && (
-                  <span
-                    className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
-                    style={{ backgroundColor: l.hubColor }}
-                  />
-                )}
-                <span className="group-hover:text-orange transition-colors">{l.label}</span>
-                <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-              </Link>
-            ))}
+            {navLinks.map((l, idx) => {
+              // Insert Soluções dropdown right after "Quem somos"
+              const items: React.ReactNode[] = [];
+              items.push(
+                <Link
+                  key={`${l.to}-${l.label}`}
+                  to={l.to}
+                  className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
+                  style={{ color: "#1A1A1A" }}
+                  activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
+                >
+                  {"hubColor" in l && l.hubColor && (
+                    <span
+                      className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
+                      style={{ backgroundColor: l.hubColor }}
+                    />
+                  )}
+                  <span className="group-hover:text-orange transition-colors">{l.label}</span>
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+                </Link>,
+              );
+              if (l.label === "Quem somos") {
+                items.push(<SolucoesDropdown key="solucoes-dropdown" />);
+              }
+              return <span key={`wrap-${idx}`} className="contents">{items}</span>;
+            })}
           </nav>
 
           <div className="flex items-center gap-2 pr-1 md:pr-0">
