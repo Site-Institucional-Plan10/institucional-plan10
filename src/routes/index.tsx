@@ -42,6 +42,7 @@ function HomePage() {
   return (
     <>
       <HeroBanner />
+      <SolutionsShowcase />
       <VerticalCards />
       <ProofNumbers />
       <WhyPlan10 />
