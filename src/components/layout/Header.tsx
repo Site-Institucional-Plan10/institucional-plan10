@@ -238,6 +238,122 @@ function SearchBox({ onClose }: { onClose: () => void }) {
   );
 }
 
+function SolucoesDropdown() {
+  const [open, setOpen] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const cancelClose = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+  const scheduleClose = () => {
+    cancelClose();
+    timerRef.current = setTimeout(() => setOpen(false), 140);
+  };
+
+  useEffect(() => () => cancelClose(), []);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => { cancelClose(); setOpen(true); }}
+      onMouseLeave={scheduleClose}
+    >
+      <Link
+        to="/solucoes"
+        className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1 whitespace-nowrap"
+        style={{ color: "#1A1A1A" }}
+        activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
+        onFocus={() => setOpen(true)}
+      >
+        <span className="group-hover:text-orange transition-colors">Soluções</span>
+        <ChevronDown size={14} className="group-hover:text-orange transition-colors" />
+        <span className="absolute bottom-0 left-3 right-6 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+      </Link>
+      {open && (
+        <div
+          role="menu"
+          className="absolute left-0 top-full pt-2"
+          style={{ zIndex: 60 }}
+        >
+          <div
+            style={{
+              minWidth: 280,
+              background: "#FFFFFF",
+              border: "1px solid #E8E8E8",
+              borderRadius: 14,
+              boxShadow: "0 16px 48px rgba(0,0,0,0.14)",
+              padding: 8,
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+            }}
+          >
+            <Link
+              to="/solucoes"
+              onClick={() => setOpen(false)}
+              style={{
+                display: "block",
+                padding: "10px 12px",
+                fontFamily: "'Barlow Condensed', sans-serif",
+                fontSize: ".72rem",
+                letterSpacing: ".16em",
+                textTransform: "uppercase",
+                fontWeight: 700,
+                color: "#5A5A5A",
+                textDecoration: "none",
+                borderBottom: "1px solid #F0F0F0",
+                marginBottom: 4,
+              }}
+            >
+              Ver todas as Soluções
+            </Link>
+            {solutionsMenu.map((s) => (
+              <Link
+                key={s.slug}
+                to="/solucoes/$solucao"
+                params={{ solucao: s.slug }}
+                onClick={() => setOpen(false)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  padding: "10px 12px",
+                  borderRadius: 8,
+                  color: "#1A1A1A",
+                  fontFamily: "'Inter', system-ui, sans-serif",
+                  fontSize: ".92rem",
+                  fontWeight: 500,
+                  textDecoration: "none",
+                  transition: "background 150ms",
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "#F7F5F2"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+              >
+                <span
+                  style={{
+                    width: 10,
+                    height: 10,
+                    borderRadius: 999,
+                    background: s.color,
+                    flexShrink: 0,
+                    boxShadow: `0 0 0 2px ${s.color}22`,
+                  }}
+                />
+                {s.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+
 export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
