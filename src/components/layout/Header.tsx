@@ -392,6 +392,55 @@ export function Header() {
                   />
                 );
               }
+              if (item.kind === "group") {
+                return (
+                  <div
+                    key={`grp-${i}`}
+                    style={{
+                      padding: "16px 0 6px",
+                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontSize: ".72rem",
+                      letterSpacing: ".18em",
+                      textTransform: "uppercase",
+                      fontWeight: 600,
+                      color: "rgba(255,255,255,0.45)",
+                    }}
+                  >
+                    {item.label}
+                  </div>
+                );
+              }
+              if (item.kind === "solucao") {
+                return (
+                  <Link
+                    key={`sol-${item.slug}`}
+                    to="/solucoes/$solucao"
+                    params={{ solucao: item.slug }}
+                    onClick={closeMobile}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      padding: "11px 0 11px 12px",
+                      fontSize: "1rem",
+                      fontWeight: 500,
+                      color: "rgba(255,255,255,0.85)",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: 999,
+                        background: item.color,
+                        flexShrink: 0,
+                      }}
+                    />
+                    {item.label}
+                  </Link>
+                );
+              }
               const isActive = pathname === item.to;
               return (
                 <Link
