@@ -162,52 +162,17 @@ export function VerticalPageTemplate({
             </div>
 
           ) : (
-            <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {/* Produtos a inserir conforme planilha do cliente */}
-              {[1, 2, 3, 4, 5, 6].map((n) => {
-                const isMostWanted = n === 1;
-                return (
-                  <div key={n} className="relative rounded-2xl border border-neutral-200 bg-white p-5">
-                    {isMostWanted && (
-                      <span className="absolute top-3 right-3 rounded-full bg-orange px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
-                        Mais Procurado
-                      </span>
-                    )}
-                    <div
-                      className="mb-4 w-full rounded-t-xl"
-                      style={{
-                        aspectRatio: "16 / 9",
-                        backgroundColor: `${vertical.hubColor}26`,
-                        borderRadius: "12px",
-                      }}
-                    />
-                    <div
-                      className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase mb-3"
-                      style={{ backgroundColor: `${vertical.hubColor}1A`, color: vertical.hubColor }}
-                    >
-                      {tab === "pj" && toggleEnabled ? "PJ" : vertical.name}
-                    </div>
-                    <h3 className="font-semibold text-lg mb-2">Produto {n}</h3>
-                    <p className="text-sm text-neutral-700 mb-5">Descrição breve do produto. Conteúdo placeholder.</p>
-                    {enableDirectContracting ? (
-                      <Button
-                        variant="hub"
-                        hubColor={vertical.hubColor}
-                        size="sm"
-                        onClick={() => setPopup({ url: "https://example.com", partner: `Parceiro ${vertical.name}` })}
-                      >
-                        Contratar <ArrowRight size={14} />
-                      </Button>
-                    ) : (
-                      <a href="#contato">
-                        <Button variant="hub" hubColor={vertical.hubColor} size="sm">
-                          Solicitar proposta <ArrowRight size={14} />
-                        </Button>
-                      </a>
-                    )}
-                  </div>
-                );
-              })}
+            <div className="rounded-2xl border border-neutral-200 bg-white p-8 text-center max-w-2xl mx-auto">
+              <p className="text-neutral-700 mb-6 leading-[1.7]">
+                As opções desta área são organizadas caso a caso, conforme o seu
+                perfil e o seu momento. Um consultor apresenta as alternativas
+                adequadas e acompanha cada etapa.
+              </p>
+              <a href="#contato">
+                <Button variant="hub" hubColor={vertical.hubColor} size="sm">
+                  Falar com um consultor <ArrowRight size={14} />
+                </Button>
+              </a>
             </div>
           )}
 

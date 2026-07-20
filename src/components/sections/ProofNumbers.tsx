@@ -15,7 +15,7 @@ const items: Item[] = [
   { Icon: Calendar, value: "2016", label: "Fundação", target: 2016 },
   { Icon: Users, value: "5K+", label: "Clientes", target: 5, suffix: "K+" },
   { Icon: Handshake, value: "50+", label: "Parceiros", target: 50, suffix: "+" },
-  { Icon: Package, value: "+40", label: "Produtos", target: 40, prefix: "+" },
+  { Icon: Package, value: "+390", label: "Soluções", target: 390, prefix: "+" },
   { Icon: Clock, value: "24/7", label: "Atendimento" },
 ];
 

@@ -6,7 +6,6 @@ import { VerticalCards } from "@/components/sections/VerticalCards";
 import { WhyPlan10 } from "@/components/sections/WhyPlan10";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { OnlineContracting } from "@/components/sections/OnlineContracting";
 import { PartnersLogos } from "@/components/sections/PartnersLogos";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -48,7 +47,6 @@ function HomePage() {
       <WhyPlan10 />
       <HowItWorks />
       <Testimonials />
-      <OnlineContracting />
       <PartnersLogos />
       <div id="contato">
         <ContactForm source="home" subtitle="Em até 24h úteis um consultor entra em contato para entender seu cenário." />
