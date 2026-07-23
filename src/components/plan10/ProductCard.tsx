@@ -1,5 +1,5 @@
 import type { Product } from "@/data/solutions";
-import { isRealUrl, whatsappUrl } from "@/lib/plan10";
+import { whatsappUrl } from "@/lib/plan10";
 
 interface Props {
   product: Product;
@@ -15,7 +15,6 @@ const WA = (
 );
 
 export function ProductCard({ product, nucleoNome, onPrimary }: Props) {
-  const hasLink = isRealUrl(product.linkPorto);
   const waHref = whatsappUrl(
     `Olá! Tenho interesse em ${product.nome} (${nucleoNome}). Podemos conversar?`,
   );
@@ -57,16 +56,13 @@ export function ProductCard({ product, nucleoNome, onPrimary }: Props) {
       )}
 
       <div className="prod-ctas">
-        {hasLink ? (
-          <a href={product.linkPorto} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            Contratar online
-          </a>
-        ) : (
-          onPrimary && (
-            <button type="button" onClick={onPrimary} className="btn btn-primary">
-              {product.ctaPrimario || "Falar com um consultor"}
-            </button>
-          )
+        {/* Toda contratação passa pela Plan10, inclusive a dos produtos que a
+            seguradora deixa contratar online (decisão do cliente, 21/07/2026).
+            O link direto fica guardado no dado, mas não vira botão. */}
+        {onPrimary && (
+          <button type="button" onClick={onPrimary} className="btn btn-primary">
+            {product.ctaPrimario || "Falar com um consultor"}
+          </button>
         )}
         <a href={waHref} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
           {WA} {product.ctaSecundario || "WhatsApp"}
