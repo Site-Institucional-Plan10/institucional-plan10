@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { solutions } from "@/data/solutions";
-import { paletteFor, logoFor } from "@/components/plan10/PageTheme";
+import { paletteFor } from "@/components/plan10/PageTheme";
 
 /**
  * Home section presenting the 5 Plan10 Soluções, editorial DS v3.1 style,
@@ -168,7 +168,6 @@ export function SolutionsShowcase() {
         <div className="p10ss-grid">
           {solutions.map((s) => {
             const p = paletteFor(s.slug);
-            const logo = logoFor(s.slug);
             const vars = { ["--p10ss-vp" as string]: p.vp } as React.CSSProperties;
             return (
               <Link
@@ -178,8 +177,7 @@ export function SolutionsShowcase() {
                 className="p10ss-card"
                 style={vars}
               >
-                {logo && <img src={logo} alt={`Logo ${s.nome}`} className="p10ss-card-logo" />}
-                <p className="p10ss-eye-solucao">Solução</p>
+                <p className="p10ss-eye-solucao" style={{ color: p.vp }}>Solução</p>
                 <h3>{s.nome}</h3>
                 <p>{s.subHero}</p>
                 <span className="arrow">Conhecer →</span>
