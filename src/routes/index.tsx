@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroBanner } from "@/components/sections/HeroBanner";
 import { SolutionsShowcase } from "@/components/sections/SolutionsShowcase";
-import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { VerticalCards } from "@/components/sections/VerticalCards";
 import { WhyPlan10 } from "@/components/sections/WhyPlan10";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { PartnersLogos } from "@/components/sections/PartnersLogos";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -43,10 +41,8 @@ function HomePage() {
       <HeroBanner />
       <SolutionsShowcase />
       <VerticalCards />
-      <ProofNumbers />
       <WhyPlan10 />
       <HowItWorks />
-      <Testimonials />
       <PartnersLogos />
       <div id="contato">
         <ContactForm source="home" subtitle="Em até 24h úteis um consultor entra em contato para entender seu cenário." />

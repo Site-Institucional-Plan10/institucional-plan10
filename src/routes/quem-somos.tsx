@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, Shield, Heart, Building2, Landmark, Clock } from "lucide-react";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { canonical } from "@/lib/seo";
@@ -265,6 +266,9 @@ function QuemSomos() {
           </div>
         </div>
       </section>
+
+      {/* Depoimentos, movidos da home para Quem Somos (pedido do cliente, 12/08/2026) */}
+      <Testimonials />
 
       {/* Section 4, Premium closing CTA */}
       <section className="py-16" style={{ background: "#1A1A1A" }}>

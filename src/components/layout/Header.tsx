@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import { Menu, MessageCircle, Search, X, ChevronDown } from "lucide-react";
+import { Menu, MessageCircle, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
@@ -8,25 +8,27 @@ import { getWhatsAppUrl } from "@/lib/utils";
 import { solutions } from "@/data/solutions";
 import { paletteFor } from "@/components/plan10/PageTheme";
 
-import { verticals } from "@/data/verticals";
-
-const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/quem-somos", label: "Quem somos" },
-  { to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
-  { to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
-  { to: "/consorcios", label: "Consórcios", hubColor: "#9857F2" },
-  { to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
-  { to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
-  { to: "/blog", label: "Blog" },
-] as const;
-
-// Solutions submenu items (DS v3.1 catalog)
-const solutionsMenu = solutions.map((s) => ({
+// Rótulos curtos das soluções para o header (o nome completo é longo demais)
+const SHORT_SOL: Record<string, string> = {
+  saude: "Saúde", protecao: "Proteção", financeiras: "Financeiras",
+  crescimento: "Crescimento", assistencia: "Assistência",
+};
+const solutionNav = solutions.map((s) => ({
   slug: s.slug,
-  label: s.nome,
+  label: SHORT_SOL[s.slug] ?? s.nome,
   color: paletteFor(s.slug).vp,
 }));
+
+// Nav desktop: as soluções entram diretas no menu, sem dropdown (pedido do cliente, 12/08/2026)
+const navLinks: Array<
+  | { to: "/" | "/quem-somos" | "/blog"; label: string }
+  | { solucao: string; label: string; color: string }
+> = [
+  { to: "/", label: "Home" },
+  { to: "/quem-somos", label: "Quem somos" },
+  ...solutionNav.map((s) => ({ solucao: s.slug, label: s.label, color: s.color })),
+  { to: "/blog", label: "Blog" },
+];
 
 // Mobile menu structure with dividers
 type MobileItem =
@@ -39,17 +41,9 @@ const mobileItems: MobileItem[] = [
   { kind: "link", to: "/", label: "Home" },
   { kind: "link", to: "/quem-somos", label: "Quem somos" },
   { kind: "divider" },
-  { kind: "group", label: "Soluções" },
-  { kind: "link", to: "/solucoes", label: "Ver todas as Soluções" },
-  ...solutionsMenu.map(
+  ...solutionNav.map(
     (s): MobileItem => ({ kind: "solucao", slug: s.slug, label: s.label, color: s.color }),
   ),
-  { kind: "divider" },
-  { kind: "link", to: "/seguros", label: "Seguros", hubColor: "#3D8BF2" },
-  { kind: "link", to: "/saude", label: "Saúde", hubColor: "#24BF5B" },
-  { kind: "link", to: "/consorcios", label: "Consórcios", hubColor: "#9857F2" },
-  { kind: "link", to: "/financas", label: "Finanças", hubColor: "#C5D0D9" },
-  { kind: "link", to: "/servicos-24h", label: "Serviços", hubColor: "#27DEF2" },
   { kind: "divider" },
   { kind: "link", to: "/blog", label: "Blog" },
   { kind: "link", to: "/fale-conosco", label: "Fale conosco" },
@@ -238,119 +232,6 @@ function SearchBox({ onClose }: { onClose: () => void }) {
   );
 }
 
-function SolucoesDropdown() {
-  const [open, setOpen] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const cancelClose = () => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-      timerRef.current = null;
-    }
-  };
-  const scheduleClose = () => {
-    cancelClose();
-    timerRef.current = setTimeout(() => setOpen(false), 140);
-  };
-
-  useEffect(() => () => cancelClose(), []);
-
-  return (
-    <div
-      className="relative"
-      onMouseEnter={() => { cancelClose(); setOpen(true); }}
-      onMouseLeave={scheduleClose}
-    >
-      <Link
-        to="/solucoes"
-        className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1 whitespace-nowrap"
-        style={{ color: "#1A1A1A" }}
-        activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
-        onFocus={() => setOpen(true)}
-      >
-        <span className="group-hover:text-orange transition-colors">Soluções</span>
-        <ChevronDown size={14} className="group-hover:text-orange transition-colors" />
-        <span className="absolute bottom-0 left-3 right-6 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-      </Link>
-      {open && (
-        <div
-          role="menu"
-          className="absolute left-0 top-full pt-2"
-          style={{ zIndex: 60 }}
-        >
-          <div
-            style={{
-              minWidth: 280,
-              background: "#FFFFFF",
-              border: "1px solid #E8E8E8",
-              borderRadius: 14,
-              boxShadow: "0 16px 48px rgba(0,0,0,0.14)",
-              padding: 8,
-              display: "flex",
-              flexDirection: "column",
-              gap: 2,
-            }}
-          >
-            <Link
-              to="/solucoes"
-              onClick={() => setOpen(false)}
-              style={{
-                display: "block",
-                padding: "10px 12px",
-                fontFamily: "'Barlow Condensed', sans-serif",
-                fontSize: ".72rem",
-                letterSpacing: ".16em",
-                textTransform: "uppercase",
-                fontWeight: 700,
-                color: "#5A5A5A",
-                textDecoration: "none",
-                borderBottom: "1px solid #F0F0F0",
-                marginBottom: 4,
-              }}
-            >
-              Ver todas as Soluções
-            </Link>
-            {solutionsMenu.map((s) => (
-              <Link
-                key={s.slug}
-                to="/solucoes/$solucao"
-                params={{ solucao: s.slug }}
-                onClick={() => setOpen(false)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  padding: "10px 12px",
-                  borderRadius: 8,
-                  color: "#1A1A1A",
-                  fontFamily: "'Inter', system-ui, sans-serif",
-                  fontSize: ".92rem",
-                  fontWeight: 500,
-                  textDecoration: "none",
-                  transition: "background 150ms",
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "#F7F5F2"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
-              >
-                <span
-                  style={{
-                    width: 10,
-                    height: 10,
-                    borderRadius: 999,
-                    background: s.color,
-                    flexShrink: 0,
-                    boxShadow: `0 0 0 2px ${s.color}22`,
-                  }}
-                />
-                {s.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
 
 
 
@@ -403,32 +284,36 @@ export function Header() {
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((l, idx) => {
-              // Insert Soluções dropdown right after "Quem somos"
-              const items: React.ReactNode[] = [];
-              items.push(
+            {navLinks.map((l) =>
+              "solucao" in l ? (
                 <Link
-                  key={`${l.to}-${l.label}`}
+                  key={l.solucao}
+                  to="/solucoes/$solucao"
+                  params={{ solucao: l.solucao }}
+                  className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
+                  style={{ color: "#1A1A1A" }}
+                  activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
+                >
+                  <span
+                    className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
+                    style={{ backgroundColor: l.color }}
+                  />
+                  <span className="group-hover:text-orange transition-colors">{l.label}</span>
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+                </Link>
+              ) : (
+                <Link
+                  key={l.to}
                   to={l.to}
                   className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
                   style={{ color: "#1A1A1A" }}
                   activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
                 >
-                  {"hubColor" in l && l.hubColor && (
-                    <span
-                      className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
-                      style={{ backgroundColor: l.hubColor }}
-                    />
-                  )}
                   <span className="group-hover:text-orange transition-colors">{l.label}</span>
                   <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-                </Link>,
-              );
-              if (l.label === "Quem somos") {
-                items.push(<SolucoesDropdown key="solucoes-dropdown" />);
-              }
-              return <span key={`wrap-${idx}`} className="contents">{items}</span>;
-            })}
+                </Link>
+              ),
+            )}
           </nav>
 
           <div className="flex items-center gap-2 pr-1 md:pr-0">
