@@ -43,7 +43,7 @@ function SolucaoPage() {
       </nav>
 
       {/* Imagem editorial da solução, a inserir depois da construção */}
-      <section className="sec" style={{ paddingBottom: 0 }}>
+      <section className="sec">
         <div className="wrap">
           <ImageSlot ratio="21 / 9" label={`Hero de ${solucao.nome}`} hint={ART_SOL[solucao.slug]} />
         </div>

@@ -22,18 +22,16 @@ export function ImageSlot({ ratio = "16 / 9", label, hint, tone = "light" }: Pro
       <style>{`
         .p10-slot {
           width: 100%;
-          border: 1px solid var(--c2, #E6E1D6);
+          border: 1px solid #D8D2C6;
           border-radius: 5px;
-          background:
-            radial-gradient(120% 120% at 15% 0%, color-mix(in srgb, var(--vp, #1C4E80) 6%, transparent), transparent 55%),
-            var(--vs, #F4F1EB);
+          background: #EFEBE3;
           display: flex; align-items: center; justify-content: center;
           text-align: center; padding: 28px;
           overflow: hidden;
         }
         .p10-slot-d {
           border-color: rgba(255,255,255,.16);
-          background: rgba(255,255,255,.03);
+          background: rgba(255,255,255,.04);
         }
         .p10-slot-in { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 42ch; }
         .p10-slot-orn { width: 34px; height: 1px; background: var(--gold, #C9A83C); position: relative; margin-bottom: 4px; }

@@ -80,8 +80,8 @@ export function ProofNumbers({ compact = false }: { compact?: boolean }) {
       data-section="numeros"
       className="numbers-section relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)",
-        padding: compact ? "40px 0" : "80px 0",
+        background: "linear-gradient(160deg, #1C4E80 0%, #143A61 100%)",
+        padding: compact ? "44px 0" : "88px 0",
       }}
     >
       <style>{`

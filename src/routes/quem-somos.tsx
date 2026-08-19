@@ -108,8 +108,8 @@ function QuemSomos() {
 
       {/* Section 2, Institutional text + proof numbers */}
       <section className="section-y">
-        <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
+        <div className="container-x">
+          <div className="max-w-3xl">
             <p className="text-lg text-neutral-700 leading-relaxed">
               A Plan10 é uma consultoria multimodal especializada em soluções integradas de seguros, proteção pessoal, familiar, patrimonial e empresarial, consórcios e planos de saúde e odontológicos.
             </p>
@@ -128,7 +128,7 @@ function QuemSomos() {
               </p>
             </div>
           </div>
-          <div className="rounded-3xl overflow-hidden">
+          <div className="mt-12 rounded-2xl overflow-hidden">
             <ProofNumbers compact />
           </div>
         </div>

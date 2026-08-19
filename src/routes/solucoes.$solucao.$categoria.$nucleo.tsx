@@ -99,7 +99,7 @@ function NucleoPage() {
       </section>
 
       {/* Imagem de contexto do núcleo, a inserir depois da construção */}
-      <section className="sec" style={{ paddingTop: 0 }}>
+      <section className="sec">
         <div className="wrap">
           <ImageSlot ratio="16 / 9" label={`Contexto de ${n.nome}`} hint={`Situação de uso de ${n.nome.toLowerCase()}. Tom premium, coerente com a solução ${s.nome}.`} />
         </div>
