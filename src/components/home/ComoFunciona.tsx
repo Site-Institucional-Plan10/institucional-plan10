@@ -38,12 +38,11 @@ export function ComoFunciona() {
         }
         @media (min-width: 640px) { .cf-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1024px) { .cf-grid { grid-template-columns: repeat(5, 1fr); } }
+        .cf-step { border-top: 1px solid #E2DDD3; padding-top: 18px; }
         .cf-step .num {
-          width: 38px; height: 38px; border-radius: 50%;
-          background: #1C4E80; color: #fff;
-          font-family: 'Playfair Display', Georgia, serif; font-weight: 600;
-          display: flex; align-items: center; justify-content: center;
-          font-size: 1.05rem; margin-bottom: 16px;
+          font-family: 'Playfair Display', Georgia, serif; font-weight: 500;
+          font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1;
+          color: #C9A83C; margin-bottom: 14px; display: block;
         }
         .cf-step h3 {
           font-family: 'Playfair Display', Georgia, serif; font-weight: 500;
@@ -59,7 +58,7 @@ export function ComoFunciona() {
         <div className="cf-grid">
           {passos.map((p, i) => (
             <div key={p.t} className="cf-step">
-              <div className="num">{i + 1}</div>
+              <span className="num">{String(i + 1).padStart(2, "0")}</span>
               <h3>{p.t}</h3>
               <p>{p.d}</p>
             </div>

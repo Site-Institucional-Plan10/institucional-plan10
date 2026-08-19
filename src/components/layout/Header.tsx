@@ -283,7 +283,7 @@ export function Header() {
             <HeaderLogo size={48} />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden xl:flex items-center gap-1">
             {navLinks.map((l) =>
               "solucao" in l ? (
                 <Link
@@ -331,7 +331,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
+              className="xl:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
               aria-label="Abrir menu"
             >
               <Menu size={24} />
@@ -344,7 +344,7 @@ export function Header() {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-50 lg:hidden flex flex-col"
+          className="fixed inset-0 z-50 xl:hidden flex flex-col"
           style={{
             background: "#111111",
             animation: `${mobileClosing ? "slideOutRight" : "slideInRight"} 280ms cubic-bezier(0.4,0,0.2,1) forwards`,

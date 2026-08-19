@@ -11,23 +11,14 @@ export function PremiumHero() {
         .ph-hero {
           position: relative;
           overflow: hidden;
-          background: linear-gradient(147deg, #0C2340 0%, #0F2E52 48%, #1C4E80 100%);
+          background: linear-gradient(165deg, #0C2340 0%, #143A61 100%);
           color: #fff;
           font-family: 'Inter', system-ui, sans-serif;
-        }
-        .ph-hero::after {
-          content: '';
-          position: absolute;
-          right: -140px; top: -120px;
-          width: 520px; height: 520px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(201,168,60,.20), transparent 62%);
-          pointer-events: none;
         }
         .ph-in {
           position: relative; z-index: 1;
           max-width: 1180px; margin: 0 auto;
-          padding: 96px 20px 104px;
+          padding: 132px 20px 108px;
         }
         .ph-gold { width: 56px; height: 3px; background: #C9A83C; margin-bottom: 22px; }
         .ph-eyebrow {
@@ -59,17 +50,7 @@ export function PremiumHero() {
         .ph-btn-p:hover { background: #C94D17; }
         .ph-btn-o { border: 1.5px solid rgba(255,255,255,.42); color: #fff; }
         .ph-btn-o:hover { border-color: rgba(255,255,255,.8); }
-        .ph-4c {
-          display: flex; flex-wrap: wrap; gap: 26px;
-          margin-top: 54px; padding-top: 26px;
-          border-top: 1px solid rgba(255,255,255,.14);
-        }
-        .ph-4c span {
-          font-family: 'Barlow Condensed', sans-serif;
-          letter-spacing: .16em; text-transform: uppercase;
-          font-size: .82rem; font-weight: 700; color: #E8CA6A;
-        }
-        @media (max-width: 720px) { .ph-in { padding: 64px 20px 72px; } }
+        @media (max-width: 720px) { .ph-in { padding: 108px 20px 76px; } }
       `}</style>
       <div className="ph-in">
         <div className="ph-gold" />
@@ -82,12 +63,6 @@ export function PremiumHero() {
         <div className="ph-ctas">
           <a href="#contato" className="ph-btn ph-btn-p">Falar com um consultor</a>
           <Link to="/solucoes" className="ph-btn ph-btn-o">Conhecer as soluções</Link>
-        </div>
-        <div className="ph-4c">
-          <span>Clareza</span>
-          <span>Critério</span>
-          <span>Cuidado</span>
-          <span>Continuidade</span>
         </div>
       </div>
     </section>

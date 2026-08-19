@@ -57,29 +57,19 @@ export function SolutionsShowcase() {
         .p10ss-card {
           background: #FFFFFF;
           border: 1px solid #E8E4DD;
-          border-radius: 6px;
-          padding: 32px 28px 28px;
+          border-radius: 5px;
+          padding: 34px 30px 30px;
           display: flex;
           flex-direction: column;
-          gap: 14px;
-          min-height: 260px;
+          gap: 12px;
+          min-height: 240px;
           text-decoration: none;
           color: #1A1A1A;
           position: relative;
-          transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
-        }
-        .p10ss-card::before {
-          content: '';
-          position: absolute;
-          top: 0; left: 0; right: 0;
-          height: 3px;
-          background: var(--p10ss-vp, #C9A83C);
-          border-radius: 6px 6px 0 0;
+          transition: border-color .22s ease;
         }
         .p10ss-card:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 18px 40px -20px rgba(0,0,0,.18);
-          border-color: #D6D0C6;
+          border-color: var(--p10ss-vp, #C9A83C);
         }
         .p10ss-card-logo {
           height: 44px;
@@ -177,7 +167,6 @@ export function SolutionsShowcase() {
                 className="p10ss-card"
                 style={vars}
               >
-                <p className="p10ss-eye-solucao" style={{ color: p.vp }}>Solução</p>
                 <h3>{s.nome}</h3>
                 <p>{s.subHero}</p>
                 <span className="arrow">Conhecer →</span>

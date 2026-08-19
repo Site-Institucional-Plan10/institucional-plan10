@@ -19,22 +19,14 @@ export const Route = createFileRoute("/solucoes/")({
 function SolucoesIndex() {
   return (
     <PageTheme palette={HUB_PALETTE}>
-      {/* Top bar institucional */}
-      <div className="p10-topbar">
-        <span className="brand">
-          PLAN<span className="ten">10</span>
-        </span>
-        <span className="trilho">Consultoria · Aconselhamento · Proteção</span>
-      </div>
-
-      {/* Hero */}
+      {/* Hero, fala premium oficial (arquivo 05) */}
       <header className="p10-hero">
         <div className="p10-hero-inner">
           <p className="eyebrow">As Soluções Plan10</p>
-          <h1>Cinco caminhos para organizar proteção, saúde e planejamento com critério</h1>
+          <h1>Soluções Plan10 para cada fase da vida e dos negócios.</h1>
           <p className="lede">
-            Cada solução reúne caminhos e opções cuidadosamente organizados para atender o momento
-            de pessoas, famílias e empresas.
+            Saúde, proteção, finanças, crescimento e assistência conectados em uma única
+            jornada consultiva, para pessoas, famílias e empresas.
           </p>
         </div>
       </header>

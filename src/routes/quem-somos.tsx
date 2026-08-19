@@ -26,35 +26,35 @@ const valores = ["Proximidade", "Clareza", "Cuidado", "Pluralidade", "Constânci
 const teamCells = [
   {
     Icon: Shield,
-    color: "#3D8BF2",
+    color: "#1C4E80",
     area: "Célula de Seguros",
     description:
       "Consultores especializados em proteção patrimonial, seguros de vida, automóvel, residencial e empresarial. Atuação independente com acesso às principais seguradoras do país.",
   },
   {
     Icon: Heart,
-    color: "#24BF5B",
+    color: "#1C4E80",
     area: "Célula de Saúde",
     description:
       "Especialistas em planos de saúde e odontológicos para pessoa física e jurídica. Análise comparativa entre operadoras com foco no custo-benefício ideal para cada perfil.",
   },
   {
     Icon: Building2,
-    color: "#9857F2",
+    color: "#1C4E80",
     area: "Célula de Consórcio",
     description:
       "Consultores dedicados ao planejamento de consórcio imobiliário, de veículos e serviços. Suporte estratégico na escolha do grupo, análise de lance e acompanhamento até a contemplação.",
   },
   {
     Icon: Landmark,
-    color: "#1A4FA0",
+    color: "#1C4E80",
     area: "Célula de Finanças",
     description:
       "Equipe de inteligência financeira focada em crédito, investimentos, previdência e garantias. Análise independente das melhores condições disponíveis no mercado para pessoa física e jurídica.",
   },
   {
     Icon: Clock,
-    color: "#27DEF2",
+    color: "#1C4E80",
     area: "Célula de Serviços",
     description:
       "Equipe operacional de assistência 24 horas para veículos e residências. Profissionais qualificados e credenciados com tempo médio de atendimento de 30 a 50 minutos.",
@@ -67,7 +67,7 @@ function QuemSomos() {
       {/* Section 1, Refined hero */}
       <section
         className="pt-32 pb-20"
-        style={{ background: "linear-gradient(135deg, #1A4FA0 0%, #0D2B6E 100%)" }}
+        style={{ background: "linear-gradient(135deg, #1C4E80 0%, #143A61 100%)" }}
       >
         <div className="container-x text-white">
           <p
@@ -119,8 +119,8 @@ function QuemSomos() {
             <div
               className="mt-8 rounded-2xl p-6"
               style={{
-                background: "rgba(255, 107, 0, 0.08)",
-                borderLeft: "4px solid #FF6B00",
+                background: "rgba(224, 90, 32, 0.08)",
+                borderLeft: "4px solid #E05A20",
               }}
             >
               <p className="font-h3" style={{ color: "#1A1A1A" }}>
@@ -156,8 +156,8 @@ function QuemSomos() {
               key={c.label}
               style={{
                 background: "#FFFFFF",
-                borderTop: "3px solid #FF6B00",
-                borderRadius: "0 0 12px 12px",
+                border: "1px solid #E6E1D6",
+                borderRadius: "5px",
                 padding: "28px 24px",
                 boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
               }}
@@ -165,7 +165,7 @@ function QuemSomos() {
               <p
                 className="uppercase mb-3"
                 style={{
-                  color: "#FF6B00",
+                  color: "#E05A20",
                   letterSpacing: "0.12em",
                   fontSize: "0.72rem",
                   fontWeight: 700,
@@ -180,8 +180,8 @@ function QuemSomos() {
                     <span
                       key={p}
                       style={{
-                        background: "rgba(255, 107, 0, 0.12)",
-                        color: "#B84A00",
+                        background: "rgba(224, 90, 32, 0.12)",
+                        color: "#C94D17",
                         padding: "4px 12px",
                         borderRadius: 999,
                         fontSize: "0.75rem",
@@ -210,7 +210,7 @@ function QuemSomos() {
             <p
               className="uppercase mb-3"
               style={{
-                color: "#FF6B00",
+                color: "#E05A20",
                 letterSpacing: "0.14em",
                 fontSize: "0.78rem",
                 fontWeight: 700,
@@ -234,10 +234,9 @@ function QuemSomos() {
                 key={area}
                 style={{
                   background: "#FFFFFF",
-                  borderRadius: 16,
+                  borderRadius: 5,
                   padding: "28px 24px",
-                  borderTop: `3px solid ${color}`,
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+                  border: "1px solid #E6E1D6",
                   display: "flex",
                   flexDirection: "column",
                   gap: 12,
@@ -246,7 +245,7 @@ function QuemSomos() {
                 <Icon size={40} color={color} strokeWidth={1.5} />
                 <h3
                   style={{
-                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontFamily: "Inter, system-ui, sans-serif",
                     fontWeight: 600,
                     color: "#1A1A1A",
                     fontSize: "1rem",
@@ -256,7 +255,7 @@ function QuemSomos() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "Plus Jakarta Sans, sans-serif",
+                    fontFamily: "Inter, system-ui, sans-serif",
                     fontWeight: 400,
                     color: "#666666",
                     fontSize: "0.875rem",

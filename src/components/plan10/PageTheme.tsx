@@ -78,19 +78,19 @@ const CSS = `
 .plan10-scope * { box-sizing: border-box; }
 
 /* Container */
-.plan10-scope .wrap { max-width: 1100px; margin: 0 auto; }
+.plan10-scope .wrap { max-width: 1180px; margin: 0 auto; }
 
-/* Hero */
+/* Hero, gradiente de duas paradas (sem 3 stops nem brilho) */
 .plan10-scope .p10-hero {
-  background: linear-gradient(150deg, var(--hero) 0%, var(--card) 55%, var(--vp) 100%);
+  background: linear-gradient(162deg, var(--hero) 0%, var(--card) 100%);
   color: #fff;
-  padding: 72px 20px 56px;
+  padding: 88px 20px 64px;
   overflow: visible;
 }
 @media (min-width: 768px) {
-  .plan10-scope .p10-hero { padding: 96px 40px 72px; }
+  .plan10-scope .p10-hero { padding: 116px 40px 88px; }
 }
-.plan10-scope .p10-hero-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.plan10-scope .p10-hero-inner { max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
 .plan10-scope .p10-hero-logo {
   display: block;
   height: 44px;
@@ -146,9 +146,9 @@ const CSS = `
 .plan10-scope .p10-crumb .sep { opacity: .5; }
 .plan10-scope .p10-crumb .current { color: var(--preto); font-weight: 500; }
 
-/* Sections */
-.plan10-scope .sec { padding: 36px 20px; }
-@media (min-width: 768px) { .plan10-scope .sec { padding: 40px 20px; } }
+/* Sections, ritmo vertical generoso (premium = ar) */
+.plan10-scope .sec { padding: 64px 20px; }
+@media (min-width: 768px) { .plan10-scope .sec { padding: 104px 40px; } }
 .plan10-scope .sec-alt { background: var(--vs); }
 .plan10-scope .sec-dark { background: var(--ve); color: #fff; }
 .plan10-scope .sec-dark .eyebrow { color: var(--va); }
@@ -158,9 +158,10 @@ const CSS = `
 /* Section titles */
 .plan10-scope h2.p10-h2 {
   font-family: var(--fd);
-  font-weight: 500;
-  font-size: clamp(1.5rem, 3vw, 2.15rem);
-  line-height: 1.2;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  line-height: 1.16;
+  letter-spacing: -.01em;
   margin: 10px 0 0;
   letter-spacing: -.005em;
   color: var(--preto);
@@ -220,16 +221,14 @@ const CSS = `
 .plan10-scope .prod-item {
   background: #fff;
   border: 1px solid var(--c2);
-  border-top: 3px solid var(--vp);
-  border-radius: var(--r);
-  padding: 20px 18px 18px;
+  border-radius: var(--rx);
+  padding: 22px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  box-shadow: var(--sh);
-  transition: transform var(--t), box-shadow var(--t);
+  transition: border-color var(--t);
 }
-.plan10-scope .prod-item:hover { transform: translateY(-1px); box-shadow: 0 4px 22px rgba(0,0,0,.10); }
+.plan10-scope .prod-item:hover { border-color: var(--vp); }
 .plan10-scope .prod-item .prod-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; }
 .plan10-scope .prod-item h3 { font-family: var(--fd); font-weight: 500; font-size: 1.2rem; margin: 0; color: var(--preto); line-height: 1.25; }
 .plan10-scope .prod-item .desc { font-family: var(--fb); font-size: .93rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
@@ -379,19 +378,17 @@ const CSS = `
 .plan10-scope .p10-card {
   background: #fff;
   border: 1px solid var(--c2);
-  border-radius: var(--r);
-  padding: 22px;
+  border-radius: var(--rx);
+  padding: 26px 24px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   text-decoration: none;
   color: var(--preto);
   min-height: 180px;
-  border-top: 3px solid var(--vp);
-  transition: transform var(--t), box-shadow var(--t), border-color var(--t);
-  box-shadow: var(--sh);
+  transition: border-color var(--t);
 }
-.plan10-scope .p10-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.10); }
+.plan10-scope .p10-card:hover { border-color: var(--vp); }
 .plan10-scope .p10-card h3 { font-family: var(--fd); font-weight: 500; font-size: 1.25rem; margin: 4px 0 0; color: var(--preto); line-height: 1.22; }
 .plan10-scope .p10-card p { font-family: var(--fb); font-size: .92rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
 .plan10-scope .p10-card .arrow { margin-top: auto; font-family: var(--fl); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--vp); font-weight: 700; }

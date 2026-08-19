@@ -30,22 +30,24 @@ export function ParceirosStrip() {
           color: #143A61; margin: 12px 0 24px;
         }
         .pt-names {
+          display: flex; flex-wrap: wrap;
+          align-items: baseline; justify-content: center;
+          gap: 10px 22px;
           font-family: 'Barlow Condensed', sans-serif;
           letter-spacing: .14em; text-transform: uppercase;
-          color: #5A5A5A; font-size: .94rem; line-height: 2.4;
+          color: #5A5A5A; font-size: .94rem;
         }
-        .pt-names span { white-space: nowrap; }
-        .pt-names .sep { color: #C9A83C; margin: 0 10px; }
+        .pt-names .nm { white-space: nowrap; position: relative; }
+        .pt-names .nm:not(:last-child)::after {
+          content: '·'; color: #C9A83C; position: absolute; right: -13px; top: 0;
+        }
       `}</style>
       <div className="pt-wrap">
         <p className="pt-eyebrow">Parceiros</p>
         <h2 id="pt-title" className="pt-h2">Empresas que confiam no nosso trabalho</h2>
         <div className="pt-names">
-          {parceiros.map((p, i) => (
-            <span key={p}>
-              {p}
-              {i < parceiros.length - 1 && <span className="sep">·</span>}
-            </span>
+          {parceiros.map((p) => (
+            <span key={p} className="nm">{p}</span>
           ))}
         </div>
       </div>

@@ -26,7 +26,7 @@ const sections: FooterSection[] = [
     links: [
       { label: "Quem somos", to: "/quem-somos" },
       { label: "Missão, Visão e Valores", to: "/quem-somos" },
-      { label: "Depoimentos", to: "/", hash: "depoimentos" },
+      { label: "Depoimentos", to: "/quem-somos", hash: "depoimentos" },
       { label: "Contato", to: "/fale-conosco" },
     ],
   },
@@ -41,7 +41,7 @@ const sections: FooterSection[] = [
   {
     title: "Legal",
     links: [
-      { label: "Trabalhe conosco", href: "#" },
+      { label: "Trabalhe conosco", href: "mailto:recrutamento@plan10.com.br", external: true },
       { label: "Política de Privacidade", to: "/privacidade" },
       { label: "LGPD", to: "/lgpd" },
       { label: "Termos de Uso", to: "/termos" },

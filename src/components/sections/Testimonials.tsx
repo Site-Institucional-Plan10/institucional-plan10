@@ -53,7 +53,7 @@ export function Testimonials({ filter, ids }: { filter?: string; ids?: string[] 
   const row2 = [...list.slice().reverse(), ...list.slice().reverse()];
 
   return (
-    <section className="section-y bg-neutral-100">
+    <section id="depoimentos" className="section-y bg-neutral-100">
       <div className="container-x">
         <div className="max-w-3xl">
           <p className="font-eyebrow text-orange mb-3">Clientes que confiam na Plan10</p>

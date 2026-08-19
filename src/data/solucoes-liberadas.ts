@@ -11,9 +11,9 @@ export const solucoesLiberadas = [
       "accent": "#E07840",
       "soft": "#FAF0EA"
     },
-    "hero": "Apoio, conveniência e continuidade para o seu dia a dia bem organizado",
-    "subHero": "Suporte, conveniência e continuidade para pessoas, famílias e empresas.",
-    "aberturaConsultiva": "O dia a dia ganha fluidez com apoio, conveniência e continuidade bem organizados.",
+    "hero": "Organize assistência para casa, empresa, mobilidade, conectividade, viagens, benefícios e concierge, sem transformar a decisão em lista de serviços.",
+    "subHero": "Para pessoas, famílias e empresas que precisam de resposta, conveniência e permanência em momentos práticos.",
+    "aberturaConsultiva": "Antes de escolher, entenda qual parte do dia a dia precisa de apoio: imóvel, mobilidade, ambiente, tecnologia, benefício ou concierge.",
     "categorias": [
       {
         "slug": "ambientes-manutencao-e-bem-estar",
@@ -2497,9 +2497,9 @@ export const solucoesLiberadas = [
       "accent": "#9B7ED4",
       "soft": "#F2EEF9"
     },
-    "hero": "Conquistas bem planejadas começam com uma escolha bem orientada",
-    "subHero": "Aquisição, mobilidade e expansão organizadas para pessoas, famílias e empresas.",
-    "aberturaConsultiva": "Conquistas importantes pedem organização antes da decisão.",
+    "hero": "Organize aquisições, mobilidade, tecnologia, imóveis, experiências e expansão com planejamento e direção.",
+    "subHero": "Para pessoas, famílias e empresas que querem avançar com planejamento, critério e visão patrimonial.",
+    "aberturaConsultiva": "Antes de escolher, entenda o que sustenta a rota: objetivo, prazo, perfil, uso, valor do bem e capacidade de continuidade.",
     "categorias": [
       {
         "slug": "bens-de-valor-e-tecnologia",
@@ -5440,9 +5440,9 @@ export const solucoesLiberadas = [
       "accent": "#7EC8E3",
       "soft": "#EBF3FA"
     },
-    "hero": "Planejamento financeiro com clareza para decisões que atravessam o tempo",
-    "subHero": "Crédito, liquidez, garantias, investimentos e futuro organizados para pessoas, famílias e empresas.",
-    "aberturaConsultiva": "Decisões financeiras ganham consistência quando crédito, liquidez, planejamento e futuro são avaliados de forma integrada.",
+    "hero": "Antes de decidir, entenda o que precisa ser estruturado: liquidez, crédito, garantias, investimentos ou futuro.",
+    "subHero": "Para pessoas, famílias e empresas que precisam organizar recursos, compromissos e próximos movimentos com mais fundamento.",
+    "aberturaConsultiva": "Toda decisão financeira pede contexto: objetivo, prazo, perfil, documentação, impacto e capacidade de continuidade.",
     "categorias": [
       {
         "slug": "capitalizacao",
@@ -8179,9 +8179,9 @@ export const solucoesLiberadas = [
       "accent": "#5BA3D9",
       "soft": "#F0F6FC"
     },
-    "hero": "Proteger o que importa começa por entender o que está exposto.",
-    "subHero": "Vida, patrimônio, riscos, responsabilidades e continuidade em uma leitura consultiva integrada.",
-    "aberturaConsultiva": "Proteger é organizar riscos com critério, sem excesso nem lacuna.",
+    "hero": "Estruture proteção com análise de exposição, patrimônio, responsabilidades e permanência antes da escolha.",
+    "subHero": "Para pessoas, famílias e empresas que precisam proteger o que sustenta pessoas, operação e legado.",
+    "aberturaConsultiva": "Antes de avançar, identifique o que está mais exposto: vida, renda, patrimônio, contratos, operação, mobilidade ou campo.",
     "categorias": [
       {
         "slug": "agronegocio-e-campo",
@@ -14589,9 +14589,9 @@ export const solucoesLiberadas = [
       "accent": "#6BCCA0",
       "soft": "#EDF8F2"
     },
-    "hero": "Escolha o cuidado certo para o seu momento.",
-    "subHero": "Acesso, prevenção e acompanhamento em uma visão única do cuidado para pessoas, famílias e empresas.",
-    "aberturaConsultiva": "Cuidar da saúde abrange acesso, perfil familiar, contexto empresarial e expectativas de cuidado.",
+    "hero": "O cuidado bem-feito começa com clareza para avançar na direção certa em saúde e bem-estar.",
+    "subHero": "Para pessoas, famílias e empresas: aconselhamento preciso e escolhas mais leves.",
+    "aberturaConsultiva": "Entenda o que a sua fase pede: acesso, prevenção, acompanhamento ou bem-estar.",
     "categorias": [
       {
         "slug": "bem-estar-e-qualidade-de-vida",
