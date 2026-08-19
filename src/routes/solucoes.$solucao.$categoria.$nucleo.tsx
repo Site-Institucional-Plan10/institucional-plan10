@@ -5,6 +5,7 @@ import { PageTheme } from "@/components/plan10/PageTheme";
 import { PerfilToggle } from "@/components/plan10/PerfilToggle";
 import { ProductCard } from "@/components/plan10/ProductCard";
 import { LeadForm } from "@/components/plan10/LeadForm";
+import { ImageSlot } from "@/components/plan10/ImageSlot";
 
 import { FONTS, whatsappUrl } from "@/lib/plan10";
 
@@ -97,6 +98,13 @@ function NucleoPage() {
         </div>
       </section>
 
+      {/* Imagem de contexto do núcleo, a inserir depois da construção */}
+      <section className="sec" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <ImageSlot ratio="16 / 9" label={`Contexto de ${n.nome}`} hint={`Situação de uso de ${n.nome.toLowerCase()}. Tom premium, coerente com a solução ${s.nome}.`} />
+        </div>
+      </section>
+
       {/* Toggle + Produtos */}
       <section className="sec sec-alt" id="opcoes">
         <div className="wrap">
@@ -109,9 +117,14 @@ function NucleoPage() {
             </div>
             {temPF && temPJ && <PerfilToggle value={perfil} onChange={setPerfil} />}
           </div>
-          <p style={{ fontFamily: "var(--fl)", fontSize: ".75rem", letterSpacing: ".14em", textTransform: "uppercase", color: "var(--ctxt)", margin: "0 0 16px" }}>
+          <p style={{ fontFamily: "var(--fl)", fontSize: ".75rem", letterSpacing: ".14em", textTransform: "uppercase", color: "var(--ctxt)", margin: "0 0 6px" }}>
             {filtered.length} {filtered.length === 1 ? "opção" : "opções"} para {perfil === "PF" ? "você" : "empresa"}
           </p>
+          {filtered.length >= 2 && (
+            <p style={{ fontFamily: "var(--fb)", fontSize: ".92rem", color: "var(--ctxt)", margin: "0 0 16px" }}>
+              Compare as opções lado a lado e escolha com critério.
+            </p>
+          )}
           {filtered.length === 0 ? (
             <p style={{ fontFamily: "var(--fb)", color: "var(--ctxt)" }}>
               As opções deste perfil ficam disponíveis por consultoria. Fale com um consultor.

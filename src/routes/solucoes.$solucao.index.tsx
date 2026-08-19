@@ -2,6 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { type Solucao } from "@/data/solutions";
 import { Route as SolucaoRoute } from "./solucoes.$solucao";
 import { PageTheme, logoFor } from "@/components/plan10/PageTheme";
+import { ImageSlot } from "@/components/plan10/ImageSlot";
+
+// Direção de arte por solução (base: catálogo 00.3, coluna Sugestão Visual)
+const ART_SOL: Record<string, string> = {
+  saude: "Cuidado, prevenção e bem-estar. Ambiente sereno, luz natural, acolhimento.",
+  protecao: "Vida e patrimônio protegidos. Família, casa, tom guardião e sólido.",
+  financeiras: "Planejamento e futuro. Sóbrio, sofisticado, acento dourado.",
+  crescimento: "Conquista e mobilidade. Aspiracional, movimento, novo ciclo.",
+  assistencia: "Apoio e conveniência no dia a dia. Prático, próximo, atendimento humano.",
+};
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
   component: SolucaoPage,
@@ -31,6 +41,13 @@ function SolucaoPage() {
           <span className="current">{solucao.nome}</span>
         </div>
       </nav>
+
+      {/* Imagem editorial da solução, a inserir depois da construção */}
+      <section className="sec" style={{ paddingBottom: 0 }}>
+        <div className="wrap">
+          <ImageSlot ratio="21 / 9" label={`Hero de ${solucao.nome}`} hint={ART_SOL[solucao.slug]} />
+        </div>
+      </section>
 
       {/* Abertura consultiva */}
       <section className="sec sec-alt">

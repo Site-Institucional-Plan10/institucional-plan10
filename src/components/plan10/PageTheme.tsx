@@ -215,12 +215,14 @@ const CSS = `
 .plan10-scope .p10-toggle button[aria-selected="true"] { background: var(--vp); color: #fff; }
 
 /* Product list (compact) */
-.plan10-scope .prod-list { display: flex; flex-direction: column; gap: 10px; }
+.plan10-scope .prod-list { display: grid; grid-template-columns: 1fr; gap: 14px; align-items: start; }
+@media (min-width: 900px) { .plan10-scope .prod-list { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 .plan10-scope .prod-item {
   background: #fff;
   border: 1px solid var(--c2);
+  border-top: 3px solid var(--vp);
   border-radius: var(--r);
-  padding: 18px 18px;
+  padding: 20px 18px 18px;
   display: flex;
   flex-direction: column;
   gap: 10px;

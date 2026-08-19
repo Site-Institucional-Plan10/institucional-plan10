@@ -7,18 +7,18 @@ import { getWhatsAppUrl } from "@/lib/utils";
 
 type FooterSection = {
   title: string;
-  links: { label: string; to?: string; href?: string; hash?: string; external?: boolean }[];
+  links: { label: string; to?: string; params?: Record<string, string>; href?: string; hash?: string; external?: boolean }[];
 };
 
 const sections: FooterSection[] = [
   {
     title: "Soluções",
     links: [
-      { label: "Planos de Saúde", to: "/saude" },
-      { label: "Consórcios", to: "/consorcios" },
-      { label: "Seguros Gerais", to: "/seguros" },
-      { label: "Produtos Financeiros", to: "/financas" },
-      { label: "Serviços 24h", to: "/servicos-24h" },
+      { label: "Saúde e vida saudável", to: "/solucoes/$solucao", params: { solucao: "saude" } },
+      { label: "Proteção à vida e ao patrimônio", to: "/solucoes/$solucao", params: { solucao: "protecao" } },
+      { label: "Soluções financeiras", to: "/solucoes/$solucao", params: { solucao: "financeiras" } },
+      { label: "Crescimento e mobilidade", to: "/solucoes/$solucao", params: { solucao: "crescimento" } },
+      { label: "Assistência pessoal e empresarial", to: "/solucoes/$solucao", params: { solucao: "assistencia" } },
     ],
   },
   {
@@ -67,7 +67,7 @@ function FooterLink({ link }: { link: FooterSection["links"][number] }) {
   const cls = "transition-colors hover:text-orange";
   if (link.to) {
     return (
-      <Link to={link.to} hash={link.hash} className={cls} style={linkStyle}>
+      <Link to={link.to} params={link.params} hash={link.hash} className={cls} style={linkStyle}>
         {link.label}
       </Link>
     );
