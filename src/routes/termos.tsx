@@ -17,11 +17,26 @@ export const Route = createFileRoute("/termos")({
 
 function TermosPage() {
   const sections = [
-    "Objeto",
-    "Uso do site",
-    "Propriedade intelectual",
-    "Limitação de responsabilidade",
-    "Foro: São Paulo/SP",
+    {
+      t: "Objeto",
+      b: "Estes Termos regem o uso do site da Plan10 e a relação entre você e a Plan10 no ambiente digital. Ao navegar pelo site, você concorda com as regras aqui descritas. A Plan10 atua como consultoria e corretora, conectando pessoas, famílias e empresas às seguradoras e instituições parceiras.",
+    },
+    {
+      t: "Uso do site",
+      b: "O site destina-se a apresentar as soluções da Plan10, orientar a sua escolha e viabilizar o contato com um consultor. As informações têm caráter informativo e não substituem a análise consultiva individual. Você se compromete a fornecer dados verdadeiros e a utilizar o site de boa-fé.",
+    },
+    {
+      t: "Propriedade intelectual",
+      b: "A marca, o logotipo, os textos, o layout e os demais elementos do site pertencem à Plan10 ou aos seus parceiros e são protegidos por lei. A reprodução, total ou parcial, depende de autorização prévia e por escrito.",
+    },
+    {
+      t: "Limitação de responsabilidade",
+      b: "A Plan10 empenha-se para manter as informações corretas e atualizadas, mas condições, coberturas e disponibilidade de produtos são definidas pelas seguradoras e instituições parceiras e podem mudar. A contratação e as condições finais são sempre confirmadas durante o atendimento consultivo.",
+    },
+    {
+      t: "Foro",
+      b: "Estes Termos são regidos pela legislação brasileira. Fica eleito o foro da comarca de São Paulo, São Paulo, para dirimir eventuais questões, com renúncia a qualquer outro, por mais privilegiado que seja.",
+    },
   ];
   return (
     <>
@@ -33,11 +48,10 @@ function TermosPage() {
       </section>
       <section className="section-y">
         <div className="container-x max-w-3xl space-y-8">
-          {/* TODO: inserir texto jurídico validado por advogado antes da publicação */}
           {sections.map((s) => (
-            <div key={s}>
-              <h2 className="font-h3 mb-2">{s}</h2>
-              <p className="text-neutral-700">Conteúdo placeholder para a seção "{s}".</p>
+            <div key={s.t}>
+              <h2 className="font-h3 mb-2">{s.t}</h2>
+              <p className="text-neutral-700 leading-relaxed">{s.b}</p>
             </div>
           ))}
         </div>

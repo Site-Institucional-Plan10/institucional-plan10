@@ -31,7 +31,11 @@ function FaleConosco() {
         </div>
       </section>
 
-      <ContactForm source="fale-conosco" />
+      <ContactForm
+        source="fale-conosco"
+        title="Envie sua mensagem"
+        subtitle="Um consultor retorna em até 24h úteis com o próximo passo."
+      />
 
       <section className="section-y">
         <div className="container-x max-w-2xl">
@@ -48,7 +52,7 @@ function FaleConosco() {
             Concordo com a Política de Privacidade e tratamento de dados conforme a LGPD.
           </label>
           <Button className="mt-4">Quero receber novidades</Button>
-          <p className="mt-3 text-xs text-neutral-500">Não utilizamos suas informações para enviar spam.</p>
+          <p className="mt-3 text-xs text-neutral-500">Usamos seus dados apenas para enviar os conteúdos que você pediu.</p>
         </div>
       </section>
     </>

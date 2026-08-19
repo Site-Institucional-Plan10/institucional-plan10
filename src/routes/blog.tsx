@@ -1,8 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
-import { verticals } from "@/data/verticals";
 import { blogArticles } from "@/data/blogArticles";
 import { canonical } from "@/lib/seo";
+
+// Mapeia o hub antigo de cada artigo para a solução nova (nome + cor da paleta).
+const CATS = [
+  { id: "saude", label: "Saúde", color: "#2EA86E" },
+  { id: "seguros", label: "Proteção", color: "#2B6CB0" },
+  { id: "financas", label: "Financeiras", color: "#5BA3D9" },
+  { id: "consorcios", label: "Crescimento", color: "#7B5BB5" },
+  { id: "servicos", label: "Assistência", color: "#C45C2E" },
+];
+const catFor = (hub: string) => CATS.find((c) => c.id === hub) ?? { id: hub, label: hub, color: "#1C4E80" };
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -39,27 +48,27 @@ function BlogPage() {
         <div className="container-x flex flex-wrap gap-2">
           <button
             onClick={() => setActive("todos")}
-            className="rounded-full px-5 py-2 text-sm font-semibold transition border-2"
+            className="rounded-full px-5 py-2 text-sm font-semibold transition border"
             style={{
-              borderColor: "#1A1A1A",
-              backgroundColor: active === "todos" ? "#1A1A1A" : "transparent",
-              color: active === "todos" ? "#fff" : "#1A1A1A",
+              borderColor: active === "todos" ? "#1C4E80" : "#D8D2C6",
+              backgroundColor: active === "todos" ? "#1C4E80" : "transparent",
+              color: active === "todos" ? "#fff" : "#5A5A5A",
             }}
           >
             Todos
           </button>
-          {verticals.map((v) => (
+          {CATS.map((c) => (
             <button
-              key={v.id}
-              onClick={() => setActive(v.id)}
-              className="rounded-full px-5 py-2 text-sm font-semibold transition border-2"
+              key={c.id}
+              onClick={() => setActive(c.id)}
+              className="rounded-full px-5 py-2 text-sm font-semibold transition border"
               style={{
-                borderColor: v.hubColor,
-                backgroundColor: active === v.id ? v.hubColor : "transparent",
-                color: active === v.id ? "#fff" : v.hubColor,
+                borderColor: active === c.id ? c.color : "#D8D2C6",
+                backgroundColor: active === c.id ? c.color : "transparent",
+                color: active === c.id ? "#fff" : "#5A5A5A",
               }}
             >
-              {v.name}
+              {c.label}
             </button>
           ))}
         </div>
@@ -72,16 +81,29 @@ function BlogPage() {
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filtered.map((article) => {
-                const v = verticals.find((vv) => vv.id === article.hub)!;
+                const cat = catFor(article.hub);
                 return (
-                  <article key={article.slug} className="rounded-2xl border border-neutral-200 bg-white overflow-hidden hover:shadow-md transition flex flex-col">
-                    <div className="aspect-video bg-neutral-100" />
+                  <article key={article.slug} className="rounded-[5px] border bg-white overflow-hidden transition flex flex-col" style={{ borderColor: "#E6E1D6" }}>
+                    <div
+                      style={{
+                        aspectRatio: "16 / 9",
+                        background: "#EFEBE3",
+                        borderBottom: "1px solid #E6E1D6",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <span style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".62rem", color: "#C9A83C" }}>
+                        Plan10
+                      </span>
+                    </div>
                     <div className="p-6 flex-1 flex flex-col">
                       <span
                         className="inline-block self-start rounded-full px-3 py-1 text-xs font-bold uppercase mb-3"
-                        style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
+                        style={{ backgroundColor: `${cat.color}14`, color: cat.color }}
                       >
-                        {v.name}
+                        {cat.label}
                       </span>
                       <h3 className="font-semibold text-lg mb-2">{article.title}</h3>
                       <p className="text-sm text-neutral-700 mb-4 flex-1">{article.summary}</p>

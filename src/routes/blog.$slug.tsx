@@ -1,7 +1,15 @@
 import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { blogArticles } from "@/data/blogArticles";
-import { verticals } from "@/data/verticals";
+// Mapeia o hub antigo do artigo para a solução nova (nome + cor).
+const CATS = [
+  { id: "saude", label: "Saúde", color: "#2EA86E" },
+  { id: "seguros", label: "Proteção", color: "#2B6CB0" },
+  { id: "financas", label: "Financeiras", color: "#5BA3D9" },
+  { id: "consorcios", label: "Crescimento", color: "#7B5BB5" },
+  { id: "servicos", label: "Assistência", color: "#C45C2E" },
+];
+const catFor = (hub: string) => CATS.find((c) => c.id === hub) ?? { id: hub, label: hub, color: "#1C4E80" };
 import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -48,7 +56,7 @@ function BlogArticlePage() {
 
   if (!article) return <Navigate to="/blog" />;
 
-  const v = verticals.find((vv) => vv.id === article.hub)!;
+  const cat = catFor(article.hub);
 
   return (
     <article className="pt-32 pb-20">
@@ -59,15 +67,20 @@ function BlogArticlePage() {
 
         <span
           className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase mb-4"
-          style={{ backgroundColor: `${v.hubColor}1A`, color: v.hubColor }}
+          style={{ backgroundColor: `${cat.color}14`, color: cat.color }}
         >
-          {v.name}
+          {cat.label}
         </span>
 
         <h1 className="font-display mb-3">{article.title}</h1>
         <p className="text-sm text-neutral-500 mb-8">{article.date}</p>
 
-        <div className="aspect-video bg-neutral-100 rounded-2xl mb-10" />
+        <div
+          className="rounded-[5px] mb-10"
+          style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid #E6E1D6", display: "flex", alignItems: "center", justifyContent: "center" }}
+        >
+          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: "#C9A83C" }}>Plan10</span>
+        </div>
 
         <p className="text-lg text-neutral-800 leading-relaxed mb-6 font-medium">
           {article.summary}

@@ -25,39 +25,39 @@ const valores = ["Proximidade", "Clareza", "Cuidado", "Pluralidade", "Constânci
 
 const teamCells = [
   {
-    Icon: Shield,
-    color: "#1C4E80",
-    area: "Célula de Seguros",
-    description:
-      "Consultores especializados em proteção patrimonial, seguros de vida, automóvel, residencial e empresarial. Atuação independente com acesso às principais seguradoras do país.",
-  },
-  {
     Icon: Heart,
     color: "#1C4E80",
     area: "Célula de Saúde",
     description:
-      "Especialistas em planos de saúde e odontológicos para pessoa física e jurídica. Análise comparativa entre operadoras com foco no custo-benefício ideal para cada perfil.",
+      "Especialistas em saúde e bem-estar para pessoas, famílias e empresas: acesso, prevenção, odontologia e acompanhamento, com orientação para cada fase.",
   },
   {
-    Icon: Building2,
+    Icon: Shield,
     color: "#1C4E80",
-    area: "Célula de Consórcio",
+    area: "Célula de Proteção",
     description:
-      "Consultores dedicados ao planejamento de consórcio imobiliário, de veículos e serviços. Suporte estratégico na escolha do grupo, análise de lance e acompanhamento até a contemplação.",
+      "Consultores de proteção à vida e ao patrimônio: vida, renda, patrimônio, responsabilidades e continuidade, com leitura de exposição antes da escolha.",
   },
   {
     Icon: Landmark,
     color: "#1C4E80",
-    area: "Célula de Finanças",
+    area: "Célula de Financeiras",
     description:
-      "Equipe de inteligência financeira focada em crédito, investimentos, previdência e garantias. Análise independente das melhores condições disponíveis no mercado para pessoa física e jurídica.",
+      "Inteligência financeira em crédito, liquidez, garantias, investimentos e futuro, organizados por objetivo e contexto.",
+  },
+  {
+    Icon: Building2,
+    color: "#1C4E80",
+    area: "Célula de Crescimento",
+    description:
+      "Planejamento de aquisições, mobilidade e expansão: imóveis, veículos, máquinas e projetos, conduzidos com critério e visão patrimonial.",
   },
   {
     Icon: Clock,
     color: "#1C4E80",
-    area: "Célula de Serviços",
+    area: "Célula de Assistência",
     description:
-      "Equipe operacional de assistência 24 horas para veículos e residências. Profissionais qualificados e credenciados com tempo médio de atendimento de 30 a 50 minutos.",
+      "Assistência para casa, empresa, mobilidade e o dia a dia, com resposta rápida, conveniência e continuidade.",
   },
 ];
 
@@ -148,7 +148,7 @@ function QuemSomos() {
             },
             {
               label: "Valores",
-              text: "Proximidade · Clareza · Cuidado · Pluralidade · Constância",
+              text: "Os princípios que orientam cada relação e cada recomendação.",
               pills: valores,
             },
           ].map((c) => (
