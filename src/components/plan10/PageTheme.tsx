@@ -319,6 +319,11 @@ const CSS = `
 }
 .plan10-scope .p10-form label { display: block; }
 .plan10-scope .p10-form .eyebrow { color: rgba(255,255,255,.72); margin-bottom: 6px; }
+.plan10-scope .p10-form-ctx { border: 1px solid rgba(255,255,255,.14); border-radius: var(--rs); padding: 12px 14px; background: rgba(255,255,255,.04); }
+.plan10-scope .p10-form-ctx .eyebrow { color: var(--va); margin-bottom: 4px; }
+.plan10-scope .p10-form-ctx p { font-family: var(--fb); font-size: .95rem; color: #fff; margin: 0; line-height: 1.4; }
+.plan10-scope .p10-form-add { align-self: flex-start; justify-self: start; background: none; border: none; padding: 2px 0; cursor: pointer; font-family: var(--fl); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: var(--va); }
+.plan10-scope .p10-form-add:hover { color: #fff; }
 .plan10-scope .p10-form input, .plan10-scope .p10-form textarea {
   width: 100%;
   padding: 11px 12px;

@@ -5,6 +5,8 @@ interface Props {
   interesse: string;
   perfilInicial?: "PF" | "PJ";
   origem?: string;
+  /** Caminho legível do que a pessoa está vendo, ex: "Assistência › Emergência empresarial" */
+  contexto?: string;
 }
 
 const WA = (
@@ -13,30 +15,36 @@ const WA = (
   </svg>
 );
 
-export function LeadForm({ interesse, perfilInicial = "PF", origem }: Props) {
+export function LeadForm({ interesse, perfilInicial = "PF", origem, contexto }: Props) {
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [email, setEmail] = useState("");
   const [perfil] = useState<"PF" | "PJ">(perfilInicial);
   const [mensagem, setMensagem] = useState("");
   const [consent, setConsent] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+  const [showMensagem, setShowMensagem] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "ok" | "err">("idle");
   const [errMsg, setErrMsg] = useState("");
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setErrMsg("");
+    if (nome.trim().length < 2 || whatsapp.trim().length < 8) {
+      setErrMsg("Confira o nome e o WhatsApp.");
+      return;
+    }
+    if (email.trim() && !email.includes("@")) {
+      setErrMsg("O e-mail informado parece inválido.");
+      return;
+    }
     if (!consent) {
       setErrMsg("É necessário concordar com a política de privacidade.");
       return;
     }
-    if (nome.trim().length < 2 || whatsapp.trim().length < 8 || !email.includes("@")) {
-      setErrMsg("Confira nome, WhatsApp e e-mail.");
-      return;
-    }
     setState("sending");
     try {
-      await submitLead({ nome, whatsapp, email, perfil, interesse, mensagem, consentimento: consent, origem });
+      await submitLead({ nome, whatsapp, email: email.trim() || undefined, perfil, interesse, contexto, mensagem, consentimento: consent, origem });
       setState("ok");
     } catch (err) {
       setState("err");
@@ -48,7 +56,7 @@ export function LeadForm({ interesse, perfilInicial = "PF", origem }: Props) {
     return (
       <div className="p10-form" style={{ textAlign: "center" }}>
         <p style={{ color: "#fff", fontFamily: "var(--fb)", fontSize: "1rem", margin: 0 }}>
-          Recebemos seu interesse. Um consultor Plan10 vai retornar com o próximo passo.
+          Recebemos seu interesse{contexto ? ` em ${contexto}` : ""}. Um consultor Plan10 analisa o seu contexto e retorna com o próximo passo.
         </p>
       </div>
     );
@@ -56,24 +64,36 @@ export function LeadForm({ interesse, perfilInicial = "PF", origem }: Props) {
 
   return (
     <form onSubmit={onSubmit} className="p10-form" noValidate>
+      {contexto && (
+        <div className="p10-form-ctx">
+          <span className="eyebrow">Sobre</span>
+          <p>{contexto}</p>
+        </div>
+      )}
       <label>
         <span className="eyebrow">Nome</span>
         <input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome completo" required />
       </label>
-      <div className="row">
-        <label>
-          <span className="eyebrow">WhatsApp</span>
-          <input value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} inputMode="tel" placeholder="(11) 90000-0000" required />
-        </label>
+      <label>
+        <span className="eyebrow">WhatsApp</span>
+        <input value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} inputMode="tel" placeholder="(11) 90000-0000" required />
+      </label>
+      {showEmail ? (
         <label>
           <span className="eyebrow">E-mail</span>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" required />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" />
         </label>
-      </div>
-      <label>
-        <span className="eyebrow">Mensagem (opcional)</span>
-        <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
-      </label>
+      ) : (
+        <button type="button" className="p10-form-add" onClick={() => setShowEmail(true)}>+ Prefiro que falem por e-mail</button>
+      )}
+      {showMensagem ? (
+        <label>
+          <span className="eyebrow">Mensagem (opcional)</span>
+          <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
+        </label>
+      ) : (
+        <button type="button" className="p10-form-add" onClick={() => setShowMensagem(true)}>+ Adicionar mensagem</button>
+      )}
       <label className="check">
         <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
         <span>Concordo com o tratamento dos meus dados conforme a Política de Privacidade da Plan10.</span>

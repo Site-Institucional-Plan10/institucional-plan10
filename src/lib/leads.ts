@@ -1,9 +1,10 @@
 export interface LeadPayload {
   nome: string;
   whatsapp: string;
-  email: string;
+  email?: string;
   perfil: "PF" | "PJ";
   interesse: string;
+  contexto?: string;
   mensagem?: string;
   consentimento: boolean;
   origem?: string;
