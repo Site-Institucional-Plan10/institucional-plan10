@@ -9,87 +9,34 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermosRouteImport } from './routes/termos'
-import { Route as SolucoesRouteImport } from './routes/solucoes'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as Servicos24hRouteImport } from './routes/servicos-24h'
-import { Route as SegurosRouteImport } from './routes/seguros'
-import { Route as SaudeRouteImport } from './routes/saude'
-import { Route as QuemSomosRouteImport } from './routes/quem-somos'
-import { Route as PrivacidadeRouteImport } from './routes/privacidade'
-import { Route as LgpdRouteImport } from './routes/lgpd'
-import { Route as FinancasRouteImport } from './routes/financas'
-import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
-import { Route as ConsorciosRouteImport } from './routes/consorcios'
-import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as ConsorciosRouteImport } from './routes/consorcios'
+import { Route as EmUmCliqueRouteImport } from './routes/em-um-clique'
+import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
+import { Route as FinancasRouteImport } from './routes/financas'
+import { Route as LgpdRouteImport } from './routes/lgpd'
+import { Route as PrivacidadeRouteImport } from './routes/privacidade'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as SaudeRouteImport } from './routes/saude'
+import { Route as SegurosRouteImport } from './routes/seguros'
+import { Route as Servicos24hRouteImport } from './routes/servicos-24h'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SolucoesRouteImport } from './routes/solucoes'
+import { Route as TermosRouteImport } from './routes/termos'
+import { Route as ApiContactRouteImport } from './routes/api/contact'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as SolucoesIndexRouteImport } from './routes/solucoes.index'
 import { Route as SolucoesSolucaoRouteImport } from './routes/solucoes.$solucao'
-import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as SolucoesSolucaoIndexRouteImport } from './routes/solucoes.$solucao.index'
 import { Route as SolucoesSolucaoCategoriaRouteImport } from './routes/solucoes.$solucao.$categoria'
 import { Route as SolucoesSolucaoCategoriaIndexRouteImport } from './routes/solucoes.$solucao.$categoria.index'
 import { Route as SolucoesSolucaoCategoriaNucleoRouteImport } from './routes/solucoes.$solucao.$categoria.$nucleo'
 
-const TermosRoute = TermosRouteImport.update({
-  id: '/termos',
-  path: '/termos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SolucoesRoute = SolucoesRouteImport.update({
-  id: '/solucoes',
-  path: '/solucoes',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Servicos24hRoute = Servicos24hRouteImport.update({
-  id: '/servicos-24h',
-  path: '/servicos-24h',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SegurosRoute = SegurosRouteImport.update({
-  id: '/seguros',
-  path: '/seguros',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SaudeRoute = SaudeRouteImport.update({
-  id: '/saude',
-  path: '/saude',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuemSomosRoute = QuemSomosRouteImport.update({
-  id: '/quem-somos',
-  path: '/quem-somos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacidadeRoute = PrivacidadeRouteImport.update({
-  id: '/privacidade',
-  path: '/privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LgpdRoute = LgpdRouteImport.update({
-  id: '/lgpd',
-  path: '/lgpd',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FinancasRoute = FinancasRouteImport.update({
-  id: '/financas',
-  path: '/financas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaleConoscoRoute = FaleConoscoRouteImport.update({
-  id: '/fale-conosco',
-  path: '/fale-conosco',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsorciosRoute = ConsorciosRouteImport.update({
-  id: '/consorcios',
-  path: '/consorcios',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -97,10 +44,85 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
+const ConsorciosRoute = ConsorciosRouteImport.update({
+  id: '/consorcios',
+  path: '/consorcios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmUmCliqueRoute = EmUmCliqueRouteImport.update({
+  id: '/em-um-clique',
+  path: '/em-um-clique',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaleConoscoRoute = FaleConoscoRouteImport.update({
+  id: '/fale-conosco',
+  path: '/fale-conosco',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinancasRoute = FinancasRouteImport.update({
+  id: '/financas',
+  path: '/financas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LgpdRoute = LgpdRouteImport.update({
+  id: '/lgpd',
+  path: '/lgpd',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadeRoute = PrivacidadeRouteImport.update({
+  id: '/privacidade',
+  path: '/privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SaudeRoute = SaudeRouteImport.update({
+  id: '/saude',
+  path: '/saude',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SegurosRoute = SegurosRouteImport.update({
+  id: '/seguros',
+  path: '/seguros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Servicos24hRoute = Servicos24hRouteImport.update({
+  id: '/servicos-24h',
+  path: '/servicos-24h',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesRoute = SolucoesRouteImport.update({
+  id: '/solucoes',
+  path: '/solucoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosRoute = TermosRouteImport.update({
+  id: '/termos',
+  path: '/termos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiContactRoute = ApiContactRouteImport.update({
+  id: '/api/contact',
+  path: '/api/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => BlogRoute,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
 } as any)
 const SolucoesIndexRoute = SolucoesIndexRouteImport.update({
   id: '/',
@@ -111,16 +133,6 @@ const SolucoesSolucaoRoute = SolucoesSolucaoRouteImport.update({
   id: '/$solucao',
   path: '/$solucao',
   getParentRoute: () => SolucoesRoute,
-} as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => BlogRoute,
-} as any)
-const ApiContactRoute = ApiContactRouteImport.update({
-  id: '/api/contact',
-  path: '/api/contact',
-  getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesSolucaoIndexRoute = SolucoesSolucaoIndexRouteImport.update({
   id: '/',
@@ -150,6 +162,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
   '/consorcios': typeof ConsorciosRoute
+  '/em-um-clique': typeof EmUmCliqueRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
   '/lgpd': typeof LgpdRoute
@@ -164,6 +177,7 @@ export interface FileRoutesByFullPath {
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
+  '/blog/': typeof BlogIndexRoute
   '/solucoes/': typeof SolucoesIndexRoute
   '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
   '/solucoes/$solucao/': typeof SolucoesSolucaoIndexRoute
@@ -172,8 +186,8 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/blog': typeof BlogRouteWithChildren
   '/consorcios': typeof ConsorciosRoute
+  '/em-um-clique': typeof EmUmCliqueRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
   '/lgpd': typeof LgpdRoute
@@ -186,6 +200,7 @@ export interface FileRoutesByTo {
   '/termos': typeof TermosRoute
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/solucoes': typeof SolucoesIndexRoute
   '/solucoes/$solucao': typeof SolucoesSolucaoIndexRoute
   '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
@@ -196,6 +211,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/blog': typeof BlogRouteWithChildren
   '/consorcios': typeof ConsorciosRoute
+  '/em-um-clique': typeof EmUmCliqueRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
   '/lgpd': typeof LgpdRoute
@@ -210,6 +226,7 @@ export interface FileRoutesById {
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
+  '/blog/': typeof BlogIndexRoute
   '/solucoes/': typeof SolucoesIndexRoute
   '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
   '/solucoes/$solucao/': typeof SolucoesSolucaoIndexRoute
@@ -222,6 +239,7 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/consorcios'
+    | '/em-um-clique'
     | '/fale-conosco'
     | '/financas'
     | '/lgpd'
@@ -236,6 +254,7 @@ export interface FileRouteTypes {
     | '/api/contact'
     | '/blog/$slug'
     | '/solucoes/$solucao'
+    | '/blog/'
     | '/solucoes/'
     | '/solucoes/$solucao/$categoria'
     | '/solucoes/$solucao/'
@@ -244,8 +263,8 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/blog'
     | '/consorcios'
+    | '/em-um-clique'
     | '/fale-conosco'
     | '/financas'
     | '/lgpd'
@@ -258,6 +277,7 @@ export interface FileRouteTypes {
     | '/termos'
     | '/api/contact'
     | '/blog/$slug'
+    | '/blog'
     | '/solucoes'
     | '/solucoes/$solucao'
     | '/solucoes/$solucao/$categoria/$nucleo'
@@ -267,6 +287,7 @@ export interface FileRouteTypes {
     | '/'
     | '/blog'
     | '/consorcios'
+    | '/em-um-clique'
     | '/fale-conosco'
     | '/financas'
     | '/lgpd'
@@ -281,6 +302,7 @@ export interface FileRouteTypes {
     | '/api/contact'
     | '/blog/$slug'
     | '/solucoes/$solucao'
+    | '/blog/'
     | '/solucoes/'
     | '/solucoes/$solucao/$categoria'
     | '/solucoes/$solucao/'
@@ -292,6 +314,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRouteWithChildren
   ConsorciosRoute: typeof ConsorciosRoute
+  EmUmCliqueRoute: typeof EmUmCliqueRoute
   FaleConoscoRoute: typeof FaleConoscoRoute
   FinancasRoute: typeof FinancasRoute
   LgpdRoute: typeof LgpdRoute
@@ -308,88 +331,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/termos': {
-      id: '/termos'
-      path: '/termos'
-      fullPath: '/termos'
-      preLoaderRoute: typeof TermosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/solucoes': {
-      id: '/solucoes'
-      path: '/solucoes'
-      fullPath: '/solucoes'
-      preLoaderRoute: typeof SolucoesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/servicos-24h': {
-      id: '/servicos-24h'
-      path: '/servicos-24h'
-      fullPath: '/servicos-24h'
-      preLoaderRoute: typeof Servicos24hRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/seguros': {
-      id: '/seguros'
-      path: '/seguros'
-      fullPath: '/seguros'
-      preLoaderRoute: typeof SegurosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/saude': {
-      id: '/saude'
-      path: '/saude'
-      fullPath: '/saude'
-      preLoaderRoute: typeof SaudeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quem-somos': {
-      id: '/quem-somos'
-      path: '/quem-somos'
-      fullPath: '/quem-somos'
-      preLoaderRoute: typeof QuemSomosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacidade': {
-      id: '/privacidade'
-      path: '/privacidade'
-      fullPath: '/privacidade'
-      preLoaderRoute: typeof PrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lgpd': {
-      id: '/lgpd'
-      path: '/lgpd'
-      fullPath: '/lgpd'
-      preLoaderRoute: typeof LgpdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/financas': {
-      id: '/financas'
-      path: '/financas'
-      fullPath: '/financas'
-      preLoaderRoute: typeof FinancasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fale-conosco': {
-      id: '/fale-conosco'
-      path: '/fale-conosco'
-      fullPath: '/fale-conosco'
-      preLoaderRoute: typeof FaleConoscoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consorcios': {
-      id: '/consorcios'
-      path: '/consorcios'
-      fullPath: '/consorcios'
-      preLoaderRoute: typeof ConsorciosRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -399,12 +345,117 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/consorcios': {
+      id: '/consorcios'
+      path: '/consorcios'
+      fullPath: '/consorcios'
+      preLoaderRoute: typeof ConsorciosRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/em-um-clique': {
+      id: '/em-um-clique'
+      path: '/em-um-clique'
+      fullPath: '/em-um-clique'
+      preLoaderRoute: typeof EmUmCliqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fale-conosco': {
+      id: '/fale-conosco'
+      path: '/fale-conosco'
+      fullPath: '/fale-conosco'
+      preLoaderRoute: typeof FaleConoscoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financas': {
+      id: '/financas'
+      path: '/financas'
+      fullPath: '/financas'
+      preLoaderRoute: typeof FinancasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lgpd': {
+      id: '/lgpd'
+      path: '/lgpd'
+      fullPath: '/lgpd'
+      preLoaderRoute: typeof LgpdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidade': {
+      id: '/privacidade'
+      path: '/privacidade'
+      fullPath: '/privacidade'
+      preLoaderRoute: typeof PrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/saude': {
+      id: '/saude'
+      path: '/saude'
+      fullPath: '/saude'
+      preLoaderRoute: typeof SaudeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seguros': {
+      id: '/seguros'
+      path: '/seguros'
+      fullPath: '/seguros'
+      preLoaderRoute: typeof SegurosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicos-24h': {
+      id: '/servicos-24h'
+      path: '/servicos-24h'
+      fullPath: '/servicos-24h'
+      preLoaderRoute: typeof Servicos24hRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes': {
+      id: '/solucoes'
+      path: '/solucoes'
+      fullPath: '/solucoes'
+      preLoaderRoute: typeof SolucoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos': {
+      id: '/termos'
+      path: '/termos'
+      fullPath: '/termos'
+      preLoaderRoute: typeof TermosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/contact': {
+      id: '/api/contact'
+      path: '/api/contact'
+      fullPath: '/api/contact'
+      preLoaderRoute: typeof ApiContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
     }
     '/solucoes/': {
       id: '/solucoes/'
@@ -419,20 +470,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/solucoes/$solucao'
       preLoaderRoute: typeof SolucoesSolucaoRouteImport
       parentRoute: typeof SolucoesRoute
-    }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
-      parentRoute: typeof BlogRoute
-    }
-    '/api/contact': {
-      id: '/api/contact'
-      path: '/api/contact'
-      fullPath: '/api/contact'
-      preLoaderRoute: typeof ApiContactRouteImport
-      parentRoute: typeof rootRouteImport
     }
     '/solucoes/$solucao/': {
       id: '/solucoes/$solucao/'
@@ -467,10 +504,12 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
@@ -523,6 +562,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRouteWithChildren,
   ConsorciosRoute: ConsorciosRoute,
+  EmUmCliqueRoute: EmUmCliqueRoute,
   FaleConoscoRoute: FaleConoscoRoute,
   FinancasRoute: FinancasRoute,
   LgpdRoute: LgpdRoute,
@@ -539,3 +579,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

@@ -46,6 +46,7 @@ const mobileItems: MobileItem[] = [
   ),
   { kind: "divider" },
   { kind: "link", to: "/blog", label: "Blog" },
+  { kind: "link", to: "/em-um-clique", label: "Plan10 em um clique" },
   { kind: "link", to: "/fale-conosco", label: "Fale conosco" },
 ];
 

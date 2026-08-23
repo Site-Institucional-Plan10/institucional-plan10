@@ -25,7 +25,7 @@ const sections: FooterSection[] = [
     title: "Institucional",
     links: [
       { label: "Quem somos", to: "/quem-somos" },
-      { label: "Missão, Visão e Valores", to: "/quem-somos" },
+      { label: "Plan10 em um clique", to: "/em-um-clique" },
       { label: "Depoimentos", to: "/quem-somos", hash: "depoimentos" },
       { label: "Contato", to: "/fale-conosco" },
     ],

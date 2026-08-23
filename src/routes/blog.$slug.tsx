@@ -1,23 +1,14 @@
 import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
-import { blogArticles } from "@/data/blogArticles";
-// Mapeia o hub antigo do artigo para a solução nova (nome + cor).
-const CATS = [
-  { id: "saude", label: "Saúde", color: "#2EA86E" },
-  { id: "seguros", label: "Proteção", color: "#2B6CB0" },
-  { id: "financas", label: "Financeiras", color: "#5BA3D9" },
-  { id: "consorcios", label: "Crescimento", color: "#7B5BB5" },
-  { id: "servicos", label: "Assistência", color: "#C45C2E" },
-];
-const catFor = (hub: string) => CATS.find((c) => c.id === hub) ?? { id: hub, label: hub, color: "#1C4E80" };
+import { blogArticles, blogCategoryFor } from "@/data/blogArticles";
 import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
     const article = blogArticles.find((a) => a.slug === params.slug);
     const url = canonical(`/blog/${params.slug}`);
-    const title = article ? `${article.title} | Blog Plan10` : "Blog Plan10";
-    const description = article?.summary ?? "Conteúdos sobre seguros, saúde, consórcio e finanças.";
+    const title = article ? `${article.seoTitle || article.title} | Blog Plan10` : "Blog Plan10";
+    const description = article?.metaDescription || article?.summary || "Conteúdo consultivo por Plan10.";
     return {
       meta: [
         { title },
@@ -36,8 +27,9 @@ export const Route = createFileRoute("/blog/$slug")({
                 "@context": "https://schema.org",
                 "@type": "Article",
                 headline: article.title,
-                description: article.summary,
+                description: article.metaDescription || article.summary,
                 datePublished: article.date,
+                articleSection: article.editoria,
                 author: { "@type": "Organization", name: "Plan10" },
                 publisher: { "@type": "Organization", name: "Plan10" },
                 mainEntityOfPage: url,
@@ -50,18 +42,50 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogArticlePage,
 });
 
+// Uma linha é subtítulo quando é curta e não termina em pontuação de frase.
+function isHeading(line: string) {
+  return line.length <= 90 && !/[.!?]$/.test(line);
+}
+
+function renderBlocks(text: string, color: string) {
+  return text
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean)
+    .map((line, i) =>
+      isHeading(line) ? (
+        <h2
+          key={i}
+          style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.35rem", color: "#143A61", margin: "34px 0 12px", lineHeight: 1.3, borderLeft: `3px solid ${color}`, paddingLeft: 14 }}
+        >
+          {line}
+        </h2>
+      ) : (
+        <p key={i} style={{ fontSize: "1.02rem", lineHeight: 1.75, color: "#333", margin: "0 0 18px" }}>
+          {line}
+        </p>
+      ),
+    );
+}
+
 function BlogArticlePage() {
   const { slug } = Route.useParams();
   const article = blogArticles.find((a) => a.slug === slug);
 
   if (!article) return <Navigate to="/blog" />;
 
-  const cat = catFor(article.hub);
+  const cat = blogCategoryFor(article.category);
+  const related = blogArticles.filter((a) => a.category === article.category && a.slug !== article.slug).slice(0, 3);
+
+  // Bloco de produto: primeira linha é o título, o restante é corpo.
+  const prodLines = article.productBlock.split("\n").map((l) => l.trim()).filter(Boolean);
+  const prodTitle = prodLines[0] ?? "";
+  const prodBody = prodLines.slice(1);
 
   return (
-    <article className="pt-32 pb-20">
-      <div className="container-x max-w-3xl">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-orange mb-8">
+    <article className="pt-32 pb-20" style={{ background: "#F7F5F2" }}>
+      <div className="container-x" style={{ maxWidth: 760 }}>
+        <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-semibold mb-8" style={{ color: cat.color }}>
           <ArrowLeft size={16} /> Voltar para o blog
         </Link>
 
@@ -72,8 +96,15 @@ function BlogArticlePage() {
           {cat.label}
         </span>
 
-        <h1 className="font-display mb-3">{article.title}</h1>
-        <p className="text-sm text-neutral-500 mb-8">{article.date}</p>
+        <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "clamp(1.9rem, 4vw, 2.6rem)", lineHeight: 1.2, color: "#1A1A1A", margin: "0 0 14px" }}>
+          {article.title}
+        </h1>
+        {article.dek && (
+          <p style={{ fontSize: "1.2rem", lineHeight: 1.5, color: "#5A5A5A", margin: "0 0 18px", fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic" }}>
+            {article.dek}
+          </p>
+        )}
+        <p className="text-sm text-neutral-500 mb-8">{article.date} · {article.readingTime} de leitura</p>
 
         <div
           className="rounded-[5px] mb-10"
@@ -82,12 +113,60 @@ function BlogArticlePage() {
           <span style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: "#C9A83C" }}>Plan10</span>
         </div>
 
-        <p className="text-lg text-neutral-800 leading-relaxed mb-6 font-medium">
-          {article.summary}
-        </p>
-        <p className="text-base text-neutral-700 leading-relaxed">
-          {article.body}
-        </p>
+        {article.keyTakeaway && (
+          <aside
+            style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "20px 24px", margin: "0 0 32px" }}
+          >
+            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: cat.color, margin: "0 0 8px" }}>
+              Em resumo
+            </p>
+            <p style={{ fontSize: "1.02rem", lineHeight: 1.65, color: "#333", margin: 0 }}>{article.keyTakeaway}</p>
+          </aside>
+        )}
+
+        <div>{renderBlocks(article.body, cat.color)}</div>
+
+        {prodTitle && (
+          <section style={{ background: "#0C2340", color: "#fff", borderRadius: 8, padding: "32px 28px", margin: "40px 0 0" }}>
+            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".18em", textTransform: "uppercase", fontSize: ".72rem", color: "#E8CA6A", margin: "0 0 8px" }}>
+              A solução Plan10
+            </p>
+            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.4rem", margin: "0 0 14px", lineHeight: 1.3 }}>
+              {prodTitle}
+            </h2>
+            {prodBody.map((p, i) => (
+              <p key={i} style={{ fontSize: "1rem", lineHeight: 1.7, color: "rgba(255,255,255,.82)", margin: "0 0 14px" }}>{p}</p>
+            ))}
+            <Link
+              to="/fale-conosco"
+              className="inline-flex items-center gap-2 mt-2"
+              style={{ background: "#E05A20", color: "#fff", textDecoration: "none", fontWeight: 600, borderRadius: 9, padding: "13px 26px" }}
+            >
+              {article.cta || "Falar com um consultor"}
+            </Link>
+          </section>
+        )}
+
+        {related.length > 0 && (
+          <section style={{ marginTop: 56, borderTop: "1px solid #E6E1D6", paddingTop: 32 }}>
+            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: cat.color, margin: "0 0 18px" }}>
+              Continue lendo
+            </p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {related.map((r) => (
+                <Link
+                  key={r.slug}
+                  to="/blog/$slug"
+                  params={{ slug: r.slug }}
+                  style={{ display: "block", background: "#fff", border: "1px solid #E6E1D6", borderRadius: 5, padding: "16px 18px", textDecoration: "none" }}
+                >
+                  <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 500, fontSize: "1rem", color: "#143A61", display: "block", lineHeight: 1.3 }}>{r.title}</span>
+                  <span style={{ fontSize: ".82rem", color: "#777", display: "block", marginTop: 6 }}>{r.readingTime}</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </article>
   );
