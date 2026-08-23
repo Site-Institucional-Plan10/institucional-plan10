@@ -1,0 +1,47 @@
+name: Deploy Cloudflare Workers
+
+# Publica o site na Cloudflare a cada push no main.
+# Requer 2 secrets no repositório (Settings > Secrets and variables > Actions):
+#   CLOUDFLARE_API_TOKEN   token com permissao de editar Workers
+#   CLOUDFLARE_ACCOUNT_ID  id da conta Cloudflare (opcional, mas recomendado)
+# Enquanto os secrets nao existirem, o deploy e pulado sem falhar.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      HAS_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN != '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        if: env.HAS_TOKEN == 'true'
+        uses: oven-sh/setup-bun@v2
+
+      - name: Instalar dependencias
+        if: env.HAS_TOKEN == 'true'
+        run: bun install --frozen-lockfile
+
+      - name: Build
+        if: env.HAS_TOKEN == 'true'
+        run: bunx vite build
+
+      - name: Deploy na Cloudflare
+        if: env.HAS_TOKEN == 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+
+      - name: Aviso (secrets ausentes)
+        if: env.HAS_TOKEN != 'true'
+        run: |
+          echo "::notice::Deploy automatico ainda inativo."
+          echo "Configure os secrets CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID para ativar."
