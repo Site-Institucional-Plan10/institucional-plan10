@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { SITE_URL } from "@/lib/seo";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
@@ -63,17 +64,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Plan10, Corretora Multimodal" },
-      { name: "description", content: "Seguros, saúde, consórcio, finanças e serviços 24h em um só lugar." },
+      { title: "Plan10 | Proteção, saúde e planejamento" },
+      { name: "description", content: "Consultoria de proteção, saúde e planejamento para pessoas, famílias e empresas. Seu futuro muito mais tranquilo." },
       { name: "author", content: "Plan10" },
       { property: "og:site_name", content: "Plan10" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Plan10, Corretora Multimodal" },
-      { property: "og:description", content: "Seguros, saúde, consórcio, finanças e serviços 24h em um só lugar." },
+      { property: "og:title", content: "Plan10 | Proteção, saúde e planejamento" },
+      { property: "og:description", content: "Consultoria de proteção, saúde e planejamento para pessoas, famílias e empresas." },
       { name: "referrer", content: "strict-origin-when-cross-origin" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Plan10, Corretora Multimodal" },
-      { name: "twitter:description", content: "Seguros, saúde, consórcio, finanças e serviços 24h em um só lugar." },
+      { name: "twitter:title", content: "Plan10 | Proteção, saúde e planejamento" },
+      { name: "twitter:description", content: "Consultoria de proteção, saúde e planejamento para pessoas, famílias e empresas." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b82903b-675f-4b87-8df0-0e2e01048669/id-preview-f8148893--689f256d-9728-46c0-af33-cb23a0f95002.lovable.app-1778596887323.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b82903b-675f-4b87-8df0-0e2e01048669/id-preview-f8148893--689f256d-9728-46c0-af33-cb23a0f95002.lovable.app-1778596887323.png" },
     ],
@@ -87,8 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Plan10",
-          url: "https://institucional-plan10.lovable.app",
-          description: "Corretora multimodal credenciada. Seguros, saúde, consórcio, finanças e serviços 24h.",
+          url: SITE_URL,
+          description: "Consultoria de proteção, saúde e planejamento para pessoas, famílias e empresas.",
         }),
       },
       {
@@ -97,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Plan10",
-          url: "https://institucional-plan10.lovable.app",
+          url: SITE_URL,
         }),
       },
     ],

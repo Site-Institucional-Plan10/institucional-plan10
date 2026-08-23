@@ -1,9 +1,33 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { type Solucao, type Categoria } from "@/data/solutions";
+import { createFileRoute, notFound, Link } from "@tanstack/react-router";
+import { findCategoria, type Solucao, type Categoria } from "@/data/solutions";
 import { Route as CategoriaRoute } from "./solucoes.$solucao.$categoria";
 import { PageTheme } from "@/components/plan10/PageTheme";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria/")({
+  loader: ({ params }): { solucao: Solucao; categoria: Categoria } => {
+    const found = findCategoria(params.solucao, params.categoria);
+    if (!found) throw notFound();
+    return found;
+  },
+  head: ({ loaderData }) => {
+    if (!loaderData) return {};
+    const { solucao: s, categoria: c } = loaderData;
+    const url = canonical(`/solucoes/${s.slug}/${c.slug}`);
+    const desc = c.hero || s.subHero;
+    return {
+      meta: [
+        { title: `${c.nome} | ${s.nome} | Plan10` },
+        { name: "description", content: desc },
+        { property: "og:title", content: `${c.nome} | ${s.nome} | Plan10` },
+        { property: "og:description", content: desc },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Plan10" },
+        { property: "og:url", content: url },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
   component: CategoriaPage,
 });
 

@@ -8,21 +8,7 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria")({
     if (!found) throw notFound();
     return found;
   },
-  head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Categoria não encontrada" }, { name: "robots", content: "noindex" }] };
-    const { solucao: s, categoria: c } = loaderData;
-    const url = `https://plan10.com.br/solucoes/${s.slug}/${c.slug}`;
-    return {
-      meta: [
-        { title: `${c.nome} | ${s.nome} | Plan10` },
-        { name: "description", content: c.hero || s.subHero },
-        { property: "og:title", content: `${c.nome} | Plan10` },
-        { property: "og:description", content: c.hero || s.subHero },
-        { property: "og:url", content: url },
-      ],
-      links: [{ rel: "canonical", href: url }],
-    };
-  },
+  // head fica na rota .index (evita canonical duplicado nas páginas filhas).
   component: () => <Outlet />,
   notFoundComponent: () => (
     <div style={{ padding: 80, textAlign: "center", fontFamily: FONTS.body }}>Caminho não encontrado.</div>

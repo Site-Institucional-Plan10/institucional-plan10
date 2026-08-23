@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { blogArticles } from "@/data/blogArticles";
+import { solutions } from "@/data/solutions";
+import { SITE_URL } from "@/lib/seo";
 
-const BASE_URL = "https://institucional-plan10.lovable.app";
+const BASE_URL = SITE_URL;
 
 interface SitemapEntry {
   path: string;
@@ -17,11 +19,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         const staticEntries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/quem-somos", changefreq: "monthly", priority: "0.8" },
-          { path: "/seguros", changefreq: "monthly", priority: "0.9" },
-          { path: "/saude", changefreq: "monthly", priority: "0.9" },
-          { path: "/consorcios", changefreq: "monthly", priority: "0.9" },
-          { path: "/financas", changefreq: "monthly", priority: "0.9" },
-          { path: "/servicos-24h", changefreq: "monthly", priority: "0.9" },
+          { path: "/solucoes", changefreq: "weekly", priority: "0.9" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
           { path: "/fale-conosco", changefreq: "monthly", priority: "0.6" },
           { path: "/privacidade", changefreq: "yearly", priority: "0.3" },
@@ -29,13 +27,26 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/termos", changefreq: "yearly", priority: "0.3" },
         ];
 
+        // Catálogo: soluções, caminhos e núcleos (as páginas de conteúdo real).
+        const catalogEntries: SitemapEntry[] = [];
+        for (const s of solutions) {
+          catalogEntries.push({ path: `/solucoes/${s.slug}`, changefreq: "monthly", priority: "0.8" });
+          for (const c of s.categorias) {
+            if (c.nucleos.length === 0) continue;
+            catalogEntries.push({ path: `/solucoes/${s.slug}/${c.slug}`, changefreq: "monthly", priority: "0.7" });
+            for (const n of c.nucleos) {
+              catalogEntries.push({ path: `/solucoes/${s.slug}/${c.slug}/${n.slug}`, changefreq: "monthly", priority: "0.6" });
+            }
+          }
+        }
+
         const blogEntries: SitemapEntry[] = blogArticles.map((a) => ({
           path: `/blog/${a.slug}`,
           changefreq: "monthly",
           priority: "0.6",
         }));
 
-        const entries = [...staticEntries, ...blogEntries];
+        const entries = [...staticEntries, ...catalogEntries, ...blogEntries];
 
         const urls = entries.map((e) =>
           [

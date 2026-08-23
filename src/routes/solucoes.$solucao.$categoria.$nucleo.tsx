@@ -8,6 +8,7 @@ import { LeadForm } from "@/components/plan10/LeadForm";
 import { ImageSlot } from "@/components/plan10/ImageSlot";
 
 import { FONTS, whatsappUrl } from "@/lib/plan10";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
   loader: ({ params }) => {
@@ -18,13 +19,17 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Não encontrado" }, { name: "robots", content: "noindex" }] };
     const { solucao: s, categoria: c, nucleo: n } = loaderData;
-    const url = `https://plan10.com.br/solucoes/${s.slug}/${c.slug}/${n.slug}`;
+    const url = canonical(`/solucoes/${s.slug}/${c.slug}/${n.slug}`);
+    // n.hero é vazio de propósito; a abertura consultiva é a descrição real.
+    const desc = (n.aberturaConsultiva || n.porque || s.subHero).slice(0, 300);
     return {
       meta: [
         { title: `${n.nome} | ${c.nome} | Plan10` },
-        { name: "description", content: n.hero },
-        { property: "og:title", content: `${n.nome} | Plan10` },
-        { property: "og:description", content: n.hero },
+        { name: "description", content: desc },
+        { property: "og:title", content: `${n.nome} | ${s.nome} | Plan10` },
+        { property: "og:description", content: desc },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Plan10" },
         { property: "og:url", content: url },
       ],
       links: [{ rel: "canonical", href: url }],

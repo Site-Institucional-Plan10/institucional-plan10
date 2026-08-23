@@ -1,8 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { type Solucao } from "@/data/solutions";
+import { createFileRoute, notFound, Link } from "@tanstack/react-router";
+import { findSolucao, type Solucao } from "@/data/solutions";
 import { Route as SolucaoRoute } from "./solucoes.$solucao";
 import { PageTheme, logoFor } from "@/components/plan10/PageTheme";
 import { ImageSlot } from "@/components/plan10/ImageSlot";
+import { canonical } from "@/lib/seo";
 
 // Direção de arte por solução (base: catálogo 00.3, coluna Sugestão Visual)
 const ART_SOL: Record<string, string> = {
@@ -14,6 +15,28 @@ const ART_SOL: Record<string, string> = {
 };
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
+  loader: ({ params }): { solucao: Solucao } => {
+    const s = findSolucao(params.solucao);
+    if (!s) throw notFound();
+    return { solucao: s };
+  },
+  head: ({ loaderData }) => {
+    if (!loaderData) return {};
+    const s = loaderData.solucao;
+    const url = canonical(`/solucoes/${s.slug}`);
+    return {
+      meta: [
+        { title: `${s.nome} | Plan10` },
+        { name: "description", content: s.subHero },
+        { property: "og:title", content: `${s.nome} | Plan10` },
+        { property: "og:description", content: s.subHero },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Plan10" },
+        { property: "og:url", content: url },
+      ],
+      links: [{ rel: "canonical", href: url }],
+    };
+  },
   component: SolucaoPage,
 });
 

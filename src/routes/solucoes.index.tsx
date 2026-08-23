@@ -1,17 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { solutions } from "@/data/solutions";
 import { PageTheme, HUB_PALETTE, paletteFor } from "@/components/plan10/PageTheme";
+import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/solucoes/")({
   head: () => ({
     meta: [
       { title: "Soluções Plan10, consultoria em proteção e planejamento" },
-      { name: "description", content: "As 5 Soluções Plan10, saúde, proteção, financeiras, crescimento e assistência." },
+      { name: "description", content: "As 5 Soluções Plan10, saúde, proteção, financeiras, crescimento e assistência, conectadas em uma jornada consultiva." },
       { property: "og:title", content: "Soluções Plan10" },
       { property: "og:description", content: "As 5 Soluções Plan10 para pessoas, famílias e empresas." },
-      { property: "og:url", content: "https://plan10.com.br/solucoes" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Plan10" },
+      { property: "og:url", content: canonical("/solucoes") },
     ],
-    links: [{ rel: "canonical", href: "https://plan10.com.br/solucoes" }],
+    links: [{ rel: "canonical", href: canonical("/solucoes") }],
   }),
   component: SolucoesIndex,
 });
