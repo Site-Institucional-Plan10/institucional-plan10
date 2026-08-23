@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { blogArticles } from "@/data/blogArticles";
+import { mobilidadeModels } from "@/data/mobilidadeModels";
 import { solutions } from "@/data/solutions";
 import { SITE_URL } from "@/lib/seo";
 
@@ -21,6 +22,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/quem-somos", changefreq: "monthly", priority: "0.8" },
           { path: "/solucoes", changefreq: "weekly", priority: "0.9" },
           { path: "/em-um-clique", changefreq: "monthly", priority: "0.7" },
+          { path: "/mobilidade", changefreq: "weekly", priority: "0.7" },
           { path: "/blog", changefreq: "weekly", priority: "0.7" },
           { path: "/fale-conosco", changefreq: "monthly", priority: "0.6" },
           { path: "/privacidade", changefreq: "yearly", priority: "0.3" },
@@ -47,7 +49,13 @@ export const Route = createFileRoute("/sitemap.xml")({
           priority: "0.6",
         }));
 
-        const entries = [...staticEntries, ...catalogEntries, ...blogEntries];
+        const mobilidadeEntries: SitemapEntry[] = mobilidadeModels.map((m) => ({
+          path: `/mobilidade/${m.makeSlug}/${m.modelSlug}`,
+          changefreq: "monthly",
+          priority: "0.5",
+        }));
+
+        const entries = [...staticEntries, ...catalogEntries, ...blogEntries, ...mobilidadeEntries];
 
         const urls = entries.map((e) =>
           [

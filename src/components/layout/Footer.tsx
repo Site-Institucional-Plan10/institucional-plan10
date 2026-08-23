@@ -26,8 +26,8 @@ const sections: FooterSection[] = [
     links: [
       { label: "Quem somos", to: "/quem-somos" },
       { label: "Plan10 em um clique", to: "/em-um-clique" },
+      { label: "Mobilidade", to: "/mobilidade" },
       { label: "Depoimentos", to: "/quem-somos", hash: "depoimentos" },
-      { label: "Contato", to: "/fale-conosco" },
     ],
   },
   {

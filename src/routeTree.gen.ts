@@ -16,6 +16,7 @@ import { Route as EmUmCliqueRouteImport } from './routes/em-um-clique'
 import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as FinancasRouteImport } from './routes/financas'
 import { Route as LgpdRouteImport } from './routes/lgpd'
+import { Route as MobilidadeRouteImport } from './routes/mobilidade'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
 import { Route as SaudeRouteImport } from './routes/saude'
@@ -27,8 +28,10 @@ import { Route as TermosRouteImport } from './routes/termos'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as MobilidadeIndexRouteImport } from './routes/mobilidade.index'
 import { Route as SolucoesIndexRouteImport } from './routes/solucoes.index'
 import { Route as SolucoesSolucaoRouteImport } from './routes/solucoes.$solucao'
+import { Route as MobilidadeMontadoraModeloRouteImport } from './routes/mobilidade.$montadora.$modelo'
 import { Route as SolucoesSolucaoIndexRouteImport } from './routes/solucoes.$solucao.index'
 import { Route as SolucoesSolucaoCategoriaRouteImport } from './routes/solucoes.$solucao.$categoria'
 import { Route as SolucoesSolucaoCategoriaIndexRouteImport } from './routes/solucoes.$solucao.$categoria.index'
@@ -67,6 +70,11 @@ const FinancasRoute = FinancasRouteImport.update({
 const LgpdRoute = LgpdRouteImport.update({
   id: '/lgpd',
   path: '/lgpd',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MobilidadeRoute = MobilidadeRouteImport.update({
+  id: '/mobilidade',
+  path: '/mobilidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
@@ -124,6 +132,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => BlogRoute,
 } as any)
+const MobilidadeIndexRoute = MobilidadeIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => MobilidadeRoute,
+} as any)
 const SolucoesIndexRoute = SolucoesIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -134,6 +147,12 @@ const SolucoesSolucaoRoute = SolucoesSolucaoRouteImport.update({
   path: '/$solucao',
   getParentRoute: () => SolucoesRoute,
 } as any)
+const MobilidadeMontadoraModeloRoute =
+  MobilidadeMontadoraModeloRouteImport.update({
+    id: '/$montadora/$modelo',
+    path: '/$montadora/$modelo',
+    getParentRoute: () => MobilidadeRoute,
+  } as any)
 const SolucoesSolucaoIndexRoute = SolucoesSolucaoIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -166,6 +185,7 @@ export interface FileRoutesByFullPath {
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
   '/lgpd': typeof LgpdRoute
+  '/mobilidade': typeof MobilidadeRouteWithChildren
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
@@ -178,7 +198,9 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
   '/blog/': typeof BlogIndexRoute
+  '/mobilidade/': typeof MobilidadeIndexRoute
   '/solucoes/': typeof SolucoesIndexRoute
+  '/mobilidade/$montadora/$modelo': typeof MobilidadeMontadoraModeloRoute
   '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
   '/solucoes/$solucao/': typeof SolucoesSolucaoIndexRoute
   '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
@@ -201,7 +223,9 @@ export interface FileRoutesByTo {
   '/api/contact': typeof ApiContactRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
+  '/mobilidade': typeof MobilidadeIndexRoute
   '/solucoes': typeof SolucoesIndexRoute
+  '/mobilidade/$montadora/$modelo': typeof MobilidadeMontadoraModeloRoute
   '/solucoes/$solucao': typeof SolucoesSolucaoIndexRoute
   '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
   '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaIndexRoute
@@ -215,6 +239,7 @@ export interface FileRoutesById {
   '/fale-conosco': typeof FaleConoscoRoute
   '/financas': typeof FinancasRoute
   '/lgpd': typeof LgpdRoute
+  '/mobilidade': typeof MobilidadeRouteWithChildren
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/saude': typeof SaudeRoute
@@ -227,7 +252,9 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/solucoes/$solucao': typeof SolucoesSolucaoRouteWithChildren
   '/blog/': typeof BlogIndexRoute
+  '/mobilidade/': typeof MobilidadeIndexRoute
   '/solucoes/': typeof SolucoesIndexRoute
+  '/mobilidade/$montadora/$modelo': typeof MobilidadeMontadoraModeloRoute
   '/solucoes/$solucao/$categoria': typeof SolucoesSolucaoCategoriaRouteWithChildren
   '/solucoes/$solucao/': typeof SolucoesSolucaoIndexRoute
   '/solucoes/$solucao/$categoria/$nucleo': typeof SolucoesSolucaoCategoriaNucleoRoute
@@ -243,6 +270,7 @@ export interface FileRouteTypes {
     | '/fale-conosco'
     | '/financas'
     | '/lgpd'
+    | '/mobilidade'
     | '/privacidade'
     | '/quem-somos'
     | '/saude'
@@ -255,7 +283,9 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/solucoes/$solucao'
     | '/blog/'
+    | '/mobilidade/'
     | '/solucoes/'
+    | '/mobilidade/$montadora/$modelo'
     | '/solucoes/$solucao/$categoria'
     | '/solucoes/$solucao/'
     | '/solucoes/$solucao/$categoria/$nucleo'
@@ -278,7 +308,9 @@ export interface FileRouteTypes {
     | '/api/contact'
     | '/blog/$slug'
     | '/blog'
+    | '/mobilidade'
     | '/solucoes'
+    | '/mobilidade/$montadora/$modelo'
     | '/solucoes/$solucao'
     | '/solucoes/$solucao/$categoria/$nucleo'
     | '/solucoes/$solucao/$categoria'
@@ -291,6 +323,7 @@ export interface FileRouteTypes {
     | '/fale-conosco'
     | '/financas'
     | '/lgpd'
+    | '/mobilidade'
     | '/privacidade'
     | '/quem-somos'
     | '/saude'
@@ -303,7 +336,9 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/solucoes/$solucao'
     | '/blog/'
+    | '/mobilidade/'
     | '/solucoes/'
+    | '/mobilidade/$montadora/$modelo'
     | '/solucoes/$solucao/$categoria'
     | '/solucoes/$solucao/'
     | '/solucoes/$solucao/$categoria/$nucleo'
@@ -318,6 +353,7 @@ export interface RootRouteChildren {
   FaleConoscoRoute: typeof FaleConoscoRoute
   FinancasRoute: typeof FinancasRoute
   LgpdRoute: typeof LgpdRoute
+  MobilidadeRoute: typeof MobilidadeRouteWithChildren
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuemSomosRoute: typeof QuemSomosRoute
   SaudeRoute: typeof SaudeRoute
@@ -378,6 +414,13 @@ declare module '@tanstack/react-router' {
       path: '/lgpd'
       fullPath: '/lgpd'
       preLoaderRoute: typeof LgpdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mobilidade': {
+      id: '/mobilidade'
+      path: '/mobilidade'
+      fullPath: '/mobilidade'
+      preLoaderRoute: typeof MobilidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacidade': {
@@ -457,6 +500,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/mobilidade/': {
+      id: '/mobilidade/'
+      path: '/'
+      fullPath: '/mobilidade/'
+      preLoaderRoute: typeof MobilidadeIndexRouteImport
+      parentRoute: typeof MobilidadeRoute
+    }
     '/solucoes/': {
       id: '/solucoes/'
       path: '/'
@@ -470,6 +520,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/solucoes/$solucao'
       preLoaderRoute: typeof SolucoesSolucaoRouteImport
       parentRoute: typeof SolucoesRoute
+    }
+    '/mobilidade/$montadora/$modelo': {
+      id: '/mobilidade/$montadora/$modelo'
+      path: '/$montadora/$modelo'
+      fullPath: '/mobilidade/$montadora/$modelo'
+      preLoaderRoute: typeof MobilidadeMontadoraModeloRouteImport
+      parentRoute: typeof MobilidadeRoute
     }
     '/solucoes/$solucao/': {
       id: '/solucoes/$solucao/'
@@ -513,6 +570,20 @@ const BlogRouteChildren: BlogRouteChildren = {
 }
 
 const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
+interface MobilidadeRouteChildren {
+  MobilidadeIndexRoute: typeof MobilidadeIndexRoute
+  MobilidadeMontadoraModeloRoute: typeof MobilidadeMontadoraModeloRoute
+}
+
+const MobilidadeRouteChildren: MobilidadeRouteChildren = {
+  MobilidadeIndexRoute: MobilidadeIndexRoute,
+  MobilidadeMontadoraModeloRoute: MobilidadeMontadoraModeloRoute,
+}
+
+const MobilidadeRouteWithChildren = MobilidadeRoute._addFileChildren(
+  MobilidadeRouteChildren,
+)
 
 interface SolucoesSolucaoCategoriaRouteChildren {
   SolucoesSolucaoCategoriaNucleoRoute: typeof SolucoesSolucaoCategoriaNucleoRoute
@@ -566,6 +637,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaleConoscoRoute: FaleConoscoRoute,
   FinancasRoute: FinancasRoute,
   LgpdRoute: LgpdRoute,
+  MobilidadeRoute: MobilidadeRouteWithChildren,
   PrivacidadeRoute: PrivacidadeRoute,
   QuemSomosRoute: QuemSomosRoute,
   SaudeRoute: SaudeRoute,

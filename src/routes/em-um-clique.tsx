@@ -29,7 +29,7 @@ const AZ: { l: string; items: Item[] }[] = [
     { t: "Assistência", d: "Suporte, conveniência e continuidade do dia a dia.", tag: "Assistência pessoal e empresarial", sol: "assistencia" },
   ] },
   { l: "C", items: [
-    { t: "Carro", d: "Veículos, frota, montadoras e mobilidade.", tag: "Crescimento · Proteção · Assistência", sol: "crescimento" },
+    { t: "Carro", d: "Veículos, frota, montadoras e mobilidade.", tag: "Mobilidade · Crescimento", to: "/mobilidade" },
     { t: "Casa", d: "Residência, imóvel, reparos e rotina.", tag: "Proteção · Assistência", sol: "protecao" },
     { t: "Conquistas", d: "Aquisição, expansão e planejamento.", tag: "Crescimento e mobilidade", sol: "crescimento" },
     { t: "Conteúdos", d: "Dicas, explicações e biblioteca editorial.", tag: "Blog Plan10", to: "/blog" },
@@ -49,8 +49,8 @@ const AZ: { l: string; items: Item[] }[] = [
   ] },
   { l: "M", items: [
     { t: "Mapa de soluções", d: "Visão geral das cinco soluções Plan10.", tag: "Soluções", to: "/solucoes" },
-    { t: "Mobilidade", d: "Veículos, frota e deslocamentos.", tag: "Crescimento · Proteção · Assistência", sol: "crescimento" },
-    { t: "Montadoras", d: "Lançamentos, veículos e tecnologia automotiva.", tag: "Blog · Crescimento", to: "/blog" },
+    { t: "Mobilidade", d: "Montadoras, modelos, frota e deslocamentos.", tag: "Biblioteca de mobilidade", to: "/mobilidade" },
+    { t: "Montadoras", d: "Montadoras, modelos e ficha de cada carro.", tag: "Biblioteca de mobilidade", to: "/mobilidade" },
   ] },
   { l: "P", items: [
     { t: "Patrimônio", d: "Ativos, riscos e continuidade.", tag: "Proteção à vida e ao patrimônio", sol: "protecao" },
@@ -72,7 +72,7 @@ const AZ: { l: string; items: Item[] }[] = [
     { t: "Tecnologia", d: "Celular, conectividade e rotina digital.", tag: "Proteção · Assistência · Finanças", sol: "assistencia" },
   ] },
   { l: "V", items: [
-    { t: "Veículos", d: "Carro, moto, bike e frotas.", tag: "Crescimento · Proteção · Assistência", sol: "crescimento" },
+    { t: "Veículos", d: "Carro, moto, bike e frotas.", tag: "Mobilidade · Crescimento", to: "/mobilidade" },
     { t: "Viagem", d: "Seguro viagem, bagagem e conveniência.", tag: "Assistência · Proteção · Saúde", sol: "assistencia" },
     { t: "Vida e renda", d: "Proteção familiar e continuidade.", tag: "Proteção à vida e ao patrimônio", sol: "protecao" },
   ] },
@@ -85,6 +85,7 @@ const QUICK: Item[] = [
   { t: "Soluções financeiras", d: "Crédito, garantias, reservas e planejamento.", tag: "", sol: "financeiras" },
   { t: "Crescimento e mobilidade", d: "Aquisição, veículos e expansão.", tag: "", sol: "crescimento" },
   { t: "Assistência pessoal e empresarial", d: "Suporte, manutenção e continuidade.", tag: "", sol: "assistencia" },
+  { t: "Mobilidade: montadoras e modelos", d: "Ficha de cada carro, proteção e aquisição.", tag: "", to: "/mobilidade" },
   { t: "Blog e conteúdos", d: "Dicas e temas úteis para decidir.", tag: "", to: "/blog" },
   { t: "Quem somos", d: "A consultoria por trás das soluções.", tag: "", to: "/quem-somos" },
 ];

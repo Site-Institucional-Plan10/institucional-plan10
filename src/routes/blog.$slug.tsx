@@ -89,12 +89,22 @@ function BlogArticlePage() {
           <ArrowLeft size={16} /> Voltar para o blog
         </Link>
 
-        <span
-          className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase mb-4"
-          style={{ backgroundColor: `${cat.color}14`, color: cat.color }}
-        >
-          {cat.label}
-        </span>
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <span
+            className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase"
+            style={{ backgroundColor: `${cat.color}14`, color: cat.color }}
+          >
+            {cat.label}
+          </span>
+          {article.kind === "setorial" && (
+            <span
+              className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase"
+              style={{ border: "1px solid #D8D2C6", color: "#8A8172" }}
+            >
+              Mercado
+            </span>
+          )}
+        </div>
 
         <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "clamp(1.9rem, 4vw, 2.6rem)", lineHeight: 1.2, color: "#1A1A1A", margin: "0 0 14px" }}>
           {article.title}
@@ -143,6 +153,21 @@ function BlogArticlePage() {
               style={{ background: "#E05A20", color: "#fff", textDecoration: "none", fontWeight: 600, borderRadius: 9, padding: "13px 26px" }}
             >
               {article.cta || "Falar com um consultor"}
+            </Link>
+          </section>
+        )}
+
+        {!prodTitle && article.cta && (
+          <section style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "24px 26px", margin: "40px 0 0", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+            <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 500, fontSize: "1.15rem", color: "#143A61", margin: 0, maxWidth: "40ch" }}>
+              Quer entender o que isso muda no seu caso?
+            </p>
+            <Link
+              to="/fale-conosco"
+              className="inline-flex items-center gap-2"
+              style={{ background: "#E05A20", color: "#fff", textDecoration: "none", fontWeight: 600, borderRadius: 9, padding: "13px 26px", whiteSpace: "nowrap" }}
+            >
+              {article.cta}
             </Link>
           </section>
         )}

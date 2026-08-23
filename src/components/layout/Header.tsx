@@ -45,6 +45,7 @@ const mobileItems: MobileItem[] = [
     (s): MobileItem => ({ kind: "solucao", slug: s.slug, label: s.label, color: s.color }),
   ),
   { kind: "divider" },
+  { kind: "link", to: "/mobilidade", label: "Mobilidade" },
   { kind: "link", to: "/blog", label: "Blog" },
   { kind: "link", to: "/em-um-clique", label: "Plan10 em um clique" },
   { kind: "link", to: "/fale-conosco", label: "Fale conosco" },

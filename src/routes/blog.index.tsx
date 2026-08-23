@@ -96,12 +96,22 @@ function BlogPage() {
                       </span>
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <span
-                        className="inline-block self-start rounded-full px-3 py-1 text-xs font-bold uppercase mb-3"
-                        style={{ backgroundColor: `${cat.color}14`, color: cat.color }}
-                      >
-                        {cat.label}
-                      </span>
+                      <div className="flex flex-wrap items-center gap-2 mb-3">
+                        <span
+                          className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase"
+                          style={{ backgroundColor: `${cat.color}14`, color: cat.color }}
+                        >
+                          {cat.label}
+                        </span>
+                        {article.kind === "setorial" && (
+                          <span
+                            className="inline-block rounded-full px-3 py-1 text-xs font-bold uppercase"
+                            style={{ border: "1px solid #D8D2C6", color: "#8A8172" }}
+                          >
+                            Mercado
+                          </span>
+                        )}
+                      </div>
                       <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.15rem", lineHeight: 1.3, color: "#1A1A1A", marginBottom: 8 }}>
                         {article.title}
                       </h3>
