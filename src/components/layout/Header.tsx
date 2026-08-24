@@ -74,7 +74,7 @@ function highlight(text: string, query: string) {
   return (
     <span>
       {text.slice(0, idx)}
-      <span style={{ color: "#FF6B00", fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</span>
+      <span style={{ color: "#E05A20", fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</span>
       {text.slice(idx + query.length)}
     </span>
   );
@@ -162,7 +162,7 @@ function SearchBox({ onClose }: { onClose: () => void }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={onKeyDown}
-          placeholder="Buscar seguros, planos, consórcio..."
+          placeholder="Buscar por solução, tema ou necessidade..."
           className="w-full h-11 rounded-lg border border-neutral-300 bg-white px-4 focus:border-orange focus:outline-none focus:ring-2 focus:ring-orange/30"
         />
         {debounced && (
@@ -180,7 +180,7 @@ function SearchBox({ onClose }: { onClose: () => void }) {
               <div className="px-4 py-5 text-sm text-neutral-600">
                 Nenhum resultado encontrado para "{debounced}".
                 <div className="text-xs text-neutral-500 mt-1">
-                  Tente "seguro auto", "plano de saúde" ou "consórcio imóvel".
+                  Tente "saúde", "proteção", "crédito" ou "mobilidade".
                 </div>
               </div>
             ) : (
@@ -214,7 +214,7 @@ function SearchBox({ onClose }: { onClose: () => void }) {
                           gap: 2,
                           transition: "background 150ms",
                           background: isActive ? "#FFF4EC" : "transparent",
-                          borderLeft: isActive ? "3px solid #FF6B00" : "3px solid transparent",
+                          borderLeft: isActive ? "3px solid #E05A20" : "3px solid transparent",
                         }}
                       >
                         <div style={{ fontWeight: 600, fontSize: "0.9rem", color: "#1A1A1A" }}>
@@ -294,7 +294,7 @@ export function Header() {
                   params={{ solucao: l.solucao }}
                   className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
                   style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
+                  activeProps={{ style: { color: "#E05A20" }, className: "underline underline-offset-4" }}
                 >
                   <span
                     className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
@@ -309,7 +309,7 @@ export function Header() {
                   to={l.to}
                   className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
                   style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#FF6B00" }, className: "underline underline-offset-4" }}
+                  activeProps={{ style: { color: "#E05A20" }, className: "underline underline-offset-4" }}
                 >
                   <span className="group-hover:text-orange transition-colors">{l.label}</span>
                   <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
@@ -458,11 +458,11 @@ export function Header() {
                     padding: "13px 0",
                     fontSize: "1.05rem",
                     fontWeight: isActive ? 600 : 500,
-                    color: isActive ? "#FF6B00" : "rgba(255,255,255,0.85)",
+                    color: isActive ? "#E05A20" : "rgba(255,255,255,0.85)",
                     textDecoration: "none",
                     transition: "color 150ms",
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = "#FF6B00"; }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "#E05A20"; }}
                   onMouseLeave={(e) => {
                     if (!isActive) e.currentTarget.style.color = "rgba(255,255,255,0.85)";
                   }}

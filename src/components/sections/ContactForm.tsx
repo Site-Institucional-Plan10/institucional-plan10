@@ -17,11 +17,11 @@ interface ContactFormProps {
 
 const subjectOptions = [
   { value: "", label: "Selecione..." },
-  { value: "Seguros", label: "Seguros" },
-  { value: "Saúde", label: "Saúde" },
-  { value: "Consórcio", label: "Consórcio" },
-  { value: "Finanças", label: "Finanças" },
-  { value: "Serviços 24h", label: "Serviços 24h" },
+  { value: "Saúde e vida saudável", label: "Saúde e vida saudável" },
+  { value: "Proteção à vida e ao patrimônio", label: "Proteção à vida e ao patrimônio" },
+  { value: "Soluções financeiras", label: "Soluções financeiras" },
+  { value: "Crescimento e mobilidade", label: "Crescimento e mobilidade" },
+  { value: "Assistência pessoal e empresarial", label: "Assistência pessoal e empresarial" },
   { value: "Outro", label: "Outro" },
 ];
 

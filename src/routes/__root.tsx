@@ -75,8 +75,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Plan10 | Proteção, saúde e planejamento" },
       { name: "twitter:description", content: "Consultoria de proteção, saúde e planejamento para pessoas, famílias e empresas." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b82903b-675f-4b87-8df0-0e2e01048669/id-preview-f8148893--689f256d-9728-46c0-af33-cb23a0f95002.lovable.app-1778596887323.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4b82903b-675f-4b87-8df0-0e2e01048669/id-preview-f8148893--689f256d-9728-46c0-af33-cb23a0f95002.lovable.app-1778596887323.png" },
+      { property: "og:image", content: `${SITE_URL}/assets/banners/hero-home-1.png` },
+      { name: "twitter:image", content: `${SITE_URL}/assets/banners/hero-home-1.png` },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -116,7 +116,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,opsz,wght@0,6..30,300;0,6..30,400;0,6..30,500;0,6..30,600;0,6..30,700;0,6..30,800;1,6..30,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <HeadContent />

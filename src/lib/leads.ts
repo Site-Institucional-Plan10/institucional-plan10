@@ -11,9 +11,31 @@ export interface LeadPayload {
 }
 
 export async function submitLead(data: LeadPayload): Promise<{ ok: true }> {
-  // TODO: integrar com Resend (endpoint /api/leads).
-  // Ex.: await fetch("/api/leads", { method: "POST", body: JSON.stringify(data) });
-  if (typeof console !== "undefined") console.info("[Plan10 lead]", data);
-  await new Promise((r) => setTimeout(r, 400));
+  // Entrega pelo mesmo endpoint do formulário de contato (envio por e-mail).
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: data.nome,
+      phone: data.whatsapp,
+      email: data.email || "",
+      subject: data.interesse,
+      message: data.mensagem || "",
+      consent: data.consentimento,
+      source: data.origem || "solucao",
+      perfil: data.perfil,
+      contexto: data.contexto,
+    }),
+  });
+  if (!res.ok) {
+    let msg = "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.";
+    try {
+      const body = (await res.json()) as { error?: string };
+      if (body?.error) msg = body.error;
+    } catch {
+      /* mantém a mensagem padrão */
+    }
+    throw new Error(msg);
+  }
   return { ok: true };
 }
