@@ -31,6 +31,36 @@ export function getWhatsAppUrl(context: string = "default"): string {
   return `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(msg)}`;
 }
 
+export interface LeadWhatsApp {
+  nome: string;
+  telefone?: string;
+  email?: string;
+  solucao?: string;
+  produto?: string;
+  perfil?: "PF" | "PJ";
+  mensagem?: string;
+  origem?: string;
+}
+
+/**
+ * Monta a URL do WhatsApp da Plan10 com as respostas do formulário, para
+ * entrega imediata do lead enquanto o e-mail transacional não está ligado.
+ */
+export function buildLeadWhatsAppUrl(lead: LeadWhatsApp): string {
+  const linhas = [
+    "Olá! Vim pelo site da Plan10 e gostaria de mais informações.",
+    "",
+    `Nome: ${lead.nome}`,
+    lead.telefone ? `Telefone: ${lead.telefone}` : null,
+    lead.email ? `E-mail: ${lead.email}` : null,
+    lead.solucao ? `Solução: ${lead.solucao}` : null,
+    lead.produto ? `Produto: ${lead.produto}` : null,
+    lead.perfil ? `Perfil: ${lead.perfil === "PJ" ? "Empresa" : "Pessoa física"}` : null,
+    lead.mensagem ? `\nMensagem: ${lead.mensagem}` : null,
+  ].filter(Boolean);
+  return `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(linhas.join("\n"))}`;
+}
+
 export function getVerticalContextFromPath(pathname: string): string {
   if (pathname.startsWith("/seguros")) return "seguros";
   if (pathname.startsWith("/saude")) return "saude";

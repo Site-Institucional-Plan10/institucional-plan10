@@ -167,7 +167,7 @@ function NucleoPage() {
             <h2 className="p10-h2">Um consultor retorna com o próximo passo</h2>
             <p className="p10-lede">Conte seu momento. A resposta é orientada, sem excesso comercial.</p>
           </div>
-          <LeadForm interesse={n.nome} perfilInicial={perfil} contexto={`${s.nome} › ${n.nome}`} origem={`/solucoes/${s.slug}/${c.slug}/${n.slug}`} />
+          <LeadForm interesse={n.nome} perfilInicial={perfil} contexto={`${s.nome} › ${n.nome}`} produtos={n.products.map((p) => p.nome)} origem={`/solucoes/${s.slug}/${c.slug}/${n.slug}`} />
         </div>
       </section>
 

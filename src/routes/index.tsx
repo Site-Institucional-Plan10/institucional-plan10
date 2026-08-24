@@ -29,20 +29,16 @@ function HomePage() {
       <SolutionsShowcase />
       <ComoFunciona />
       <section style={{ background: "#fff", padding: "84px 20px 96px" }}>
+        <style>{`
+          .home-editorial { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid #E6E1D6; box-shadow: 0 24px 60px rgba(12,35,64,.12); }
+          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center; aspect-ratio: 21 / 9; }
+          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 4 / 3; } }
+        `}</style>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <figure
-            style={{
-              margin: 0,
-              borderRadius: 12,
-              overflow: "hidden",
-              border: "1px solid #E6E1D6",
-              boxShadow: "0 24px 60px rgba(12,35,64,.12)",
-            }}
-          >
+          <figure className="home-editorial">
             <img
               src="/assets/images/hero-veleiro.jpg"
               alt="Veleiro ao entardecer em águas calmas, a imagem editorial da Plan10"
-              style={{ display: "block", width: "100%", aspectRatio: "21 / 9", objectFit: "cover" }}
               loading="lazy"
             />
           </figure>

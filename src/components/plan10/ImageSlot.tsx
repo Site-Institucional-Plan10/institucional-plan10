@@ -22,6 +22,7 @@ export function ImageSlot({ ratio = "16 / 9", label, hint, tone = "light" }: Pro
       <style>{`
         .p10-slot {
           width: 100%;
+          min-height: 200px;
           border: 1px solid #D8D2C6;
           border-radius: 5px;
           background: #EFEBE3;

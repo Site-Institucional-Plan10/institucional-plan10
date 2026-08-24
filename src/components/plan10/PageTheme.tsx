@@ -324,7 +324,7 @@ const CSS = `
 .plan10-scope .p10-form-ctx p { font-family: var(--fb); font-size: .95rem; color: #fff; margin: 0; line-height: 1.4; }
 .plan10-scope .p10-form-add { align-self: flex-start; justify-self: start; background: none; border: none; padding: 2px 0; cursor: pointer; font-family: var(--fl); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; color: var(--va); }
 .plan10-scope .p10-form-add:hover { color: #fff; }
-.plan10-scope .p10-form input, .plan10-scope .p10-form textarea {
+.plan10-scope .p10-form input, .plan10-scope .p10-form textarea, .plan10-scope .p10-form select {
   width: 100%;
   padding: 11px 12px;
   border-radius: 8px;
@@ -336,7 +336,9 @@ const CSS = `
   outline: none;
   transition: border-color var(--t), background var(--t);
 }
-.plan10-scope .p10-form input:focus, .plan10-scope .p10-form textarea:focus { border-color: var(--va); background: rgba(255,255,255,.08); }
+.plan10-scope .p10-form select { appearance: none; -webkit-appearance: none; cursor: pointer; background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,.5) 50%), linear-gradient(135deg, rgba(255,255,255,.5) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 34px; }
+.plan10-scope .p10-form select option { color: #1a1a1a; }
+.plan10-scope .p10-form input:focus, .plan10-scope .p10-form textarea:focus, .plan10-scope .p10-form select:focus { border-color: var(--va); background: rgba(255,255,255,.08); }
 .plan10-scope .p10-form input::placeholder, .plan10-scope .p10-form textarea::placeholder { color: rgba(255,255,255,.4); }
 .plan10-scope .p10-form .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .plan10-scope .p10-form .row { grid-template-columns: 1fr 1fr; } }

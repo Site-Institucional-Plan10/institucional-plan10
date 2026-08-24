@@ -26,7 +26,7 @@ const subjectOptions = [
 ];
 
 export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fale conosco", subtitle }: ContactFormProps) {
-  const { form, status, errorMessage, onSubmit } = useContactForm(defaultSubject);
+  const { form, status, errorMessage, waUrl, onSubmit } = useContactForm(defaultSubject);
   const { register, handleSubmit, formState: { errors }, setValue, watch } = form;
   const [showMessage, setShowMessage] = useState(false);
 
@@ -46,9 +46,8 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
             noValidate
           >
             <Input label="Nome completo" {...register("name")} error={errors.name?.message} />
-            <Input label="E-mail" type="email" {...register("email")} error={errors.email?.message} />
             <Input
-              label="Telefone"
+              label="WhatsApp"
               inputMode="tel"
               placeholder="(00) 00000-0000"
               value={phoneValue || ""}
@@ -58,8 +57,10 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
             {lockedSubject ? (
               <Input label="Assunto" value={defaultSubject} readOnly {...register("subject")} />
             ) : (
-              <Select label="Assunto" options={subjectOptions} {...register("subject")} error={errors.subject?.message} />
+              <Select label="Do que você precisa?" options={subjectOptions} {...register("subject")} error={errors.subject?.message} />
             )}
+            <Input label="Produto ou serviço específico (opcional)" placeholder="Ex.: seguro auto, plano familiar, consórcio de imóvel" {...register("produto")} error={errors.produto?.message} />
+            <Input label="E-mail (opcional)" type="email" {...register("email")} error={errors.email?.message} />
 
             {!showMessage ? (
               <button
@@ -98,14 +99,20 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
             </label>
             {errors.consent && <span className="text-xs text-red-600">{errors.consent.message}</span>}
 
-            <Button type="submit" disabled={status === "submitting"} className="w-full sm:w-auto">
-              {status === "submitting" ? "Enviando..." : "Enviar mensagem"}
+            <Button type="submit" disabled={status === "submitting"} className="w-full sm:w-auto inline-flex items-center justify-center gap-2">
+              <MessageCircle size={18} />
+              {status === "submitting" ? "Abrindo o WhatsApp..." : "Enviar pelo WhatsApp"}
             </Button>
-            <p className="text-xs text-neutral-500 inline-flex items-center gap-1.5"><Clock size={14} />Diagnóstico sem compromisso. Respondemos em até 24h úteis.</p>
+            <p className="text-xs text-neutral-500 inline-flex items-center gap-1.5"><Clock size={14} />Suas respostas abrem uma conversa direta com um consultor. Sem compromisso.</p>
 
             {status === "success" && (
               <div className="rounded-lg bg-green-50 border border-green-200 p-4 text-sm text-green-800">
-                Mensagem enviada. A Plan10 retorna em até 24h úteis.
+                Abrimos o WhatsApp da Plan10 com os seus dados. É só enviar a mensagem.{" "}
+                {waUrl && (
+                  <a href={waUrl} target="_blank" rel="noopener noreferrer" className="font-semibold underline">
+                    Não abriu? Toque aqui.
+                  </a>
+                )}
               </div>
             )}
             {status === "error" && (
