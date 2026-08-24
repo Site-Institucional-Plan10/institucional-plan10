@@ -4,7 +4,6 @@ import { SolutionsShowcase } from "@/components/sections/SolutionsShowcase";
 import { ComoFunciona } from "@/components/home/ComoFunciona";
 import { ParceirosStrip } from "@/components/home/ParceirosStrip";
 import { ContactForm } from "@/components/sections/ContactForm";
-import { ImageSlot } from "@/components/plan10/ImageSlot";
 import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -29,13 +28,24 @@ function HomePage() {
       <PremiumHero />
       <SolutionsShowcase />
       <ComoFunciona />
-      <section style={{ background: "#fff", padding: "0 20px 88px" }}>
+      <section style={{ background: "#fff", padding: "84px 20px 96px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <ImageSlot
-            ratio="21 / 9"
-            label="Imagem editorial da marca"
-            hint="Cena premium que traduz tranquilidade e cuidado: náutico da marca, ou família e patrimônio bem cuidados."
-          />
+          <figure
+            style={{
+              margin: 0,
+              borderRadius: 12,
+              overflow: "hidden",
+              border: "1px solid #E6E1D6",
+              boxShadow: "0 24px 60px rgba(12,35,64,.12)",
+            }}
+          >
+            <img
+              src="/assets/images/hero-veleiro.jpg"
+              alt="Veleiro ao entardecer em águas calmas, a imagem editorial da Plan10"
+              style={{ display: "block", width: "100%", aspectRatio: "21 / 9", objectFit: "cover" }}
+              loading="lazy"
+            />
+          </figure>
         </div>
       </section>
       <ParceirosStrip />
