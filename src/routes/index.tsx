@@ -30,15 +30,15 @@ function HomePage() {
       <ComoFunciona />
       <section style={{ background: "#fff", padding: "84px 20px 96px" }}>
         <style>{`
-          .home-editorial { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid #E6E1D6; box-shadow: 0 24px 60px rgba(12,35,64,.12); max-width: 980px; margin-inline: auto; }
-          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center 52%; aspect-ratio: 3 / 2; }
-          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 4 / 5; } }
+          .home-editorial { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid #E6E1D6; box-shadow: 0 24px 60px rgba(12,35,64,.12); max-width: 1040px; margin-inline: auto; }
+          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center 60%; aspect-ratio: 3 / 2; }
+          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 4 / 3; } }
         `}</style>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <figure className="home-editorial">
             <img
-              src="/assets/images/veleiro-consultoria.avif"
-              alt="Veleiro ao pôr do sol dourado, a imagem editorial da Plan10"
+              src="/assets/images/casa-dos-sonhos.jpg"
+              alt="Casa de família ao entardecer com luzes acesas, a imagem editorial da Plan10"
               loading="lazy"
             />
           </figure>
