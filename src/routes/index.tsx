@@ -31,14 +31,14 @@ function HomePage() {
       <section style={{ background: "#fff", padding: "84px 20px 96px" }}>
         <style>{`
           .home-editorial { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid #E6E1D6; box-shadow: 0 24px 60px rgba(12,35,64,.12); max-width: 1040px; margin-inline: auto; }
-          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center 45%; aspect-ratio: 3 / 2; }
-          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 4 / 3; } }
+          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center; aspect-ratio: 3 / 2; }
+          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 5 / 4; } }
         `}</style>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <figure className="home-editorial">
             <img
-              src="/assets/images/lar-conquistado.jpg"
-              alt="Casal em frente à casa própria em luz de fim de tarde, a imagem editorial da Plan10"
+              src="/assets/images/familia-ao-entardecer.jpg"
+              alt="Família reunida no jardim de casa moderna ao pôr do sol, a imagem editorial da Plan10"
               loading="lazy"
             />
           </figure>
