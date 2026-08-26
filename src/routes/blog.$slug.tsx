@@ -141,7 +141,7 @@ function BlogArticlePage() {
             <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".18em", textTransform: "uppercase", fontSize: ".72rem", color: "#E8CA6A", margin: "0 0 8px" }}>
               A solução Plan10
             </p>
-            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.4rem", margin: "0 0 14px", lineHeight: 1.3 }}>
+            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.4rem", margin: "0 0 14px", lineHeight: 1.3, color: "#fff" }}>
               {prodTitle}
             </h2>
             {prodBody.map((p, i) => (
