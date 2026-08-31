@@ -14,3 +14,19 @@ export function isRealUrl(link: string | undefined | null): boolean {
   if (!link) return false;
   return /^https?:\/\//i.test(link.trim());
 }
+
+/**
+ * Repara a abertura consultiva de nível núcleo, cujo texto de origem vem com a
+ * gramática quebrada ("...especialmente em cenários de X exige uma escolha..."),
+ * o subject se perde e a concordância falha. Reescreve em duas orações limpas,
+ * válidas para X singular ou plural. Se o padrão não bater, devolve o texto original.
+ */
+export function aberturaLimpa(texto: string): string {
+  if (!texto) return texto;
+  const m = texto.match(
+    /^(.*?),\s*especialmente em cen[aá]rios de (.+?)\s+exige uma escolha bem orientada e bem acompanhada\.?\s*$/i,
+  );
+  if (!m) return texto;
+  const contexto = m[2].trim();
+  return `${m[1].trim()}. Em ${contexto}, cada decisão merece estar bem orientada e bem acompanhada.`;
+}

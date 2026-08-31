@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Lock, Mail, MessageCircle, Clock, Plus, Minus } from "lucide-react";
-import { Input, Textarea, Select } from "@/components/ui/primitives";
+import { Input, Textarea } from "@/components/ui/primitives";
 import { Button } from "@/components/ui/Plan10Button";
+import { FancySelect } from "@/components/plan10/FancySelect";
 import { useContactForm } from "@/hooks/useContactForm";
 import { maskPhoneBR, getWhatsAppUrl } from "@/lib/utils";
 import { WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
@@ -33,11 +34,25 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
   const phoneValue = watch("phone");
 
   return (
-    <section className="section-y bg-neutral-100">
+    <section className="cf2">
+      <style>{`
+        .cf2 { background: #FFFFFF; padding: 84px 0; }
+        .cf2 .cf2-eyebrow {
+          font-family: 'JetBrains Mono', ui-monospace, monospace;
+          font-weight: 500; font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+          color: #9A7B23; margin: 0 0 14px; display: inline-flex; align-items: center; gap: 12px;
+        }
+        .cf2 .cf2-eyebrow::before { content:""; width: 26px; height: 1px; background: #B08D57; }
+        .cf2 .cf2-h2 {
+          font-family: 'Schibsted Grotesk','Inter',sans-serif; font-weight: 600;
+          font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.08; letter-spacing: -.025em;
+          color: #0E2438; margin: 0 0 16px;
+        }
+      `}</style>
       <div className="container-x grid gap-10 lg:grid-cols-2">
         <div>
-          <p className="font-eyebrow text-orange mb-3">Fale com a Plan10</p>
-          <h2 className="font-h1 mb-4">{title}</h2>
+          <p className="cf2-eyebrow">Fale com a Plan10</p>
+          <h2 className="cf2-h2">{title}</h2>
           {subtitle && <p className="text-neutral-700 mb-8 max-w-md">{subtitle}</p>}
 
           <form
@@ -57,7 +72,15 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
             {lockedSubject ? (
               <Input label="Assunto" value={defaultSubject} readOnly {...register("subject")} />
             ) : (
-              <Select label="Do que você precisa?" options={subjectOptions} {...register("subject")} error={errors.subject?.message} />
+              <FancySelect
+                tone="light"
+                label="Do que você precisa?"
+                placeholder="Selecione..."
+                value={watch("subject") || ""}
+                onChange={(v) => setValue("subject", v, { shouldValidate: true })}
+                options={subjectOptions.filter((o) => o.value).map((o) => ({ value: o.value, label: o.label }))}
+                error={errors.subject?.message}
+              />
             )}
             <Input label="Produto ou serviço específico (opcional)" placeholder="Ex.: seguro auto, plano familiar, consórcio de imóvel" {...register("produto")} error={errors.produto?.message} />
             <Input label="E-mail (opcional)" type="email" {...register("email")} error={errors.email?.message} />

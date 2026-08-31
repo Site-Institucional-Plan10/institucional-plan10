@@ -1,5 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { buildLeadWhatsAppUrl, maskPhoneBR } from "@/lib/utils";
+import { FancySelect } from "@/components/plan10/FancySelect";
 
 interface Props {
   interesse: string;
@@ -9,6 +10,10 @@ interface Props {
   contexto?: string;
   /** Produtos do núcleo, para o campo "produto de interesse". */
   produtos?: string[];
+  /** Produto escolhido no tile. Chega pronto, sem a pessoa procurar de novo o que já escolheu. */
+  produtoSelecionado?: string;
+  /** Avisa a página quando a escolha muda aqui dentro, para os dois lados ficarem sincronizados. */
+  onProdutoChange?: (produto: string) => void;
 }
 
 const WA = (
@@ -17,12 +22,20 @@ const WA = (
   </svg>
 );
 
-export function LeadForm({ interesse, perfilInicial = "PF", origem, contexto, produtos }: Props) {
+export function LeadForm({
+  interesse,
+  perfilInicial = "PF",
+  origem,
+  contexto,
+  produtos,
+  produtoSelecionado,
+  onProdutoChange,
+}: Props) {
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [email, setEmail] = useState("");
   const [perfil] = useState<"PF" | "PJ">(perfilInicial);
-  const [produto, setProduto] = useState("");
+  const [produto, setProduto] = useState(produtoSelecionado ?? "");
   const [mensagem, setMensagem] = useState("");
   const [consent, setConsent] = useState(false);
   const [showEmail, setShowEmail] = useState(false);
@@ -31,7 +44,17 @@ export function LeadForm({ interesse, perfilInicial = "PF", origem, contexto, pr
   const [errMsg, setErrMsg] = useState("");
   const [waUrl, setWaUrl] = useState("");
 
+  // A escolha feita no tile manda: quando ela muda, o campo acompanha.
+  useEffect(() => {
+    if (produtoSelecionado !== undefined) setProduto(produtoSelecionado);
+  }, [produtoSelecionado]);
+
   const opcoes = useMemo(() => Array.from(new Set(produtos ?? [])), [produtos]);
+
+  function escolherProduto(valor: string) {
+    setProduto(valor);
+    onProdutoChange?.(valor);
+  }
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -95,15 +118,22 @@ export function LeadForm({ interesse, perfilInicial = "PF", origem, contexto, pr
         </label>
       </div>
       {opcoes.length > 0 && (
-        <label>
-          <span className="eyebrow">Produto de interesse</span>
-          <select value={produto} onChange={(e) => setProduto(e.target.value)}>
-            <option value="">Não sei ainda, quero orientação</option>
-            {opcoes.map((p) => (
-              <option key={p} value={p}>{p}</option>
-            ))}
-          </select>
-        </label>
+        produto ? (
+          <div className="p10-form-pre">
+            <span className="lbl">Produto escolhido</span>
+            <span className="val">{produto}</span>
+            <button type="button" onClick={() => escolherProduto("")}>Trocar</button>
+          </div>
+        ) : (
+          <FancySelect
+            tone="dark"
+            label="Produto de interesse"
+            placeholder="Não sei ainda, quero orientação"
+            value={produto}
+            onChange={escolherProduto}
+            options={opcoes.map((p) => ({ value: p, label: p }))}
+          />
+        )
       )}
       {showEmail ? (
         <label>

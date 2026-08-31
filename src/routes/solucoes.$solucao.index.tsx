@@ -2,17 +2,10 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { findSolucao, type Solucao } from "@/data/solutions";
 import { Route as SolucaoRoute } from "./solucoes.$solucao";
 import { PageTheme, logoFor } from "@/components/plan10/PageTheme";
-import { ImageSlot } from "@/components/plan10/ImageSlot";
+import { heroSolucao, contextoDe } from "@/lib/imagery";
+import { FIN_HUB } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
 
-// Direção de arte por solução (base: catálogo 00.3, coluna Sugestão Visual)
-const ART_SOL: Record<string, string> = {
-  saude: "Cuidado, prevenção e bem-estar. Ambiente sereno, luz natural, acolhimento.",
-  protecao: "Vida e patrimônio protegidos. Família, casa, tom guardião e sólido.",
-  financeiras: "Planejamento e futuro. Sóbrio, sofisticado, acento dourado.",
-  crescimento: "Conquista e mobilidade. Aspiracional, movimento, novo ciclo.",
-  assistencia: "Apoio e conveniência no dia a dia. Prático, próximo, atendimento humano.",
-};
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
   loader: ({ params }): { solucao: Solucao } => {
@@ -42,13 +35,20 @@ export const Route = createFileRoute("/solucoes/$solucao/")({
 
 function SolucaoPage() {
   const { solucao } = SolucaoRoute.useLoaderData() as { solucao: Solucao };
+  
+  // Financeiro tem imagens temáticas próprias; as demais soluções seguem o pool.
+  const heroImg = solucao.slug === "financeiras" ? FIN_HUB.hero : heroSolucao(solucao.slug);
+  const ctxImg = solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src);
   const activeCats = solucao.categorias.filter((c) => c.nucleos.length > 0);
   const wipCats = solucao.categorias.filter((c) => c.nucleos.length === 0);
   const logo = logoFor(solucao.slug);
 
   return (
     <PageTheme slug={solucao.slug}>
-      <header className="p10-hero">
+      <header className="p10-hero has-img">
+        <div className="p10-hero-bg" aria-hidden>
+          <img src={heroImg.src} alt="" loading="eager" />
+        </div>
         <div className="p10-hero-inner">
           {logo && <img src={logo} alt={`Logo ${solucao.nome}`} className="p10-hero-logo" />}
           <p className="eyebrow">Solução Plan10</p>
@@ -65,28 +65,11 @@ function SolucaoPage() {
         </div>
       </nav>
 
-      {/* Imagem editorial da solução, a inserir depois da construção */}
+      {/* Caminhos disponíveis, logo abaixo do hero */}
       <section className="sec">
         <div className="wrap">
-          <ImageSlot ratio="21 / 9" label={`Hero de ${solucao.nome}`} hint={ART_SOL[solucao.slug]} />
-        </div>
-      </section>
-
-      {/* Abertura consultiva */}
-      <section className="sec sec-alt">
-        <div className="wrap">
-          <p className="eyebrow" style={{ color: "var(--vp)" }}>Abertura consultiva</p>
-          <p className="p10-lede" style={{ fontSize: "1.05rem", color: "var(--preto)", maxWidth: 820 }}>
-            {solucao.aberturaConsultiva}
-          </p>
-        </div>
-      </section>
-
-      {/* Categorias */}
-      <section className="sec">
-        <div className="wrap">
-          <p className="eyebrow" style={{ color: "var(--vp)" }}>Caminhos disponíveis</p>
-          <h2 className="p10-h2" style={{ marginBottom: 24 }}>Escolha por onde começar</h2>
+          <p className="eyebrow">Caminhos disponíveis</p>
+          <h2 className="p10-h2" style={{ marginBottom: 28 }}>Escolha por onde começar</h2>
           <div className="p10-cards">
             {activeCats.map((c) => (
               <Link
@@ -96,18 +79,28 @@ function SolucaoPage() {
                 className="p10-card"
               >
                 <h3>{c.nome}</h3>
-                {c.hero && <p>{c.hero}</p>}
                 <span className="arrow">Explorar →</span>
               </Link>
             ))}
             {wipCats.map((c) => (
               <div key={c.slug} className="p10-card disabled" aria-disabled="true">
-                <p className="eyebrow">Em preparação</p>
                 <h3>{c.nome}</h3>
                 <span className="arrow">Em breve</span>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contexto: abertura consultiva + imagem editorial */}
+      <section className="sec sec-alt">
+        <div className="wrap p10-split">
+          <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.35rem, 2.6vw, 2rem)", lineHeight: 1.3, fontWeight: 500, color: "var(--preto)", letterSpacing: "-.015em", margin: 0 }}>
+            {solucao.aberturaConsultiva}
+          </p>
+          <figure className="p10-fig">
+            <img src={ctxImg.src} alt={ctxImg.alt} loading="lazy" />
+          </figure>
         </div>
       </section>
     </PageTheme>

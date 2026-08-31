@@ -12,34 +12,36 @@ export function ParceirosStrip() {
     <section className="pt-sec" aria-labelledby="pt-title">
       <style>{`
         .pt-sec {
-          background: #F7F5F2;
-          padding: 64px 20px;
+          background: #FFFFFF;
+          padding: 64px 24px;
           text-align: center;
           font-family: 'Inter', system-ui, sans-serif;
+          border-top: 1px solid #ECE9E1;
         }
         .pt-wrap { max-width: 1000px; margin: 0 auto; }
         .pt-eyebrow {
-          font-family: 'Barlow Condensed', sans-serif;
-          font-weight: 600; font-size: .78rem;
-          letter-spacing: .22em; text-transform: uppercase;
-          color: #C9A83C; margin: 0;
+          font-family: 'JetBrains Mono', ui-monospace, monospace;
+          font-weight: 500; font-size: .7rem;
+          letter-spacing: .3em; text-transform: uppercase;
+          color: #9A7B23; margin: 0 0 14px;
         }
         .pt-h2 {
-          font-family: 'Playfair Display', Georgia, serif;
-          font-weight: 500; font-size: clamp(1.6rem, 3vw, 2rem);
-          color: #143A61; margin: 12px 0 24px;
+          font-family: 'Schibsted Grotesk', 'Inter', sans-serif;
+          font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+          letter-spacing: -.02em; color: #0E2438; margin: 0 0 26px;
         }
         .pt-names {
           display: flex; flex-wrap: wrap;
-          align-items: baseline; justify-content: center;
-          gap: 10px 22px;
-          font-family: 'Barlow Condensed', sans-serif;
-          letter-spacing: .14em; text-transform: uppercase;
-          color: #5A5A5A; font-size: .94rem;
+          align-items: center; justify-content: center;
+          gap: 14px 28px;
+          font-family: 'JetBrains Mono', ui-monospace, monospace;
+          letter-spacing: .06em;
+          color: #7A8290; font-size: .82rem;
         }
         .pt-names .nm { white-space: nowrap; position: relative; }
         .pt-names .nm:not(:last-child)::after {
-          content: '·'; color: #C9A83C; position: absolute; right: -13px; top: 0;
+          content: ''; width: 4px; height: 4px; border-radius: 999px; background: #CBB27A;
+          position: absolute; right: -16px; top: 50%; transform: translateY(-50%);
         }
       `}</style>
       <div className="pt-wrap">

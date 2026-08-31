@@ -1,17 +1,17 @@
 
-# Scaffold Plan10 — Site Institucional
+# Scaffold Plan10, Site Institucional
 
 Adaptação do prompt original (React Router + Vercel + Resend) para o stack do Lovable: **TanStack Start** (rotas em `src/routes/`), rodando em Cloudflare Workers, com **Lovable Cloud + Lovable Emails** para envio de formulários. Todo o design system, copy, tom de voz, conteúdo das 12 páginas, regras LGPD, hub colors e o sistema do logo são preservados integralmente.
 
-## Fase 1 — Estrutura completa com placeholders
+## Fase 1, Estrutura completa com placeholders
 
 Objetivo: ter as 12 rotas navegáveis, design system aplicado, header/footer/WhatsApp/cookies funcionais, formulários enviando e-mail, e cada página renderizando todas as seções na ordem correta com conteúdo placeholder claramente marcado.
 
 ### 1. Design system & fundação
 - `src/styles.css`: tokens de marca (orange, blue, amber, ink, escala neutra, 5 hub colors) em oklch + utilitários para JetBrains Mono (`font-spec`).
-- Importar Plus Jakarta Sans (300–800) e JetBrains Mono via `<link>` em `__root.tsx`.
+- Importar Plus Jakarta Sans (300,800) e JetBrains Mono via `<link>` em `__root.tsx`.
 - Type scale (display/h1/h2/h3/eyebrow/body/small/spec) como classes utilitárias.
-- `Plan10Logo` SVG inline com props `variant`, `hubColor`, `light`, `size` — símbolo sempre laranja, "10" + descritivo recebem `hubColor`.
+- `Plan10Logo` SVG inline com props `variant`, `hubColor`, `light`, `size`, símbolo sempre laranja, "10" + descritivo recebem `hubColor`.
 
 ### 2. Layout & componentes compartilhados
 - `__root.tsx` recebe Header fixo (com blur ao rolar), Outlet, Footer, `WhatsAppButton`, `CookieBanner`, HelmetProvider para SEO.
@@ -31,7 +31,7 @@ Em `src/routes/`:
 ### 4. Dados estáticos
 - `src/data/verticals.ts`, `testimonials.ts`, `partners.ts`, `content.ts` exatamente como definido no prompt.
 
-### 5. Home — 10 seções na ordem
+### 5. Home, 10 seções na ordem
 HeroBanner → ProofNumbers → VerticalCards → WhyPlan10 → HowItWorks → Testimonials → Loja Virtual (tabs com RedirectPopup) → Partners → ContactForm → FAQ. Cada seção com copy e estrutura do prompt; placeholders marcados com `{/* PLACEHOLDER */}` ou `{/* TODO */}`.
 
 ### 6. Páginas verticais (template único)
@@ -61,11 +61,11 @@ Hero + bloco `max-w-3xl` com seções listadas e `{/* TODO: texto jurídico */}`
 - Header/Footer/WhatsApp/Cookies em todas as páginas.
 - Formulário envia e-mail real (Lovable Emails).
 - Hub colors aplicados corretamente em cada vertical, símbolo sempre laranja.
-- Sem em dash (—) na UI visível.
+- Sem em dash (, ) na UI visível.
 
 ---
 
-## Fase 2 — Polimento (depois da sua aprovação da Fase 1)
+## Fase 2, Polimento (depois da sua aprovação da Fase 1)
 
 - Animações Framer Motion (page transitions, reveals on scroll, count-up nos números).
 - Microinterações de hover finalizadas (border accent expandindo nos cards, underline animado na nav).

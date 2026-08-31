@@ -7069,45 +7069,6 @@ export const solucoesLiberadas = [
                 "crossSelling": [
                   "Caução para locação pode se conectar a planejamento patrimonial, proteção de renda, seguros, garantias e soluções de liquidez."
                 ]
-              },
-              {
-                "id": "fianca-bancaria-para-aluguel",
-                "nome": "Fiança bancária para aluguel",
-                "perfil": "PF",
-                "descricao": "Caminho consultivo para fiança bancária, estruturando objetivo, horizonte, elegibilidade, garantia ou patrimônio com critério.",
-                "caracteristicas": [
-                  "Perfil, documentação, condições, custos, horizontes, garantias, elegibilidade e comparação de alternativas."
-                ],
-                "itensInclusos": [
-                  "Análise de elegibilidade",
-                  "Estrutura de garantia",
-                  "Documentação contratual",
-                  "Horizontes e valores definidos",
-                  "Formalização da operação."
-                ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
-                "beneficios": "Organiza a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em fiança bancária, o valor está na aderência ao uso real e ao nível de exposição.",
-                "fechamento": "A escolha ganha qualidade, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para fiança bancária, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
-                "ctaPrimario": "Organizar reserva e futuro",
-                "ctaSecundario": "Falar com consultor",
-                "linkPorto": "A validar",
-                "faq": [
-                  {
-                    "q": "Que decisão fiança bancária ajuda a organizar no cenário de garantias de aluguel?",
-                    "a": "Ajuda a organizar garantias de aluguel com clareza sobre finalidade, prazo, documentação, custo total, elegibilidade e impacto no planejamento financeiro."
-                  },
-                  {
-                    "q": "O que precisa ser comparado em fiança bancária no cenário de garantias de aluguel?",
-                    "a": "Compare custo total, prazo, exigências documentais, garantias, flexibilidade, riscos de contratação e aderência ao objetivo principal."
-                  },
-                  {
-                    "q": "Quando a orientação consultiva é decisiva em fiança bancária no cenário de garantias de aluguel?",
-                    "a": "É decisiva quando a solução envolve valores relevantes, impacto patrimonial, compromissos formais ou alternativas com condições difíceis de comparar sem apoio técnico."
-                  }
-                ],
-                "crossSelling": [
-                  "Fiança bancária pode se conectar a planejamento patrimonial, proteção de renda, seguros, garantias e soluções de liquidez."
-                ]
               }
             ]
           }
@@ -7907,7 +7868,7 @@ export const solucoesLiberadas = [
               {
                 "id": "cartoes-de-credito-premium",
                 "nome": "Cartões de crédito premium",
-                "perfil": "PF",
+                "perfil": "PJ",
                 "descricao": "Arranjo de escolha para cartões de crédito premium, estruturando objetivo, horizonte, elegibilidade, garantia ou patrimônio com critério.",
                 "caracteristicas": [
                   "Perfil, documentação, condições, custos, horizontes, garantias, elegibilidade e comparação de alternativas."
