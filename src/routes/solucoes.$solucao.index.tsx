@@ -39,7 +39,13 @@ function SolucaoPage() {
   // Financeiro tem imagens temáticas próprias; as demais soluções seguem o pool.
   const heroImg = solucao.slug === "financeiras" ? FIN_HUB.hero : heroSolucao(solucao.slug);
   const ctxImg = solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src);
-  const activeCats = solucao.categorias.filter((c) => c.nucleos.length > 0);
+  // No financeiro, ordena por relevância comercial (crédito e financiamentos primeiro).
+  const FIN_ORDER = ["credito-e-liquidez", "financiamentos", "investimentos-previdencia-e-reservas", "servicos-financeiros-e-contas", "garantias-financeiras", "capitalizacao"];
+  const orderIdx = (slug: string) => { const i = FIN_ORDER.indexOf(slug); return i === -1 ? 99 : i; };
+  const activeCatsRaw = solucao.categorias.filter((c) => c.nucleos.length > 0);
+  const activeCats = solucao.slug === "financeiras"
+    ? [...activeCatsRaw].sort((a, b) => orderIdx(a.slug) - orderIdx(b.slug))
+    : activeCatsRaw;
   const wipCats = solucao.categorias.filter((c) => c.nucleos.length === 0);
   const logo = logoFor(solucao.slug);
 

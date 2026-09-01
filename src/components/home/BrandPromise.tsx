@@ -10,7 +10,7 @@ export function BrandPromise() {
         .bp {
           position: relative; isolation: isolate; overflow: hidden;
           color: #F4EFE3; font-family: 'Inter', system-ui, sans-serif;
-          padding: 84px 24px;
+          padding: 52px 24px;
         }
         .bp-bg { position: absolute; inset: 0; z-index: -2; }
         .bp-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
@@ -35,7 +35,7 @@ export function BrandPromise() {
           font-size: clamp(1rem, 1.4vw, 1.14rem); line-height: 1.62;
           color: rgba(244,239,227,.8); margin: 22px 0 0; max-width: 52ch;
         }
-        @media (max-width: 720px) { .bp { padding: 64px 20px; } }
+        @media (max-width: 720px) { .bp { padding: 40px 20px; } }
       `}</style>
       <div className="bp-bg" aria-hidden>
         <img src="/assets/curated/still-envelopes.jpg" alt="" loading="lazy" />

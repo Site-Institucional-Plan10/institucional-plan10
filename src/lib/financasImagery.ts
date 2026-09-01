@@ -10,7 +10,7 @@ import type { CuratedImage } from "@/lib/imagery";
 
 const C = "/assets/curated/";
 const IMG = {
-  calc:      { src: C + "cand-credito-calc.jpg",     alt: "Calculadora sobre notas e bloco de anotações" },
+  calc:      { src: C + "cand-credito-calc.jpg",     alt: "Documentos com caneta e óculos sobre a mesa de trabalho" },
   keys:      { src: C + "cand-financ-casanova.jpg",  alt: "Mão segurando as chaves de um imóvel novo" },
   apt:       { src: C + "cand-aluguel-apt.jpg",       alt: "Mão com as chaves na porta de um apartamento moderno" },
   jar:       { src: C + "cand-capit-jarra.jpg",       alt: "Pote de vidro com moedas e uma pequena planta" },
@@ -20,7 +20,7 @@ const IMG = {
   chart:     { src: C + "cand-invest-grafico.jpg",    alt: "Gráfico de mercado em tendência de alta" },
   card:      { src: C + "cand-servic-cartao.jpg",     alt: "Smartphone e cartão de crédito para pagamento digital" },
   mobile:    { src: C + "cand-conta-mobile.jpg",      alt: "Celular e cartão sobre a mesa, conta digital" },
-  docs:      { src: C + "cand-hub-docs.jpg",          alt: "Documentos financeiros e planejamento sobre a mesa" },
+  docs:      { src: C + "cand-hub-docs.jpg",          alt: "Relatório de estratégia e laptop vistos de cima" },
   hourglass: { src: C + "cand-previd-tempo.jpg",      alt: "Ampulheta ao lado de moedas empilhadas" },
   toll:      { src: C + "cand-tags-pedagio.jpg",      alt: "Praça de pedágio com várias faixas, vista aérea" },
   cardsGold: { src: C + "cand-cartoes-gold.jpg",      alt: "Cartões de crédito premium em destaque" },
