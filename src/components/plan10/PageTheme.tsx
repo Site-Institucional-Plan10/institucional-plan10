@@ -115,7 +115,7 @@ const CSS = `
 .plan10-scope .p10-crumb .current { color: var(--preto); }
 
 /* Sections: compacto premium */
-.plan10-scope .sec { padding: 60px 24px; }
+.plan10-scope .sec { padding: 60px 24px; background: #fff; }
 @media (min-width: 768px) { .plan10-scope .sec { padding: 84px 40px; } }
 .plan10-scope .sec-alt { background: var(--vs); }
 .plan10-scope .sec-dark { background: linear-gradient(150deg, var(--hero) 0%, var(--card) 100%); color: #F1EFEA; }
@@ -312,6 +312,14 @@ const CSS = `
 /* Strip: lista "·" inline discreta (modalidades / mapa) */
 .plan10-scope .p10-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .plan10-scope .p10-strip span { font-family: var(--fb); font-size: .8rem; color: var(--ctxt); border: 1px solid var(--c2); border-radius: 999px; padding: 6px 13px; background: var(--c1); }
+
+/* Variantes em faixa escura: chips, placards e nota ganham contraste sobre navy */
+.plan10-scope .sec-dark .p10-strip span { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.2); color: rgba(244,240,232,.86); }
+.plan10-scope .sec-dark .p10-placard { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.14); }
+.plan10-scope .sec-dark .p10-placard .txt { color: #F4F0E8; }
+.plan10-scope .sec-dark .p10-placard .n { color: var(--gold-hi); }
+.plan10-scope .sec-dark .p10-note { border-left-color: var(--gold-hi); }
+.plan10-scope .sec-dark .p10-fig { border-color: rgba(255,255,255,.14); box-shadow: 0 24px 60px rgba(0,0,0,.4); }
 
 /* Duas colunas de texto (abertura + subhero) */
 .plan10-scope .p10-two { display: grid; gap: 18px 46px; grid-template-columns: 1fr; }

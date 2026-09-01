@@ -132,6 +132,7 @@ function CategoriaPage() {
             <div>
               <p className="eyebrow" style={{ color: "var(--vp)" }}>Entenda a decisão</p>
               <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.2rem, 2.2vw, 1.65rem)", lineHeight: 1.38, fontWeight: 500, color: "var(--preto)", letterSpacing: "-.015em", margin: "12px 0 0" }}>{fin.abertura}</p>
+              {fin.subHero && <p className="p10-lede" style={{ marginTop: 16 }}>{fin.subHero}</p>}
             </div>
             <figure className="p10-fig">
               <img src={ctxImg.src} alt={ctxImg.alt} loading="lazy" />
@@ -149,10 +150,10 @@ function CategoriaPage() {
         </div>
       </section>
 
-      {/* O que você ganha: bloco de valor */}
-      <section className="sec">
+      {/* O que você ganha: bloco de valor em faixa escura (contraste e vida) */}
+      <section className="sec sec-dark">
         <div className="wrap">
-          <p className="eyebrow" style={{ color: "var(--vp)" }}>O que você ganha</p>
+          <p className="eyebrow">O que você ganha</p>
           {valorPlacards ? (
             <>
               <h2 className="p10-h2" style={{ marginBottom: 4 }}>Uma decisão com mais controle</h2>
@@ -166,14 +167,15 @@ function CategoriaPage() {
               </div>
             </>
           ) : (
-            <h2 className="p10-h2">{fin.valor}</h2>
+            <h2 className="p10-h2" style={{ maxWidth: "20ch" }}>{fin.valor}</h2>
           )}
+          {fin.textoConsultivo && <p className="p10-lede" style={{ marginTop: 18 }}>{fin.textoConsultivo}</p>}
         </div>
       </section>
 
       {/* FAQ */}
       {fin.faq.length > 0 && (
-        <section className="sec sec-alt">
+        <section className="sec">
           <div className="wrap">
             <p className="eyebrow" style={{ color: "var(--vp)" }}>Perguntas frequentes</p>
             <h2 className="p10-h2" style={{ marginBottom: 26 }}>Antes de decidir</h2>
