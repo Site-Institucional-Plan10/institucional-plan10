@@ -46,7 +46,7 @@ function SolucoesOnlinePage() {
   return (
     <div className="solp">
       <style>{`
-        .solp { background: #F6F4EF; color: #0B1A2F; font-family: 'Inter', system-ui, sans-serif; }
+        .solp { background: #F4F2EC; color: #0B1A2F; font-family: 'Inter', system-ui, sans-serif; }
         .solp-hero { background: linear-gradient(150deg, #0E2438 0%, #0B1D2E 100%); color: #F1EFEA; padding: 132px 24px 60px; }
         .solp-hero-in { max-width: 1080px; margin: 0 auto; }
         .solp-eyebrow { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; font-size: .7rem; letter-spacing: .32em; text-transform: uppercase; color: rgba(241,239,234,.6); margin: 0 0 20px; display: inline-flex; align-items: center; gap: 12px; }
@@ -54,8 +54,8 @@ function SolucoesOnlinePage() {
         .solp-h1 { font-family: 'Schibsted Grotesk','Inter',sans-serif; font-weight: 500; font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.1; letter-spacing: -.028em; margin: 0; max-width: 20ch; }
         .solp-lede { font-size: 1.08rem; line-height: 1.6; color: rgba(241,239,234,.76); margin: 22px 0 0; max-width: 56ch; }
         .solp-body { max-width: 1080px; margin: 0 auto; padding: 40px 24px 96px; }
-        .solp-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; position: sticky; top: 78px; background: #F6F4EF; padding: 16px 0; z-index: 20; }
-        .solp-chip { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; border: 1px solid #E0DBD0; background: transparent; color: #5B6472; cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
+        .solp-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; position: sticky; top: 78px; background: #F4F2EC; padding: 16px 0; z-index: 20; }
+        .solp-chip { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; padding: 11px 17px; border-radius: 999px; border: 1px solid #E0DBD0; background: transparent; color: #5B6472; cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
         .solp-chip:hover { border-color: #B08D57; color: #0E2438; }
         .solp-chip[aria-pressed="true"] { background: #0E2438; border-color: #0E2438; color: #F1EFEA; }
         .solp-group { margin-top: 34px; }

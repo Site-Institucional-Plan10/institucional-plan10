@@ -89,7 +89,7 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
               <button
                 type="button"
                 onClick={() => setShowMessage(true)}
-                className="inline-flex items-center gap-2 self-start text-sm font-semibold text-orange hover:underline"
+                className="inline-flex items-center gap-2 self-start py-2 text-sm font-semibold text-orange hover:underline"
               >
                 <Plus size={14} /> Adicionar mensagem (opcional)
               </button>
