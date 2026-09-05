@@ -23,9 +23,8 @@ export function ParceirosStrip() {
   return (
     <section className="pt-sec" aria-labelledby="pt-title">
       <style>{`
-        .pt-sec { background: #FFFFFF; padding: 58px 0 62px; text-align: center; font-family: 'Inter', system-ui, sans-serif; border-top: 1px solid #ECE9E1; }
-        .pt-head { max-width: 1000px; margin: 0 auto 34px; padding: 0 24px; }
-        .pt-eyebrow { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; font-size: .7rem; letter-spacing: .3em; text-transform: uppercase; color: #9A7B23; margin: 0 0 14px; }
+        .pt-sec { background: #FFFFFF; padding: 34px 0 36px; text-align: center; font-family: 'Inter', system-ui, sans-serif; border-top: 1px solid #ECE9E1; }
+        .pt-head { max-width: 1000px; margin: 0 auto 22px; padding: 0 24px; }
         .pt-h2 { font-family: 'Schibsted Grotesk', 'Inter', sans-serif; font-weight: 600; font-size: clamp(1.4rem, 2.6vw, 1.9rem); letter-spacing: -.02em; color: #0E2438; margin: 0; }
         .pt-marquee { position: relative; overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
         .pt-track { display: flex; width: max-content; animation: ptmarq 46s linear infinite; }
@@ -43,7 +42,6 @@ export function ParceirosStrip() {
         }
       `}</style>
       <div className="pt-head">
-        <p className="pt-eyebrow">Parceiros</p>
         <h2 id="pt-title" className="pt-h2">Empresas que confiam no nosso trabalho</h2>
       </div>
       <div className="pt-marquee">

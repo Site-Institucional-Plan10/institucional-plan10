@@ -25,7 +25,6 @@ function SolucoesIndex() {
       {/* Hero, fala premium oficial (arquivo 05) */}
       <header className="p10-hero">
         <div className="p10-hero-inner">
-          <p className="eyebrow">As Soluções Plan10</p>
           <h1>Soluções Plan10 para cada fase da vida e dos negócios.</h1>
           <p className="lede">
             Saúde, proteção, finanças, crescimento e assistência conectados em uma única
@@ -74,7 +73,6 @@ function SolucoesIndex() {
       {/* Fecho editorial */}
       <section className="sec sec-dark">
         <div className="wrap">
-          <p className="eyebrow">Método Plan10</p>
           <h2 className="p10-h2">Consultoria orientada por método</h2>
           <p className="p10-lede">
             A Plan10 trabalha com escuta, contexto e critério. Cada solução é apresentada com abertura

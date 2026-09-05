@@ -75,7 +75,6 @@ function CategoriaPage() {
             <img src={heroImg.src} alt="" loading="eager" />
           </div>
           <div className="p10-hero-inner">
-            <p className="eyebrow">{s.nome}</p>
             <h1>{c.nome}</h1>
             {c.hero && <p className="lede">{c.hero}</p>}
           </div>
@@ -83,7 +82,6 @@ function CategoriaPage() {
         <Crumb s={s} c={c} />
         <section className="sec sec-alt">
           <div className="wrap">
-            <p className="eyebrow" style={{ color: "var(--vp)" }}>Modalidades</p>
             <h2 className="p10-h2" style={{ marginBottom: 24 }}>Escolha uma modalidade para explorar</h2>
             {nucleos}
           </div>
@@ -104,7 +102,6 @@ function CategoriaPage() {
           <img src={heroImg.src} alt="" loading="eager" />
         </div>
         <div className="p10-hero-inner">
-          <p className="eyebrow">Soluções financeiras</p>
           <h1>{c.nome}</h1>
           <p className="lede">{fin.hero}</p>
         </div>
@@ -115,7 +112,7 @@ function CategoriaPage() {
       {/* Caminhos: conversão primeiro, logo abaixo do hero */}
       <section className="sec">
         <div className="wrap">
-          <p className="eyebrow" style={{ color: "var(--vp)" }}>
+          <p className="eyebrow">
             {c.nucleos.length > 1 ? "Escolha um caminho" : "Comece por aqui"}
           </p>
           <h2 className="p10-h2" style={{ marginBottom: 26 }}>
@@ -130,7 +127,7 @@ function CategoriaPage() {
         <div className="wrap rhythm">
           <div className="p10-split">
             <div>
-              <p className="eyebrow" style={{ color: "var(--vp)" }}>Entenda a decisão</p>
+              <p className="eyebrow">Entenda a decisão</p>
               <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.2rem, 2.2vw, 1.65rem)", lineHeight: 1.38, fontWeight: 500, color: "var(--preto)", letterSpacing: "-.015em", margin: "12px 0 0" }}>{fin.abertura}</p>
               {fin.subHero && <p className="p10-lede" style={{ marginTop: 16 }}>{fin.subHero}</p>}
             </div>
@@ -139,7 +136,7 @@ function CategoriaPage() {
             </figure>
           </div>
           <div>
-            <p className="eyebrow" style={{ color: "var(--vp)" }}>Quando faz sentido</p>
+            <p className="eyebrow">Quando faz sentido</p>
             <div className="p10-note" style={{ marginTop: 12 }}><p>{fin.criterios}</p></div>
             {modal.length > 0 && (
               <div className="p10-strip">
@@ -177,7 +174,6 @@ function CategoriaPage() {
       {fin.faq.length > 0 && (
         <section className="sec">
           <div className="wrap">
-            <p className="eyebrow" style={{ color: "var(--vp)" }}>Perguntas frequentes</p>
             <h2 className="p10-h2" style={{ marginBottom: 26 }}>Antes de decidir</h2>
             <div className="p10-faq">
               {fin.faq.map((f, i) => (
@@ -195,7 +191,6 @@ function CategoriaPage() {
       <section className="sec sec-dark">
         <div className="wrap" style={{ display: "grid", gap: 28 }}>
           <div>
-            <p className="eyebrow">Próximo passo</p>
             <h2 className="p10-h2">Veja as opções com orientação</h2>
             <p className="p10-lede">Escolha uma linha e avance com o apoio de um consultor, sem compromisso.</p>
           </div>

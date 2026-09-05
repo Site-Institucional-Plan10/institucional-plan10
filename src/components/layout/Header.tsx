@@ -74,7 +74,7 @@ function highlight(text: string, query: string) {
   return (
     <span>
       {text.slice(0, idx)}
-      <span style={{ color: "#E05A20", fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</span>
+      <span style={{ color: "#C45016", fontWeight: 700 }}>{text.slice(idx, idx + query.length)}</span>
       {text.slice(idx + query.length)}
     </span>
   );
@@ -294,7 +294,7 @@ export function Header() {
                   params={{ solucao: l.solucao }}
                   className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
                   style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#E05A20" }, className: "underline underline-offset-4" }}
+                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
                 >
                   <span
                     className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
@@ -309,7 +309,7 @@ export function Header() {
                   to={l.to}
                   className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
                   style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#E05A20" }, className: "underline underline-offset-4" }}
+                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
                 >
                   <span className="group-hover:text-orange transition-colors">{l.label}</span>
                   <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />

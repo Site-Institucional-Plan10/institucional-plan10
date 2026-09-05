@@ -36,28 +36,21 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
   return (
     <section className="cf2">
       <style>{`
-        .cf2 { background: #FFFFFF; padding: 84px 0; }
-        .cf2 .cf2-eyebrow {
-          font-family: 'JetBrains Mono', ui-monospace, monospace;
-          font-weight: 500; font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
-          color: #9A7B23; margin: 0 0 14px; display: inline-flex; align-items: center; gap: 12px;
-        }
-        .cf2 .cf2-eyebrow::before { content:""; width: 26px; height: 1px; background: #B08D57; }
+        .cf2 { background: #FFFFFF; padding: 48px 0 52px; }
         .cf2 .cf2-h2 {
           font-family: 'Schibsted Grotesk','Inter',sans-serif; font-weight: 600;
           font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.08; letter-spacing: -.025em;
-          color: #0E2438; margin: 0 0 16px;
+          color: #0E2438; margin: 0 0 12px;
         }
       `}</style>
-      <div className="container-x grid gap-10 lg:grid-cols-2">
+      <div className="container-x grid gap-7 lg:grid-cols-2">
         <div>
-          <p className="cf2-eyebrow">Fale com a Plan10</p>
           <h2 className="cf2-h2">{title}</h2>
-          {subtitle && <p className="text-neutral-700 mb-8 max-w-md">{subtitle}</p>}
+          {subtitle && <p className="text-neutral-700 mb-5 max-w-md">{subtitle}</p>}
 
           <form
             onSubmit={handleSubmit((d) => onSubmit(d, source))}
-            className="grid gap-4"
+            className="grid gap-3"
             noValidate
           >
             <Input label="Nome completo" {...register("name")} error={errors.name?.message} />
@@ -110,11 +103,11 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
               <input
                 type="checkbox"
                 {...register("consent")}
-                className="mt-1 h-4 w-4 rounded border-neutral-300 text-orange focus:ring-orange"
+                className="mt-0.5 h-5 w-5 rounded border-neutral-300 text-orange focus:ring-orange"
               />
               <span>
                 Li e concordo com a{" "}
-                <Link to="/privacidade" className="font-semibold text-orange underline">
+                <Link to="/privacidade" className="font-semibold underline" style={{ color: "#C45016" }}>
                   Política de Privacidade
                 </Link>{" "}
                 e o tratamento dos meus dados conforme a LGPD.
@@ -147,9 +140,9 @@ export function ContactForm({ source, defaultSubject, lockedSubject, title = "Fa
         </div>
 
         <div className="lg:pl-8">
-          <div className="rounded-2xl bg-white p-8 shadow-sm border border-neutral-200 space-y-5">
+          <div className="rounded-2xl bg-white p-6 shadow-sm border border-neutral-200 space-y-4">
             <h3 className="font-h3">Outras formas de contato</h3>
-            <ul className="space-y-4 text-sm">
+            <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MessageCircle className="text-orange mt-0.5" size={20} />
                 <div>

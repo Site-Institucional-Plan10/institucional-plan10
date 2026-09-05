@@ -89,8 +89,8 @@ export function Footer() {
 
   return (
     <footer style={{ background: "#111111" }} className="text-white border-t border-white/10">
-      <div className="container-x py-12 md:py-16">
-        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div className="container-x py-8 md:py-10">
+        <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <img src="/assets/logos/logo-plan10.png" alt="Plan10" style={{ height: 40, width: "auto" }} />
             <p className="mt-4 text-sm max-w-xs leading-[1.7]" style={{ color: "rgba(255,255,255,0.65)" }}>
@@ -100,10 +100,10 @@ export function Footer() {
         </div>
 
         {/* Desktop, 4 columns */}
-        <div className="hidden md:grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="hidden md:grid gap-7 md:grid-cols-2 lg:grid-cols-4">
           {sections.map((s) => (
             <div key={s.title}>
-              <h4 style={headerStyle}>{s.title}</h4>
+              <h3 style={headerStyle}>{s.title}</h3>
               <ul className="space-y-2.5">
                 {s.links.map((l) => (
                   <li key={l.label}><FooterLink link={l} /></li>
@@ -124,7 +124,7 @@ export function Footer() {
                   onClick={() => setOpenIdx(open ? null : i)}
                   className="w-full flex items-center justify-between text-left"
                   style={{
-                    padding: "16px 0",
+                    padding: "11px 0",
                     fontSize: "0.95rem",
                     fontWeight: 600,
                     color: "#FFFFFF",
@@ -151,7 +151,7 @@ export function Footer() {
                   <div style={{ overflow: "hidden" }}>
                     <ul style={{ paddingBottom: 12 }}>
                       {s.links.map((l) => (
-                        <li key={l.label} style={{ padding: "8px 0 8px 8px" }}>
+                        <li key={l.label} style={{ padding: "5px 0 5px 8px" }}>
                           <FooterLink link={l} />
                         </li>
                       ))}
@@ -165,7 +165,7 @@ export function Footer() {
         </div>
 
         {/* Social icons */}
-        <div className="mt-8 flex gap-3">
+        <div className="mt-5 flex gap-3">
           {[
             { Icon: Instagram, label: "Instagram Plan10", href: "https://www.instagram.com/plan10seguros/" },
             { Icon: Facebook, label: "Facebook Plan10", href: "https://www.facebook.com/plan10seguros/" },
@@ -187,7 +187,7 @@ export function Footer() {
 
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div
-          className="container-x py-5 flex flex-col md:flex-row gap-2 md:gap-4 items-center justify-between"
+          className="container-x py-3.5 flex flex-col md:flex-row gap-2 md:gap-4 items-center justify-between"
           style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.40)" }}
         >
           <span>© 2026 Plan10 Corretora. Uma empresa Plan Group.</span>

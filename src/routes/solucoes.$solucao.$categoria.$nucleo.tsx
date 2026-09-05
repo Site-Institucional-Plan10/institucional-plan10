@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/plan10/ProductCard";
 import { ProductChooser } from "@/components/plan10/ProductChooser";
 import { LeadForm } from "@/components/plan10/LeadForm";
 
-import { FONTS, whatsappUrl, aberturaLimpa } from "@/lib/plan10";
+import { FONTS, whatsappUrl, aberturaLimpa, frentesConectadas } from "@/lib/plan10";
 import { finContentFor } from "@/data/financasContent";
 import { heroCategoria, heroNucleo, contextoDe, pickByOrder } from "@/lib/imagery";
 import { finNucleoImgs } from "@/lib/financasImagery";
@@ -66,6 +66,9 @@ function NucleoPage() {
     [n],
   );
 
+  // frentes citadas nas frases de cross-selling, sem repetir o nome do produto
+  const frentes = useMemo(() => frentesConectadas(cross), [cross]);
+
   // Cada modalidade recebe fotos próprias: a posição na lista separa as irmãs, e
   // a foto da categoria fica bloqueada para o produto não repetir a página de cima.
   const iCat = Math.max(0, s.categorias.findIndex((x) => x.slug === c.slug));
@@ -98,7 +101,6 @@ function NucleoPage() {
           <img src={hero.src} alt="" loading="eager" />
         </div>
         <div className="p10-hero-inner">
-          <p className="eyebrow">{c.nome}</p>
           <h1>{n.nome}</h1>
           {n.hero && <p className="lede">{n.hero}</p>}
           {n.blocoValor.length > 0 && (
@@ -118,8 +120,12 @@ function NucleoPage() {
           <span className="sep">/</span>
           <Link to="/solucoes/$solucao" params={{ solucao: s.slug }}>{s.nome}</Link>
           <span className="sep">/</span>
-          <Link to="/solucoes/$solucao/$categoria" params={{ solucao: s.slug, categoria: c.slug }}>{c.nome}</Link>
-          <span className="sep">/</span>
+          {c.nome !== n.nome && (
+            <>
+              <Link to="/solucoes/$solucao/$categoria" params={{ solucao: s.slug, categoria: c.slug }}>{c.nome}</Link>
+              <span className="sep">/</span>
+            </>
+          )}
           <span className="current">{n.nome}</span>
         </div>
       </nav>
@@ -129,7 +135,6 @@ function NucleoPage() {
         <div className="wrap">
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 16, marginBottom: 8 }}>
             <div>
-              <p className="eyebrow" style={{ color: "var(--vp)" }}>Opções disponíveis</p>
               <h2 className="p10-h2" style={{ marginBottom: 0 }}>Escolha a opção certa para o seu momento</h2>
             </div>
             {temPF && temPJ && <PerfilToggle value={perfil} onChange={setPerfil} />}
@@ -157,7 +162,7 @@ function NucleoPage() {
       <section className="sec sec-alt">
         <div className="wrap p10-split">
           <div>
-            <p className="eyebrow" style={{ color: "var(--vp)" }}>Sobre esta escolha</p>
+            <p className="eyebrow">Sobre esta escolha</p>
             <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.25rem, 2.3vw, 1.7rem)", lineHeight: 1.38, fontWeight: 500, color: "var(--preto)", letterSpacing: "-.015em", margin: "12px 0 0" }}>
               {finContentFor(c.slug)?.subHero ?? aberturaLimpa(n.aberturaConsultiva)}
             </p>
@@ -172,7 +177,6 @@ function NucleoPage() {
       <section className="sec sec-dark" id="contato">
         <div className="wrap" style={{ display: "grid", gap: 32, gridTemplateColumns: "1fr", alignItems: "start" }}>
           <div>
-            <p className="eyebrow">Fale com a Plan10</p>
             <h2 className="p10-h2">Um consultor retorna com o próximo passo</h2>
             <p className="p10-lede">Conte seu momento. A resposta é orientada, sem excesso comercial.</p>
           </div>
@@ -192,20 +196,43 @@ function NucleoPage() {
       {cross.length > 0 && (
         <section className="sec sec-alt">
           <div className="wrap">
-            <p className="eyebrow" style={{ color: "var(--vp)" }}>Conexões próximas</p>
-            <h2 className="p10-h2" style={{ marginBottom: 16 }}>Também pode fazer sentido</h2>
-            <div className="cross">
-              {cross.map((cs) => (
-                <a
-                  key={cs}
-                  href={whatsappUrl(`Olá! Também tenho interesse em ${cs}.`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {cs}
-                </a>
-              ))}
-            </div>
+            <h2 className="p10-h2" style={{ marginBottom: 0 }}>Também pode fazer sentido</h2>
+            {frentes.length > 1 ? (
+              <>
+                <p className="p10-lede">
+                  Frentes que costumam ser organizadas junto com {n.nome.toLowerCase()}.
+                </p>
+                <div className="cross-grid">
+                  {frentes.map((f) => (
+                    <a
+                      key={f}
+                      className="cross-card"
+                      href={whatsappUrl(`Olá! Gostaria de entender ${f} junto com ${n.nome}.`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="cross-card-nome">{f}</span>
+                      <span className="cross-card-go" aria-hidden>
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="cross" style={{ marginTop: 16 }}>
+                {cross.map((cs) => (
+                  <a
+                    key={cs}
+                    href={whatsappUrl(`Olá! Também tenho interesse em ${cs}.`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {cs}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       )}

@@ -14,16 +14,62 @@ export type Palette = {
 // sóbrio da solução; vp/va = acento da solução (ouro no financeiro). vs = ivory
 // morno único (mata o excesso de pastel/cinza-frio; a riqueza vem de foto + ouro).
 export const PALETTES: Record<string, Palette> = {
-  saude:       { hero: "#0E2A22", ve: "#123A2E", card: "#0B221B", alt: "#C8EDD9", vs: "#F1EFE8", vp: "#4F7D60", va: "#C6A24A" },
-  protecao:    { hero: "#0E2438", ve: "#12324E", card: "#0B1D2E", alt: "#D6E8F7", vs: "#F1EFE8", vp: "#345876", va: "#C6A24A" },
-  financeiras: { hero: "#0A1929", ve: "#12324E", card: "#081422", alt: "#D6E8F7", vs: "#F1EFE8", vp: "#A9843C", va: "#C6A24A" },
-  crescimento: { hero: "#241A38", ve: "#2E2348", card: "#1A1330", alt: "#DDD5F0", vs: "#F1EFE8", vp: "#5F4E7B", va: "#C6A24A" },
-  assistencia: { hero: "#2A1608", ve: "#3A2416", card: "#1F1005", alt: "#F0D4C2", vs: "#F1EFE8", vp: "#A2602F", va: "#C6A24A" },
+  saude: {
+    hero: "#0E2A22",
+    ve: "#123A2E",
+    card: "#0B221B",
+    alt: "#C8EDD9",
+    vs: "#F1EFE8",
+    vp: "#4F7D60",
+    va: "#C6A24A",
+  },
+  protecao: {
+    hero: "#0E2438",
+    ve: "#12324E",
+    card: "#0B1D2E",
+    alt: "#D6E8F7",
+    vs: "#F1EFE8",
+    vp: "#345876",
+    va: "#C6A24A",
+  },
+  financeiras: {
+    hero: "#0A1929",
+    ve: "#12324E",
+    card: "#081422",
+    alt: "#D6E8F7",
+    vs: "#F1EFE8",
+    vp: "#A9843C",
+    va: "#C6A24A",
+  },
+  crescimento: {
+    hero: "#241A38",
+    ve: "#2E2348",
+    card: "#1A1330",
+    alt: "#DDD5F0",
+    vs: "#F1EFE8",
+    vp: "#5F4E7B",
+    va: "#C6A24A",
+  },
+  assistencia: {
+    hero: "#2A1608",
+    ve: "#3A2416",
+    card: "#1F1005",
+    alt: "#F0D4C2",
+    vs: "#F1EFE8",
+    vp: "#A2602F",
+    va: "#C6A24A",
+  },
 };
 
 // Hub institucional (página /solucoes)
 export const HUB_PALETTE: Palette = {
-  hero: "#0E2438", ve: "#12324E", card: "#0B1D2E", alt: "#F5EBC7", vs: "#F1EFE8", vp: "#A9843C", va: "#C6A24A",
+  hero: "#0E2438",
+  ve: "#12324E",
+  card: "#0B1D2E",
+  alt: "#F5EBC7",
+  vs: "#F1EFE8",
+  vp: "#A9843C",
+  va: "#C6A24A",
 };
 
 export function paletteFor(slug: string): Palette {
@@ -103,12 +149,13 @@ const CSS = `
 /* Eyebrow em mono */
 .plan10-scope .eyebrow {
   font-family: var(--fl); font-weight: 500; font-size: .7rem;
-  letter-spacing: .28em; text-transform: uppercase; margin: 0; color: #9A7B23;
+  letter-spacing: .28em; text-transform: uppercase; margin: 0; color: #866719;
 }
 
 /* Breadcrumb */
-.plan10-scope .p10-crumb { background: var(--c1); border-bottom: 1px solid var(--c2); padding: 11px 24px; font-family: var(--fl); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ctxt); }
-.plan10-scope .p10-crumb-inner { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.plan10-scope .p10-crumb { background: var(--c1); border-bottom: 1px solid var(--c2); padding: 7px 24px; font-family: var(--fl); font-size: .62rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ctxt); overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent 100%); mask-image: linear-gradient(90deg, #000 88%, transparent 100%); }
+.plan10-scope .p10-crumb::-webkit-scrollbar { display: none; }
+.plan10-scope .p10-crumb-inner { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: nowrap; white-space: nowrap; gap: 7px; align-items: center; }
 .plan10-scope .p10-crumb a { color: var(--ctxt); text-decoration: none; transition: color var(--t); }
 .plan10-scope .p10-crumb a:hover { color: var(--vp); }
 .plan10-scope .p10-crumb .sep { opacity: .5; }
@@ -140,21 +187,23 @@ const CSS = `
 .plan10-scope .p10-toggle button[aria-selected="true"] { background: var(--preto); color: #F1EFEA; }
 
 /* Produtos: grade compacta de tiles (visualização rápida, sem rolagem longa) */
-.plan10-scope .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; min-width: 0; }
+.plan10-scope .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); gap: 10px; min-width: 0; }
 .plan10-scope .prod-tile {
   --c: var(--vp);
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 5px;
   text-align: left; text-decoration: none; cursor: pointer;
   background: var(--c1); border: 1px solid var(--c2); border-radius: 12px;
-  padding: 15px 15px 15px 16px; position: relative; min-width: 0; width: 100%; font: inherit;
+  padding: 14px 38px 14px 16px; position: relative; min-width: 0; width: 100%; font: inherit;
   transition: border-color var(--t), background var(--t), transform var(--t), box-shadow var(--t);
 }
 .plan10-scope .prod-tile::before { content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 3px; background: var(--c); opacity: 0; transition: opacity var(--t); }
 .plan10-scope .prod-tile:hover { border-color: var(--c); background: #fff; transform: translateY(-2px); box-shadow: var(--sh); }
 .plan10-scope .prod-tile:hover::before { opacity: 1; }
 .plan10-scope .prod-tile-name { font-family: var(--fd); font-weight: 600; font-size: .98rem; line-height: 1.22; letter-spacing: -.01em; color: var(--preto); overflow-wrap: anywhere; }
-.plan10-scope .prod-tile-go { flex: none; color: var(--vp); display: inline-flex; opacity: 0; transform: translateX(-5px); transition: opacity var(--t), transform var(--t); }
-.plan10-scope .prod-tile:hover .prod-tile-go { opacity: 1; transform: none; }
+.plan10-scope .prod-tile-desc { font-family: var(--fb); font-size: .84rem; line-height: 1.45; color: var(--ctxt); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.plan10-scope .prod-tile-go { position: absolute; right: 13px; top: 14px; color: var(--vp); display: inline-flex; opacity: .45; transition: opacity var(--t), transform var(--t); }
+.plan10-scope .prod-tile:hover .prod-tile-go { opacity: 1; transform: translateX(2px); }
+@media (hover: none) { .plan10-scope .prod-tile-go { opacity: .7; } }
 
 /* Produtos: linhas premium legadas (mantidas para outras soluções) */
 .plan10-scope .prod-list { border-top: 1px solid var(--c2); min-width: 0; }
@@ -247,6 +296,20 @@ const CSS = `
 .plan10-scope .p10-chooser-card .eyebrow { color: var(--vp); }
 .plan10-scope .p10-chooser-card h3 { font-family: var(--fd); font-weight: 600; font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.25; letter-spacing: -.015em; color: var(--preto); margin: 6px 0 0; }
 .plan10-scope .p10-chooser-desc { font-family: var(--fb); font-size: .92rem; line-height: 1.6; color: var(--ctxt); margin: 10px 0 0; }
+.plan10-scope .p10-chooser-bloco { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--c2); }
+.plan10-scope .p10-chooser-rot { font-family: var(--fl); font-weight: 500; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: #866719; margin: 0 0 7px; }
+.plan10-scope .p10-chooser-txt { font-family: var(--fb); font-size: .88rem; line-height: 1.6; color: var(--ctxt); margin: 0; }
+.plan10-scope .p10-chooser-itens { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.plan10-scope .p10-chooser-itens li { position: relative; padding-left: 16px; font-family: var(--fb); font-size: .88rem; line-height: 1.5; color: var(--ctxt); }
+.plan10-scope .p10-chooser-itens li::before { content: ""; position: absolute; left: 0; top: .55em; width: 5px; height: 5px; border-radius: 999px; background: var(--vp); }
+.plan10-scope .p10-chooser-faq { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--c2); }
+.plan10-scope .p10-chooser-faq summary { cursor: pointer; font-family: var(--fb); font-weight: 600; font-size: .85rem; color: var(--preto); list-style: none; display: flex; align-items: center; gap: 8px; }
+.plan10-scope .p10-chooser-faq summary::-webkit-details-marker { display: none; }
+.plan10-scope .p10-chooser-faq summary::after { content: "+"; margin-left: auto; font-size: 1.05rem; line-height: 1; color: var(--vp); }
+.plan10-scope .p10-chooser-faq[open] summary::after { content: "−"; }
+.plan10-scope .p10-chooser-faq-item { margin-top: 12px; }
+.plan10-scope .p10-chooser-faq-item .q { font-family: var(--fb); font-weight: 600; font-size: .85rem; color: var(--preto); margin: 0 0 3px; }
+.plan10-scope .p10-chooser-faq-item .a { font-family: var(--fb); font-size: .85rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
 .plan10-scope .p10-chooser-pergunta { font-family: var(--fb); font-weight: 600; font-size: .88rem; color: var(--preto); margin: 20px 0 10px; }
 .plan10-scope .p10-chooser-acoes { display: grid; gap: 10px; }
 .plan10-scope .p10-chooser-acoes .btn { justify-content: center; width: 100%; }
@@ -279,14 +342,28 @@ const CSS = `
 .plan10-scope .p10-card .eyebrow { grid-column: 1 / -1; }
 .plan10-scope .p10-card h3 { font-family: var(--fd); font-weight: 600; font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0; color: var(--preto); line-height: 1.16; letter-spacing: -.02em; overflow-wrap: anywhere; }
 .plan10-scope .p10-card p { font-family: var(--fb); font-size: .95rem; line-height: 1.55; color: var(--ctxt); margin: 5px 0 0; max-width: 62ch; overflow-wrap: anywhere; }
-.plan10-scope .p10-card .arrow { grid-column: 2; grid-row: 1 / span 3; align-self: center; font-family: var(--fl); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--vp); font-weight: 500; white-space: nowrap; transition: transform var(--t); }
-.plan10-scope .p10-card:hover .arrow { transform: translateX(3px); }
+.plan10-scope .p10-card .arrow { grid-column: 2; grid-row: 1 / span 3; align-self: center; font-family: var(--fl); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--preto); opacity: .55; font-weight: 500; white-space: nowrap; transition: transform var(--t), color var(--t), opacity var(--t); }
+.plan10-scope .p10-card:hover .arrow { transform: translateX(3px); color: var(--vp); opacity: 1; }
 .plan10-scope .p10-card.disabled { opacity: .5; cursor: default; }
 .plan10-scope .p10-card.disabled:hover { background: transparent; padding-left: 8px; }
 .plan10-scope .p10-card.disabled .arrow { color: var(--ctxt); }
 
 /* Cross-selling chips */
 .plan10-scope .cross { display: flex; flex-wrap: wrap; gap: 8px; }
+.plan10-scope .cross-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin-top: 18px; }
+.plan10-scope .cross-card {
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 15px 16px 15px 18px; background: var(--c1); border: 1px solid var(--c2); border-radius: 12px;
+  text-decoration: none; overflow: hidden;
+  transition: border-color var(--t), background var(--t), transform var(--t), box-shadow var(--t);
+}
+.plan10-scope .cross-card::before { content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 3px; background: var(--vp); opacity: .35; transition: opacity var(--t); }
+.plan10-scope .cross-card:hover { border-color: var(--vp); background: #fff; transform: translateY(-2px); box-shadow: var(--sh); }
+.plan10-scope .cross-card:hover::before { opacity: 1; }
+.plan10-scope .cross-card-nome { font-family: var(--fd); font-weight: 600; font-size: .95rem; line-height: 1.25; color: var(--preto); }
+.plan10-scope .cross-card-go { flex: none; color: var(--vp); display: inline-flex; opacity: .5; transition: opacity var(--t), transform var(--t); }
+.plan10-scope .cross-card:hover .cross-card-go { opacity: 1; transform: translateX(3px); }
+@media (hover: none) { .plan10-scope .cross-card-go { opacity: .75; } }
 .plan10-scope .cross a { padding: 9px 16px; border-radius: 999px; border: 1px solid var(--c2); background: #fff; color: var(--preto); font-family: var(--fb); font-size: .86rem; text-decoration: none; transition: border-color var(--t), color var(--t); }
 .plan10-scope .cross a:hover { border-color: var(--vp); color: var(--vp); }
 

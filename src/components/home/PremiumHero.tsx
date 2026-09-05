@@ -18,7 +18,7 @@ export function PremiumHero() {
           background-position: center 42%;
           color: #F1EFEA;
           font-family: 'Inter', system-ui, sans-serif;
-          padding: 132px 24px 80px;
+          padding: 108px 24px 56px;
           isolation: isolate;
         }
         .ph2::before {
@@ -30,7 +30,7 @@ export function PremiumHero() {
           font-family: 'JetBrains Mono', ui-monospace, monospace;
           font-weight: 500; font-size: .68rem;
           letter-spacing: .34em; text-transform: uppercase;
-          color: rgba(241,239,234,.6); margin: 0 0 22px;
+          color: rgba(241,239,234,.6); margin: 0 0 14px;
           display: inline-flex; align-items: center; gap: 14px;
         }
         .ph2-eyebrow::before { content: ""; width: 28px; height: 1px; background: #C6A24A; display: inline-block; }
@@ -46,10 +46,10 @@ export function PremiumHero() {
         .ph2-lede {
           font-size: clamp(1rem, 1.4vw, 1.18rem);
           line-height: 1.6; color: rgba(241,239,234,.76);
-          max-width: 42ch; margin: 24px 0 0; font-weight: 400;
+          max-width: 42ch; margin: 16px 0 0; font-weight: 400;
           text-shadow: 0 1px 16px rgba(6,18,30,.35);
         }
-        .ph2-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+        .ph2-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
         .ph2-btn {
           display: inline-flex; align-items: center; gap: 10px;
           padding: 13px 27px; border-radius: 999px;
@@ -63,7 +63,7 @@ export function PremiumHero() {
         .ph2-btn-s svg { transition: transform .2s ease; }
         .ph2-btn-s:hover svg { transform: translateX(3px); }
         .ph2-strip {
-          max-width: 1080px; margin: 52px auto 0; position: relative;
+          max-width: 1080px; margin: 32px auto 0; position: relative;
           display: flex; flex-wrap: wrap; gap: 12px 36px;
           padding-top: 22px; border-top: 1px solid rgba(241,239,234,.14);
         }
@@ -80,7 +80,7 @@ export function PremiumHero() {
               linear-gradient(178deg, rgba(12,31,49,.82) 0%, rgba(13,33,52,.9) 55%, rgba(12,31,49,.96) 100%),
               url('/assets/banners/veleiro-hero.jpg');
             background-position: center;
-            padding: 104px 20px 52px;
+            padding: 92px 20px 40px;
           }
           .ph2-strip { gap: 10px 22px; margin-top: 40px; }
         }
@@ -96,7 +96,7 @@ export function PremiumHero() {
           A Plan10 conecta soluções em uma jornada consultiva orientada ao seu momento.
         </p>
         <div className="ph2-ctas">
-          <Link to="/solucoes" className="ph2-btn ph2-btn-p">Explorar soluções</Link>
+          <Link to="/solucoes" className="ph2-btn ph2-btn-p">Conhecer as soluções</Link>
           <a href="#contato" className="ph2-btn ph2-btn-s">
             Falar com consultor
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14M13 6l6 6-6 6"/></svg>

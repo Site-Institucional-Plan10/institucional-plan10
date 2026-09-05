@@ -170,7 +170,7 @@ const FSEL_CSS = `
 .fsel-light .fsel-btn { background: #fff; border: 1px solid #DED7C7; color: #0E2438; }
 .fsel-light .fsel-btn:hover { border-color: #C7BCA3; }
 .fsel-light .fsel-btn.is-open { border-color: #C6A24A; }
-.fsel-light .fsel-btn.is-placeholder .fsel-value { color: #9A927F; }
+.fsel-light .fsel-btn.is-placeholder .fsel-value { color: #6E675A; }
 .fsel-light .fsel-chev { color: #B08D57; }
 .fsel-light .fsel-panel { background: #fff; border: 1px solid #E7E2D6; }
 .fsel-light .fsel-opt { color: #3F3A31; }

@@ -57,7 +57,6 @@ function SolucaoPage() {
         </div>
         <div className="p10-hero-inner">
           {logo && <img src={logo} alt={`Logo ${solucao.nome}`} className="p10-hero-logo" />}
-          <p className="eyebrow">Solução Plan10</p>
           <h1>{solucao.hero}</h1>
           <p className="lede">{solucao.subHero}</p>
         </div>
@@ -74,7 +73,6 @@ function SolucaoPage() {
       {/* Caminhos disponíveis, logo abaixo do hero */}
       <section className="sec">
         <div className="wrap">
-          <p className="eyebrow">Caminhos disponíveis</p>
           <h2 className="p10-h2" style={{ marginBottom: 28 }}>Escolha por onde começar</h2>
           <div className="p10-cards">
             {activeCats.map((c) => (
@@ -85,7 +83,7 @@ function SolucaoPage() {
                 className="p10-card"
               >
                 <h3>{c.nome}</h3>
-                <span className="arrow">Explorar →</span>
+                <span className="arrow" aria-hidden>→</span>
               </Link>
             ))}
             {wipCats.map((c) => (

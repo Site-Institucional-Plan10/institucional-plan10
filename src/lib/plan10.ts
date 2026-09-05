@@ -30,3 +30,25 @@ export function aberturaLimpa(texto: string): string {
   const contexto = m[2].trim();
   return `${m[1].trim()}. Em ${contexto}, cada decisão merece estar bem orientada e bem acompanhada.`;
 }
+
+/**
+ * As frases de cross-selling do catálogo vêm sempre no formato
+ * "<produto> pode se conectar a A, B, C e D." Jogar a frase inteira dentro de um
+ * botão fica pesado e repete o nome do produto que já está no topo da página.
+ * Aqui ficam só as frentes citadas, sem repetição, que é a informação útil.
+ * Se a frase fugir do padrão, devolve lista vazia e a tela cai no texto original.
+ */
+export function frentesConectadas(frases: string[] | undefined): string[] {
+  const frentes: string[] = [];
+  for (const frase of frases ?? []) {
+    const m = frase.match(/pode se conectar a\s+(.+?)\s*\.?\s*$/i);
+    if (!m) continue;
+    for (const parte of m[1].split(/\s*,\s*|\s+e\s+/)) {
+      const bruto = parte.trim().replace(/\.$/, "");
+      // só a inicial em maiúscula: "capitalize" do CSS estragaria "proteção de renda"
+      const t = bruto ? bruto.charAt(0).toUpperCase() + bruto.slice(1) : "";
+      if (t && !frentes.some((f) => f.toLowerCase() === t.toLowerCase())) frentes.push(t);
+    }
+  }
+  return frentes;
+}

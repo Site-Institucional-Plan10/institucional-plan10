@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import type { Product } from "@/data/solutions";
-import { whatsappUrl, isRealUrl } from "@/lib/plan10";
+import { whatsappUrl, isRealUrl, aberturaLimpa } from "@/lib/plan10";
 
 interface Props {
   produto: Product | null;
@@ -18,7 +18,16 @@ const WA = (
 );
 
 const FORM = (
-  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" aria-hidden>
+  <svg
+    width="17"
+    height="17"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.9"
+    strokeLinecap="round"
+    aria-hidden
+  >
     <path d="M4 5h16M4 10h16M4 15h10" />
   </svg>
 );
@@ -61,13 +70,56 @@ export function ProductChooser({ produto, nucleoNome, onClose, onFormulario }: P
         onClick={(e) => e.stopPropagation()}
       >
         <button type="button" className="p10-chooser-x" onClick={onClose} aria-label="Fechar">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            aria-hidden
+          >
             <path d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
 
         <p className="eyebrow">{nucleoNome}</p>
         <h3 id="chooser-titulo">{produto.nome}</h3>
+
+        {/* Conteúdo do catálogo, na íntegra: é aqui que a pessoa entende o que é
+            o produto antes de escolher o caminho de contato. */}
+        {produto.descricao && <p className="p10-chooser-desc">{produto.descricao}</p>}
+
+        {produto.itensInclusos.length > 0 && (
+          <div className="p10-chooser-bloco">
+            <p className="p10-chooser-rot">O que está incluso</p>
+            <ul className="p10-chooser-itens">
+              {produto.itensInclusos.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {produto.aQuemSeDestina && (
+          <div className="p10-chooser-bloco">
+            <p className="p10-chooser-rot">A quem se destina</p>
+            <p className="p10-chooser-txt">{aberturaLimpa(produto.aQuemSeDestina)}</p>
+          </div>
+        )}
+
+        {produto.faq.length > 0 && (
+          <details className="p10-chooser-faq">
+            <summary>Perguntas frequentes ({produto.faq.length})</summary>
+            {produto.faq.map((f) => (
+              <div key={f.q} className="p10-chooser-faq-item">
+                <p className="q">{f.q}</p>
+                <p className="a">{f.a}</p>
+              </div>
+            ))}
+          </details>
+        )}
 
         <p className="p10-chooser-pergunta">Como você prefere seguir?</p>
 

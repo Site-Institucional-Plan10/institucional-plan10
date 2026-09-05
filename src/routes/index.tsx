@@ -30,10 +30,10 @@ function HomePage() {
       <SolutionsShowcase />
       <BrandPromise />
       <SolucoesOnline />
-      <section style={{ background: "#F4F2EC", padding: "72px 24px 72px" }}>
+      <section style={{ background: "#F4F2EC", padding: "40px 24px 44px" }}>
         <style>{`
           .home-editorial { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px rgba(12,35,64,.16); max-width: 1080px; margin-inline: auto; position: relative; }
-          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center; aspect-ratio: 16 / 7; }
+          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center; aspect-ratio: 21 / 8; }
           .home-editorial figcaption {
             position: absolute; left: 0; bottom: 0; right: 0; padding: 52px 40px 34px;
             background: linear-gradient(0deg, rgba(6,16,26,.95) 0%, rgba(6,16,26,.82) 32%, rgba(6,16,26,.5) 62%, rgba(6,16,26,.14) 85%, transparent 100%);
@@ -44,7 +44,7 @@ function HomePage() {
             font-size: clamp(1.15rem, 2.2vw, 1.7rem); line-height: 1.25; letter-spacing: -.02em;
             margin: 0; max-width: 24ch; text-shadow: 0 2px 20px rgba(0,0,0,.35);
           }
-          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 4 / 5; } .home-editorial figcaption { padding: 26px 22px 22px; } }
+          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 4 / 3; } .home-editorial figcaption { padding: 26px 22px 22px; } }
         `}</style>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <figure className="home-editorial">
