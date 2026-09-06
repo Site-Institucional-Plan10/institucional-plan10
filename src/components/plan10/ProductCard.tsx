@@ -4,6 +4,8 @@ interface Props {
   product: Product;
   nucleoNome: string;
   onPrimary?: () => void;
+  /** Foto do produto. Hoje só o hub de finanças passa, em teste. */
+  imagem?: { src: string; alt: string };
 }
 
 const ARROW = (
@@ -25,9 +27,14 @@ const ARROW = (
  * sem rolar (pedido do cliente). A descrição, os itens inclusos, o público e o
  * FAQ ficam no pop-up que abre no toque, não aqui.
  */
-export function ProductCard({ product, onPrimary }: Props) {
+export function ProductCard({ product, onPrimary, imagem }: Props) {
   return (
     <button type="button" className="prod-tile" onClick={onPrimary}>
+      {imagem && (
+        <span className="prod-tile-foto">
+          <img src={imagem.src} alt={imagem.alt} loading="lazy" decoding="async" />
+        </span>
+      )}
       <span className="prod-tile-name">{product.nome}</span>
       <span className="prod-tile-go" aria-hidden>
         {ARROW}

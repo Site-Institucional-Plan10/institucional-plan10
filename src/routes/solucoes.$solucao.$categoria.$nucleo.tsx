@@ -1,6 +1,12 @@
 import { useMemo, useState } from "react";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
-import { findNucleo, type Solucao, type Categoria, type Nucleo, type Product } from "@/data/solutions";
+import {
+  findNucleo,
+  type Solucao,
+  type Categoria,
+  type Nucleo,
+  type Product,
+} from "@/data/solutions";
 import { PageTheme } from "@/components/plan10/PageTheme";
 import { PerfilToggle } from "@/components/plan10/PerfilToggle";
 import { ProductCard } from "@/components/plan10/ProductCard";
@@ -10,7 +16,7 @@ import { LeadForm } from "@/components/plan10/LeadForm";
 import { FONTS, whatsappUrl, aberturaLimpa, frentesConectadas } from "@/lib/plan10";
 import { finContentFor } from "@/data/financasContent";
 import { heroCategoria, heroNucleo, contextoDe, pickByOrder } from "@/lib/imagery";
-import { finNucleoImgs } from "@/lib/financasImagery";
+import { finNucleoImgs, finProdutoImg } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
@@ -20,7 +26,8 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
     return found;
   },
   head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Não encontrado" }, { name: "robots", content: "noindex" }] };
+    if (!loaderData)
+      return { meta: [{ title: "Não encontrado" }, { name: "robots", content: "noindex" }] };
     const { solucao: s, categoria: c, nucleo: n } = loaderData;
     const url = canonical(`/solucoes/${s.slug}/${c.slug}/${n.slug}`);
     // n.hero é vazio de propósito; a abertura consultiva é a descrição real.
@@ -40,12 +47,18 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
   },
   component: NucleoPage,
   notFoundComponent: () => (
-    <div style={{ padding: 80, textAlign: "center", fontFamily: FONTS.body }}>Página não encontrada.</div>
+    <div style={{ padding: 80, textAlign: "center", fontFamily: FONTS.body }}>
+      Página não encontrada.
+    </div>
   ),
 });
 
 function NucleoPage() {
-  const { solucao: s, categoria: c, nucleo: n } = Route.useLoaderData() as {
+  const {
+    solucao: s,
+    categoria: c,
+    nucleo: n,
+  } = Route.useLoaderData() as {
     solucao: Solucao;
     categoria: Categoria;
     nucleo: Nucleo;
@@ -71,8 +84,14 @@ function NucleoPage() {
 
   // Cada modalidade recebe fotos próprias: a posição na lista separa as irmãs, e
   // a foto da categoria fica bloqueada para o produto não repetir a página de cima.
-  const iCat = Math.max(0, s.categorias.findIndex((x) => x.slug === c.slug));
-  const iNuc = Math.max(0, c.nucleos.findIndex((x) => x.slug === n.slug));
+  const iCat = Math.max(
+    0,
+    s.categorias.findIndex((x) => x.slug === c.slug),
+  );
+  const iNuc = Math.max(
+    0,
+    c.nucleos.findIndex((x) => x.slug === n.slug),
+  );
   // A página de produto não pode repetir NENHUMA foto da página de modalidade (pai).
   // Recalculo as duas fotos do pai e as bloqueio no hero e no contexto do filho,
   // então as quatro imagens das duas telas são sempre distintas.
@@ -80,7 +99,8 @@ function NucleoPage() {
   const catHero = heroCategoria(s.slug, iCat);
   const catCtx = contextoDe(s.slug, iCat, catHero.src);
   const hero = finImgs?.hero ?? heroNucleo(s.slug, iCat, iNuc, [catHero.src, catCtx.src]);
-  const ctx = finImgs?.ctx ?? pickByOrder(s.slug, iCat + iNuc, 3, [catHero.src, catCtx.src, hero.src]);
+  const ctx =
+    finImgs?.ctx ?? pickByOrder(s.slug, iCat + iNuc, 3, [catHero.src, catCtx.src, hero.src]);
 
   const scrollTo = (id: string) => {
     if (typeof document === "undefined") return;
@@ -106,7 +126,9 @@ function NucleoPage() {
           {n.blocoValor.length > 0 && (
             <div className="pills" style={{ marginTop: 6 }}>
               {n.blocoValor.map((b) => (
-                <span key={b} className="pill">{b}</span>
+                <span key={b} className="pill">
+                  {b}
+                </span>
               ))}
             </div>
           )}
@@ -118,11 +140,18 @@ function NucleoPage() {
         <div className="p10-crumb-inner">
           <Link to="/solucoes">Soluções</Link>
           <span className="sep">/</span>
-          <Link to="/solucoes/$solucao" params={{ solucao: s.slug }}>{s.nome}</Link>
+          <Link to="/solucoes/$solucao" params={{ solucao: s.slug }}>
+            {s.nome}
+          </Link>
           <span className="sep">/</span>
           {c.nome !== n.nome && (
             <>
-              <Link to="/solucoes/$solucao/$categoria" params={{ solucao: s.slug, categoria: c.slug }}>{c.nome}</Link>
+              <Link
+                to="/solucoes/$solucao/$categoria"
+                params={{ solucao: s.slug, categoria: c.slug }}
+              >
+                {c.nome}
+              </Link>
               <span className="sep">/</span>
             </>
           )}
@@ -133,9 +162,20 @@ function NucleoPage() {
       {/* Opções disponíveis: grade compacta, logo abaixo do hero */}
       <section className="sec" id="opcoes">
         <div className="wrap">
-          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 16, marginBottom: 8 }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              gap: 16,
+              marginBottom: 8,
+            }}
+          >
             <div>
-              <h2 className="p10-h2" style={{ marginBottom: 0 }}>Escolha a opção certa para o seu momento</h2>
+              <h2 className="p10-h2" style={{ marginBottom: 0 }}>
+                Escolha a opção certa para o seu momento
+              </h2>
             </div>
             {temPF && temPJ && <PerfilToggle value={perfil} onChange={setPerfil} />}
           </div>
@@ -145,13 +185,24 @@ function NucleoPage() {
               : "As opções deste perfil ficam disponíveis por consultoria."}
           </p>
           {filtered.length === 0 ? (
-            <a href={whatsappUrl(`Olá! Quero orientação sobre ${n.nome}.`)} target="_blank" rel="noopener noreferrer" className="btn btn-outline-light">
+            <a
+              href={whatsappUrl(`Olá! Quero orientação sobre ${n.nome}.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-light"
+            >
               Falar com um consultor
             </a>
           ) : (
             <div className="prod-grid">
-              {filtered.map((p) => (
-                <ProductCard key={p.id} product={p} nucleoNome={n.nome} onPrimary={() => setEscolhendo(p)} />
+              {filtered.map((p, i) => (
+                <ProductCard
+                  key={p.id}
+                  product={p}
+                  nucleoNome={n.nome}
+                  onPrimary={() => setEscolhendo(p)}
+                  imagem={s.slug === "financeiras" ? finProdutoImg(c.slug, n.slug, i) : undefined}
+                />
               ))}
             </div>
           )}
@@ -163,7 +214,17 @@ function NucleoPage() {
         <div className="wrap p10-split">
           <div>
             <p className="eyebrow">Sobre esta escolha</p>
-            <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.25rem, 2.3vw, 1.7rem)", lineHeight: 1.38, fontWeight: 500, color: "var(--preto)", letterSpacing: "-.015em", margin: "12px 0 0" }}>
+            <p
+              style={{
+                fontFamily: "var(--fd)",
+                fontSize: "clamp(1.25rem, 2.3vw, 1.7rem)",
+                lineHeight: 1.38,
+                fontWeight: 500,
+                color: "var(--preto)",
+                letterSpacing: "-.015em",
+                margin: "12px 0 0",
+              }}
+            >
               {finContentFor(c.slug)?.subHero ?? aberturaLimpa(n.aberturaConsultiva)}
             </p>
           </div>
@@ -175,10 +236,15 @@ function NucleoPage() {
 
       {/* Formulário em seção escura */}
       <section className="sec sec-dark" id="contato">
-        <div className="wrap" style={{ display: "grid", gap: 32, gridTemplateColumns: "1fr", alignItems: "start" }}>
+        <div
+          className="wrap"
+          style={{ display: "grid", gap: 32, gridTemplateColumns: "1fr", alignItems: "start" }}
+        >
           <div>
             <h2 className="p10-h2">Um consultor retorna com o próximo passo</h2>
-            <p className="p10-lede">Conte seu momento. A resposta é orientada, sem excesso comercial.</p>
+            <p className="p10-lede">
+              Conte seu momento. A resposta é orientada, sem excesso comercial.
+            </p>
           </div>
           <LeadForm
             interesse={n.nome}
@@ -196,7 +262,9 @@ function NucleoPage() {
       {cross.length > 0 && (
         <section className="sec sec-alt">
           <div className="wrap">
-            <h2 className="p10-h2" style={{ marginBottom: 0 }}>Também pode fazer sentido</h2>
+            <h2 className="p10-h2" style={{ marginBottom: 0 }}>
+              Também pode fazer sentido
+            </h2>
             {frentes.length > 1 ? (
               <>
                 <p className="p10-lede">
@@ -213,7 +281,16 @@ function NucleoPage() {
                     >
                       <span className="cross-card-nome">{f}</span>
                       <span className="cross-card-go" aria-hidden>
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                        <svg
+                          width="15"
+                          height="15"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg>
                       </span>
                     </a>
                   ))}

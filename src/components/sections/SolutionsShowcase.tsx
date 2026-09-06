@@ -5,8 +5,9 @@ import { Link } from "@tanstack/react-router";
  * cliente. Conteúdo oficial: 01_HOME.xlsx coluna D (nomes, microcopy e cores por solução).
  */
 // Cores calmas/foscas por solução: acento discreto (padrão sóbrio, cor só realça no hover).
-// A foto sai do pool curado de lib/imagery: sem rosto reconhecível em saúde e em
-// dinheiro, e sem repetir os envelopes, que já são o fundo da faixa logo abaixo.
+// Foto: derivadas otimizadas em /assets/solucoes, recortadas do acervo do projeto para
+// mostrar o assunto de cada frente. Nenhuma tem rosto reconhecível, o que mantém a regra
+// da marca válida também em saúde e em dinheiro. Cada arquivo tem menos de 180KB.
 const SOLUCOES = [
   {
     slug: "saude",
@@ -14,8 +15,8 @@ const SOLUCOES = [
     micro: "Cuidado, prevenção e acesso à saúde para pessoas, famílias e empresas.",
     cor: "#3F6B4F",
     soft: "#EEF1EA",
-    foto: "/assets/curated/luz-fechamento.jpg",
-    alt: "Luz da tarde entrando por uma cortina em um ambiente residencial",
+    foto: "/assets/solucoes/saude.jpg",
+    alt: "Sala com vista para o mar ao amanhecer e uma planta junto à janela",
   },
   {
     slug: "protecao",
@@ -23,8 +24,8 @@ const SOLUCOES = [
     micro: "Proteção para pessoas, patrimônio e responsabilidades em diferentes fases.",
     cor: "#2B4C68",
     soft: "#EDEDE7",
-    foto: "/assets/curated/familia-maos.jpg",
-    alt: "Mãos de um adulto segurando as mãos de um bebê no colo",
+    foto: "/assets/solucoes/protecao.jpg",
+    alt: "Casa contemporânea iluminada à beira de um lago ao pôr do sol",
   },
   {
     slug: "financeiras",
@@ -33,8 +34,8 @@ const SOLUCOES = [
       "Crédito, liquidez, reservas e decisões financeiras conectados a objetivos de curto e longo prazo.",
     cor: "#A9843C",
     soft: "#F2EEE3",
-    foto: "/assets/curated/fin-documentos.jpg",
-    alt: "Carteira de couro azul com caderno e caneta sobre a mesa",
+    foto: "/assets/solucoes/financeiras.jpg",
+    alt: "Documentos marcados, caneta e óculos sobre a mesa de trabalho",
   },
   {
     slug: "crescimento",
@@ -42,8 +43,8 @@ const SOLUCOES = [
     micro: "Planejamento para aquisições, mobilidade, ativos e expansão.",
     cor: "#5A4A76",
     soft: "#EFEDE9",
-    foto: "/assets/curated/home-veleiro.jpg",
-    alt: "Marina com veleiros ancorados em uma manhã de neblina",
+    foto: "/assets/solucoes/crescimento.jpg",
+    alt: "Automóvel em estrada de serra no fim da tarde",
   },
   {
     slug: "assistencia",
@@ -52,8 +53,8 @@ const SOLUCOES = [
       "Suporte para preservar rotina, ambientes, mobilidade e continuidade de pessoas e empresas.",
     cor: "#9A5A2A",
     soft: "#F3EBE2",
-    foto: "/assets/curated/persiana-pb.jpg",
-    alt: "Sombra de persiana desenhada na parede, em preto e branco",
+    foto: "/assets/solucoes/assistencia.jpg",
+    alt: "Guincho transportando um automóvel na rodovia",
   },
 ] as const;
 
