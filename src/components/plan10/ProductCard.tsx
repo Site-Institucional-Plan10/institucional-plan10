@@ -21,19 +21,14 @@ const ARROW = (
 );
 
 /**
- * Produto em tile compacto. Mostra o nome e a descrição do catálogo (coluna
- * "Breve descrição do produto"), que é o que explica a opção antes do toque.
- * A seta fica no canto superior direito, fora do fluxo, para não custar linha.
- *
- * O toque sempre abre a escolha de caminho. Antes, produto com link de contratação
- * saía do site sem aviso; agora esse link vira uma das opções da escolha, ao lado
- * do WhatsApp e do formulário.
+ * Produto em tile compacto: só o nome e a seta, para a pessoa varrer a lista
+ * sem rolar (pedido do cliente). A descrição, os itens inclusos, o público e o
+ * FAQ ficam no pop-up que abre no toque, não aqui.
  */
 export function ProductCard({ product, onPrimary }: Props) {
   return (
     <button type="button" className="prod-tile" onClick={onPrimary}>
       <span className="prod-tile-name">{product.nome}</span>
-      {product.descricao && <span className="prod-tile-desc">{product.descricao}</span>}
       <span className="prod-tile-go" aria-hidden>
         {ARROW}
       </span>

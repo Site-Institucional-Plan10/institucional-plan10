@@ -187,21 +187,20 @@ const CSS = `
 .plan10-scope .p10-toggle button[aria-selected="true"] { background: var(--preto); color: #F1EFEA; }
 
 /* Produtos: grade compacta de tiles (visualização rápida, sem rolagem longa) */
-.plan10-scope .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(288px, 1fr)); gap: 10px; min-width: 0; }
+.plan10-scope .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; min-width: 0; }
 .plan10-scope .prod-tile {
   --c: var(--vp);
-  display: flex; flex-direction: column; align-items: flex-start; gap: 5px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
   text-align: left; text-decoration: none; cursor: pointer;
   background: var(--c1); border: 1px solid var(--c2); border-radius: 12px;
-  padding: 14px 38px 14px 16px; position: relative; min-width: 0; width: 100%; font: inherit;
+  padding: 15px 15px 15px 16px; position: relative; min-width: 0; width: 100%; font: inherit;
   transition: border-color var(--t), background var(--t), transform var(--t), box-shadow var(--t);
 }
 .plan10-scope .prod-tile::before { content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 3px; background: var(--c); opacity: 0; transition: opacity var(--t); }
 .plan10-scope .prod-tile:hover { border-color: var(--c); background: #fff; transform: translateY(-2px); box-shadow: var(--sh); }
 .plan10-scope .prod-tile:hover::before { opacity: 1; }
 .plan10-scope .prod-tile-name { font-family: var(--fd); font-weight: 600; font-size: .98rem; line-height: 1.22; letter-spacing: -.01em; color: var(--preto); overflow-wrap: anywhere; }
-.plan10-scope .prod-tile-desc { font-family: var(--fb); font-size: .84rem; line-height: 1.45; color: var(--ctxt); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.plan10-scope .prod-tile-go { position: absolute; right: 13px; top: 14px; color: var(--vp); display: inline-flex; opacity: .45; transition: opacity var(--t), transform var(--t); }
+.plan10-scope .prod-tile-go { flex: none; color: var(--vp); display: inline-flex; opacity: .45; transition: opacity var(--t), transform var(--t); }
 .plan10-scope .prod-tile:hover .prod-tile-go { opacity: 1; transform: translateX(2px); }
 @media (hover: none) { .plan10-scope .prod-tile-go { opacity: .7; } }
 

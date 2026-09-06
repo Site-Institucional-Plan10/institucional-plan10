@@ -5,12 +5,56 @@ import { Link } from "@tanstack/react-router";
  * cliente. Conteúdo oficial: 01_HOME.xlsx coluna D (nomes, microcopy e cores por solução).
  */
 // Cores calmas/foscas por solução: acento discreto (padrão sóbrio, cor só realça no hover).
+// A foto sai do pool curado de lib/imagery: sem rosto reconhecível em saúde e em
+// dinheiro, e sem repetir os envelopes, que já são o fundo da faixa logo abaixo.
 const SOLUCOES = [
-  { slug: "saude", nome: "Saúde e vida saudável", micro: "Cuidado, prevenção e acesso à saúde para pessoas, famílias e empresas.", cor: "#3F6B4F", soft: "#EEF1EA" },
-  { slug: "protecao", nome: "Proteção à vida e ao patrimônio", micro: "Proteção para pessoas, patrimônio e responsabilidades em diferentes fases.", cor: "#2B4C68", soft: "#EDEDE7" },
-  { slug: "financeiras", nome: "Soluções financeiras", micro: "Crédito, liquidez, reservas e decisões financeiras conectados a objetivos de curto e longo prazo.", cor: "#A9843C", soft: "#F2EEE3" },
-  { slug: "crescimento", nome: "Crescimento e mobilidade", micro: "Planejamento para aquisições, mobilidade, ativos e expansão.", cor: "#5A4A76", soft: "#EFEDE9" },
-  { slug: "assistencia", nome: "Assistência pessoal e empresarial", micro: "Suporte para preservar rotina, ambientes, mobilidade e continuidade de pessoas e empresas.", cor: "#9A5A2A", soft: "#F3EBE2" },
+  {
+    slug: "saude",
+    nome: "Saúde e vida saudável",
+    micro: "Cuidado, prevenção e acesso à saúde para pessoas, famílias e empresas.",
+    cor: "#3F6B4F",
+    soft: "#EEF1EA",
+    foto: "/assets/curated/luz-fechamento.jpg",
+    alt: "Luz da tarde entrando por uma cortina em um ambiente residencial",
+  },
+  {
+    slug: "protecao",
+    nome: "Proteção à vida e ao patrimônio",
+    micro: "Proteção para pessoas, patrimônio e responsabilidades em diferentes fases.",
+    cor: "#2B4C68",
+    soft: "#EDEDE7",
+    foto: "/assets/curated/familia-maos.jpg",
+    alt: "Mãos de um adulto segurando as mãos de um bebê no colo",
+  },
+  {
+    slug: "financeiras",
+    nome: "Soluções financeiras",
+    micro:
+      "Crédito, liquidez, reservas e decisões financeiras conectados a objetivos de curto e longo prazo.",
+    cor: "#A9843C",
+    soft: "#F2EEE3",
+    foto: "/assets/curated/fin-documentos.jpg",
+    alt: "Carteira de couro azul com caderno e caneta sobre a mesa",
+  },
+  {
+    slug: "crescimento",
+    nome: "Crescimento e mobilidade",
+    micro: "Planejamento para aquisições, mobilidade, ativos e expansão.",
+    cor: "#5A4A76",
+    soft: "#EFEDE9",
+    foto: "/assets/curated/home-veleiro.jpg",
+    alt: "Marina com veleiros ancorados em uma manhã de neblina",
+  },
+  {
+    slug: "assistencia",
+    nome: "Assistência pessoal e empresarial",
+    micro:
+      "Suporte para preservar rotina, ambientes, mobilidade e continuidade de pessoas e empresas.",
+    cor: "#9A5A2A",
+    soft: "#F3EBE2",
+    foto: "/assets/curated/persiana-pb.jpg",
+    alt: "Sombra de persiana desenhada na parede, em preto e branco",
+  },
 ] as const;
 
 export function SolutionsShowcase() {
@@ -28,9 +72,9 @@ export function SolutionsShowcase() {
         .p10x-list { margin-top: 26px; border-top: 1px solid #E2DDD3; }
         .p10x-row {
           --c: #C9A83C; --soft: #F0EEE8;
-          display: grid; grid-template-columns: 22px 1.05fr 1.15fr auto;
+          display: grid; grid-template-columns: 104px 1.05fr 1.15fr auto;
           align-items: center; gap: 28px;
-          padding: 20px 20px 20px 8px; border-bottom: 1px solid #E2DDD3;
+          padding: 14px 20px 14px 8px; border-bottom: 1px solid #E2DDD3;
           text-decoration: none; color: #0B1A2F; position: relative;
           transition: background .28s ease, padding-left .28s ease;
         }
@@ -38,7 +82,10 @@ export function SolutionsShowcase() {
           content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
           width: 3px; height: 0; background: var(--c); border-radius: 3px; transition: height .28s ease;
         }
-        .p10x-marker { width: 11px; height: 11px; border-radius: 999px; background: var(--c); transition: transform .28s ease; }
+        .p10x-foto { position: relative; width: 104px; aspect-ratio: 16 / 11; overflow: hidden; border-radius: 6px; background: #E4E0D6; }
+        .p10x-foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s cubic-bezier(.2,.7,.3,1); }
+        .p10x-foto::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--c); }
+        .p10x-row:hover .p10x-foto img { transform: scale(1.06); }
         .p10x-name {
           font-family: 'Schibsted Grotesk', 'Inter', sans-serif; font-weight: 600;
           font-size: clamp(1.3rem, 2.2vw, 1.85rem); line-height: 1.15; letter-spacing: -.02em;
@@ -52,23 +99,28 @@ export function SolutionsShowcase() {
         }
         .p10x-row:hover { background: var(--soft); padding-left: 22px; }
         .p10x-row:hover::before { height: 62%; }
-        .p10x-row:hover .p10x-marker { transform: scale(1.35); }
+        
         .p10x-row:hover .p10x-name { color: var(--c); }
         .p10x-row:hover .p10x-go { color: var(--c); gap: 12px; }
         .p10x-row:focus-visible { outline: 2px solid var(--c); outline-offset: -2px; }
         @media (max-width: 860px) {
           .p10x { padding: 44px 20px; }
-          .p10x-row { position: relative; grid-template-columns: 14px 1fr; gap: 5px 12px; padding: 15px 34px 15px 8px; }
-          .p10x-micro { grid-column: 2 / 3; font-size: .9rem; }
-          .p10x-marker { width: 9px; height: 9px; }
+          .p10x-row { position: relative; grid-template-columns: 72px 1fr; gap: 3px 14px; padding: 13px 34px 13px 6px; align-items: center; }
+          .p10x-micro { grid-column: 2 / 3; font-size: .88rem; }
+          .p10x-foto { grid-row: 1 / 3; width: 72px; align-self: center; }
+          
           /* seta no canto superior direito: sai do fluxo e devolve uma linha por item */
           .p10x-go { position: absolute; right: 4px; top: 14px; }
           .p10x-row:hover { padding-left: 8px; }
         }
       `}</style>
       <div className="p10x-in">
-        <h2 id="p10x-h" className="p10x-h2">Cinco soluções, uma jornada consultiva.</h2>
-        <p className="p10x-lede">Conheça as Soluções Plan10 e encontre o caminho mais próximo da sua fase.</p>
+        <h2 id="p10x-h" className="p10x-h2">
+          Cinco soluções, uma jornada consultiva.
+        </h2>
+        <p className="p10x-lede">
+          Conheça as Soluções Plan10 e encontre o caminho mais próximo da sua fase.
+        </p>
 
         <div className="p10x-list">
           {SOLUCOES.map((s) => (
@@ -77,13 +129,26 @@ export function SolutionsShowcase() {
               to="/solucoes/$solucao"
               params={{ solucao: s.slug }}
               className="p10x-row"
-              style={{ ["--c" as string]: s.cor, ["--soft" as string]: s.soft } as React.CSSProperties}
+              style={
+                { ["--c" as string]: s.cor, ["--soft" as string]: s.soft } as React.CSSProperties
+              }
             >
-              <span className="p10x-marker" aria-hidden />
+              <span className="p10x-foto">
+                <img src={s.foto} alt={s.alt} loading="lazy" decoding="async" />
+              </span>
               <span className="p10x-name">{s.nome}</span>
               <span className="p10x-micro">{s.micro}</span>
               <span className="p10x-go" aria-hidden>
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                <svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
               </span>
             </Link>
           ))}

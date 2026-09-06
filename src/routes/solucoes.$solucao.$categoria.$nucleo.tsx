@@ -141,7 +141,7 @@ function NucleoPage() {
           </div>
           <p className="p10-lede" style={{ margin: "0 0 22px" }}>
             {filtered.length > 0
-              ? `${filtered.length} ${filtered.length === 1 ? "opção" : "opções"}. Escolha uma para falar com um consultor.`
+              ? `${filtered.length} ${filtered.length === 1 ? "opção" : "opções"}. Abra a que interessa para ver o que ela inclui, a quem se destina e as perguntas frequentes.`
               : "As opções deste perfil ficam disponíveis por consultoria."}
           </p>
           {filtered.length === 0 ? (
