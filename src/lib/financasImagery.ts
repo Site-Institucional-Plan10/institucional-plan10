@@ -39,6 +39,16 @@ const IMG = {
     alt: "Praça de pedágio com várias faixas, vista aérea",
   },
   cardsGold: { src: C + "cand-cartoes-gold.jpg", alt: "Cartões de crédito premium em destaque" },
+  // Assuntos que faltavam no acervo, buscados no Pexels (licença livre para uso
+  // comercial, sem exigência de crédito). Cobrem produtos de financiamento que
+  // antes caíam numa foto financeira genérica.
+  jetA: { src: C + "fin-aeronave-a.jpg", alt: "Jato executivo parado na pista" },
+  jetB: { src: C + "fin-aeronave-b.jpg", alt: "Jato executivo visto de frente na pista" },
+  moto: { src: C + "fin-moto.jpg", alt: "Motocicleta estacionada na rua" },
+  solarA: { src: C + "fin-solar-a.jpg", alt: "Telhado residencial com placas solares" },
+  solarB: { src: C + "fin-solar-b.jpg", alt: "Placas solares no telhado de um prédio de tijolos" },
+  rural: { src: C + "fin-rural.jpg", alt: "Colheitadeira em lavoura de trigo" },
+  boat: { src: C + "home-veleiro.jpg", alt: "Marina com veleiros ancorados" },
   // Abstratas premium já existentes
   glass: { src: C + "fin-vidro.jpg", alt: "Fachada espelhada de um edifício corporativo" },
   folder: { src: C + "fin-documentos.jpg", alt: "Carteira de couro azul com caderno e caneta" },
@@ -46,6 +56,9 @@ const IMG = {
   sea: { src: C + "fin-divisoria.jpg", alt: "Superfície do mar azul vista de cima" },
   persiana: { src: C + "persiana-pb.jpg", alt: "Sombra de persiana na parede, em preto e branco" },
 } satisfies Record<string, CuratedImage>;
+
+/** Todas as fotos do acervo financeiro, usadas como reserva de substituição. */
+const TODAS: CuratedImage[] = Object.values(IMG);
 
 interface Quad {
   hero: CuratedImage;
@@ -139,26 +152,30 @@ const PRODUTO: Record<string, CuratedImage[]> = {
     IMG.policy,
     IMG.bluetex,
   ],
+  // Este pool segue a ORDEM DOS PRODUTOS do núcleo, então cada posição cai no
+  // assunto certo: aeronave, aeronave, frota, moto, solar, solar, veículo,
+  // veículo, estudantil, imóvel, imóvel, náutico, náutico, rural, portabilidade,
+  // portabilidade, crédito veicular.
   "financiamentos/financiamento-de-bens-e-projetos": [
-    IMG.keys,
-    IMG.apt,
+    IMG.jetA,
+    IMG.jetB,
+    IMG.toll,
+    IMG.moto,
+    IMG.solarA,
+    IMG.solarB,
     IMG.calc,
     IMG.sign,
-    IMG.policy,
     IMG.docs,
+    IMG.keys,
+    IMG.apt,
+    IMG.sea,
+    IMG.boat,
+    IMG.rural,
+    IMG.folder,
+    IMG.policy,
     IMG.report,
     IMG.chart,
-    IMG.jar,
     IMG.glass,
-    IMG.folder,
-    IMG.card,
-    IMG.mobile,
-    IMG.toll,
-    IMG.hourglass,
-    IMG.cardsGold,
-    IMG.sea,
-    IMG.persiana,
-    IMG.bluetex,
   ],
   "capitalizacao/capitalizacao": [
     IMG.jar,
@@ -258,7 +275,13 @@ export function finProdutoImg(
   const pool = PRODUTO[`${categoriaSlug}/${nucleoSlug}`] ?? PRODUTO_FALLBACK;
   const daPagina = finNucleoImgs(categoriaSlug, nucleoSlug);
   const jaNaTela = daPagina ? [daPagina.hero.src, daPagina.ctx.src] : [];
-  const livres = pool.filter((img) => !jaNaTela.includes(img.src));
-  const lista = livres.length > 0 ? livres : pool;
+  // Onde a foto do topo aparece no pool, ela é TROCADA por uma sobra do acervo,
+  // e não removida: o pool de financiamentos é alinhado à ordem dos produtos, e
+  // encurtar a lista desalinharia todos os produtos seguintes do assunto certo.
+  const reserva = TODAS.filter(
+    (img) => !jaNaTela.includes(img.src) && !pool.some((p) => p.src === img.src),
+  );
+  let proxima = 0;
+  const lista = pool.map((img) => (jaNaTela.includes(img.src) ? (reserva[proxima++] ?? img) : img));
   return lista[ordem % lista.length];
 }

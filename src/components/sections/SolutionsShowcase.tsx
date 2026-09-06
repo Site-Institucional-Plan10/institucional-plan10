@@ -5,7 +5,9 @@ import { Link } from "@tanstack/react-router";
  * cliente. Conteúdo oficial: 01_HOME.xlsx coluna D (nomes, microcopy e cores por solução).
  */
 // Cores calmas/foscas por solução: acento discreto (padrão sóbrio, cor só realça no hover).
-// Foto: derivadas otimizadas em /assets/solucoes, recortadas do acervo do projeto para
+// Foto: derivadas otimizadas em /assets/solucoes. Saúde e assistência vêm do Pexels
+// (licença livre para uso comercial, sem exigência de crédito); as demais foram
+// recortadas do acervo do projeto, sempre para
 // mostrar o assunto de cada frente. Nenhuma tem rosto reconhecível, o que mantém a regra
 // da marca válida também em saúde e em dinheiro. Cada arquivo tem menos de 180KB.
 const SOLUCOES = [

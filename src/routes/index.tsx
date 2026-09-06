@@ -3,7 +3,6 @@ import { PremiumHero } from "@/components/home/PremiumHero";
 import { BrandPromise } from "@/components/home/BrandPromise";
 import { SolutionsShowcase } from "@/components/sections/SolutionsShowcase";
 import { SolucoesOnline } from "@/components/home/SolucoesOnline";
-import { ParceirosStrip } from "@/components/home/ParceirosStrip";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { canonical } from "@/lib/seo";
 
@@ -57,7 +56,6 @@ function HomePage() {
           </figure>
         </div>
       </section>
-      <ParceirosStrip />
       <div id="contato">
         <ContactForm source="home" subtitle="Em até 24h úteis um consultor entra em contato para entender seu cenário." />
       </div>

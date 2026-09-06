@@ -195,13 +195,19 @@ function NucleoPage() {
             </a>
           ) : (
             <div className="prod-grid">
-              {filtered.map((p, i) => (
+              {filtered.map((p) => (
                 <ProductCard
                   key={p.id}
                   product={p}
                   nucleoNome={n.nome}
                   onPrimary={() => setEscolhendo(p)}
-                  imagem={s.slug === "financeiras" ? finProdutoImg(c.slug, n.slug, i) : undefined}
+                  imagem={
+                    s.slug === "financeiras"
+                      ? // posição na lista COMPLETA, não na filtrada por perfil:
+                        // o pool de financiamentos é alinhado à ordem dos produtos
+                        finProdutoImg(c.slug, n.slug, n.products.indexOf(p))
+                      : undefined
+                  }
                 />
               ))}
             </div>

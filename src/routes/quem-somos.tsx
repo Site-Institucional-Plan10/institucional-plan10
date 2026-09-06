@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, Shield, Heart, Building2, Landmark, Clock } from "lucide-react";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { ParceirosStrip } from "@/components/home/ParceirosStrip";
 import { ImageSlot } from "@/components/plan10/ImageSlot";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
@@ -269,6 +270,9 @@ function QuemSomos() {
           </div>
         </div>
       </section>
+
+      {/* Parceiros, movidos da home para Quem Somos (pedido do cliente, 06/09/2026) */}
+      <ParceirosStrip />
 
       {/* Depoimentos, movidos da home para Quem Somos (pedido do cliente, 12/08/2026) */}
       <Testimonials />
