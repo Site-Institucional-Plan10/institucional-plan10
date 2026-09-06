@@ -340,3 +340,28 @@
 
 [data-differentials-carousel]::-webkit-scrollbar,
 [data-product-carousel]::-webkit-scrollbar { display: none; }
+
+/* ---- Barra de rolagem da marca ----------------------------------------
+   Padrão do navegador é cinza de sistema e destoa do resto. Aqui ela fica
+   fina, com trilho quase invisível e polegar no azul institucional. Vale para
+   a página e para qualquer área rolável (pop-up de produto, listas). */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1C4E80 rgba(12, 26, 41, 0.07);
+}
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: rgba(12, 26, 41, 0.06); }
+::-webkit-scrollbar-thumb {
+  background-color: #1C4E80;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: #143A61; background-clip: content-box; }
+::-webkit-scrollbar-corner { background: transparent; }
+
+/* Em superfície escura o trilho claro brilharia demais. */
+.sec-dark ::-webkit-scrollbar-track,
+.p10-form ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.08); }
+.sec-dark ::-webkit-scrollbar-thumb,
+.p10-form ::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, 0.42); background-clip: content-box; }

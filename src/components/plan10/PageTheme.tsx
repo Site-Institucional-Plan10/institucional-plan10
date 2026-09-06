@@ -294,7 +294,10 @@ const CSS = `
 
 /* Escolha de caminho ao tocar num produto: WhatsApp ou formulario */
 .plan10-scope .p10-chooser { position: fixed; inset: 0; z-index: 120; display: grid; place-items: center; padding: 20px; background: rgba(9,16,26,.62); backdrop-filter: blur(3px); animation: p10-fade .16s ease-out; }
-.plan10-scope .p10-chooser-card { position: relative; width: min(460px, 100%); max-height: 88vh; overflow-y: auto; background: #FBFAF7; border: 1px solid var(--c2); border-radius: 18px; padding: 26px 26px 22px; box-shadow: 0 24px 60px rgba(9,16,26,.28); animation: p10-rise .2s cubic-bezier(.2,.7,.3,1); }
+.plan10-scope .p10-chooser-card { position: relative; width: min(460px, 100%); max-height: 88vh; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--vp) rgba(12,26,41,.07); background: #FBFAF7; border: 1px solid var(--c2); border-radius: 18px; padding: 26px 26px 22px; box-shadow: 0 24px 60px rgba(9,16,26,.28); animation: p10-rise .2s cubic-bezier(.2,.7,.3,1); }
+.plan10-scope .p10-chooser-card::-webkit-scrollbar { width: 9px; }
+.plan10-scope .p10-chooser-card::-webkit-scrollbar-track { background: transparent; }
+.plan10-scope .p10-chooser-card::-webkit-scrollbar-thumb { background-color: var(--vp); opacity: .8; border-radius: 999px; border: 3px solid transparent; background-clip: content-box; }
 .plan10-scope .p10-chooser-card .eyebrow { color: var(--vp); }
 .plan10-scope .p10-chooser-card h3 { font-family: var(--fd); font-weight: 600; font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.25; letter-spacing: -.015em; color: var(--preto); margin: 6px 0 0; }
 .plan10-scope .p10-chooser-desc { font-family: var(--fb); font-size: .92rem; line-height: 1.6; color: var(--ctxt); margin: 10px 0 0; }

@@ -121,31 +121,144 @@ export function finNucleoImgs(
  * a mesma imagem para o mesmo produto.
  */
 const PRODUTO: Record<string, CuratedImage[]> = {
-  "credito-e-liquidez/operacoes-de-credito": [IMG.calc, IMG.docs, IMG.folder, IMG.report],
-  "financiamentos/financiamento-de-bens-e-projetos": [IMG.keys, IMG.apt, IMG.glass, IMG.calc],
-  "capitalizacao/capitalizacao": [IMG.jar, IMG.report, IMG.chart, IMG.folder],
-  "garantias-financeiras/carta-garantia": [IMG.policy, IMG.sign, IMG.docs],
-  "garantias-financeiras/fianca-bancaria": [IMG.sign, IMG.glass, IMG.folder],
-  "garantias-financeiras/garantias-de-aluguel": [IMG.apt, IMG.sign, IMG.keys],
+  // Ordem = aderência ao tema. O seletor consome do começo, então núcleo pequeno
+  // só usa as fotos mais próximas do assunto, e as mais genéricas do fim só
+  // entram quando o núcleo é grande. O acervo tem 19 fotos e o maior núcleo tem
+  // 17 produtos, então dá para não repetir nenhuma dentro da mesma página.
+  "credito-e-liquidez/operacoes-de-credito": [
+    IMG.calc,
+    IMG.report,
+    IMG.chart,
+    IMG.sign,
+    IMG.folder,
+    IMG.docs,
+    IMG.mobile,
+    IMG.jar,
+    IMG.glass,
+    IMG.card,
+    IMG.policy,
+    IMG.bluetex,
+  ],
+  "financiamentos/financiamento-de-bens-e-projetos": [
+    IMG.keys,
+    IMG.apt,
+    IMG.calc,
+    IMG.sign,
+    IMG.policy,
+    IMG.docs,
+    IMG.report,
+    IMG.chart,
+    IMG.jar,
+    IMG.glass,
+    IMG.folder,
+    IMG.card,
+    IMG.mobile,
+    IMG.toll,
+    IMG.hourglass,
+    IMG.cardsGold,
+    IMG.sea,
+    IMG.persiana,
+    IMG.bluetex,
+  ],
+  "capitalizacao/capitalizacao": [
+    IMG.jar,
+    IMG.hourglass,
+    IMG.report,
+    IMG.chart,
+    IMG.folder,
+    IMG.docs,
+    IMG.sign,
+  ],
+  "garantias-financeiras/carta-garantia": [IMG.policy, IMG.sign, IMG.docs, IMG.calc, IMG.glass],
+  "garantias-financeiras/fianca-bancaria": [IMG.sign, IMG.policy, IMG.docs, IMG.calc, IMG.folder],
+  "garantias-financeiras/garantias-de-aluguel": [
+    IMG.apt,
+    IMG.keys,
+    IMG.jar,
+    IMG.policy,
+    IMG.sign,
+    IMG.docs,
+    IMG.calc,
+  ],
   "investimentos-previdencia-e-reservas/investimentos-e-patrimonio-financeiro": [
     IMG.chart,
     IMG.report,
     IMG.glass,
+    IMG.jar,
+    IMG.docs,
+    IMG.folder,
+    IMG.hourglass,
+    IMG.calc,
+    IMG.bluetex,
+    IMG.sea,
+  ],
+  "investimentos-previdencia-e-reservas/previdencia": [
+    IMG.hourglass,
+    IMG.jar,
+    IMG.report,
+    IMG.chart,
+    IMG.folder,
+    IMG.docs,
+    IMG.calc,
+    IMG.sea,
+    IMG.glass,
+  ],
+  "servicos-financeiros-e-contas/cartoes-de-credito": [
+    IMG.cardsGold,
+    IMG.card,
+    IMG.mobile,
+    IMG.toll,
+    IMG.docs,
+    IMG.folder,
+    IMG.calc,
+    IMG.glass,
+    IMG.report,
+    IMG.jar,
+  ],
+  "servicos-financeiros-e-contas/conta-digital": [
+    IMG.mobile,
+    IMG.card,
+    IMG.cardsGold,
+    IMG.docs,
+    IMG.glass,
+  ],
+  "servicos-financeiros-e-contas/tags-pedagio-e-estacionamento": [
+    IMG.toll,
+    IMG.card,
+    IMG.mobile,
+    IMG.cardsGold,
+    IMG.calc,
     IMG.docs,
   ],
-  "investimentos-previdencia-e-reservas/previdencia": [IMG.hourglass, IMG.jar, IMG.report],
-  "servicos-financeiros-e-contas/cartoes-de-credito": [IMG.cardsGold, IMG.card, IMG.mobile],
-  "servicos-financeiros-e-contas/conta-digital": [IMG.mobile, IMG.card, IMG.docs],
-  "servicos-financeiros-e-contas/tags-pedagio": [IMG.toll, IMG.card, IMG.mobile],
 };
 
-const PRODUTO_FALLBACK: CuratedImage[] = [IMG.folder, IMG.calc, IMG.docs, IMG.glass];
+const PRODUTO_FALLBACK: CuratedImage[] = [
+  IMG.folder,
+  IMG.calc,
+  IMG.docs,
+  IMG.glass,
+  IMG.report,
+  IMG.chart,
+  IMG.sign,
+  IMG.jar,
+];
 
+/**
+ * Foto de um PRODUTO dentro do núcleo financeiro. Duas garantias:
+ * 1. nunca devolve a mesma foto que o topo da página já usa (hero e contexto);
+ * 2. produtos irmãos nunca caem na mesma foto, porque a escolha anda pela lista
+ *    conforme a posição do produto.
+ * A mesma página sempre mostra a mesma foto para o mesmo produto.
+ */
 export function finProdutoImg(
   categoriaSlug: string,
   nucleoSlug: string,
   ordem: number,
 ): CuratedImage {
   const pool = PRODUTO[`${categoriaSlug}/${nucleoSlug}`] ?? PRODUTO_FALLBACK;
-  return pool[ordem % pool.length];
+  const daPagina = finNucleoImgs(categoriaSlug, nucleoSlug);
+  const jaNaTela = daPagina ? [daPagina.hero.src, daPagina.ctx.src] : [];
+  const livres = pool.filter((img) => !jaNaTela.includes(img.src));
+  const lista = livres.length > 0 ? livres : pool;
+  return lista[ordem % lista.length];
 }
