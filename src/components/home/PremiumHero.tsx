@@ -82,7 +82,14 @@ export function PremiumHero() {
             background-position: center;
             padding: 92px 20px 40px;
           }
-          .ph2-strip { gap: 10px 22px; margin-top: 40px; }
+          /* O rótulo quebrava em duas linhas por causa do letter-spacing largo.
+             Menor e mais apertado, cabe numa linha até em tela de 320px. */
+          .ph2-eyebrow { font-size: .58rem; letter-spacing: .09em; gap: 9px; margin-bottom: 12px; }
+          .ph2-eyebrow::before { width: 18px; }
+          /* Título de 8 linhas no celular. Um corpo menor tira duas. */
+          .ph2-h1 { font-size: 1.72rem; line-height: 1.14; }
+          .ph2-lede { font-size: .95rem; margin-top: 12px; }
+          .ph2-strip { gap: 10px 22px; margin-top: 28px; }
         }
         @media (prefers-reduced-motion: reduce) { .ph2-btn:hover { transform: none; } }
       `}</style>
@@ -90,16 +97,29 @@ export function PremiumHero() {
       <div className="ph2-in">
         <p className="ph2-eyebrow">Consultoria · Aconselhamento · Proteção</p>
         <h1 id="ph2-title" className="ph2-h1">
-          Cuidado, proteção, finanças, crescimento e assistência <span className="accent">conectados</span> para cada fase da vida e dos negócios.
+          Cuidado, proteção, finanças, crescimento e assistência{" "}
+          <span className="accent">conectados</span> para cada fase da vida e dos negócios.
         </h1>
         <p className="ph2-lede">
           A Plan10 conecta soluções em uma jornada consultiva orientada ao seu momento.
         </p>
         <div className="ph2-ctas">
-          <Link to="/solucoes" className="ph2-btn ph2-btn-p">Conhecer as soluções</Link>
+          <Link to="/solucoes" className="ph2-btn ph2-btn-p">
+            Conhecer as soluções
+          </Link>
           <a href="#contato" className="ph2-btn ph2-btn-s">
             Falar com consultor
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
           </a>
         </div>
       </div>

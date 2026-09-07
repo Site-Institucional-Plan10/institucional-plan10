@@ -69,6 +69,9 @@
     font-family: var(--font-display);
     color: var(--color-ink);
     line-height: 1.12;
+    /* Distribui as palavras entre as linhas em vez de deixar uma órfã sozinha
+       na última linha, que é o que mais desperdiça altura no celular. */
+    text-wrap: balance;
   }
   @media (max-width: 767px) {
     .whatsapp-floating { display: none !important; }

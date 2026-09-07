@@ -90,6 +90,7 @@ export function SolutionsShowcase() {
         .p10x-foto::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--c); }
         .p10x-row:hover .p10x-foto img { transform: scale(1.06); }
         .p10x-name {
+          text-wrap: balance;
           font-family: 'Schibsted Grotesk', 'Inter', sans-serif; font-weight: 600;
           font-size: clamp(1.3rem, 2.2vw, 1.85rem); line-height: 1.15; letter-spacing: -.02em;
           color: #0B1A2F; transition: color .2s ease;

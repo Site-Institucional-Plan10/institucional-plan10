@@ -7,7 +7,14 @@ import { getWhatsAppUrl } from "@/lib/utils";
 
 type FooterSection = {
   title: string;
-  links: { label: string; to?: string; params?: Record<string, string>; href?: string; hash?: string; external?: boolean }[];
+  links: {
+    label: string;
+    to?: string;
+    params?: Record<string, string>;
+    href?: string;
+    hash?: string;
+    external?: boolean;
+  }[];
 };
 
 const sections: FooterSection[] = [
@@ -15,10 +22,26 @@ const sections: FooterSection[] = [
     title: "Soluções",
     links: [
       { label: "Saúde e vida saudável", to: "/solucoes/$solucao", params: { solucao: "saude" } },
-      { label: "Proteção à vida e ao patrimônio", to: "/solucoes/$solucao", params: { solucao: "protecao" } },
-      { label: "Soluções financeiras", to: "/solucoes/$solucao", params: { solucao: "financeiras" } },
-      { label: "Crescimento e mobilidade", to: "/solucoes/$solucao", params: { solucao: "crescimento" } },
-      { label: "Assistência pessoal e empresarial", to: "/solucoes/$solucao", params: { solucao: "assistencia" } },
+      {
+        label: "Proteção à vida e ao patrimônio",
+        to: "/solucoes/$solucao",
+        params: { solucao: "protecao" },
+      },
+      {
+        label: "Soluções financeiras",
+        to: "/solucoes/$solucao",
+        params: { solucao: "financeiras" },
+      },
+      {
+        label: "Crescimento e mobilidade",
+        to: "/solucoes/$solucao",
+        params: { solucao: "crescimento" },
+      },
+      {
+        label: "Assistência pessoal e empresarial",
+        to: "/solucoes/$solucao",
+        params: { solucao: "assistencia" },
+      },
     ],
   },
   {
@@ -92,8 +115,15 @@ export function Footer() {
       <div className="container-x py-8 md:py-10">
         <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
-            <img src="/assets/logos/logo-plan10.png" alt="Plan10" style={{ height: 40, width: "auto" }} />
-            <p className="mt-4 text-sm max-w-xs leading-[1.7]" style={{ color: "rgba(255,255,255,0.65)" }}>
+            <img
+              src="/assets/logos/logo-plan10.png"
+              alt="Plan10"
+              style={{ height: 40, width: "auto" }}
+            />
+            <p
+              className="mt-4 text-sm max-w-xs leading-[1.7]"
+              style={{ color: "rgba(255,255,255,0.65)" }}
+            >
               Proteção, cuidados com a saúde e planejamento patrimonial em um só lugar.
             </p>
           </div>
@@ -106,7 +136,9 @@ export function Footer() {
               <h3 style={headerStyle}>{s.title}</h3>
               <ul className="space-y-2.5">
                 {s.links.map((l) => (
-                  <li key={l.label}><FooterLink link={l} /></li>
+                  <li key={l.label}>
+                    <FooterLink link={l} />
+                  </li>
                 ))}
               </ul>
             </div>
@@ -167,8 +199,16 @@ export function Footer() {
         {/* Social icons */}
         <div className="mt-5 flex gap-3">
           {[
-            { Icon: Instagram, label: "Instagram Plan10", href: "https://www.instagram.com/plan10seguros/" },
-            { Icon: Facebook, label: "Facebook Plan10", href: "https://www.facebook.com/plan10seguros/" },
+            {
+              Icon: Instagram,
+              label: "Instagram Plan10",
+              href: "https://www.instagram.com/plan10seguros/",
+            },
+            {
+              Icon: Facebook,
+              label: "Facebook Plan10",
+              href: "https://www.facebook.com/plan10seguros/",
+            },
           ].map(({ Icon, label, href }) => (
             <a
               key={label}
@@ -194,12 +234,12 @@ export function Footer() {
           <span>
             Criado por{" "}
             <a
-              href="https://www.nextassessoria.com/"
+              href="https://mozabr.com.br/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange transition"
             >
-              Next Assessoria
+              Moza Assessoria
             </a>
           </span>
         </div>

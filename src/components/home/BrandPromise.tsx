@@ -29,14 +29,15 @@ export function BrandPromise() {
           font-size: clamp(1rem, 1.4vw, 1.14rem); line-height: 1.62;
           color: rgba(244,239,227,.8); margin: 22px 0 0; max-width: 52ch;
         }
-        @media (max-width: 720px) { .bp { padding: 30px 20px; } }
+        @media (max-width: 720px) { .bp { padding: 30px 20px; } .bp-h { font-size: 1.5rem; line-height: 1.18; } }
       `}</style>
       <div className="bp-bg" aria-hidden>
         <img src="/assets/curated/still-envelopes.jpg" alt="" loading="lazy" />
       </div>
       <div className="bp-in">
         <h2 id="bp-h" className="bp-h">
-          Uma <span className="g">leitura integrada</span> do seu momento, com caminhos para pessoas, famílias e empresas.
+          Uma <span className="g">leitura integrada</span> do seu momento, com caminhos para
+          pessoas, famílias e empresas.
         </h2>
       </div>
     </section>
