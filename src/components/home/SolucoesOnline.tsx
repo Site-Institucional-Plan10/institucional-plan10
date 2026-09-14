@@ -16,7 +16,7 @@ export function SolucoesOnline() {
         .so { background: #FFFFFF; color: #0B1A2F; padding: 52px 24px; font-family: 'Inter', system-ui, sans-serif; }
         .so-in { max-width: 1080px; margin: 0 auto; }
         .so-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; }
-        .so-h2 { font-family: 'Schibsted Grotesk','Inter',sans-serif; font-weight: 600; font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.1; letter-spacing: -.025em; color: #0E2438; margin: 0; max-width: 20ch; }
+        .so-h2 { font-family: 'Schibsted Grotesk','Inter',sans-serif; font-weight: 600; font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.1; letter-spacing: -.025em; color: #0E2438; margin: 0; max-width: 46ch; }
         .so-lede { font-size: 1.02rem; line-height: 1.6; color: #5B6472; margin: 10px 0 0; max-width: 60ch; }
         .so-list { margin-top: 24px; border-top: 1px solid #E6E1D6; }
         .so-row { --c: #9A7B23; display: grid; grid-template-columns: 1.1fr 1.4fr auto; align-items: center; gap: 24px; padding: 15px 12px 15px 6px; border-bottom: 1px solid #E6E1D6; text-decoration: none; color: #0B1A2F; position: relative; transition: background .24s ease, padding-left .24s ease; }
@@ -46,19 +46,43 @@ export function SolucoesOnline() {
       <div className="so-in">
         <div className="so-head">
           <div>
-            <h2 id="so-h" className="so-h2">Soluções digitais e caminhos de atendimento</h2>
+            <h2 id="so-h" className="so-h2">
+              Soluções digitais e caminhos de atendimento
+            </h2>
           </div>
         </div>
         <p className="so-lede">
-          A Plan10 organiza opções digitais para quem busca praticidade com clareza. Algumas seguem direto para contratação online; outras pedem orientação antes de decidir.
+          A Plan10 organiza opções digitais para quem busca praticidade com clareza. Algumas seguem
+          direto para contratação online; outras pedem orientação antes de decidir.
         </p>
 
         <div className="so-list">
           {destaques.map((s) => (
-            <a key={s.nome} href={s.link} target="_blank" rel="noopener noreferrer" className="so-row">
-              <span><span className="so-nm">{s.nome}</span><span className="so-cat">{s.categoria}</span></span>
+            <a
+              key={s.nome}
+              href={s.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="so-row"
+            >
+              <span>
+                <span className="so-nm">{s.nome}</span>
+                <span className="so-cat">{s.categoria}</span>
+              </span>
               <span className="so-desc">{s.descricao}</span>
-              <span className="so-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+              <span className="so-cta">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  aria-hidden
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
             </a>
           ))}
         </div>
@@ -66,7 +90,17 @@ export function SolucoesOnline() {
         <div className="so-foot">
           <Link to="/solucoes-online" className="so-all">
             Ver todas as {total} soluções online
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
           </Link>
         </div>
       </div>

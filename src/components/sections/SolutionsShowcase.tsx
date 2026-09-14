@@ -69,13 +69,13 @@ export function SolutionsShowcase() {
         .p10x-h2 {
           font-family: 'Schibsted Grotesk', 'Inter', sans-serif; font-weight: 600;
           font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.06; letter-spacing: -.025em;
-          color: #0B1A2F; margin: 0; max-width: 18ch;
+          color: #0B1A2F; margin: 0; max-width: 46ch;
         }
         .p10x-lede { font-size: 1.05rem; line-height: 1.6; color: #4A5568; margin: 20px 0 0; max-width: 52ch; }
         .p10x-list { margin-top: 26px; border-top: 1px solid #E2DDD3; }
         .p10x-row {
           --c: #C9A83C; --soft: #F0EEE8;
-          display: grid; grid-template-columns: 104px 1.05fr 1.15fr auto;
+          display: grid; grid-template-columns: 104px 1.3fr 1fr auto;
           align-items: center; gap: 28px;
           padding: 14px 20px 14px 8px; border-bottom: 1px solid #E2DDD3;
           text-decoration: none; color: #0B1A2F; position: relative;

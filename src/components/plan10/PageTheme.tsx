@@ -129,7 +129,7 @@ const CSS = `
 .plan10-scope .p10-hero-logo { display: none; }
 .plan10-scope .p10-hero h1 {
   font-family: var(--fd); font-size: clamp(2rem, 4.6vw, 3.4rem);
-  line-height: 1.08; letter-spacing: -.028em; font-weight: 500; margin: 0; color: #F1EFEA; max-width: 20ch;
+  line-height: 1.08; letter-spacing: -.028em; font-weight: 500; margin: 0; color: #F1EFEA; max-width: 26ch;
 }
 .plan10-scope .p10-hero .lede { font-family: var(--fb); font-size: clamp(1rem,1.4vw,1.18rem); line-height: 1.6; color: rgba(241,239,234,.74); margin: 0; max-width: 48ch; }
 .plan10-scope .p10-hero .eyebrow { color: rgba(241,239,234,.6); }
@@ -187,7 +187,7 @@ const CSS = `
 .plan10-scope .p10-toggle button[aria-selected="true"] { background: var(--preto); color: #F1EFEA; }
 
 /* Produtos: grade compacta de tiles (visualização rápida, sem rolagem longa) */
-.plan10-scope .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; min-width: 0; }
+.plan10-scope .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 10px; min-width: 0; }
 .plan10-scope .prod-tile {
   --c: var(--vp);
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
@@ -345,7 +345,7 @@ const CSS = `
 .plan10-scope .p10-card:hover { background: var(--c1); padding-left: 18px; }
 .plan10-scope .p10-card:hover::before { height: 58%; }
 .plan10-scope .p10-card .eyebrow { grid-column: 1 / -1; }
-.plan10-scope .p10-card h3 { font-family: var(--fd); font-weight: 600; font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0; color: var(--preto); line-height: 1.16; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.plan10-scope .p10-card :is(h2, h3) { font-family: var(--fd); font-weight: 600; font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0; color: var(--preto); line-height: 1.16; letter-spacing: -.02em; overflow-wrap: anywhere; }
 .plan10-scope .p10-card p { font-family: var(--fb); font-size: .95rem; line-height: 1.55; color: var(--ctxt); margin: 5px 0 0; max-width: 62ch; overflow-wrap: anywhere; }
 .plan10-scope .p10-card .arrow { grid-column: 2; grid-row: 1 / span 3; align-self: center; font-family: var(--fl); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--preto); opacity: .55; font-weight: 500; white-space: nowrap; transition: transform var(--t), color var(--t), opacity var(--t); }
 .plan10-scope .p10-card:hover .arrow { transform: translateX(3px); color: var(--vp); opacity: 1; }

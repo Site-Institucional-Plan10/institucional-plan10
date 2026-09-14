@@ -12,9 +12,16 @@ export const Route = createFileRoute("/quem-somos")({
   head: () => ({
     meta: [
       { title: "Quem Somos | Plan10, Consultoria Integrada" },
-      { name: "description", content: "A Plan10 é uma consultoria multimodal independente, transparente e orientada por dados." },
+      {
+        name: "description",
+        content:
+          "A Plan10 é uma consultoria multimodal independente, transparente e orientada por dados.",
+      },
       { property: "og:title", content: "Quem Somos, Plan10" },
-      { property: "og:description", content: "Consultoria de proteção integrada para pessoas, famílias e empresas." },
+      {
+        property: "og:description",
+        content: "Consultoria de proteção integrada para pessoas, famílias e empresas.",
+      },
       { property: "og:url", content: canonical("/quem-somos") },
     ],
     links: [{ rel: "canonical", href: canonical("/quem-somos") }],
@@ -102,7 +109,8 @@ function QuemSomos() {
               lineHeight: 1.6,
             }}
           >
-            Consultoria de proteção integrada para pessoas, famílias e empresas que valorizam excelência.
+            Consultoria de proteção integrada para pessoas, famílias e empresas que valorizam
+            excelência.
           </p>
         </div>
       </section>
@@ -112,10 +120,13 @@ function QuemSomos() {
         <div className="container-x">
           <div className="max-w-3xl">
             <p className="text-lg text-neutral-700 leading-relaxed">
-              A Plan10 é uma consultoria multimodal especializada em soluções integradas de seguros, proteção pessoal, familiar, patrimonial e empresarial, consórcios e planos de saúde e odontológicos.
+              A Plan10 é uma consultoria multimodal especializada em soluções integradas de seguros,
+              proteção pessoal, familiar, patrimonial e empresarial, consórcios e planos de saúde e
+              odontológicos.
             </p>
             <p className="mt-5 text-lg text-neutral-700 leading-relaxed">
-              Atuamos de forma independente, transparente e orientada por dados, conectando pessoas, famílias e empresas às melhores seguradoras e instituições do país.
+              Atuamos de forma independente, transparente e orientada por dados, conectando pessoas,
+              famílias e empresas às melhores seguradoras e instituições do país.
             </p>
             <div
               className="mt-8 rounded-2xl p-6"
@@ -125,7 +136,8 @@ function QuemSomos() {
               }}
             >
               <p className="font-h3" style={{ color: "#1A1A1A" }}>
-                Nosso propósito: cuidar do que importa, protegendo pessoas, famílias e empresas com inteligência e compromisso real.
+                Nosso propósito: cuidar do que importa, protegendo pessoas, famílias e empresas com
+                inteligência e compromisso real.
               </p>
             </div>
           </div>
@@ -166,7 +178,7 @@ function QuemSomos() {
               <p
                 className="uppercase mb-3"
                 style={{
-                  color: "#E05A20",
+                  color: "#C45016",
                   letterSpacing: "0.12em",
                   fontSize: "0.72rem",
                   fontWeight: 700,
@@ -223,11 +235,16 @@ function QuemSomos() {
               Consultores especializados por área
             </h2>
             <p className="text-neutral-700 leading-relaxed">
-              Cada vertical da Plan10 é conduzida por uma célula de consultores com formação técnica específica e anos de experiência no mercado.
+              Cada vertical da Plan10 é conduzida por uma célula de consultores com formação técnica
+              específica e anos de experiência no mercado.
             </p>
           </div>
           <div style={{ marginBottom: 40 }}>
-            <ImageSlot ratio="21 / 9" label="Foto da equipe Plan10" hint="Time real, tom humano e profissional. Ambiente de escritório ou retrato do grupo." />
+            <ImageSlot
+              ratio="21 / 9"
+              label="Foto da equipe Plan10"
+              hint="Time real, tom humano e profissional. Ambiente de escritório ou retrato do grupo."
+            />
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {teamCells.map(({ Icon, color, area, description }) => (
@@ -291,10 +308,7 @@ function QuemSomos() {
           >
             Inicie uma conversa
           </p>
-          <h2
-            className="font-bold"
-            style={{ color: "#fff", fontSize: "2rem", lineHeight: 1.2 }}
-          >
+          <h2 className="font-bold" style={{ color: "#fff", fontSize: "2rem", lineHeight: 1.2 }}>
             Pronto para estruturar sua proteção?
           </h2>
           <p
@@ -305,7 +319,8 @@ function QuemSomos() {
               lineHeight: 1.6,
             }}
           >
-            Nossos consultores estão disponíveis para entender seu cenário e propor a solução mais adequada.
+            Nossos consultores estão disponíveis para entender seu cenário e propor a solução mais
+            adequada.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer">

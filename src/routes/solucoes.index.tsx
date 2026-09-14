@@ -7,9 +7,16 @@ export const Route = createFileRoute("/solucoes/")({
   head: () => ({
     meta: [
       { title: "Soluções Plan10, consultoria em proteção e planejamento" },
-      { name: "description", content: "As 5 Soluções Plan10, saúde, proteção, financeiras, crescimento e assistência, conectadas em uma jornada consultiva." },
+      {
+        name: "description",
+        content:
+          "As 5 Soluções Plan10, saúde, proteção, financeiras, crescimento e assistência, conectadas em uma jornada consultiva.",
+      },
       { property: "og:title", content: "Soluções Plan10" },
-      { property: "og:description", content: "As 5 Soluções Plan10 para pessoas, famílias e empresas." },
+      {
+        property: "og:description",
+        content: "As 5 Soluções Plan10 para pessoas, famílias e empresas.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Plan10" },
       { property: "og:url", content: canonical("/solucoes") },
@@ -27,8 +34,8 @@ function SolucoesIndex() {
         <div className="p10-hero-inner">
           <h1>Soluções Plan10 para cada fase da vida e dos negócios.</h1>
           <p className="lede">
-            Saúde, proteção, finanças, crescimento e assistência conectados em uma única
-            jornada consultiva, para pessoas, famílias e empresas.
+            Saúde, proteção, finanças, crescimento e assistência conectados em uma única jornada
+            consultiva, para pessoas, famílias e empresas.
           </p>
         </div>
       </header>
@@ -52,16 +59,18 @@ function SolucoesIndex() {
                   className="p10-card"
                   style={cardVars}
                 >
-                  <h3>{s.nome}</h3>
+                  <h2>{s.nome}</h2>
                   <p>{s.subHero}</p>
-                  <span className="arrow" style={{ color: p.vp }}>Conhecer →</span>
+                  <span className="arrow">Conhecer →</span>
                 </Link>
               );
             }
             return (
               <div key={s.slug} className="p10-card disabled" aria-disabled="true">
-                <p className="eyebrow" style={{ color: "#8A7A3A" }}>Em preparação</p>
-                <h3>{s.nome}</h3>
+                <p className="eyebrow" style={{ color: "#8A7A3A" }}>
+                  Em preparação
+                </p>
+                <h2>{s.nome}</h2>
                 <p>{s.subHero}</p>
                 <span className="arrow">Em breve</span>
               </div>
@@ -75,8 +84,8 @@ function SolucoesIndex() {
         <div className="wrap">
           <h2 className="p10-h2">Consultoria orientada por método</h2>
           <p className="p10-lede">
-            A Plan10 trabalha com escuta, contexto e critério. Cada solução é apresentada com abertura
-            consultiva, para que a escolha seja informada e alinhada ao seu momento.
+            A Plan10 trabalha com escuta, contexto e critério. Cada solução é apresentada com
+            abertura consultiva, para que a escolha seja informada e alinhada ao seu momento.
           </p>
         </div>
       </section>

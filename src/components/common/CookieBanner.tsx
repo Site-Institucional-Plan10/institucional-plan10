@@ -51,7 +51,10 @@ export function CookieBanner() {
       <p className="ck-eyebrow">Privacidade</p>
       <p className="ck-txt">
         Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com a{" "}
-        <Link to="/privacidade">Política de Privacidade</Link> conforme a LGPD.
+        <Link to="/privacidade" style={{ whiteSpace: "nowrap" }}>
+          Política de Privacidade
+        </Link>{" "}
+        conforme a LGPD.
       </p>
       <div className="ck-actions">
         <button type="button" className="ck-btn ghost" onClick={() => choose("essential")}>
