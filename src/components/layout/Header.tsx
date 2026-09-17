@@ -19,13 +19,17 @@ const solutionNav = solutions.map((s) => ({
   color: paletteFor(s.slug).vp,
 }));
 
-// Nav desktop: barra curta (auditoria da home, 13/09/2026). Os cinco hubs saíram do
-// primeiro nível, que alongava a barra e a escondia atrás do hambúrguer abaixo de 1280px,
-// e agora são alcançados por "Soluções". Substitui o arranjo de 12/08/2026.
-const navLinks: Array<{ to: "/" | "/quem-somos" | "/solucoes" | "/blog"; label: string }> = [
-  { to: "/", label: "Home" },
+// Nav desktop: as cinco soluções ficam no primeiro nível, com "Soluções" abrindo a
+// página mãe. A barra é comprimida de propósito (fonte e respiro menores, acento de
+// hover no lugar do ponto colorido) porque no arranjo antigo ela tinha 770px e só
+// aparecia a partir de 1280px, que foi a reclamação do cliente.
+const navLinks: Array<
+  | { to: "/" | "/quem-somos" | "/solucoes" | "/blog"; label: string }
+  | { solucao: string; label: string; color: string }
+> = [
   { to: "/quem-somos", label: "Quem somos" },
   { to: "/solucoes", label: "Soluções" },
+  ...solutionNav.map((s) => ({ solucao: s.slug, label: s.label, color: s.color })),
   { to: "/blog", label: "Blog" },
 ];
 
@@ -282,22 +286,41 @@ export function Header() {
             className="flex-shrink-0 cursor-pointer"
             aria-label="Plan10, Home"
           >
-            <HeaderLogo size={48} />
+            <HeaderLogo size={42} />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
-                style={{ color: "#1A1A1A" }}
-                activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
-              >
-                <span className="group-hover:text-orange transition-colors">{l.label}</span>
-                <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-              </Link>
-            ))}
+          <nav className="hidden min-[1100px]:flex items-center gap-0.5">
+            {navLinks.map((l) =>
+              "solucao" in l ? (
+                <Link
+                  key={l.solucao}
+                  to="/solucoes/$solucao"
+                  params={{ solucao: l.solucao }}
+                  className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
+                  style={{ color: "#1A1A1A" }}
+                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
+                >
+                  <span className="transition-colors group-hover:text-orange">{l.label}</span>
+                  {/* o acento do hub vira a própria barra do hover, em vez de um ponto
+                      que reservava largura em todo item da barra */}
+                  <span
+                    className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 transition-transform group-hover:scale-x-100"
+                    style={{ backgroundColor: l.color }}
+                  />
+                </Link>
+              ) : (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
+                  style={{ color: "#1A1A1A" }}
+                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
+                >
+                  <span className="transition-colors group-hover:text-orange">{l.label}</span>
+                  <span className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+                </Link>
+              ),
+            )}
           </nav>
 
           <div className="flex items-center gap-2 pr-1 md:pr-0">
@@ -310,12 +333,12 @@ export function Header() {
               <Search size={20} />
             </button>
             <Link to="/fale-conosco" className="hidden md:inline-flex flex-shrink-0">
-              <Button variant="secondary" size="sm" className="whitespace-nowrap">Falar com consultor</Button>
+              <Button variant="secondary" size="sm" className="whitespace-nowrap px-3 text-[13px]">Falar com consultor</Button>
             </Link>
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
+              className="min-[1100px]:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
               aria-label="Abrir menu"
             >
               <Menu size={24} />
@@ -328,7 +351,7 @@ export function Header() {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-50 lg:hidden flex flex-col"
+          className="fixed inset-0 z-50 min-[1100px]:hidden flex flex-col"
           style={{
             background: "#111111",
             animation: `${mobileClosing ? "slideOutRight" : "slideInRight"} 280ms cubic-bezier(0.4,0,0.2,1) forwards`,
