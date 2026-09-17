@@ -132,6 +132,7 @@ const CSS = `
   line-height: 1.08; letter-spacing: -.028em; font-weight: 500; margin: 0; color: #F1EFEA; max-width: 26ch;
 }
 .plan10-scope .p10-hero .lede { font-family: var(--fb); font-size: clamp(1rem,1.4vw,1.18rem); line-height: 1.6; color: rgba(241,239,234,.74); margin: 0; max-width: 48ch; }
+.plan10-scope .p10-hero .lede.sub { font-size: clamp(.92rem,1.2vw,1.04rem); color: rgba(241,239,234,.6); margin-top: -6px; }
 .plan10-scope .p10-hero .eyebrow { color: rgba(241,239,234,.6); }
 .plan10-scope .p10-hero .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold); display: inline-block; vertical-align: middle; margin-right: 12px; }
 .plan10-scope .p10-hero .pills { margin-top: 4px; }

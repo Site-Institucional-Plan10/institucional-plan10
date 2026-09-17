@@ -3,7 +3,7 @@
 export const SITE_URL = "https://plan10.com.br";
 
 export function canonical(path: string) {
-  return `${SITE_URL}${path === "/" ? "" : path}`;
+  return `${SITE_URL}${path === "/" ? "/" : path}`;
 }
 
 export interface FAQItem {

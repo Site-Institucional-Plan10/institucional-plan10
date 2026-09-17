@@ -70,8 +70,9 @@ function SolucaoPage() {
         </div>
         <div className="p10-hero-inner">
           {logo && <img src={logo} alt={`Logo ${solucao.nome}`} className="p10-hero-logo" />}
-          <h1>{solucao.hero}</h1>
-          <p className="lede">{solucao.subHero}</p>
+          <h1>{solucao.nome}</h1>
+          <p className="lede">{solucao.hero}</p>
+          <p className="lede sub">{solucao.subHero}</p>
         </div>
       </header>
 
