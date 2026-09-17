@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { buildLeadWhatsAppUrl, maskPhoneBR } from "@/lib/utils";
 import { FancySelect } from "@/components/plan10/FancySelect";
 
@@ -67,6 +68,13 @@ export function LeadForm({
       setErrMsg("Informe o WhatsApp com DDD.");
       return;
     }
+    if (!consent) {
+      setErrMsg("É necessário concordar com a política de privacidade.");
+      return;
+    }
+    // AQUI entra o registro do lead da etapa 1, assim que o destino estiver
+    // definido. O CRM da Plan10 é o destino escolhido e depende de o cliente
+    // informar qual é. Enquanto isso, o lead só existe na conversa do WhatsApp.
     setEtapa(2);
   }
 
@@ -75,10 +83,6 @@ export function LeadForm({
     setErrMsg("");
     if (email.trim() && (!email.includes("@") || !email.includes("."))) {
       setErrMsg("O e-mail informado parece inválido.");
-      return;
-    }
-    if (!consent) {
-      setErrMsg("É necessário concordar com a política de privacidade.");
       return;
     }
     const url = buildLeadWhatsAppUrl({
@@ -138,6 +142,13 @@ export function LeadForm({
               <input value={whatsapp} onChange={(e) => setWhatsapp(maskPhoneBR(e.target.value))} inputMode="tel" autoComplete="tel" placeholder="(11) 90000-0000" required />
             </label>
           </div>
+          <label className="check">
+            <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
+            <span>
+              Concordo com o tratamento dos meus dados conforme a{" "}
+              <Link to="/privacidade">Política de Privacidade</Link> da Plan10.
+            </span>
+          </label>
           {errMsg && (
             <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
           )}
@@ -179,10 +190,6 @@ export function LeadForm({
           <label>
             <span className="eyebrow">Mensagem (opcional)</span>
             <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
-          </label>
-          <label className="check">
-            <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
-            <span>Concordo com o tratamento dos meus dados conforme a Política de Privacidade da Plan10.</span>
           </label>
           {errMsg && (
             <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>

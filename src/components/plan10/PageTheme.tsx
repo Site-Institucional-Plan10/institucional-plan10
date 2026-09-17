@@ -280,6 +280,8 @@ const CSS = `
 .plan10-scope .p10-form .actions .btn { justify-content: center; flex: 1; }
 .plan10-scope .p10-form .check { display: flex; gap: 10px; align-items: flex-start; font-size: .85rem; color: rgba(241,239,234,.78); line-height: 1.5; }
 .plan10-scope .p10-form .check input { width: auto; margin-top: 3px; }
+.plan10-scope .p10-form .check a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.plan10-scope .p10-form .check a:hover { color: #fff; }
 .plan10-scope .p10-etapas { display: flex; align-items: center; gap: 12px; }
 .plan10-scope .p10-etapas-lbl { font-family: var(--fm); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.6); white-space: nowrap; }
 .plan10-scope .p10-etapas-bar { display: flex; gap: 6px; flex: 1; }
