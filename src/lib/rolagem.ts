@@ -7,22 +7,25 @@ import { useEffect } from "react";
  * O visitante que clica numa solução, num caminho ou numa modalidade já sabe o
  * que quer ver: a lista do nível seguinte. Descer sozinho até a trilha poupa um
  * gesto a cada clique e deixa a navegação sendo só uma sequência de escolhas.
- * A descida é lenta de propósito, para a pessoa ver o hero antes de a lista
- * chegar, e não um salto que esconde metade da página.
+ * A descida começa quase junto com a página e é lenta de propósito, para a
+ * pessoa ver o hero enquanto a lista chega, e não um salto que esconde metade
+ * da página.
  *
  * Só desce, nunca sobe. Qualquer gesto do visitante interrompe na hora, porque
  * disputar a rolagem com quem já está rolando é o pior resultado possível.
  * Quem pediu menos movimento no sistema fica no topo e rola por conta própria.
  */
 
-const ESPERA_NO_HERO = 900;
+const ESPERA_NO_HERO = 350;
 const VELOCIDADE = 2.2; // ms por pixel percorrido
 const DURACAO_MIN = 1200;
 const DURACAO_MAX = 2400;
 
 function suavizar(t: number) {
-  // easeInOutCubic: sai devagar, ganha corpo no meio e encosta sem freada seca.
-  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  // easeInOutSine: a curva mais mansa das que aceleram e freiam. O pico de
+  // velocidade fica em 1,57x a média, contra 2x do cubic, então o meio do
+  // percurso não dá o solavanco que fazia a descida parecer um pulo.
+  return (1 - Math.cos(Math.PI * t)) / 2;
 }
 
 export function useRolarAteTrilha(chave: string) {
@@ -49,6 +52,11 @@ export function useRolarAteTrilha(chave: string) {
 
     pausa = window.setTimeout(() => {
       if (cancelado) return;
+      quadro = window.requestAnimationFrame(medirEDescer);
+    }, ESPERA_NO_HERO);
+
+    function medirEDescer() {
+      if (cancelado) return;
 
       const trilha = document.querySelector<HTMLElement>("[data-trilha]");
       if (!trilha) return parar();
@@ -72,7 +80,7 @@ export function useRolarAteTrilha(chave: string) {
       }
 
       quadro = window.requestAnimationFrame(passo);
-    }, ESPERA_NO_HERO);
+    }
 
     return parar;
   }, [chave]);
