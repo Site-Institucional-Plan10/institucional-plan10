@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, ChevronDown } from "lucide-react";
+import { Instagram, Facebook, ChevronDown, MessageCircle } from "lucide-react";
 
 import { WHATSAPP_DISPLAY } from "@/components/common/WhatsAppButton";
 import { getWhatsAppUrl } from "@/lib/utils";
@@ -49,6 +49,7 @@ const sections: FooterSection[] = [
     links: [
       { label: "Quem somos", to: "/quem-somos" },
       { label: "Plan10 em um clique", to: "/em-um-clique" },
+      { label: "Soluções digitais", to: "/solucoes-online" },
       { label: "Mobilidade", to: "/mobilidade" },
       { label: "Depoimentos", to: "/quem-somos", hash: "depoimentos" },
     ],
@@ -112,6 +113,55 @@ export function Footer() {
 
   return (
     <footer style={{ background: "#111111" }} className="text-white border-t border-white/10">
+      {/* Fale conosco: canal direto, sem formulário (pedido do cliente). Fica no
+          rodapé para aparecer em todas as páginas, não só na home. */}
+      <section id="fale-conosco" style={{ borderBottom: "1px solid rgba(255,255,255,0.10)" }}>
+        <div className="container-x py-9 md:py-11 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(1.5rem, 2.6vw, 2.05rem)",
+                lineHeight: 1.12,
+                letterSpacing: "-.02em",
+                color: "#fff",
+                margin: 0,
+              }}
+            >
+              Fale conosco
+            </h2>
+            <p className="mt-2 text-sm" style={{ color: "rgba(255,255,255,0.68)", maxWidth: "46ch" }}>
+              Um consultor responde em até 24 horas úteis. Escolha por onde prefere falar.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={getWhatsAppUrl("default")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition"
+              style={{ background: "#25D366", color: "#08240F" }}
+            >
+              <MessageCircle size={17} /> WhatsApp
+            </a>
+            <a
+              href="tel:+5511938012222"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-white hover:text-black"
+              style={{ border: "1px solid rgba(255,255,255,0.32)", color: "#fff" }}
+            >
+              {WHATSAPP_DISPLAY}
+            </a>
+            <a
+              href="mailto:contato@plan10.com.br"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:bg-white hover:text-black"
+              style={{ border: "1px solid rgba(255,255,255,0.32)", color: "#fff" }}
+            >
+              contato@plan10.com.br
+            </a>
+          </div>
+        </div>
+      </section>
+
       <div className="container-x py-8 md:py-10">
         <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>

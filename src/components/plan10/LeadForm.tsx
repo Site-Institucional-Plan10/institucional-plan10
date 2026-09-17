@@ -31,6 +31,7 @@ export function LeadForm({
   produtoSelecionado,
   onProdutoChange,
 }: Props) {
+  const [etapa, setEtapa] = useState<1 | 2>(1);
   const [nome, setNome] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [email, setEmail] = useState("");
@@ -38,8 +39,6 @@ export function LeadForm({
   const [produto, setProduto] = useState(produtoSelecionado ?? "");
   const [mensagem, setMensagem] = useState("");
   const [consent, setConsent] = useState(false);
-  const [showEmail, setShowEmail] = useState(false);
-  const [showMensagem, setShowMensagem] = useState(false);
   const [state, setState] = useState<"idle" | "ok">("idle");
   const [errMsg, setErrMsg] = useState("");
   const [waUrl, setWaUrl] = useState("");
@@ -56,17 +55,28 @@ export function LeadForm({
     onProdutoChange?.(valor);
   }
 
-  function onSubmit(e: React.FormEvent) {
+  // Etapa 1 guarda o essencial do lead: nome, WhatsApp e e-mail.
+  function avancar(e: React.FormEvent) {
     e.preventDefault();
     setErrMsg("");
-    if (nome.trim().length < 2 || whatsapp.trim().length < 8) {
-      setErrMsg("Confira o nome e o WhatsApp.");
+    if (nome.trim().length < 2) {
+      setErrMsg("Informe o seu nome.");
       return;
     }
-    if (email.trim() && !email.includes("@")) {
+    if (whatsapp.replace(/\D/g, "").length < 10) {
+      setErrMsg("Informe o WhatsApp com DDD.");
+      return;
+    }
+    if (!email.includes("@") || !email.includes(".")) {
       setErrMsg("O e-mail informado parece inválido.");
       return;
     }
+    setEtapa(2);
+  }
+
+  function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setErrMsg("");
     if (!consent) {
       setErrMsg("É necessário concordar com a política de privacidade.");
       return;
@@ -100,69 +110,91 @@ export function LeadForm({
   }
 
   return (
-    <form onSubmit={onSubmit} className="p10-form" noValidate>
+    <form onSubmit={etapa === 1 ? avancar : onSubmit} className="p10-form" noValidate>
       {contexto && (
         <div className="p10-form-ctx">
           <span className="eyebrow">Sobre</span>
           <p>{contexto}</p>
         </div>
       )}
-      <div className="row">
-        <label>
-          <span className="eyebrow">Nome</span>
-          <input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome completo" required />
-        </label>
-        <label>
-          <span className="eyebrow">WhatsApp</span>
-          <input value={whatsapp} onChange={(e) => setWhatsapp(maskPhoneBR(e.target.value))} inputMode="tel" placeholder="(11) 90000-0000" required />
-        </label>
+
+      <div className="p10-etapas">
+        <span className="p10-etapas-lbl">Etapa {etapa} de 2</span>
+        <span className="p10-etapas-bar" aria-hidden>
+          <i className="on" />
+          <i className={etapa === 2 ? "on" : ""} />
+        </span>
       </div>
-      {opcoes.length > 0 && (
-        produto ? (
-          <div className="p10-form-pre">
-            <span className="lbl">Produto escolhido</span>
-            <span className="val">{produto}</span>
-            <button type="button" onClick={() => escolherProduto("")}>Trocar</button>
+
+      {etapa === 1 ? (
+        <>
+          <div className="row">
+            <label>
+              <span className="eyebrow">Nome</span>
+              <input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome completo" autoComplete="name" required />
+            </label>
+            <label>
+              <span className="eyebrow">WhatsApp</span>
+              <input value={whatsapp} onChange={(e) => setWhatsapp(maskPhoneBR(e.target.value))} inputMode="tel" autoComplete="tel" placeholder="(11) 90000-0000" required />
+            </label>
           </div>
-        ) : (
-          <FancySelect
-            tone="dark"
-            label="Produto de interesse"
-            placeholder="Não sei ainda, quero orientação"
-            value={produto}
-            onChange={escolherProduto}
-            options={opcoes.map((p) => ({ value: p, label: p }))}
-          />
-        )
-      )}
-      {showEmail ? (
-        <label>
-          <span className="eyebrow">E-mail</span>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="voce@email.com" />
-        </label>
+          <label>
+            <span className="eyebrow">E-mail</span>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" placeholder="voce@email.com" required />
+          </label>
+          {errMsg && (
+            <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
+          )}
+          <div className="actions">
+            <button type="submit" className="btn btn-primary" style={{ justifyContent: "center" }}>
+              Continuar
+            </button>
+          </div>
+        </>
       ) : (
-        <button type="button" className="p10-form-add" onClick={() => setShowEmail(true)}>+ Prefiro que falem por e-mail</button>
+        <>
+          <div className="p10-form-pre">
+            <span className="lbl">Seus dados</span>
+            <span className="val">{nome.trim()} · {whatsapp}</span>
+            <button type="button" onClick={() => { setErrMsg(""); setEtapa(1); }}>Editar</button>
+          </div>
+          {opcoes.length > 0 && (
+            produto ? (
+              <div className="p10-form-pre">
+                <span className="lbl">Produto escolhido</span>
+                <span className="val">{produto}</span>
+                <button type="button" onClick={() => escolherProduto("")}>Trocar</button>
+              </div>
+            ) : (
+              <FancySelect
+                tone="dark"
+                label="Produto de interesse"
+                placeholder="Não sei ainda, quero orientação"
+                value={produto}
+                onChange={escolherProduto}
+                options={opcoes.map((p) => ({ value: p, label: p }))}
+              />
+            )
+          )}
+          <label>
+            <span className="eyebrow">Mensagem (opcional)</span>
+            <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
+          </label>
+          <label className="check">
+            <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
+            <span>Concordo com o tratamento dos meus dados conforme a Política de Privacidade da Plan10.</span>
+          </label>
+          {errMsg && (
+            <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
+          )}
+          <div className="actions">
+            <button type="submit" className="btn btn-wa" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+              {WA} Enviar pelo WhatsApp
+            </button>
+          </div>
+        </>
       )}
-      {showMensagem ? (
-        <label>
-          <span className="eyebrow">Mensagem (opcional)</span>
-          <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
-        </label>
-      ) : (
-        <button type="button" className="p10-form-add" onClick={() => setShowMensagem(true)}>+ Adicionar mensagem</button>
-      )}
-      <label className="check">
-        <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
-        <span>Concordo com o tratamento dos meus dados conforme a Política de Privacidade da Plan10.</span>
-      </label>
-      {errMsg && (
-        <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
-      )}
-      <div className="actions">
-        <button type="submit" className="btn btn-wa" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-          {WA} Enviar pelo WhatsApp
-        </button>
-      </div>
+
       <p style={{ fontFamily: "var(--fb)", fontSize: ".8rem", color: "rgba(255,255,255,.6)", margin: 0, textAlign: "center" }}>
         Suas respostas abrem uma conversa direta com um consultor. Sem compromisso.
       </p>

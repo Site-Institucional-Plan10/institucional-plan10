@@ -107,7 +107,7 @@ export function PremiumHero() {
           <Link to="/solucoes" className="ph2-btn ph2-btn-p">
             Conhecer as soluções
           </Link>
-          <a href="#contato" className="ph2-btn ph2-btn-s">
+          <a href="#fale-conosco" className="ph2-btn ph2-btn-s">
             Falar com consultor
             <svg
               width="16"

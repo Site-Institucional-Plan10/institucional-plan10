@@ -79,6 +79,21 @@ function SolucoesIndex() {
         </div>
       </section>
 
+      {/* Soluções digitais: saíram da home (pedido do cliente) e ficam aqui, ao lado
+          das soluções consultivas, que é onde quem procura solução chega. */}
+      <section className="sec">
+        <div className="wrap">
+          <h2 className="p10-h2">Soluções digitais</h2>
+          <p className="p10-lede" style={{ marginBottom: 20 }}>
+            Parte das soluções tem jornada digital, com contratação ou cotação online. Outras
+            pedem orientação antes de decidir.
+          </p>
+          <Link to="/solucoes-online" className="btn btn-outline-light">
+            Ver as soluções digitais
+          </Link>
+        </div>
+      </section>
+
       {/* Fecho editorial */}
       <section className="sec sec-dark">
         <div className="wrap">

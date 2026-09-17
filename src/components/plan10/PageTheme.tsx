@@ -266,8 +266,6 @@ const CSS = `
 .plan10-scope .p10-form-ctx { border: 1px solid rgba(255,255,255,.14); border-radius: var(--rs); padding: 12px 14px; background: rgba(255,255,255,.04); }
 .plan10-scope .p10-form-ctx .eyebrow { color: var(--va); margin-bottom: 4px; }
 .plan10-scope .p10-form-ctx p { font-family: var(--fb); font-size: .95rem; color: #fff; margin: 0; line-height: 1.4; }
-.plan10-scope .p10-form-add { align-self: flex-start; justify-self: start; background: none; border: none; padding: 9px 4px 9px 0; cursor: pointer; font-family: var(--fl); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; font-size: .7rem; color: var(--va); }
-.plan10-scope .p10-form-add:hover { color: #fff; }
 .plan10-scope .p10-form input, .plan10-scope .p10-form textarea, .plan10-scope .p10-form select { width: 100%; padding: 12px 13px; border-radius: 10px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.18); color: #fff; font-family: var(--fb); font-size: .95rem; outline: none; transition: border-color var(--t), background var(--t); }
 .plan10-scope .p10-form select { appearance: none; -webkit-appearance: none; cursor: pointer; padding-right: 42px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='9' viewBox='0 0 13 9' fill='none' stroke='%23C7A468' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1.5 2l5 5 5-5'/%3E%3C/svg%3E"); background-position: right 16px center; background-repeat: no-repeat; }
 .plan10-scope .p10-form select:hover { border-color: rgba(255,255,255,.32); }
@@ -281,6 +279,11 @@ const CSS = `
 .plan10-scope .p10-form .actions .btn { justify-content: center; flex: 1; }
 .plan10-scope .p10-form .check { display: flex; gap: 10px; align-items: flex-start; font-size: .85rem; color: rgba(241,239,234,.78); line-height: 1.5; }
 .plan10-scope .p10-form .check input { width: auto; margin-top: 3px; }
+.plan10-scope .p10-etapas { display: flex; align-items: center; gap: 12px; }
+.plan10-scope .p10-etapas-lbl { font-family: var(--fm); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.6); white-space: nowrap; }
+.plan10-scope .p10-etapas-bar { display: flex; gap: 6px; flex: 1; }
+.plan10-scope .p10-etapas-bar i { flex: 1; height: 3px; border-radius: 999px; background: rgba(255,255,255,.24); transition: background var(--t); }
+.plan10-scope .p10-etapas-bar i.on { background: var(--gold); }
 
 /* FAQ */
 .plan10-scope .p10-faq { display: flex; flex-direction: column; gap: 8px; }
