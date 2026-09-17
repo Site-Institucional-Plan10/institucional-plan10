@@ -1,11 +1,11 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
+import { useRolarAteTrilha } from "@/lib/rolagem";
 import { findSolucao, type Solucao } from "@/data/solutions";
 import { Route as SolucaoRoute } from "./solucoes.$solucao";
 import { PageTheme, logoFor } from "@/components/plan10/PageTheme";
 import { heroSolucao, contextoDe } from "@/lib/imagery";
 import { FIN_HUB } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
-
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
   loader: ({ params }): { solucao: Solucao } => {
@@ -35,17 +35,30 @@ export const Route = createFileRoute("/solucoes/$solucao/")({
 
 function SolucaoPage() {
   const { solucao } = SolucaoRoute.useLoaderData() as { solucao: Solucao };
-  
+  useRolarAteTrilha(solucao.slug);
+
   // Financeiro tem imagens temáticas próprias; as demais soluções seguem o pool.
   const heroImg = solucao.slug === "financeiras" ? FIN_HUB.hero : heroSolucao(solucao.slug);
-  const ctxImg = solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src);
+  const ctxImg =
+    solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src);
   // No financeiro, ordena por relevância comercial (crédito e financiamentos primeiro).
-  const FIN_ORDER = ["credito-e-liquidez", "financiamentos", "investimentos-previdencia-e-reservas", "servicos-financeiros-e-contas", "garantias-financeiras", "capitalizacao"];
-  const orderIdx = (slug: string) => { const i = FIN_ORDER.indexOf(slug); return i === -1 ? 99 : i; };
+  const FIN_ORDER = [
+    "credito-e-liquidez",
+    "financiamentos",
+    "investimentos-previdencia-e-reservas",
+    "servicos-financeiros-e-contas",
+    "garantias-financeiras",
+    "capitalizacao",
+  ];
+  const orderIdx = (slug: string) => {
+    const i = FIN_ORDER.indexOf(slug);
+    return i === -1 ? 99 : i;
+  };
   const activeCatsRaw = solucao.categorias.filter((c) => c.nucleos.length > 0);
-  const activeCats = solucao.slug === "financeiras"
-    ? [...activeCatsRaw].sort((a, b) => orderIdx(a.slug) - orderIdx(b.slug))
-    : activeCatsRaw;
+  const activeCats =
+    solucao.slug === "financeiras"
+      ? [...activeCatsRaw].sort((a, b) => orderIdx(a.slug) - orderIdx(b.slug))
+      : activeCatsRaw;
   const wipCats = solucao.categorias.filter((c) => c.nucleos.length === 0);
   const logo = logoFor(solucao.slug);
 
@@ -62,7 +75,7 @@ function SolucaoPage() {
         </div>
       </header>
 
-      <nav className="p10-crumb" aria-label="Trilha">
+      <nav className="p10-crumb" aria-label="Trilha" data-trilha>
         <div className="p10-crumb-inner">
           <Link to="/solucoes">Soluções</Link>
           <span className="sep">/</span>
@@ -73,7 +86,9 @@ function SolucaoPage() {
       {/* Caminhos disponíveis, logo abaixo do hero */}
       <section className="sec">
         <div className="wrap">
-          <h2 className="p10-h2" style={{ marginBottom: 28 }}>Escolha por onde começar</h2>
+          <h2 className="p10-h2" style={{ marginBottom: 28 }}>
+            Caminhos disponíveis
+          </h2>
           <div className="p10-cards">
             {activeCats.map((c) => (
               <Link
@@ -83,7 +98,9 @@ function SolucaoPage() {
                 className="p10-card"
               >
                 <h3>{c.nome}</h3>
-                <span className="arrow" aria-hidden>→</span>
+                <span className="arrow" aria-hidden>
+                  →
+                </span>
               </Link>
             ))}
             {wipCats.map((c) => (
@@ -99,7 +116,17 @@ function SolucaoPage() {
       {/* Contexto: abertura consultiva + imagem editorial */}
       <section className="sec sec-alt">
         <div className="wrap p10-split">
-          <p style={{ fontFamily: "var(--fd)", fontSize: "clamp(1.35rem, 2.6vw, 2rem)", lineHeight: 1.3, fontWeight: 500, color: "var(--preto)", letterSpacing: "-.015em", margin: 0 }}>
+          <p
+            style={{
+              fontFamily: "var(--fd)",
+              fontSize: "clamp(1.35rem, 2.6vw, 2rem)",
+              lineHeight: 1.3,
+              fontWeight: 500,
+              color: "var(--preto)",
+              letterSpacing: "-.015em",
+              margin: 0,
+            }}
+          >
             {solucao.aberturaConsultiva}
           </p>
           <figure className="p10-fig">

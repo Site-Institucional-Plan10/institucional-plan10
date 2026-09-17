@@ -52,3 +52,41 @@ export function frentesConectadas(frases: string[] | undefined): string[] {
   }
   return frentes;
 }
+
+interface PerguntaResposta {
+  q: string;
+  a: string;
+}
+
+/**
+ * FAQ de um caminho, montado a partir do FAQ dos produtos do catálogo.
+ *
+ * No catálogo o FAQ é por produto, e dentro de um mesmo caminho as respostas se
+ * repetem: o que muda de um produto para o outro é só o nome citado na pergunta.
+ * Publicar tudo devolveria a mesma pergunta cinco ou dez vezes. Aqui as
+ * respostas repetidas caem fora e a pergunta que sobra passa a citar o caminho,
+ * que é quem responde nessa página.
+ */
+export function faqDoCaminho(
+  nucleoNome: string,
+  produtos: { nome: string; faq?: PerguntaResposta[] }[],
+): PerguntaResposta[] {
+  const vistas = new Set<string>();
+  const saida: PerguntaResposta[] = [];
+  for (const produto of produtos) {
+    for (const item of produto.faq ?? []) {
+      const chave = item.a.trim().toLowerCase();
+      if (!item.a.trim() || vistas.has(chave)) continue;
+      vistas.add(chave);
+      const alvo = produto.nome.trim();
+      const pergunta = alvo
+        ? item.q.replace(
+            new RegExp(alvo.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"),
+            nucleoNome.toLowerCase(),
+          )
+        : item.q;
+      saida.push({ q: pergunta, a: item.a });
+    }
+  }
+  return saida;
+}

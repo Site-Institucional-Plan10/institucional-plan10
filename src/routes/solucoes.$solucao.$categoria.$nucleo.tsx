@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useRolarAteTrilha } from "@/lib/rolagem";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import {
   findNucleo,
@@ -13,7 +14,8 @@ import { ProductCard } from "@/components/plan10/ProductCard";
 import { ProductChooser } from "@/components/plan10/ProductChooser";
 import { LeadForm } from "@/components/plan10/LeadForm";
 
-import { FONTS, whatsappUrl, aberturaLimpa, frentesConectadas } from "@/lib/plan10";
+import { FONTS, whatsappUrl, aberturaLimpa, frentesConectadas, faqDoCaminho } from "@/lib/plan10";
+import { FaqAccordion } from "@/components/plan10/FaqAccordion";
 import { finContentFor } from "@/data/financasContent";
 import { heroCategoria, heroNucleo, contextoDe, pickByOrder } from "@/lib/imagery";
 import { finNucleoImgs, finProdutoImg } from "@/lib/financasImagery";
@@ -65,6 +67,8 @@ function NucleoPage() {
   };
   // Quase metade das modalidades tem opções de um perfil só. Abrir sempre em PF
   // deixaria a página vazia nessas. O padrão passa a ser o perfil que existe.
+  useRolarAteTrilha(`${s.slug}/${c.slug}/${n.slug}`);
+
   const temPF = useMemo(() => n.products.some((p) => p.perfil === "PF"), [n]);
   const temPJ = useMemo(() => n.products.some((p) => p.perfil === "PJ"), [n]);
   const [perfil, setPerfil] = useState<"PF" | "PJ">(temPF ? "PF" : "PJ");
@@ -78,6 +82,9 @@ function NucleoPage() {
     () => Array.from(new Set(n.products.flatMap((p) => p.crossSelling))).slice(0, 2),
     [n],
   );
+
+  // FAQ do caminho: vem do catálogo, sem as respostas repetidas entre produtos
+  const faq = useMemo(() => faqDoCaminho(n.nome, n.products), [n]);
 
   // frentes citadas nas frases de cross-selling, sem repetir o nome do produto
   const frentes = useMemo(() => frentesConectadas(cross), [cross]);
@@ -136,7 +143,7 @@ function NucleoPage() {
       </header>
 
       {/* Breadcrumb */}
-      <nav className="p10-crumb" aria-label="Trilha">
+      <nav className="p10-crumb" aria-label="Trilha" data-trilha>
         <div className="p10-crumb-inner">
           <Link to="/solucoes">Soluções</Link>
           <span className="sep">/</span>
@@ -174,14 +181,14 @@ function NucleoPage() {
           >
             <div>
               <h2 className="p10-h2" style={{ marginBottom: 0 }}>
-                Escolha a opção certa para o seu momento
+                Opções disponíveis
               </h2>
             </div>
             {temPF && temPJ && <PerfilToggle value={perfil} onChange={setPerfil} />}
           </div>
           <p className="p10-lede" style={{ margin: "0 0 22px" }}>
             {filtered.length > 0
-              ? `${filtered.length} ${filtered.length === 1 ? "opção" : "opções"}. Abra a que interessa para ver o que ela inclui, a quem se destina e as perguntas frequentes.`
+              ? "Abra a opção que interessa para ver o que ela inclui e a quem se destina."
               : "As opções deste perfil ficam disponíveis por consultoria."}
           </p>
           {filtered.length === 0 ? (
@@ -239,6 +246,17 @@ function NucleoPage() {
           </figure>
         </div>
       </section>
+
+      {faq.length > 0 && (
+        <section className="sec">
+          <div className="wrap">
+            <h2 className="p10-h2" style={{ marginBottom: 20 }}>
+              Perguntas frequentes
+            </h2>
+            <FaqAccordion items={faq} />
+          </div>
+        </section>
+      )}
 
       {/* Formulário em seção escura */}
       <section className="sec sec-dark" id="contato">
