@@ -18,7 +18,7 @@ export const searchIndex: SearchItem[] = [
   { id: "em-um-clique", label: "Plan10 em um clique", description: "Encontre por tema ou necessidade", category: "Páginas", route: "/em-um-clique", keywords: ["em um clique", "índice", "temas", "necessidade", "busca"] },
   { id: "quem-somos", label: "Quem somos", description: "A consultoria por trás das soluções", category: "Páginas", route: "/quem-somos", keywords: ["quem somos", "sobre", "história", "missão", "visão", "valores", "equipe"] },
   { id: "blog", label: "Blog Plan10", description: "Conteúdos, leitura de mercado e cases", category: "Páginas", route: "/blog", keywords: ["blog", "artigos", "conteúdo", "dicas", "cases", "mercado"] },
-  { id: "fale-conosco", label: "Fale conosco", description: "Fale com um consultor Plan10", category: "Páginas", route: "/fale-conosco", keywords: ["contato", "fale conosco", "mensagem", "whatsapp", "email", "consultor"] },
+  { id: "fale-conosco", label: "Fale conosco", description: "Falar com consultor Plan10", category: "Páginas", route: "/fale-conosco", keywords: ["contato", "fale conosco", "mensagem", "whatsapp", "email", "consultor"] },
 
   // SAÚDE
   { id: "saude", label: "Saúde e vida saudável", description: "Cuidado, acesso, prevenção e bem-estar", category: "Saúde", route: "/solucoes/saude", keywords: ["saúde", "plano de saúde", "médico", "odontológico", "odonto", "dentista", "bem-estar", "pet"] },

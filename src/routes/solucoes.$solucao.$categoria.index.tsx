@@ -232,7 +232,7 @@ function CategoriaPage() {
         <div className="wrap" style={{ display: "grid", gap: 28 }}>
           <div>
             <h2 className="p10-h2">Próximo passo</h2>
-            <p className="p10-lede">Avance com o apoio de um consultor, sem compromisso.</p>
+            <p className="p10-lede">Avance com o apoio de um consultor. Você decide o próximo passo depois da conversa.</p>
           </div>
           {primeiroNucleo && (
             <Link

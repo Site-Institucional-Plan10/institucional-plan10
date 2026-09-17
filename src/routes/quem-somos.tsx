@@ -235,7 +235,7 @@ function QuemSomos() {
               Consultores especializados por área
             </h2>
             <p className="text-neutral-700 leading-relaxed">
-              Cada vertical da Plan10 é conduzida por uma célula de consultores com formação técnica
+              Cada frente da Plan10 é conduzida por uma célula de consultores com formação técnica
               específica e anos de experiência no mercado.
             </p>
           </div>

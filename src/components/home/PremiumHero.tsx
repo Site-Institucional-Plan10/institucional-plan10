@@ -37,7 +37,7 @@ export function PremiumHero() {
         .ph2-h1 {
           font-family: 'Schibsted Grotesk', 'Inter', sans-serif;
           font-weight: 500;
-          font-size: clamp(2.1rem, 4.8vw, 3.7rem);
+          font-size: clamp(1.95rem, 3.9vw, 2.95rem);
           line-height: 1.1; letter-spacing: -.028em;
           margin: 0; max-width: 18ch; color: #F1EFEA;
           text-wrap: balance; text-shadow: 0 2px 30px rgba(6,18,30,.4);
@@ -87,7 +87,7 @@ export function PremiumHero() {
           .ph2-eyebrow { font-size: .58rem; letter-spacing: .09em; gap: 9px; margin-bottom: 12px; }
           .ph2-eyebrow::before { width: 18px; }
           /* Título de 8 linhas no celular. Um corpo menor tira duas. */
-          .ph2-h1 { font-size: 1.72rem; line-height: 1.14; }
+          .ph2-h1 { font-size: 1.58rem; line-height: 1.16; }
           .ph2-lede { font-size: .95rem; margin-top: 12px; }
           .ph2-strip { gap: 10px 22px; margin-top: 28px; }
         }

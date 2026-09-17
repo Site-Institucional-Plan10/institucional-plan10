@@ -24,8 +24,8 @@ function HomePage() {
   return (
     <>
       <PremiumHero />
-      <SolutionsShowcase />
       <BrandPromise />
+      <SolutionsShowcase />
       <section style={{ background: "#F4F2EC", padding: "40px 24px 44px" }}>
         <style>{`
           .home-editorial { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px rgba(12,35,64,.16); max-width: 1080px; margin-inline: auto; position: relative; }

@@ -67,16 +67,16 @@ export function LeadForm({
       setErrMsg("Informe o WhatsApp com DDD.");
       return;
     }
-    if (!email.includes("@") || !email.includes(".")) {
-      setErrMsg("O e-mail informado parece inválido.");
-      return;
-    }
     setEtapa(2);
   }
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setErrMsg("");
+    if (email.trim() && (!email.includes("@") || !email.includes("."))) {
+      setErrMsg("O e-mail informado parece inválido.");
+      return;
+    }
     if (!consent) {
       setErrMsg("É necessário concordar com a política de privacidade.");
       return;
@@ -138,10 +138,6 @@ export function LeadForm({
               <input value={whatsapp} onChange={(e) => setWhatsapp(maskPhoneBR(e.target.value))} inputMode="tel" autoComplete="tel" placeholder="(11) 90000-0000" required />
             </label>
           </div>
-          <label>
-            <span className="eyebrow">E-mail</span>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" placeholder="voce@email.com" required />
-          </label>
           {errMsg && (
             <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
           )}
@@ -177,6 +173,10 @@ export function LeadForm({
             )
           )}
           <label>
+            <span className="eyebrow">E-mail (opcional)</span>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" placeholder="voce@email.com" />
+          </label>
+          <label>
             <span className="eyebrow">Mensagem (opcional)</span>
             <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
           </label>
@@ -196,7 +196,7 @@ export function LeadForm({
       )}
 
       <p style={{ fontFamily: "var(--fb)", fontSize: ".8rem", color: "rgba(255,255,255,.6)", margin: 0, textAlign: "center" }}>
-        Suas respostas abrem uma conversa direta com um consultor. Sem compromisso.
+        Suas respostas abrem uma conversa direta com um consultor. Você decide o próximo passo depois da conversa.
       </p>
     </form>
   );

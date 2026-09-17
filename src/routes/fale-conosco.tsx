@@ -13,7 +13,7 @@ export const Route = createFileRoute("/fale-conosco")({
       { title: "Fale Conosco | Plan10, Atendimento em até 24h úteis" },
       { name: "description", content: "Entre em contato com a Plan10. Atendimento humano em até 24h úteis." },
       { property: "og:title", content: "Fale Conosco, Plan10" },
-      { property: "og:description", content: "Fale com um consultor da Plan10 pelo WhatsApp, telefone ou e-mail." },
+      { property: "og:description", content: "Falar com consultor da Plan10 pelo WhatsApp, telefone ou e-mail." },
       { property: "og:url", content: canonical("/fale-conosco") },
     ],
     links: [{ rel: "canonical", href: canonical("/fale-conosco") }],
@@ -70,7 +70,7 @@ function FaleConosco() {
           <p className="font-eyebrow text-orange mb-3">Contato</p>
           <h1 className="font-display max-w-3xl" style={{ color: "#fff" }}>Fale conosco</h1>
           <p className="mt-4 text-neutral-300 max-w-2xl">
-            Atendimento humano, sem robô e sem fila de espera. Fale com um consultor pelo canal que preferir.
+            Atendimento humano do começo ao fim. Escolha o canal e um consultor assume a conversa.
           </p>
         </div>
       </section>

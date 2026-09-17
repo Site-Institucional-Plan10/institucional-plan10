@@ -71,7 +71,19 @@ export function SolutionsShowcase() {
           font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.06; letter-spacing: -.025em;
           color: #0B1A2F; margin: 0; max-width: 46ch;
         }
-        .p10x-lede { font-size: 1.05rem; line-height: 1.6; color: #4A5568; margin: 20px 0 0; max-width: 52ch; }
+        .p10x-lede {
+          display: inline; font-size: 1.05rem; line-height: 1.6; color: #4A5568;
+          margin: 20px 0 0; max-width: 52ch;
+          text-decoration: underline; text-decoration-color: #CFC9BC;
+          text-decoration-thickness: 1px; text-underline-offset: 5px;
+          transition: color .2s ease, text-decoration-color .2s ease;
+        }
+        .p10x-lede-wrap { margin: 20px 0 0; max-width: 52ch; }
+        .p10x-lede-fim { white-space: nowrap; }
+        .p10x-lede svg { vertical-align: -3px; margin-left: 7px; transition: transform .2s ease; }
+        .p10x-lede:hover { color: #0B1A2F; text-decoration-color: #0B1A2F; }
+        .p10x-lede:hover svg { transform: translateX(4px); }
+        .p10x-lede:focus-visible { outline: 2px solid #C45016; outline-offset: 3px; }
         .p10x-list { margin-top: 26px; border-top: 1px solid #E2DDD3; }
         .p10x-row {
           --c: #C9A83C; --soft: #F0EEE8;
@@ -109,21 +121,29 @@ export function SolutionsShowcase() {
         .p10x-row:focus-visible { outline: 2px solid var(--c); outline-offset: -2px; }
         @media (max-width: 860px) {
           .p10x { padding: 44px 20px; }
-          .p10x-row { position: relative; grid-template-columns: 72px 1fr; gap: 3px 14px; padding: 13px 34px 13px 6px; align-items: center; }
-          .p10x-micro { grid-column: 2 / 3; font-size: .88rem; }
-          .p10x-foto { grid-row: 1 / 3; width: 72px; align-self: center; }
-          
-          /* seta no canto superior direito: sai do fluxo e devolve uma linha por item */
-          .p10x-go { position: absolute; right: 4px; top: 14px; }
+          .p10x-row { position: relative; grid-template-columns: 72px 1fr; gap: 14px; padding: 13px 34px 13px 6px; align-items: center; }
+          .p10x-micro { display: none; }
+          .p10x-foto { width: 72px; align-self: center; }
+
+          /* seta alinhada ao nome, que agora é a única linha do item */
+          .p10x-go { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); }
           .p10x-row:hover { padding-left: 8px; }
         }
       `}</style>
       <div className="p10x-in">
         <h2 id="p10x-h" className="p10x-h2">
-          Cinco soluções, uma jornada consultiva.
+          Soluções Plan10
         </h2>
-        <p className="p10x-lede">
-          Conheça as Soluções Plan10 e encontre o caminho mais próximo da sua fase.
+        <p className="p10x-lede-wrap">
+          <Link to="/solucoes" className="p10x-lede">
+            Conheça as Soluções Plan10 e encontre o caminho mais próximo da sua{" "}
+            <span className="p10x-lede-fim">
+              fase.
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </Link>
         </p>
 
         <div className="p10x-list">

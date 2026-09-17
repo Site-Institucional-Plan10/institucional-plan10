@@ -159,8 +159,8 @@ export function ProductChooser({ produto, nucleoNome, onClose, onFormulario }: P
 
         <p className="p10-chooser-nota">
           {linkDireto
-            ? "A contratação online é imediata. Nos outros caminhos um consultor retorna com o próximo passo, sem compromisso."
-            : "Nos dois caminhos um consultor retorna com o próximo passo. Sem compromisso."}
+            ? "A contratação online é imediata. Nos outros caminhos um consultor retorna com o próximo passo, e você decide depois da conversa."
+            : "Nos dois caminhos um consultor retorna com o próximo passo. Você decide depois da conversa."}
         </p>
       </div>
     </div>

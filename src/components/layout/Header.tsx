@@ -19,14 +19,13 @@ const solutionNav = solutions.map((s) => ({
   color: paletteFor(s.slug).vp,
 }));
 
-// Nav desktop: as soluções entram diretas no menu, sem dropdown (pedido do cliente, 12/08/2026)
-const navLinks: Array<
-  | { to: "/" | "/quem-somos" | "/blog"; label: string }
-  | { solucao: string; label: string; color: string }
-> = [
+// Nav desktop: barra curta (auditoria da home, 13/09/2026). Os cinco hubs saíram do
+// primeiro nível, que alongava a barra e a escondia atrás do hambúrguer abaixo de 1280px,
+// e agora são alcançados por "Soluções". Substitui o arranjo de 12/08/2026.
+const navLinks: Array<{ to: "/" | "/quem-somos" | "/solucoes" | "/blog"; label: string }> = [
   { to: "/", label: "Home" },
   { to: "/quem-somos", label: "Quem somos" },
-  ...solutionNav.map((s) => ({ solucao: s.slug, label: s.label, color: s.color })),
+  { to: "/solucoes", label: "Soluções" },
   { to: "/blog", label: "Blog" },
 ];
 
@@ -41,6 +40,7 @@ const mobileItems: MobileItem[] = [
   { kind: "link", to: "/", label: "Home" },
   { kind: "link", to: "/quem-somos", label: "Quem somos" },
   { kind: "divider" },
+  { kind: "link", to: "/solucoes", label: "Soluções" },
   ...solutionNav.map(
     (s): MobileItem => ({ kind: "solucao", slug: s.slug, label: s.label, color: s.color }),
   ),
@@ -285,37 +285,19 @@ export function Header() {
             <HeaderLogo size={48} />
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-1">
-            {navLinks.map((l) =>
-              "solucao" in l ? (
-                <Link
-                  key={l.solucao}
-                  to="/solucoes/$solucao"
-                  params={{ solucao: l.solucao }}
-                  className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
-                  style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
-                >
-                  <span
-                    className="h-1.5 w-1.5 rounded-full opacity-0 group-hover:opacity-100 transition"
-                    style={{ backgroundColor: l.color }}
-                  />
-                  <span className="group-hover:text-orange transition-colors">{l.label}</span>
-                  <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-                </Link>
-              ) : (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
-                  style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
-                >
-                  <span className="group-hover:text-orange transition-colors">{l.label}</span>
-                  <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-                </Link>
-              ),
-            )}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="group relative px-3 py-2 text-sm font-semibold transition flex items-center gap-1.5 whitespace-nowrap"
+                style={{ color: "#1A1A1A" }}
+                activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
+              >
+                <span className="group-hover:text-orange transition-colors">{l.label}</span>
+                <span className="absolute bottom-0 left-3 right-3 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-2 pr-1 md:pr-0">
@@ -328,12 +310,12 @@ export function Header() {
               <Search size={20} />
             </button>
             <Link to="/fale-conosco" className="hidden md:inline-flex flex-shrink-0">
-              <Button variant="secondary" size="sm" className="whitespace-nowrap">Fale Conosco</Button>
+              <Button variant="secondary" size="sm" className="whitespace-nowrap">Falar com consultor</Button>
             </Link>
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="xl:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
+              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
               aria-label="Abrir menu"
             >
               <Menu size={24} />
@@ -346,7 +328,7 @@ export function Header() {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-50 xl:hidden flex flex-col"
+          className="fixed inset-0 z-50 lg:hidden flex flex-col"
           style={{
             background: "#111111",
             animation: `${mobileClosing ? "slideOutRight" : "slideInRight"} 280ms cubic-bezier(0.4,0,0.2,1) forwards`,
