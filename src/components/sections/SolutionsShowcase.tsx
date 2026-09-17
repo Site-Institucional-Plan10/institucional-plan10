@@ -80,7 +80,7 @@ export function SolutionsShowcase() {
         }
         .p10x-lede-wrap { margin: 20px 0 0; max-width: 52ch; }
         .p10x-lede-fim { white-space: nowrap; }
-        .p10x-lede svg { vertical-align: -3px; margin-left: 7px; transition: transform .2s ease; }
+        .p10x-lede svg { display: inline; vertical-align: -3px; margin-left: 7px; transition: transform .2s ease; }
         .p10x-lede:hover { color: #0B1A2F; text-decoration-color: #0B1A2F; }
         .p10x-lede:hover svg { transform: translateX(4px); }
         .p10x-lede:focus-visible { outline: 2px solid #C45016; outline-offset: 3px; }
