@@ -113,6 +113,15 @@ function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
+        {/* Antes de qualquer pintura: sem isto o navegador repõe a rolagem
+            anterior ao recarregar e a página aparece no meio do conteúdo por um
+            quadro. A restauração dentro da navegação do site continua sendo do
+            router, que tem scrollRestoration ligado. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: 'if("scrollRestoration" in history)history.scrollRestoration="manual"',
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

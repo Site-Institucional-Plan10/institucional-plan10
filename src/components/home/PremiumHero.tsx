@@ -5,6 +5,16 @@ import { Link } from "@tanstack/react-router";
  * (texto à esquerda, veleiro revelado à direita). Um único acento dourado.
  * Conteúdo oficial: 01_HOME.xlsx, coluna D.
  */
+
+/** A rolagem suave do único link de âncora do site, agora que ela não vem mais
+ *  do CSS. Desconta o cabeçalho fixo para o título não ficar embaixo dele. */
+function irAoContato(e: React.MouseEvent<HTMLAnchorElement>) {
+  const alvo = document.getElementById("fale-conosco");
+  if (!alvo) return;
+  e.preventDefault();
+  const folga = document.querySelector("header")?.offsetHeight ?? 0;
+  window.scrollTo({ top: alvo.getBoundingClientRect().top + window.scrollY - folga, behavior: "smooth" });
+}
 export function PremiumHero() {
   return (
     <section className="ph2" aria-labelledby="ph2-title">
@@ -107,7 +117,7 @@ export function PremiumHero() {
           <Link to="/solucoes" className="ph2-btn ph2-btn-p">
             Conhecer as soluções
           </Link>
-          <a href="#fale-conosco" className="ph2-btn ph2-btn-s">
+          <a href="#fale-conosco" className="ph2-btn ph2-btn-s" onClick={irAoContato}>
             Falar com consultor
             <svg
               width="16"

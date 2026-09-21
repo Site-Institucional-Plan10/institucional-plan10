@@ -55,7 +55,11 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
+    /* Sem scroll-behavior aqui de propósito. Ele vale para toda rolagem de
+       comportamento "auto", inclusive a que o router faz ao abrir uma página
+       nova, e isso fazia a página nascer no meio do conteúdo e subir sozinha
+       na frente do visitante. Quem precisa de rolagem suave pede explicitamente
+       no código. */
   }
   body {
     background-color: var(--color-paper);
