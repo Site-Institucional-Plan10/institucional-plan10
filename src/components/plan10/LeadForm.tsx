@@ -23,6 +23,27 @@ const WA = (
   </svg>
 );
 
+/**
+ * Manda o lead para o servidor, que repassa ao CRM.
+ *
+ * Roda duas vezes: no "Continuar", com nome e WhatsApp, que é o que garante o
+ * lead mesmo se a pessoa desistir no meio, e no envio, já com produto, e-mail e
+ * mensagem. A rota `/api/contact` cria ou atualiza o mesmo contato, então a
+ * segunda chamada completa a primeira em vez de duplicar.
+ *
+ * Nunca trava a tela nem mostra erro de bastidor: se o registro falhar, o
+ * visitante segue para o WhatsApp do mesmo jeito e o problema fica no log.
+ */
+function registrarLead(dados: Record<string, unknown>) {
+  if (typeof window === "undefined") return;
+  void fetch("/api/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(dados),
+    keepalive: true,
+  }).catch(() => undefined);
+}
+
 export function LeadForm({
   interesse,
   perfilInicial = "PF",
@@ -72,9 +93,15 @@ export function LeadForm({
       setErrMsg("É necessário concordar com a política de privacidade.");
       return;
     }
-    // AQUI entra o registro do lead da etapa 1, assim que o destino estiver
-    // definido. O CRM da Plan10 é o destino escolhido e depende de o cliente
-    // informar qual é. Enquanto isso, o lead só existe na conversa do WhatsApp.
+    registrarLead({
+      name: nome.trim(),
+      phone: whatsapp.trim(),
+      subject: contexto || interesse,
+      contexto,
+      perfil,
+      source: origem,
+      consent: true,
+    });
     setEtapa(2);
   }
 
@@ -85,6 +112,17 @@ export function LeadForm({
       setErrMsg("O e-mail informado parece inválido.");
       return;
     }
+    registrarLead({
+      name: nome.trim(),
+      phone: whatsapp.trim(),
+      email: email.trim() || undefined,
+      subject: produto || contexto || interesse,
+      contexto,
+      perfil,
+      message: mensagem.trim() || undefined,
+      source: origem,
+      consent: true,
+    });
     const url = buildLeadWhatsAppUrl({
       nome: nome.trim(),
       telefone: whatsapp.trim(),

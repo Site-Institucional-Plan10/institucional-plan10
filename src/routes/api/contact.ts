@@ -88,6 +88,71 @@ async function sendLeadEmail(data: LeadData): Promise<"sent" | "unconfigured" | 
   }
 }
 
+/**
+ * Envia o lead para o CRM MegaZap.
+ *
+ * A API é `POST /v2/contacts` (cria ou atualiza), autenticada pelo header
+ * `client-token`. Duas coisas obrigam a chamada a sair daqui, do servidor, e
+ * não do navegador: o preflight de CORS da MegaZap não libera o header
+ * `client-token`, e o token dá acesso à conta inteira, então ele não pode
+ * viver no JavaScript do site.
+ *
+ * O contato só tem nome e telefone como campos nativos. E-mail, origem,
+ * interesse e mensagem entram como campos customizados, e o `name` de cada um
+ * precisa bater exatamente com o "Nome de Integração" cadastrado no painel da
+ * Plan10, em Configurações > Campos Customizados. Os nomes esperados estão em
+ * CAMPOS abaixo.
+ *
+ * Sem MEGAZAP_TOKEN e MEGAZAP_CHANNEL_ID a função não faz nada e o formulário
+ * segue funcionando normalmente, igual ao caminho do e-mail.
+ */
+const CAMPOS = { email: "email", origem: "origem", interesse: "interesse", mensagem: "mensagem" };
+
+/** A MegaZap espera o telefone como 55 + DDD + número, só dígitos. */
+function telefoneMegazap(bruto: string): string | null {
+  const digitos = bruto.replace(/\D/g, "");
+  if (digitos.length < 10) return null;
+  return digitos.startsWith("55") ? digitos : `55${digitos}`;
+}
+
+async function enviarParaMegazap(data: LeadData): Promise<"sent" | "unconfigured" | "failed"> {
+  const token = envVar("MEGAZAP_TOKEN");
+  const canal = envVar("MEGAZAP_CHANNEL_ID");
+  if (!token || !canal) return "unconfigured";
+
+  const telefone = telefoneMegazap(data.phone);
+  if (!telefone) {
+    console.error("[lead] telefone fora do formato esperado pela MegaZap:", data.phone);
+    return "failed";
+  }
+
+  const campos = [
+    { name: CAMPOS.email, value: data.email || "" },
+    { name: CAMPOS.origem, value: data.source || "Site Plan10" },
+    { name: CAMPOS.interesse, value: data.contexto || data.subject },
+    { name: CAMPOS.mensagem, value: data.message || "" },
+  ].filter((c) => c.value);
+
+  try {
+    const res = await fetch("https://api.mzworkspace.com/v2/contacts", {
+      method: "POST",
+      headers: { "client-token": token, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        channel: { id: canal, type: envVar("MEGAZAP_CHANNEL_TYPE") || "WHATSAPP" },
+        contact: { id: telefone, name: data.name, lead: true, fields: campos },
+      }),
+    });
+    if (!res.ok) {
+      console.error(`[lead] MegaZap recusou (${res.status}): ${await res.text().catch(() => "")}`);
+      return "failed";
+    }
+    return "sent";
+  } catch (err) {
+    console.error("[lead] Erro ao chamar a MegaZap:", err);
+    return "failed";
+  }
+}
+
 export const Route = createFileRoute("/api/contact")({
   server: {
     handlers: {
@@ -117,15 +182,20 @@ export const Route = createFileRoute("/api/contact")({
         }
 
         // Por LGPD, não persistimos os dados além do necessário para o envio.
-        const result = await sendLeadEmail(parsed.data);
-        if (result === "failed") {
-          return Response.json(
-            { error: "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp." },
-            { status: 502 },
-          );
+        // Os dois destinos são independentes: se um falhar, o outro segue.
+        const [crm, email] = await Promise.all([
+          enviarParaMegazap(parsed.data),
+          sendLeadEmail(parsed.data),
+        ]);
+
+        // A resposta nunca trava o visitante: o formulário dele continua no
+        // WhatsApp de qualquer jeito, então erro de destino é problema nosso,
+        // registrado no log, não dele.
+        if (crm === "failed" && email !== "sent") {
+          console.error("[lead] nenhum destino aceitou o lead:", parsed.data.phone);
         }
 
-        return Response.json({ ok: true });
+        return Response.json({ ok: true, crm, email });
       },
     },
   },
