@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { useRolarAteTrilha } from "@/lib/rolagem";
 import { findCategoria, type Solucao, type Categoria } from "@/data/solutions";
@@ -7,6 +8,7 @@ import { finContentFor } from "@/data/financasContent";
 import { heroCategoria, contextoDe } from "@/lib/imagery";
 import { finCategoriaImgs } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
+import { faqDaCategoria } from "@/lib/plan10";
 
 const splitDots = (s: string) =>
   s
@@ -60,6 +62,10 @@ function CategoriaPage() {
   const heroImg = finImgs?.hero ?? heroCategoria(s.slug, iCat);
   const ctxImg = finImgs?.ctx ?? contextoDe(s.slug, iCat, heroImg.src);
 
+  // O catálogo só traz FAQ por produto. Aqui ele é resumido no nível da
+  // categoria, para as páginas que não têm FAQ consultivo próprio.
+  const faqCategoria = useMemo(() => faqDaCategoria(c.nucleos), [c]);
+
   const nucleos = (
     <div className="p10-cards">
       {c.nucleos.map((n) => (
@@ -94,11 +100,29 @@ function CategoriaPage() {
         <section className="sec sec-alt">
           <div className="wrap">
             <h2 className="p10-h2" style={{ marginBottom: 24 }}>
-              Escolha uma modalidade para explorar
+              Opções disponíveis
             </h2>
             {nucleos}
           </div>
         </section>
+
+        {faqCategoria.length > 0 && (
+          <section className="sec">
+            <div className="wrap">
+              <h2 className="p10-h2" style={{ marginBottom: 26 }}>
+                Antes de decidir
+              </h2>
+              <div className="p10-faq">
+                {faqCategoria.map((f, i) => (
+                  <details key={i}>
+                    <summary>{f.q}</summary>
+                    <div className="ans">{f.a}</div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </PageTheme>
     );
   }

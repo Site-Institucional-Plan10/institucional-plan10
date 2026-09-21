@@ -53,6 +53,25 @@ export function frentesConectadas(frases: string[] | undefined): string[] {
   return frentes;
 }
 
+/**
+ * Junta repetições imediatas de um mesmo trecho.
+ *
+ * Setenta perguntas do catálogo chegam com a mesma oração colada em si mesma,
+ * do tipo "no cenário de X no cenário de X no cenário de X". É duplicação
+ * mecânica na geração da planilha, não escolha de redação, e aparece na tela.
+ * O trecho repetido não pode conter vírgula nem ponto e vírgula, senão a regra
+ * comeria um item de lista legítimo, como em "civil empresarial, civil pessoal".
+ */
+export function semRepeticao(texto: string): string {
+  let antes = texto;
+  for (let i = 0; i < 4; i++) {
+    const depois = antes.replace(/([^,;?]{10,}?)(?:\s+\1)+/gi, "$1");
+    if (depois === antes) break;
+    antes = depois;
+  }
+  return antes;
+}
+
 interface PerguntaResposta {
   q: string;
   a: string;
@@ -67,6 +86,40 @@ interface PerguntaResposta {
  * respostas repetidas caem fora e a pergunta que sobra passa a citar o caminho,
  * que é quem responde nessa página.
  */
+/**
+ * FAQ de uma categoria, montado a partir do FAQ dos caminhos que ela reúne.
+ *
+ * A página de categoria não tem FAQ próprio no catálogo: o que existe é o FAQ
+ * por produto, três pares para cada um dos 393. Somar tudo devolveria dezenas
+ * de perguntas quase iguais, porque no catálogo o que muda de um produto para
+ * o outro é o nome citado na pergunta, e 1179 pares se apoiam em 354 respostas.
+ * Então aqui cada caminho contribui com no máximo duas perguntas, a pergunta
+ * passa a citar o caminho em vez do produto e resposta repetida cai fora. O FAQ
+ * completo continua inteiro na página do caminho e no pop-up de cada produto.
+ */
+const POR_CAMINHO = 2;
+const TETO_DA_CATEGORIA = 8;
+
+export function faqDaCategoria(
+  nucleos: { nome: string; products: { nome: string; faq?: PerguntaResposta[] }[] }[],
+): PerguntaResposta[] {
+  const vistas = new Set<string>();
+  const saida: PerguntaResposta[] = [];
+  for (const nucleo of nucleos) {
+    let doCaminho = 0;
+    for (const item of faqDoCaminho(nucleo.nome, nucleo.products)) {
+      if (doCaminho >= POR_CAMINHO || saida.length >= TETO_DA_CATEGORIA) break;
+      const chave = item.a.trim().toLowerCase();
+      if (vistas.has(chave)) continue;
+      vistas.add(chave);
+      saida.push(item);
+      doCaminho++;
+    }
+    if (saida.length >= TETO_DA_CATEGORIA) break;
+  }
+  return saida;
+}
+
 export function faqDoCaminho(
   nucleoNome: string,
   produtos: { nome: string; faq?: PerguntaResposta[] }[],
@@ -85,7 +138,7 @@ export function faqDoCaminho(
             nucleoNome.toLowerCase(),
           )
         : item.q;
-      saida.push({ q: pergunta, a: item.a });
+      saida.push({ q: semRepeticao(pergunta), a: item.a });
     }
   }
   return saida;

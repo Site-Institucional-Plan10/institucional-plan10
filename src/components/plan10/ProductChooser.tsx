@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import type { Product } from "@/data/solutions";
-import { whatsappUrl, isRealUrl, aberturaLimpa } from "@/lib/plan10";
+import { whatsappUrl, isRealUrl, aberturaLimpa, semRepeticao } from "@/lib/plan10";
 
 interface Props {
   produto: Product | null;
@@ -114,7 +114,7 @@ export function ProductChooser({ produto, nucleoNome, onClose, onFormulario }: P
             <summary>Perguntas frequentes ({produto.faq.length})</summary>
             {produto.faq.map((f) => (
               <div key={f.q} className="p10-chooser-faq-item">
-                <p className="q">{f.q}</p>
+                <p className="q">{semRepeticao(f.q)}</p>
                 <p className="a">{f.a}</p>
               </div>
             ))}
@@ -132,7 +132,7 @@ export function ProductChooser({ produto, nucleoNome, onClose, onFormulario }: P
               rel="noopener noreferrer"
               onClick={onClose}
             >
-              Contratar online
+              Seguir online
             </a>
           )}
           <a
