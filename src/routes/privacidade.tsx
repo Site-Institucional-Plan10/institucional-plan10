@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacidade")({
@@ -47,23 +48,25 @@ function PrivacidadePage() {
     },
   ];
   return (
-    <>
-      <section className="pt-32 pb-12 bg-neutral-100">
-        <div className="container-x">
-          <p className="font-eyebrow text-orange mb-3">Legal</p>
-          <h1 className="font-display">Política de Privacidade</h1>
+    <PageTheme palette={PALETTES.institucional}>
+      <header className="p10-hero">
+        <div className="p10-hero-inner">
+          <p className="eyebrow">Legal</p>
+          <h1>Política de Privacidade</h1>
         </div>
-      </section>
-      <section className="section-y">
-        <div className="container-x max-w-3xl space-y-8">
+      </header>
+      <section className="sec">
+        <div className="wrap" style={{ maxWidth: 760, display: "grid", gap: 26 }}>
           {sections.map((s) => (
             <div key={s.t}>
-              <h2 className="font-h3 mb-2">{s.t}</h2>
-              <p className="text-neutral-700 leading-relaxed">{s.b}</p>
+              <h2 style={{ fontFamily: "var(--fd)", fontWeight: 600, fontSize: "clamp(1.1rem, 1.8vw, 1.32rem)", color: "var(--preto)", margin: "0 0 8px" }}>
+                {s.t}
+              </h2>
+              <p className="p10-lede">{s.b}</p>
             </div>
           ))}
         </div>
       </section>
-    </>
+    </PageTheme>
   );
 }

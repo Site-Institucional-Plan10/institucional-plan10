@@ -7,6 +7,7 @@ import { ImageSlot } from "@/components/plan10/ImageSlot";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { canonical } from "@/lib/seo";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
@@ -71,53 +72,21 @@ const teamCells = [
 
 function QuemSomos() {
   return (
-    <>
-      {/* Section 1, Refined hero */}
-      <section
-        className="pt-32 pb-20"
-        style={{ background: "linear-gradient(135deg, #1C4E80 0%, #143A61 100%)" }}
-      >
-        <div className="container-x text-white">
-          <p
-            className="mb-4 uppercase"
-            style={{
-              color: "rgba(255,255,255,0.55)",
-              letterSpacing: "0.14em",
-              fontSize: "0.78rem",
-              fontWeight: 700,
-            }}
-          >
-            Sobre a Plan10
-          </p>
-          <h1
-            className="font-extrabold"
-            style={{
-              color: "#fff",
-              fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
-              lineHeight: 1.1,
-              maxWidth: 760,
-            }}
-          >
-            Cuidar do que importa.
-          </h1>
-          <p
-            className="mt-6"
-            style={{
-              color: "rgba(255,255,255,0.75)",
-              maxWidth: 560,
-              fontSize: "1.05rem",
-              lineHeight: 1.6,
-            }}
-          >
+    <PageTheme palette={PALETTES.institucional}>
+      <header className="p10-hero">
+        <div className="p10-hero-inner">
+          <p className="eyebrow">Sobre a Plan10</p>
+          <h1>Cuidar do que importa.</h1>
+          <p className="lede">
             Consultoria de proteção integrada para pessoas, famílias e empresas que valorizam
             excelência.
           </p>
         </div>
-      </section>
+      </header>
 
       {/* Section 2, Institutional text + proof numbers */}
-      <section className="section-y">
-        <div className="container-x">
+      <section className="sec">
+        <div className="wrap">
           <div className="max-w-3xl">
             <p className="text-lg text-neutral-700 leading-relaxed">
               A Plan10 é uma consultoria multimodal especializada em soluções integradas de seguros,
@@ -148,7 +117,7 @@ function QuemSomos() {
       </section>
 
       {/* Section 3, Mission / Vision / Values */}
-      <section className="section-y" style={{ background: "#F8F8F8" }}>
+      <section className="sec sec-alt">
         <div className="container-x grid gap-6 md:grid-cols-3">
           {[
             {
@@ -212,26 +181,13 @@ function QuemSomos() {
       </section>
 
       {/* Section 3.5, Nosso time */}
-      <section
-        style={{
-          background: "linear-gradient(180deg, #FAFAFA 0%, #F4F4F4 100%)",
-          padding: "80px 0",
-        }}
-      >
-        <div className="container-x">
+      <section className="sec">
+        <div className="wrap">
           <div className="max-w-3xl mb-12">
-            <p
-              className="uppercase mb-3"
-              style={{
-                color: "#E05A20",
-                letterSpacing: "0.14em",
-                fontSize: "0.78rem",
-                fontWeight: 700,
-              }}
-            >
+            <p className="eyebrow" style={{ marginBottom: 12 }}>
               Nossa equipe
             </p>
-            <h2 className="font-h2 mb-4" style={{ color: "#1A1A1A" }}>
+            <h2 className="p10-h2" style={{ marginBottom: 16 }}>
               Consultores especializados por área
             </h2>
             <p className="text-neutral-700 leading-relaxed">
@@ -295,7 +251,7 @@ function QuemSomos() {
       <Testimonials />
 
       {/* Section 4, Premium closing CTA */}
-      <section className="py-16" style={{ background: "#1A1A1A" }}>
+      <section className="sec sec-dark">
         <div className="container-x text-center">
           <p
             className="uppercase mb-3"
@@ -345,6 +301,6 @@ function QuemSomos() {
           </div>
         </div>
       </section>
-    </>
+    </PageTheme>
   );
 }
