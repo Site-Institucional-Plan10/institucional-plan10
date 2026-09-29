@@ -8,7 +8,7 @@ import { finContentFor } from "@/data/financasContent";
 import { heroCategoria, contextoDe } from "@/lib/imagery";
 import { finCategoriaImgs } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
-import { faqDaCategoria } from "@/lib/plan10";
+import { faqDaCategoria, criteriosDaCategoria, valoresDaCategoria, frentesConectadas } from "@/lib/plan10";
 
 const splitDots = (s: string) =>
   s
@@ -66,6 +66,16 @@ function CategoriaPage() {
   // categoria, para as páginas que não têm FAQ consultivo próprio.
   const faqCategoria = useMemo(() => faqDaCategoria(c.nucleos), [c]);
 
+  // Material consultivo da categoria, montado a partir dos caminhos. É o que
+  // permite dar às outras 27 categorias o mesmo desenho das financeiras sem
+  // escrever texto que o cliente não aprovou.
+  const criterios = useMemo(() => criteriosDaCategoria(c.nucleos), [c]);
+  const valores = useMemo(() => valoresDaCategoria(c.nucleos), [c]);
+  const frentes = useMemo(
+    () => frentesConectadas(c.nucleos.flatMap((n) => n.products.flatMap((p) => p.crossSelling ?? []))),
+    [c],
+  );
+
   const nucleos = (
     <div className="p10-cards">
       {c.nucleos.map((n) => (
@@ -97,14 +107,48 @@ function CategoriaPage() {
           </div>
         </header>
         <Crumb s={s} c={c} />
-        <section className="sec sec-alt">
+
+        {/* Caminhos primeiro, igual às categorias financeiras */}
+        <section className="sec">
           <div className="wrap">
-            <h2 className="p10-h2" style={{ marginBottom: 24 }}>
+            <h2 className="p10-h2" style={{ marginBottom: 26 }}>
               Opções disponíveis
             </h2>
             {nucleos}
           </div>
         </section>
+
+        {(criterios.length > 0 || valores.length > 0) && (
+          <section className="sec sec-alt">
+            <div className="wrap">
+              <div className="p10-split">
+                <div>
+                  <p className="eyebrow">Como escolher</p>
+                  {criterios.length > 0 && (
+                    <div className="p10-note" style={{ marginTop: 12 }}>
+                      <p>{criterios[0]}</p>
+                    </div>
+                  )}
+                  {criterios.slice(1).map((t) => (
+                    <p key={t} className="p10-lede" style={{ marginTop: 14 }}>
+                      {t}
+                    </p>
+                  ))}
+                  {valores.length > 0 && (
+                    <div className="p10-strip">
+                      {valores.map((v) => (
+                        <span key={v}>{v}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <figure className="p10-fig">
+                  <img src={ctxImg.src} alt={ctxImg.alt} loading="lazy" />
+                </figure>
+              </div>
+            </div>
+          </section>
+        )}
 
         {faqCategoria.length > 0 && (
           <section className="sec">
@@ -123,6 +167,39 @@ function CategoriaPage() {
             </div>
           </section>
         )}
+
+        <section className="sec sec-dark">
+          <div className="wrap" style={{ display: "grid", gap: 28 }}>
+            <div>
+              <h2 className="p10-h2">Próximo passo</h2>
+              <p className="p10-lede">
+                Avance com o apoio de um consultor. Você decide o próximo passo depois da conversa.
+              </p>
+            </div>
+            {c.nucleos[0] && (
+              <Link
+                to="/solucoes/$solucao/$categoria/$nucleo"
+                params={{ solucao: s.slug, categoria: c.slug, nucleo: c.nucleos[0].slug }}
+                className="btn btn-primary"
+                style={{ justifySelf: "start" }}
+              >
+                Ver as opções →
+              </Link>
+            )}
+            {frentes.length > 0 && (
+              <div style={{ borderTop: "1px solid rgba(244,240,232,.16)", paddingTop: 22 }}>
+                <p className="eyebrow" style={{ marginBottom: 12 }}>
+                  Também pode fazer sentido
+                </p>
+                <div className="p10-strip" style={{ marginTop: 0 }}>
+                  {frentes.map((f) => (
+                    <span key={f}>{f}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
       </PageTheme>
     );
   }

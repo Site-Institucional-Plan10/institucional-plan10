@@ -104,6 +104,47 @@ interface PerguntaResposta {
 const POR_CAMINHO = 2;
 const TETO_DA_CATEGORIA = 8;
 
+/**
+ * Critérios de escolha de uma categoria, tirados dos caminhos que ela reúne.
+ *
+ * Só as categorias financeiras têm texto consultivo próprio, vindo da base 08.
+ * Para as outras 27 o material existe um nível abaixo, no campo "porque" de
+ * cada caminho. A planilha repete o mesmo critério trocando apenas o nome do
+ * produto na abertura da frase, então a chave de deduplicação é a cauda, que é
+ * o critério de fato. Três é o teto: passando disso a página vira ladainha.
+ */
+export function criteriosDaCategoria(nucleos: { porque?: string }[]): string[] {
+  const vistos = new Set<string>();
+  const saida: string[] = [];
+  for (const nucleo of nucleos) {
+    const texto = (nucleo.porque ?? "").trim();
+    if (!texto) continue;
+    const cauda = (texto.split(/deve considerar|combina/i).pop() ?? texto).trim().toLowerCase();
+    if (vistos.has(cauda)) continue;
+    vistos.add(cauda);
+    saida.push(texto);
+    if (saida.length >= 3) break;
+  }
+  return saida;
+}
+
+/** Frentes de valor da categoria, sem repetir o que os caminhos têm em comum. */
+export function valoresDaCategoria(nucleos: { blocoValor?: string[] }[]): string[] {
+  const vistos = new Set<string>();
+  const saida: string[] = [];
+  for (const nucleo of nucleos) {
+    for (const valor of nucleo.blocoValor ?? []) {
+      const texto = valor.trim();
+      if (!texto) continue;
+      const chave = texto.toLowerCase();
+      if (vistos.has(chave)) continue;
+      vistos.add(chave);
+      saida.push(texto);
+    }
+  }
+  return saida;
+}
+
 export function faqDaCategoria(
   nucleos: { nome: string; products: { nome: string; faq?: PerguntaResposta[] }[] }[],
 ): PerguntaResposta[] {
