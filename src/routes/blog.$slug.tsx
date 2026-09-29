@@ -2,6 +2,7 @@ import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { blogArticles, blogCategoryFor } from "@/data/blogArticles";
 import { canonical } from "@/lib/seo";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
@@ -83,8 +84,9 @@ function BlogArticlePage() {
   const prodBody = prodLines.slice(1);
 
   return (
-    <article className="pt-32 pb-20" style={{ background: "#F7F5F2" }}>
-      <div className="container-x" style={{ maxWidth: 760 }}>
+    <PageTheme palette={PALETTES.institucional}>
+    <article className="pt-32 pb-20" style={{ background: "var(--vs)" }}>
+      <div className="wrap" style={{ maxWidth: 760, paddingInline: 24 }}>
         <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-semibold mb-8" style={{ color: cat.color }}>
           <ArrowLeft size={16} /> Voltar para o blog
         </Link>
@@ -118,14 +120,14 @@ function BlogArticlePage() {
 
         <div
           className="rounded-[5px] mb-10"
-          style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid #E6E1D6", display: "flex", alignItems: "center", justifyContent: "center" }}
+          style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid var(--c2)", display: "flex", alignItems: "center", justifyContent: "center" }}
         >
           <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: "#C9A83C" }}>Plan10</span>
         </div>
 
         {article.keyTakeaway && (
           <aside
-            style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "20px 24px", margin: "0 0 32px" }}
+            style={{ background: "#fff", border: "1px solid var(--c2)", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "20px 24px", margin: "0 0 32px" }}
           >
             <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: cat.color, margin: "0 0 8px" }}>
               Em resumo
@@ -137,7 +139,7 @@ function BlogArticlePage() {
         <div>{renderBlocks(article.body, cat.color)}</div>
 
         {prodTitle && (
-          <section style={{ background: "#0C2340", color: "#fff", borderRadius: 8, padding: "32px 28px", margin: "40px 0 0" }}>
+          <section style={{ background: "var(--preto)", color: "#fff", borderRadius: 8, padding: "32px 28px", margin: "40px 0 0" }}>
             <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".18em", textTransform: "uppercase", fontSize: ".72rem", color: "#E8CA6A", margin: "0 0 8px" }}>
               A solução Plan10
             </p>
@@ -158,7 +160,7 @@ function BlogArticlePage() {
         )}
 
         {!prodTitle && article.cta && (
-          <section style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "24px 26px", margin: "40px 0 0", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
+          <section style={{ background: "#fff", border: "1px solid var(--c2)", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "24px 26px", margin: "40px 0 0", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
             <p style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1.15rem", color: "#143A61", margin: 0, maxWidth: "40ch" }}>
               Quer entender o que isso muda no seu caso?
             </p>
@@ -173,7 +175,7 @@ function BlogArticlePage() {
         )}
 
         {related.length > 0 && (
-          <section style={{ marginTop: 56, borderTop: "1px solid #E6E1D6", paddingTop: 32 }}>
+          <section style={{ marginTop: 56, borderTop: "1px solid var(--c2)", paddingTop: 32 }}>
             <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: cat.color, margin: "0 0 18px" }}>
               Continue lendo
             </p>
@@ -183,7 +185,7 @@ function BlogArticlePage() {
                   key={r.slug}
                   to="/blog/$slug"
                   params={{ slug: r.slug }}
-                  style={{ display: "block", background: "#fff", border: "1px solid #E6E1D6", borderRadius: 5, padding: "16px 18px", textDecoration: "none" }}
+                  style={{ display: "block", background: "#fff", border: "1px solid var(--c2)", borderRadius: 5, padding: "16px 18px", textDecoration: "none" }}
                 >
                   <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1rem", color: "#143A61", display: "block", lineHeight: 1.3 }}>{r.title}</span>
                   <span style={{ fontSize: ".82rem", color: "#777", display: "block", marginTop: 6 }}>{r.readingTime}</span>
@@ -194,5 +196,6 @@ function BlogArticlePage() {
         )}
       </div>
     </article>
+    </PageTheme>
   );
 }

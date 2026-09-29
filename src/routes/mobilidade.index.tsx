@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { mobilidadeModels, mobilidadeMakes } from "@/data/mobilidadeModels";
 import { canonical } from "@/lib/seo";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/mobilidade/")({
   head: () => ({
@@ -35,22 +36,18 @@ function MobilidadeHub() {
   );
 
   return (
-    <div style={{ background: "#F7F5F2" }}>
-      <header className="pt-32 pb-12" style={{ background: "linear-gradient(160deg, #0C2340 0%, #143A61 100%)" }}>
-        <div className="container-x">
-          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".8rem", color: "#E8CA6A", margin: 0 }}>
-            Crescimento e mobilidade
-          </p>
-          <h1 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 3rem)", color: "#fff", margin: "12px 0 8px" }}>
-            Montadoras e modelos, com leitura de quem entende de proteção
-          </h1>
-          <p style={{ color: "rgba(255,255,255,.72)", maxWidth: "56ch", margin: 0 }}>
+    <PageTheme palette={PALETTES.institucional}>
+      <header className="p10-hero">
+        <div className="p10-hero-inner">
+          <p className="eyebrow">Crescimento e mobilidade</p>
+          <h1>Montadoras e modelos, com leitura de quem entende de proteção</h1>
+          <p className="lede">
             Uma biblioteca editorial de mobilidade: a ficha de cada modelo e o que considerar na hora de proteger e de conquistar o bem.
           </p>
         </div>
       </header>
 
-      <section className="py-6 sticky top-20 z-30 border-b" style={{ background: "#F7F5F2", borderColor: "#E6E1D6" }}>
+      <section className="py-6 sticky top-20 z-30 border-b" style={{ background: "var(--vs)", borderColor: "var(--c2)" }}>
         <div className="container-x flex flex-wrap gap-2">
           {([["todos", "Todos"], ["alto", "Alto padrão"], ["volume", "Linha de volume"]] as const).map(([id, label]) => (
             <button
@@ -74,7 +71,7 @@ function MobilidadeHub() {
           const list = models.filter((m) => m.makeSlug === mk.slug);
           return (
             <section key={mk.slug} style={{ marginBottom: 44 }}>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 12, borderBottom: "1px solid #E6E1D6", paddingBottom: 8, marginBottom: 18 }}>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 12, borderBottom: "1px solid var(--c2)", paddingBottom: 8, marginBottom: 18 }}>
                 <h2 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.5rem", color: NAVY, margin: 0 }}>{mk.name}</h2>
                 <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".12em", textTransform: "uppercase", fontSize: ".72rem", color: "#8A8172" }}>
                   {list.length} {list.length === 1 ? "modelo" : "modelos"}
@@ -86,7 +83,7 @@ function MobilidadeHub() {
                     key={m.modelSlug}
                     to="/mobilidade/$montadora/$modelo"
                     params={{ montadora: m.makeSlug, modelo: m.modelSlug }}
-                    style={{ display: "block", background: "#fff", border: "1px solid #E6E1D6", borderRadius: 6, padding: "18px 20px", textDecoration: "none", transition: "border-color .2s ease" }}
+                    style={{ display: "block", background: "#fff", border: "1px solid var(--c2)", borderRadius: 6, padding: "18px 20px", textDecoration: "none", transition: "border-color .2s ease" }}
                     className="hover:border-[#143A61]"
                   >
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
@@ -109,6 +106,6 @@ function MobilidadeHub() {
           );
         })}
       </div>
-    </div>
+    </PageTheme>
   );
 }

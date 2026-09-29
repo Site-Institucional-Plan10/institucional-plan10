@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { canonical } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/utils";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/em-um-clique")({
   head: () => ({
@@ -119,48 +120,49 @@ function EmUmClique() {
   const nada = groups.length === 0;
 
   return (
-    <div className="euc">
+    <PageTheme palette={PALETTES.institucional}>
       <style>{`
-        .euc { font-family: var(--font-sans); color: #1A1A1A; background: #F7F5F2; }
-        .euc-hero { background: linear-gradient(160deg, #0C2340 0%, #143A61 100%); color: #fff; padding: 132px 20px 64px; text-align: center; }
-        .euc-hero .eyebrow { font-family: var(--font-sans); font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-size: .8rem; color: #E8CA6A; margin: 0; }
-        .euc-hero h1 { font-family: var(--font-sans); font-weight: 600; font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 14px 0 10px; color: #fff; }
-        .euc-hero p { color: rgba(255,255,255,.72); font-size: 1.05rem; margin: 0 auto; max-width: 46ch; }
-        .euc-search { max-width: 720px; margin: 30px auto 0; display: flex; gap: 10px; background: #fff; padding: 7px; border-radius: 999px; }
+        .plan10-scope .euc-hero-in { display: grid; gap: 14px; }
+        
+        
+        
+        
+        .euc-search { max-width: 640px; margin: 12px 0 0; display: flex; gap: 10px; background: #fff; padding: 7px; border-radius: 999px; }
         .euc-search input { flex: 1; border: 0; background: transparent; padding: 13px 20px; font-size: 1rem; outline: 0; color: #1A1A1A; }
-        .euc-search .ico { display: grid; place-items: center; padding: 0 22px; border-radius: 999px; background: #C9A83C; color: #143A61; font-family: var(--font-sans); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .85rem; }
+        .euc-search .ico { display: grid; place-items: center; padding: 0 22px; border-radius: 999px; background: var(--gold); color: var(--preto); font-family: var(--font-sans); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .85rem; }
         .euc-wrap { max-width: 1180px; margin: 0 auto; padding: 64px 20px; }
         @media (min-width: 768px) { .euc-wrap { padding: 88px 40px; } }
         .euc-block { margin-bottom: 56px; }
-        .euc-block > .eyebrow { font-family: var(--font-sans); font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-size: .78rem; color: #E05A20; margin: 0; }
-        .euc-block > h2 { font-family: var(--font-sans); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #143A61; margin: 10px 0 22px; }
+        .euc-block > .eyebrow { font-family: var(--font-sans); font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-size: .78rem; color: var(--gold-dk, #866719); margin: 0; }
+        .euc-block > h2 { font-family: var(--font-sans); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--preto); margin: 10px 0 22px; }
         .euc-letter { margin-bottom: 26px; }
-        .euc-letter h3 { font-family: var(--font-sans); font-weight: 600; font-size: 1.5rem; color: #C9A83C; border-bottom: 1px solid #E6E1D6; padding-bottom: 8px; margin: 0 0 14px; }
+        .euc-letter h3 { font-family: var(--font-sans); font-weight: 600; font-size: 1.5rem; color: var(--gold); border-bottom: 1px solid var(--c2); padding-bottom: 8px; margin: 0 0 14px; }
         .euc-items { display: grid; grid-template-columns: 1fr; gap: 12px; }
         @media (min-width: 640px) { .euc-items { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1024px) { .euc-items { grid-template-columns: repeat(3, 1fr); } }
-        .euc-item { display: block; text-decoration: none; border: 1px solid #E6E1D6; border-radius: 5px; padding: 16px 18px; background: #fff; transition: border-color .22s ease; }
-        .euc-item:hover { border-color: #143A61; }
-        .euc-item strong { display: block; font-family: var(--font-sans); font-weight: 500; font-size: 1.1rem; color: #143A61; }
+        .euc-item { display: block; text-decoration: none; border: 1px solid var(--c2); border-radius: 5px; padding: 16px 18px; background: #fff; transition: border-color .22s ease; }
+        .euc-item:hover { border-color: var(--preto); }
+        .euc-item strong { display: block; font-family: var(--font-sans); font-weight: 500; font-size: 1.1rem; color: var(--preto); }
         .euc-item span { display: block; color: #5A5A5A; font-size: .9rem; margin-top: 5px; line-height: 1.45; }
-        .euc-item em { display: block; font-style: normal; font-family: var(--font-sans); letter-spacing: .08em; text-transform: uppercase; font-size: .7rem; color: #C9A83C; margin-top: 10px; }
+        .euc-item em { display: block; font-style: normal; font-family: var(--font-sans); letter-spacing: .08em; text-transform: uppercase; font-size: .7rem; color: var(--gold); margin-top: 10px; }
         .euc-quick { display: grid; grid-template-columns: 1fr; gap: 12px; }
         @media (min-width: 640px) { .euc-quick { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1024px) { .euc-quick { grid-template-columns: repeat(4, 1fr); } }
         .euc-pop { display: flex; flex-wrap: wrap; gap: 8px; }
         .euc-pop button { border: 1px solid #D8D2C6; background: #fff; border-radius: 999px; padding: 9px 16px; color: #5A5A5A; font-weight: 600; font-size: .88rem; cursor: pointer; transition: border-color .2s ease, color .2s ease; }
-        .euc-pop button:hover { border-color: #C9A83C; color: #143A61; }
-        .euc-help { text-align: center; background: linear-gradient(150deg, #0C2340, #143A61); color: #fff; border-radius: 8px; padding: 44px 24px; }
+        .euc-pop button:hover { border-color: var(--gold); color: var(--preto); }
+        .euc-help { text-align: center; background: linear-gradient(150deg, #0C2340, var(--preto)); color: #fff; border-radius: 8px; padding: 44px 24px; }
         .euc-help h2 { font-family: var(--font-sans); font-weight: 600; font-size: 1.7rem; margin: 0 0 8px; color: #fff; }
         .euc-help p { color: rgba(255,255,255,.72); margin: 0 auto 20px; max-width: 46ch; }
-        .euc-help a { display: inline-flex; align-items: center; gap: 8px; background: #E05A20; color: #fff; text-decoration: none; font-weight: 600; border-radius: 9px; padding: 13px 26px; }
+        .euc-help a { display: inline-flex; align-items: center; gap: 8px; background: var(--gold-dk, #866719); color: #fff; text-decoration: none; font-weight: 600; border-radius: 9px; padding: 13px 26px; }
         .euc-nada { color: #5A5A5A; font-size: 1rem; }
       `}</style>
 
-      <header className="euc-hero">
+      <header className="p10-hero">
+        <div className="p10-hero-inner euc-hero-in">
         <p className="eyebrow">Plan10 em um clique</p>
         <h1>Encontre por solução, tema ou necessidade</h1>
-        <p>Um índice rápido de todo o ecossistema Plan10, do jeito que você procura.</p>
+        <p className="lede">Um índice rápido de todo o ecossistema Plan10, do jeito que você procura.</p>
         <form className="euc-search" onSubmit={(e) => e.preventDefault()} role="search">
           <input
             value={q}
@@ -170,6 +172,7 @@ function EmUmClique() {
           />
           <span className="ico" aria-hidden>Buscar</span>
         </form>
+        </div>
       </header>
 
       <main className="euc-wrap">
@@ -222,6 +225,6 @@ function EmUmClique() {
           <a href={getWhatsAppUrl("default")} target="_blank" rel="noopener noreferrer">Falar com um consultor</a>
         </section>
       </main>
-    </div>
+    </PageTheme>
   );
 }

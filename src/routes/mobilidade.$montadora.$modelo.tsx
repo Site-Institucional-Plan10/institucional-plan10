@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { findMobilidadeModel, modelsByMake } from "@/data/mobilidadeModels";
 import { canonical } from "@/lib/seo";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 
 const NAVY = "#143A61";
 const GOLD = "#C9A83C";
@@ -42,8 +43,9 @@ function ModelPage() {
   const paras = m.textoEditorial.split("\n").map((l) => l.trim()).filter(Boolean);
 
   return (
-    <article className="pt-32 pb-20" style={{ background: "#F7F5F2" }}>
-      <div className="container-x" style={{ maxWidth: 780 }}>
+    <PageTheme palette={PALETTES.institucional}>
+    <article className="pt-32 pb-20" style={{ background: "var(--vs)" }}>
+      <div className="wrap" style={{ maxWidth: 780, paddingInline: 24 }}>
         <Link to="/mobilidade" className="inline-flex items-center gap-2 text-sm font-semibold mb-8" style={{ color: NAVY }}>
           <ArrowLeft size={16} /> Voltar para mobilidade
         </Link>
@@ -66,12 +68,12 @@ function ModelPage() {
 
         <div
           className="rounded-[5px] mb-8"
-          style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid #E6E1D6", display: "flex", alignItems: "center", justifyContent: "center" }}
+          style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid var(--c2)", display: "flex", alignItems: "center", justifyContent: "center" }}
         >
           <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: GOLD }}>Plan10</span>
         </div>
 
-        <aside style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${NAVY}`, borderRadius: 5, padding: "18px 22px", margin: "0 0 30px" }}>
+        <aside style={{ background: "#fff", border: "1px solid var(--c2)", borderLeft: `3px solid ${NAVY}`, borderRadius: 5, padding: "18px 22px", margin: "0 0 30px" }}>
           <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: NAVY, margin: "0 0 8px" }}>
             Ficha rápida
           </p>
@@ -84,7 +86,7 @@ function ModelPage() {
 
         <div className="grid gap-4 sm:grid-cols-2" style={{ margin: "32px 0 0" }}>
           {m.blocoProtecao && (
-            <section style={{ background: "#fff", border: "1px solid #E6E1D6", borderRadius: 6, padding: "20px 22px" }}>
+            <section style={{ background: "#fff", border: "1px solid var(--c2)", borderRadius: 6, padding: "20px 22px" }}>
               <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#2B6CB0", margin: "0 0 8px" }}>
                 Proteção do bem
               </p>
@@ -92,7 +94,7 @@ function ModelPage() {
             </section>
           )}
           {m.blocoAquisicao && (
-            <section style={{ background: "#fff", border: "1px solid #E6E1D6", borderRadius: 6, padding: "20px 22px" }}>
+            <section style={{ background: "#fff", border: "1px solid var(--c2)", borderRadius: 6, padding: "20px 22px" }}>
               <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#7B5BB5", margin: "0 0 8px" }}>
                 Aquisição
               </p>
@@ -114,7 +116,7 @@ function ModelPage() {
         </section>
 
         {related.length > 0 && (
-          <section style={{ marginTop: 48, borderTop: "1px solid #E6E1D6", paddingTop: 28 }}>
+          <section style={{ marginTop: 48, borderTop: "1px solid var(--c2)", paddingTop: 28 }}>
             <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: NAVY, margin: "0 0 16px" }}>
               Mais da {m.make}
             </p>
@@ -124,7 +126,7 @@ function ModelPage() {
                   key={r.modelSlug}
                   to="/mobilidade/$montadora/$modelo"
                   params={{ montadora: r.makeSlug, modelo: r.modelSlug }}
-                  style={{ display: "block", background: "#fff", border: "1px solid #E6E1D6", borderRadius: 5, padding: "14px 16px", textDecoration: "none" }}
+                  style={{ display: "block", background: "#fff", border: "1px solid var(--c2)", borderRadius: 5, padding: "14px 16px", textDecoration: "none" }}
                 >
                   <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1rem", color: NAVY, display: "block" }}>{r.model}</span>
                   <span style={{ fontSize: ".8rem", color: "#777", display: "block", marginTop: 4 }}>{r.segment}</span>
@@ -135,5 +137,6 @@ function ModelPage() {
         )}
       </div>
     </article>
+    </PageTheme>
   );
 }

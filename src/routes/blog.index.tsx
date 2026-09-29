@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useMemo } from "react";
 import { blogArticles, blogCategories, blogCategoryFor } from "@/data/blogArticles";
 import { canonical } from "@/lib/seo";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -26,23 +27,17 @@ function BlogPage() {
   }, [active]);
 
   return (
-    <>
-      <section className="pt-32 pb-12" style={{ background: "linear-gradient(160deg, #0C2340 0%, #143A61 100%)" }}>
-        <div className="container-x">
-          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".8rem", color: "#E8CA6A", margin: 0 }}>
-            Conteúdo Plan10
-          </p>
-          <h1 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 3rem)", color: "#fff", margin: "12px 0 8px" }}>
-            Leituras que ajudam a decidir com critério
-          </h1>
-          <p style={{ color: "rgba(255,255,255,.72)", maxWidth: "52ch", margin: 0 }}>
-            Biblioteca editorial da Plan10, organizada por solução e tema.
-          </p>
+    <PageTheme palette={PALETTES.institucional}>
+      <header className="p10-hero">
+        <div className="p10-hero-inner">
+          <p className="eyebrow">Conteúdo Plan10</p>
+          <h1>Leituras que ajudam a decidir com critério</h1>
+          <p className="lede">Biblioteca editorial da Plan10, organizada por solução e tema.</p>
         </div>
-      </section>
+      </header>
 
-      <section className="py-6 sticky top-20 z-30 border-b" style={{ background: "#F7F5F2", borderColor: "#E6E1D6" }}>
-        <div className="container-x flex flex-wrap gap-2">
+      <section className="py-6 sticky top-20 z-30 border-b" style={{ background: "var(--vs)", borderColor: "var(--c2)" }}>
+        <div className="wrap flex flex-wrap gap-2">
           <button
             onClick={() => setActive("todos")}
             className="rounded-full px-5 py-2 text-sm font-semibold transition border"
@@ -71,8 +66,8 @@ function BlogPage() {
         </div>
       </section>
 
-      <section className="section-y" style={{ background: "#F7F5F2" }}>
-        <div className="container-x">
+      <section className="sec sec-alt">
+        <div className="wrap">
           {filtered.length === 0 ? (
             <p className="text-neutral-600">Nenhum artigo nesta categoria ainda.</p>
           ) : (
@@ -135,6 +130,6 @@ function BlogPage() {
           )}
         </div>
       </section>
-    </>
+    </PageTheme>
   );
 }
