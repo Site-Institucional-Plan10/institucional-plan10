@@ -27,7 +27,7 @@ export function PremiumHero() {
           background-size: cover;
           background-position: center 42%;
           color: #F1EFEA;
-          font-family: 'Inter', system-ui, sans-serif;
+          font-family: var(--font-sans);
           padding: 108px 24px 56px;
           isolation: isolate;
         }
@@ -37,7 +37,7 @@ export function PremiumHero() {
         }
         .ph2-in { max-width: 1080px; margin: 0 auto; position: relative; }
         .ph2-eyebrow {
-          font-family: 'JetBrains Mono', ui-monospace, monospace;
+          font-family: var(--font-sans);
           font-weight: 500; font-size: .68rem;
           letter-spacing: .34em; text-transform: uppercase;
           color: rgba(241,239,234,.6); margin: 0 0 14px;
@@ -45,7 +45,7 @@ export function PremiumHero() {
         }
         .ph2-eyebrow::before { content: ""; width: 28px; height: 1px; background: #C6A24A; display: inline-block; }
         .ph2-h1 {
-          font-family: 'Schibsted Grotesk', 'Inter', sans-serif;
+          font-family: var(--font-sans);
           font-weight: 500;
           font-size: clamp(1.95rem, 3.9vw, 2.95rem);
           line-height: 1.1; letter-spacing: -.028em;
@@ -78,7 +78,7 @@ export function PremiumHero() {
           padding-top: 22px; border-top: 1px solid rgba(241,239,234,.14);
         }
         .ph2-strip span {
-          font-family: 'JetBrains Mono', ui-monospace, monospace;
+          font-family: var(--font-sans);
           font-size: .7rem; letter-spacing: .06em; text-transform: uppercase;
           color: rgba(241,239,234,.62);
           display: inline-flex; align-items: center; gap: 9px;

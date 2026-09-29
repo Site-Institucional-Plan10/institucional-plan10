@@ -100,9 +100,9 @@ const CSS = `
   --c2: #E7E2D6;
   --ctxt: #565049;
   --preto: #0E2438;
-  --fd: 'Schibsted Grotesk', 'Inter', sans-serif;
-  --fb: 'Inter', system-ui, sans-serif;
-  --fl: 'JetBrains Mono', ui-monospace, monospace;
+  --fd: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
+  --fb: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
+  --fl: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
   --r: 14px;
   --rs: 10px;
   --rx: 10px;
@@ -283,7 +283,7 @@ const CSS = `
 .plan10-scope .p10-form .check a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .plan10-scope .p10-form .check a:hover { color: #fff; }
 .plan10-scope .p10-etapas { display: flex; align-items: center; gap: 12px; }
-.plan10-scope .p10-etapas-lbl { font-family: var(--fm); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.6); white-space: nowrap; }
+.plan10-scope .p10-etapas-lbl { font-family: var(--fl); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.6); white-space: nowrap; }
 .plan10-scope .p10-etapas-bar { display: flex; gap: 6px; flex: 1; }
 .plan10-scope .p10-etapas-bar i { flex: 1; height: 3px; border-radius: 999px; background: rgba(255,255,255,.24); transition: background var(--t); }
 .plan10-scope .p10-etapas-bar i.on { background: var(--gold); }
@@ -333,7 +333,7 @@ const CSS = `
 
 /* Produto pre-selecionado no formulario, vindo da escolha feita no tile */
 .plan10-scope .p10-form-pre { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid rgba(212,175,110,.45); background: rgba(212,175,110,.1); border-radius: 12px; }
-.plan10-scope .p10-form-pre .lbl { font-family: var(--fm); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.65); }
+.plan10-scope .p10-form-pre .lbl { font-family: var(--fl); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.65); }
 .plan10-scope .p10-form-pre .val { font-family: var(--fb); font-weight: 600; font-size: .92rem; color: #fff; flex: 1; min-width: 140px; }
 .plan10-scope .p10-form-pre button { background: none; border: 0; padding: 0; font-family: var(--fb); font-size: .8rem; color: rgba(241,239,234,.7); text-decoration: underline; cursor: pointer; }
 .plan10-scope .p10-form-pre button:hover { color: #fff; }

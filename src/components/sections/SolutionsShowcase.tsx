@@ -64,10 +64,10 @@ export function SolutionsShowcase() {
   return (
     <section className="p10x" aria-labelledby="p10x-h">
       <style>{`
-        .p10x { background: #F4F2EC; color: #0B1A2F; padding: 52px 24px; font-family: 'Inter', system-ui, sans-serif; }
+        .p10x { background: #F4F2EC; color: #0B1A2F; padding: 52px 24px; font-family: var(--font-sans); }
         .p10x-in { max-width: 1120px; margin: 0 auto; }
         .p10x-h2 {
-          font-family: 'Schibsted Grotesk', 'Inter', sans-serif; font-weight: 600;
+          font-family: var(--font-sans); font-weight: 600;
           font-size: clamp(1.9rem, 4vw, 3rem); line-height: 1.06; letter-spacing: -.025em;
           color: #0B1A2F; margin: 0; max-width: 46ch;
         }
@@ -103,13 +103,13 @@ export function SolutionsShowcase() {
         .p10x-row:hover .p10x-foto img { transform: scale(1.06); }
         .p10x-name {
           text-wrap: balance;
-          font-family: 'Schibsted Grotesk', 'Inter', sans-serif; font-weight: 600;
+          font-family: var(--font-sans); font-weight: 600;
           font-size: clamp(1.3rem, 2.2vw, 1.85rem); line-height: 1.15; letter-spacing: -.02em;
           color: #0B1A2F; transition: color .2s ease;
         }
         .p10x-micro { font-size: .98rem; line-height: 1.55; color: #5B6472; }
         .p10x-go {
-          font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: .72rem;
+          font-family: var(--font-sans); font-size: .72rem;
           letter-spacing: .16em; text-transform: uppercase; color: #9AA1AC;
           display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; transition: color .2s ease, gap .2s ease;
         }

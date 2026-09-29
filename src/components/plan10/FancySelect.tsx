@@ -127,11 +127,11 @@ export function FancySelect({ options, value, onChange, label, placeholder = "Se
 
 const FSEL_CSS = `
 .fsel { position: relative; display: block; width: 100%; }
-.fsel-label { display: block; font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+.fsel-label { display: block; font-family: var(--font-sans); font-weight: 500; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
 .fsel-btn {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
   padding: 12px 14px; border-radius: 10px; cursor: pointer; text-align: left;
-  font-family: 'Inter', system-ui, sans-serif; font-size: .95rem; line-height: 1.3;
+  font-family: var(--font-sans); font-size: .95rem; line-height: 1.3;
   transition: border-color .2s ease, background .2s ease;
 }
 .fsel-btn .fsel-chev { flex: none; transition: transform .2s ease; }

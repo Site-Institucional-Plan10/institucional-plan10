@@ -38,10 +38,10 @@ function MobilidadeHub() {
     <div style={{ background: "#F7F5F2" }}>
       <header className="pt-32 pb-12" style={{ background: "linear-gradient(160deg, #0C2340 0%, #143A61 100%)" }}>
         <div className="container-x">
-          <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".8rem", color: "#E8CA6A", margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".8rem", color: "#E8CA6A", margin: 0 }}>
             Crescimento e mobilidade
           </p>
-          <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 3rem)", color: "#fff", margin: "12px 0 8px" }}>
+          <h1 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 3rem)", color: "#fff", margin: "12px 0 8px" }}>
             Montadoras e modelos, com leitura de quem entende de proteção
           </h1>
           <p style={{ color: "rgba(255,255,255,.72)", maxWidth: "56ch", margin: 0 }}>
@@ -75,8 +75,8 @@ function MobilidadeHub() {
           return (
             <section key={mk.slug} style={{ marginBottom: 44 }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: 12, borderBottom: "1px solid #E6E1D6", paddingBottom: 8, marginBottom: 18 }}>
-                <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.5rem", color: NAVY, margin: 0 }}>{mk.name}</h2>
-                <span style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: ".12em", textTransform: "uppercase", fontSize: ".72rem", color: "#8A8172" }}>
+                <h2 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.5rem", color: NAVY, margin: 0 }}>{mk.name}</h2>
+                <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".12em", textTransform: "uppercase", fontSize: ".72rem", color: "#8A8172" }}>
                   {list.length} {list.length === 1 ? "modelo" : "modelos"}
                 </span>
               </div>
@@ -90,9 +90,9 @@ function MobilidadeHub() {
                     className="hover:border-[#143A61]"
                   >
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-                      <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.2rem", color: "#1A1A1A" }}>{m.model}</span>
+                      <span style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.2rem", color: "#1A1A1A" }}>{m.model}</span>
                       {m.seloAltoValor && (
-                        <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: ".62rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 8px", whiteSpace: "nowrap" }}>
+                        <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: ".62rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 8px", whiteSpace: "nowrap" }}>
                           Alto padrão
                         </span>
                       )}

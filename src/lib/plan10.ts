@@ -1,9 +1,13 @@
 export const PLAN10_WHATSAPP = "5511938012222";
 
+// Os três apelidos continuam porque o código os usa em muitos lugares, mas o
+// site tem uma família só desde 28/09/2026: Barlow Semi Condensed, definida em
+// --font-sans. O que separa display, corpo e eyebrow agora é peso, tamanho e
+// espaçamento, não a família.
 export const FONTS = {
-  display: "'Playfair Display', Georgia, serif",
-  body: "'Inter', ui-sans-serif, system-ui, sans-serif",
-  eyebrow: "'Barlow Condensed', 'Inter', sans-serif",
+  display: "var(--font-sans)",
+  body: "var(--font-sans)",
+  eyebrow: "var(--font-sans)",
 };
 
 export function whatsappUrl(message: string): string {

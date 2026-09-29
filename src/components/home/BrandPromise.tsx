@@ -9,7 +9,7 @@ export function BrandPromise() {
       <style>{`
         .bp {
           position: relative; isolation: isolate; overflow: hidden;
-          color: #F4EFE3; font-family: 'Inter', system-ui, sans-serif;
+          color: #F4EFE3; font-family: var(--font-sans);
           padding: 38px 24px;
         }
         .bp-bg { position: absolute; inset: 0; z-index: -2; }
@@ -20,7 +20,7 @@ export function BrandPromise() {
         }
         .bp-in { max-width: 1080px; margin: 0 auto; }
         .bp-h {
-          font-family: 'Schibsted Grotesk', 'Inter', sans-serif; font-weight: 500;
+          font-family: var(--font-sans); font-weight: 500;
           font-size: clamp(1.7rem, 3.4vw, 2.7rem); line-height: 1.14; letter-spacing: -.024em;
           margin: 0; max-width: 20ch; color: #F7F2E7;
         }

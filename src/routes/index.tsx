@@ -36,7 +36,7 @@ function HomePage() {
             color: #FFFFFF;
           }
           .home-editorial figcaption p {
-            font-family: 'Schibsted Grotesk','Inter',sans-serif; font-weight: 500;
+            font-family: var(--font-sans); font-weight: 500;
             font-size: clamp(1.15rem, 2.2vw, 1.7rem); line-height: 1.25; letter-spacing: -.02em;
             margin: 0; max-width: 24ch; text-shadow: 0 2px 20px rgba(0,0,0,.35);
           }

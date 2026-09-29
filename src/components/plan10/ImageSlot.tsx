@@ -38,13 +38,13 @@ export function ImageSlot({ ratio = "16 / 9", label, hint, tone = "light" }: Pro
         .p10-slot-orn { width: 34px; height: 1px; background: var(--gold, #C9A83C); position: relative; margin-bottom: 4px; }
         .p10-slot-orn::before { content: '\\25C6'; position: absolute; top: -8px; left: 50%; transform: translateX(-50%); color: var(--gold, #C9A83C); font-size: .62rem; }
         .p10-slot-tag {
-          font-family: 'Barlow Condensed', sans-serif;
+          font-family: var(--font-sans);
           font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
           font-size: .64rem; color: var(--gold, #C9A83C);
         }
-        .p10-slot-label { font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; color: #1A1A1A; line-height: 1.3; }
+        .p10-slot-label { font-family: var(--font-sans); font-size: 1.15rem; color: #1A1A1A; line-height: 1.3; }
         .p10-slot-d .p10-slot-label { color: #fff; }
-        .p10-slot-hint { font-family: 'Inter', system-ui, sans-serif; font-size: .82rem; color: #7A7160; line-height: 1.5; }
+        .p10-slot-hint { font-family: var(--font-sans); font-size: .82rem; color: #7A7160; line-height: 1.5; }
         .p10-slot-d .p10-slot-hint { color: rgba(255,255,255,.55); }
       `}</style>
       <div className="p10-slot-in">

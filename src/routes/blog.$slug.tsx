@@ -56,7 +56,7 @@ function renderBlocks(text: string, color: string) {
       isHeading(line) ? (
         <h2
           key={i}
-          style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.35rem", color: "#143A61", margin: "34px 0 12px", lineHeight: 1.3, borderLeft: `3px solid ${color}`, paddingLeft: 14 }}
+          style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.35rem", color: "#143A61", margin: "34px 0 12px", lineHeight: 1.3, borderLeft: `3px solid ${color}`, paddingLeft: 14 }}
         >
           {line}
         </h2>
@@ -106,11 +106,11 @@ function BlogArticlePage() {
           )}
         </div>
 
-        <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "clamp(1.9rem, 4vw, 2.6rem)", lineHeight: 1.2, color: "#1A1A1A", margin: "0 0 14px" }}>
+        <h1 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "clamp(1.9rem, 4vw, 2.6rem)", lineHeight: 1.2, color: "#1A1A1A", margin: "0 0 14px" }}>
           {article.title}
         </h1>
         {article.dek && (
-          <p style={{ fontSize: "1.2rem", lineHeight: 1.5, color: "#5A5A5A", margin: "0 0 18px", fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic" }}>
+          <p style={{ fontSize: "1.2rem", lineHeight: 1.5, color: "#5A5A5A", margin: "0 0 18px", fontFamily: "var(--font-sans)", fontStyle: "italic" }}>
             {article.dek}
           </p>
         )}
@@ -120,14 +120,14 @@ function BlogArticlePage() {
           className="rounded-[5px] mb-10"
           style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid #E6E1D6", display: "flex", alignItems: "center", justifyContent: "center" }}
         >
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: "#C9A83C" }}>Plan10</span>
+          <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: "#C9A83C" }}>Plan10</span>
         </div>
 
         {article.keyTakeaway && (
           <aside
             style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "20px 24px", margin: "0 0 32px" }}
           >
-            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: cat.color, margin: "0 0 8px" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: cat.color, margin: "0 0 8px" }}>
               Em resumo
             </p>
             <p style={{ fontSize: "1.02rem", lineHeight: 1.65, color: "#333", margin: 0 }}>{article.keyTakeaway}</p>
@@ -138,10 +138,10 @@ function BlogArticlePage() {
 
         {prodTitle && (
           <section style={{ background: "#0C2340", color: "#fff", borderRadius: 8, padding: "32px 28px", margin: "40px 0 0" }}>
-            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".18em", textTransform: "uppercase", fontSize: ".72rem", color: "#E8CA6A", margin: "0 0 8px" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".18em", textTransform: "uppercase", fontSize: ".72rem", color: "#E8CA6A", margin: "0 0 8px" }}>
               A solução Plan10
             </p>
-            <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.4rem", margin: "0 0 14px", lineHeight: 1.3, color: "#fff" }}>
+            <h2 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.4rem", margin: "0 0 14px", lineHeight: 1.3, color: "#fff" }}>
               {prodTitle}
             </h2>
             {prodBody.map((p, i) => (
@@ -159,7 +159,7 @@ function BlogArticlePage() {
 
         {!prodTitle && article.cta && (
           <section style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "24px 26px", margin: "40px 0 0", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
-            <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 500, fontSize: "1.15rem", color: "#143A61", margin: 0, maxWidth: "40ch" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1.15rem", color: "#143A61", margin: 0, maxWidth: "40ch" }}>
               Quer entender o que isso muda no seu caso?
             </p>
             <Link
@@ -174,7 +174,7 @@ function BlogArticlePage() {
 
         {related.length > 0 && (
           <section style={{ marginTop: 56, borderTop: "1px solid #E6E1D6", paddingTop: 32 }}>
-            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: cat.color, margin: "0 0 18px" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: cat.color, margin: "0 0 18px" }}>
               Continue lendo
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
@@ -185,7 +185,7 @@ function BlogArticlePage() {
                   params={{ slug: r.slug }}
                   style={{ display: "block", background: "#fff", border: "1px solid #E6E1D6", borderRadius: 5, padding: "16px 18px", textDecoration: "none" }}
                 >
-                  <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 500, fontSize: "1rem", color: "#143A61", display: "block", lineHeight: 1.3 }}>{r.title}</span>
+                  <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1rem", color: "#143A61", display: "block", lineHeight: 1.3 }}>{r.title}</span>
                   <span style={{ fontSize: ".82rem", color: "#777", display: "block", marginTop: 6 }}>{r.readingTime}</span>
                 </Link>
               ))}

@@ -263,7 +263,7 @@ function QuemSomos() {
                 <Icon size={40} color={color} strokeWidth={1.5} />
                 <h3
                   style={{
-                    fontFamily: "Inter, system-ui, sans-serif",
+                    fontFamily: "var(--font-sans)",
                     fontWeight: 600,
                     color: "#1A1A1A",
                     fontSize: "1rem",
@@ -273,7 +273,7 @@ function QuemSomos() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "Inter, system-ui, sans-serif",
+                    fontFamily: "var(--font-sans)",
                     fontWeight: 400,
                     color: "#666666",
                     fontSize: "0.875rem",

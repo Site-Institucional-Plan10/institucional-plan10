@@ -289,7 +289,7 @@ export function Header() {
             <HeaderLogo size={42} />
           </Link>
 
-          <nav className="hidden min-[1100px]:flex items-center gap-0.5">
+          <nav className="hidden min-[960px]:flex items-center gap-0.5">
             {navLinks.map((l) =>
               "solucao" in l ? (
                 <Link
@@ -338,7 +338,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileOpen(true)}
-              className="min-[1100px]:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
+              className="min-[960px]:hidden flex h-10 w-10 items-center justify-center rounded-full text-ink hover:bg-neutral-100"
               aria-label="Abrir menu"
             >
               <Menu size={24} />
@@ -351,7 +351,7 @@ export function Header() {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-50 min-[1100px]:hidden flex flex-col"
+          className="fixed inset-0 z-50 min-[960px]:hidden flex flex-col"
           style={{
             background: "#111111",
             animation: `${mobileClosing ? "slideOutRight" : "slideInRight"} 280ms cubic-bezier(0.4,0,0.2,1) forwards`,
@@ -406,7 +406,7 @@ export function Header() {
                     key={`grp-${i}`}
                     style={{
                       padding: "16px 0 6px",
-                      fontFamily: "'Barlow Condensed', sans-serif",
+                      fontFamily: "var(--font-sans)",
                       fontSize: ".72rem",
                       letterSpacing: ".18em",
                       textTransform: "uppercase",

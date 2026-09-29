@@ -49,17 +49,17 @@ function ModelPage() {
         </Link>
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: "#8A8172" }}>
+          <span style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: "#8A8172" }}>
             {m.make}
           </span>
           {m.seloAltoValor && (
-            <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: ".64rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 9px" }}>
+            <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: ".64rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 9px" }}>
               Alto padrão
             </span>
           )}
         </div>
 
-        <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 2.8rem)", lineHeight: 1.15, color: "#1A1A1A", margin: "0 0 8px" }}>
+        <h1 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 2.8rem)", lineHeight: 1.15, color: "#1A1A1A", margin: "0 0 8px" }}>
           {m.make} {m.model}
         </h1>
         <p className="text-sm text-neutral-500 mb-8">{m.segment}{m.anoModelo ? ` · ano-modelo ${m.anoModelo}` : ""}</p>
@@ -68,11 +68,11 @@ function ModelPage() {
           className="rounded-[5px] mb-8"
           style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid #E6E1D6", display: "flex", alignItems: "center", justifyContent: "center" }}
         >
-          <span style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: GOLD }}>Plan10</span>
+          <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: GOLD }}>Plan10</span>
         </div>
 
         <aside style={{ background: "#fff", border: "1px solid #E6E1D6", borderLeft: `3px solid ${NAVY}`, borderRadius: 5, padding: "18px 22px", margin: "0 0 30px" }}>
-          <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: NAVY, margin: "0 0 8px" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: NAVY, margin: "0 0 8px" }}>
             Ficha rápida
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#333", margin: 0 }}>{m.fichaRapida}</p>
@@ -85,7 +85,7 @@ function ModelPage() {
         <div className="grid gap-4 sm:grid-cols-2" style={{ margin: "32px 0 0" }}>
           {m.blocoProtecao && (
             <section style={{ background: "#fff", border: "1px solid #E6E1D6", borderRadius: 6, padding: "20px 22px" }}>
-              <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#2B6CB0", margin: "0 0 8px" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#2B6CB0", margin: "0 0 8px" }}>
                 Proteção do bem
               </p>
               <p style={{ fontSize: ".95rem", lineHeight: 1.65, color: "#444", margin: 0 }}>{m.blocoProtecao}</p>
@@ -93,7 +93,7 @@ function ModelPage() {
           )}
           {m.blocoAquisicao && (
             <section style={{ background: "#fff", border: "1px solid #E6E1D6", borderRadius: 6, padding: "20px 22px" }}>
-              <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#7B5BB5", margin: "0 0 8px" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#7B5BB5", margin: "0 0 8px" }}>
                 Aquisição
               </p>
               <p style={{ fontSize: ".95rem", lineHeight: 1.65, color: "#444", margin: 0 }}>{m.blocoAquisicao}</p>
@@ -102,7 +102,7 @@ function ModelPage() {
         </div>
 
         <section style={{ background: "linear-gradient(150deg, #0C2340, #143A61)", color: "#fff", borderRadius: 8, padding: "32px 28px", margin: "36px 0 0", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.4rem", margin: "0 0 8px", color: "#fff" }}>
+          <h2 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.4rem", margin: "0 0 8px", color: "#fff" }}>
             Vai conquistar ou proteger um {m.model}?
           </h2>
           <p style={{ color: "rgba(255,255,255,.75)", maxWidth: "46ch", margin: "0 auto 20px" }}>
@@ -115,7 +115,7 @@ function ModelPage() {
 
         {related.length > 0 && (
           <section style={{ marginTop: 48, borderTop: "1px solid #E6E1D6", paddingTop: 28 }}>
-            <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: NAVY, margin: "0 0 16px" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: NAVY, margin: "0 0 16px" }}>
               Mais da {m.make}
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
@@ -126,7 +126,7 @@ function ModelPage() {
                   params={{ montadora: r.makeSlug, modelo: r.modelSlug }}
                   style={{ display: "block", background: "#fff", border: "1px solid #E6E1D6", borderRadius: 5, padding: "14px 16px", textDecoration: "none" }}
                 >
-                  <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 500, fontSize: "1rem", color: NAVY, display: "block" }}>{r.model}</span>
+                  <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1rem", color: NAVY, display: "block" }}>{r.model}</span>
                   <span style={{ fontSize: ".8rem", color: "#777", display: "block", marginTop: 4 }}>{r.segment}</span>
                 </Link>
               ))}

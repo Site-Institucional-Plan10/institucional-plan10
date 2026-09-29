@@ -2,10 +2,12 @@
 @source "../src";
 
 @theme {
-  /* Uma só família de corpo (Inter) e uma de display (Playfair), DS v3.1 */
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  /* Família única do site: Barlow Semi Condensed (padrão definido pelo cliente
+     em 28/09/2026). Os três apelidos continuam existindo porque o Tailwind e o
+     código antigo os usam, mas apontam todos para a mesma fonte. */
+  --font-sans: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
 
   /* Brand core, um laranja e um azul (DS v3.1) */
   --color-orange: #e05a20;
@@ -321,7 +323,7 @@
   transition: opacity 150ms ease;
 }
 .vertical-tab-item span {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.02em;

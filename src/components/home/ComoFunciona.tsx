@@ -17,19 +17,19 @@ export function ComoFunciona() {
         .cf-sec {
           background: #EFEBE4;
           padding: 88px 20px;
-          font-family: 'Inter', system-ui, sans-serif;
+          font-family: var(--font-sans);
           color: #1A1A1A;
         }
         .cf-wrap { max-width: 1180px; margin: 0 auto; }
         .cf-head { max-width: 660px; margin-bottom: 46px; }
         .cf-eyebrow {
-          font-family: 'Barlow Condensed', sans-serif;
+          font-family: var(--font-sans);
           font-weight: 600; font-size: .78rem;
           letter-spacing: .22em; text-transform: uppercase;
           color: #E05A20; margin: 0;
         }
         .cf-h2 {
-          font-family: 'Playfair Display', Georgia, serif;
+          font-family: var(--font-sans);
           font-weight: 500; font-size: clamp(1.9rem, 3.6vw, 2.6rem);
           line-height: 1.14; color: #143A61; margin: 12px 0 0;
         }
@@ -40,12 +40,12 @@ export function ComoFunciona() {
         @media (min-width: 1024px) { .cf-grid { grid-template-columns: repeat(5, 1fr); } }
         .cf-step { border-top: 1px solid #E2DDD3; padding-top: 18px; }
         .cf-step .num {
-          font-family: 'Playfair Display', Georgia, serif; font-weight: 500;
+          font-family: var(--font-sans); font-weight: 500;
           font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1;
           color: #C9A83C; margin-bottom: 14px; display: block;
         }
         .cf-step h3 {
-          font-family: 'Playfair Display', Georgia, serif; font-weight: 500;
+          font-family: var(--font-sans); font-weight: 500;
           font-size: 1.12rem; color: #143A61; margin: 0 0 7px; line-height: 1.25;
         }
         .cf-step p { font-size: .92rem; line-height: 1.6; color: #5A5A5A; margin: 0; }

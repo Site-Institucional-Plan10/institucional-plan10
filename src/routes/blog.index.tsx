@@ -29,10 +29,10 @@ function BlogPage() {
     <>
       <section className="pt-32 pb-12" style={{ background: "linear-gradient(160deg, #0C2340 0%, #143A61 100%)" }}>
         <div className="container-x">
-          <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".8rem", color: "#E8CA6A", margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".8rem", color: "#E8CA6A", margin: 0 }}>
             Conteúdo Plan10
           </p>
-          <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 3rem)", color: "#fff", margin: "12px 0 8px" }}>
+          <h1 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "clamp(2rem, 4.5vw, 3rem)", color: "#fff", margin: "12px 0 8px" }}>
             Leituras que ajudam a decidir com critério
           </h1>
           <p style={{ color: "rgba(255,255,255,.72)", maxWidth: "52ch", margin: 0 }}>
@@ -91,7 +91,7 @@ function BlogPage() {
                         justifyContent: "center",
                       }}
                     >
-                      <span style={{ fontFamily: "'Barlow Condensed', sans-serif", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".62rem", color: "#C9A83C" }}>
+                      <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".62rem", color: "#C9A83C" }}>
                         Plan10
                       </span>
                     </div>
@@ -112,7 +112,7 @@ function BlogPage() {
                           </span>
                         )}
                       </div>
-                      <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600, fontSize: "1.15rem", lineHeight: 1.3, color: "#1A1A1A", marginBottom: 8 }}>
+                      <h3 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.15rem", lineHeight: 1.3, color: "#1A1A1A", marginBottom: 8 }}>
                         {article.title}
                       </h3>
                       <p className="text-sm text-neutral-700 mb-4 flex-1">{article.summary}</p>
