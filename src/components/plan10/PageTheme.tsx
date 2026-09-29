@@ -32,6 +32,18 @@ export const PALETTES: Record<string, Palette> = {
     vp: "#345876",
     va: "#C6A24A",
   },
+  // Paleta das páginas que não pertencem a um hub (soluções online, contato,
+  // institucional). Azul e ouro da marca, para elas entrarem no mesmo desenho
+  // das páginas de solução sem fingir ser uma delas.
+  institucional: {
+    hero: "#0E2438",
+    ve: "#12324E",
+    card: "#0B1D2E",
+    alt: "#D6E8F7",
+    vs: "#F1EFE8",
+    vp: "#1C4E80",
+    va: "#C6A24A",
+  },
   financeiras: {
     hero: "#0A1929",
     ve: "#12324E",

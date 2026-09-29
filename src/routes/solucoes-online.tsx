@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { solucoesOnline, categoriasOnline } from "@/data/solucoesOnline";
 import { canonical } from "@/lib/seo";
+import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 
 export const Route = createFileRoute("/solucoes-online")({
   head: () => ({
@@ -44,36 +45,27 @@ function SolucoesOnlinePage() {
   }, [cat]);
 
   return (
-    <div className="solp">
+    <PageTheme palette={PALETTES.institucional}>
       <style>{`
-        .solp { background: #F4F2EC; color: #0B1A2F; font-family: var(--font-sans); }
-        .solp-hero { background: linear-gradient(150deg, #0E2438 0%, #0B1D2E 100%); color: #F1EFEA; padding: 132px 24px 60px; }
-        .solp-hero-in { max-width: 1080px; margin: 0 auto; }
-        .solp-eyebrow { font-family: var(--font-sans); font-weight: 500; font-size: .7rem; letter-spacing: .32em; text-transform: uppercase; color: rgba(241,239,234,.6); margin: 0 0 20px; display: inline-flex; align-items: center; gap: 12px; }
-        .solp-eyebrow::before { content: ""; width: 26px; height: 1px; background: #B08D57; }
-        .solp-h1 { color: #F1EFEA; font-family: var(--font-sans); font-weight: 500; font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.1; letter-spacing: -.028em; margin: 0; max-width: 20ch; }
-        .solp-lede { font-size: 1.08rem; line-height: 1.6; color: rgba(241,239,234,.76); margin: 22px 0 0; max-width: 56ch; }
-        .solp-body { max-width: 1080px; margin: 0 auto; padding: 40px 24px 96px; }
-        .solp-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; position: sticky; top: 78px; background: #F4F2EC; padding: 16px 0; z-index: 20; }
-        .solp-chip { font-family: var(--font-sans); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; padding: 11px 17px; border-radius: 999px; border: 1px solid #E0DBD0; background: transparent; color: #5B6472; cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
-        .solp-chip:hover { border-color: #B08D57; color: #0E2438; }
-        .solp-chip[aria-pressed="true"] { background: #0E2438; border-color: #0E2438; color: #F1EFEA; }
+        .solp-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; position: sticky; top: 78px; background: var(--c1); padding: 16px 0; z-index: 20; }
+        .solp-chip { font-family: var(--fb); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--c2); background: transparent; color: var(--ctxt); cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
+        .solp-chip:hover { border-color: var(--gold); color: var(--preto); }
+        .solp-chip[aria-pressed="true"] { background: var(--preto); border-color: var(--preto); color: #F1EFEA; }
         .solp-group { margin-top: 34px; }
-        .solp-group-h { font-family: var(--font-sans); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: #9A7B23; margin: 0 0 4px; }
-        .solp-list { border-top: 1px solid #E2DDD3; }
-        .sol-row { --c: #9A7B23; display: grid; grid-template-columns: 1.1fr 1.5fr auto; align-items: center; gap: 24px; padding: 22px 12px 22px 6px; border-bottom: 1px solid #E2DDD3; text-decoration: none; color: #0B1A2F; position: relative; transition: background .24s ease, padding-left .24s ease; }
-        .sol-row.cons { --c: #3E6488; }
+        .solp-group-h { font-family: var(--fl); font-weight: 500; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-dk, #866719); margin: 0 0 4px; }
+        .solp-list { border-top: 1px solid var(--c2); }
+        .sol-row { --c: var(--gold-dk, #866719); display: grid; grid-template-columns: 1.1fr 1.5fr auto; align-items: center; gap: 24px; padding: 22px 12px 22px 6px; border-bottom: 1px solid var(--c2); text-decoration: none; color: var(--preto); position: relative; transition: background .24s ease, padding-left .24s ease; }
+        .sol-row.cons { --c: var(--vp); }
         .sol-row::before { content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); width:3px; height:0; background:var(--c); border-radius:3px; transition:height .24s ease; }
-        .sol-row:hover { background: #FBFAF6; padding-left: 16px; }
+        .sol-row:hover { background: var(--vs); padding-left: 16px; }
         .sol-row:hover::before { height: 58%; }
-        .sol-nm { font-family: var(--font-sans); font-weight: 600; font-size: 1.14rem; letter-spacing: -.015em; color: #0E2438; }
-        .sol-cat { font-family: var(--font-sans); font-size: .58rem; letter-spacing: .12em; text-transform: uppercase; color: #9AA1AC; display: block; margin-top: 4px; }
-        .sol-desc { font-size: .92rem; line-height: 1.5; color: #5B6472; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .sol-cta { font-family: var(--font-sans); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c); display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
-        .sol-row svg { transition: transform .2s ease; }
+        .sol-nm { font-family: var(--fd); font-weight: 600; font-size: 1.14rem; letter-spacing: -.015em; color: var(--preto); }
+        .sol-cat { font-family: var(--fl); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ctxt); display: block; margin-top: 4px; opacity: .8; }
+        .sol-desc { font-family: var(--fb); font-size: .95rem; line-height: 1.5; color: var(--ctxt); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .sol-cta { font-family: var(--fl); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c); display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+        .sol-row svg { display: inline; transition: transform .2s ease; }
         .sol-row:hover svg { transform: translateX(3px); }
         @media (max-width: 780px) {
-          .solp-hero { padding: 108px 20px 48px; }
           .solp-filters { top: 70px; }
           .sol-row { grid-template-columns: 1fr auto; gap: 6px 14px; padding: 18px 6px; }
           .sol-desc { grid-column: 1 / 3; }
@@ -81,17 +73,18 @@ function SolucoesOnlinePage() {
         }
       `}</style>
 
-      <header className="solp-hero">
-        <div className="solp-hero-in">
-          <p className="solp-eyebrow">Soluções online</p>
-          <h1 className="solp-h1">Soluções digitais e caminhos de atendimento</h1>
-          <p className="solp-lede">
+      <header className="p10-hero">
+        <div className="p10-hero-inner">
+          <p className="eyebrow">Soluções online</p>
+          <h1>Soluções digitais e caminhos de atendimento</h1>
+          <p className="lede">
             Algumas soluções são simples e seguem direto para contratação online. Outras pedem objetivo, cobertura, prazo ou uso, e a Plan10 ajuda a escolher o melhor caminho antes de decidir.
           </p>
         </div>
       </header>
 
-      <div className="solp-body">
+      <div className="sec">
+        <div className="wrap">
         <div className="solp-filters" role="group" aria-label="Filtrar por necessidade">
           {["Todas", ...categoriasOnline].map((c) => (
             <button key={c} type="button" className="solp-chip" aria-pressed={cat === c} onClick={() => setCat(c)}>{c}</button>
@@ -106,7 +99,8 @@ function SolucoesOnlinePage() {
             </div>
           </section>
         ))}
+        </div>
       </div>
-    </div>
+    </PageTheme>
   );
 }
