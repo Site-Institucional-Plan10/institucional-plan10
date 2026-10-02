@@ -3,7 +3,6 @@ import { MessageCircle, Shield, Heart, Building2, Landmark, Clock } from "lucide
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { ParceirosStrip } from "@/components/home/ParceirosStrip";
-import { ImageSlot } from "@/components/plan10/ImageSlot";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { canonical } from "@/lib/seo";
@@ -194,13 +193,6 @@ function QuemSomos() {
               Cada frente da Plan10 é conduzida por uma célula de consultores com formação técnica
               específica e anos de experiência no mercado.
             </p>
-          </div>
-          <div style={{ marginBottom: 40 }}>
-            <ImageSlot
-              ratio="21 / 9"
-              label="Foto da equipe Plan10"
-              hint="Time real, tom humano e profissional. Ambiente de escritório ou retrato do grupo."
-            />
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {teamCells.map(({ Icon, color, area, description }) => (

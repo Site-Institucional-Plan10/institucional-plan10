@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { blogArticles, blogCategoryFor } from "@/data/blogArticles";
 import { canonical } from "@/lib/seo";
 import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
+import { fotoDoArtigo } from "@/lib/blogImagery";
 
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
@@ -76,6 +77,7 @@ function BlogArticlePage() {
   if (!article) return <Navigate to="/blog" />;
 
   const cat = blogCategoryFor(article.category);
+  const foto = fotoDoArtigo(article.slug);
   const related = blogArticles.filter((a) => a.category === article.category && a.slug !== article.slug).slice(0, 3);
 
   // Bloco de produto: primeira linha é o título, o restante é corpo.
@@ -115,6 +117,17 @@ function BlogArticlePage() {
           <p style={{ fontSize: "1.2rem", lineHeight: 1.5, color: "#5A5A5A", margin: "0 0 18px", fontFamily: "var(--font-sans)", fontStyle: "italic" }}>
             {article.dek}
           </p>
+        )}
+
+        {foto && (
+          <figure style={{ margin: "0 0 26px", borderRadius: 10, overflow: "hidden", border: "1px solid var(--c2)" }}>
+            <img
+              src={foto.src}
+              alt={foto.alt}
+              loading="eager"
+              style={{ display: "block", width: "100%", aspectRatio: "16 / 9", objectFit: "cover" }}
+            />
+          </figure>
         )}
         <p className="text-sm text-neutral-500 mb-8">{article.date} · {article.readingTime} de leitura</p>
 

@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import { blogArticles, blogCategories, blogCategoryFor } from "@/data/blogArticles";
 import { canonical } from "@/lib/seo";
 import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
+import { fotoDoArtigo } from "@/lib/blogImagery";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -28,6 +29,12 @@ function BlogPage() {
 
   return (
     <PageTheme palette={PALETTES.institucional}>
+      <style>{`
+        .plan10-scope .blog-capa { aspect-ratio: 16 / 9; background: var(--vs); border-bottom: 1px solid var(--c2); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .plan10-scope .blog-capa img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s cubic-bezier(.2,.7,.3,1); }
+        .plan10-scope article:hover .blog-capa img { transform: scale(1.04); }
+        .plan10-scope .blog-capa-selo { font-family: var(--fl); letter-spacing: .22em; text-transform: uppercase; font-size: .62rem; color: var(--gold); }
+      `}</style>
       <header className="p10-hero">
         <div className="p10-hero-inner">
           <p className="eyebrow">Conteúdo Plan10</p>
@@ -74,21 +81,15 @@ function BlogPage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filtered.map((article) => {
                 const cat = blogCategoryFor(article.category);
+                const foto = fotoDoArtigo(article.slug);
                 return (
-                  <article key={article.slug} className="rounded-[5px] border bg-white overflow-hidden transition flex flex-col hover:border-[#143A61]" style={{ borderColor: "#E6E1D6" }}>
-                    <div
-                      style={{
-                        aspectRatio: "16 / 9",
-                        background: "#EFEBE3",
-                        borderBottom: "1px solid #E6E1D6",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".62rem", color: "#C9A83C" }}>
-                        Plan10
-                      </span>
+                  <article key={article.slug} className="rounded-[5px] border bg-white overflow-hidden transition flex flex-col hover:border-[#143A61]" style={{ borderColor: "var(--c2)" }}>
+                    <div className="blog-capa">
+                      {foto ? (
+                        <img src={foto.src} alt={foto.alt} loading="lazy" decoding="async" />
+                      ) : (
+                        <span className="blog-capa-selo">Plan10</span>
+                      )}
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
                       <div className="flex flex-wrap items-center gap-2 mb-3">
