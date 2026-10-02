@@ -40,7 +40,7 @@ function SolucaoPage() {
   // Financeiro tem imagens temáticas próprias; as demais soluções seguem o pool.
   const heroImg = solucao.slug === "financeiras" ? FIN_HUB.hero : heroSolucao(solucao.slug);
   const ctxImg =
-    solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src);
+    solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src, solucao.slug);
   // No financeiro, ordena por relevância comercial (crédito e financiamentos primeiro).
   const FIN_ORDER = [
     "credito-e-liquidez",

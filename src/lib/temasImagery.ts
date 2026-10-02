@@ -61,6 +61,10 @@ export function fotoDoTema(chave: string): CuratedImage | null {
  * É sempre outro ângulo do mesmo assunto do banner, nunca a mesma cena.
  */
 const CONTEXTOS: Record<string, CuratedImage> = {
+  saude: { src: T + "ctx-hub-saude.jpg", alt: "Halteres alinhados no suporte da academia" },
+  protecao: { src: T + "ctx-hub-protecao.jpg", alt: "Casa residencial ao entardecer, com as janelas acesas" },
+  crescimento: { src: T + "ctx-hub-crescimento.jpg", alt: "Prédio em obra com guindaste de torre" },
+  assistencia: { src: T + "ctx-hub-assistencia.jpg", alt: "Central de atendimento com estações e headsets" },
   "protecao/patrimonio-e-alto-valor": { src: T + "ctx-prot-patrimonio.jpg", alt: "Piano de cauda em sala clara de pé-direito alto" },
   "protecao/responsabilidade-civil": { src: T + "ctx-prot-responsabilidade-civil.jpg", alt: "Pasta fechada com caneta sobre a mesa de reunião" },
   "saude/saude-e-acesso-medico": { src: T + "ctx-saude-acesso-medico.jpg", alt: "Maca de exame em sala branca, com gaveteiro ao lado" },
