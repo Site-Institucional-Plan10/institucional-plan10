@@ -35,7 +35,9 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+// O tipo de `error` virou unknown no router 1.170, então a tipagem acompanha a
+// da biblioteca em vez de prometer um Error que ela não garante.
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   return (
