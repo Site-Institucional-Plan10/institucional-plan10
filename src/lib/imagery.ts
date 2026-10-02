@@ -17,6 +17,8 @@
  * repetição volta, mas só entre itens distantes na lista, nunca vizinhos.
  */
 
+import { fotoDoTema } from "./temasImagery";
+
 export interface CuratedImage {
   src: string;
   alt: string;
@@ -135,14 +137,22 @@ export function pickByOrder(
   return pool[base];
 }
 
-/** Hero da página de solução. Sempre a primeira foto do pool daquele tema. */
+/**
+ * Hero da página de solução. A foto do assunto manda; o pool de clima só
+ * aparece onde ainda não houver foto de assunto.
+ */
 export function heroSolucao(solucaoSlug: string): CuratedImage {
-  return pickByOrder(solucaoSlug, 0);
+  return fotoDoTema(solucaoSlug) ?? pickByOrder(solucaoSlug, 0);
 }
 
-/** Hero da página de categoria (modalidades), variando por posição da categoria. */
-export function heroCategoria(solucaoSlug: string, ordemCategoria: number): CuratedImage {
-  return pickByOrder(solucaoSlug, ordemCategoria, 1);
+/** Hero da página de categoria, pelo assunto da categoria. */
+export function heroCategoria(
+  solucaoSlug: string,
+  ordemCategoria: number,
+  categoriaSlug?: string,
+): CuratedImage {
+  const doTema = categoriaSlug ? fotoDoTema(`${solucaoSlug}/${categoriaSlug}`) : null;
+  return doTema ?? pickByOrder(solucaoSlug, ordemCategoria, 1);
 }
 
 /** Hero da página de produto, variando por posição dentro da categoria. */

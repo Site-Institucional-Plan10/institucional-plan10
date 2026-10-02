@@ -59,7 +59,7 @@ function CategoriaPage() {
     s.categorias.findIndex((x) => x.slug === c.slug),
   );
   const finImgs = s.slug === "financeiras" ? finCategoriaImgs(c.slug) : null;
-  const heroImg = finImgs?.hero ?? heroCategoria(s.slug, iCat);
+  const heroImg = finImgs?.hero ?? heroCategoria(s.slug, iCat, c.slug);
   const ctxImg = finImgs?.ctx ?? contextoDe(s.slug, iCat, heroImg.src);
 
   // O catálogo só traz FAQ por produto. Aqui ele é resumido no nível da

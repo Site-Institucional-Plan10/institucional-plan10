@@ -103,7 +103,7 @@ function NucleoPage() {
   // Recalculo as duas fotos do pai e as bloqueio no hero e no contexto do filho,
   // então as quatro imagens das duas telas são sempre distintas.
   const finImgs = s.slug === "financeiras" ? finNucleoImgs(c.slug, n.slug) : null;
-  const catHero = heroCategoria(s.slug, iCat);
+  const catHero = heroCategoria(s.slug, iCat, c.slug);
   const catCtx = contextoDe(s.slug, iCat, catHero.src);
   const hero = finImgs?.hero ?? heroNucleo(s.slug, iCat, iNuc, [catHero.src, catCtx.src]);
   const ctx =
