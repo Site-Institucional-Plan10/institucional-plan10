@@ -50,6 +50,11 @@ const IMG = {
   rural: { src: C + "fin-rural.jpg", alt: "Colheitadeira em lavoura de trigo" },
   boat: { src: C + "home-veleiro.jpg", alt: "Marina com veleiros ancorados" },
   // Abstratas premium já existentes
+  cofre: { src: "/assets/temas/fin-cofre.jpg", alt: "Portas de cofre de aço embutidas na parede" },
+  graficoLupa: {
+    src: "/assets/temas/fin-grafico-lupa.jpg",
+    alt: "Gráficos de mercado impressos, com lupa e marca-texto sobre a mesa",
+  },
   glass: { src: C + "fin-vidro.jpg", alt: "Fachada espelhada de um edifício corporativo" },
   folder: { src: C + "fin-documentos.jpg", alt: "Carteira de couro azul com caderno e caneta" },
   bluetex: { src: C + "fin-azul-hero.jpg", alt: "Textura azul profunda em movimento" },
@@ -70,20 +75,30 @@ interface Quad {
 // Por categoria: hero (fundo atmosférico sob camada escura) + contexto (a foto
 // nítida e visível, que carrega o tema) da MODALIDADE, mais hero e contexto da
 // página de PRODUTO. A imagem mais clara do tema fica sempre no contexto.
+/**
+ * O banner abre com o assunto, não com o clima.
+ *
+ * Antes era o contrário: o hero de cada modalidade financeira trazia textura
+ * azul, fachada de vidro ou carteira de couro, e as fotos que de fato mostram o
+ * assunto (calculadora, chaves, pote de moedas, assinatura, relatório, cartão)
+ * ficavam no bloco de contexto, no meio da página. Hero e contexto foram
+ * trocados de lugar, e os dois contextos que sobravam em textura ganharam foto
+ * própria: cofre em capitalização e gráfico com lupa em investimentos.
+ */
 const CATEGORIA: Record<string, Quad> = {
-  "credito-e-liquidez": { hero: IMG.folder, ctx: IMG.calc, nucHero: IMG.docs, nucCtx: IMG.bluetex },
-  financiamentos: { hero: IMG.glass, ctx: IMG.keys, nucHero: IMG.apt, nucCtx: IMG.folder },
-  capitalizacao: { hero: IMG.bluetex, ctx: IMG.jar, nucHero: IMG.chart, nucCtx: IMG.report },
-  "garantias-financeiras": { hero: IMG.docs, ctx: IMG.sign, nucHero: IMG.policy, nucCtx: IMG.apt },
+  "credito-e-liquidez": { hero: IMG.calc, ctx: IMG.folder, nucHero: IMG.docs, nucCtx: IMG.bluetex },
+  financiamentos: { hero: IMG.keys, ctx: IMG.glass, nucHero: IMG.apt, nucCtx: IMG.folder },
+  capitalizacao: { hero: IMG.jar, ctx: IMG.cofre, nucHero: IMG.chart, nucCtx: IMG.report },
+  "garantias-financeiras": { hero: IMG.sign, ctx: IMG.docs, nucHero: IMG.policy, nucCtx: IMG.apt },
   "investimentos-previdencia-e-reservas": {
-    hero: IMG.bluetex,
-    ctx: IMG.report,
+    hero: IMG.report,
+    ctx: IMG.graficoLupa,
     nucHero: IMG.chart,
     nucCtx: IMG.hourglass,
   },
   "servicos-financeiros-e-contas": {
-    hero: IMG.folder,
-    ctx: IMG.card,
+    hero: IMG.card,
+    ctx: IMG.folder,
     nucHero: IMG.mobile,
     nucCtx: IMG.toll,
   },

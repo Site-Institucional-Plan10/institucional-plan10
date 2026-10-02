@@ -92,6 +92,10 @@ export interface Foto {
 const B = "/assets/blog/";
 
 const FOTOS: Record<string, Foto> = {
+  "blog-garantias-contrato": {
+    src: "/assets/temas/prot-garantias.jpg",
+    alt: "Mão assinando um contrato na linha da assinatura",
+  },
   "blog-geracoes": { src: B + "blog-geracoes.jpg", alt: "Família caminhando de costas em um parque, com uma cesta de piquenique" },
   "blog-sucessao": { src: B + "blog-sucessao.jpg", alt: "Mãos de uma pessoa idosa assinando um documento sobre a mesa" },
   "blog-patrimonio-estrutura": { src: B + "blog-patrimonio-estrutura.jpg", alt: "Residência contemporânea de madeira e pedra com gramado amplo" },

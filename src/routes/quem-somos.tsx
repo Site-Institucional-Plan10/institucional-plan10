@@ -72,7 +72,14 @@ const teamCells = [
 function QuemSomos() {
   return (
     <PageTheme palette={PALETTES.institucional}>
-      <header className="p10-hero">
+      <header className="p10-hero has-img">
+        <div className="p10-hero-bg" aria-hidden>
+          <img
+            src="/assets/temas/quem-somos-time.jpg"
+            alt=""
+            loading="eager"
+          />
+        </div>
         <div className="p10-hero-inner">
           <p className="eyebrow">Sobre a Plan10</p>
           <h1>Cuidar do que importa.</h1>
