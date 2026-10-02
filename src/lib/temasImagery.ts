@@ -55,3 +55,41 @@ const TEMAS: Record<string, CuratedImage> = {
 export function fotoDoTema(chave: string): CuratedImage | null {
   return TEMAS[chave] ?? null;
 }
+
+/**
+ * Imagem de apoio no corpo da página de categoria, no bloco "Como escolher".
+ * É sempre outro ângulo do mesmo assunto do banner, nunca a mesma cena.
+ */
+const CONTEXTOS: Record<string, CuratedImage> = {
+  "protecao/patrimonio-e-alto-valor": { src: T + "ctx-prot-patrimonio.jpg", alt: "Piano de cauda em sala clara de pé-direito alto" },
+  "protecao/responsabilidade-civil": { src: T + "ctx-prot-responsabilidade-civil.jpg", alt: "Pasta fechada com caneta sobre a mesa de reunião" },
+  "saude/saude-e-acesso-medico": { src: T + "ctx-saude-acesso-medico.jpg", alt: "Maca de exame em sala branca, com gaveteiro ao lado" },
+  "assistencia/ambientes-manutencao-e-bem-estar": { src: T + "ctx-assist-ambientes.jpg", alt: "Mãos de encanador apertando tubulação sob a laje" },
+  "assistencia/mobilidade-assistida": { src: T + "ctx-assist-mobilidade.jpg", alt: "Andadores com rodas parados na grama de um parque" },
+  "assistencia/nauticos-e-aeronauticos": { src: T + "ctx-assist-nautico-aereo.jpg", alt: "Hélice e nariz de aeronave dentro do hangar" },
+  "assistencia/seguranca-e-conectividade": { src: T + "ctx-assist-seguranca.jpg", alt: "Patch panel com cabos de fibra conectados" },
+  "assistencia/viagens-beneficios-e-concierge": { src: T + "ctx-assist-viagens.jpg", alt: "Corredor de hotel com carrinho de bagagem ao fundo" },
+  "crescimento/bens-de-valor-e-tecnologia": { src: T + "ctx-cresc-bens-tecnologia.jpg", alt: "Faders e botões de uma mesa de som profissional" },
+  "crescimento/eventos-educacao-e-experiencias": { src: T + "ctx-cresc-eventos-educacao.jpg", alt: "Plateia de costas em auditório, com o palco ao fundo" },
+  "crescimento/imoveis-e-expansao-patrimonial": { src: T + "ctx-cresc-imoveis.jpg", alt: "Fachada de prédio residencial contemporâneo com sacadas de vidro" },
+  "crescimento/maquinas-e-equipamentos": { src: T + "ctx-cresc-maquinas.jpg", alt: "Lanças de guindaste de treliça vistas de baixo" },
+  "crescimento/nauticos-e-aeronauticos": { src: T + "ctx-cresc-nautico-aereo.jpg", alt: "Iate a motor navegando, visto de cima" },
+  "crescimento/veiculos-e-frotas": { src: T + "ctx-cresc-veiculos.jpg", alt: "Fila de carros zero no pátio, vistos ao nível do chão" },
+  "protecao/agronegocio-e-campo": { src: T + "ctx-prot-agro.jpg", alt: "Pivô de irrigação molhando a lavoura" },
+  "protecao/garantias-e-contratos": { src: T + "ctx-prot-garantias.jpg", alt: "Pastas de arquivo lotadas de documentos sobre a mesa" },
+  "protecao/grandes-riscos": { src: T + "ctx-prot-grandes-riscos.jpg", alt: "Tanques industriais com passarelas e tubulação" },
+  "protecao/logistica-e-transporte": { src: T + "ctx-prot-logistica.jpg", alt: "Carreta de carga na rodovia, vista por trás" },
+  "protecao/nauticos-e-aeronauticos": { src: T + "ctx-prot-nautico-aereo.jpg", alt: "Timão e console de um veleiro, com o mar ao fundo" },
+  "protecao/renda-protegida": { src: T + "ctx-prot-renda.jpg", alt: "Mãos de marceneiro aplainando uma peça de madeira" },
+  "protecao/veiculos-e-frotas": { src: T + "ctx-prot-veiculos.jpg", alt: "Painel e volante vistos do banco do motorista" },
+  "protecao/viagem": { src: T + "ctx-prot-viagem.jpg", alt: "Asa de avião sobre o mar de nuvens" },
+  "protecao/vida": { src: T + "ctx-prot-vida.jpg", alt: "Adulto e criança de mãos dadas, de costas, caminhando no parque" },
+  "saude/bem-estar-e-qualidade-de-vida": { src: T + "ctx-saude-bem-estar.jpg", alt: "Pés descalços sobre um tapete de yoga" },
+  "saude/odontologia": { src: T + "ctx-saude-odontologia.jpg", alt: "Cadeira odontológica em consultório vazio" },
+  "saude/saude-animal": { src: T + "ctx-saude-animal.jpg", alt: "Mão acolhendo um gato sobre a mesa de atendimento" },
+  "saude/saude-corporativa": { src: T + "ctx-saude-corporativa.jpg", alt: "Aferição de pressão arterial sobre a mesa" },
+};
+
+export function fotoDeContexto(chave: string): CuratedImage | null {
+  return CONTEXTOS[chave] ?? null;
+}

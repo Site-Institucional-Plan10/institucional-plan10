@@ -50,6 +50,12 @@ const IMG = {
   rural: { src: C + "fin-rural.jpg", alt: "Colheitadeira em lavoura de trigo" },
   boat: { src: C + "home-veleiro.jpg", alt: "Marina com veleiros ancorados" },
   // Abstratas premium já existentes
+  calcMesa: { src: "/assets/temas/fin-ctx-credito.jpg", alt: "Calculadora sobre caderno pautado ao lado do notebook" },
+  maqueteChaves: {
+    src: "/assets/temas/fin-ctx-financiamento.jpg",
+    alt: "Maquete de casa em madeira com chaves sobre o contrato",
+  },
+  maquininha: { src: "/assets/temas/fin-ctx-contas.jpg", alt: "Cartão aproximado da maquininha, visto de cima" },
   cofre: { src: "/assets/temas/fin-cofre.jpg", alt: "Portas de cofre de aço embutidas na parede" },
   graficoLupa: {
     src: "/assets/temas/fin-grafico-lupa.jpg",
@@ -86,8 +92,8 @@ interface Quad {
  * própria: cofre em capitalização e gráfico com lupa em investimentos.
  */
 const CATEGORIA: Record<string, Quad> = {
-  "credito-e-liquidez": { hero: IMG.calc, ctx: IMG.folder, nucHero: IMG.docs, nucCtx: IMG.bluetex },
-  financiamentos: { hero: IMG.keys, ctx: IMG.glass, nucHero: IMG.apt, nucCtx: IMG.folder },
+  "credito-e-liquidez": { hero: IMG.calc, ctx: IMG.calcMesa, nucHero: IMG.docs, nucCtx: IMG.bluetex },
+  financiamentos: { hero: IMG.keys, ctx: IMG.maqueteChaves, nucHero: IMG.apt, nucCtx: IMG.folder },
   capitalizacao: { hero: IMG.jar, ctx: IMG.cofre, nucHero: IMG.chart, nucCtx: IMG.report },
   "garantias-financeiras": { hero: IMG.sign, ctx: IMG.docs, nucHero: IMG.policy, nucCtx: IMG.apt },
   "investimentos-previdencia-e-reservas": {
@@ -98,7 +104,7 @@ const CATEGORIA: Record<string, Quad> = {
   },
   "servicos-financeiros-e-contas": {
     hero: IMG.card,
-    ctx: IMG.folder,
+    ctx: IMG.maquininha,
     nucHero: IMG.mobile,
     nucCtx: IMG.toll,
   },
@@ -120,7 +126,14 @@ const NUCLEO: Record<string, { hero: CuratedImage; ctx: CuratedImage }> = {
 };
 
 /** Hub /solucoes/financeiras. */
-export const FIN_HUB = { hero: IMG.glass, ctx: IMG.docs };
+/**
+ * O hub financeiro é o único banner do site que segue em arquitetura em vez de
+ * objeto. É escolha: nenhum objeto isolado representa um hub que cobre crédito,
+ * financiamento, garantias, investimentos e contas, e fachada corporativa é o
+ * retrato padrão do setor. O contexto usa cartões, para não repetir o relatório
+ * que já abre Garantias financeiras.
+ */
+export const FIN_HUB = { hero: IMG.glass, ctx: IMG.cardsGold };
 
 /** Modalidade (categoria) financeira: hero + contexto que comunicam o tema. */
 export function finCategoriaImgs(

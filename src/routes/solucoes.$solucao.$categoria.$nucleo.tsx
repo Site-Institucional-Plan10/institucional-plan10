@@ -104,7 +104,7 @@ function NucleoPage() {
   // então as quatro imagens das duas telas são sempre distintas.
   const finImgs = s.slug === "financeiras" ? finNucleoImgs(c.slug, n.slug) : null;
   const catHero = heroCategoria(s.slug, iCat, c.slug);
-  const catCtx = contextoDe(s.slug, iCat, catHero.src);
+  const catCtx = contextoDe(s.slug, iCat, catHero.src, `${s.slug}/${c.slug}`);
   const hero = finImgs?.hero ?? heroNucleo(s.slug, iCat, iNuc, [catHero.src, catCtx.src]);
   const ctx =
     finImgs?.ctx ?? pickByOrder(s.slug, iCat + iNuc, 3, [catHero.src, catCtx.src, hero.src]);

@@ -17,7 +17,7 @@
  * repetição volta, mas só entre itens distantes na lista, nunca vizinhos.
  */
 
-import { fotoDoTema } from "./temasImagery";
+import { fotoDoTema, fotoDeContexto } from "./temasImagery";
 
 export interface CuratedImage {
   src: string;
@@ -170,6 +170,8 @@ export function contextoDe(
   solucaoSlug: string,
   ordem: number,
   heroSrc: string,
+  chave?: string,
 ): CuratedImage {
-  return pickByOrder(solucaoSlug, ordem, 3, [heroSrc]);
+  const doTema = chave ? fotoDeContexto(chave) : null;
+  return doTema ?? pickByOrder(solucaoSlug, ordem, 3, [heroSrc]);
 }

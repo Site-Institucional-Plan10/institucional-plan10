@@ -60,7 +60,7 @@ function CategoriaPage() {
   );
   const finImgs = s.slug === "financeiras" ? finCategoriaImgs(c.slug) : null;
   const heroImg = finImgs?.hero ?? heroCategoria(s.slug, iCat, c.slug);
-  const ctxImg = finImgs?.ctx ?? contextoDe(s.slug, iCat, heroImg.src);
+  const ctxImg = finImgs?.ctx ?? contextoDe(s.slug, iCat, heroImg.src, `${s.slug}/${c.slug}`);
 
   // O catálogo só traz FAQ por produto. Aqui ele é resumido no nível da
   // categoria, para as páginas que não têm FAQ consultivo próprio.
