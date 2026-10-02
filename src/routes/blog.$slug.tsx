@@ -131,13 +131,6 @@ function BlogArticlePage() {
         )}
         <p className="text-sm text-neutral-500 mb-8">{article.date} · {article.readingTime} de leitura</p>
 
-        <div
-          className="rounded-[5px] mb-10"
-          style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid var(--c2)", display: "flex", alignItems: "center", justifyContent: "center" }}
-        >
-          <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: "0.74rem", color: "#C9A83C" }}>Plan10</span>
-        </div>
-
         {article.keyTakeaway && (
           <aside
             style={{ background: "#fff", border: "1px solid var(--c2)", borderLeft: `3px solid ${cat.color}`, borderRadius: 5, padding: "20px 24px", margin: "0 0 32px" }}
