@@ -110,10 +110,7 @@ const FOTOS: Record<string, Foto> = {
   "blog-adiar-decisoes": { src: B + "blog-adiar-decisoes.jpg", alt: "Torneira cromada pingando, com a gota prestes a cair" },
   "blog-prevencao-bens-alto-valor": { src: B + "blog-prevencao-bens-alto-valor.jpg", alt: "Corredor de adega com estantes cheias até o teto" },
   "blog-byd-recorde": { src: B + "blog-byd-recorde.jpg", alt: "Carros elétricos em vagas de garagem, com carregadores de parede" },
-  "blog-garantias-contrato": {
-    src: "/assets/temas/prot-garantias.jpg",
-    alt: "Mão assinando um contrato na linha da assinatura",
-  },
+  "blog-garantias-contrato": { src: B + "blog-garantias-contrato.jpg", alt: "Carimbo de lacre sobre papel, com o selo de cera já impresso ao lado" },
   "blog-geracoes": { src: B + "blog-geracoes.jpg", alt: "Família caminhando de costas em um parque, com uma cesta de piquenique" },
   "blog-sucessao": { src: B + "blog-sucessao.jpg", alt: "Mãos de uma pessoa idosa assinando um documento sobre a mesa" },
   "blog-patrimonio-estrutura": { src: B + "blog-patrimonio-estrutura.jpg", alt: "Residência contemporânea de madeira e pedra com gramado amplo" },

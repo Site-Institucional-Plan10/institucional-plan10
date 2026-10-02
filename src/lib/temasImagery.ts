@@ -28,7 +28,7 @@ const TEMAS: Record<string, CuratedImage> = {
   "assistencia/nauticos-e-aeronauticos": { src: T + "assist-nautico-aereo.jpg", alt: "Marina com veleiros atracados" },
   "assistencia/seguranca-e-conectividade": { src: T + "assist-seguranca.jpg", alt: "Câmera de segurança instalada no forro" },
   "assistencia/viagens-beneficios-e-concierge": { src: T + "assist-viagens.jpg", alt: "Terminal de aeroporto moderno com fachada de vidro" },
-  "crescimento/bens-de-valor-e-tecnologia": { src: "/assets/blog/blog-sistema-financeiro.jpg", alt: "Corredor de data center com racks de servidores" },
+  "crescimento/bens-de-valor-e-tecnologia": { src: T + "cresc-bens-tecnologia.jpg", alt: "Bancada de relojoeiro com mecanismo aberto, lupa de precisão e pinças" },
   "crescimento/eventos-educacao-e-experiencias": { src: T + "cresc-eventos-educacao.jpg", alt: "Auditório amplo com fileiras de cadeiras" },
   "crescimento/imoveis-e-expansao-patrimonial": { src: T + "cresc-imoveis.jpg", alt: "Casa contemporânea de alto padrão vista do portão" },
   "crescimento/maquinas-e-equipamentos": { src: T + "cresc-maquinas.jpg", alt: "Pá carregadeira movimentando terra" },
