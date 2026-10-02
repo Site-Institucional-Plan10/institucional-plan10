@@ -83,7 +83,7 @@ export function VerticalCards() {
                   <div style={{ display: "flex", flexDirection: "column", gap: 2, minWidth: 0 }}>
                     <p
                       style={{
-                        fontSize: "0.6rem",
+                        fontSize: "0.66rem",
                         fontWeight: 700,
                         color: v.hubColor,
                         textTransform: "uppercase",
@@ -113,7 +113,7 @@ export function VerticalCards() {
 
                 <p
                   style={{
-                    fontSize: "0.78rem",
+                    fontSize: "0.84rem",
                     color: "#666666",
                     lineHeight: 1.55,
                     margin: 0,
@@ -125,7 +125,7 @@ export function VerticalCards() {
 
                 <span
                   style={{
-                    fontSize: "0.78rem",
+                    fontSize: "0.84rem",
                     fontWeight: 700,
                     color: v.hubColor,
                     display: "flex",

@@ -155,7 +155,7 @@ function QuemSomos() {
                 style={{
                   color: "#C45016",
                   letterSpacing: "0.12em",
-                  fontSize: "0.72rem",
+                  fontSize: "0.78rem",
                   fontWeight: 700,
                 }}
               >
@@ -172,7 +172,7 @@ function QuemSomos() {
                         color: "#C94D17",
                         padding: "4px 12px",
                         borderRadius: 999,
-                        fontSize: "0.75rem",
+                        fontSize: "0.81rem",
                         fontWeight: 600,
                       }}
                     >
@@ -231,7 +231,7 @@ function QuemSomos() {
                     fontFamily: "var(--font-sans)",
                     fontWeight: 400,
                     color: "#666666",
-                    fontSize: "0.875rem",
+                    fontSize: "0.94rem",
                     lineHeight: 1.7,
                   }}
                 >
@@ -257,7 +257,7 @@ function QuemSomos() {
             style={{
               color: "rgba(255,255,255,0.45)",
               letterSpacing: "0.14em",
-              fontSize: "0.72rem",
+              fontSize: "0.78rem",
               fontWeight: 700,
             }}
           >

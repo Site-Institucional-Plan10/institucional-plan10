@@ -51,11 +51,11 @@ function ModelPage() {
         </Link>
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: "#8A8172" }}>
+          <span style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: "0.8rem", color: "#8A8172" }}>
             {m.make}
           </span>
           {m.seloAltoValor && (
-            <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: ".64rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 9px" }}>
+            <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: "0.7rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 9px" }}>
               Alto padrão
             </span>
           )}
@@ -70,11 +70,11 @@ function ModelPage() {
           className="rounded-[5px] mb-8"
           style={{ aspectRatio: "16 / 9", background: "#EFEBE3", border: "1px solid var(--c2)", display: "flex", alignItems: "center", justifyContent: "center" }}
         >
-          <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: ".68rem", color: GOLD }}>Plan10</span>
+          <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".22em", textTransform: "uppercase", fontSize: "0.74rem", color: GOLD }}>Plan10</span>
         </div>
 
         <aside style={{ background: "#fff", border: "1px solid var(--c2)", borderLeft: `3px solid ${NAVY}`, borderRadius: 5, padding: "18px 22px", margin: "0 0 30px" }}>
-          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".72rem", color: NAVY, margin: "0 0 8px" }}>
+          <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: "0.78rem", color: NAVY, margin: "0 0 8px" }}>
             Ficha rápida
           </p>
           <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#333", margin: 0 }}>{m.fichaRapida}</p>
@@ -87,7 +87,7 @@ function ModelPage() {
         <div className="grid gap-4 sm:grid-cols-2" style={{ margin: "32px 0 0" }}>
           {m.blocoProtecao && (
             <section style={{ background: "#fff", border: "1px solid var(--c2)", borderRadius: 6, padding: "20px 22px" }}>
-              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#2B6CB0", margin: "0 0 8px" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: "0.76rem", color: "#2B6CB0", margin: "0 0 8px" }}>
                 Proteção do bem
               </p>
               <p style={{ fontSize: ".95rem", lineHeight: 1.65, color: "#444", margin: 0 }}>{m.blocoProtecao}</p>
@@ -95,7 +95,7 @@ function ModelPage() {
           )}
           {m.blocoAquisicao && (
             <section style={{ background: "#fff", border: "1px solid var(--c2)", borderRadius: 6, padding: "20px 22px" }}>
-              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: ".7rem", color: "#7B5BB5", margin: "0 0 8px" }}>
+              <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".14em", textTransform: "uppercase", fontSize: "0.76rem", color: "#7B5BB5", margin: "0 0 8px" }}>
                 Aquisição
               </p>
               <p style={{ fontSize: ".95rem", lineHeight: 1.65, color: "#444", margin: 0 }}>{m.blocoAquisicao}</p>
@@ -117,7 +117,7 @@ function ModelPage() {
 
         {related.length > 0 && (
           <section style={{ marginTop: 48, borderTop: "1px solid var(--c2)", paddingTop: 28 }}>
-            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: ".74rem", color: NAVY, margin: "0 0 16px" }}>
+            <p style={{ fontFamily: "var(--font-sans)", fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", fontSize: "0.8rem", color: NAVY, margin: "0 0 16px" }}>
               Mais da {m.make}
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
@@ -129,7 +129,7 @@ function ModelPage() {
                   style={{ display: "block", background: "#fff", border: "1px solid var(--c2)", borderRadius: 5, padding: "14px 16px", textDecoration: "none" }}
                 >
                   <span style={{ fontFamily: "var(--font-sans)", fontWeight: 500, fontSize: "1rem", color: NAVY, display: "block" }}>{r.model}</span>
-                  <span style={{ fontSize: ".8rem", color: "#777", display: "block", marginTop: 4 }}>{r.segment}</span>
+                  <span style={{ fontSize: "0.86rem", color: "#777", display: "block", marginTop: 4 }}>{r.segment}</span>
                 </Link>
               ))}
             </div>

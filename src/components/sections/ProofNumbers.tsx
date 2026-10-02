@@ -106,7 +106,7 @@ export function ProofNumbers({ compact = false }: { compact?: boolean }) {
           <div className="text-center mb-10">
             <div
               style={{
-                fontSize: "0.7rem",
+                fontSize: "0.76rem",
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
                 fontWeight: 600,
@@ -158,7 +158,7 @@ export function ProofNumbers({ compact = false }: { compact?: boolean }) {
                 <div
                   className="mt-3"
                   style={{
-                    fontSize: "0.8rem",
+                    fontSize: "0.86rem",
                     fontWeight: 600,
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",

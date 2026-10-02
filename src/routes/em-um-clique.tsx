@@ -129,11 +129,11 @@ function EmUmClique() {
         
         .euc-search { max-width: 640px; margin: 12px 0 0; display: flex; gap: 10px; background: #fff; padding: 7px; border-radius: 999px; }
         .euc-search input { flex: 1; border: 0; background: transparent; padding: 13px 20px; font-size: 1rem; outline: 0; color: #1A1A1A; }
-        .euc-search .ico { display: grid; place-items: center; padding: 0 22px; border-radius: 999px; background: var(--gold); color: var(--preto); font-family: var(--font-sans); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .85rem; }
+        .euc-search .ico { display: grid; place-items: center; padding: 0 22px; border-radius: 999px; background: var(--gold); color: var(--preto); font-family: var(--font-sans); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: 0.91rem; }
         .euc-wrap { max-width: 1180px; margin: 0 auto; padding: 64px 20px; }
         @media (min-width: 768px) { .euc-wrap { padding: 88px 40px; } }
         .euc-block { margin-bottom: 56px; }
-        .euc-block > .eyebrow { font-family: var(--font-sans); font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-size: .78rem; color: var(--gold-dk, #866719); margin: 0; }
+        .euc-block > .eyebrow { font-family: var(--font-sans); font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-size: 0.84rem; color: var(--gold-dk, #866719); margin: 0; }
         .euc-block > h2 { font-family: var(--font-sans); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--preto); margin: 10px 0 22px; }
         .euc-letter { margin-bottom: 26px; }
         .euc-letter h3 { font-family: var(--font-sans); font-weight: 600; font-size: 1.5rem; color: var(--gold); border-bottom: 1px solid var(--c2); padding-bottom: 8px; margin: 0 0 14px; }
@@ -144,12 +144,12 @@ function EmUmClique() {
         .euc-item:hover { border-color: var(--preto); }
         .euc-item strong { display: block; font-family: var(--font-sans); font-weight: 500; font-size: 1.1rem; color: var(--preto); }
         .euc-item span { display: block; color: #5A5A5A; font-size: .9rem; margin-top: 5px; line-height: 1.45; }
-        .euc-item em { display: block; font-style: normal; font-family: var(--font-sans); letter-spacing: .08em; text-transform: uppercase; font-size: .7rem; color: var(--gold); margin-top: 10px; }
+        .euc-item em { display: block; font-style: normal; font-family: var(--font-sans); letter-spacing: .08em; text-transform: uppercase; font-size: 0.76rem; color: var(--gold); margin-top: 10px; }
         .euc-quick { display: grid; grid-template-columns: 1fr; gap: 12px; }
         @media (min-width: 640px) { .euc-quick { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1024px) { .euc-quick { grid-template-columns: repeat(4, 1fr); } }
         .euc-pop { display: flex; flex-wrap: wrap; gap: 8px; }
-        .euc-pop button { border: 1px solid #D8D2C6; background: #fff; border-radius: 999px; padding: 9px 16px; color: #5A5A5A; font-weight: 600; font-size: .88rem; cursor: pointer; transition: border-color .2s ease, color .2s ease; }
+        .euc-pop button { border: 1px solid #D8D2C6; background: #fff; border-radius: 999px; padding: 9px 16px; color: #5A5A5A; font-weight: 600; font-size: 0.94rem; cursor: pointer; transition: border-color .2s ease, color .2s ease; }
         .euc-pop button:hover { border-color: var(--gold); color: var(--preto); }
         .euc-help { text-align: center; background: linear-gradient(150deg, #0C2340, var(--preto)); color: #fff; border-radius: 8px; padding: 44px 24px; }
         .euc-help h2 { font-family: var(--font-sans); font-weight: 600; font-size: 1.7rem; margin: 0 0 8px; color: #fff; }

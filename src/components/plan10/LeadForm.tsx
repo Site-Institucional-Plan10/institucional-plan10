@@ -188,7 +188,7 @@ export function LeadForm({
             </span>
           </label>
           {errMsg && (
-            <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
+            <p style={{ fontFamily: "var(--fb)", fontSize: "0.94rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
           )}
           <div className="actions">
             <button type="submit" className="btn btn-primary" style={{ justifyContent: "center" }}>
@@ -230,7 +230,7 @@ export function LeadForm({
             <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} rows={3} placeholder="Conte um pouco sobre o seu momento" />
           </label>
           {errMsg && (
-            <p style={{ fontFamily: "var(--fb)", fontSize: ".88rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
+            <p style={{ fontFamily: "var(--fb)", fontSize: "0.94rem", color: "#E07840", margin: 0 }}>{errMsg}</p>
           )}
           <div className="actions">
             <button type="submit" className="btn btn-wa" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
@@ -240,7 +240,7 @@ export function LeadForm({
         </>
       )}
 
-      <p style={{ fontFamily: "var(--fb)", fontSize: ".8rem", color: "rgba(255,255,255,.6)", margin: 0, textAlign: "center" }}>
+      <p style={{ fontFamily: "var(--fb)", fontSize: "0.86rem", color: "rgba(255,255,255,.6)", margin: 0, textAlign: "center" }}>
         Suas respostas abrem uma conversa direta com um consultor. Você decide o próximo passo depois da conversa.
       </p>
     </form>

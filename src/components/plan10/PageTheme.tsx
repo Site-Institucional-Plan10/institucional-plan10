@@ -161,12 +161,12 @@ const CSS = `
 
 /* Eyebrow em mono */
 .plan10-scope .eyebrow {
-  font-family: var(--fl); font-weight: 500; font-size: .7rem;
+  font-family: var(--fl); font-weight: 500; font-size: 0.76rem;
   letter-spacing: .28em; text-transform: uppercase; margin: 0; color: #866719;
 }
 
 /* Breadcrumb */
-.plan10-scope .p10-crumb { background: var(--c1); border-bottom: 1px solid var(--c2); padding: 7px 24px; font-family: var(--fl); font-size: .62rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ctxt); overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent 100%); mask-image: linear-gradient(90deg, #000 88%, transparent 100%); }
+.plan10-scope .p10-crumb { background: var(--c1); border-bottom: 1px solid var(--c2); padding: 7px 24px; font-family: var(--fl); font-size: 0.68rem; letter-spacing: .04em; text-transform: uppercase; color: var(--ctxt); overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent 100%); mask-image: linear-gradient(90deg, #000 88%, transparent 100%); }
 .plan10-scope .p10-crumb::-webkit-scrollbar { display: none; }
 .plan10-scope .p10-crumb-inner { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: nowrap; white-space: nowrap; gap: 7px; align-items: center; }
 .plan10-scope .p10-crumb a { color: var(--ctxt); text-decoration: none; transition: color var(--t); }
@@ -190,13 +190,13 @@ const CSS = `
 .plan10-scope .sec-dark .p10-lede { color: rgba(241,239,234,.72); }
 
 /* Pills */
-.plan10-scope .pill { display: inline-flex; align-items: center; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: 6px 13px; font-family: var(--fl); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(241,239,234,.85); gap: 7px; }
+.plan10-scope .pill { display: inline-flex; align-items: center; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: 6px 13px; font-family: var(--fl); font-size: 0.72rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(241,239,234,.85); gap: 7px; }
 .plan10-scope .p10-hero .pill { color: rgba(241,239,234,.82); }
 .plan10-scope .pills { display: flex; flex-wrap: wrap; gap: 8px; max-width: 100%; }
 
 /* Toggle PF/PJ: calmo, único lugar com "Para você / Para empresa" */
 .plan10-scope .p10-toggle { display: inline-flex; width: fit-content; max-width: 100%; flex-wrap: wrap; border: 1px solid var(--c2); border-radius: 999px; overflow: hidden; background: #fff; padding: 4px; gap: 4px; }
-.plan10-scope .p10-toggle button { padding: 8px 20px; border-radius: 999px; font-family: var(--fb); font-size: .84rem; font-weight: 600; color: var(--ctxt); background: transparent; border: 0; cursor: pointer; transition: background var(--t), color var(--t); }
+.plan10-scope .p10-toggle button { padding: 8px 20px; border-radius: 999px; font-family: var(--fb); font-size: 0.9rem; font-weight: 600; color: var(--ctxt); background: transparent; border: 0; cursor: pointer; transition: background var(--t), color var(--t); }
 .plan10-scope .p10-toggle button[aria-selected="true"] { background: var(--preto); color: #F1EFEA; }
 
 /* Produtos: grade compacta de tiles (visualização rápida, sem rolagem longa) */
@@ -234,25 +234,25 @@ const CSS = `
 .plan10-scope .prod-item .prod-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
 .plan10-scope .prod-item h3 { font-family: var(--fd); font-weight: 600; font-size: 1.22rem; margin: 0; color: var(--preto); line-height: 1.2; letter-spacing: -.015em; }
 .plan10-scope .prod-item .desc { font-family: var(--fb); font-size: .95rem; line-height: 1.58; color: var(--ctxt); margin: 6px 0 0; max-width: 68ch; }
-.plan10-scope .prod-item .prod-meta { font-family: var(--fb); font-size: .84rem; color: var(--ctxt); margin: 8px 0 0; }
+.plan10-scope .prod-item .prod-meta { font-family: var(--fb); font-size: 0.9rem; color: var(--ctxt); margin: 8px 0 0; }
 .plan10-scope .prod-item .prod-meta strong { color: var(--preto); font-weight: 600; }
-.plan10-scope .prod-item ul { margin: 10px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--fb); font-size: .85rem; color: var(--ctxt); min-width: 0; }
+.plan10-scope .prod-item ul { margin: 10px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 18px; font-family: var(--fb); font-size: 0.91rem; color: var(--ctxt); min-width: 0; }
 .plan10-scope .prod-item ul li { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
 .plan10-scope .prod-item ul li::before { content: '·'; color: var(--vp); margin-right: 6px; font-weight: 700; }
 .plan10-scope .prod-item .prod-ctas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.plan10-scope .prod-cta { background: none; border: 0; cursor: pointer; padding: 0; font-family: var(--fl); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--vp); display: inline-flex; align-items: center; gap: 8px; transition: gap var(--t), color var(--t); }
+.plan10-scope .prod-cta { background: none; border: 0; cursor: pointer; padding: 0; font-family: var(--fl); font-size: 0.74rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--vp); display: inline-flex; align-items: center; gap: 8px; transition: gap var(--t), color var(--t); }
 .plan10-scope .prod-cta:hover { gap: 12px; color: var(--preto); }
 .plan10-scope .prod-cta svg { transition: transform var(--t); }
 .plan10-scope .prod-cta:hover svg { transform: translateX(2px); }
 
 .plan10-scope .prod-item .prod-faq { border-top: 1px solid var(--c2); padding-top: 12px; margin-top: 16px; }
-.plan10-scope .prod-item .prod-faq > summary { cursor: pointer; list-style: none; font-family: var(--fl); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; color: var(--vp); display: flex; align-items: center; gap: 8px; }
+.plan10-scope .prod-item .prod-faq > summary { cursor: pointer; list-style: none; font-family: var(--fl); font-size: 0.72rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; color: var(--vp); display: flex; align-items: center; gap: 8px; }
 .plan10-scope .prod-item .prod-faq > summary::-webkit-details-marker { display: none; }
 .plan10-scope .prod-item .prod-faq > summary::after { content: '+'; margin-left: auto; font-size: 1.1rem; line-height: 1; color: var(--vp); }
 .plan10-scope .prod-item .prod-faq[open] > summary::after { content: '−'; }
 .plan10-scope .prod-item .prod-faq-list { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; }
-.plan10-scope .prod-item .prod-faq-item .q { font-family: var(--fb); font-size: .88rem; font-weight: 600; color: var(--preto); margin: 0 0 4px; }
-.plan10-scope .prod-item .prod-faq-item .a { font-family: var(--fb); font-size: .86rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
+.plan10-scope .prod-item .prod-faq-item .q { font-family: var(--fb); font-size: 0.94rem; font-weight: 600; color: var(--preto); margin: 0 0 4px; }
+.plan10-scope .prod-item .prod-faq-item .a { font-family: var(--fb); font-size: 0.92rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
 .plan10-scope .prod-item h3, .plan10-scope .prod-item .desc, .plan10-scope .prod-item .prod-meta,
 .plan10-scope .prod-item .prod-faq-item .q, .plan10-scope .prod-item .prod-faq-item .a { overflow-wrap: anywhere; word-break: break-word; }
 
@@ -290,12 +290,12 @@ const CSS = `
 .plan10-scope .p10-form .actions { display: flex; flex-direction: column; gap: 10px; }
 @media (min-width: 640px) { .plan10-scope .p10-form .actions { flex-direction: row; } }
 .plan10-scope .p10-form .actions .btn { justify-content: center; flex: 1; }
-.plan10-scope .p10-form .check { display: flex; gap: 10px; align-items: flex-start; font-size: .85rem; color: rgba(241,239,234,.78); line-height: 1.5; }
+.plan10-scope .p10-form .check { display: flex; gap: 10px; align-items: flex-start; font-size: 0.91rem; color: rgba(241,239,234,.78); line-height: 1.5; }
 .plan10-scope .p10-form .check input { width: auto; margin-top: 3px; }
 .plan10-scope .p10-form .check a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .plan10-scope .p10-form .check a:hover { color: #fff; }
 .plan10-scope .p10-etapas { display: flex; align-items: center; gap: 12px; }
-.plan10-scope .p10-etapas-lbl { font-family: var(--fl); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.6); white-space: nowrap; }
+.plan10-scope .p10-etapas-lbl { font-family: var(--fl); font-size: 0.72rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.6); white-space: nowrap; }
 .plan10-scope .p10-etapas-bar { display: flex; gap: 6px; flex: 1; }
 .plan10-scope .p10-etapas-bar i { flex: 1; height: 3px; border-radius: 999px; background: rgba(255,255,255,.24); transition: background var(--t); }
 .plan10-scope .p10-etapas-bar i.on { background: var(--gold); }
@@ -320,23 +320,23 @@ const CSS = `
 .plan10-scope .p10-chooser-card h3 { font-family: var(--fd); font-weight: 600; font-size: clamp(1.15rem, 2.4vw, 1.4rem); line-height: 1.25; letter-spacing: -.015em; color: var(--preto); margin: 6px 0 0; }
 .plan10-scope .p10-chooser-desc { font-family: var(--fb); font-size: .92rem; line-height: 1.6; color: var(--ctxt); margin: 10px 0 0; }
 .plan10-scope .p10-chooser-bloco { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--c2); }
-.plan10-scope .p10-chooser-rot { font-family: var(--fl); font-weight: 500; font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: #866719; margin: 0 0 7px; }
-.plan10-scope .p10-chooser-txt { font-family: var(--fb); font-size: .88rem; line-height: 1.6; color: var(--ctxt); margin: 0; }
+.plan10-scope .p10-chooser-rot { font-family: var(--fl); font-weight: 500; font-size: 0.7rem; letter-spacing: .2em; text-transform: uppercase; color: #866719; margin: 0 0 7px; }
+.plan10-scope .p10-chooser-txt { font-family: var(--fb); font-size: 0.94rem; line-height: 1.6; color: var(--ctxt); margin: 0; }
 .plan10-scope .p10-chooser-itens { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.plan10-scope .p10-chooser-itens li { position: relative; padding-left: 16px; font-family: var(--fb); font-size: .88rem; line-height: 1.5; color: var(--ctxt); }
+.plan10-scope .p10-chooser-itens li { position: relative; padding-left: 16px; font-family: var(--fb); font-size: 0.94rem; line-height: 1.5; color: var(--ctxt); }
 .plan10-scope .p10-chooser-itens li::before { content: ""; position: absolute; left: 0; top: .55em; width: 5px; height: 5px; border-radius: 999px; background: var(--vp); }
 .plan10-scope .p10-chooser-faq { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid var(--c2); }
-.plan10-scope .p10-chooser-faq summary { cursor: pointer; font-family: var(--fb); font-weight: 600; font-size: .85rem; color: var(--preto); list-style: none; display: flex; align-items: center; gap: 8px; }
+.plan10-scope .p10-chooser-faq summary { cursor: pointer; font-family: var(--fb); font-weight: 600; font-size: 0.91rem; color: var(--preto); list-style: none; display: flex; align-items: center; gap: 8px; }
 .plan10-scope .p10-chooser-faq summary::-webkit-details-marker { display: none; }
 .plan10-scope .p10-chooser-faq summary::after { content: "+"; margin-left: auto; font-size: 1.05rem; line-height: 1; color: var(--vp); }
 .plan10-scope .p10-chooser-faq[open] summary::after { content: "−"; }
 .plan10-scope .p10-chooser-faq-item { margin-top: 12px; }
-.plan10-scope .p10-chooser-faq-item .q { font-family: var(--fb); font-weight: 600; font-size: .85rem; color: var(--preto); margin: 0 0 3px; }
-.plan10-scope .p10-chooser-faq-item .a { font-family: var(--fb); font-size: .85rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
-.plan10-scope .p10-chooser-pergunta { font-family: var(--fb); font-weight: 600; font-size: .88rem; color: var(--preto); margin: 20px 0 10px; }
+.plan10-scope .p10-chooser-faq-item .q { font-family: var(--fb); font-weight: 600; font-size: 0.91rem; color: var(--preto); margin: 0 0 3px; }
+.plan10-scope .p10-chooser-faq-item .a { font-family: var(--fb); font-size: 0.91rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
+.plan10-scope .p10-chooser-pergunta { font-family: var(--fb); font-weight: 600; font-size: 0.94rem; color: var(--preto); margin: 20px 0 10px; }
 .plan10-scope .p10-chooser-acoes { display: grid; gap: 10px; }
 .plan10-scope .p10-chooser-acoes .btn { justify-content: center; width: 100%; }
-.plan10-scope .p10-chooser-nota { font-family: var(--fb); font-size: .78rem; line-height: 1.5; color: var(--ctxt); text-align: center; margin: 14px 0 0; }
+.plan10-scope .p10-chooser-nota { font-family: var(--fb); font-size: 0.84rem; line-height: 1.5; color: var(--ctxt); text-align: center; margin: 14px 0 0; }
 .plan10-scope .p10-chooser-x { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--c2); background: #fff; color: var(--ctxt); cursor: pointer; transition: color var(--t), border-color var(--t); }
 .plan10-scope .p10-chooser-x:hover { color: var(--preto); border-color: var(--preto); }
 @keyframes p10-fade { from { opacity: 0; } to { opacity: 1; } }
@@ -345,9 +345,9 @@ const CSS = `
 
 /* Produto pre-selecionado no formulario, vindo da escolha feita no tile */
 .plan10-scope .p10-form-pre { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid rgba(212,175,110,.45); background: rgba(212,175,110,.1); border-radius: 12px; }
-.plan10-scope .p10-form-pre .lbl { font-family: var(--fl); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.65); }
+.plan10-scope .p10-form-pre .lbl { font-family: var(--fl); font-size: 0.72rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(241,239,234,.65); }
 .plan10-scope .p10-form-pre .val { font-family: var(--fb); font-weight: 600; font-size: .92rem; color: #fff; flex: 1; min-width: 140px; }
-.plan10-scope .p10-form-pre button { background: none; border: 0; padding: 0; font-family: var(--fb); font-size: .8rem; color: rgba(241,239,234,.7); text-decoration: underline; cursor: pointer; }
+.plan10-scope .p10-form-pre button { background: none; border: 0; padding: 0; font-family: var(--fb); font-size: 0.86rem; color: rgba(241,239,234,.7); text-decoration: underline; cursor: pointer; }
 .plan10-scope .p10-form-pre button:hover { color: #fff; }
 
 /* Navegação hub/categoria: linhas premium (sem card de caixa) */
@@ -365,7 +365,7 @@ const CSS = `
 .plan10-scope .p10-card .eyebrow { grid-column: 1 / -1; }
 .plan10-scope .p10-card :is(h2, h3) { font-family: var(--fd); font-weight: 600; font-size: clamp(1.2rem, 2vw, 1.5rem); margin: 0; color: var(--preto); line-height: 1.16; letter-spacing: -.02em; overflow-wrap: anywhere; }
 .plan10-scope .p10-card p { font-family: var(--fb); font-size: .95rem; line-height: 1.55; color: var(--ctxt); margin: 5px 0 0; max-width: 62ch; overflow-wrap: anywhere; }
-.plan10-scope .p10-card .arrow { grid-column: 2; grid-row: 1 / span 3; align-self: center; font-family: var(--fl); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--preto); opacity: .55; font-weight: 500; white-space: nowrap; transition: transform var(--t), color var(--t), opacity var(--t); }
+.plan10-scope .p10-card .arrow { grid-column: 2; grid-row: 1 / span 3; align-self: center; font-family: var(--fl); font-size: 0.86rem; letter-spacing: .1em; text-transform: uppercase; color: var(--preto); opacity: .55; font-weight: 500; white-space: nowrap; transition: transform var(--t), color var(--t), opacity var(--t); }
 .plan10-scope .p10-card:hover .arrow { transform: translateX(3px); color: var(--vp); opacity: 1; }
 .plan10-scope .p10-card.disabled { opacity: .5; cursor: default; }
 .plan10-scope .p10-card.disabled:hover { background: transparent; padding-left: 8px; }
@@ -387,7 +387,7 @@ const CSS = `
 .plan10-scope .cross-card-go { flex: none; color: var(--vp); display: inline-flex; opacity: .5; transition: opacity var(--t), transform var(--t); }
 .plan10-scope .cross-card:hover .cross-card-go { opacity: 1; transform: translateX(3px); }
 @media (hover: none) { .plan10-scope .cross-card-go { opacity: .75; } }
-.plan10-scope .cross a { padding: 9px 16px; border-radius: 999px; border: 1px solid var(--c2); background: #fff; color: var(--preto); font-family: var(--fb); font-size: .86rem; text-decoration: none; transition: border-color var(--t), color var(--t); }
+.plan10-scope .cross a { padding: 9px 16px; border-radius: 999px; border: 1px solid var(--c2); background: #fff; color: var(--preto); font-family: var(--fb); font-size: 0.92rem; text-decoration: none; transition: border-color var(--t), color var(--t); }
 .plan10-scope .cross a:hover { border-color: var(--vp); color: var(--vp); }
 
 /* Split (texto + imagem) e figura editorial */
@@ -406,12 +406,12 @@ const CSS = `
 @media (min-width: 640px) { .plan10-scope .p10-placards { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 940px) { .plan10-scope .p10-placards.cols-4 { grid-template-columns: repeat(4, 1fr); } }
 .plan10-scope .p10-placard { border: 1px solid var(--c2); border-radius: 12px; background: var(--c1); padding: 16px 16px 18px; position: relative; }
-.plan10-scope .p10-placard .n { font-family: var(--fl); font-size: .64rem; letter-spacing: .14em; color: var(--gold); display: block; margin-bottom: 8px; }
+.plan10-scope .p10-placard .n { font-family: var(--fl); font-size: 0.7rem; letter-spacing: .14em; color: var(--gold); display: block; margin-bottom: 8px; }
 .plan10-scope .p10-placard .txt { font-family: var(--fd); font-weight: 500; font-size: 1rem; line-height: 1.28; color: var(--preto); letter-spacing: -.01em; }
 
 /* Strip: lista "·" inline discreta (modalidades / mapa) */
 .plan10-scope .p10-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-.plan10-scope .p10-strip span { font-family: var(--fb); font-size: .8rem; color: var(--ctxt); border: 1px solid var(--c2); border-radius: 999px; padding: 6px 13px; background: var(--c1); }
+.plan10-scope .p10-strip span { font-family: var(--fb); font-size: 0.86rem; color: var(--ctxt); border: 1px solid var(--c2); border-radius: 999px; padding: 6px 13px; background: var(--c1); }
 
 /* Variantes em faixa escura: chips, placards e nota ganham contraste sobre navy */
 .plan10-scope .sec-dark .p10-strip span { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.2); color: rgba(244,240,232,.86); }

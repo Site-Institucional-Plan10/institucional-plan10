@@ -109,7 +109,7 @@ export function SolutionsShowcase() {
         }
         .p10x-micro { font-size: .98rem; line-height: 1.55; color: #5B6472; }
         .p10x-go {
-          font-family: var(--font-sans); font-size: .72rem;
+          font-family: var(--font-sans); font-size: 0.78rem;
           letter-spacing: .16em; text-transform: uppercase; color: #9AA1AC;
           display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; transition: color .2s ease, gap .2s ease;
         }

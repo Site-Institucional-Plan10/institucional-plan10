@@ -33,7 +33,7 @@ function BlogPage() {
         .plan10-scope .blog-capa { aspect-ratio: 16 / 9; background: var(--vs); border-bottom: 1px solid var(--c2); overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .plan10-scope .blog-capa img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s cubic-bezier(.2,.7,.3,1); }
         .plan10-scope article:hover .blog-capa img { transform: scale(1.04); }
-        .plan10-scope .blog-capa-selo { font-family: var(--fl); letter-spacing: .22em; text-transform: uppercase; font-size: .62rem; color: var(--gold); }
+        .plan10-scope .blog-capa-selo { font-family: var(--fl); letter-spacing: .22em; text-transform: uppercase; font-size: 0.68rem; color: var(--gold); }
       `}</style>
       <header className="p10-hero">
         <div className="p10-hero-inner">

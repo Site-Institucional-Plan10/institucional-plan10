@@ -38,7 +38,7 @@ export function PremiumHero() {
         .ph2-in { max-width: 1080px; margin: 0 auto; position: relative; }
         .ph2-eyebrow {
           font-family: var(--font-sans);
-          font-weight: 500; font-size: .68rem;
+          font-weight: 500; font-size: 0.74rem;
           letter-spacing: .34em; text-transform: uppercase;
           color: rgba(241,239,234,.6); margin: 0 0 14px;
           display: inline-flex; align-items: center; gap: 14px;
@@ -79,7 +79,7 @@ export function PremiumHero() {
         }
         .ph2-strip span {
           font-family: var(--font-sans);
-          font-size: .7rem; letter-spacing: .06em; text-transform: uppercase;
+          font-size: 0.76rem; letter-spacing: .06em; text-transform: uppercase;
           color: rgba(241,239,234,.62);
           display: inline-flex; align-items: center; gap: 9px;
         }
@@ -94,7 +94,7 @@ export function PremiumHero() {
           }
           /* O rótulo quebrava em duas linhas por causa do letter-spacing largo.
              Menor e mais apertado, cabe numa linha até em tela de 320px. */
-          .ph2-eyebrow { font-size: .58rem; letter-spacing: .09em; gap: 9px; margin-bottom: 12px; }
+          .ph2-eyebrow { font-size: 0.64rem; letter-spacing: .09em; gap: 9px; margin-bottom: 12px; }
           .ph2-eyebrow::before { width: 18px; }
           /* Título de 8 linhas no celular. Um corpo menor tira duas. */
           .ph2-h1 { font-size: 1.58rem; line-height: 1.16; }

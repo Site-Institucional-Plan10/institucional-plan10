@@ -125,7 +125,7 @@ function FaleConosco() {
           >
             Quero receber novidades
           </button>
-          <p className="p10-lede" style={{ marginTop: 14, fontSize: ".86rem" }}>
+          <p className="p10-lede" style={{ marginTop: 14, fontSize: "0.92rem" }}>
             Usamos seus dados apenas para enviar os conteúdos que você pediu.
           </p>
         </div>

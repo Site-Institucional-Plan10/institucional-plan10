@@ -127,7 +127,7 @@ export function FancySelect({ options, value, onChange, label, placeholder = "Se
 
 const FSEL_CSS = `
 .fsel { position: relative; display: block; width: 100%; }
-.fsel-label { display: block; font-family: var(--font-sans); font-weight: 500; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+.fsel-label { display: block; font-family: var(--font-sans); font-weight: 500; font-size: 0.76rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
 .fsel-btn {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
   padding: 12px 14px; border-radius: 10px; cursor: pointer; text-align: left;
@@ -149,7 +149,7 @@ const FSEL_CSS = `
   transition: background .12s ease, color .12s ease;
 }
 .fsel-check { flex: none; display: inline-flex; }
-.fsel-err { display: block; margin-top: 6px; font-size: .8rem; }
+.fsel-err { display: block; margin-top: 6px; font-size: 0.86rem; }
 
 /* Tom escuro (funil, dentro do .plan10-scope) */
 .fsel-dark .fsel-label { color: rgba(244,240,232,.7); }

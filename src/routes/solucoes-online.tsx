@@ -48,11 +48,11 @@ function SolucoesOnlinePage() {
     <PageTheme palette={PALETTES.institucional}>
       <style>{`
         .solp-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; position: sticky; top: 78px; background: var(--c1); padding: 16px 0; z-index: 20; }
-        .solp-chip { font-family: var(--fb); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--c2); background: transparent; color: var(--ctxt); cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
+        .solp-chip { font-family: var(--fb); font-size: 0.8rem; letter-spacing: .06em; text-transform: uppercase; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--c2); background: transparent; color: var(--ctxt); cursor: pointer; transition: border-color .2s, color .2s, background .2s; }
         .solp-chip:hover { border-color: var(--gold); color: var(--preto); }
         .solp-chip[aria-pressed="true"] { background: var(--preto); border-color: var(--preto); color: #F1EFEA; }
         .solp-group { margin-top: 34px; }
-        .solp-group-h { font-family: var(--fl); font-weight: 500; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-dk, #866719); margin: 0 0 4px; }
+        .solp-group-h { font-family: var(--fl); font-weight: 500; font-size: 0.78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-dk, #866719); margin: 0 0 4px; }
         .solp-list { border-top: 1px solid var(--c2); }
         .sol-row { --c: var(--gold-dk, #866719); display: grid; grid-template-columns: 1.1fr 1.5fr auto; align-items: center; gap: 24px; padding: 22px 12px 22px 6px; border-bottom: 1px solid var(--c2); text-decoration: none; color: var(--preto); position: relative; transition: background .24s ease, padding-left .24s ease; }
         .sol-row.cons { --c: var(--vp); }
@@ -60,9 +60,9 @@ function SolucoesOnlinePage() {
         .sol-row:hover { background: var(--vs); padding-left: 16px; }
         .sol-row:hover::before { height: 58%; }
         .sol-nm { font-family: var(--fd); font-weight: 600; font-size: 1.14rem; letter-spacing: -.015em; color: var(--preto); }
-        .sol-cat { font-family: var(--fl); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ctxt); display: block; margin-top: 4px; opacity: .8; }
+        .sol-cat { font-family: var(--fl); font-size: 0.66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ctxt); display: block; margin-top: 4px; opacity: .8; }
         .sol-desc { font-family: var(--fb); font-size: .95rem; line-height: 1.5; color: var(--ctxt); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .sol-cta { font-family: var(--fl); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c); display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+        .sol-cta { font-family: var(--fl); font-size: 0.74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c); display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
         .sol-row svg { display: inline; transition: transform .2s ease; }
         .sol-row:hover svg { transform: translateX(3px); }
         @media (max-width: 780px) {

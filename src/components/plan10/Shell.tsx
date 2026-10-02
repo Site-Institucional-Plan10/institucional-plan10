@@ -38,7 +38,7 @@ export function Eyebrow({ children, color }: { children: React.ReactNode; color:
     <p
       style={{
         fontFamily: FONTS.eyebrow,
-        fontSize: "0.78rem",
+        fontSize: "0.84rem",
         letterSpacing: "0.18em",
         textTransform: "uppercase",
         color,
@@ -91,7 +91,7 @@ export function Breadcrumb({ items }: { items: { label: string; to?: string; par
       aria-label="Trilha"
       style={{
         fontFamily: FONTS.eyebrow,
-        fontSize: "0.75rem",
+        fontSize: "0.81rem",
         letterSpacing: "0.12em",
         textTransform: "uppercase",
         color: "rgba(246,241,231,0.6)",
@@ -128,7 +128,7 @@ export function Pill({ children, color }: { children: React.ReactNode; color: st
         border: `1px solid ${color}`,
         color: "#F6F1E7",
         fontFamily: FONTS.eyebrow,
-        fontSize: "0.72rem",
+        fontSize: "0.78rem",
         letterSpacing: "0.12em",
         textTransform: "uppercase",
       }}

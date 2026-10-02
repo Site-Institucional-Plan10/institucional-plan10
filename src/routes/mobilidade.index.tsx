@@ -73,7 +73,7 @@ function MobilidadeHub() {
             <section key={mk.slug} style={{ marginBottom: 44 }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: 12, borderBottom: "1px solid var(--c2)", paddingBottom: 8, marginBottom: 18 }}>
                 <h2 style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.5rem", color: NAVY, margin: 0 }}>{mk.name}</h2>
-                <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".12em", textTransform: "uppercase", fontSize: ".72rem", color: "#8A8172" }}>
+                <span style={{ fontFamily: "var(--font-sans)", letterSpacing: ".12em", textTransform: "uppercase", fontSize: "0.78rem", color: "#8A8172" }}>
                   {list.length} {list.length === 1 ? "modelo" : "modelos"}
                 </span>
               </div>
@@ -89,16 +89,16 @@ function MobilidadeHub() {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
                       <span style={{ fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: "1.2rem", color: "#1A1A1A" }}>{m.model}</span>
                       {m.seloAltoValor && (
-                        <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: ".62rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 8px", whiteSpace: "nowrap" }}>
+                        <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", fontSize: "0.68rem", color: GOLD, border: `1px solid ${GOLD}`, borderRadius: 20, padding: "2px 8px", whiteSpace: "nowrap" }}>
                           Alto padrão
                         </span>
                       )}
                     </div>
-                    <p style={{ fontSize: ".86rem", color: "#777", margin: "4px 0 0" }}>{m.segment}{m.anoModelo ? ` · ${m.anoModelo}` : ""}</p>
+                    <p style={{ fontSize: "0.92rem", color: "#777", margin: "4px 0 0" }}>{m.segment}{m.anoModelo ? ` · ${m.anoModelo}` : ""}</p>
                     <p style={{ fontSize: ".9rem", color: "#555", margin: "10px 0 0", lineHeight: 1.5, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
                       {m.fichaRapida}
                     </p>
-                    <span style={{ display: "inline-block", marginTop: 12, fontWeight: 600, fontSize: ".85rem", color: NAVY }}>Ver o modelo →</span>
+                    <span style={{ display: "inline-block", marginTop: 12, fontWeight: 600, fontSize: "0.91rem", color: NAVY }}>Ver o modelo →</span>
                   </Link>
                 ))}
               </div>

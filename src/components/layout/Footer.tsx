@@ -75,7 +75,7 @@ const sections: FooterSection[] = [
 
 const headerStyle: React.CSSProperties = {
   fontWeight: 700,
-  fontSize: "0.85rem",
+  fontSize: "0.91rem",
   letterSpacing: "0.06em",
   textTransform: "uppercase",
   color: "rgba(255,255,255,0.45)",
@@ -83,7 +83,7 @@ const headerStyle: React.CSSProperties = {
 };
 
 const linkStyle: React.CSSProperties = {
-  fontSize: "0.875rem",
+  fontSize: "0.94rem",
   color: "rgba(255,255,255,0.70)",
 };
 
@@ -278,7 +278,7 @@ export function Footer() {
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         <div
           className="container-x py-3.5 flex flex-col md:flex-row gap-2 md:gap-4 items-center justify-between"
-          style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.40)" }}
+          style={{ fontSize: "0.81rem", color: "rgba(255,255,255,0.40)" }}
         >
           <span>© 2026 Plan10 Corretora. Uma empresa Plan Group.</span>
           <span>

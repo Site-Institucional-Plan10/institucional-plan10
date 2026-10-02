@@ -36,11 +36,11 @@ export function CookieBanner() {
           font-family: var(--font-sans); animation: ckin .4s cubic-bezier(.2,.7,.2,1);
         }
         @keyframes ckin { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-        .ck-eyebrow { font-family: var(--font-sans); font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: #D8B879; margin: 0 0 8px; }
-        .ck-txt { font-size: .85rem; line-height: 1.55; color: rgba(241,239,234,.8); margin: 0 0 15px; }
+        .ck-eyebrow { font-family: var(--font-sans); font-size: 0.66rem; letter-spacing: .22em; text-transform: uppercase; color: #D8B879; margin: 0 0 8px; }
+        .ck-txt { font-size: 0.91rem; line-height: 1.55; color: rgba(241,239,234,.8); margin: 0 0 15px; }
         .ck-txt a { color: #D8B879; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
         .ck-actions { display: flex; gap: 10px; }
-        .ck-btn { font-family: var(--font-sans); font-weight: 600; font-size: .82rem; padding: 9px 16px; border-radius: 999px; cursor: pointer; border: 1px solid transparent; transition: background .2s ease, border-color .2s ease, color .2s ease; }
+        .ck-btn { font-family: var(--font-sans); font-weight: 600; font-size: 0.88rem; padding: 9px 16px; border-radius: 999px; cursor: pointer; border: 1px solid transparent; transition: background .2s ease, border-color .2s ease, color .2s ease; }
         .ck-btn.gold { background: #C6A24A; color: #0E2438; flex: 1; }
         .ck-btn.gold:hover { background: #D8B879; }
         .ck-btn.ghost { background: transparent; color: rgba(241,239,234,.82); border-color: rgba(255,255,255,.22); }

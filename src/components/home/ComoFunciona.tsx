@@ -24,7 +24,7 @@ export function ComoFunciona() {
         .cf-head { max-width: 660px; margin-bottom: 46px; }
         .cf-eyebrow {
           font-family: var(--font-sans);
-          font-weight: 600; font-size: .78rem;
+          font-weight: 600; font-size: 0.84rem;
           letter-spacing: .22em; text-transform: uppercase;
           color: #E05A20; margin: 0;
         }
