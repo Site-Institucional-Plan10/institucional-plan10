@@ -1,11 +1,12 @@
 /**
  * Imagem de cada artigo do blog.
  *
- * O catálogo tem 68 artigos e assuntos que se repetem: cinco textos sobre o
- * setor automotivo, cinco sobre o sistema de saúde, e assim por diante. Em vez
- * de uma foto por artigo, que levaria a repetir tema com foto diferente e a
- * gastar curadoria em cima de nada, cada artigo aponta para um ASSUNTO, e cada
- * assunto tem a sua foto. São 51 assuntos para os 68 artigos.
+ * Cada um dos 68 artigos tem a sua própria foto, sem nenhuma repetição no blog.
+ *
+ * A primeira rodada usou 51 fotos para os 68 artigos, agrupando por assunto, e
+ * ficou claro na tela: quatro textos sobre o mercado automotivo abriam com a
+ * mesma vista de pátio de concessionária. Os 18 que dividiam imagem ganharam
+ * foto própria, com cena deliberadamente distinta dentro do mesmo tema.
  *
  * FOTOS é a lista do que existe de verdade em public/assets/blog. Um assunto
  * que ainda não tenha foto simplesmente não devolve imagem, e o card volta ao
@@ -29,15 +30,15 @@ const ASSUNTO_DO_ARTIGO: Record<string, string> = {
   "saude-da-familia-por-fases": "blog-saude-fases",
   "beneficio-saude-empresas-retencao": "blog-saude-empresarial",
   "mercado-de-saude-suplementar": "blog-saude-suplementar",
-  "hospitais-e-rede-assistencial": "blog-rede-credenciada",
-  "saude-corporativa": "blog-saude-empresarial",
+  "hospitais-e-rede-assistencial": "blog-mapa-hospitalar",
+  "saude-corporativa": "blog-saude-corporativa-gestao",
   "odontologia": "blog-odontologia",
   "saude-digital": "blog-saude-digital",
   "previdencia-o-que-ler-antes-de-assinar": "blog-previdencia",
   "protecao-de-renda-como-dimensionar": "blog-protecao-renda",
   "liquidez-quanto-deixar-disponivel": "blog-liquidez",
   "instituicoes-financeiras": "blog-sistema-financeiro",
-  "cenario-economico": "blog-sistema-financeiro",
+  "cenario-economico": "blog-cenario-macro",
   "investimentos": "blog-investimentos",
   "garantias": "blog-garantias-contrato",
   "pagamentos-digitais": "blog-pagamentos-digitais",
@@ -45,10 +46,10 @@ const ASSUNTO_DO_ARTIGO: Record<string, string> = {
   "estrutura-por-tipo-de-conquista": "blog-imovel-veiculo-expansao",
   "intervalo-entre-a-decisao-e-a-chave": "blog-chave-na-mao",
   "o-ritmo-que-faz-uma-empresa-crescer": "blog-expansao-empresarial",
-  "marca-do-momento-e-a-escolha-que-fica": "blog-mercado-automotivo",
-  "quando-uma-marca-depende-de-um-modelo": "blog-industria-automotiva",
-  "mercado-aquecido-nao-e-sinal-de-compra": "blog-mercado-automotivo",
-  "quando-o-carro-deixa-de-ser-transporte": "blog-automobilismo",
+  "marca-do-momento-e-a-escolha-que-fica": "blog-marca-do-momento",
+  "quando-uma-marca-depende-de-um-modelo": "blog-marca-depende-de-um-modelo",
+  "mercado-aquecido-nao-e-sinal-de-compra": "blog-mercado-aquecido",
+  "quando-o-carro-deixa-de-ser-transporte": "blog-carro-paixao",
   "consorcios": "blog-consorcio",
   "imoveis": "blog-mercado-imobiliario",
   "maquinas": "blog-maquinas-equipamentos",
@@ -59,9 +60,9 @@ const ASSUNTO_DO_ARTIGO: Record<string, string> = {
   "eletrificacao": "blog-eletrificacao",
   "pos-venda": "blog-pos-venda",
   "mercado-automotivo": "blog-mercado-automotivo",
-  "byd-recorde-julho-2026": "blog-eletrificacao",
-  "concentracao-montadoras-brasil-2026": "blog-industria-automotiva",
-  "mercado-brasileiro-primeiro-semestre-2026": "blog-mercado-automotivo",
+  "byd-recorde-julho-2026": "blog-byd-recorde",
+  "concentracao-montadoras-brasil-2026": "blog-concentracao-montadoras",
+  "mercado-brasileiro-primeiro-semestre-2026": "blog-mercado-brasileiro-semestre",
   "nautica": "blog-nautica",
   "aviacao-executiva": "blog-aviacao-executiva",
   "viagem-internacional-estrutura": "blog-viagem-internacional",
@@ -69,17 +70,17 @@ const ASSUNTO_DO_ARTIGO: Record<string, string> = {
   "assistencia-tempo-e-rotina": "blog-tempo-dia-a-dia",
   "beneficios-de-assistencia-nas-empresas": "blog-assistencia-corporativa",
   "calendario-anual-de-cuidados-da-casa": "blog-calendario-casa",
-  "prevencao-para-bens-de-alto-valor": "blog-mercado-luxo",
-  "discricao-cuidado-com-o-que-se-conquistou": "blog-seguranca-privada",
-  "a-tranquilidade-de-ter-tudo-a-mao": "blog-tempo-dia-a-dia",
+  "prevencao-para-bens-de-alto-valor": "blog-prevencao-bens-alto-valor",
+  "discricao-cuidado-com-o-que-se-conquistou": "blog-discricao",
+  "a-tranquilidade-de-ter-tudo-a-mao": "blog-tudo-resolvido",
   "assistencia-24h": "blog-assistencia-24h",
   "facilities": "blog-facilities",
-  "tecnologia-corporativa": "blog-continuidade-operacao",
+  "tecnologia-corporativa": "blog-tecnologia-suporte",
   "mobilidade-assistida": "blog-mobilidade-assistida",
-  "concierge": "blog-assistencia-corporativa",
-  "custo-de-adiar-decisoes-pequenas": "blog-calendario-casa",
+  "concierge": "blog-concierge-corporativo",
+  "custo-de-adiar-decisoes-pequenas": "blog-adiar-decisoes",
   "viajar-sem-levar-problema-junto": "blog-viajar-tranquilo",
-  "casa-muda-de-funcao-com-a-familia": "blog-chave-na-mao",
+  "casa-muda-de-funcao-com-a-familia": "blog-casa-muda-de-fase",
   "mercado-de-luxo": "blog-mercado-luxo",
 };
 
@@ -92,6 +93,23 @@ export interface Foto {
 const B = "/assets/blog/";
 
 const FOTOS: Record<string, Foto> = {
+  "blog-marca-do-momento": { src: B + "blog-marca-do-momento.jpg", alt: "Traseira de um carro escuro no piso do showroom, com a faixa de luz acesa" },
+  "blog-mercado-aquecido": { src: B + "blog-mercado-aquecido.jpg", alt: "Trevo rodoviário visto de cima, com filas de carros nas alças" },
+  "blog-mercado-brasileiro-semestre": { src: B + "blog-mercado-brasileiro-semestre.jpg", alt: "Navio de transporte atracado, com o convés tomado por carros novos" },
+  "blog-marca-depende-de-um-modelo": { src: B + "blog-marca-depende-de-um-modelo.jpg", alt: "Vista aérea de um único carro parado num recuo de estrada" },
+  "blog-concentracao-montadoras": { src: B + "blog-concentracao-montadoras.jpg", alt: "Galpão de produção com passarelas de tubulação e piso livre" },
+  "blog-mapa-hospitalar": { src: B + "blog-mapa-hospitalar.jpg", alt: "Ambulâncias estacionadas, vistas de trás" },
+  "blog-saude-corporativa-gestao": { src: B + "blog-saude-corporativa-gestao.jpg", alt: "Estação de trabalho com cadeira ergonômica e monitor" },
+  "blog-cenario-macro": { src: B + "blog-cenario-macro.jpg", alt: "Skyline de um centro financeiro no fim da tarde" },
+  "blog-casa-muda-de-fase": { src: B + "blog-casa-muda-de-fase.jpg", alt: "Interior residencial em reforma, com montantes de madeira à vista" },
+  "blog-carro-paixao": { src: B + "blog-carro-paixao.jpg", alt: "Volante e painel de um carro antigo, vistos pela janela" },
+  "blog-discricao": { src: B + "blog-discricao.jpg", alt: "Portão de ferro fechado entre árvores, com lampiões acesos ao fundo" },
+  "blog-tecnologia-suporte": { src: B + "blog-tecnologia-suporte.jpg", alt: "Técnico encaixando uma placa de rede no rack" },
+  "blog-tudo-resolvido": { src: B + "blog-tudo-resolvido.jpg", alt: "Mesa de varanda com xícaras e bule, na luz da manhã" },
+  "blog-concierge-corporativo": { src: B + "blog-concierge-corporativo.jpg", alt: "Mão tocando a campainha sobre o balcão de recepção" },
+  "blog-adiar-decisoes": { src: B + "blog-adiar-decisoes.jpg", alt: "Torneira cromada pingando, com a gota prestes a cair" },
+  "blog-prevencao-bens-alto-valor": { src: B + "blog-prevencao-bens-alto-valor.jpg", alt: "Corredor de adega com estantes cheias até o teto" },
+  "blog-byd-recorde": { src: B + "blog-byd-recorde.jpg", alt: "Carros elétricos em vagas de garagem, com carregadores de parede" },
   "blog-garantias-contrato": {
     src: "/assets/temas/prot-garantias.jpg",
     alt: "Mão assinando um contrato na linha da assinatura",
