@@ -23,9 +23,17 @@ const solutionNav = solutions.map((s) => ({
 // Nav desktop. Os cinco hubs saíram da barra porque agora quem os apresenta é o
 // mega menu, com seis destaques cada, o que o pacote de integração pede. A barra
 // fica curta e o menu entrega muito mais do que cinco links soltos entregavam.
-const navLinks: Array<{ to: "/quem-somos" | "/blog"; label: string }> = [
-  { to: "/quem-somos", label: "Quem somos" },
-  { to: "/blog", label: "Blog" },
+/**
+ * Os rótulos do wireframe. Lá os quatro são âncoras para seções da Home; aqui
+ * Blog e Sobre apontam para as páginas que já existem, porque o pacote pede
+ * para preferir a rota interna sempre que houver uma equivalente. Os outros
+ * dois seguem como âncora, que é onde o conteúdo mora.
+ */
+const navLinks: Array<{ to: "/" | "/quem-somos" | "/blog"; hash?: string; label: string }> = [
+  { to: "/", hash: "perfis", label: "Para empresas" },
+  { to: "/", hash: "metodo", label: "Como atuamos" },
+  { to: "/blog", label: "Blog Plan10" },
+  { to: "/quem-somos", label: "Sobre a Plan10" },
 ];
 
 // Mobile menu structure with dividers
@@ -307,10 +315,13 @@ export function Header() {
             </button>
             {navLinks.map((l) => (
               <Link
-                key={l.to}
+                key={l.label}
                 to={l.to}
+                hash={l.hash}
                 className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
                 style={{ color: "#1A1A1A" }}
+                // sem o hash na conta, os dois atalhos da Home ficariam ativos juntos
+                activeOptions={{ includeHash: true }}
                 activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
               >
                 <span className="transition-colors group-hover:text-orange">{l.label}</span>

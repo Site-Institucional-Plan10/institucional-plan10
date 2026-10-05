@@ -31,13 +31,15 @@ export function BlogHome() {
         .f1-post h3 { font-size: 1rem; font-weight: 600; line-height: 1.32; margin: 0; color: #16222F; }
         .f1-post p { font-size: .88rem; line-height: 1.5; color: #5B6472; margin: 0; }
         .f1-post small { margin-top: auto; font-size: .78rem; color: #9AA1AC; }
+        .f1-post-mais { font-size: .84rem; font-weight: 700; color: #9A7B23; }
       `}</style>
 
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Informação para escolher melhor</p>
+        <p className="f1-eyebrow">Blog Plan10</p>
         <h2 className="f1-h2" id="blog-h">
-          Leituras que ajudam a decidir com critério.
+          Informação para escolher melhor.
         </h2>
+        <p className="f1-lede">Dúvidas do dia a dia. Respostas para dar o próximo passo.</p>
 
         <div className="f1-posts">
           {artigos.map((a) => {
@@ -55,15 +57,19 @@ export function BlogHome() {
                   <h3>{a.title}</h3>
                   <p>{a.summary}</p>
                   <small>{a.readingTime}</small>
+                  <span className="f1-post-mais">Ler mais →</span>
                 </div>
               </Link>
             );
           })}
         </div>
 
-        <div style={{ marginTop: 26 }}>
+        <div style={{ marginTop: 26, display: "flex", gap: 12, flexWrap: "wrap" }}>
           <Link to="/blog" className="f1-btn f1-btn-s">
             Ver todas as leituras →
+          </Link>
+          <Link to="/solucoes" className="f1-btn f1-btn-s">
+            Explorar soluções relacionadas
           </Link>
         </div>
       </div>

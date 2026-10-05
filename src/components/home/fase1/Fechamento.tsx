@@ -32,13 +32,51 @@ export function Experiencia() {
           ))}
         </div>
 
-        <div style={{ marginTop: 28, display: "flex", gap: 12, flexWrap: "wrap" }}>
+        <div style={{ marginTop: 28 }}>
           <Link to="/fale-conosco" className="f1-btn f1-btn-p">
             Começar uma conversa
           </Link>
-          <Link to="/quem-somos" className="f1-btn f1-btn-s">
-            Conheça nosso jeito de atuar
-          </Link>
+        </div>
+
+        {/* Nosso horizonte: o bloco de marca que fecha a seção no wireframe */}
+        <div
+          style={{
+            marginTop: 40,
+            paddingTop: 30,
+            borderTop: "1px solid #E6E1D6",
+            display: "grid",
+            gap: 14,
+          }}
+        >
+          <p className="f1-eyebrow" style={{ margin: 0 }}>
+            Nosso horizonte
+          </p>
+          <p
+            style={{
+              fontSize: "clamp(1.18rem, 2.3vw, 1.6rem)",
+              lineHeight: 1.35,
+              fontWeight: 500,
+              letterSpacing: "-.015em",
+              color: "#16222F",
+              margin: 0,
+              maxWidth: "26ch",
+            }}
+          >
+            Tranquilidade para cuidar do hoje. Confiança para ir além. Seguros que abrem novos
+            horizontes.
+          </p>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: 600, margin: "6px 0 0", color: "#16222F" }}>
+            Uma marca. Um olhar consultivo.
+          </h3>
+          <p className="f1-lede" style={{ marginTop: 0 }}>
+            A Plan10 conecta proteção, cuidado e planejamento em diferentes especialidades. A
+            proposta é ajudar pessoas e empresas a entender suas opções e avançar com mais clareza.
+          </p>
+          <div>
+            <Link to="/quem-somos" className="f1-btn f1-btn-s">
+              Conheça nosso jeito de atuar
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -52,7 +90,7 @@ const PERGUNTAS = [
   },
   {
     q: "Posso buscar soluções para mim e para minha empresa?",
-    a: "Sim. Seus favoritos podem reunir interesses de diferentes áreas e perfis. Use o filtro para percorrer as opções e mantenha todos os itens nos favoritos.",
+    a: "Sim. Seus favoritos podem reunir interesses de diferentes áreas e perfis. Use o filtro para explorar e mantenha todos os itens nos Favoritos.",
   },
   {
     q: "Favoritar já é contratar?",
@@ -64,7 +102,11 @@ const PERGUNTAS = [
   },
   {
     q: "Posso revisar uma proteção que já tenho?",
-    a: "Salve a solução nos favoritos e escreva que deseja revisar uma contratação existente. Isso ajuda a preparar a conversa com o consultor.",
+    a: "Salve a solução nos favoritos e escreva que deseja revisar uma contratação existente. Isso ajuda a preparar uma conversa sobre necessidades, condições e alternativas.",
+  },
+  {
+    q: "O que comparar além do preço de um seguro?",
+    a: "Observe coberturas, limites de indenização, franquias, exclusões e assistências. Verifique se as propostas consideram as mesmas necessidades e condições antes de comparar o valor total.",
   },
 ];
 

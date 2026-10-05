@@ -105,7 +105,7 @@ export function Especialidades() {
                       <span key={c}>{c}</span>
                     ))}
                   </div>
-                  <span className="f1-ir">Conhecer {v.label.toLowerCase()} →</span>
+                  <span className="f1-ir">Explorar {v.label.toLowerCase()} →</span>
                 </div>
               </Link>
             );

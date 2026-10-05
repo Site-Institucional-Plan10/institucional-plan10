@@ -49,6 +49,7 @@ export function Seguradoras() {
 
       <div className="f1-wrap">
         <p className="f1-eyebrow">Mais opções para a sua escolha</p>
+        <p className="f1-eyebrow">Mais opções para a sua escolha</p>
         <h2 className="f1-h2" id="seg-h">
           Seguradoras em nosso portfólio
         </h2>

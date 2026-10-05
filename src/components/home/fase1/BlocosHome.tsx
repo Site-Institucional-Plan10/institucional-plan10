@@ -12,7 +12,7 @@ import { Link } from "@tanstack/react-router";
 const CRITERIOS = [
   { t: "Coberturas", d: "O que está protegido e em quais situações?" },
   { t: "Limites e franquias", d: "Quanto você assume e quais são os limites da proteção?" },
-  { t: "Condições e exclusões", d: "Que detalhes precisam ser conhecidos antes de decidir?" },
+  { t: "Condições e exclusões", d: "Que detalhes precisam ser conhecidos antes de contratar?" },
   { t: "Custo e benefício", d: "As opções estão sendo comparadas nas mesmas condições?" },
 ];
 
@@ -57,12 +57,12 @@ export function ContratacaoOnline() {
           Contratação online imediata
         </h2>
         <p className="f1-lede">
-          Um caminho para soluções elegíveis com contratação digital. A integração com o canal
-          oficial está em preparação, então a confirmação ainda passa por um consultor.
+          Um caminho para soluções elegíveis com contratação digital. Integração em preparação
+          para o canal oficial.
         </p>
         <div style={{ marginTop: 24 }}>
           <Link to="/solucoes-online" className="f1-btn f1-btn-s">
-            Ver as soluções digitais →
+            Explorar soluções →
           </Link>
         </div>
       </div>
@@ -74,7 +74,7 @@ const PASSOS = [
   { n: "01", t: "Entender", d: "Conhecer seu momento, o que você quer proteger e suas prioridades." },
   { n: "02", t: "Comparar", d: "Organizar opções e observar diferenças de coberturas e condições." },
   { n: "03", t: "Recomendar", d: "Explicar as alternativas e os motivos que orientam a escolha." },
-  { n: "04", t: "Acompanhar", d: "Tirar dúvidas depois e revisar suas necessidades quando seu momento mudar." },
+  { n: "04", t: "Acompanhar", d: "Tirar dúvidas após a contratação e revisar suas necessidades quando seu momento mudar." },
 ];
 
 export function Metodo() {
@@ -97,6 +97,16 @@ export function Metodo() {
               <p>{p.d}</p>
             </div>
           ))}
+        </div>
+
+        <p className="f1-lede" style={{ marginTop: 26 }}>
+          Mais de uma necessidade? Seus favoritos reúnem as soluções em um único resumo para pedir
+          uma cotação.
+        </p>
+        <div style={{ marginTop: 16 }}>
+          <Link to="/solucoes" className="f1-btn f1-btn-s">
+            Explorar soluções
+          </Link>
         </div>
       </div>
     </section>

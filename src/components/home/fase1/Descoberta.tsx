@@ -1,19 +1,30 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { buscar, CATALOGO, VERTICAIS, type VerticalId } from "@/lib/verticais";
+import { buscar, CATALOGO, DESTAQUES, VERTICAIS, type ItemCatalogo, type VerticalId } from "@/lib/verticais";
 import { usarPerfil } from "@/lib/perfilPublico";
 
 /**
  * "O que você quer proteger ou realizar?": a descoberta da Home.
  *
+ * O arranjo é o do wireframe: título com a escolha de público, as cinco áreas,
+ * o campo com o botão Encontrar soluções, os atalhos de frase, o título dos
+ * resultados com o botão de limpar e, abaixo, as três garantias.
+ *
  * A busca é local, sobre o modelo único do catálogo. O pacote é explícito:
  * backend de busca não é requisito desta fase, filtragem local basta. Por isso
  * não há estado de carregamento nem chamada de rede aqui.
  *
- * Os atalhos são as frases do wireframe e levam à mesma busca, para a pessoa
- * não precisar saber o nome do produto.
+ * Em repouso a seção já mostra conteúdo: os destaques do público escolhido,
+ * que são os mesmos do mega menu. "Atalhos para começar" é o título desse
+ * estado, e vira a contagem assim que alguém digita ou escolhe uma área.
  */
 const ATALHOS = ["Vou viajar", "Comprei um apartamento", "Proteger minha equipe"];
+
+const GARANTIAS = [
+  "Conversa antes da recomendação",
+  "Atenção às diferenças entre propostas",
+  "Clareza para decidir",
+];
 
 export function Descoberta() {
   const [termo, setTermo] = useState("");
@@ -21,11 +32,22 @@ export function Descoberta() {
   const { perfil, definirPerfil } = usarPerfil();
   const [vertical, setVertical] = useState<VerticalId | "todas">("todas");
 
-  const resultados = useMemo(() => {
-    const base = buscar(termo, perfil === "todos" ? undefined : perfil, 60);
-    const filtrados = vertical === "todas" ? base : base.filter((i) => i.vertical === vertical);
-    return filtrados.slice(0, 12);
-  }, [termo, perfil, vertical]);
+  const buscando = termo.trim().length >= 2;
+  const filtrando = buscando || vertical !== "todas";
+
+  const resultados = useMemo<ItemCatalogo[]>(() => {
+    if (buscando) {
+      const base = buscar(termo, perfil === "todos" ? undefined : perfil, 60);
+      const filtrados = vertical === "todas" ? base : base.filter((i) => i.vertical === vertical);
+      return filtrados.slice(0, 12);
+    }
+    // em repouso, os destaques: os mesmos itens verificados do mega menu
+    const areas = vertical === "todas" ? VERTICAIS : VERTICAIS.filter((v) => v.id === vertical);
+    const publicos = perfil === "todos" ? (["pessoal", "empresa"] as const) : ([perfil] as const);
+    const saida: ItemCatalogo[] = [];
+    for (const area of areas) for (const p of publicos) saida.push(...DESTAQUES[area.id][p]);
+    return saida.slice(0, 12);
+  }, [termo, buscando, perfil, vertical]);
 
   // sem termo digitado, a seção mostra o tamanho do catálogo por vertical
   const contagem = useMemo(() => {
@@ -35,6 +57,17 @@ export function Descoberta() {
     return m;
   }, [perfil]);
 
+  const tituloResultados = filtrando
+    ? resultados.length === 0
+      ? "Nada encontrado"
+      : `${resultados.length} ${resultados.length === 1 ? "solução encontrada" : "soluções encontradas"}`
+    : "Atalhos para começar";
+
+  function verTodasAsAreas() {
+    setTermo("");
+    setVertical("todas");
+  }
+
   return (
     <section className="f1 f1-sec" id="descoberta" aria-labelledby="desc-h">
       <style>{`
@@ -43,11 +76,12 @@ export function Descoberta() {
           font-size: .8rem; font-weight: 600; padding: 8px 15px; border-radius: 999px;
           border: 1px solid #E0DBD0; background: transparent; color: #5B6472; cursor: pointer;
           transition: border-color .2s, color .2s, background .2s;
+          font-family: var(--font-sans);
         }
         .f1-filtro:hover { border-color: #C6A24A; color: #16222F; }
         .f1-filtro[aria-pressed="true"] { background: #0E2438; border-color: #0E2438; color: #F1EFEA; }
         .f1-filtro:focus-visible { outline: 2px solid #C45016; outline-offset: 2px; }
-        .f1-busca { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+        .f1-busca { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; align-items: center; }
         .f1-busca input {
           flex: 1; min-width: 240px; border: 1px solid #E0DBD0; border-radius: 999px;
           padding: 14px 20px; font-family: var(--font-sans); font-size: 1rem; color: #16222F;
@@ -60,7 +94,17 @@ export function Descoberta() {
           font-size: .82rem; color: #16222F; cursor: pointer; font-family: var(--font-sans);
         }
         .f1-atalho:hover { background: #E4DFD2; }
-        .f1-res { display: grid; gap: 10px; margin-top: 24px; grid-template-columns: 1fr; }
+        .f1-res-topo {
+          display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+          margin-top: 30px; flex-wrap: wrap;
+        }
+        .f1-res-topo h3 { font-size: 1.04rem; font-weight: 600; margin: 0; color: #16222F; }
+        .f1-limpar {
+          border: 0; background: none; padding: 0; cursor: pointer; font-family: var(--font-sans);
+          font-size: .84rem; font-weight: 700; color: #9A7B23;
+        }
+        .f1-limpar:hover { text-decoration: underline; }
+        .f1-res { display: grid; gap: 10px; margin-top: 16px; grid-template-columns: 1fr; }
         @media (min-width: 720px) { .f1-res { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1080px) { .f1-res { grid-template-columns: repeat(3, 1fr); } }
         .f1-res a {
@@ -71,16 +115,21 @@ export function Descoberta() {
         .f1-res a:hover { border-color: #C6A24A; }
         .f1-res strong { font-size: .95rem; font-weight: 600; color: #16222F; }
         .f1-res small { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: #9AA1AC; }
-        .f1-vazio { margin-top: 22px; color: #6B7482; font-size: .95rem; }
+        .f1-vazio { margin-top: 16px; color: #6B7482; font-size: .95rem; }
+        .f1-garantias {
+          display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 34px;
+          padding-top: 22px; border-top: 1px solid #E6E1D6;
+        }
+        .f1-garantias span { font-size: .88rem; color: #5B6472; display: inline-flex; align-items: center; gap: 8px; }
+        .f1-garantias span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #C6A24A; flex: none; }
       `}</style>
 
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Atalhos para começar</p>
         <h2 className="f1-h2" id="desc-h">
           O que você quer proteger ou realizar?
         </h2>
 
-        <div className="f1-filtros" role="group" aria-label="Filtrar por público">
+        <div className="f1-filtros" role="group" aria-label="Para quem você procura">
           {([["todos", "Todos os perfis"], ["pessoal", "Você e família"], ["empresa", "Sua empresa"]] as const).map(
             ([v, r]) => (
               <button
@@ -96,22 +145,14 @@ export function Descoberta() {
           )}
         </div>
 
-        <div className="f1-filtros" role="group" aria-label="Filtrar por especialidade">
-          <button
-            type="button"
-            className="f1-filtro"
-            aria-pressed={vertical === "todas"}
-            onClick={() => setVertical("todas")}
-          >
-            Todas
-          </button>
+        <div className="f1-filtros" role="group" aria-label="Buscar por área">
           {VERTICAIS.map((v) => (
             <button
               key={v.id}
               type="button"
               className="f1-filtro"
               aria-pressed={vertical === v.id}
-              onClick={() => setVertical(v.id)}
+              onClick={() => setVertical(vertical === v.id ? "todas" : v.id)}
             >
               {v.label}
               <span style={{ opacity: 0.6 }}> {contagem.get(v.id) ?? 0}</span>
@@ -119,18 +160,29 @@ export function Descoberta() {
           ))}
         </div>
 
-        <div className="f1-busca">
-          <label htmlFor="f1-q" className="sr-only" style={{ position: "absolute", left: -9999 }}>
+        <form
+          className="f1-busca"
+          onSubmit={(e) => {
+            // a filtragem é local e já acontece a cada tecla; o botão existe
+            // para quem termina de digitar e procura onde confirmar
+            e.preventDefault();
+          }}
+        >
+          <label htmlFor="f1-q" style={{ position: "absolute", left: -9999 }}>
             Descreva sua necessidade ou digite uma solução
           </label>
           <input
             id="f1-q"
             type="search"
+            autoComplete="off"
             value={termo}
             onChange={(e) => setTermo(e.target.value)}
-            placeholder="Descreva sua necessidade ou digite uma solução"
+            placeholder="Ex.: vou viajar, proteger minha família, saúde para minha equipe"
           />
-        </div>
+          <button type="submit" className="f1-btn f1-btn-p">
+            Encontrar soluções
+          </button>
+        </form>
 
         <div className="f1-atalhos">
           <span>Experimente:</span>
@@ -141,36 +193,53 @@ export function Descoberta() {
           ))}
         </div>
 
-        {termo.trim().length >= 2 ? (
-          resultados.length > 0 ? (
-            <div className="f1-res">
-              {resultados.map((i) => (
-                <Link
-                  key={i.chave}
-                  to={i.rota.to}
-                  params={i.rota.params}
-                  search={i.rota.search}
-                  hash={i.rota.hash}
-                >
-                  <strong>{i.nome}</strong>
-                  <small>
-                    {VERTICAIS.find((v) => v.id === i.vertical)?.label} ·{" "}
-                    {i.perfil === "pessoal" ? "Você e família" : "Sua empresa"}
-                  </small>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <p className="f1-vazio">
-              Nada encontrado para "{termo}". Tente outra palavra ou fale com um consultor.
-            </p>
-          )
+        <div className="f1-res-topo">
+          <h3 id="f1-res-h">{tituloResultados}</h3>
+          {filtrando && (
+            <button type="button" className="f1-limpar" onClick={verTodasAsAreas}>
+              Ver todas as áreas
+            </button>
+          )}
+        </div>
+
+        {resultados.length > 0 ? (
+          <div className="f1-res" aria-labelledby="f1-res-h">
+            {resultados.map((i) => (
+              <Link
+                key={i.chave}
+                to={i.rota.to}
+                params={i.rota.params}
+                search={i.rota.search}
+                hash={i.rota.hash}
+              >
+                <strong>{i.nome}</strong>
+                <small>
+                  {VERTICAIS.find((v) => v.id === i.vertical)?.label} ·{" "}
+                  {i.perfil === "pessoal" ? "Você e família" : "Sua empresa"}
+                </small>
+              </Link>
+            ))}
+          </div>
         ) : (
           <p className="f1-vazio">
-            São {CATALOGO.length} soluções no catálogo. Use os filtros, descreva o seu momento ou
-            comece por um dos atalhos acima.
+            Nada encontrado para "{termo}". Tente outra palavra ou fale com um consultor.
           </p>
         )}
+
+        <p aria-live="polite" style={{ position: "absolute", left: -9999 }}>
+          {filtrando ? tituloResultados : ""}
+        </p>
+
+        <p className="f1-vazio">
+          São {CATALOGO.length} soluções no catálogo. Use os filtros, descreva o seu momento ou
+          comece por um dos atalhos acima.
+        </p>
+
+        <div className="f1-garantias">
+          {GARANTIAS.map((g) => (
+            <span key={g}>{g}</span>
+          ))}
+        </div>
       </div>
     </section>
   );
