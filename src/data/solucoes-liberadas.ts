@@ -7907,7 +7907,7 @@ export const solucoesLiberadas = [
               {
                 "id": "cartoes-de-credito-premium",
                 "nome": "Cartões de crédito premium",
-                "perfil": "PJ",
+                "perfil": "PF",
                 "descricao": "Arranjo de escolha para cartões de crédito premium, estruturando objetivo, horizonte, elegibilidade, garantia ou patrimônio com critério.",
                 "caracteristicas": [
                   "Perfil, documentação, condições, custos, horizontes, garantias, elegibilidade e comparação de alternativas."
