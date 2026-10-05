@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChartNoAxesCombined, Handshake, HeartPulse, KeyRound, ShieldCheck } from "lucide-react";
 import { VERTICAIS } from "@/lib/verticais";
@@ -29,9 +30,32 @@ const ICONES: Record<string, typeof ShieldCheck> = {
 
 export function NavegacaoRapida() {
   const { perfil, definirPerfil } = usarPerfil();
+  const barra = useRef<HTMLElement>(null);
+
+  /**
+   * A altura declarada no CSS é o ponto de partida, não a verdade. A barra
+   * cresce com a fonte renderizada, com o idioma do rótulo e com a largura da
+   * tela, e no celular media 98px contra os 92px declarados: seis pixels de
+   * conteúdo ficavam embaixo dela no fim da página. Aqui ela mede a si mesma e
+   * reescreve a variável, que é o que empurra o rodapé, o aviso de cookies e o
+   * botão flutuante. Assim a conta não depende de alguém reconferir o número.
+   */
+  useEffect(() => {
+    const el = barra.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const medir = () =>
+      document.documentElement.style.setProperty(
+        "--rapida-altura",
+        `${Math.ceil(el.getBoundingClientRect().height)}px`,
+      );
+    medir();
+    const observador = new ResizeObserver(medir);
+    observador.observe(el);
+    return () => observador.disconnect();
+  }, []);
 
   return (
-    <nav className="p10-rapida" aria-label="Navegação rápida">
+    <nav className="p10-rapida" aria-label="Navegação rápida" ref={barra}>
       <style>{`
         :root { --rapida-altura: 62px; }
         @media (max-width: 720px) { :root { --rapida-altura: 92px; } }

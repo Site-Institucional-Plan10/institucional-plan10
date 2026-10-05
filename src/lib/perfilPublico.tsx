@@ -18,12 +18,24 @@ const CHAVE = "plan10:perfil";
 interface Contexto {
   perfil: PerfilPublico | "todos";
   definirPerfil: (p: PerfilPublico | "todos") => void;
+  /**
+   * Verdadeiro depois de a preferência salva ter sido lida.
+   *
+   * Existe por uma questão de ordem. O efeito que lê o storage roda aqui, no
+   * provedor, e os efeitos dos componentes filhos rodam antes do do pai. Quem
+   * decide algo a partir do público, como a sanfona que um link pediu para
+   * abrir, decidiria no quadro em que o público ainda é "todos" e veria a
+   * escolha salva chegar depois, desfazendo o que acabou de fazer. Com isto,
+   * espera-se o valor definitivo e decide-se uma vez.
+   */
+  pronto: boolean;
 }
 
-const Ctx = createContext<Contexto>({ perfil: "todos", definirPerfil: () => {} });
+const Ctx = createContext<Contexto>({ perfil: "todos", definirPerfil: () => {}, pronto: false });
 
 export function ProvedorPerfil({ children }: { children: React.ReactNode }) {
   const [perfil, setPerfil] = useState<PerfilPublico | "todos">("todos");
+  const [pronto, setPronto] = useState(false);
 
   // só depois da hidratação, senão servidor e cliente divergem no primeiro quadro
   useEffect(() => {
@@ -33,6 +45,7 @@ export function ProvedorPerfil({ children }: { children: React.ReactNode }) {
     } catch {
       /* storage indisponível: segue com "todos" */
     }
+    setPronto(true);
   }, []);
 
   const definirPerfil = useCallback((p: PerfilPublico | "todos") => {
@@ -45,7 +58,7 @@ export function ProvedorPerfil({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  return <Ctx.Provider value={{ perfil, definirPerfil }}>{children}</Ctx.Provider>;
+  return <Ctx.Provider value={{ perfil, definirPerfil, pronto }}>{children}</Ctx.Provider>;
 }
 
 export function usarPerfil() {

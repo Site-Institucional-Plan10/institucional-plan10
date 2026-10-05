@@ -6,6 +6,9 @@ import { PageTheme, logoFor } from "@/components/plan10/PageTheme";
 import { heroSolucao, contextoDe } from "@/lib/imagery";
 import { FIN_HUB } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
+import { Sanfonas } from "@/components/solucoes/Sanfonas";
+import { VERTICAIS, verticalPorHub } from "@/lib/verticais";
+import { whatsappUrl } from "@/lib/plan10";
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
   loader: ({ params }): { solucao: Solucao } => {
@@ -35,32 +38,18 @@ export const Route = createFileRoute("/solucoes/$solucao/")({
 
 function SolucaoPage() {
   const { solucao } = SolucaoRoute.useLoaderData() as { solucao: Solucao };
-  useRolarAteTrilha(solucao.slug);
+  const { abrir } = SolucaoRoute.useSearch();
+  // com um link apontando para uma sanfona, a descida até a trilha sai de cena:
+  // quem manda na rolagem é o destino pedido, e duas rolagens juntas brigam
+  useRolarAteTrilha(solucao.slug, !abrir);
 
   // Financeiro tem imagens temáticas próprias; as demais soluções seguem o pool.
   const heroImg = solucao.slug === "financeiras" ? FIN_HUB.hero : heroSolucao(solucao.slug);
   const ctxImg =
     solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src, solucao.slug);
-  // No financeiro, ordena por relevância comercial (crédito e financiamentos primeiro).
-  const FIN_ORDER = [
-    "credito-e-liquidez",
-    "financiamentos",
-    "investimentos-previdencia-e-reservas",
-    "servicos-financeiros-e-contas",
-    "garantias-financeiras",
-    "capitalizacao",
-  ];
-  const orderIdx = (slug: string) => {
-    const i = FIN_ORDER.indexOf(slug);
-    return i === -1 ? 99 : i;
-  };
-  const activeCatsRaw = solucao.categorias.filter((c) => c.nucleos.length > 0);
-  const activeCats =
-    solucao.slug === "financeiras"
-      ? [...activeCatsRaw].sort((a, b) => orderIdx(a.slug) - orderIdx(b.slug))
-      : activeCatsRaw;
-  const wipCats = solucao.categorias.filter((c) => c.nucleos.length === 0);
   const logo = logoFor(solucao.slug);
+  const estaFrente = verticalPorHub(solucao.slug);
+  const outrasFrentes = VERTICAIS.filter((v) => v.hub !== solucao.slug);
 
   return (
     <PageTheme slug={solucao.slug}>
@@ -84,35 +73,7 @@ function SolucaoPage() {
         </div>
       </nav>
 
-      {/* Caminhos disponíveis, logo abaixo do hero */}
-      <section className="sec">
-        <div className="wrap">
-          <h2 className="p10-h2" style={{ marginBottom: 28 }}>
-            Caminhos disponíveis
-          </h2>
-          <div className="p10-cards">
-            {activeCats.map((c) => (
-              <Link
-                key={c.slug}
-                to="/solucoes/$solucao/$categoria"
-                params={{ solucao: solucao.slug, categoria: c.slug }}
-                className="p10-card"
-              >
-                <h3>{c.nome}</h3>
-                <span className="arrow" aria-hidden>
-                  →
-                </span>
-              </Link>
-            ))}
-            {wipCats.map((c) => (
-              <div key={c.slug} className="p10-card disabled" aria-disabled="true">
-                <h3>{c.nome}</h3>
-                <span className="arrow">Em breve</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Sanfonas solucao={solucao} abrir={abrir} />
 
       {/* Contexto: abertura consultiva + imagem editorial */}
       <section className="sec sec-alt">
@@ -133,6 +94,58 @@ function SolucaoPage() {
           <figure className="p10-fig">
             <img src={ctxImg.src} alt={ctxImg.alt} loading="lazy" />
           </figure>
+        </div>
+      </section>
+
+      {/* Próximo passo: o consultor e as outras quatro frentes */}
+      <section className="sec sec-dark" aria-labelledby="passo-h">
+        <div className="wrap" style={{ display: "grid", gap: 30 }}>
+          <div>
+            <h2 className="p10-h2" id="passo-h">
+              Próximo passo
+            </h2>
+            <p className="p10-lede">
+              Traga o seu momento para um consultor da Plan10. A conversa serve para entender o
+              contexto e apontar o caminho com critério; a decisão fica com você.
+            </p>
+          </div>
+          <a
+            className="btn btn-primary"
+            style={{ justifySelf: "start" }}
+            href={whatsappUrl(
+              `Olá! Quero falar com um consultor sobre ${estaFrente?.label ?? solucao.nome}.`,
+            )}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar com um consultor →
+          </a>
+          <div style={{ borderTop: "1px solid rgba(244,240,232,.16)", paddingTop: 24 }}>
+            <p className="eyebrow" style={{ marginBottom: 14 }}>
+              Também pode fazer sentido
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+              {outrasFrentes.map((v) => (
+                <Link
+                  key={v.id}
+                  to="/solucoes/$solucao"
+                  params={{ solucao: v.hub }}
+                  style={{
+                    fontFamily: "var(--fb)",
+                    fontSize: ".9rem",
+                    fontWeight: 600,
+                    color: "#F4F0E8",
+                    textDecoration: "none",
+                    border: "1px solid rgba(244,240,232,.26)",
+                    borderRadius: 999,
+                    padding: "9px 17px",
+                  }}
+                >
+                  {v.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </PageTheme>
