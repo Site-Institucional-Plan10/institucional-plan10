@@ -36,7 +36,13 @@ function suavizar(t: number) {
 // roda lá. No navegador ele é obrigatório: precisa ser antes da pintura.
 const useEfeitoDeLayout = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
-export function useRolarAteTrilha(chave: string) {
+/**
+ * `ativo` em falso mantém só o reposicionamento no topo e abre mão da descida.
+ * É o caso da página da vertical aberta por um link que já aponta para uma
+ * sanfona: o destino é outro, e duas rolagens automáticas ao mesmo tempo
+ * terminam numa briga de quadro contra quadro.
+ */
+export function useRolarAteTrilha(chave: string, ativo = true) {
   /**
    * O router roda com scrollRestoration ligado, então a página nova nasce na
    * posição em que a anterior estava. Sem isto ela pinta um quadro no meio do
@@ -50,6 +56,7 @@ export function useRolarAteTrilha(chave: string) {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+    if (!ativo) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let quadro = 0;
@@ -104,5 +111,5 @@ export function useRolarAteTrilha(chave: string) {
     }
 
     return parar;
-  }, [chave]);
+  }, [chave, ativo]);
 }

@@ -1,58 +1,62 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PremiumHero } from "@/components/home/PremiumHero";
-import { BrandPromise } from "@/components/home/BrandPromise";
-import { SolutionsShowcase } from "@/components/sections/SolutionsShowcase";
+import { EstiloFase1 } from "@/components/home/fase1/EstiloFase1";
+import { Especialidades } from "@/components/home/fase1/Especialidades";
+import { FoqueNasConquistas, ContratacaoOnline, Metodo, Perfis } from "@/components/home/fase1/BlocosHome";
+import { Descoberta } from "@/components/home/fase1/Descoberta";
+import { Seguradoras } from "@/components/home/fase1/Seguradoras";
+import { Experiencia, Perguntas, CtaFinal } from "@/components/home/fase1/Fechamento";
+import { BlogHome } from "@/components/home/fase1/BlogHome";
 import { canonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Plan10 | Proteção, saúde e planejamento" },
-      { name: "description", content: "Consultoria de proteção, saúde e planejamento para pessoas, famílias e empresas. Seu futuro muito mais tranquilo." },
-      { property: "og:title", content: "Plan10, Seu futuro muito mais tranquilo" },
-      { property: "og:description", content: "Proteção, saúde e planejamento organizados com clareza e critério." },
+      { title: "Plan10 | Soluções e seguros para você, sua família e sua empresa" },
+      {
+        name: "description",
+        content:
+          "Consultoria e corretora de seguros. A Plan10 ajuda a comparar as opções e escolher com clareza o que faz sentido para o seu momento.",
+      },
+      { property: "og:title", content: "Plan10, suas conquistas merecem horizontes tranquilos" },
+      {
+        property: "og:description",
+        content: "Soluções e seguros para você, sua família e sua empresa.",
+      },
       { property: "og:url", content: canonical("/") },
     ],
-    links: [
-      { rel: "canonical", href: canonical("/") },
-    ],
+    links: [{ rel: "canonical", href: canonical("/") }],
   }),
   component: HomePage,
 });
 
+/**
+ * Ordem exigida pelo pacote de integração: hero, especialidades, "Foque nas
+ * conquistas", CTA de contratação online, método, perfis, descoberta,
+ * seguradoras, experiência, perguntas, blog e CTA final.
+ *
+ * Duas regras de ordem são explícitas e estão respeitadas: a descoberta vem
+ * logo depois dos perfis, e as seguradoras logo depois da descoberta.
+ *
+ * O bloco Plan10 Resolve fica fora desta revisão, como o documento pede, com a
+ * estrutura preservada no repositório para reavaliação futura.
+ */
 function HomePage() {
   return (
     <>
+      <EstiloFase1 />
       <PremiumHero />
-      <SolutionsShowcase />
-      <BrandPromise />
-      <section style={{ background: "#F4F2EC", padding: "40px 24px 44px" }}>
-        <style>{`
-          .home-editorial { margin: 0; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px rgba(12,35,64,.16); max-width: 1080px; margin-inline: auto; position: relative; }
-          .home-editorial img { display: block; width: 100%; object-fit: cover; object-position: center; aspect-ratio: 21 / 8; }
-          .home-editorial figcaption {
-            position: absolute; left: 0; bottom: 0; right: 0; padding: 52px 40px 34px;
-            background: linear-gradient(0deg, rgba(6,16,26,.95) 0%, rgba(6,16,26,.82) 32%, rgba(6,16,26,.5) 62%, rgba(6,16,26,.14) 85%, transparent 100%);
-            color: #FFFFFF;
-          }
-          .home-editorial figcaption p {
-            font-family: var(--font-sans); font-weight: 500;
-            font-size: clamp(1.15rem, 2.2vw, 1.7rem); line-height: 1.25; letter-spacing: -.02em;
-            margin: 0; max-width: 24ch; text-shadow: 0 2px 20px rgba(0,0,0,.35);
-          }
-          @media (max-width: 640px) { .home-editorial img { aspect-ratio: 4 / 3; } .home-editorial figcaption { padding: 26px 22px 22px; } }
-        `}</style>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-          <figure className="home-editorial">
-            <img
-              src="/assets/images/familia-ao-entardecer.jpg"
-              alt="Família reunida no jardim de casa moderna ao pôr do sol"
-              loading="lazy"
-            />
-            <figcaption><p>Um futuro muito mais tranquilo, para a sua família e para o seu negócio.</p></figcaption>
-          </figure>
-        </div>
-      </section>
+      <Especialidades />
+      <FoqueNasConquistas />
+      <ContratacaoOnline />
+      <Metodo />
+      <Perfis />
+      <Descoberta />
+      <Seguradoras />
+      <Experiencia />
+      <Perguntas />
+      <BlogHome />
+      <CtaFinal />
     </>
   );
 }

@@ -1,12 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import { Menu, MessageCircle, Search, X } from "lucide-react";
+import { ChevronDown, Menu, MessageCircle, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { solutions } from "@/data/solutions";
 import { paletteFor } from "@/components/plan10/PageTheme";
+import { MegaMenu } from "@/components/layout/MegaMenu";
+import { Heart } from "lucide-react";
+import { usarFavoritos } from "@/lib/favoritos";
 
 // Rótulos curtos das soluções para o header (o nome completo é longo demais)
 const SHORT_SOL: Record<string, string> = {
@@ -19,18 +22,20 @@ const solutionNav = solutions.map((s) => ({
   color: paletteFor(s.slug).vp,
 }));
 
-// Nav desktop: as cinco soluções ficam no primeiro nível, com "Soluções" abrindo a
-// página mãe. A barra é comprimida de propósito (fonte e respiro menores, acento de
-// hover no lugar do ponto colorido) porque no arranjo antigo ela tinha 770px e só
-// aparecia a partir de 1280px, que foi a reclamação do cliente.
-const navLinks: Array<
-  | { to: "/" | "/quem-somos" | "/solucoes" | "/blog"; label: string }
-  | { solucao: string; label: string; color: string }
-> = [
-  { to: "/quem-somos", label: "Quem somos" },
-  { to: "/solucoes", label: "Soluções" },
-  ...solutionNav.map((s) => ({ solucao: s.slug, label: s.label, color: s.color })),
-  { to: "/blog", label: "Blog" },
+// Nav desktop. Os cinco hubs saíram da barra porque agora quem os apresenta é o
+// mega menu, com seis destaques cada, o que o pacote de integração pede. A barra
+// fica curta e o menu entrega muito mais do que cinco links soltos entregavam.
+/**
+ * Os rótulos do wireframe. Lá os quatro são âncoras para seções da Home; aqui
+ * Blog e Sobre apontam para as páginas que já existem, porque o pacote pede
+ * para preferir a rota interna sempre que houver uma equivalente. Os outros
+ * dois seguem como âncora, que é onde o conteúdo mora.
+ */
+const navLinks: Array<{ to: "/" | "/quem-somos" | "/blog"; hash?: string; label: string }> = [
+  { to: "/", hash: "perfis", label: "Para empresas" },
+  { to: "/", hash: "metodo", label: "Como atuamos" },
+  { to: "/blog", label: "Blog Plan10" },
+  { to: "/quem-somos", label: "Sobre a Plan10" },
 ];
 
 // Mobile menu structure with dividers
@@ -243,6 +248,10 @@ function SearchBox({ onClose }: { onClose: () => void }) {
 
 export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [megaAberto, setMegaAberto] = useState(false);
+  // o contador e o painel são os mesmos do resto do site: um estado só
+  const { quantidade: favoritos, abrir: abrirFavoritos } = usarFavoritos();
+  const gatilhoMega = useRef<HTMLButtonElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileClosing, setMobileClosing] = useState(false);
   const location = useLocation();
@@ -275,6 +284,33 @@ export function Header() {
 
   return (
     <>
+      <style>{`
+        .p10-hd-fav {
+          display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 13px;
+          border-radius: 999px; border: 1px solid #E8E4DA; background: #fff; cursor: pointer;
+          font-size: 13px; font-weight: 600; color: #1A1A1A; white-space: nowrap;
+        }
+        .p10-hd-fav:hover { border-color: #C45016; color: #C45016; }
+        .p10-hd-fav:focus-visible { outline: 2px solid #C45016; outline-offset: 2px; }
+        .p10-hd-fav svg { display: block; color: #C45016; }
+        .p10-hd-fav-n {
+          min-width: 20px; height: 20px; padding: 0 5px; border-radius: 999px; background: #0E2438;
+          color: #fff; font-size: 11px; font-weight: 700; display: inline-flex;
+          align-items: center; justify-content: center;
+        }
+        @media (max-width: 640px) { .p10-hd-fav-rot { display: none; } }
+
+        .p10-hd-cotar {
+          display: flex; align-items: center; justify-content: space-between; gap: 12px;
+          padding: 9px 16px; background: #FDF4EF; border-top: 1px solid #F0DFD2;
+          font-size: 13px; font-weight: 600; color: #8A3A10;
+        }
+        .p10-hd-cotar button {
+          border: 0; background: #C45016; color: #fff; border-radius: 999px; padding: 8px 15px;
+          font-size: 12.5px; font-weight: 700; cursor: pointer; white-space: nowrap;
+        }
+        .p10-hd-cotar button:hover { background: #A8410F; }
+      `}</style>
       <header
         className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm"
         style={{ borderBottom: "1px solid #E8E8E8" }}
@@ -289,38 +325,40 @@ export function Header() {
             <HeaderLogo size={42} />
           </Link>
 
-          <nav className="hidden min-[960px]:flex items-center gap-0.5">
-            {navLinks.map((l) =>
-              "solucao" in l ? (
-                <Link
-                  key={l.solucao}
-                  to="/solucoes/$solucao"
-                  params={{ solucao: l.solucao }}
-                  className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
-                  style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
-                >
-                  <span className="transition-colors group-hover:text-orange">{l.label}</span>
-                  {/* o acento do hub vira a própria barra do hover, em vez de um ponto
-                      que reservava largura em todo item da barra */}
-                  <span
-                    className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 transition-transform group-hover:scale-x-100"
-                    style={{ backgroundColor: l.color }}
-                  />
-                </Link>
-              ) : (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
-                  style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
-                >
-                  <span className="transition-colors group-hover:text-orange">{l.label}</span>
-                  <span className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-                </Link>
-              ),
-            )}
+          <nav className="hidden min-[960px]:flex items-center gap-0.5" aria-label="Navegação principal">
+            <button
+              type="button"
+              ref={gatilhoMega}
+              onClick={() => setMegaAberto((v) => !v)}
+              aria-expanded={megaAberto}
+              aria-controls="p10-mega"
+              className="group relative flex items-center gap-1 px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap cursor-pointer"
+              style={{ color: "#1A1A1A" }}
+            >
+              <span className="transition-colors group-hover:text-orange">Soluções</span>
+              <ChevronDown
+                size={14}
+                className="transition-transform"
+                style={{ transform: megaAberto ? "rotate(180deg)" : "none" }}
+                aria-hidden
+              />
+              <span className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+            </button>
+            {navLinks.map((l) => (
+              <Link
+                key={l.label}
+                to={l.to}
+                hash={l.hash}
+                className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
+                style={{ color: "#1A1A1A" }}
+                // sem o hash na conta, os dois atalhos da Home ficariam ativos juntos
+                activeOptions={{ includeHash: true }}
+                activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
+              >
+                <span className="transition-colors group-hover:text-orange">{l.label}</span>
+                <span className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-2 pr-1 md:pr-0">
@@ -331,6 +369,16 @@ export function Header() {
               aria-label="Buscar"
             >
               <Search size={20} />
+            </button>
+            <button
+              type="button"
+              onClick={abrirFavoritos}
+              className="p10-hd-fav"
+              aria-label={`Favoritos: ${favoritos} ${favoritos === 1 ? "solução" : "soluções"}`}
+            >
+              <Heart size={17} aria-hidden fill={favoritos > 0 ? "currentColor" : "none"} />
+              <span className="p10-hd-fav-rot">Favoritos</span>
+              <span className="p10-hd-fav-n">{favoritos}</span>
             </button>
             <Link to="/fale-conosco" className="hidden md:inline-flex flex-shrink-0">
               <Button variant="secondary" size="sm" className="whitespace-nowrap px-3 text-[13px]">Falar com consultor</Button>
@@ -345,7 +393,26 @@ export function Header() {
             </button>
           </div>
         </div>
+        {/* A barra de cotação do wireframe: só aparece com seleção, e fica
+            presa ao cabeçalho, não no rodapé, para o celular não ganhar uma
+            segunda barra fixa brigando com a navegação rápida. */}
+        {favoritos > 0 && (
+          <div className="p10-hd-cotar min-[960px]:hidden">
+            <span>
+              {favoritos} {favoritos === 1 ? "favorito" : "favoritos"}
+            </span>
+            <button type="button" onClick={abrirFavoritos}>
+              Cotar favoritos <span aria-hidden>→</span>
+            </button>
+          </div>
+        )}
         {searchOpen && <SearchBox onClose={() => setSearchOpen(false)} />}
+        <MegaMenu
+          aberto={megaAberto}
+          aoFechar={() => setMegaAberto(false)}
+          idPainel="p10-mega"
+          refGatilho={gatilhoMega}
+        />
       </header>
 
       {/* Mobile menu overlay */}

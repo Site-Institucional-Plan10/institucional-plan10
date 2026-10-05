@@ -14,6 +14,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { CookieBanner } from "@/components/common/CookieBanner";
+import { NavegacaoRapida } from "@/components/layout/NavegacaoRapida";
+import { ProvedorPerfil } from "@/lib/perfilPublico";
+import { ProvedorFavoritos } from "@/lib/favoritos";
+import { PainelFavoritos } from "@/components/favoritos/PainelFavoritos";
 
 function NotFoundComponent() {
   return (
@@ -144,13 +148,19 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <Header />
-      <main className="min-h-screen pt-0 vertical-page-main">
-        <Outlet />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-      <CookieBanner />
+      <ProvedorPerfil>
+        <ProvedorFavoritos>
+        <Header />
+        <main className="min-h-screen pt-0 vertical-page-main">
+          <Outlet />
+        </main>
+        <Footer />
+        <WhatsAppButton />
+        <CookieBanner />
+        <NavegacaoRapida />
+        <PainelFavoritos />
+        </ProvedorFavoritos>
+      </ProvedorPerfil>
     </QueryClientProvider>
   );
 }
