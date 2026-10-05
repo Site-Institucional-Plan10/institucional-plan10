@@ -16,6 +16,8 @@ import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { CookieBanner } from "@/components/common/CookieBanner";
 import { NavegacaoRapida } from "@/components/layout/NavegacaoRapida";
 import { ProvedorPerfil } from "@/lib/perfilPublico";
+import { ProvedorFavoritos } from "@/lib/favoritos";
+import { PainelFavoritos } from "@/components/favoritos/PainelFavoritos";
 
 function NotFoundComponent() {
   return (
@@ -147,6 +149,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <ProvedorPerfil>
+        <ProvedorFavoritos>
         <Header />
         <main className="min-h-screen pt-0 vertical-page-main">
           <Outlet />
@@ -155,6 +158,8 @@ function RootComponent() {
         <WhatsAppButton />
         <CookieBanner />
         <NavegacaoRapida />
+        <PainelFavoritos />
+        </ProvedorFavoritos>
       </ProvedorPerfil>
     </QueryClientProvider>
   );

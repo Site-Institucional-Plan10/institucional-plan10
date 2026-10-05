@@ -4,6 +4,7 @@ import type { Categoria, Nucleo, Product, Solucao } from "@/data/solutions";
 import { usarPerfil } from "@/lib/perfilPublico";
 import type { PerfilPublico } from "@/lib/verticais";
 import { whatsappUrl } from "@/lib/plan10";
+import { BotaoFavoritar, EstiloFavoritar } from "@/components/favoritos/BotaoFavoritar";
 
 /**
  * As sanfonas da vertical: a pessoa abre a categoria e a solução na própria
@@ -182,6 +183,7 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
   return (
     <section className="sec" id="caminhos" aria-labelledby="caminhos-h">
       <style>{ESTILO}</style>
+      <EstiloFavoritar />
 
       <div className="wrap">
         <h2 className="p10-h2" id="caminhos-h">
@@ -308,6 +310,10 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
                                 >
                                   Ver detalhes
                                 </Link>
+                                <BotaoFavoritar
+                                  chave={`${solucao.slug}/${categoria.slug}/${nucleo.slug}/${produto.id}`}
+                                  nome={produto.nome}
+                                />
                               </div>
                             </li>
                           ))}

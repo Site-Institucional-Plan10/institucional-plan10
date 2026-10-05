@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { buscar, CATALOGO, DESTAQUES, VERTICAIS, type ItemCatalogo, type VerticalId } from "@/lib/verticais";
 import { usarPerfil } from "@/lib/perfilPublico";
+import { usarFavoritos } from "@/lib/favoritos";
+import { BotaoFavoritar, EstiloFavoritar } from "@/components/favoritos/BotaoFavoritar";
 
 /**
  * "O que você quer proteger ou realizar?": a descoberta da Home.
@@ -30,6 +32,7 @@ export function Descoberta() {
   const [termo, setTermo] = useState("");
   // o público vem da navegação rápida: é a mesma escolha no site inteiro
   const { perfil, definirPerfil } = usarPerfil();
+  const { quantidade: favoritos, abrir: abrirFavoritos } = usarFavoritos();
   const [vertical, setVertical] = useState<VerticalId | "todas">("todas");
 
   const buscando = termo.trim().length >= 2;
@@ -61,7 +64,9 @@ export function Descoberta() {
     ? resultados.length === 0
       ? "Nada encontrado"
       : `${resultados.length} ${resultados.length === 1 ? "solução encontrada" : "soluções encontradas"}`
-    : "Atalhos para começar";
+    : perfil === "todos"
+      ? "Atalhos para começar"
+      : `Soluções para ${perfil === "empresa" ? "sua empresa" : "você e sua família"}`;
 
   function verTodasAsAreas() {
     setTermo("");
@@ -70,6 +75,7 @@ export function Descoberta() {
 
   return (
     <section className="f1 f1-sec" id="descoberta" aria-labelledby="desc-h">
+      <EstiloFavoritar />
       <style>{`
         .f1-filtros { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
         .f1-filtro {
@@ -107,15 +113,33 @@ export function Descoberta() {
         .f1-res { display: grid; gap: 10px; margin-top: 16px; grid-template-columns: 1fr; }
         @media (min-width: 720px) { .f1-res { grid-template-columns: repeat(2, 1fr); } }
         @media (min-width: 1080px) { .f1-res { grid-template-columns: repeat(3, 1fr); } }
-        .f1-res a {
-          display: flex; flex-direction: column; gap: 4px; text-decoration: none;
-          border: 1px solid #E6E1D6; border-radius: 10px; padding: 14px 16px; background: #fff;
-          transition: border-color .2s ease;
-        }
-        .f1-res a:hover { border-color: #C6A24A; }
+        .f1-res a { display: flex; flex-direction: column; gap: 4px; text-decoration: none; }
         .f1-res strong { font-size: .95rem; font-weight: 600; color: #16222F; }
         .f1-res small { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: #9AA1AC; }
         .f1-vazio { margin-top: 16px; color: #6B7482; font-size: .95rem; }
+        .f1-res-card {
+          display: flex; flex-direction: column; gap: 10px; align-items: flex-start;
+          border: 1px solid #E6E1D6; border-radius: 10px; padding: 14px 16px; background: #fff;
+          transition: border-color .2s ease;
+        }
+        .f1-res-card:hover { border-color: #C6A24A; }
+        .f1-nada {
+          margin-top: 16px; border: 1px dashed #D9D2C4; border-radius: 12px;
+          padding: 22px 20px; display: grid; gap: 10px; background: #FBFAF6;
+        }
+        .f1-nada strong { font-size: 1.02rem; font-weight: 600; color: #16222F; }
+        .f1-nada p { font-size: .93rem; line-height: 1.55; color: #5B6472; margin: 0; }
+        .f1-conv {
+          display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+          gap: 14px; margin-top: 28px; padding: 18px 20px; border-radius: 12px; background: #F4F2EC;
+        }
+        .f1-conv p { margin: 0; font-size: .92rem; line-height: 1.5; color: #5B6472; }
+        .f1-conv strong { color: #16222F; font-weight: 600; }
+        .f1-conv-n {
+          display: inline-flex; align-items: center; justify-content: center; min-width: 20px;
+          height: 20px; padding: 0 5px; margin-left: 4px; border-radius: 999px;
+          background: #0E2438; color: #fff; font-size: .68rem; font-weight: 700;
+        }
         .f1-garantias {
           display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 34px;
           padding-top: 22px; border-top: 1px solid #E6E1D6;
@@ -205,25 +229,36 @@ export function Descoberta() {
         {resultados.length > 0 ? (
           <div className="f1-res" aria-labelledby="f1-res-h">
             {resultados.map((i) => (
-              <Link
-                key={i.chave}
-                to={i.rota.to}
-                params={i.rota.params}
-                search={i.rota.search}
-                hash={i.rota.hash}
-              >
-                <strong>{i.nome}</strong>
-                <small>
-                  {VERTICAIS.find((v) => v.id === i.vertical)?.label} ·{" "}
-                  {i.perfil === "pessoal" ? "Você e família" : "Sua empresa"}
-                </small>
-              </Link>
+              <div key={i.chave} className="f1-res-card">
+                <Link
+                  to={i.rota.to}
+                  params={i.rota.params}
+                  search={i.rota.search}
+                  hash={i.rota.hash}
+                >
+                  <strong>{i.nome}</strong>
+                  <small>
+                    {VERTICAIS.find((v) => v.id === i.vertical)?.label} ·{" "}
+                    {i.perfil === "pessoal" ? "Você e família" : "Sua empresa"}
+                  </small>
+                </Link>
+                <BotaoFavoritar chave={i.chave} nome={i.nome} />
+              </div>
             ))}
           </div>
         ) : (
-          <p className="f1-vazio">
-            Nada encontrado para "{termo}". Tente outra palavra ou fale com um consultor.
-          </p>
+          <div className="f1-nada">
+            <strong>Vamos entender melhor sua necessidade.</strong>
+            <p>Experimente descrever seu objetivo de outra forma ou ampliar as áreas e os perfis.</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 9 }}>
+              <button type="button" className="f1-btn f1-btn-s" onClick={verTodasAsAreas}>
+                Ampliar minha busca
+              </button>
+              <Link to="/fale-conosco" className="f1-btn f1-btn-s">
+                Conversar sobre o que preciso
+              </Link>
+            </div>
+          </div>
         )}
 
         <p aria-live="polite" style={{ position: "absolute", left: -9999 }}>
@@ -234,6 +269,18 @@ export function Descoberta() {
           São {CATALOGO.length} soluções no catálogo. Use os filtros, descreva o seu momento ou
           comece por um dos atalhos acima.
         </p>
+
+        <div className="f1-conv">
+          <p>
+            <strong>Favorite pra cotar mais de um seguro / serviço</strong>
+            <br />
+            Reúna suas escolhas e peça as cotações em uma só conversa.
+          </p>
+          <button type="button" className="f1-limpar" onClick={abrirFavoritos}>
+            Ver favoritos <span className="f1-conv-n">{favoritos}</span>
+            <span aria-hidden> →</span>
+          </button>
+        </div>
 
         <div className="f1-garantias">
           {GARANTIAS.map((g) => (
