@@ -19,17 +19,23 @@ export function PremiumHero() {
   return (
     <section className="ph2" aria-labelledby="ph2-title">
       <style>{`
+        /* A foto é um <img> de verdade, não background de CSS: assim o navegador
+           escolhe a versão pelo tamanho da tela, declara proporção e carrega com
+           prioridade alta, por ser o primeiro conteúdo visível. O azul fica como
+           cor de apoio enquanto a imagem não chega. */
         .ph2 {
           position: relative; overflow: hidden;
-          background:
-            linear-gradient(100deg, rgba(9,23,38,.97) 0%, rgba(11,28,45,.92) 38%, rgba(11,28,45,.66) 70%, rgba(11,28,45,.46) 100%),
-            url('/assets/banners/veleiro-hero.jpg');
-          background-size: cover;
-          background-position: center 42%;
+          background: #0B1C2D;
           color: #F1EFEA;
           font-family: var(--font-sans);
           padding: 108px 24px 56px;
           isolation: isolate;
+        }
+        .ph2-foto { position: absolute; inset: 0; z-index: -2; }
+        .ph2-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; display: block; }
+        .ph2-veu {
+          position: absolute; inset: 0; z-index: -1;
+          background: linear-gradient(100deg, rgba(9,23,38,.97) 0%, rgba(11,28,45,.92) 38%, rgba(11,28,45,.66) 70%, rgba(11,28,45,.46) 100%);
         }
         .ph2::before {
           content: ""; position: absolute; inset: 0; z-index: -1;
@@ -104,21 +110,36 @@ export function PremiumHero() {
         @media (prefers-reduced-motion: reduce) { .ph2-btn:hover { transform: none; } }
       `}</style>
 
+      <div className="ph2-foto" aria-hidden>
+        <picture>
+          <source media="(max-width: 680px)" srcSet="/assets/fase1/hero-banner-plan10-seguros-900.webp" />
+          <img
+            src="/assets/fase1/hero-banner-plan10-seguros-1672.webp"
+            width={1672}
+            height={941}
+            alt=""
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
+      </div>
+      <div className="ph2-veu" aria-hidden />
+
       <div className="ph2-in">
-        <p className="ph2-eyebrow">Consultoria · Aconselhamento · Proteção</p>
+        <p className="ph2-eyebrow">Consultoria e corretora de seguros</p>
         <h1 id="ph2-title" className="ph2-h1">
-          Cuidado, proteção, finanças, crescimento e assistência{" "}
-          <span className="accent">conectados</span> para cada fase da vida e dos negócios.
+          Suas conquistas merecem <span className="accent">horizontes tranquilos</span>.
         </h1>
         <p className="ph2-lede">
-          A Plan10 conecta soluções em uma jornada consultiva orientada ao seu momento.
+          Soluções e seguros para você, sua família e sua empresa. A Plan10 ajuda a comparar as
+          opções e escolher com clareza o que faz sentido para o seu momento.
         </p>
         <div className="ph2-ctas">
           <Link to="/solucoes" className="ph2-btn ph2-btn-p">
-            Conhecer as soluções
+            Encontrar minha solução
           </Link>
           <a href="#fale-conosco" className="ph2-btn ph2-btn-s" onClick={irAoContato}>
-            Falar com consultor
+            Falar com um consultor
             <svg
               width="16"
               height="16"
@@ -135,10 +156,9 @@ export function PremiumHero() {
       </div>
 
       <div className="ph2-strip">
-        <span>Diagnóstico antes da recomendação</span>
-        <span>Curadoria de caminhos</span>
+        <span>Atendimento humano</span>
+        <span>Escolha com clareza</span>
         <span>Visão integrada</span>
-        <span>Acompanhamento ao longo do tempo</span>
       </div>
     </section>
   );
