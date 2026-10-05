@@ -66,11 +66,20 @@ const plural = (n: number, um: string, muitos: string) => `${n} ${n === 1 ? um :
 function criteriosDoCaminho(porque: string | undefined): string[] {
   const m = (porque ?? "").match(/(?:combina|deve considerar)\s+(.+?)\.?\s*$/i);
   if (!m) return [];
+  const vistos = new Set<string>();
   return m[1]
     .split(/\s*,\s*|\s+e\s+/)
     .map((p) => p.trim())
     .filter((p) => p.length > 2)
-    .map((p) => p.charAt(0).toUpperCase() + p.slice(1));
+    .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
+    // a planilha repete critério em pelo menos um caminho (Exclusões, em
+    // fraudes digitais). Repetido é ruído na tela e chave duplicada no React.
+    .filter((p) => {
+      const chave = p.toLowerCase();
+      if (vistos.has(chave)) return false;
+      vistos.add(chave);
+      return true;
+    });
 }
 
 interface CaminhoVisivel {
