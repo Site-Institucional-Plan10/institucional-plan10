@@ -57,7 +57,15 @@ export interface ItemCatalogo {
   hub: string;
   categoria: string;
   nucleo: string;
-  /** Rota da vertical já apontando para a sanfona deste item. */
+  /** Rota da vertical já apontando para a sanfona deste item, em partes, para o
+   *  Link do router montar sem perder navegação de página única. */
+  rota: {
+    to: "/solucoes/$solucao";
+    params: { solucao: string };
+    search: { abrir: string };
+    hash: string;
+  };
+  /** A mesma rota como texto, para uso fora do Link (canonical, sitemap, log). */
   href: string;
 }
 
@@ -81,6 +89,12 @@ export const CATALOGO: ItemCatalogo[] = solutions.flatMap((hub) => {
           hub: hub.slug,
           categoria: categoria.slug,
           nucleo: nucleo.slug,
+          rota: {
+            to: "/solucoes/$solucao" as const,
+            params: { solucao: hub.slug },
+            search: { abrir: `${categoria.slug}/${nucleo.slug}` },
+            hash: produto.id,
+          },
           href: `/solucoes/${hub.slug}?abrir=${encodeURIComponent(`${categoria.slug}/${nucleo.slug}`)}#${produto.id}`,
         } satisfies ItemCatalogo;
       }),

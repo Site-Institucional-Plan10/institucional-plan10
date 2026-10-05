@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "@tanstack/react-router";
-import { Menu, MessageCircle, Search, X } from "lucide-react";
+import { ChevronDown, Menu, MessageCircle, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { solutions } from "@/data/solutions";
 import { paletteFor } from "@/components/plan10/PageTheme";
+import { MegaMenu } from "@/components/layout/MegaMenu";
 
 // Rótulos curtos das soluções para o header (o nome completo é longo demais)
 const SHORT_SOL: Record<string, string> = {
@@ -19,17 +20,11 @@ const solutionNav = solutions.map((s) => ({
   color: paletteFor(s.slug).vp,
 }));
 
-// Nav desktop: as cinco soluções ficam no primeiro nível, com "Soluções" abrindo a
-// página mãe. A barra é comprimida de propósito (fonte e respiro menores, acento de
-// hover no lugar do ponto colorido) porque no arranjo antigo ela tinha 770px e só
-// aparecia a partir de 1280px, que foi a reclamação do cliente.
-const navLinks: Array<
-  | { to: "/" | "/quem-somos" | "/solucoes" | "/blog"; label: string }
-  | { solucao: string; label: string; color: string }
-> = [
+// Nav desktop. Os cinco hubs saíram da barra porque agora quem os apresenta é o
+// mega menu, com seis destaques cada, o que o pacote de integração pede. A barra
+// fica curta e o menu entrega muito mais do que cinco links soltos entregavam.
+const navLinks: Array<{ to: "/quem-somos" | "/blog"; label: string }> = [
   { to: "/quem-somos", label: "Quem somos" },
-  { to: "/solucoes", label: "Soluções" },
-  ...solutionNav.map((s) => ({ solucao: s.slug, label: s.label, color: s.color })),
   { to: "/blog", label: "Blog" },
 ];
 
@@ -243,6 +238,8 @@ function SearchBox({ onClose }: { onClose: () => void }) {
 
 export function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [megaAberto, setMegaAberto] = useState(false);
+  const gatilhoMega = useRef<HTMLButtonElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileClosing, setMobileClosing] = useState(false);
   const location = useLocation();
@@ -289,38 +286,37 @@ export function Header() {
             <HeaderLogo size={42} />
           </Link>
 
-          <nav className="hidden min-[960px]:flex items-center gap-0.5">
-            {navLinks.map((l) =>
-              "solucao" in l ? (
-                <Link
-                  key={l.solucao}
-                  to="/solucoes/$solucao"
-                  params={{ solucao: l.solucao }}
-                  className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
-                  style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
-                >
-                  <span className="transition-colors group-hover:text-orange">{l.label}</span>
-                  {/* o acento do hub vira a própria barra do hover, em vez de um ponto
-                      que reservava largura em todo item da barra */}
-                  <span
-                    className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 transition-transform group-hover:scale-x-100"
-                    style={{ backgroundColor: l.color }}
-                  />
-                </Link>
-              ) : (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
-                  style={{ color: "#1A1A1A" }}
-                  activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
-                >
-                  <span className="transition-colors group-hover:text-orange">{l.label}</span>
-                  <span className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
-                </Link>
-              ),
-            )}
+          <nav className="hidden min-[960px]:flex items-center gap-0.5" aria-label="Navegação principal">
+            <button
+              type="button"
+              ref={gatilhoMega}
+              onClick={() => setMegaAberto((v) => !v)}
+              aria-expanded={megaAberto}
+              aria-controls="p10-mega"
+              className="group relative flex items-center gap-1 px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap cursor-pointer"
+              style={{ color: "#1A1A1A" }}
+            >
+              <span className="transition-colors group-hover:text-orange">Soluções</span>
+              <ChevronDown
+                size={14}
+                className="transition-transform"
+                style={{ transform: megaAberto ? "rotate(180deg)" : "none" }}
+                aria-hidden
+              />
+              <span className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+            </button>
+            {navLinks.map((l) => (
+              <Link
+                key={l.to}
+                to={l.to}
+                className="group relative px-1.5 py-2 text-[13px] font-semibold transition whitespace-nowrap"
+                style={{ color: "#1A1A1A" }}
+                activeProps={{ style: { color: "#C45016" }, className: "underline underline-offset-4" }}
+              >
+                <span className="transition-colors group-hover:text-orange">{l.label}</span>
+                <span className="absolute bottom-0 left-1.5 right-1.5 h-0.5 origin-left scale-x-0 bg-orange transition-transform group-hover:scale-x-100" />
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-2 pr-1 md:pr-0">
@@ -346,6 +342,12 @@ export function Header() {
           </div>
         </div>
         {searchOpen && <SearchBox onClose={() => setSearchOpen(false)} />}
+        <MegaMenu
+          aberto={megaAberto}
+          aoFechar={() => setMegaAberto(false)}
+          idPainel="p10-mega"
+          refGatilho={gatilhoMega}
+        />
       </header>
 
       {/* Mobile menu overlay */}
