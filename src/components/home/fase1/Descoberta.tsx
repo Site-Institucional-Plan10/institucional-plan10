@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { buscar, CATALOGO, VERTICAIS, type PerfilPublico, type VerticalId } from "@/lib/verticais";
+import { buscar, CATALOGO, VERTICAIS, type VerticalId } from "@/lib/verticais";
+import { usarPerfil } from "@/lib/perfilPublico";
 
 /**
  * "O que você quer proteger ou realizar?": a descoberta da Home.
@@ -16,7 +17,8 @@ const ATALHOS = ["Vou viajar", "Comprei um apartamento", "Proteger minha equipe"
 
 export function Descoberta() {
   const [termo, setTermo] = useState("");
-  const [perfil, setPerfil] = useState<PerfilPublico | "todos">("todos");
+  // o público vem da navegação rápida: é a mesma escolha no site inteiro
+  const { perfil, definirPerfil } = usarPerfil();
   const [vertical, setVertical] = useState<VerticalId | "todas">("todas");
 
   const resultados = useMemo(() => {
@@ -86,7 +88,7 @@ export function Descoberta() {
                 type="button"
                 className="f1-filtro"
                 aria-pressed={perfil === v}
-                onClick={() => setPerfil(v)}
+                onClick={() => definirPerfil(v)}
               >
                 {r}
               </button>
