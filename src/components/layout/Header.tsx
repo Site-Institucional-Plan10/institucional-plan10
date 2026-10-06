@@ -312,6 +312,11 @@ export function Header() {
           font-size: 12.5px; font-weight: 700; cursor: pointer; white-space: nowrap;
         }
         .p10-hd-cotar button:hover { background: #A8410F; }
+        /* A classe min-[960px]:hidden do Tailwind não bastava: esta folha é
+           injetada depois da do Tailwind e, com a mesma especificidade, quem
+           vem por último manda. A barra aparecia também no desktop, duplicando
+           o botão de Favoritos do cabeçalho. */
+        @media (min-width: 960px) { .p10-hd-cotar { display: none; } }
       `}</style>
       <header
         className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm"
@@ -399,7 +404,7 @@ export function Header() {
             presa ao cabeçalho, não no rodapé, para o celular não ganhar uma
             segunda barra fixa brigando com a navegação rápida. */}
         {favoritos > 0 && (
-          <div className="p10-hd-cotar min-[960px]:hidden">
+          <div className="p10-hd-cotar">
             <span>
               {favoritos} {favoritos === 1 ? "favorito" : "favoritos"}
             </span>
