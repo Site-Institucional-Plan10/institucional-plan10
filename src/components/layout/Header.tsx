@@ -63,7 +63,7 @@ const mobileItems: MobileItem[] = [
 ];
 
 function HeaderLogo({ size = 48, light = false }: { size?: number; light?: boolean }) {
-  const { src } = useHubLogo();
+  const { src, alt } = useHubLogo();
   /**
    * Sobre fundo escuro vale o arquivo "-branco" da marca, não o filtro.
    * O antigo `brightness(0) invert(1)` achatava tudo numa silhueta branca, e a
@@ -73,7 +73,7 @@ function HeaderLogo({ size = 48, light = false }: { size?: number; light?: boole
   return (
     <img
       src={arquivo}
-      alt="Plan10"
+      alt={alt}
       {...dim(arquivo)}
       style={{ height: size, width: "auto", objectFit: "contain" }}
     />
