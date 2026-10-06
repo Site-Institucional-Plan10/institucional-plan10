@@ -30,3 +30,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# material de entrega, não faz parte do site
+entrega-fase1-plan10.html
