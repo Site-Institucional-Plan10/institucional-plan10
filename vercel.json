@@ -33,6 +33,31 @@
   ],
   "redirects": [
     {
+      "source": "/saude",
+      "destination": "/solucoes/saude",
+      "permanent": true
+    },
+    {
+      "source": "/seguros",
+      "destination": "/solucoes/protecao",
+      "permanent": true
+    },
+    {
+      "source": "/financas",
+      "destination": "/solucoes/financeiras",
+      "permanent": true
+    },
+    {
+      "source": "/consorcios",
+      "destination": "/solucoes/crescimento",
+      "permanent": true
+    },
+    {
+      "source": "/servicos-24h",
+      "destination": "/solucoes/assistencia",
+      "permanent": true
+    },
+    {
       "source": "/seguros/automovel",
       "destination": "/solucoes/protecao?abrir=veiculos-e-frotas%2Fautomoveis",
       "permanent": true
