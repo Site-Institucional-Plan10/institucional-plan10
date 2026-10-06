@@ -6,29 +6,39 @@
 export function EstiloFase1() {
   return (
     <style>{`
-      .f1 { font-family: var(--font-sans); color: #16222F; }
+      .f1 { font-family: var(--font-sans); color: #122747; }
       .f1-sec { padding: 56px 24px; }
       @media (min-width: 768px) { .f1-sec { padding: 76px 40px; } }
       .f1-wrap { max-width: 1180px; margin: 0 auto; }
-      .f1-alt { background: #F4F2EC; }
+      .f1-alt { background: #FAF9F6; }
       .f1-dark { background: linear-gradient(150deg, #0E2438 0%, #0B1D2E 100%); color: #F1EFEA; }
       .f1-dark .f1-lede, .f1-dark p { color: rgba(241,239,234,.78); }
 
+      /* Olho sem o traço da versão anterior: no wireframe é só o rótulo, em
+         caixa alta, 11px e espacejamento largo. */
       .f1-eyebrow {
-        font-size: .72rem; font-weight: 700; letter-spacing: .14em;
-        text-transform: uppercase; color: #9A7B23; margin: 0 0 10px;
-        display: inline-flex; align-items: center; gap: 10px;
+        font-size: .7rem; font-weight: 700; letter-spacing: .2em;
+        text-transform: uppercase; color: #B88933; margin: 0 0 13px; display: block;
       }
-      .f1-eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; }
-      .f1-dark .f1-eyebrow { color: #D8B879; }
+      .f1-dark .f1-eyebrow { color: #F0D29A; }
       /* A cor precisa ser explícita: a regra base de h1..h6 pinta de tinta escura
          e vence a herança da seção, então na faixa escura o título sumiria. */
       .f1-h2 {
-        font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 600; line-height: 1.12;
-        letter-spacing: -.02em; margin: 0; text-wrap: balance; color: #16222F;
+        font-family: var(--font-display);
+        font-size: clamp(1.8rem, 3.6vw, 2.7rem); font-weight: 600; line-height: 1.14;
+        letter-spacing: -.035em; margin: 0; text-wrap: balance; color: #122747;
       }
-      .f1-dark .f1-h2, .f1-dark h3 { color: #F1EFEA; }
-      .f1-lede { font-size: 1.04rem; line-height: 1.6; color: #4A5668; margin: 14px 0 0; max-width: 62ch; }
+      .f1-dark .f1-h2, .f1-dark h3 { color: #fff; }
+      .f1-lede { font-size: 1rem; line-height: 1.7; color: #5E6B7D; margin: 14px 0 0; max-width: 62ch; }
+
+      /* Cabeçalho de seção em duas colunas: título à esquerda, apoio à direita,
+         alinhados pela base. É o arranjo do wireframe. */
+      .f1-cab { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; }
+      .f1-cab > .f1-lede { max-width: 34ch; margin: 0; flex: none; }
+      @media (max-width: 900px) {
+        .f1-cab { flex-direction: column; align-items: flex-start; gap: 14px; }
+        .f1-cab > .f1-lede { max-width: 100%; }
+      }
 
       /* especialidades: título branco sobre a foto, descrição abaixo */
       /* A grade do wireframe: colunas em múltiplos de dois, cada card ocupando
@@ -95,14 +105,15 @@ export function EstiloFase1() {
 
       /* botões */
       .f1-btn {
-        display: inline-flex; align-items: center; gap: 8px; border-radius: 999px;
-        padding: 12px 22px; font-size: .9rem; font-weight: 700; text-decoration: none;
-        border: 1px solid transparent; cursor: pointer; transition: all .2s ease;
+        display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+        border-radius: 5px; min-height: 45px; padding: 11px 20px; font-size: .82rem;
+        font-weight: 700; text-decoration: none; border: 1px solid #DCE1E8;
+        cursor: pointer; transition: background .2s ease, border-color .2s ease, transform .2s ease;
       }
-      .f1-btn-p { background: #C6A24A; color: #0E2438; }
-      .f1-btn-p:hover { background: #D8B879; transform: translateY(-1px); }
-      .f1-btn-s { background: transparent; color: #16222F; border-color: #CBC4B6; }
-      .f1-btn-s:hover { border-color: #16222F; }
+      .f1-btn-p { background: #051F49; color: #fff; border-color: #051F49; }
+      .f1-btn-p:hover { background: #123565; transform: translateY(-1px); }
+      .f1-btn-s { background: transparent; color: #122747; border-color: #DCE1E8; }
+      .f1-btn-s:hover { background: #E9EDF1; }
       .f1-dark .f1-btn-s { color: #F1EFEA; border-color: rgba(241,239,234,.35); }
       .f1-dark .f1-btn-s:hover { border-color: #F1EFEA; }
       .f1-btn:focus-visible { outline: 2px solid #C45016; outline-offset: 3px; }

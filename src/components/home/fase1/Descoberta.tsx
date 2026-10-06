@@ -257,7 +257,7 @@ const ESTILO = `
   border-bottom: 1px solid #E5E7EB; margin-bottom: 22px; gap: 10px;
 }
 .dc-area {
-  position: relative; border: 0; background: transparent; cursor: pointer;
+  position: relative; border: 0; background: transparent; cursor: pointer; min-width: 0;
   padding: 14px 3px 17px; display: flex; align-items: center; justify-content: center; gap: 9px;
   font-family: var(--font-sans); font-size: .82rem; font-weight: 600; color: #6B7482;
 }
@@ -363,9 +363,20 @@ const ESTILO = `
 }
 @media (max-width: 760px) {
   .dc-caixa { padding: 24px 18px; }
-  .dc-titulo { flex-direction: column; align-items: flex-start; }
+  .dc-titulo { flex-direction: column; align-items: stretch; }
+  /* Os três rótulos somavam cerca de 340px sem poder encolher, e era isso que
+     empurrava a página inteira no celular. Agora dividem a linha e quebram. */
+  .dc-publico { width: 100%; flex-wrap: wrap; }
+  .dc-publico button { flex: 1 1 auto; min-width: 0; white-space: normal; padding: 9px 8px; font-size: .74rem; }
   .dc-areas { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
   .dc-area { flex-direction: column; font-size: .68rem; gap: 7px; padding: 12px 2px 13px; }
+}
+/* Cinco rótulos lado a lado numa caixa de 310px: com a Manrope, que é bem mais
+   larga que a condensada anterior, "Consórcios" estourava a coluna e empurrava
+   a página inteira. Abaixo de 430px o corpo diminui e a palavra pode quebrar. */
+@media (max-width: 430px) {
+  .dc-area { font-size: .6rem; letter-spacing: -.01em; line-height: 1.2; text-align: center; overflow-wrap: anywhere; }
+  .dc-area svg { width: 17px; height: 17px; }
   .dc-campo { flex-wrap: wrap; padding-left: 12px; gap: 8px; }
   .dc-campo input { width: calc(100% - 30px); }
   .dc-btn { width: 100%; }

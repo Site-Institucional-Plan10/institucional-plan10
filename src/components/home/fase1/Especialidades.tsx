@@ -65,13 +65,15 @@ export function Especialidades() {
   return (
     <section className="f1 f1-sec" id="especialidades" aria-labelledby="esp-h">
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Uma Plan10. Diferentes especialidades.</p>
-        <h2 className="f1-h2" id="esp-h">
-          Proteção para cada conquista.
-        </h2>
-        <p className="f1-lede">
-          Encontre o que você precisa hoje. Descubra o que pode fazer sentido amanhã.
-        </p>
+        <div className="f1-cab">
+          <div>
+            <p className="f1-eyebrow">Uma Plan10. Diferentes especialidades.</p>
+            <h2 className="f1-h2" id="esp-h">
+              Proteção para cada conquista.
+            </h2>
+          </div>
+          <p className="f1-lede">Encontre o que você precisa hoje. Descubra o que pode fazer sentido amanhã.</p>
+        </div>
 
         <div className="f1-esp">
           {VERTICAIS.map((v) => {

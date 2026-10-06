@@ -113,9 +113,11 @@ const CSS = `
   --c2: #E7E2D6;
   --ctxt: #565049;
   --preto: #0E2438;
-  --fd: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
-  --fb: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
-  --fl: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
+  /* fd é a de título, fb o texto corrido e fl os rótulos. Agora apontam para
+     as duas famílias do wireframe: Playfair Display e Manrope. */
+  --fd: "Playfair Display", Georgia, "Times New Roman", serif;
+  --fb: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --fl: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --r: 14px;
   --rs: 10px;
   --rx: 10px;
@@ -141,13 +143,13 @@ const CSS = `
 .plan10-scope .p10-hero-inner { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
 .plan10-scope .p10-hero-logo { display: none; }
 .plan10-scope .p10-hero h1 {
-  font-family: var(--fd); font-size: clamp(2rem, 4.6vw, 3.4rem);
+  font-family: var(--fd); font-weight: 600; letter-spacing: -.035em; line-height: 1.14; font-size: clamp(2rem, 4.6vw, 3.4rem);
   line-height: 1.08; letter-spacing: -.028em; font-weight: 500; margin: 0; color: #F1EFEA; max-width: 26ch;
 }
 .plan10-scope .p10-hero .lede { font-family: var(--fb); font-size: clamp(1rem,1.4vw,1.18rem); line-height: 1.6; color: rgba(241,239,234,.74); margin: 0; max-width: 48ch; }
 .plan10-scope .p10-hero .lede.sub { font-size: clamp(.92rem,1.2vw,1.04rem); color: rgba(241,239,234,.6); margin-top: -6px; }
 .plan10-scope .p10-hero .eyebrow { color: rgba(241,239,234,.6); }
-.plan10-scope .p10-hero .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold); display: inline-block; vertical-align: middle; margin-right: 12px; }
+/* o traço antes do olho saiu: no wireframe é só o rótulo */
 .plan10-scope .p10-hero .pills { margin-top: 4px; }
 
 /* Hero com fotografia de fundo: profundidade e emoção, sem cara de cor chapada */
@@ -162,8 +164,8 @@ const CSS = `
 
 /* Eyebrow em mono */
 .plan10-scope .eyebrow {
-  font-family: var(--fl); font-weight: 500; font-size: 0.76rem;
-  letter-spacing: .28em; text-transform: uppercase; margin: 0; color: #866719;
+  font-family: var(--fl); font-weight: 700; font-size: 0.7rem;
+  letter-spacing: .2em; text-transform: uppercase; margin: 0; color: #B88933;
 }
 
 /* Breadcrumb */
@@ -185,7 +187,7 @@ const CSS = `
 .plan10-scope .sec-dark p { color: rgba(241,239,234,.74); }
 
 /* Section titles em grotesk */
-.plan10-scope h2.p10-h2 { font-family: var(--fd); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.12; letter-spacing: -.025em; margin: 12px 0 0; color: var(--preto); }
+.plan10-scope h2.p10-h2 { font-family: var(--fd); font-weight: 600; font-size: clamp(1.7rem, 3.3vw, 2.6rem); line-height: 1.14; letter-spacing: -.035em; margin: 12px 0 0; color: var(--preto); }
 .plan10-scope .sec-dark h2.p10-h2 { color: #F1EFEA; }
 .plan10-scope .p10-lede { font-family: var(--fb); font-size: 1.02rem; line-height: 1.62; color: var(--ctxt); margin: 14px 0 0; max-width: 640px; }
 .plan10-scope .sec-dark .p10-lede { color: rgba(241,239,234,.72); }
@@ -258,9 +260,9 @@ const CSS = `
 .plan10-scope .prod-item .prod-faq-item .q, .plan10-scope .prod-item .prod-faq-item .a { overflow-wrap: anywhere; word-break: break-word; }
 
 /* Buttons */
-.plan10-scope .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 999px; font-family: var(--fb); font-weight: 600; font-size: .9rem; cursor: pointer; border: 1px solid transparent; text-decoration: none; transition: background var(--t), border-color var(--t), color var(--t), transform var(--t); line-height: 1; }
-.plan10-scope .btn-primary { background: var(--gold); color: #0E2438; }
-.plan10-scope .btn-primary:hover { background: var(--gold-hi); transform: translateY(-1px); }
+.plan10-scope .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 11px 20px; min-height: 45px; border-radius: 5px; font-family: var(--fb); font-weight: 700; font-size: .82rem; cursor: pointer; border: 1px solid transparent; text-decoration: none; transition: background var(--t), border-color var(--t), color var(--t), transform var(--t); line-height: 1; }
+.plan10-scope .btn-primary { background: #051F49; color: #fff; border-color: #051F49; }
+.plan10-scope .btn-primary:hover { background: #123565; transform: translateY(-1px); }
 .plan10-scope .btn-wa { background: transparent; color: var(--preto); border-color: var(--c2); }
 .plan10-scope .btn-wa:hover { border-color: var(--wa); color: var(--wa-hov); }
 .plan10-scope .sec-dark .btn-wa { color: #F1EFEA; border-color: rgba(241,239,234,.3); }

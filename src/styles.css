@@ -2,12 +2,22 @@
 @source "../src";
 
 @theme {
-  /* Família única do site: Barlow Semi Condensed (padrão definido pelo cliente
-     em 28/09/2026). Os três apelidos continuam existindo porque o Tailwind e o
-     código antigo os usam, mas apontam todos para a mesma fonte. */
-  --font-sans: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Barlow Semi Condensed", ui-sans-serif, system-ui, sans-serif;
+  /* As duas famílias do wireframe do Carlos: Manrope no texto corrido e
+     Playfair Display nos títulos. Substituem a Barlow Semi Condensed, que era
+     o padrão anterior, a pedido dele em 06/10/2026. O apelido --font-mono
+     continua existindo porque o Tailwind e o código antigo o usam. */
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-mono: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  /* Paleta do wireframe */
+  --color-p-navy: #051f49;
+  --color-p-ink: #122747;
+  --color-p-paper: #faf9f6;
+  --color-p-muted: #5e6b7d;
+  --color-p-line: #dce1e8;
+  --color-p-gold: #b88933;
+  --color-p-gold-light: #f0d29a;
 
   /* Brand core, um laranja e um azul (DS v3.1) */
   --color-orange: #e05a20;

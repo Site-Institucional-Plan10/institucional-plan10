@@ -36,11 +36,15 @@ export function BlogHome() {
       `}</style>
 
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Blog Plan10</p>
-        <h2 className="f1-h2" id="blog-h">
-          Informação para escolher melhor.
-        </h2>
-        <p className="f1-lede">Dúvidas do dia a dia. Respostas para dar o próximo passo.</p>
+        <div className="f1-cab">
+          <div>
+            <p className="f1-eyebrow">Blog Plan10</p>
+            <h2 className="f1-h2" id="blog-h">
+              Informação para escolher melhor.
+            </h2>
+          </div>
+          <p className="f1-lede">Dúvidas do dia a dia. Respostas para dar o próximo passo.</p>
+        </div>
 
         <div className="f1-posts">
           {artigos.map((a) => {

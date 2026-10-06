@@ -15,13 +15,15 @@ export function Experiencia() {
   return (
     <section className="f1 f1-sec" id="experiencia" aria-labelledby="exp-h">
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Experiência Plan10</p>
-        <h2 className="f1-h2" id="exp-h">
-          Atenção ao detalhe. Proximidade na conversa.
-        </h2>
-        <p className="f1-lede">
-          O alto padrão aparece na qualidade da orientação e no cuidado com a sua decisão.
-        </p>
+        <div className="f1-cab">
+          <div>
+            <p className="f1-eyebrow">Experiência Plan10</p>
+            <h2 className="f1-h2" id="exp-h">
+              Atenção ao detalhe. Proximidade na conversa.
+            </h2>
+          </div>
+          <p className="f1-lede">O alto padrão aparece na qualidade da orientação e no cuidado com a sua decisão.</p>
+        </div>
 
         <div className="f1-quatro" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
           {ATRIBUTOS.map((a) => (
@@ -133,11 +135,15 @@ export function Perguntas() {
       `}</style>
 
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Decida com informação</p>
-        <h2 className="f1-h2" id="perg-h">
-          Uma boa pergunta abre caminhos.
-        </h2>
-        <p className="f1-lede">Respostas para começar. Uma conversa para ir mais fundo.</p>
+        <div className="f1-cab">
+          <div>
+            <p className="f1-eyebrow">Decida com informação</p>
+            <h2 className="f1-h2" id="perg-h">
+              Uma boa pergunta abre caminhos.
+            </h2>
+          </div>
+          <p className="f1-lede">Respostas para começar. Uma conversa para ir mais fundo.</p>
+        </div>
 
         <div className="f1-faq">
           {PERGUNTAS.map((p) => (

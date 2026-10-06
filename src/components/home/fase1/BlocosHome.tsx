@@ -20,14 +20,15 @@ export function FoqueNasConquistas() {
   return (
     <section className="f1 f1-sec f1-alt" aria-labelledby="foco-h">
       <div className="f1-wrap">
-        <p className="f1-eyebrow">O valor de uma boa escolha</p>
-        <h2 className="f1-h2" id="foco-h">
-          Foque nas conquistas. Nós cuidamos dos detalhes.
-        </h2>
-        <p className="f1-lede">
-          Da comparação das coberturas ao entendimento das condições, a Plan10 orienta sua escolha
-          para você seguir com seus planos com mais tranquilidade.
-        </p>
+        <div className="f1-cab">
+          <div>
+            <p className="f1-eyebrow">O valor de uma boa escolha</p>
+            <h2 className="f1-h2" id="foco-h">
+              Foque nas conquistas. Nós cuidamos dos detalhes.
+            </h2>
+          </div>
+          <p className="f1-lede">Da comparação das coberturas ao entendimento das condições, a Plan10 orienta sua escolha para você seguir com seus planos com mais tranquilidade.</p>
+        </div>
 
         <div className="f1-quatro">
           {CRITERIOS.map((c) => (
@@ -52,14 +53,15 @@ export function ContratacaoOnline() {
   return (
     <section className="f1 f1-sec f1-dark" aria-labelledby="online-h">
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Acesso direto quando disponível</p>
-        <h2 className="f1-h2" id="online-h">
-          Contratação online imediata
-        </h2>
-        <p className="f1-lede">
-          Um caminho para soluções elegíveis com contratação digital. Integração em preparação
-          para o canal oficial.
-        </p>
+        <div className="f1-cab">
+          <div>
+            <p className="f1-eyebrow">Acesso direto quando disponível</p>
+            <h2 className="f1-h2" id="online-h">
+              Contratação online imediata
+            </h2>
+          </div>
+          <p className="f1-lede">Um caminho para soluções elegíveis com contratação digital. Integração em preparação para o canal oficial.</p>
+        </div>
         <div style={{ marginTop: 24 }}>
           <Link to="/solucoes-online" className="f1-btn f1-btn-s">
             Explorar soluções →
@@ -81,13 +83,15 @@ export function Metodo() {
   return (
     <section className="f1 f1-sec" id="metodo" aria-labelledby="metodo-h">
       <div className="f1-wrap">
-        <p className="f1-eyebrow">Consultoria que você entende</p>
-        <h2 className="f1-h2" id="metodo-h">
-          Você conta o que precisa. A Plan10 ajuda a escolher.
-        </h2>
-        <p className="f1-lede">
-          Um atendimento que começa na sua necessidade e dá contexto à decisão.
-        </p>
+        <div className="f1-cab">
+          <div>
+            <p className="f1-eyebrow">Consultoria que você entende</p>
+            <h2 className="f1-h2" id="metodo-h">
+              Você conta o que precisa. A Plan10 ajuda a escolher.
+            </h2>
+          </div>
+          <p className="f1-lede">Um atendimento que começa na sua necessidade e dá contexto à decisão.</p>
+        </div>
 
         <div className="f1-quatro">
           {PASSOS.map((p) => (
