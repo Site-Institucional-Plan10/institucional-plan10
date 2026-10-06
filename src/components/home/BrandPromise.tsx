@@ -32,7 +32,7 @@ export function BrandPromise() {
         @media (max-width: 720px) { .bp { padding: 30px 20px; } .bp-h { font-size: 1.5rem; line-height: 1.18; } }
       `}</style>
       <div className="bp-bg" aria-hidden>
-        <img src="/assets/curated/still-envelopes.jpg" alt="" loading="lazy" />
+        <img src="/assets/curated/still-envelopes.webp" alt="" loading="lazy" />
       </div>
       <div className="bp-in">
         <h2 id="bp-h" className="bp-h">

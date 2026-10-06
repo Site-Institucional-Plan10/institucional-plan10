@@ -26,47 +26,47 @@ export interface CuratedImage {
 
 const IMG = {
   familia: {
-    src: "/assets/curated/familia-maos.jpg",
+    src: "/assets/curated/familia-maos.webp",
     alt: "Mãos de um adulto segurando as mãos de um bebê no colo",
   },
   azul: {
-    src: "/assets/curated/fin-azul-hero.jpg",
+    src: "/assets/curated/fin-azul-hero.webp",
     alt: "Textura azul profunda em movimento",
   },
   mar: {
-    src: "/assets/curated/fin-divisoria.jpg",
+    src: "/assets/curated/fin-divisoria.webp",
     alt: "Superfície do mar azul vista de cima",
   },
   documentos: {
-    src: "/assets/curated/fin-documentos.jpg",
+    src: "/assets/curated/fin-documentos.webp",
     alt: "Carteira de couro azul com caderno e caneta sobre a mesa",
   },
   vidro: {
-    src: "/assets/curated/fin-vidro.jpg",
+    src: "/assets/curated/fin-vidro.webp",
     alt: "Fachada espelhada de um edifício corporativo",
   },
   veleiro: {
-    src: "/assets/curated/home-veleiro.jpg",
+    src: "/assets/curated/home-veleiro.webp",
     alt: "Marina com veleiros ancorados em uma manhã de neblina",
   },
   luz: {
-    src: "/assets/curated/luz-fechamento.jpg",
+    src: "/assets/curated/luz-fechamento.webp",
     alt: "Luz da tarde entrando por uma cortina em um ambiente residencial",
   },
   persiana: {
-    src: "/assets/curated/persiana-pb.jpg",
+    src: "/assets/curated/persiana-pb.webp",
     alt: "Sombra de persiana desenhada na parede, em preto e branco",
   },
   envelopes: {
-    src: "/assets/curated/still-envelopes.jpg",
+    src: "/assets/curated/still-envelopes.webp",
     alt: "Envelopes escuros lacrados com selo de cera dourado",
   },
   mesa: {
-    src: "/assets/banners/fin-contexto.jpg",
+    src: "/assets/banners/fin-contexto.webp",
     alt: "Notebook fechado, papel e caneta sobre uma mesa de trabalho clara",
   },
   arquitetura: {
-    src: "/assets/banners/fin-hub.jpg",
+    src: "/assets/banners/fin-hub.webp",
     alt: "Pirâmide de vidro recortada contra o céu",
   },
 } satisfies Record<string, CuratedImage>;

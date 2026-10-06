@@ -75,7 +75,7 @@ function QuemSomos() {
       <header className="p10-hero has-img">
         <div className="p10-hero-bg" aria-hidden>
           <img
-            src="/assets/temas/quem-somos-time.jpg"
+            src="/assets/temas/quem-somos-time.webp"
             alt=""
             loading="eager"
           />

@@ -17,7 +17,7 @@ const SOLUCOES = [
     micro: "Cuidado, prevenção e acesso à saúde para pessoas, famílias e empresas.",
     cor: "#3F6B4F",
     soft: "#EEF1EA",
-    foto: "/assets/solucoes/saude.jpg",
+    foto: "/assets/solucoes/saude.webp",
     alt: "Sala com vista para o mar ao amanhecer e uma planta junto à janela",
   },
   {
@@ -26,7 +26,7 @@ const SOLUCOES = [
     micro: "Proteção para pessoas, patrimônio e responsabilidades em diferentes fases.",
     cor: "#2B4C68",
     soft: "#EDEDE7",
-    foto: "/assets/solucoes/protecao.jpg",
+    foto: "/assets/solucoes/protecao.webp",
     alt: "Casa contemporânea iluminada à beira de um lago ao pôr do sol",
   },
   {
@@ -45,7 +45,7 @@ const SOLUCOES = [
     micro: "Planejamento para aquisições, mobilidade, ativos e expansão.",
     cor: "#5A4A76",
     soft: "#EFEDE9",
-    foto: "/assets/solucoes/crescimento.jpg",
+    foto: "/assets/solucoes/crescimento.webp",
     alt: "Automóvel em estrada de serra no fim da tarde",
   },
   {
@@ -55,7 +55,7 @@ const SOLUCOES = [
       "Suporte para preservar rotina, ambientes, mobilidade e continuidade de pessoas e empresas.",
     cor: "#9A5A2A",
     soft: "#F3EBE2",
-    foto: "/assets/solucoes/assistencia.jpg",
+    foto: "/assets/solucoes/assistencia.webp",
     alt: "Guincho transportando um automóvel na rodovia",
   },
 ] as const;
