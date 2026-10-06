@@ -284,41 +284,68 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
                                 </span>
                               </div>
                               <p>{produto.descricao}</p>
-                              {produto.itensInclusos.length > 0 && (
-                                <p className="sf-inclui">
-                                  <strong>Inclui:</strong>{" "}
-                                  {/* no catálogo cada item é uma frase solta e o
-                                      último às vezes traz ponto final; emendados
-                                      viram uma linha sem respiro */}
-                                  {produto.itensInclusos
-                                    .map((i) => i.trim().replace(/\.$/, ""))
-                                    .filter(Boolean)
-                                    .join(" · ")}
-                                </p>
+
+                              {/* A avaliação da planilha é explícita sobre o card:
+                                  mostra nome, definição curta e perfil, e deixa
+                                  características, inclusos e FAQ para depois da
+                                  expansão. Listas extensas de inclusos estão entre
+                                  o que ela manda evitar no primeiro nível. */}
+                              {(produto.itensInclusos.length > 0 ||
+                                produto.caracteristicas.length > 0) && (
+                                <details className="sf-mais">
+                                  <summary>Entender opção</summary>
+                                  <div className="sf-mais-corpo">
+                                    {produto.itensInclusos.length > 0 && (
+                                      <p>
+                                        <strong>Inclui:</strong>{" "}
+                                        {/* no catálogo cada item é uma frase solta
+                                            e o último às vezes traz ponto final */}
+                                        {produto.itensInclusos
+                                          .map((i) => i.trim().replace(/\.$/, ""))
+                                          .filter(Boolean)
+                                          .join(" · ")}
+                                      </p>
+                                    )}
+                                    {produto.caracteristicas.length > 0 && (
+                                      <p>
+                                        <strong>Como funciona:</strong>{" "}
+                                        {produto.caracteristicas
+                                          .map((c) => c.trim().replace(/\.$/, ""))
+                                          .filter(Boolean)
+                                          .join(" · ")}
+                                      </p>
+                                    )}
+                                    <Link
+                                      className="sf-mais-pagina"
+                                      to="/solucoes/$solucao/$categoria/$nucleo"
+                                      params={{
+                                        solucao: solucao.slug,
+                                        categoria: categoria.slug,
+                                        nucleo: nucleo.slug,
+                                      }}
+                                      hash={produto.id}
+                                    >
+                                      Ver a página desta solução
+                                      <span aria-hidden> →</span>
+                                    </Link>
+                                  </div>
+                                </details>
                               )}
+
                               <div className="sf-prod-acoes">
+                                {/* "Falar com consultor" é o CTA principal que a
+                                    avaliação manda prevalecer nos produtos que
+                                    pedem leitura de contexto. */}
                                 <a
                                   className="sf-btn sf-btn-p"
                                   href={whatsappUrl(
-                                    `Olá! Quero orientação sobre ${produto.nome} (${solucao.nome}).`,
+                                    `Olá! Quero falar sobre ${produto.nome} (${solucao.nome}).`,
                                   )}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
-                                  Pedir orientação
+                                  Falar com consultor
                                 </a>
-                                <Link
-                                  className="sf-btn sf-btn-s"
-                                  to="/solucoes/$solucao/$categoria/$nucleo"
-                                  params={{
-                                    solucao: solucao.slug,
-                                    categoria: categoria.slug,
-                                    nucleo: nucleo.slug,
-                                  }}
-                                  hash={produto.id}
-                                >
-                                  Ver detalhes
-                                </Link>
                                 <BotaoFavoritar
                                   chave={`${solucao.slug}/${categoria.slug}/${nucleo.slug}/${produto.id}`}
                                   nome={produto.nome}
@@ -436,8 +463,26 @@ details[open] > summary .sf-sinal::after { transform: scaleY(0); opacity: 0; }
 .sf-prod h4 { font-family: var(--fd); font-size: 1.02rem; font-weight: 600; color: var(--preto); margin: 0; letter-spacing: -.01em; }
 .sf-perfil { font-family: var(--fl); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: #8A93A0; white-space: nowrap; flex: none; }
 .sf-prod > p { font-family: var(--fb); font-size: .91rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
-.sf-inclui { margin-top: 8px !important; font-size: .85rem !important; color: #6B7482 !important; }
-.sf-inclui strong { font-weight: 600; color: var(--preto); }
+.sf-mais { margin-top: 10px; }
+.sf-mais > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--fl); font-size: .72rem; letter-spacing: .09em; text-transform: uppercase;
+  font-weight: 600; color: var(--vp);
+}
+.sf-mais > summary::-webkit-details-marker { display: none; }
+.sf-mais > summary::after { content: "+"; font-size: 1rem; line-height: 1; }
+.sf-mais[open] > summary::after { content: "\\2212"; }
+.sf-mais > summary:focus-visible { outline: 2px solid var(--vp); outline-offset: 2px; }
+.sf-mais-corpo { display: grid; gap: 8px; margin-top: 10px; }
+.sf-mais-corpo p {
+  font-family: var(--fb); font-size: .85rem; line-height: 1.5; color: #6B7482; margin: 0;
+}
+.sf-mais-corpo strong { font-weight: 600; color: var(--preto); }
+.sf-mais-pagina {
+  justify-self: start; font-family: var(--fl); font-size: .72rem; letter-spacing: .09em;
+  text-transform: uppercase; font-weight: 600; color: var(--vp); text-decoration: none;
+}
+.sf-mais-pagina:hover { text-decoration: underline; }
 
 .sf-prod-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .sf-btn {
