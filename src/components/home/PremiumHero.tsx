@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ScanLine, UserRound, Waypoints } from "lucide-react";
+import { ArrowRight, ScanLine, UserRound, Waypoints } from "lucide-react";
 
 /**
  * Home hero, premium e compacto. Foto de veleiro ao fundo sob camada navy
@@ -135,22 +135,13 @@ export function PremiumHero() {
           opções e escolher com clareza o que faz sentido para o seu momento.
         </p>
         <div className="ph2-ctas">
+          {/* a seta é do botão principal, como no wireframe; estava no outro */}
           <Link to="/solucoes" className="ph2-btn ph2-btn-p">
             Encontrar minha solução
+            <ArrowRight size={16} aria-hidden />
           </Link>
           <a href="#fale-conosco" className="ph2-btn ph2-btn-s" onClick={irAoContato}>
             Falar com um consultor
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              aria-hidden
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
           </a>
         </div>
       </div>
