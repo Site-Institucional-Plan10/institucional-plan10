@@ -92,10 +92,12 @@ export function PremiumHero() {
         .ph2-strip span::before { content: ""; width: 4px; height: 4px; border-radius: 999px; background: #C6A24A; }
         @media (max-width: 720px) {
           .ph2 {
+            /* Fallback cromático, como o pacote pede: cor, não outra foto. A
+               foto do hero vem do <picture> acima. Aqui havia o veleiro do site
+               antigo, que o celular baixava escondido atrás da foto nova. */
             background:
               linear-gradient(178deg, rgba(12,31,49,.82) 0%, rgba(13,33,52,.9) 55%, rgba(12,31,49,.96) 100%),
-              url('/assets/banners/veleiro-hero.jpg');
-            background-position: center;
+              #0C1F31;
             padding: 92px 20px 40px;
           }
           /* O rótulo quebrava em duas linhas por causa do letter-spacing largo.

@@ -140,7 +140,8 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition"
-              style={{ background: "#25D366", color: "#08240F" }}
+              // mesmo azul discreto da navegação rápida; o verde brigava com a marca
+              style={{ background: "#1C4E80", color: "#fff" }}
             >
               <MessageCircle size={17} /> WhatsApp
             </a>
@@ -166,15 +167,18 @@ export function Footer() {
         <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <img
-              src="/assets/logos/logo-plan10.png"
-              alt="Plan10"
-              style={{ height: 40, width: "auto" }}
+              src="/assets/logos/plan10-corretora-branco.webp"
+              alt="Plan10 Corretora"
+              width={517}
+              height={160}
+              style={{ height: 44, width: "auto" }}
             />
             <p
               className="mt-4 text-sm max-w-xs leading-[1.7]"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              Proteção, cuidados com a saúde e planejamento patrimonial em um só lugar.
+              Soluções e seguros para suas conquistas. Proteção, cuidado e planejamento em um só
+              lugar.
             </p>
           </div>
         </div>

@@ -88,12 +88,13 @@ export function paletteFor(slug: string): Palette {
   return PALETTES[slug] ?? PALETTES.saude;
 }
 
+/** Hero da vertical é foto escura com véu, então vale a versão para fundo escuro. */
 export const SOLUTION_LOGOS: Record<string, string> = {
-  saude: "/assets/logos/logo-saude-odonto.png",
-  protecao: "/assets/logos/logo-seguros.png",
-  financeiras: "/assets/logos/logo-financas.png",
-  crescimento: "/assets/logos/logo-consorcios.png",
-  assistencia: "/assets/logos/logo-servicos.png",
+  saude: "/assets/logos/plan10-saude-branco.webp",
+  protecao: "/assets/logos/plan10-seguros-branco.webp",
+  financeiras: "/assets/logos/plan10-financas-branco.webp",
+  crescimento: "/assets/logos/plan10-consorcios-branco.webp",
+  assistencia: "/assets/logos/plan10-servicos-branco.webp",
 };
 
 export function logoFor(slug: string): string | undefined {

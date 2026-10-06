@@ -5,21 +5,22 @@ import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
 import { getWhatsAppUrl } from "@/lib/utils";
-import { solutions } from "@/data/solutions";
-import { paletteFor } from "@/components/plan10/PageTheme";
 import { MegaMenu } from "@/components/layout/MegaMenu";
 import { Heart } from "lucide-react";
 import { usarFavoritos } from "@/lib/favoritos";
+import { VERTICAIS } from "@/lib/verticais";
 
 // Rótulos curtos das soluções para o header (o nome completo é longo demais)
-const SHORT_SOL: Record<string, string> = {
-  saude: "Saúde", protecao: "Proteção", financeiras: "Financeiras",
-  crescimento: "Crescimento", assistencia: "Assistência",
-};
-const solutionNav = solutions.map((s) => ({
-  slug: s.slug,
-  label: SHORT_SOL[s.slug] ?? s.nome,
-  color: paletteFor(s.slug).vp,
+/**
+ * As cinco frentes do menu do celular saem do modelo único, igual ao mega menu
+ * e à navegação rápida. Antes vinham do catálogo, com o nome interno (Proteção,
+ * Crescimento, Assistência) e uma cor de tema que não era a da vertical. O
+ * visitante no celular via um site e no desktop via outro.
+ */
+const solutionNav = VERTICAIS.map((v) => ({
+  slug: v.hub,
+  label: v.label,
+  color: v.cor,
 }));
 
 // Nav desktop. Os cinco hubs saíram da barra porque agora quem os apresenta é o
@@ -47,7 +48,7 @@ type MobileItem =
 
 const mobileItems: MobileItem[] = [
   { kind: "link", to: "/", label: "Home" },
-  { kind: "link", to: "/quem-somos", label: "Quem somos" },
+  { kind: "link", to: "/quem-somos", label: "Sobre a Plan10" },
   { kind: "divider" },
   { kind: "link", to: "/solucoes", label: "Soluções" },
   ...solutionNav.map(
@@ -55,23 +56,24 @@ const mobileItems: MobileItem[] = [
   ),
   { kind: "divider" },
   { kind: "link", to: "/mobilidade", label: "Mobilidade" },
-  { kind: "link", to: "/blog", label: "Blog" },
+  { kind: "link", to: "/blog", label: "Blog Plan10" },
   { kind: "link", to: "/em-um-clique", label: "Plan10 em um clique" },
   { kind: "link", to: "/fale-conosco", label: "Fale conosco" },
 ];
 
 function HeaderLogo({ size = 48, light = false }: { size?: number; light?: boolean }) {
   const { src } = useHubLogo();
+  /**
+   * Sobre fundo escuro vale o arquivo "-branco" da marca, não o filtro.
+   * O antigo `brightness(0) invert(1)` achatava tudo numa silhueta branca, e a
+   * marca nova é dourada com azul: o filtro apagaria justamente o dourado.
+   */
+  const arquivo = light ? src.replace(/\.webp$/, "-branco.webp") : src;
   return (
     <img
-      src={src}
+      src={arquivo}
       alt="Plan10"
-      style={{
-        height: size,
-        width: "auto",
-        objectFit: "contain",
-        filter: light ? "brightness(0) invert(1)" : undefined,
-      }}
+      style={{ height: size, width: "auto", objectFit: "contain" }}
     />
   );
 }
@@ -558,7 +560,8 @@ export function Header() {
                 gap: 10,
                 width: "100%",
                 padding: "14px",
-                backgroundColor: "#25D366",
+                // azul discreto, como o pacote pede; o verde berrante saiu
+                backgroundColor: "#1C4E80",
                 color: "white",
                 borderRadius: "12px",
                 fontWeight: 700,

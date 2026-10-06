@@ -81,8 +81,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Plan10 | Proteção, saúde e planejamento" },
       { name: "twitter:description", content: "Consultoria de proteção, saúde e planejamento para pessoas, famílias e empresas." },
-      { property: "og:image", content: `${SITE_URL}/assets/banners/hero-home-1.png` },
-      { name: "twitter:image", content: `${SITE_URL}/assets/banners/hero-home-1.png` },
+      // a prévia de link mostrava o hero do site antigo, e pesava 1,4MB
+      { property: "og:image", content: `${SITE_URL}/assets/banners/og-plan10.jpg` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:image", content: `${SITE_URL}/assets/banners/og-plan10.jpg` },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
