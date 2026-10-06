@@ -14,6 +14,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/common/WhatsAppButton";
 import { CookieBanner } from "@/components/common/CookieBanner";
+import { Medicao } from "@/components/common/Medicao";
 import { NavegacaoRapida } from "@/components/layout/NavegacaoRapida";
 import { ProvedorPerfil } from "@/lib/perfilPublico";
 import { ProvedorFavoritos } from "@/lib/favoritos";
@@ -162,6 +163,7 @@ function RootComponent() {
         <CookieBanner />
         <NavegacaoRapida />
         <PainelFavoritos />
+        <Medicao />
         </ProvedorFavoritos>
       </ProvedorPerfil>
     </QueryClientProvider>

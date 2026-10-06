@@ -21,6 +21,9 @@ export function CookieBanner() {
     } catch {
       /* ignore */
     }
+    // a medição escuta isto para ligar na hora em que a pessoa aceita, em vez
+    // de só na próxima página que ela abrir
+    window.dispatchEvent(new CustomEvent("plan10:consentimento", { detail: choice }));
     setVisible(false);
   };
 
