@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { getWhatsAppUrl } from "@/lib/utils";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 /**
  * Experiência, perguntas e o CTA final da Home. Texto do wireframe do pacote.
@@ -158,26 +159,53 @@ export function Perguntas() {
   );
 }
 
+/**
+ * CTA final, no arranjo do wireframe: faixa bege clara, o texto à esquerda e os
+ * dois botões empilhados à direita, ambos em azul-marinho. Antes era faixa
+ * escura com os botões lado a lado e o principal em dourado.
+ */
 export function CtaFinal() {
   return (
-    <section className="f1 f1-sec f1-dark" aria-labelledby="final-h">
-      <div className="f1-wrap">
-        <h2 className="f1-h2" id="final-h">
-          Vamos encontrar a solução que faz sentido para você?
-        </h2>
-        <p className="f1-lede">
-          Conte o que precisa ou favorite as soluções para pedir suas cotações.
-        </p>
-        <div style={{ marginTop: 26, display: "flex", gap: 12, flexWrap: "wrap" }}>
+    <section className="f1 f1-final" aria-labelledby="final-h">
+      <style>{`
+        .f1-final { background: #EAE4D8; padding: 54px 24px; }
+        @media (min-width: 768px) { .f1-final { padding: 54px 40px; } }
+        .f1-final-in {
+          max-width: 1180px; margin: 0 auto;
+          display: flex; align-items: center; justify-content: space-between; gap: 28px;
+        }
+        .f1-final-in > div:first-child { min-width: 0; }
+        .f1-final h2 { max-width: 20ch; }
+        .f1-final p { font-size: .9rem; margin: 12px 0 0; color: #5E6B7D; max-width: 56ch; }
+        .f1-final-acoes { display: flex; flex-direction: column; align-items: stretch; gap: 10px; flex-shrink: 0; }
+        .f1-final-acoes .f1-btn { justify-content: center; }
+        @media (max-width: 900px) {
+          .f1-final-in { align-items: flex-start; flex-direction: column; }
+          .f1-final-acoes { width: 100%; }
+        }
+      `}</style>
+
+      <div className="f1-final-in">
+        <div>
+          <h2 className="f1-h2" id="final-h">
+            Vamos encontrar a solução
+            <br />
+            que faz sentido para você?
+          </h2>
+          <p>Conte o que precisa ou favorite as soluções para pedir suas cotações.</p>
+        </div>
+        <div className="f1-final-acoes">
           <Link to="/fale-conosco" className="f1-btn f1-btn-p">
             Falar com um consultor
+            <ArrowRight size={16} aria-hidden />
           </Link>
           <a
             href={getWhatsAppUrl("default")}
             target="_blank"
             rel="noopener noreferrer"
-            className="f1-btn f1-btn-s"
+            className="f1-btn f1-btn-p"
           >
+            <MessageCircle size={17} aria-hidden />
             Conversar pelo WhatsApp
           </a>
         </div>
