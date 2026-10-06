@@ -9,6 +9,7 @@ import { MegaMenu } from "@/components/layout/MegaMenu";
 import { Heart } from "lucide-react";
 import { usarFavoritos } from "@/lib/favoritos";
 import { VERTICAIS } from "@/lib/verticais";
+import { dim } from "@/lib/dimensoes";
 
 // Rótulos curtos das soluções para o header (o nome completo é longo demais)
 /**
@@ -73,6 +74,7 @@ function HeaderLogo({ size = 48, light = false }: { size?: number; light?: boole
     <img
       src={arquivo}
       alt="Plan10"
+      {...dim(arquivo)}
       style={{ height: size, width: "auto", objectFit: "contain" }}
     />
   );

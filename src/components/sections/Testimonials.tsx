@@ -1,5 +1,6 @@
 import { Quote } from "lucide-react";
 import { testimonials, type Testimonial } from "@/data/testimonials";
+import { dim } from "@/lib/dimensoes";
 
 function Card({ t }: { t: Testimonial }) {
   return (
@@ -25,6 +26,9 @@ function Card({ t }: { t: Testimonial }) {
           <img
             src={t.photo}
             alt={t.name}
+            {...dim(t.photo)}
+            loading="lazy"
+            decoding="async"
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }}
           />
         </div>

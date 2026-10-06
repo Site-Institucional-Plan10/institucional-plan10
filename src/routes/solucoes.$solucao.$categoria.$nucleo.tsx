@@ -20,6 +20,7 @@ import { finContentFor } from "@/data/financasContent";
 import { heroCategoria, heroNucleo, contextoDe, pickByOrder } from "@/lib/imagery";
 import { finNucleoImgs, finProdutoImg } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
+import { dim } from "@/lib/dimensoes";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
   loader: ({ params }) => {
@@ -125,7 +126,7 @@ function NucleoPage() {
       {/* Hero */}
       <header className="p10-hero has-img">
         <div className="p10-hero-bg" aria-hidden>
-          <img src={hero.src} alt="" loading="eager" />
+          <img src={hero.src} alt="" {...dim(hero.src)} loading="eager" fetchPriority="high" />
         </div>
         <div className="p10-hero-inner">
           <h1>{n.nome}</h1>
@@ -242,7 +243,7 @@ function NucleoPage() {
             </p>
           </div>
           <figure className="p10-fig">
-            <img src={ctx.src} alt={ctx.alt} loading="lazy" />
+            <img src={ctx.src} alt={ctx.alt} {...dim(ctx.src)} loading="lazy" decoding="async" />
           </figure>
         </div>
       </section>

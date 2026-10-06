@@ -1,3 +1,4 @@
+import { dim } from "@/lib/dimensoes";
 /**
  * Home, faixa de parceiros: marquee horizontal com os logos reais das seguradoras
  * e parceiros da Plan10 (cinza, ganham cor no hover; o movimento pausa no hover).
@@ -49,7 +50,7 @@ export function ParceirosStrip() {
           {[0, 1].map((g) => (
             <div className="pt-group" key={g} aria-hidden={g === 1}>
               {parceiros.map((p) => (
-                <img key={p.alt + g} className="pt-logo" src={p.src} alt={g === 0 ? p.alt : ""} loading="lazy" />
+                <img key={p.alt + g} className="pt-logo" src={p.src} alt={g === 0 ? p.alt : ""} {...dim(p.src)} loading="lazy" decoding="async" />
               ))}
             </div>
           ))}

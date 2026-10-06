@@ -4,6 +4,7 @@ import { blogArticles, blogCategoryFor } from "@/data/blogArticles";
 import { canonical } from "@/lib/seo";
 import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 import { fotoDoArtigo } from "@/lib/blogImagery";
+import { dim } from "@/lib/dimensoes";
 
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => {
@@ -124,7 +125,9 @@ function BlogArticlePage() {
             <img
               src={foto.src}
               alt={foto.alt}
+              {...dim(foto.src)}
               loading="eager"
+              fetchPriority="high"
               style={{ display: "block", width: "100%", aspectRatio: "16 / 9", objectFit: "cover" }}
             />
           </figure>

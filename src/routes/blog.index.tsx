@@ -4,6 +4,7 @@ import { blogArticles, blogCategories, blogCategoryFor } from "@/data/blogArticl
 import { canonical } from "@/lib/seo";
 import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
 import { fotoDoArtigo } from "@/lib/blogImagery";
+import { dim } from "@/lib/dimensoes";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -86,7 +87,7 @@ function BlogPage() {
                   <article key={article.slug} className="rounded-[5px] border bg-white overflow-hidden transition flex flex-col hover:border-[#143A61]" style={{ borderColor: "var(--c2)" }}>
                     <div className="blog-capa">
                       {foto ? (
-                        <img src={foto.src} alt={foto.alt} loading="lazy" decoding="async" />
+                        <img src={foto.src} alt={foto.alt} {...dim(foto.src)} loading="lazy" decoding="async" />
                       ) : (
                         <span className="blog-capa-selo">Plan10</span>
                       )}

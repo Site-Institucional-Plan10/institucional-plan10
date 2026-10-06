@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { dim } from "@/lib/dimensoes";
 
 /**
  * "As Soluções Plan10": índice fino e editorial (sem cards quadrados), pedido do
@@ -158,7 +159,7 @@ export function SolutionsShowcase() {
               }
             >
               <span className="p10x-foto">
-                <img src={s.foto} alt={s.alt} loading="lazy" decoding="async" />
+                <img src={s.foto} alt={s.alt} {...dim(s.foto)} loading="lazy" decoding="async" />
               </span>
               <span className="p10x-name">{s.nome}</span>
               <span className="p10x-micro">{s.micro}</span>

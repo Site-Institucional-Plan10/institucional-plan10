@@ -83,7 +83,7 @@ export function HowItWorks() {
             </div>
           </div>
           <div className="how-it-works-image">
-            <img src="/assets/images/veleiro-consultoria.avif" alt="Veleiro navegando, consultoria Plan10" />
+            <img src="/assets/images/veleiro-consultoria.avif" alt="Veleiro navegando, consultoria Plan10" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

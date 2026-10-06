@@ -1,3 +1,4 @@
+import { dim } from "@/lib/dimensoes";
 /**
  * Bloco de valor da Home: beat premium e emocional logo após o hero.
  * Fundo fotográfico escuro (envelopes com lacre dourado, curadoria aprovada) sob
@@ -32,7 +33,7 @@ export function BrandPromise() {
         @media (max-width: 720px) { .bp { padding: 30px 20px; } .bp-h { font-size: 1.5rem; line-height: 1.18; } }
       `}</style>
       <div className="bp-bg" aria-hidden>
-        <img src="/assets/curated/still-envelopes.webp" alt="" loading="lazy" />
+        <img src="/assets/curated/still-envelopes.webp" alt="" {...dim("/assets/curated/still-envelopes.webp")} loading="lazy" />
       </div>
       <div className="bp-in">
         <h2 id="bp-h" className="bp-h">

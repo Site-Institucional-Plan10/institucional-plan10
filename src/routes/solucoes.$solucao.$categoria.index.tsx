@@ -9,6 +9,7 @@ import { heroCategoria, contextoDe } from "@/lib/imagery";
 import { finCategoriaImgs } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
 import { faqDaCategoria, criteriosDaCategoria, valoresDaCategoria, frentesConectadas } from "@/lib/plan10";
+import { dim } from "@/lib/dimensoes";
 
 const splitDots = (s: string) =>
   s
@@ -99,7 +100,7 @@ function CategoriaPage() {
       <PageTheme slug={s.slug}>
         <header className="p10-hero has-img">
           <div className="p10-hero-bg" aria-hidden>
-            <img src={heroImg.src} alt="" loading="eager" />
+            <img src={heroImg.src} alt="" {...dim(heroImg.src)} loading="eager" fetchPriority="high" />
           </div>
           <div className="p10-hero-inner">
             <h1>{c.nome}</h1>
@@ -143,7 +144,7 @@ function CategoriaPage() {
                   )}
                 </div>
                 <figure className="p10-fig">
-                  <img src={ctxImg.src} alt={ctxImg.alt} loading="lazy" />
+                  <img src={ctxImg.src} alt={ctxImg.alt} {...dim(ctxImg.src)} loading="lazy" decoding="async" />
                 </figure>
               </div>
             </div>
@@ -213,7 +214,7 @@ function CategoriaPage() {
     <PageTheme slug={s.slug}>
       <header className="p10-hero has-img">
         <div className="p10-hero-bg" aria-hidden>
-          <img src={heroImg.src} alt="" loading="eager" />
+          <img src={heroImg.src} alt="" {...dim(heroImg.src)} loading="eager" fetchPriority="high" />
         </div>
         <div className="p10-hero-inner">
           <h1>{c.nome}</h1>
@@ -259,7 +260,7 @@ function CategoriaPage() {
               )}
             </div>
             <figure className="p10-fig">
-              <img src={ctxImg.src} alt={ctxImg.alt} loading="lazy" />
+              <img src={ctxImg.src} alt={ctxImg.alt} {...dim(ctxImg.src)} loading="lazy" decoding="async" />
             </figure>
           </div>
           <div>

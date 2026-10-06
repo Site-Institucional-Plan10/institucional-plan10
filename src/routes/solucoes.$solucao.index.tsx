@@ -2,13 +2,14 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { useRolarAteTrilha } from "@/lib/rolagem";
 import { findSolucao, type Solucao } from "@/data/solutions";
 import { Route as SolucaoRoute } from "./solucoes.$solucao";
-import { PageTheme, logoFor } from "@/components/plan10/PageTheme";
+import { PageTheme } from "@/components/plan10/PageTheme";
 import { heroSolucao, contextoDe } from "@/lib/imagery";
 import { FIN_HUB } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
 import { Sanfonas } from "@/components/solucoes/Sanfonas";
 import { VERTICAIS, verticalPorHub } from "@/lib/verticais";
 import { whatsappUrl } from "@/lib/plan10";
+import { dim } from "@/lib/dimensoes";
 
 export const Route = createFileRoute("/solucoes/$solucao/")({
   loader: ({ params }): { solucao: Solucao } => {
@@ -47,7 +48,6 @@ function SolucaoPage() {
   const heroImg = solucao.slug === "financeiras" ? FIN_HUB.hero : heroSolucao(solucao.slug);
   const ctxImg =
     solucao.slug === "financeiras" ? FIN_HUB.ctx : contextoDe(solucao.slug, 0, heroImg.src, solucao.slug);
-  const logo = logoFor(solucao.slug);
   const estaFrente = verticalPorHub(solucao.slug);
   const outrasFrentes = VERTICAIS.filter((v) => v.hub !== solucao.slug);
 
@@ -55,10 +55,13 @@ function SolucaoPage() {
     <PageTheme slug={solucao.slug}>
       <header className="p10-hero has-img">
         <div className="p10-hero-bg" aria-hidden>
-          <img src={heroImg.src} alt="" loading="eager" />
+          <img src={heroImg.src} alt="" {...dim(heroImg.src)} loading="eager" fetchPriority="high" />
         </div>
         <div className="p10-hero-inner">
-          {logo && <img src={logo} alt={`Logo ${solucao.nome}`} className="p10-hero-logo" />}
+          {/* O logo da vertical saiu daqui: `.p10-hero-logo` é `display: none`
+              no tema, então ele era baixado em toda visita e nunca aparecia.
+              `logoFor` continua apontando para o arquivo certo da marca nova,
+              pronto para quando se decidir mostrá-lo. */}
           <h1>{solucao.nome}</h1>
           <p className="lede">{solucao.hero}</p>
           <p className="lede sub">{solucao.subHero}</p>
@@ -92,7 +95,7 @@ function SolucaoPage() {
             {solucao.aberturaConsultiva}
           </p>
           <figure className="p10-fig">
-            <img src={ctxImg.src} alt={ctxImg.alt} loading="lazy" />
+            <img src={ctxImg.src} alt={ctxImg.alt} {...dim(ctxImg.src)} loading="lazy" decoding="async" />
           </figure>
         </div>
       </section>

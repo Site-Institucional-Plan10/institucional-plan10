@@ -1,3 +1,4 @@
+import { dim } from "@/lib/dimensoes";
 const row1Logos = [
   { name: "Porto", src: "/assets/partners/logo-porto.png" },
   { name: "Bradesco Seguros", src: "/assets/partners/logo-bradesco.png" },
@@ -82,7 +83,7 @@ export function PartnersLogos() {
             >
               {[...row1Logos, ...row1Logos].map((logo, i) => (
                 <div key={`r1-${i}`} style={cardStyle}>
-                  <img src={logo.src} alt={logo.name} style={imgStyle} onError={handleImgError} />
+                  <img src={logo.src} alt={logo.name} {...dim(logo.src)} loading="lazy" decoding="async" style={imgStyle} onError={handleImgError} />
                 </div>
               ))}
             </div>
@@ -104,7 +105,7 @@ export function PartnersLogos() {
             >
               {[...row2Logos, ...row2Logos].map((logo, i) => (
                 <div key={`r2-${i}`} style={cardStyle}>
-                  <img src={logo.src} alt={logo.name} style={imgStyle} onError={handleImgError} />
+                  <img src={logo.src} alt={logo.name} {...dim(logo.src)} loading="lazy" decoding="async" style={imgStyle} onError={handleImgError} />
                 </div>
               ))}
             </div>

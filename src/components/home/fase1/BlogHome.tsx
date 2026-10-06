@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { blogArticles, blogCategoryFor } from "@/data/blogArticles";
 import { fotoDoArtigo } from "@/lib/blogImagery";
+import { dim } from "@/lib/dimensoes";
 
 /**
  * Seis leituras na Home, antes do CTA final, como pede a ordem do pacote.
@@ -49,7 +50,7 @@ export function BlogHome() {
               <Link key={a.slug} to="/blog/$slug" params={{ slug: a.slug }} className="f1-post">
                 <div className="f1-post-capa">
                   {foto && (
-                    <img src={foto.src} alt={foto.alt} loading="lazy" decoding="async" />
+                    <img src={foto.src} alt={foto.alt} {...dim(foto.src)} loading="lazy" decoding="async" />
                   )}
                 </div>
                 <div className="f1-post-corpo">

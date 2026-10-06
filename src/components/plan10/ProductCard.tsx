@@ -1,4 +1,5 @@
 import type { Product } from "@/data/solutions";
+import { dim } from "@/lib/dimensoes";
 
 interface Props {
   product: Product;
@@ -32,7 +33,7 @@ export function ProductCard({ product, onPrimary, imagem }: Props) {
     <button type="button" className="prod-tile" onClick={onPrimary}>
       {imagem && (
         <span className="prod-tile-foto">
-          <img src={imagem.src} alt={imagem.alt} loading="lazy" decoding="async" />
+          <img src={imagem.src} alt={imagem.alt} {...dim(imagem.src)} loading="lazy" decoding="async" />
         </span>
       )}
       <span className="prod-tile-name">{product.nome}</span>

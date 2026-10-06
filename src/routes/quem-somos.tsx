@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { canonical } from "@/lib/seo";
 import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
+import { dim } from "@/lib/dimensoes";
 
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
@@ -77,7 +78,9 @@ function QuemSomos() {
           <img
             src="/assets/temas/quem-somos-time.webp"
             alt=""
+            {...dim("/assets/temas/quem-somos-time.webp")}
             loading="eager"
+            fetchPriority="high"
           />
         </div>
         <div className="p10-hero-inner">
