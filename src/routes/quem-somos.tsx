@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle, Shield, Heart, Building2, Landmark, Clock } from "lucide-react";
+import {
+  ChartNoAxesCombined, Handshake, HeartPulse, KeyRound, MessageCircle, ShieldCheck,
+} from "lucide-react";
 import { ProofNumbers } from "@/components/sections/ProofNumbers";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { ParceirosStrip } from "@/components/home/ParceirosStrip";
+import { FaixaSeguradoras } from "@/components/common/FaixaSeguradoras";
 import { Button } from "@/components/ui/Plan10Button";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { canonical } from "@/lib/seo";
@@ -34,37 +36,37 @@ const valores = ["Proximidade", "Clareza", "Cuidado", "Pluralidade", "Constânci
 
 const teamCells = [
   {
-    Icon: Heart,
-    color: "#1C4E80",
-    area: "Célula de Saúde",
+    Icon: HeartPulse,
+    color: "#229B93",
+    area: "Plan10 Saúde",
     description:
       "Especialistas em saúde e bem-estar para pessoas, famílias e empresas: acesso, prevenção, odontologia e acompanhamento, com orientação para cada fase.",
   },
   {
-    Icon: Shield,
-    color: "#1C4E80",
-    area: "Célula de Proteção",
+    Icon: ShieldCheck,
+    color: "#BF7834",
+    area: "Plan10 Seguros",
     description:
       "Consultores de proteção à vida e ao patrimônio: vida, renda, patrimônio, responsabilidades e continuidade, com leitura de exposição antes da escolha.",
   },
   {
-    Icon: Landmark,
-    color: "#1C4E80",
-    area: "Célula de Financeiras",
+    Icon: ChartNoAxesCombined,
+    color: "#71869D",
+    area: "Plan10 Finanças",
     description:
       "Inteligência financeira em crédito, liquidez, garantias, investimentos e futuro, organizados por objetivo e contexto.",
   },
   {
-    Icon: Building2,
-    color: "#1C4E80",
-    area: "Célula de Crescimento",
+    Icon: KeyRound,
+    color: "#8575BD",
+    area: "Plan10 Consórcios",
     description:
       "Planejamento de aquisições, mobilidade e expansão: imóveis, veículos, máquinas e projetos, conduzidos com critério e visão patrimonial.",
   },
   {
-    Icon: Clock,
-    color: "#1C4E80",
-    area: "Célula de Assistência",
+    Icon: Handshake,
+    color: "#C54949",
+    area: "Plan10 Serviços",
     description:
       "Assistência para casa, empresa, mobilidade e o dia a dia, com resposta rápida, conveniência e continuidade.",
   },
@@ -246,8 +248,23 @@ function QuemSomos() {
         </div>
       </section>
 
-      {/* Parceiros, movidos da home para Quem Somos (pedido do cliente, 06/09/2026) */}
-      <ParceirosStrip />
+      {/* Parceiros, movidos da home para Quem Somos (pedido do cliente, 06/09/2026).
+          As marcas passaram a ser as do pacote de integração, na mesma faixa
+          única da Home, no lugar dos logos avulsos que vinham de antes. */}
+      <section className="sec" aria-labelledby="parc-h" style={{ paddingBottom: 56 }}>
+        <div className="wrap">
+          <p className="eyebrow">Com quem trabalhamos</p>
+          <h2 className="p10-h2" id="parc-h" style={{ marginBottom: 8 }}>
+            Seguradoras em nosso portfólio
+          </h2>
+          <p className="p10-lede" style={{ maxWidth: "58ch" }}>
+            A comparação entre companhias é o que sustenta uma recomendação com critério.
+          </p>
+        </div>
+        <div style={{ marginTop: 30 }}>
+          <FaixaSeguradoras />
+        </div>
+      </section>
 
       {/* Depoimentos, movidos da home para Quem Somos (pedido do cliente, 12/08/2026) */}
       <Testimonials />

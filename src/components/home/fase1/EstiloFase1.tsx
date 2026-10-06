@@ -31,9 +31,23 @@ export function EstiloFase1() {
       .f1-lede { font-size: 1.04rem; line-height: 1.6; color: #4A5668; margin: 14px 0 0; max-width: 62ch; }
 
       /* especialidades: título branco sobre a foto, descrição abaixo */
-      .f1-esp { display: grid; gap: 20px; margin-top: 34px; grid-template-columns: 1fr; }
-      @media (min-width: 720px) { .f1-esp { grid-template-columns: repeat(2, 1fr); } }
-      @media (min-width: 1080px) { .f1-esp { grid-template-columns: repeat(3, 1fr); } }
+      /* A grade do wireframe: colunas em múltiplos de dois, cada card ocupando
+         duas. É o que centraliza a última fileira, que tem dois cards e não
+         três. Sem isso, os dois últimos encostavam na esquerda. */
+      .f1-esp {
+        display: grid; gap: 36px; margin-top: 34px;
+        grid-template-columns: 1fr; max-width: 420px; margin-inline: auto;
+      }
+      @media (min-width: 720px) {
+        .f1-esp { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 20px; max-width: none; }
+        .f1-card { grid-column: span 2; }
+        .f1-card:nth-child(5) { grid-column: 2 / span 2; }
+      }
+      @media (min-width: 1080px) {
+        .f1-esp { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 38px 28px; }
+        .f1-card:nth-child(4) { grid-column: 2 / span 2; }
+        .f1-card:nth-child(5) { grid-column: 4 / span 2; }
+      }
       .f1-card {
         display: flex; flex-direction: column; background: #fff; border: 1px solid #E6E1D6;
         border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit;
@@ -41,7 +55,7 @@ export function EstiloFase1() {
       }
       .f1-card:hover { border-color: var(--acento); transform: translateY(-2px); box-shadow: 0 16px 34px rgba(12,35,64,.10); }
       .f1-card:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
-      .f1-capa { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+      .f1-capa { position: relative; aspect-ratio: 1; overflow: hidden; }
       .f1-capa img { width: 100%; height: 100%; object-fit: cover; display: block; }
       /* degradê discreto só para o título branco ter contraste garantido */
       .f1-capa::after {
