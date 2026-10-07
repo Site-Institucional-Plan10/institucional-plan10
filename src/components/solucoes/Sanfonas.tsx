@@ -5,6 +5,8 @@ import { usarPerfil } from "@/lib/perfilPublico";
 import type { PerfilPublico } from "@/lib/verticais";
 import { whatsappUrl } from "@/lib/plan10";
 import { BotaoFavoritar, EstiloFavoritar } from "@/components/favoritos/BotaoFavoritar";
+import { ExternalLink } from "lucide-react";
+import { contratacaoOnlineDe } from "@/lib/contratacaoOnline";
 
 /**
  * As sanfonas da vertical: a pessoa abre a categoria e a solução na própria
@@ -333,19 +335,32 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
                               )}
 
                               <div className="sf-prod-acoes">
-                                {/* "Falar com consultor" é o CTA principal que a
-                                    avaliação manda prevalecer nos produtos que
-                                    pedem leitura de contexto. */}
-                                <a
-                                  className="sf-btn sf-btn-p"
-                                  href={whatsappUrl(
-                                    `Olá! Quero falar sobre ${produto.nome} (${solucao.nome}).`,
-                                  )}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                >
-                                  Falar com consultor
-                                </a>
+                                {/* A variação de CTA que o Carlos pediu: quem tem
+                                    endereço de contratação confirmado oferece
+                                    "Contratar online"; o resto segue pela cotação,
+                                    com o consultor. */}
+                                {contratacaoOnlineDe(produto.linkPorto) ? (
+                                  <a
+                                    className="sf-btn sf-btn-p"
+                                    href={contratacaoOnlineDe(produto.linkPorto) as string}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    Contratar online
+                                    <ExternalLink size={14} aria-hidden />
+                                  </a>
+                                ) : (
+                                  <a
+                                    className="sf-btn sf-btn-p"
+                                    href={whatsappUrl(
+                                      `Olá! Quero solicitar cotação de ${produto.nome} (${solucao.nome}).`,
+                                    )}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    Solicitar cotação
+                                  </a>
+                                )}
                                 <BotaoFavoritar
                                   chave={`${solucao.slug}/${categoria.slug}/${nucleo.slug}/${produto.id}`}
                                   nome={produto.nome}
