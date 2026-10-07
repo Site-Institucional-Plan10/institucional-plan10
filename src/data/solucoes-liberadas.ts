@@ -7807,7 +7807,7 @@ export const solucoesLiberadas = [
                 "fechamento": "A leitura correta, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para cartões de black, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/CARTAODEcréditoPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
+                "linkPorto": "http://www.porto.vc/CARTAODECREDITOPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
                 "faq": [
                   {
                     "q": "Que decisão cartões de crédito black ajuda a organizar?",
@@ -7846,7 +7846,7 @@ export const solucoesLiberadas = [
                 "fechamento": "O contrato performa melhor, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para cartões de com milhas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/CARTAODEcréditoPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
+                "linkPorto": "http://www.porto.vc/CARTAODECREDITOPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
                 "faq": [
                   {
                     "q": "Que decisão cartões de crédito com milhas ajuda a organizar?",
@@ -7885,7 +7885,7 @@ export const solucoesLiberadas = [
                 "fechamento": "A escolha premium, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para cartões de platinum, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/CARTAODEcréditoPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
+                "linkPorto": "http://www.porto.vc/CARTAODECREDITOPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
                 "faq": [
                   {
                     "q": "Que decisão cartões de crédito platinum ajuda a organizar?",
@@ -7924,7 +7924,7 @@ export const solucoesLiberadas = [
                 "fechamento": "O valor aparece, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para cartões de premium, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/CARTAODEcréditoPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
+                "linkPorto": "http://www.porto.vc/CARTAODECREDITOPORTOBANK_DFK57J_0923ae2192ad45ad90381dea0ba4d9ea",
                 "faq": [
                   {
                     "q": "Que decisão cartões de crédito premium ajuda a organizar?",
