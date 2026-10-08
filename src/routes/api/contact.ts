@@ -49,11 +49,13 @@ async function sendLeadEmail(data: LeadData): Promise<"sent" | "unconfigured" | 
   /**
    * LEAD_TO_EMAIL aceita vários destinos separados por vírgula, e é assim que
    * o lead chega ao Megazap sem usar a API dele: um dos endereços é a caixa do
-   * canal de E-mail no painel (algo como contato@plan10.email-bot.chat), que
-   * abre o atendimento sozinho ao receber a mensagem. O outro é a caixa da
-   * Plan10, para o lead existir também fora da ferramenta.
+   * canal de E-mail no painel, contato@plan10.email-bot.chat, confirmado no
+   * painel em 08/10/2026: ele abre o atendimento sozinho ao receber a
+   * mensagem. O outro é a caixa da Plan10, para o lead existir também fora da
+   * ferramenta. Os dois são o padrão aqui, então basta a chave do Resend para
+   * o envio funcionar; a variável serve para mudar os destinos sem recompilar.
    */
-  const to = (envVar("LEAD_TO_EMAIL") || "contato@plan10.com.br")
+  const to = (envVar("LEAD_TO_EMAIL") || "contato@plan10.com.br, contato@plan10.email-bot.chat")
     .split(",")
     .map((e) => e.trim())
     .filter(Boolean);
