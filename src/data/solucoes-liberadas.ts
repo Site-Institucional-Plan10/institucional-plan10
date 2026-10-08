@@ -646,10 +646,10 @@ export const solucoesLiberadas = [
             "fechamento": "",
             "products": [
               {
-                "id": "instalacao-e-manutencao-climatizacao-empresarial",
-                "nome": "instalação e manutenção climatização empresarial",
+                "id": "instalacao-de-ar-condicionado-empresarial",
+                "nome": "Instalação de ar-condicionado empresarial",
                 "perfil": "PJ",
-                "descricao": "Caminho consultivo para instalação e manutenção climatização empresarial, com acionamento claro, parceiro adequado e resposta prática no contexto de manutenção, instalação e conforto.",
+                "descricao": "Instalação de ar-condicionado com agendamento e execução por prestador da rede, conforme escopo e condições do prestador.",
                 "caracteristicas": [
                   "Canal de acionamento, rede técnica, parâmetros de atendimento, tempo de resposta e orientação de continuidade."
                 ],
@@ -663,9 +663,9 @@ export const solucoesLiberadas = [
                 "aQuemSeDestina": "Desenhado para empresas, gestores e operações que precisam de escala, governança e continuidade, especialmente em cenários de manutenção, instalação e conforto exige uma escolha bem orientada e bem acompanhada. O contexto de instalação e manutenção climatização empresarial define o nível de detalhamento da recomendação.",
                 "beneficios": "Organiza resposta operacional para instalação e manutenção climatização empresarial, reduzindo improvisos e preservando o dia a dia com menor fricção.",
                 "fechamento": "A escolha ganha qualidade, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para instalação e manutenção climatização empresarial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
-                "ctaPrimario": "Planejar manutenção assistida",
+                "ctaPrimario": "Contratar instalação",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/PORTOSERVICOINSTALACAODEARCONDICIONADO_DFK57J_de6de509a97d4675ad567f7e0a12813c · http://www.porto.vc/PORTOSERVICOCONSERTODEARCONDICIONADO_DFK57J_c9c0a7e3202b4c24944e4e854d22e132 · http://www.porto.vc/PORTOSERVICOLIMPEZADEARCONDICIONADO_DFK57J_d609e57a1fa2465f9981be30085590f0",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICOINSTALACAODEARCONDICIONADO_DFK57J_de6de509a97d4675ad567f7e0a12813c",
                 "faq": [
                   {
                     "q": "Em que situação instalação e manutenção climatização empresarial se torna mais relevante para empresas, gestores ou operações?",
@@ -685,10 +685,88 @@ export const solucoesLiberadas = [
                 ]
               },
               {
-                "id": "instalacao-e-manutencao-climatizacao-residencial",
-                "nome": "instalação e manutenção climatização residencial",
+                "id": "conserto-de-ar-condicionado-empresarial",
+                "nome": "Conserto de ar-condicionado empresarial",
+                "perfil": "PJ",
+                "descricao": "Reparo de ar-condicionado com diagnóstico e execução por prestador da rede, conforme escopo e condições do prestador.",
+                "caracteristicas": [
+                  "Canal de acionamento, rede técnica, parâmetros de atendimento, tempo de resposta e orientação de continuidade."
+                ],
+                "itensInclusos": [
+                  "Mapeamento inicial",
+                  "Acionamento técnico",
+                  "Deslocamento de profissional",
+                  "Execução dentro do escopo",
+                  "Orientação de continuidade."
+                ],
+                "aQuemSeDestina": "Desenhado para empresas, gestores e operações que precisam de escala, governança e continuidade, especialmente em cenários de manutenção, instalação e conforto exige uma escolha bem orientada e bem acompanhada. O contexto de instalação e manutenção climatização empresarial define o nível de detalhamento da recomendação.",
+                "beneficios": "Organiza resposta operacional para instalação e manutenção climatização empresarial, reduzindo improvisos e preservando o dia a dia com menor fricção.",
+                "fechamento": "A escolha ganha qualidade, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para instalação e manutenção climatização empresarial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
+                "ctaPrimario": "Contratar conserto",
+                "ctaSecundario": "Falar com consultor",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICOCONSERTODEARCONDICIONADO_DFK57J_c9c0a7e3202b4c24944e4e854d22e132",
+                "faq": [
+                  {
+                    "q": "Em que situação instalação e manutenção climatização empresarial se torna mais relevante para empresas, gestores ou operações?",
+                    "a": "Torna-se relevante quando manutenção, instalação e conforto precisa de resposta rápida, escopo claro e acionamento simples, sem transformar o imprevisto em perda de tempo ou continuidade."
+                  },
+                  {
+                    "q": "O que confirmar antes de contratar instalação e manutenção climatização empresarial?",
+                    "a": "Confirme área atendida, horários, limites de uso, itens incluídos, responsabilidades do cliente e canais de suporte."
+                  },
+                  {
+                    "q": "Como instalação e manutenção climatização empresarial pode aumentar a percepção de valor da solução?",
+                    "a": "Quando bem escolhido, o serviço reduz improviso, melhora a experiência de uso e conecta conveniência prática a uma proteção mais completa."
+                  }
+                ],
+                "crossSelling": [
+                  "instalação e manutenção climatização empresarial pode se conectar a seguros patrimoniais, assistência complementar, benefícios corporativos e soluções de mobilidade conforme o uso."
+                ]
+              },
+              {
+                "id": "limpeza-de-ar-condicionado-empresarial",
+                "nome": "Limpeza de ar-condicionado empresarial",
+                "perfil": "PJ",
+                "descricao": "Limpeza de ar-condicionado com agendamento e execução por prestador da rede, conforme escopo e condições do prestador.",
+                "caracteristicas": [
+                  "Canal de acionamento, rede técnica, parâmetros de atendimento, tempo de resposta e orientação de continuidade."
+                ],
+                "itensInclusos": [
+                  "Mapeamento inicial",
+                  "Acionamento técnico",
+                  "Deslocamento de profissional",
+                  "Execução dentro do escopo",
+                  "Orientação de continuidade."
+                ],
+                "aQuemSeDestina": "Desenhado para empresas, gestores e operações que precisam de escala, governança e continuidade, especialmente em cenários de manutenção, instalação e conforto exige uma escolha bem orientada e bem acompanhada. O contexto de instalação e manutenção climatização empresarial define o nível de detalhamento da recomendação.",
+                "beneficios": "Organiza resposta operacional para instalação e manutenção climatização empresarial, reduzindo improvisos e preservando o dia a dia com menor fricção.",
+                "fechamento": "A escolha ganha qualidade, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para instalação e manutenção climatização empresarial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
+                "ctaPrimario": "Contratar limpeza",
+                "ctaSecundario": "Falar com consultor",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICOLIMPEZADEARCONDICIONADO_DFK57J_d609e57a1fa2465f9981be30085590f0",
+                "faq": [
+                  {
+                    "q": "Em que situação instalação e manutenção climatização empresarial se torna mais relevante para empresas, gestores ou operações?",
+                    "a": "Torna-se relevante quando manutenção, instalação e conforto precisa de resposta rápida, escopo claro e acionamento simples, sem transformar o imprevisto em perda de tempo ou continuidade."
+                  },
+                  {
+                    "q": "O que confirmar antes de contratar instalação e manutenção climatização empresarial?",
+                    "a": "Confirme área atendida, horários, limites de uso, itens incluídos, responsabilidades do cliente e canais de suporte."
+                  },
+                  {
+                    "q": "Como instalação e manutenção climatização empresarial pode aumentar a percepção de valor da solução?",
+                    "a": "Quando bem escolhido, o serviço reduz improviso, melhora a experiência de uso e conecta conveniência prática a uma proteção mais completa."
+                  }
+                ],
+                "crossSelling": [
+                  "instalação e manutenção climatização empresarial pode se conectar a seguros patrimoniais, assistência complementar, benefícios corporativos e soluções de mobilidade conforme o uso."
+                ]
+              },
+              {
+                "id": "instalacao-de-ar-condicionado-residencial",
+                "nome": "Instalação de ar-condicionado residencial",
                 "perfil": "PF",
-                "descricao": "Formato orientado para instalação e manutenção climatização residencial, com acionamento claro, parceiro adequado e resposta prática no contexto de manutenção, instalação e conforto.",
+                "descricao": "Instalação de ar-condicionado com agendamento e execução por prestador da rede, conforme escopo e condições do prestador.",
                 "caracteristicas": [
                   "Canal de acionamento, rede técnica, parâmetros de atendimento, tempo de resposta e orientação de continuidade."
                 ],
@@ -702,9 +780,87 @@ export const solucoesLiberadas = [
                 "aQuemSeDestina": "Criado para empresas, gestores e operações que precisam de escala, governança e continuidade, especialmente em cenários de manutenção, instalação e conforto exige uma escolha bem orientada e bem acompanhada. O contexto de instalação e manutenção climatização residencial define o nível de detalhamento da recomendação.",
                 "beneficios": "Fortalece resposta operacional para instalação e manutenção climatização residencial, reduzindo improvisos e preservando o dia a dia com menor fricção.",
                 "fechamento": "O ponto central, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para instalação e manutenção climatização residencial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
-                "ctaPrimario": "Planejar manutenção assistida",
+                "ctaPrimario": "Contratar instalação",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/PORTOSERVICOINSTALACAODEARCONDICIONADO_DFK57J_de6de509a97d4675ad567f7e0a12813c · http://www.porto.vc/PORTOSERVICOCONSERTODEARCONDICIONADO_DFK57J_c9c0a7e3202b4c24944e4e854d22e132 · http://www.porto.vc/PORTOSERVICOLIMPEZADEARCONDICIONADO_DFK57J_d609e57a1fa2465f9981be30085590f0",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICOINSTALACAODEARCONDICIONADO_DFK57J_de6de509a97d4675ad567f7e0a12813c",
+                "faq": [
+                  {
+                    "q": "Em que situação instalação e manutenção climatização residencial se torna mais relevante para pessoas ou famílias?",
+                    "a": "Torna-se relevante quando manutenção, instalação e conforto precisa de resposta rápida, escopo claro e acionamento simples, sem transformar o imprevisto em perda de tempo ou continuidade."
+                  },
+                  {
+                    "q": "O que confirmar antes de contratar instalação e manutenção climatização residencial?",
+                    "a": "Confirme área atendida, horários, limites de uso, itens incluídos, responsabilidades do cliente e canais de suporte."
+                  },
+                  {
+                    "q": "Como instalação e manutenção climatização residencial pode aumentar a percepção de valor da solução?",
+                    "a": "Quando bem escolhido, o serviço reduz improviso, melhora a experiência de uso e conecta conveniência prática a uma proteção mais completa."
+                  }
+                ],
+                "crossSelling": [
+                  "instalação e manutenção climatização residencial pode se conectar a seguros patrimoniais, assistência complementar, benefícios corporativos e soluções de mobilidade conforme o uso."
+                ]
+              },
+              {
+                "id": "conserto-de-ar-condicionado-residencial",
+                "nome": "Conserto de ar-condicionado residencial",
+                "perfil": "PF",
+                "descricao": "Reparo de ar-condicionado com diagnóstico e execução por prestador da rede, conforme escopo e condições do prestador.",
+                "caracteristicas": [
+                  "Canal de acionamento, rede técnica, parâmetros de atendimento, tempo de resposta e orientação de continuidade."
+                ],
+                "itensInclusos": [
+                  "Mapeamento inicial",
+                  "Acionamento técnico",
+                  "Deslocamento de profissional",
+                  "Execução dentro do escopo",
+                  "Orientação de continuidade."
+                ],
+                "aQuemSeDestina": "Criado para empresas, gestores e operações que precisam de escala, governança e continuidade, especialmente em cenários de manutenção, instalação e conforto exige uma escolha bem orientada e bem acompanhada. O contexto de instalação e manutenção climatização residencial define o nível de detalhamento da recomendação.",
+                "beneficios": "Fortalece resposta operacional para instalação e manutenção climatização residencial, reduzindo improvisos e preservando o dia a dia com menor fricção.",
+                "fechamento": "O ponto central, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para instalação e manutenção climatização residencial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
+                "ctaPrimario": "Contratar conserto",
+                "ctaSecundario": "Falar com consultor",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICOCONSERTODEARCONDICIONADO_DFK57J_c9c0a7e3202b4c24944e4e854d22e132",
+                "faq": [
+                  {
+                    "q": "Em que situação instalação e manutenção climatização residencial se torna mais relevante para pessoas ou famílias?",
+                    "a": "Torna-se relevante quando manutenção, instalação e conforto precisa de resposta rápida, escopo claro e acionamento simples, sem transformar o imprevisto em perda de tempo ou continuidade."
+                  },
+                  {
+                    "q": "O que confirmar antes de contratar instalação e manutenção climatização residencial?",
+                    "a": "Confirme área atendida, horários, limites de uso, itens incluídos, responsabilidades do cliente e canais de suporte."
+                  },
+                  {
+                    "q": "Como instalação e manutenção climatização residencial pode aumentar a percepção de valor da solução?",
+                    "a": "Quando bem escolhido, o serviço reduz improviso, melhora a experiência de uso e conecta conveniência prática a uma proteção mais completa."
+                  }
+                ],
+                "crossSelling": [
+                  "instalação e manutenção climatização residencial pode se conectar a seguros patrimoniais, assistência complementar, benefícios corporativos e soluções de mobilidade conforme o uso."
+                ]
+              },
+              {
+                "id": "limpeza-de-ar-condicionado-residencial",
+                "nome": "Limpeza de ar-condicionado residencial",
+                "perfil": "PF",
+                "descricao": "Limpeza de ar-condicionado com agendamento e execução por prestador da rede, conforme escopo e condições do prestador.",
+                "caracteristicas": [
+                  "Canal de acionamento, rede técnica, parâmetros de atendimento, tempo de resposta e orientação de continuidade."
+                ],
+                "itensInclusos": [
+                  "Mapeamento inicial",
+                  "Acionamento técnico",
+                  "Deslocamento de profissional",
+                  "Execução dentro do escopo",
+                  "Orientação de continuidade."
+                ],
+                "aQuemSeDestina": "Criado para empresas, gestores e operações que precisam de escala, governança e continuidade, especialmente em cenários de manutenção, instalação e conforto exige uma escolha bem orientada e bem acompanhada. O contexto de instalação e manutenção climatização residencial define o nível de detalhamento da recomendação.",
+                "beneficios": "Fortalece resposta operacional para instalação e manutenção climatização residencial, reduzindo improvisos e preservando o dia a dia com menor fricção.",
+                "fechamento": "O ponto central, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para instalação e manutenção climatização residencial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
+                "ctaPrimario": "Contratar limpeza",
+                "ctaSecundario": "Falar com consultor",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICOLIMPEZADEARCONDICIONADO_DFK57J_d609e57a1fa2465f9981be30085590f0",
                 "faq": [
                   {
                     "q": "Em que situação instalação e manutenção climatização residencial se torna mais relevante para pessoas ou famílias?",
@@ -782,7 +938,7 @@ export const solucoesLiberadas = [
                 "fechamento": "O contrato performa melhor, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para manutenção predial residencial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Planejar manutenção assistida",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/PORTORESOLVE_DFK57J_8942f6896a66438fb07c4cbfbd217c0c · http://www.porto.vc/PORTOSERVICO_DFK57J_47853e12ee384c37ae39979f5c3772ae",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICO_DFK57J_47853e12ee384c37ae39979f5c3772ae",
                 "faq": [
                   {
                     "q": "Em que situação assistência manutenção predial residencial se torna mais relevante para pessoas ou famílias?",
@@ -1250,7 +1406,7 @@ export const solucoesLiberadas = [
                 "fechamento": "A escolha ganha qualidade, confirme escopo, canal de acionamento e parâmetros de atendimento. Nesse tipo de suporte, o valor está na resposta certa, no momento certo. Para manutenção predial residencial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Planejar manutenção assistida",
                 "ctaSecundario": "Falar com consultor",
-                "linkPorto": "http://www.porto.vc/PORTORESOLVE_DFK57J_8942f6896a66438fb07c4cbfbd217c0c · http://www.porto.vc/PORTOSERVICO_DFK57J_47853e12ee384c37ae39979f5c3772ae",
+                "linkPorto": "http://www.porto.vc/PORTOSERVICO_DFK57J_47853e12ee384c37ae39979f5c3772ae",
                 "faq": [
                   {
                     "q": "Em que situação manutenção predial residencial se torna mais relevante para pessoas ou famílias?",

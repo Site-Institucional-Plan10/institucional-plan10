@@ -1,4 +1,7 @@
 // Soluções online da Plan10 (03_SOLUCOES_ONLINE.xlsx, colunas C e D). Links confirmados pelo cliente.
+// 08/10/2026: a Porto reposicionou dois destinos e o Carlos pediu o ajuste de
+// enquadramento. PORTORESOLVE passou a ser específico de auto e PORTOSERVICO de
+// predial; os dois cards estavam com os papéis trocados.
 // kind 'online' = link Porto direto; 'consultivo' = encaminha para orientação (Fale conosco).
 // destaque = aparece na home (versão compacta); a lista completa vive em /solucoes-online.
 
@@ -68,10 +71,10 @@ export const solucoesOnline: SolucaoOnline[] = [
     destaque: false,
   },
   {
-    nome: "Serviços para casa e auto",
+    nome: "Serviços prediais",
     categoria: "Casa e rotina",
-    descricao: "Acesso a serviços de manutenção, reparos, instalações, limpeza e suporte para casa, carro e cotidiano, conforme disponibilidade. Um único ponto de acesso para diversas demandas.",
-    cta: "Contratar serviços para auto",
+    descricao: "Manutenção, reparos, instalações e suporte para o imóvel, com prestador e escopo definidos no acionamento. Um ponto único de acesso para as demandas prediais.",
+    cta: "Contratar serviços prediais",
     link: "http://www.porto.vc/PORTOSERVICO_DFK57J_47853e12ee384c37ae39979f5c3772ae",
     kind: "online",
     destaque: true,
@@ -203,10 +206,10 @@ export const solucoesOnline: SolucaoOnline[] = [
     destaque: false,
   },
   {
-    nome: "Serviços residenciais avulsos",
-    categoria: "Casa e rotina",
-    descricao: "Sua plataforma para contratação de serviços residenciais avulsos e sob demanda",
-    cta: "Contratar manutenção home",
+    nome: "Porto Serviço Resolve",
+    categoria: "Viagem e mobilidade",
+    descricao: "Serviços para o carro, com acionamento sob demanda e execução por prestador da rede, conforme escopo e disponibilidade.",
+    cta: "Contratar serviços para auto",
     link: "http://www.porto.vc/PORTORESOLVE_DFK57J_8942f6896a66438fb07c4cbfbd217c0c",
     kind: "online",
     destaque: false,

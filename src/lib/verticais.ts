@@ -9,7 +9,9 @@
  * Tudo que a revisão pede (mega menu, busca, filtros, sanfonas e favoritos)
  * consome daqui, para não haver cópia divergente de nome, perfil ou
  * disponibilidade. A fonte continua sendo o catálogo em `solucoes-liberadas`,
- * que foi conferido produto a produto contra a planilha do pacote: 393 produtos
+ * que foi conferido produto a produto contra a planilha do pacote. Em 08/10/2026
+ * os dois produtos de climatização viraram seis, a pedido do Carlos, porque eram
+ * três serviços distintos num registro só: 393 produtos
  * iguais nos dois, sem diferença de hierarquia.
  */
 import { solutions } from "@/data/solutions";

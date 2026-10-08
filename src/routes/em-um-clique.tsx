@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { canonical } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/utils";
 import { PageTheme, PALETTES } from "@/components/plan10/PageTheme";
+import { CATALOGO, VERTICAIS } from "@/lib/verticais";
 
 export const Route = createFileRoute("/em-um-clique")({
   head: () => ({
@@ -119,6 +120,47 @@ function EmUmClique() {
 
   const nada = groups.length === 0;
 
+  /**
+   * A segunda procura: as soluções de A a Z, no conceito da Porto.
+   *
+   * O índice acima é alfabético por tema; este é alfabético por solução, que é
+   * como a pessoa costuma chegar quando já sabe o nome do que quer. Os dois
+   * dividem o mesmo campo de busca.
+   *
+   * Cada item leva para a vertical com a sanfona da solução já aberta, que é a
+   * rota que o catálogo monta.
+   */
+  const porLetra = useMemo(() => {
+    const semAcento = (t: string) =>
+      t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+    const base = query
+      ? CATALOGO.filter((i) => semAcento(i.nome + " " + i.descricao).toLowerCase().includes(semAcento(query).toLowerCase()))
+      : CATALOGO;
+    /* Nomes se repetem no catálogo: "Assistência chaveiro" existe para empresa e
+       para residência, em caminhos diferentes. Numa lista alfabética os dois
+       aparecem colados e sem como distinguir, então o público entra no rótulo
+       quando o nome não é único. */
+    const vezes = new Map<string, number>();
+    for (const i of base) vezes.set(i.nome, (vezes.get(i.nome) ?? 0) + 1);
+
+    const mapa = new Map<string, { item: (typeof CATALOGO)[number]; publico: string | null }[]>();
+    for (const item of [...base].sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"))) {
+      const l = semAcento(item.nome.trim().charAt(0));
+      const letra = /[A-Z]/.test(l) ? l : "#";
+      if (!mapa.has(letra)) mapa.set(letra, []);
+      mapa.get(letra)!.push({
+        item,
+        publico:
+          (vezes.get(item.nome) ?? 0) > 1
+            ? item.perfil === "empresa"
+              ? "sua empresa"
+              : "você e família"
+            : null,
+      });
+    }
+    return [...mapa.entries()].sort(([a], [b]) => a.localeCompare(b));
+  }, [query]);
+
   return (
     <PageTheme palette={PALETTES.institucional}>
       <style>{`
@@ -133,6 +175,34 @@ function EmUmClique() {
         .euc-wrap { max-width: 1180px; margin: 0 auto; padding: 64px 20px; }
         @media (min-width: 768px) { .euc-wrap { padding: 88px 40px; } }
         .euc-block { margin-bottom: 56px; }
+        .euc-sub { font-family: var(--fb); font-size: .95rem; color: var(--ctxt); margin: -12px 0 22px; }
+        .euc-az-nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 26px; }
+        .euc-az-nav a {
+          display: grid; place-items: center; min-width: 32px; height: 32px; padding: 0 7px;
+          border: 1px solid var(--c2); border-radius: 6px; background: #fff;
+          font-family: var(--fb); font-size: .82rem; font-weight: 700; color: var(--preto);
+          text-decoration: none;
+        }
+        .euc-az-nav a:hover { border-color: var(--vp); color: var(--vp); }
+        /* o li é a caixa e o link é que fica em linha: li em flex quebraria o
+           nome da solução em colunas */
+        .euc-az { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; grid-template-columns: 1fr; }
+        @media (min-width: 720px) { .euc-az { grid-template-columns: repeat(2, 1fr); column-gap: 28px; } }
+        @media (min-width: 1080px) { .euc-az { grid-template-columns: repeat(3, 1fr); } }
+        .euc-az li { display: block; }
+        .euc-az a {
+          display: flex; align-items: baseline; gap: 9px; padding: 6px 2px;
+          font-family: var(--fb); font-size: .93rem; color: var(--preto); text-decoration: none;
+          border-bottom: 1px solid transparent;
+        }
+        .euc-az a:hover { color: var(--vp); border-bottom-color: var(--c2); }
+        .euc-az a > span { min-width: 0; }
+        .euc-az small { font-size: .82em; color: #8A93A0; }
+        .euc-az em {
+          margin-left: auto; flex: none; font-style: normal; font-family: var(--fl);
+          font-size: .66rem; letter-spacing: .07em; text-transform: uppercase; color: #9AA1AC;
+        }
+        .euc-letter[id^="az-"] { scroll-margin-top: 110px; }
         .euc-block > .eyebrow { font-family: var(--font-sans); font-weight: 600; letter-spacing: .22em; text-transform: uppercase; font-size: 0.84rem; color: var(--gold-dk, #866719); margin: 0; }
         .euc-block > h2 { font-family: var(--font-sans); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--preto); margin: 10px 0 22px; }
         .euc-letter { margin-bottom: 26px; }
@@ -161,8 +231,8 @@ function EmUmClique() {
       <header className="p10-hero">
         <div className="p10-hero-inner euc-hero-in">
         <p className="eyebrow">Plan10 em um clique</p>
-        <h1>Encontre por solução, tema ou necessidade</h1>
-        <p className="lede">Um índice rápido de todo o ecossistema Plan10, do jeito que você procura.</p>
+        <h1>Encontre por tema, necessidade ou nome da solução</h1>
+        <p className="lede">Duas formas de procurar: pelo tema que organiza o assunto ou pelo nome da solução, de A a Z.</p>
         <form className="euc-search" onSubmit={(e) => e.preventDefault()} role="search">
           <input
             value={q}
@@ -192,6 +262,45 @@ function EmUmClique() {
                 </div>
               </div>
             ))
+          )}
+        </section>
+
+        <section className="euc-block" aria-label="Índice de soluções de A a Z" id="az">
+          <p className="eyebrow">Índice</p>
+          <h2>Por solução, de A a Z</h2>
+          <p className="euc-sub">
+            Quando você já sabe o nome do que procura. São {CATALOGO.length} soluções, em ordem
+            alfabética.
+          </p>
+
+          {porLetra.length === 0 ? (
+            <p className="euc-nada">Nada encontrado para "{q}". Tente outra palavra, ou fale com um consultor.</p>
+          ) : (
+            <>
+              <nav className="euc-az-nav" aria-label="Pular para a letra">
+                {porLetra.map(([letra]) => (
+                  <a key={letra} href={`#az-${letra}`}>{letra}</a>
+                ))}
+              </nav>
+              {porLetra.map(([letra, itens]) => (
+                <div key={letra} className="euc-letter" id={`az-${letra}`}>
+                  <h3>{letra}</h3>
+                  <ul className="euc-az">
+                    {itens.map(({ item: i, publico }) => (
+                      <li key={i.chave}>
+                        <Link to={i.rota.to} params={i.rota.params} search={i.rota.search} hash={i.rota.hash}>
+                          <span>
+                            {i.nome}
+                            {publico && <small> ({publico})</small>}
+                          </span>
+                          <em>{VERTICAIS.find((v) => v.id === i.vertical)?.label}</em>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </>
           )}
         </section>
 

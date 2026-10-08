@@ -21,6 +21,9 @@ const sections: FooterSection[] = [
   {
     title: "Soluções",
     links: [
+      // os dois saíram de Institucional a pedido do Carlos; o lugar deles é aqui
+      { label: "Contrate online", to: "/solucoes-online" },
+      { label: "Plan10 em um clique", to: "/em-um-clique" },
       { label: "Saúde e vida saudável", to: "/solucoes/$solucao", params: { solucao: "saude" } },
       {
         label: "Proteção à vida e ao patrimônio",
@@ -48,8 +51,6 @@ const sections: FooterSection[] = [
     title: "Institucional",
     links: [
       { label: "Quem somos", to: "/quem-somos" },
-      { label: "Plan10 em um clique", to: "/em-um-clique" },
-      { label: "Soluções digitais", to: "/solucoes-online" },
       { label: "Mobilidade", to: "/mobilidade" },
       { label: "Depoimentos", to: "/quem-somos", hash: "depoimentos" },
     ],

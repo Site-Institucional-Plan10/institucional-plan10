@@ -10,7 +10,7 @@ export const Route = createFileRoute("/solucoes-online")({
       { title: "Soluções online | Contratação digital e orientação | Plan10" },
       { name: "description", content: "Contrate soluções digitais da Plan10 direto pelo link, ou peça orientação quando a decisão pedir contexto. Filtre por necessidade." },
       { property: "og:title", content: "Soluções online Plan10" },
-      { property: "og:description", content: "Soluções digitais e caminhos de atendimento." },
+      { property: "og:description", content: "Contrate online as soluções com acesso digital." },
       { property: "og:url", content: canonical("/solucoes-online") },
     ],
     links: [{ rel: "canonical", href: canonical("/solucoes-online") }],
@@ -77,7 +77,7 @@ function SolucoesOnlinePage() {
       <header className="p10-hero">
         <div className="p10-hero-inner">
           <p className="eyebrow">Soluções online</p>
-          <h1>Soluções digitais e caminhos de atendimento</h1>
+          <h1>Contrate online</h1>
           <p className="lede">
             Algumas soluções são simples e seguem direto para contratação online. Outras pedem objetivo, cobertura, prazo ou uso, e a Plan10 ajuda a escolher o melhor caminho antes de decidir.
           </p>

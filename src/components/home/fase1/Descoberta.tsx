@@ -21,7 +21,7 @@ import { BotaoFavoritar, EstiloFavoritar } from "@/components/favoritos/BotaoFav
  * embaixo, fora da caixa.
  *
  * A diferença em relação ao wireframe é só a origem dos dados: lá são 32
- * produtos ilustrativos, aqui são os 393 do catálogo. E o título do card leva
+ * produtos ilustrativos, aqui é o catálogo inteiro. E o título do card leva
  * para a vertical com a sanfona aberta, porque no site as páginas existem.
  *
  * A busca é local, sobre o modelo único. O pacote é explícito: backend de

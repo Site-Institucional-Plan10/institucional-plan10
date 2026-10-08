@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Calendar, Users, Handshake, Package, Clock } from "lucide-react";
+import { CATALOGO } from "@/lib/verticais";
 
 type Item = {
   Icon: typeof Calendar;
@@ -15,7 +16,8 @@ const items: Item[] = [
   { Icon: Calendar, value: "2016", label: "Fundação", target: 2016 },
   { Icon: Users, value: "5K+", label: "Clientes", target: 5, suffix: "K+" },
   { Icon: Handshake, value: "50+", label: "Parceiros", target: 50, suffix: "+" },
-  { Icon: Package, value: "393", label: "Soluções", target: 393, prefix: "" },
+  // lê o catálogo, para o número não envelhecer quando produtos entram ou saem
+  { Icon: Package, value: String(CATALOGO.length), label: "Soluções", target: CATALOGO.length, prefix: "" },
   { Icon: Clock, value: "24/7", label: "Atendimento" },
 ];
 

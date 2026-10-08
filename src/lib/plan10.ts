@@ -94,7 +94,7 @@ interface PerguntaResposta {
  * FAQ de uma categoria, montado a partir do FAQ dos caminhos que ela reúne.
  *
  * A página de categoria não tem FAQ próprio no catálogo: o que existe é o FAQ
- * por produto, três pares para cada um dos 393. Somar tudo devolveria dezenas
+ * por produto, três pares para cada um deles. Somar tudo devolveria dezenas
  * de perguntas quase iguais, porque no catálogo o que muda de um produto para
  * o outro é o nome citado na pergunta, e 1179 pares se apoiam em 354 respostas.
  * Então aqui cada caminho contribui com no máximo duas perguntas, a pergunta

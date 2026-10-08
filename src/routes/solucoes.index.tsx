@@ -83,7 +83,7 @@ function SolucoesIndex() {
           das soluções consultivas, que é onde quem procura solução chega. */}
       <section className="sec">
         <div className="wrap">
-          <h2 className="p10-h2">Soluções digitais</h2>
+          <h2 className="p10-h2">Contrate online</h2>
           <p className="p10-lede" style={{ marginBottom: 20 }}>
             Parte das soluções tem jornada digital, com contratação ou cotação online. Outras
             pedem orientação antes de decidir.
