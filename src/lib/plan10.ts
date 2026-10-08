@@ -32,7 +32,10 @@ export function aberturaLimpa(texto: string): string {
   );
   if (!m) return texto;
   const contexto = m[2].trim();
-  return `${m[1].trim()}. Em ${contexto}, cada decisão merece estar bem orientada e bem acompanhada.`;
+  // "...buscam clareza, tranquilidade e orientação. Em X, cada decisão merece
+  // estar bem orientada": o eco de "orientação" para "orientada" na frase
+  // seguinte soava repetido, e o Carlos marcou essa emenda.
+  return `${m[1].trim()}. Em ${contexto}, cada escolha merece análise e acompanhamento.`;
 }
 
 /**

@@ -90,9 +90,15 @@ interface Quad {
  * ficavam no bloco de contexto, no meio da página. Hero e contexto foram
  * trocados de lugar, e os dois contextos que sobravam em textura ganharam foto
  * própria: cofre em capitalização e gráfico com lupa em investimentos.
+ *
+ * Varredura de aderência de 08/10/2026: sobravam duas telas em que a foto
+ * visível ainda era abstrata. Operações de crédito apoiava em textura azul e
+ * passou a apoiar em relatório; fiança bancária tinha fachada no banner e mar
+ * no apoio, sem assunto nenhum, e o apoio virou cofre. As demais abstratas
+ * seguem só como banner, sob a camada escura, que é o papel delas.
  */
 const CATEGORIA: Record<string, Quad> = {
-  "credito-e-liquidez": { hero: IMG.calc, ctx: IMG.calcMesa, nucHero: IMG.docs, nucCtx: IMG.bluetex },
+  "credito-e-liquidez": { hero: IMG.calc, ctx: IMG.calcMesa, nucHero: IMG.docs, nucCtx: IMG.report },
   financiamentos: { hero: IMG.keys, ctx: IMG.maqueteChaves, nucHero: IMG.apt, nucCtx: IMG.folder },
   capitalizacao: { hero: IMG.jar, ctx: IMG.cofre, nucHero: IMG.chart, nucCtx: IMG.report },
   "garantias-financeiras": { hero: IMG.sign, ctx: IMG.docs, nucHero: IMG.policy, nucCtx: IMG.apt },
@@ -113,7 +119,7 @@ const CATEGORIA: Record<string, Quad> = {
 // Overrides por núcleo (categorias com mais de um caminho, para as irmãs não repetirem).
 const NUCLEO: Record<string, { hero: CuratedImage; ctx: CuratedImage }> = {
   "garantias-financeiras/carta-garantia": { hero: IMG.folder, ctx: IMG.policy },
-  "garantias-financeiras/fianca-bancaria": { hero: IMG.glass, ctx: IMG.sea },
+  "garantias-financeiras/fianca-bancaria": { hero: IMG.glass, ctx: IMG.cofre },
   "garantias-financeiras/garantias-de-aluguel": { hero: IMG.persiana, ctx: IMG.apt },
   "investimentos-previdencia-e-reservas/investimentos-e-patrimonio-financeiro": {
     hero: IMG.glass,

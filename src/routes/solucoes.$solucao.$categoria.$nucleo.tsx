@@ -21,6 +21,7 @@ import { heroCategoria, heroNucleo, contextoDe, pickByOrder } from "@/lib/imager
 import { finNucleoImgs, finProdutoImg } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
 import { dim } from "@/lib/dimensoes";
+import { fotoDeContexto, fotoDoTema } from "@/lib/temasImagery";
 
 export const Route = createFileRoute("/solucoes/$solucao/$categoria/$nucleo")({
   loader: ({ params }) => {
@@ -100,15 +101,33 @@ function NucleoPage() {
     0,
     c.nucleos.findIndex((x) => x.slug === n.slug),
   );
-  // A página de produto não pode repetir NENHUMA foto da página de modalidade (pai).
-  // Recalculo as duas fotos do pai e as bloqueio no hero e no contexto do filho,
-  // então as quatro imagens das duas telas são sempre distintas.
+  /**
+   * As fotos do caminho saem do assunto da categoria, não do acervo de clima.
+   *
+   * Antes a regra evitava repetir qualquer foto da página mãe, e para isso
+   * sorteava do acervo antigo. O resultado era foto fora de assunto: safra e
+   * produção abria com uma pirâmide de vidro, que foi o que o Carlos marcou.
+   *
+   * Agora o caminho usa as duas fotos de assunto que a categoria já tem, com
+   * as posições trocadas: o que é banner na categoria vira apoio aqui, e
+   * vice-versa. As duas falam do assunto certo e as telas não ficam iguais.
+   *
+   * Finanças continua com o módulo próprio, que já tem foto por caminho. Se
+   * uma categoria não estiver no mapa de assunto, cai no acervo antigo, como
+   * antes, sem quebrar página nenhuma.
+   */
   const finImgs = s.slug === "financeiras" ? finNucleoImgs(c.slug, n.slug) : null;
+  const chaveCat = `${s.slug}/${c.slug}`;
+  const temaCat = fotoDoTema(chaveCat);
+  const ctxCat = fotoDeContexto(chaveCat);
   const catHero = heroCategoria(s.slug, iCat, c.slug);
-  const catCtx = contextoDe(s.slug, iCat, catHero.src, `${s.slug}/${c.slug}`);
-  const hero = finImgs?.hero ?? heroNucleo(s.slug, iCat, iNuc, [catHero.src, catCtx.src]);
+  const catCtx = contextoDe(s.slug, iCat, catHero.src, chaveCat);
+  const hero =
+    finImgs?.hero ?? ctxCat ?? heroNucleo(s.slug, iCat, iNuc, [catHero.src, catCtx.src]);
   const ctx =
-    finImgs?.ctx ?? pickByOrder(s.slug, iCat + iNuc, 3, [catHero.src, catCtx.src, hero.src]);
+    finImgs?.ctx ??
+    temaCat ??
+    pickByOrder(s.slug, iCat + iNuc, 3, [catHero.src, catCtx.src, hero.src]);
 
   const scrollTo = (id: string) => {
     if (typeof document === "undefined") return;

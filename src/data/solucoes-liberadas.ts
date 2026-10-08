@@ -2848,7 +2848,7 @@ export const solucoesLiberadas = [
             "slug": "moveis-e-eletrodomesticos",
             "nome": "Móveis e eletrodomésticos",
             "hero": "",
-            "aberturaConsultiva": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de móveis e eletrodomésticos exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de móveis e eletrodomésticos exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Ativos de valor e tecnologia"
             ],
@@ -2870,7 +2870,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de móveis e eletrodomésticos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de móveis e eletrodomésticos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta a jornada de conquista de consórcio eletrodomésticos e linha branca, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A escolha premium, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para eletrodomésticos e linha branca, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -2909,7 +2909,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de móveis e eletrodomésticos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de móveis e eletrodomésticos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma a jornada de conquista de consórcio móveis planejados, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O valor aparece, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para móveis planejados, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -2939,7 +2939,7 @@ export const solucoesLiberadas = [
             "slug": "tecnologia-e-equipamentos",
             "nome": "Tecnologia e equipamentos",
             "hero": "",
-            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Ativos de valor e tecnologia"
             ],
@@ -2961,7 +2961,7 @@ export const solucoesLiberadas = [
                   "Critérios de elegibilidade",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção à escolha, com menos ruído operacional e maior aderência ao perfil do cliente.",
                 "fechamento": "A recomendação amadurece, revise contexto, prioridade e condição de contratação antes de avançar.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -3000,7 +3000,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina a jornada de conquista de consórcio infraestrutura ti, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A contratação fica mais segura, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para infraestrutura ti, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -3039,7 +3039,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica a jornada de conquista de consórcio notebook, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A solução ganha força, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para notebook, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -3078,7 +3078,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia a jornada de conquista de consórcio renovação tecnológica, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O próximo passo, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para renovação tecnológica, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -3117,7 +3117,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura a jornada de conquista de consórcio smartphone, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A definição final, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para smartphone, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -3156,7 +3156,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tecnologia e equipamentos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva a jornada de conquista de consórcio tech, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A escolha certa, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para tech, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar aquisição de valor",
@@ -3232,7 +3232,7 @@ export const solucoesLiberadas = [
             "slug": "educacao-e-carreira",
             "nome": "Educação e carreira",
             "hero": "",
-            "aberturaConsultiva": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Projetos e experiências"
             ],
@@ -3254,7 +3254,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Preserva a jornada de conquista de consórcio de educação, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "Na prática, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para de educação, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3293,7 +3293,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz a jornada de conquista de consórcio educação executiva, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O desenho ideal, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para educação executiva, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3332,7 +3332,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza a jornada de conquista de consórcio educação internacional, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A escolha ganha qualidade, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para educação internacional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3371,7 +3371,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece a jornada de conquista de consórcio mba, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O ponto central, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para mba, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3410,7 +3410,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de educação e carreira exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora a jornada de conquista de consórcio pós-graduação, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A leitura correta, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para pós-graduação, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3518,7 +3518,7 @@ export const solucoesLiberadas = [
             "slug": "eventos-e-viagens",
             "nome": "Eventos e viagens",
             "hero": "",
-            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de eventos e viagens exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de eventos e viagens exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Projetos e experiências"
             ],
@@ -3540,7 +3540,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de eventos e viagens exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de eventos e viagens exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma a jornada de conquista de consórcio de serviços, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O valor aparece, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para de serviços, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3618,7 +3618,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de eventos e viagens exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de eventos e viagens exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina a jornada de conquista de consórcio eventos pessoais, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A contratação fica mais segura, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para eventos pessoais, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3687,7 +3687,7 @@ export const solucoesLiberadas = [
             "slug": "gestao-de-passivos",
             "nome": "Gestão de passivos",
             "hero": "",
-            "aberturaConsultiva": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de gestão de passivos exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de gestão de passivos exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Projetos e experiências"
             ],
@@ -3709,7 +3709,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de gestão de passivos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de gestão de passivos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia a jornada de conquista de consórcio gestão de passivo, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O próximo passo, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para gestão de passivo, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3748,7 +3748,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de gestão de passivos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de gestão de passivos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura a jornada de conquista de consórcio quitação de dívidas, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A definição final, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para quitação de dívidas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar projeto futuro",
@@ -3885,7 +3885,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Preserva a jornada de conquista de consórcio galpão comercial, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "Na prática, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para galpão comercial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar patrimônio",
@@ -3963,7 +3963,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza a jornada de conquista de consórcio sala comercial, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A escolha ganha qualidade, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para sala comercial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Estruturar patrimônio",
@@ -4464,7 +4464,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de expansão operacional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de expansão operacional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva a jornada de conquista de consórcio equipamentos profissionais, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A escolha certa, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para equipamentos profissionais, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar aquisição produtiva",
@@ -4494,7 +4494,7 @@ export const solucoesLiberadas = [
             "slug": "implemento-agricola",
             "nome": "Implemento agrícola",
             "hero": "",
-            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de implemento agrícola exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de implemento agrícola exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Capacidade produtiva"
             ],
@@ -4516,7 +4516,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de implemento agrícola exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de implemento agrícola exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Entrega a jornada de conquista de consórcio de implementos agrícolas, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "Antes de contratar, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para de implementos agrícolas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar aquisição produtiva",
@@ -4585,7 +4585,7 @@ export const solucoesLiberadas = [
             "slug": "infraestrutura",
             "nome": "Infraestrutura",
             "hero": "",
-            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de infraestrutura exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de infraestrutura exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Capacidade produtiva"
             ],
@@ -4607,7 +4607,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de infraestrutura exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de infraestrutura exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz a jornada de conquista de consórcio de infraestrutura agro, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O desenho ideal, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para de infraestrutura agro, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar aquisição produtiva",
@@ -4676,7 +4676,7 @@ export const solucoesLiberadas = [
             "slug": "maquina-e-equipamento-agricola",
             "nome": "Máquina e equipamento agrícola",
             "hero": "",
-            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de máquina e equipamento agrícola exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de máquina e equipamento agrícola exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Capacidade produtiva"
             ],
@@ -4698,7 +4698,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de máquina e equipamento agrícola exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de máquina e equipamento agrícola exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece a jornada de conquista de consórcio máquinas agrícolas, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O ponto central, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para máquinas agrícolas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar aquisição produtiva",
@@ -4767,7 +4767,7 @@ export const solucoesLiberadas = [
             "slug": "maquina-e-equipamento-pesado",
             "nome": "Máquina e equipamento pesado",
             "hero": "",
-            "aberturaConsultiva": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de máquina e equipamento pesado exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de máquina e equipamento pesado exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Capacidade produtiva"
             ],
@@ -4789,7 +4789,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de máquina e equipamento pesado exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de máquina e equipamento pesado exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Conecta a jornada de conquista de consórcio máquinas pesadas, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "O contrato performa melhor, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para máquinas pesadas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar aquisição produtiva",
@@ -4819,7 +4819,7 @@ export const solucoesLiberadas = [
             "slug": "pecuaria-e-producao",
             "nome": "Pecuária e produção",
             "hero": "",
-            "aberturaConsultiva": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de pecuária e produção exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de pecuária e produção exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Capacidade produtiva"
             ],
@@ -4841,7 +4841,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de pecuária e produção exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de pecuária e produção exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta a jornada de conquista de consórcio pecuária e produção animal, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A escolha premium, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para pecuária e produção animal, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar aquisição produtiva",
@@ -4917,7 +4917,7 @@ export const solucoesLiberadas = [
             "slug": "aeronaves",
             "nome": "Aeronaves",
             "hero": "",
-            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada. O contexto de aeronaves comerciais define o nível de detalhamento da recomendação.",
+            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada. O contexto de aeronaves comerciais define o nível de detalhamento da recomendação.",
             "blocoValor": [
               "Aquisição premium"
             ],
@@ -4939,7 +4939,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada. O contexto de aeronaves comerciais define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada. O contexto de aeronaves comerciais define o nível de detalhamento da recomendação.",
                 "beneficios": "Dá direção à jornada de conquista de consórcio aeronaves comerciais, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A recomendação amadurece, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para aeronaves comerciais, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar aquisição premium",
@@ -4978,7 +4978,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina a jornada de conquista de consórcio aeronaves particulares, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A contratação fica mais segura, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para aeronaves particulares, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar aquisição premium",
@@ -5008,7 +5008,7 @@ export const solucoesLiberadas = [
             "slug": "embarcacoes",
             "nome": "Embarcações",
             "hero": "",
-            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Aquisição premium"
             ],
@@ -5030,7 +5030,7 @@ export const solucoesLiberadas = [
                   "Análise documental",
                   "Apoio para uso planejado do crédito."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica a jornada de conquista de consórcio de embarcações, com horizonte, organização financeira e uso mais estratégico do crédito.",
                 "fechamento": "A solução ganha força, alinhe objetivo, horizonte e capacidade de contribuição. Em consórcio, a estratégia vale tanto quanto a contemplação. Para de embarcações, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar aquisição premium",
@@ -5609,7 +5609,7 @@ export const solucoesLiberadas = [
             "slug": "capitalizacao",
             "nome": "Capitalização",
             "hero": "",
-            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de capitalização exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de capitalização exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias financeiras",
               "Financiamento"
@@ -5632,7 +5632,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de capitalização exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de capitalização exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção à estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em capitalização, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A recomendação amadurece, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para capitalização, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -5671,7 +5671,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de capitalização exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de capitalização exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em capitalização caução, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A contratação fica mais segura, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para capitalização caução, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -5786,7 +5786,7 @@ export const solucoesLiberadas = [
             "slug": "operacoes-de-credito",
             "nome": "Operações de crédito",
             "hero": "",
-            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Crédito e liquidez"
             ],
@@ -5808,7 +5808,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em antecipação de recebíveis, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A definição final, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para antecipação de recebíveis, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -5847,7 +5847,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em antecipação FGTS, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha certa, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para antecipação FGTS, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -5886,7 +5886,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Entrega a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em antecipação ir, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "Antes de contratar, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para antecipação ir, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -5925,7 +5925,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Preserva a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em consignado, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "Na prática, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para consignado, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -5964,7 +5964,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em imobiliário, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O desenho ideal, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para imobiliário, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -6003,7 +6003,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em para capital de giro, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha ganha qualidade, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para capital de giro, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -6042,7 +6042,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em pessoal, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O ponto central, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para pessoal, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -6081,7 +6081,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em desconto de duplicatas, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A leitura correta, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para desconto de duplicatas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -6120,7 +6120,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Conecta a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em portabilidade de crédito, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O contrato performa melhor, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para portabilidade de crédito, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -6159,7 +6159,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de operações de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em reserva de crédito, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha premium, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para reserva de crédito, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -6258,7 +6258,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de aeronave particular define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de aeronave particular define o nível de detalhamento da recomendação.",
                 "beneficios": "Dá direção à estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em aeronave particular, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A recomendação amadurece, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para aeronave particular, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6336,7 +6336,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em moto, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A solução ganha força, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para moto, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6375,7 +6375,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de sistema de energia solar define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de sistema de energia solar define o nível de detalhamento da recomendação.",
                 "beneficios": "Amplia a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em sistema de energia solar, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O próximo passo, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para sistema de energia solar, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6414,7 +6414,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em sistema de energia solar, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A definição final, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para sistema de energia solar, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6453,7 +6453,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em veículo, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha certa, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para veículo, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6531,7 +6531,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Preserva a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em estudantil, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "Na prática, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para estudantil, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6570,7 +6570,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em imobiliário, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O desenho ideal, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para imobiliário, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6687,7 +6687,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em náutico pessoal, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A leitura correta, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para náutico pessoal, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6726,7 +6726,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de rural define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de rural define o nível de detalhamento da recomendação.",
                 "beneficios": "Conecta a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em rural, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O contrato performa melhor, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para rural, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6765,7 +6765,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em portabilidade, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha premium, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para portabilidade, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Simular caminho financeiro",
@@ -6843,7 +6843,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de veicular define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de financiamento de bens e projetos exige uma escolha bem orientada e bem acompanhada. O contexto de veicular define o nível de detalhamento da recomendação.",
                 "beneficios": "Dá direção à estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em veicular, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A recomendação amadurece, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para veicular, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar liquidez",
@@ -6880,7 +6880,7 @@ export const solucoesLiberadas = [
             "slug": "carta-garantia",
             "nome": "Carta garantia",
             "hero": "",
-            "aberturaConsultiva": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de carta garantia exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de carta garantia exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias financeiras"
             ],
@@ -6902,7 +6902,7 @@ export const solucoesLiberadas = [
                   "Horizontes e valores definidos",
                   "Formalização da operação."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de carta garantia exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de carta garantia exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em carta de garantia, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A contratação fica mais segura, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para carta de garantia, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -6971,7 +6971,7 @@ export const solucoesLiberadas = [
             "slug": "fianca-bancaria",
             "nome": "Fiança bancária",
             "hero": "",
-            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de fiança bancária exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de fiança bancária exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias financeiras"
             ],
@@ -6993,7 +6993,7 @@ export const solucoesLiberadas = [
                   "Horizontes e valores definidos",
                   "Formalização da operação."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de fiança bancária exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de fiança bancária exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em fiança bancária, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O próximo passo, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para fiança bancária, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -7062,7 +7062,7 @@ export const solucoesLiberadas = [
             "slug": "garantias-de-aluguel",
             "nome": "Garantias de aluguel",
             "hero": "",
-            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Reserva e futuro",
               "Garantias financeiras"
@@ -7085,7 +7085,7 @@ export const solucoesLiberadas = [
                   "Horizontes e valores definidos",
                   "Formalização da operação."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em capitalização para aluguel, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha certa, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para capitalização para aluguel, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7202,7 +7202,7 @@ export const solucoesLiberadas = [
                   "Horizontes e valores definidos",
                   "Formalização da operação."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em caução para locação, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O desenho ideal, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para caução para locação, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7241,7 +7241,7 @@ export const solucoesLiberadas = [
                   "Horizontes e valores definidos",
                   "Formalização da operação."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantias de aluguel exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em fiança bancária, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha ganha qualidade, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para fiança bancária, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7278,7 +7278,7 @@ export const solucoesLiberadas = [
             "slug": "investimentos-e-patrimonio-financeiro",
             "nome": "Investimentos e patrimônio financeiro",
             "hero": "",
-            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Reserva e futuro"
             ],
@@ -7300,7 +7300,7 @@ export const solucoesLiberadas = [
                   "Portabilidade se aplicável",
                   "Planejamento sucessório em cenários de pertinente."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em coe, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O ponto central, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para coe, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7417,7 +7417,7 @@ export const solucoesLiberadas = [
                   "Portabilidade se aplicável",
                   "Planejamento sucessório em cenários de pertinente."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em fundo exclusivo, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha premium, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para fundo exclusivo, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7495,7 +7495,7 @@ export const solucoesLiberadas = [
                   "Portabilidade se aplicável",
                   "Planejamento sucessório em cenários de pertinente."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de investimentos e patrimônio financeiro exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção à estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em multimercado, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A recomendação amadurece, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para multimercado, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7564,7 +7564,7 @@ export const solucoesLiberadas = [
             "slug": "previdencia",
             "nome": "Previdência",
             "hero": "",
-            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Reserva e futuro"
             ],
@@ -7586,7 +7586,7 @@ export const solucoesLiberadas = [
                   "Portabilidade se aplicável",
                   "Planejamento sucessório em cenários de pertinente."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em dotal de sobrevivência, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A solução ganha força, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para dotal de sobrevivência, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7625,7 +7625,7 @@ export const solucoesLiberadas = [
                   "Portabilidade se aplicável",
                   "Planejamento sucessório em cenários de pertinente."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em pgbl, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O próximo passo, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para pgbl, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7742,7 +7742,7 @@ export const solucoesLiberadas = [
                   "Portabilidade se aplicável",
                   "Planejamento sucessório em cenários de pertinente."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de previdência exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Entrega a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em vgbl, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "Antes de contratar, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para vgbl, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar reserva e futuro",
@@ -7958,7 +7958,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de cartões de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de cartões de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em cartões de black, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A leitura correta, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para cartões de black, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
@@ -7997,7 +7997,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de cartões de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de cartões de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Conecta a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em cartões de com milhas, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O contrato performa melhor, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para cartões de com milhas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
@@ -8036,7 +8036,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de cartões de crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de cartões de crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em cartões de platinum, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha premium, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para cartões de platinum, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
@@ -8166,7 +8166,7 @@ export const solucoesLiberadas = [
                   "Extrato e conciliação",
                   "Gestão de movimentação."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de conta digital exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de conta digital exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em conta digital pessoal, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A contratação fica mais segura, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para conta digital pessoal, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
@@ -8196,7 +8196,7 @@ export const solucoesLiberadas = [
             "slug": "tags-pedagio-e-estacionamento",
             "nome": "Tags, pedágio e estacionamento",
             "hero": "",
-            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tags, pedágio e estacionamento exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tags, pedágio e estacionamento exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Dia a dia financeira"
             ],
@@ -8218,7 +8218,7 @@ export const solucoesLiberadas = [
                   "Formalização da operação",
                   "Acompanhamento especializado."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de tags, pedágio e estacionamento exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de tags, pedágio e estacionamento exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica a estratégia financeira, conectando objetivo, documentação, horizonte e impacto no planejamento. Em tag pedágio, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A solução ganha força, valide finalidade, custo, horizonte e elegibilidade. Em soluções financeiras, clareza evita decisões desalinhadas. Para tag pedágio, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Entender serviços financeiros",
@@ -8686,7 +8686,7 @@ export const solucoesLiberadas = [
             "slug": "safra-e-producao",
             "nome": "Safra e produção",
             "hero": "",
-            "aberturaConsultiva": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Agro"
             ],
@@ -8708,7 +8708,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro agrícola.",
                 "fechamento": "A escolha premium, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para agrícola, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -8747,7 +8747,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro aquícola.",
                 "fechamento": "O valor aparece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para aquícola, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -8786,7 +8786,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção a patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro florestas.",
                 "fechamento": "A recomendação amadurece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para florestas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -8825,7 +8825,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de safra e produção exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro pecuário.",
                 "fechamento": "A contratação fica mais segura, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para pecuário, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -8855,7 +8855,7 @@ export const solucoesLiberadas = [
             "slug": "vida-rural-e-animais",
             "nome": "Vida rural e animais",
             "hero": "",
-            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Agro"
             ],
@@ -8877,7 +8877,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro benfeitorias rurais.",
                 "fechamento": "A solução ganha força, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para benfeitorias rurais, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -8916,7 +8916,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro animais.",
                 "fechamento": "O próximo passo, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para animais, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -8955,7 +8955,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro penhor rural.",
                 "fechamento": "A definição final, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para penhor rural, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -8994,7 +8994,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida rural e animais exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro vida rural.",
                 "fechamento": "A escolha certa, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para vida rural, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -9031,7 +9031,7 @@ export const solucoesLiberadas = [
             "slug": "credito-interno-e-exportacao",
             "nome": "Crédito interno e exportação",
             "hero": "",
-            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de crédito interno e exportação exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de crédito interno e exportação exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias"
             ],
@@ -9054,7 +9054,7 @@ export const solucoesLiberadas = [
                   "Manutenção corretiva",
                   "Garantias judiciais, imobiliárias ou aduaneiras se aplicáveis."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de crédito interno e exportação exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de crédito interno e exportação exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Entrega velocidade contratual e preserva liquidez, com garantia adequada à obrigação assumida.",
                 "fechamento": "Antes de contratar, confirme modalidade, valor, horizonte e obrigação garantida. Em seguro garantia, clareza contratual é decisiva.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -9147,7 +9147,7 @@ export const solucoesLiberadas = [
                   "Manutenção corretiva",
                   "Garantias judiciais, imobiliárias ou aduaneiras se aplicáveis."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de fiança locatícia exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de fiança locatícia exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz velocidade contratual e preserva liquidez, com garantia adequada à obrigação assumida.",
                 "fechamento": "O desenho ideal, confirme modalidade, valor, horizonte e obrigação garantida. Em seguro garantia, clareza contratual é decisiva.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -9177,7 +9177,7 @@ export const solucoesLiberadas = [
             "slug": "garantia-contratual",
             "nome": "Garantia contratual",
             "hero": "",
-            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia contratual exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia contratual exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias"
             ],
@@ -9200,7 +9200,7 @@ export const solucoesLiberadas = [
                   "Manutenção corretiva",
                   "Garantias judiciais, imobiliárias ou aduaneiras se aplicáveis."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia contratual exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia contratual exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza velocidade contratual e preserva liquidez, com garantia adequada à obrigação assumida.",
                 "fechamento": "A escolha ganha qualidade, confirme modalidade, valor, horizonte e obrigação garantida. Em seguro garantia, clareza contratual é decisiva.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -9270,7 +9270,7 @@ export const solucoesLiberadas = [
             "slug": "garantia-judicial",
             "nome": "Garantia judicial",
             "hero": "",
-            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia judicial exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia judicial exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias"
             ],
@@ -9293,7 +9293,7 @@ export const solucoesLiberadas = [
                   "Manutenção corretiva",
                   "Garantias judiciais, imobiliárias ou aduaneiras se aplicáveis."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia judicial exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia judicial exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora velocidade contratual e preserva liquidez, com garantia adequada à obrigação assumida.",
                 "fechamento": "A leitura correta, confirme modalidade, valor, horizonte e obrigação garantida. Em seguro garantia, clareza contratual é decisiva.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -9363,7 +9363,7 @@ export const solucoesLiberadas = [
             "slug": "garantia-licitacao",
             "nome": "Garantia licitação",
             "hero": "",
-            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia licitação exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia licitação exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias"
             ],
@@ -9386,7 +9386,7 @@ export const solucoesLiberadas = [
                   "Manutenção corretiva",
                   "Garantias judiciais, imobiliárias ou aduaneiras se aplicáveis."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia licitação exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia licitação exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta velocidade contratual e preserva liquidez, com garantia adequada à obrigação assumida.",
                 "fechamento": "A escolha premium, confirme modalidade, valor, horizonte e obrigação garantida. Em seguro garantia, clareza contratual é decisiva.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -9416,7 +9416,7 @@ export const solucoesLiberadas = [
             "slug": "leilao-e-arremate",
             "nome": "Leilão e arremate",
             "hero": "",
-            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de leilão e arremate exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de leilão e arremate exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Garantias"
             ],
@@ -9439,7 +9439,7 @@ export const solucoesLiberadas = [
                   "Manutenção corretiva",
                   "Garantias judiciais, imobiliárias ou aduaneiras se aplicáveis."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de leilão e arremate exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de leilão e arremate exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma velocidade contratual e preserva liquidez, com garantia adequada à obrigação assumida.",
                 "fechamento": "O valor aparece, confirme modalidade, valor, horizonte e obrigação garantida. Em seguro garantia, clareza contratual é decisiva.",
                 "ctaPrimario": "Avaliar garantia adequada",
@@ -9698,7 +9698,7 @@ export const solucoesLiberadas = [
             "slug": "fraudes-digitais",
             "nome": "Fraudes digitais",
             "hero": "",
-            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de fraudes digitais exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de fraudes digitais exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Grandes riscos"
             ],
@@ -9720,7 +9720,7 @@ export const solucoesLiberadas = [
                   "Orientação técnica",
                   "Reembolso ou indenização por evento coberto."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de fraudes digitais exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de fraudes digitais exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro contra fraude.",
                 "fechamento": "A escolha certa, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para contra fraude, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -9759,7 +9759,7 @@ export const solucoesLiberadas = [
                   "Orientação técnica",
                   "Reembolso ou indenização por evento coberto."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de fraudes digitais exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de fraudes digitais exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Entrega patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro proteção contra golpe e estorno.",
                 "fechamento": "Antes de contratar, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para proteção contra golpe e estorno, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -9789,7 +9789,7 @@ export const solucoesLiberadas = [
             "slug": "risco-especial",
             "nome": "Risco especial",
             "hero": "",
-            "aberturaConsultiva": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco especial exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco especial exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Grandes riscos"
             ],
@@ -9811,7 +9811,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco especial exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco especial exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Preserva patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro riscos aeroespaciais.",
                 "fechamento": "Na prática, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para riscos aeroespaciais, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -9850,7 +9850,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco especial exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco especial exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro riscos nucleares.",
                 "fechamento": "O desenho ideal, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para riscos nucleares, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -10019,7 +10019,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco estruturado exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco estruturado exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Conecta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro m&a / representations & warranties.",
                 "fechamento": "O contrato performa melhor, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para m&a / representations & warranties, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -10058,7 +10058,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco estruturado exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco estruturado exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro riscos estruturados.",
                 "fechamento": "A escolha premium, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para riscos estruturados, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -10088,7 +10088,7 @@ export const solucoesLiberadas = [
             "slug": "risco-tecnico",
             "nome": "Risco técnico",
             "hero": "",
-            "aberturaConsultiva": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco técnico exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco técnico exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Grandes riscos"
             ],
@@ -10110,7 +10110,7 @@ export const solucoesLiberadas = [
                   "Despesas de reparo",
                   "Testes e manutenção se previstos."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco técnico exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco técnico exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro riscos de engenharia.",
                 "fechamento": "O valor aparece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para riscos de engenharia, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -10149,7 +10149,7 @@ export const solucoesLiberadas = [
                   "Despesas de reparo",
                   "Testes e manutenção se previstos."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de risco técnico exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de risco técnico exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção a patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro oil & gas.",
                 "fechamento": "A recomendação amadurece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para oil & gas, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -10240,7 +10240,7 @@ export const solucoesLiberadas = [
                   "Orientação técnica",
                   "Reembolso ou indenização por evento coberto."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de riscos cibernéticos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de riscos cibernéticos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro cyber pessoal.",
                 "fechamento": "A solução ganha força, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para cyber pessoal, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -10279,7 +10279,7 @@ export const solucoesLiberadas = [
                   "Orientação técnica",
                   "Reembolso ou indenização por evento coberto."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de riscos cibernéticos exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de riscos cibernéticos exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro proteção financeira digital.",
                 "fechamento": "O próximo passo, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para proteção financeira digital, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Mapear exposição especial",
@@ -10316,7 +10316,7 @@ export const solucoesLiberadas = [
             "slug": "embarcacoes",
             "nome": "Embarcações",
             "hero": "",
-            "aberturaConsultiva": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada. O contexto de náutico comercial define o nível de detalhamento da recomendação.",
+            "aberturaConsultiva": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada. O contexto de náutico comercial define o nível de detalhamento da recomendação.",
             "blocoValor": [
               "Logística"
             ],
@@ -10338,7 +10338,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada. O contexto de náutico comercial define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada. O contexto de náutico comercial define o nível de detalhamento da recomendação.",
                 "beneficios": "Estrutura patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada. Em náutico comercial, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A definição final, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas. Para náutico comercial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10368,7 +10368,7 @@ export const solucoesLiberadas = [
             "slug": "logistica-nacional",
             "nome": "Logística nacional",
             "hero": "",
-            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de logística nacional exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de logística nacional exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Logística"
             ],
@@ -10390,7 +10390,7 @@ export const solucoesLiberadas = [
                   "Roubo se contratado",
                   "Operações nacionais ou internacionais."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de logística nacional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de logística nacional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro cargas nacionais.",
                 "fechamento": "A escolha certa, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para cargas nacionais, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10429,7 +10429,7 @@ export const solucoesLiberadas = [
                   "Roubo se contratado",
                   "Operações nacionais ou internacionais."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de logística nacional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de logística nacional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Entrega patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro rc transportador.",
                 "fechamento": "Antes de contratar, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para rc transportador, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10559,7 +10559,7 @@ export const solucoesLiberadas = [
                   "Roubo se contratado",
                   "Operações nacionais ou internacionais."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de mudança exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de mudança exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro transporte de mudança internacional.",
                 "fechamento": "A escolha ganha qualidade, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para transporte de mudança internacional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10598,7 +10598,7 @@ export const solucoesLiberadas = [
                   "Roubo se contratado",
                   "Operações nacionais ou internacionais."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de mudança exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de mudança exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro transporte de mudança nacional.",
                 "fechamento": "O ponto central, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para transporte de mudança nacional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10635,7 +10635,7 @@ export const solucoesLiberadas = [
             "slug": "aeronaves",
             "nome": "Aeronaves",
             "hero": "",
-            "aberturaConsultiva": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Proteção"
             ],
@@ -10657,7 +10657,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada.",
                 "fechamento": "A leitura correta, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10696,7 +10696,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada. O contexto de helicóptero define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada. O contexto de helicóptero define o nível de detalhamento da recomendação.",
                 "beneficios": "Conecta patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada.",
                 "fechamento": "O contrato performa melhor, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10774,7 +10774,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de aeronaves exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada.",
                 "fechamento": "O valor aparece, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10865,7 +10865,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada. O contexto de jet ski define o nível de detalhamento da recomendação.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada. O contexto de jet ski define o nível de detalhamento da recomendação.",
                 "beneficios": "Refina patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada.",
                 "fechamento": "A contratação fica mais segura, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10904,7 +10904,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada.",
                 "fechamento": "A solução ganha força, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10943,7 +10943,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada.",
                 "fechamento": "O próximo passo, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -10982,7 +10982,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada. Em náutico particular, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A definição final, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas. Para náutico particular, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -11021,7 +11021,7 @@ export const solucoesLiberadas = [
                   "Vistorias se previstas",
                   "Remoção de destroços em sinistro."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de embarcações exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva patrimônio, segurança operacional e continuidade de uso em ativos que exigem proteção especializada.",
                 "fechamento": "A escolha certa, considere valor do ativo, perfil de uso, operação e responsabilidade. Nesse grupo, detalhe técnico evita lacunas.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -11201,7 +11201,7 @@ export const solucoesLiberadas = [
             "slug": "condominio",
             "nome": "Condomínio",
             "hero": "",
-            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de condomínio exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de condomínio exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Patrimônio"
             ],
@@ -11224,7 +11224,7 @@ export const solucoesLiberadas = [
                   "Responsabilidade civil",
                   "Suportes residenciais."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de condomínio exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de condomínio exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro condomínio.",
                 "fechamento": "A escolha ganha qualidade, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para condomínio, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção patrimonial",
@@ -11254,7 +11254,7 @@ export const solucoesLiberadas = [
             "slug": "equipamento-portatil",
             "nome": "Equipamento portátil",
             "hero": "",
-            "aberturaConsultiva": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Patrimônio"
             ],
@@ -11276,7 +11276,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro celular.",
                 "fechamento": "O ponto central, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para celular, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção patrimonial",
@@ -11394,7 +11394,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro notebook.",
                 "fechamento": "A escolha premium, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para notebook, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção patrimonial",
@@ -11472,7 +11472,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção a patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro smartwatch.",
                 "fechamento": "A recomendação amadurece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para smartwatch, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção patrimonial",
@@ -11511,7 +11511,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de equipamento portátil exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro tablet.",
                 "fechamento": "A contratação fica mais segura, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para tablet, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção patrimonial",
@@ -11541,7 +11541,7 @@ export const solucoesLiberadas = [
             "slug": "garantia-estendida",
             "nome": "Garantia estendida",
             "hero": "",
-            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia estendida exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia estendida exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Patrimônio"
             ],
@@ -11564,7 +11564,7 @@ export const solucoesLiberadas = [
                   "Manutenção corretiva",
                   "Garantias judiciais, imobiliárias ou aduaneiras se aplicáveis."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de garantia estendida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de garantia estendida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica velocidade contratual e preserva liquidez, com garantia adequada à obrigação assumida.",
                 "fechamento": "A solução ganha força, confirme modalidade, valor, horizonte e obrigação garantida. Em seguro garantia, clareza contratual é decisiva.",
                 "ctaPrimario": "Avaliar proteção patrimonial",
@@ -11594,7 +11594,7 @@ export const solucoesLiberadas = [
             "slug": "imovel-comercial",
             "nome": "Imóvel comercial",
             "hero": "",
-            "aberturaConsultiva": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Patrimônio"
             ],
@@ -11617,7 +11617,7 @@ export const solucoesLiberadas = [
                   "Responsabilidade civil",
                   "Suportes residenciais."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de imóvel comercial exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro imóveis locatícios.",
                 "fechamento": "O próximo passo, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para imóveis locatícios, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção patrimonial",
@@ -12032,7 +12032,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de lucro cessante exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de lucro cessante exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Conecta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro lucros cessantes profissional.",
                 "fechamento": "O contrato performa melhor, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para lucros cessantes profissional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -12123,7 +12123,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro doenças graves individual.",
                 "fechamento": "O valor aparece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para doenças graves individual, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -12162,7 +12162,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Recomendado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção a patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro educacional.",
                 "fechamento": "A recomendação amadurece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para educacional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -12201,7 +12201,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro invalidez.",
                 "fechamento": "A contratação fica mais segura, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para invalidez, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -12240,7 +12240,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro invalidez coletiva.",
                 "fechamento": "A solução ganha força, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para invalidez coletiva, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -12279,7 +12279,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro perda de renda temporária.",
                 "fechamento": "O próximo passo, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para perda de renda temporária, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -12318,7 +12318,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de renda protegida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro renda coletiva.",
                 "fechamento": "A definição final, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para renda coletiva, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção adequada",
@@ -12616,7 +12616,7 @@ export const solucoesLiberadas = [
             "slug": "responsabilidade-civil-pessoal",
             "nome": "Responsabilidade civil pessoal",
             "hero": "",
-            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil pessoal exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil pessoal exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Responsabilidade"
             ],
@@ -12638,7 +12638,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil pessoal exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil pessoal exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro rc ambiental pessoal.",
                 "fechamento": "A leitura correta, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para rc ambiental pessoal, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -12716,7 +12716,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil pessoal exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil pessoal exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro rc pessoal.",
                 "fechamento": "A escolha premium, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para rc pessoal, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -12807,7 +12807,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Desenhado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção a reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "A recomendação amadurece, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -12846,7 +12846,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "A contratação fica mais segura, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -12885,7 +12885,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Qualifica reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "A solução ganha força, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -12924,7 +12924,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Amplia reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "O próximo passo, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -12963,7 +12963,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "A definição final, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -13002,7 +13002,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Eleva reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "A escolha certa, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -13041,7 +13041,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Entrega reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "Antes de contratar, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -13080,7 +13080,7 @@ export const solucoesLiberadas = [
                   "Perda ou roubo de documentos",
                   "Prejuízos financeiros ou lucros cessantes."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de responsabilidade civil profissional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Preserva reputação e continuidade profissional, com respaldo para falhas, omissões ou questionamentos técnicos.",
                 "fechamento": "Na prática, valide atividade, faturamento, parâmetros e exclusões. Em E&O, a precisão do escopo define a força da proteção.",
                 "ctaPrimario": "Avaliar responsabilidade",
@@ -14101,7 +14101,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de proteção em viagem exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de proteção em viagem exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro viagem internacional.",
                 "fechamento": "O valor aparece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para viagem internacional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar proteção em viagem",
@@ -14140,7 +14140,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de proteção em viagem exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de proteção em viagem exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção a patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro viagem nacional.",
                 "fechamento": "A recomendação amadurece, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para viagem nacional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar proteção em viagem",
@@ -14316,7 +14316,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de acidentes pessoais exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Adequado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de acidentes pessoais exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro acidentes pessoais individual.",
                 "fechamento": "A definição final, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para acidentes pessoais individual, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14437,7 +14437,7 @@ export const solucoesLiberadas = [
             "slug": "prestamista-e-credito",
             "nome": "Prestamista e crédito",
             "hero": "",
-            "aberturaConsultiva": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de prestamista e crédito exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de prestamista e crédito exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Vida e continuidade"
             ],
@@ -14459,7 +14459,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de prestamista e crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de prestamista e crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Preserva patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro prestamista.",
                 "fechamento": "Na prática, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para prestamista, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14498,7 +14498,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de prestamista e crédito exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de prestamista e crédito exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro prestamista para carteira de crédito.",
                 "fechamento": "O desenho ideal, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para prestamista para carteira de crédito, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14528,7 +14528,7 @@ export const solucoesLiberadas = [
             "slug": "vida",
             "nome": "Vida",
             "hero": "",
-            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Vida e continuidade"
             ],
@@ -14550,7 +14550,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro vida com vigência definida (keyman / sócios).",
                 "fechamento": "A escolha ganha qualidade, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para vida com vigência definida (keyman / sócios), a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14589,7 +14589,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro vida vitalício (universal/whole life).",
                 "fechamento": "O ponto central, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para vida vitalício (universal/whole life), a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14628,7 +14628,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro vida em grupo.",
                 "fechamento": "A leitura correta, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para vida em grupo, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14667,7 +14667,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Conecta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro vida individual.",
                 "fechamento": "O contrato performa melhor, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para vida individual, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14706,7 +14706,7 @@ export const solucoesLiberadas = [
                   "Beneficiários definidos",
                   "Capital segurado."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de vida exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta patrimônio, responsabilidade e continuidade, com escopo mais claro para escolher seguro vida temporário.",
                 "fechamento": "A escolha premium, compare coberturas, franquias, parâmetros e suportes. Em seguros, a exposição real deve orientar a escolha. Para vida temporário, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar proteção de continuidade",
@@ -14758,7 +14758,7 @@ export const solucoesLiberadas = [
             "slug": "gestao-da-nr1",
             "nome": "Gestão da NR1",
             "hero": "",
-            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de gestão da nr1 exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de gestão da nr1 exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Bem-estar"
             ],
@@ -14780,7 +14780,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de gestão da nr1 exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Voltado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de gestão da nr1 exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em gestão dos efeitos da nr1, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O valor aparece, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para gestão dos efeitos da nr1, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Aprofundar opções de bem-estar",
@@ -16097,7 +16097,7 @@ export const solucoesLiberadas = [
                   "Internação conforme plano",
                   "Cobertura internacional ou mundial."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Dá direção a acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em com cobertura mundial, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A recomendação amadurece, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para com cobertura mundial, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar solução para empresas",
@@ -16136,7 +16136,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Refina acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em com concierge médico, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A contratação fica mais segura, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para com concierge médico, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar solução para empresas",
@@ -16255,7 +16255,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Pensado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Estrutura acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em customizado, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A definição final, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para customizado, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar solução para empresas",
@@ -16412,7 +16412,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Indicado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Reduz acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em pme, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O desenho ideal, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para pme, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar solução para empresas",
@@ -16490,7 +16490,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Criado para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em por adesão mei, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O ponto central, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para por adesão mei, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar solução para empresas",
@@ -16529,7 +16529,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Sob medida para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde do colaborador exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Aprimora acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em por adesão pme, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A leitura correta, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para por adesão pme, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Avaliar solução para empresas",
@@ -16559,7 +16559,7 @@ export const solucoesLiberadas = [
             "slug": "saude-ocupacional",
             "nome": "Saúde ocupacional",
             "hero": "",
-            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Saúde ocupacional"
             ],
@@ -16581,7 +16581,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Conecta acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso.",
                 "fechamento": "O contrato performa melhor, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos.",
                 "ctaPrimario": "Organizar saúde ocupacional",
@@ -16620,7 +16620,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Sustenta acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso.",
                 "fechamento": "A escolha premium, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos.",
                 "ctaPrimario": "Organizar saúde ocupacional",
@@ -16659,7 +16659,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Direcionado a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde ocupacional exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Transforma acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em programa saúde ocupacional, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O valor aparece, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para programa saúde ocupacional, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Organizar saúde ocupacional",
@@ -17082,7 +17082,7 @@ export const solucoesLiberadas = [
             "slug": "saude-individual",
             "nome": "Saúde individual",
             "hero": "",
-            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde individual exige uma escolha bem orientada e bem acompanhada.",
+            "aberturaConsultiva": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde individual exige uma escolha bem orientada e bem acompanhada.",
             "blocoValor": [
               "Saúde familiar"
             ],
@@ -17104,7 +17104,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde individual exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Especialmente útil para pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde individual exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Organiza acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em individual, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "A escolha ganha qualidade, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para individual, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Comparar opções de saúde",
@@ -17143,7 +17143,7 @@ export const solucoesLiberadas = [
                   "Urgência e emergência se previstas",
                   "Internação conforme plano."
                 ],
-                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, segurança e orientação, especialmente em cenários de saúde individual exige uma escolha bem orientada e bem acompanhada.",
+                "aQuemSeDestina": "Mais aderente a pessoas, famílias e profissionais que buscam clareza, tranquilidade e orientação, especialmente em cenários de saúde individual exige uma escolha bem orientada e bem acompanhada.",
                 "beneficios": "Fortalece acesso, rede e experiência de cuidado, aproximando a contratação do dia a dia real de uso. Em individual por adesão, o valor está na aderência ao uso real e ao nível de exposição.",
                 "fechamento": "O ponto central, confirme rede, abrangência, carências e padrão de atendimento. Em saúde, acesso e uso precisam caminhar juntos. Para individual por adesão, a escolha deve confirmar aderência ao uso real, parâmetros e expectativa de atendimento.",
                 "ctaPrimario": "Comparar opções de saúde",
