@@ -65,6 +65,8 @@ async function sendLeadEmail(data: LeadData): Promise<"sent" | "unconfigured" | 
   }
 
   const lines = [
+    "Pedido vindo do formulário do site da Plan10.",
+    "",
     `Nome: ${data.name}`,
     `WhatsApp / telefone: ${data.phone}`,
     data.email ? `E-mail: ${data.email}` : null,
@@ -73,6 +75,8 @@ async function sendLeadEmail(data: LeadData): Promise<"sent" | "unconfigured" | 
     data.contexto ? `Contexto: ${data.contexto}` : null,
     data.source ? `Origem: ${data.source}` : null,
     data.message ? `\nMensagem:\n${data.message}` : null,
+    "",
+    "Responder a este e-mail fala direto com a pessoa.",
   ].filter(Boolean);
 
   try {
@@ -83,7 +87,11 @@ async function sendLeadEmail(data: LeadData): Promise<"sent" | "unconfigured" | 
         from,
         to, // a API do Resend aceita lista; cada destino recebe a sua cópia
         reply_to: data.email || undefined,
-        subject: `Novo lead Plan10: ${data.subject}`,
+        /* No canal de e-mail do Megazap o assunto vira o título do atendimento
+           na fila. "Novo lead Plan10: Pedido de cotação" se repete em todos e
+           não diz nada ao atendente; com o nome e o telefone ele reconhece de
+           quem é antes de abrir. */
+        subject: `Lead do site: ${data.name} · ${data.phone}`,
         text: lines.join("\n"),
       }),
     });
