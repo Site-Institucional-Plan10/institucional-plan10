@@ -210,6 +210,7 @@ Medidas em 11 de outubro de 2026, sobre o build de produção servido localmente
 | Soluções no HTML inicial | 794 ocorrências em 137 páginas, nenhuma página vazia |
 | Imagens com largura e altura declaradas | 100%, e todo arquivo existe no build |
 | Leiaute em 360, 390, 414, 768, 1024 e 1440 px | sem rolagem horizontal em nenhuma combinação |
+| Cabeçalho em 18 larguras, de 360 a 1920 px | nenhum elemento ultrapassa a janela; acesso a contato em todas |
 | Aviso de hidratação no console | nenhum |
 
 ESLint acusa cerca de 13.500 apontamentos, quase todos do Prettier e
@@ -226,17 +227,13 @@ histórico difícil de ler. Fica como decisão de quem assumir.
    não carrega.
 3. **Search Console.** O `sitemap.xml` ainda não foi submetido.
 4. **Virada de domínio.** `plan10.com.br` ainda aponta para o site anterior.
-5. **CTA do cabeçalho entre 960 e 1050 px.** O botão "Falar com consultor"
-   ultrapassa a borda direita da janela e fica cortado nessa faixa, que pega
-   tablet na horizontal e janela de notebook não maximizada. Vale em todas as
-   páginas e é anterior a esta revisão.
-6. **Componentes sem uso.** `src/components/plan10/ProductChooser.tsx`,
+5. **Componentes sem uso.** `src/components/plan10/ProductChooser.tsx`,
    `ProductCard.tsx` e `PerfilToggle.tsx` existiam para a grade com modal e
    ficaram sem referência depois desta revisão. Foram mantidos em disco de
    propósito, para a remoção ser uma decisão de quem revisar, e não um efeito
    colateral. O mesmo vale para o componente `Modal` em
    `src/components/ui/primitives.tsx`, que já não era usado antes.
-7. **Links de contratação da Porto.** As 36 soluções com contratação online
+6. **Links de contratação da Porto.** As 36 soluções com contratação online
    apontam para `porto.vc`. A planilha de catálogo marca essas linhas como
    pendentes de validação comercial, técnica ou jurídica. A decisão registrada
    foi manter e validar depois.
