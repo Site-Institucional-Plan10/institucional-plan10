@@ -171,6 +171,7 @@ function CorpoDoCaminho({
             publico={publico(produto.perfil)}
             abertaPorPadrao={unica}
             aoAlternarDetalhe={aoAlternarDetalhe}
+            escopo={nucleo.slug}
           />
         ))}
       </ul>
@@ -277,6 +278,21 @@ export function Sanfonas({
     // um bloco com id: serve de alvo de rolagem, mas não tem o que abrir
     const alvoNuc = nuc ? document.getElementById(`sanfona-${cat}-${nuc}`) : null;
     const hash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+    /**
+     * O produto é procurado dentro do caminho, não na página inteira.
+     *
+     * Com `id` prefixado pelo caminho, `getElementById(hash)` não acha mais
+     * nada, e antes dele achava demais: sete produtos repetem o `id` entre
+     * caminhos da mesma vertical, e o primeiro do HTML ganhava sempre. O
+     * `abrir` já diz qual é o caminho, então é dentro dele que se procura.
+     */
+    const acharProduto = (): HTMLElement | null => {
+      if (!hash) return null;
+      const dentro = alvoNuc ?? sanfonaCat;
+      const sel = `[data-solucao="${CSS.escape(hash)}"]`;
+      return (dentro?.querySelector<HTMLElement>(sel) ??
+        document.querySelector<HTMLElement>(sel)) as HTMLElement | null;
+    };
 
     /**
      * Parte do destino pode estar fora da página porque o filtro de público a
@@ -285,7 +301,7 @@ export function Sanfonas({
      * lista que não contém justamente o que o link prometeu. Por isso o produto
      * entra na conta, não só a sanfona.
      */
-    const escondido = !sanfonaCat || (nuc && !alvoNuc) || (hash && !document.getElementById(hash));
+    const escondido = !sanfonaCat || (nuc && !alvoNuc) || (hash && !acharProduto());
     if (escondido && perfil !== "todos") {
       definirPerfil("todos");
       return;
@@ -297,7 +313,10 @@ export function Sanfonas({
     if (sanfonaCat instanceof HTMLDetailsElement) sanfonaCat.open = true;
     if (alvoNuc instanceof HTMLDetailsElement) alvoNuc.open = true;
 
-    const produto = hash ? document.getElementById(hash) : null;
+    const produto = acharProduto();
+    // o :target do CSS casa com o id, que aqui vem prefixado pelo caminho:
+    // a classe faz o mesmo realce, para o item apontado continuar marcado
+    produto?.classList.add("sf-prod-alvo");
     // a solução pedida abre o detalhe junto: o link prometeu a solução, não um
     // título que ainda exige um toque para mostrar o conteúdo
     const detalhe = produto?.querySelector<HTMLDetailsElement>("details.sf-mais");

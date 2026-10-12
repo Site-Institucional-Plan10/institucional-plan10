@@ -37,6 +37,21 @@ export interface Props {
   aoFormulario?: (produtoNome: string) => void;
   /** Some quando a pessoa já está na página da solução. */
   linkDaPagina?: boolean;
+  /**
+   * Prefixo do `id` do elemento, para a página que mostra vários caminhos.
+   *
+   * O `id` do produto no catálogo não é único: sete deles se repetem entre
+   * caminhos da mesma vertical, porque são o mesmo serviço oferecido a pessoa
+   * física e a empresa. Na vertical e na modalidade os dois caem na mesma
+   * página, e aí o HTML ficava com `id` duplicado e `getElementById` devolvia
+   * sempre o primeiro: o link para o chaveiro da emergência residencial abria
+   * o da emergência empresarial.
+   *
+   * Com o caminho no prefixo o `id` volta a ser único. O endereço não muda:
+   * o hash continua sendo o `id` do produto, e quem procura usa
+   * `data-solucao` dentro do caminho que o `abrir` já identificou.
+   */
+  escopo?: string;
   /** Avisa quem hospeda a lista para o endereço acompanhar o que está aberto. */
   aoAlternarDetalhe?: (produtoId: string, aberto: boolean) => void;
   imagem?: CuratedImage;
@@ -79,6 +94,7 @@ export function ItemSolucao({
   aoFormulario,
   linkDaPagina = true,
   aoAlternarDetalhe,
+  escopo,
   imagem,
 }: Props) {
   const online = contratacaoOnlineDe(produto.linkPorto);
@@ -89,7 +105,11 @@ export function ItemSolucao({
     produto.faq.length > 0;
 
   return (
-    <li id={produto.id} className="sf-prod">
+    <li
+      id={escopo ? `${escopo}--${produto.id}` : produto.id}
+      data-solucao={produto.id}
+      className="sf-prod"
+    >
       {imagem && (
         <figure className="sf-prod-foto">
           <img
@@ -239,7 +259,8 @@ export const ESTILO_SOLUCAO = `
   display: block; border: 1px solid var(--c2); border-radius: var(--rs);
   padding: 16px 18px; background: #fff; scroll-margin-top: 110px;
 }
-.sf-prod:target { border-color: var(--vp); box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp) 16%, transparent); }
+.sf-prod:target,
+.sf-prod.sf-prod-alvo { border-color: var(--vp); box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp) 16%, transparent); }
 .sf-prod-foto { margin: -16px -18px 14px; }
 .sf-prod-foto img { display: block; width: 100%; height: 150px; object-fit: cover; }
 .sf-prod-topo { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
