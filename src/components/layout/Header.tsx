@@ -319,6 +319,23 @@ export function Header() {
            vem por último manda. A barra aparecia também no desktop, duplicando
            o botão de Favoritos do cabeçalho. */
         @media (min-width: 960px) { .p10-hd-cotar { display: none; } }
+        /* Entre 960 e 1059 a barra não cabia em si mesma.
+           A navegação aparece em 960, e com ela a linha passava a somar logo,
+           links, busca, favoritos e o botão de consultor. O botão ultrapassava
+           a borda direita da janela e, como a página não rola na horizontal,
+           metade dele ficava inalcançável. A faixa pega tablet deitado e
+           notebook com a janela não maximizada.
+           A palavra "Favoritos" sai nessa faixa, e os cerca de setenta pixels
+           que ela ocupa são o que faltava. Nada deixa de estar na barra: o
+           coração e o número continuam ali, e o botão de consultor, que é o
+           único acesso a contato no cabeçalho desta faixa, continua inteiro. */
+        @media (min-width: 960px) and (max-width: 1059.98px) {
+          .p10-hd-fav-rot { display: none; }
+          /* No começo da faixa, em 960, ainda faltavam nove pixels depois de
+             tirar a palavra. Os itens da navegação cedem quatro pixels de
+             respiro de cada lado, que ninguém enxerga e resolvem a conta. */
+          nav[aria-label="Navegação principal"] > * { padding-left: 2px; padding-right: 2px; }
+        }
       `}</style>
       <header
         className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm"
