@@ -1,18 +1,18 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import type { Categoria, Nucleo, Product, Solucao } from "@/data/solutions";
 import { usarPerfil } from "@/lib/perfilPublico";
 import type { PerfilPublico } from "@/lib/verticais";
-import { whatsappUrl } from "@/lib/plan10";
-import { BotaoFavoritar, EstiloFavoritar } from "@/components/favoritos/BotaoFavoritar";
-import { ExternalLink } from "lucide-react";
-import { contratacaoOnlineDe } from "@/lib/contratacaoOnline";
+import { EstiloFavoritar } from "@/components/favoritos/BotaoFavoritar";
+import { ItemSolucao, ESTILO_SOLUCAO, publicoDe } from "@/components/solucoes/ItemSolucao";
+import { useRolagemAgendada } from "@/lib/rolarAteSolucao";
+import { marcarExpansao } from "@/lib/sanfonaAria";
 
 /**
  * As sanfonas da vertical: a pessoa abre a categoria e a solução na própria
  * página, sem atravessar categoria, subcategoria e produto.
  *
- * Três decisões sustentam o resto do arquivo.
+ * Quatro decisões sustentam o resto do arquivo.
  *
  * Primeira, é `details`/`summary` nativo, não uma sanfona de componente. O
  * estado aberto, o foco, o Enter, o espaço e o anúncio do leitor de tela vêm do
@@ -27,9 +27,14 @@ import { contratacaoOnlineDe } from "@/lib/contratacaoOnline";
  * Terceira, o público vem da navegação rápida, a mesma escolha do site inteiro.
  * Se o filtro escondesse justamente o item que o link pediu, o filtro cede: o
  * link é mais específico que a preferência.
+ *
+ * Quarta, nível que não decide nada não vira clique. Modalidade com um caminho
+ * só abre o caminho junto; caminho com uma solução só já mostra a solução
+ * aberta. A camada continua nomeada na tela e com a sua página própria, mas
+ * deixa de cobrar um toque para não dizer nada.
  */
 
-const publico = (p: "PF" | "PJ"): PerfilPublico => (p === "PJ" ? "empresa" : "pessoal");
+const publico: (p: "PF" | "PJ") => PerfilPublico = publicoDe;
 
 /**
  * No financeiro a ordem do catálogo não é a ordem da conversa: crédito e
@@ -65,23 +70,25 @@ const plural = (n: number, um: string, muitos: string) => `${n} ${n === 1 ? um :
  * título logo acima. Fora do padrão, devolve lista vazia e a tela esconde o
  * bloco em vez de mostrar frase pela metade.
  */
-function criteriosDoCaminho(porque: string | undefined): string[] {
+export function criteriosDoCaminho(porque: string | undefined): string[] {
   const m = (porque ?? "").match(/(?:combina|deve considerar)\s+(.+?)\.?\s*$/i);
   if (!m) return [];
   const vistos = new Set<string>();
-  return m[1]
-    .split(/\s*,\s*|\s+e\s+/)
-    .map((p) => p.trim())
-    .filter((p) => p.length > 2)
-    .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
-    // a planilha repete critério em pelo menos um caminho (Exclusões, em
-    // fraudes digitais). Repetido é ruído na tela e chave duplicada no React.
-    .filter((p) => {
-      const chave = p.toLowerCase();
-      if (vistos.has(chave)) return false;
-      vistos.add(chave);
-      return true;
-    });
+  return (
+    m[1]
+      .split(/\s*,\s*|\s+e\s+/)
+      .map((p) => p.trim())
+      .filter((p) => p.length > 2)
+      .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
+      // a planilha repete critério em pelo menos um caminho (Exclusões, em
+      // fraudes digitais). Repetido é ruído na tela e chave duplicada no React.
+      .filter((p) => {
+        const chave = p.toLowerCase();
+        if (vistos.has(chave)) return false;
+        vistos.add(chave);
+        return true;
+      })
+  );
 }
 
 interface CaminhoVisivel {
@@ -94,7 +101,102 @@ interface CategoriaVisivel {
   total: number;
 }
 
-export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string }) {
+/**
+ * O endereço acompanha o que está aberto, sem encher o histórico.
+ *
+ * `replaceState` e não `pushState`: cada abrir e fechar empilhado faria o botão
+ * Voltar virar "fechar sanfona", e sair da página passaria a exigir um toque
+ * por item visitado. Assim recarregar e compartilhar devolvem exatamente a
+ * mesma tela, e Voltar continua sendo voltar.
+ */
+function sincronizarEndereco(abrir: string | null, hash: string | null) {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  if (abrir) url.searchParams.set("abrir", abrir);
+  else url.searchParams.delete("abrir");
+  url.hash = hash ? `#${hash}` : "";
+  window.history.replaceState(window.history.state, "", url.toString());
+}
+
+/** Corpo de um caminho: frentes, critérios, soluções e o link da página. */
+function CorpoDoCaminho({
+  solucao,
+  categoria,
+  nucleo,
+  produtos,
+  solto,
+  aoAlternarDetalhe,
+}: {
+  solucao: Solucao;
+  categoria: Categoria;
+  nucleo: Nucleo;
+  produtos: Product[];
+  /** Sem a sanfona em volta, porque a modalidade tem um caminho só. */
+  solto?: boolean;
+  aoAlternarDetalhe?: (produtoId: string, aberto: boolean) => void;
+}) {
+  const criterios = criteriosDoCaminho(nucleo.porque);
+  // caminho de uma solução só: a expansão já nasce aberta, porque o toque
+  // levaria ao único conteúdo que existe ali
+  const unica = produtos.length === 1;
+
+  return (
+    <div className={solto ? "sf-nuc-corpo sf-nuc-solo" : "sf-nuc-corpo"}>
+      {solto && <p className="sf-nuc-rotulo">{nucleo.nome}</p>}
+
+      {nucleo.blocoValor.length > 0 && (
+        <p className="sf-frentes">{nucleo.blocoValor.join(" · ")}</p>
+      )}
+
+      {criterios.length > 0 && (
+        <div className="sf-criterios">
+          <h4>O que pesa na escolha</h4>
+          <ul>
+            {criterios.map((c) => (
+              <li key={c}>{c}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <ul className="sf-prods">
+        {produtos.map((produto) => (
+          <ItemSolucao
+            key={produto.id}
+            produto={produto}
+            solucaoSlug={solucao.slug}
+            solucaoNome={solucao.nome}
+            categoriaSlug={categoria.slug}
+            nucleoSlug={nucleo.slug}
+            publico={publico(produto.perfil)}
+            abertaPorPadrao={unica}
+            aoAlternarDetalhe={aoAlternarDetalhe}
+          />
+        ))}
+      </ul>
+
+      <Link
+        className="sf-pagina"
+        to="/solucoes/$solucao/$categoria/$nucleo"
+        params={{ solucao: solucao.slug, categoria: categoria.slug, nucleo: nucleo.slug }}
+      >
+        Abrir a página de {nucleo.nome}
+        <span aria-hidden> →</span>
+      </Link>
+    </div>
+  );
+}
+
+export function Sanfonas({
+  solucao,
+  abrir,
+  apenasCategoria,
+}: {
+  solucao: Solucao;
+  abrir?: string;
+  /** Na página da modalidade, a sanfona mostra só aquela modalidade, já aberta. */
+  apenasCategoria?: string;
+}) {
   // Um estado só, o da navegação rápida. Um filtro local espelhando a barra
   // deixaria as duas se contradizerem na tela: a barra dizendo Sua empresa e a
   // lista dizendo Todos os perfis, que é pior que simplesmente ceder a escolha.
@@ -103,6 +205,7 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
   const arvore: CategoriaVisivel[] = useMemo(
     () =>
       naOrdemDaVertical(solucao.slug, solucao.categorias)
+        .filter((categoria) => !apenasCategoria || categoria.slug === apenasCategoria)
         .map((categoria) => {
           const caminhos = categoria.nucleos
             .map((nucleo) => ({
@@ -119,21 +222,39 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
           };
         })
         .filter((c) => c.caminhos.length > 0),
-    [solucao, perfil],
+    [solucao, perfil, apenasCategoria],
   );
 
-  const emBreve = solucao.categorias.filter((c) => c.nucleos.length === 0);
+  const emBreve = apenasCategoria ? [] : solucao.categorias.filter((c) => c.nucleos.length === 0);
 
   // quantas soluções o filtro deixou de fora, para o contador não mentir
   const totalGeral = useMemo(
     () =>
-      solucao.categorias.reduce(
-        (s, c) => s + c.nucleos.reduce((n, x) => n + x.products.length, 0),
-        0,
-      ),
-    [solucao],
+      solucao.categorias
+        .filter((c) => !apenasCategoria || c.slug === apenasCategoria)
+        .reduce((s, c) => s + c.nucleos.reduce((n, x) => n + x.products.length, 0), 0),
+    [solucao, apenasCategoria],
   );
   const totalVisivel = arvore.reduce((s, c) => s + c.total, 0);
+
+  /**
+   * O que o endereço pede já vem aberto do servidor.
+   *
+   * Duas razões. A primeira é que o HTML passa a dizer a verdade: quem chega
+   * por `?abrir=` recebe a sanfona aberta mesmo antes de o JavaScript rodar, e
+   * é isso que a indexação lê. A segunda é o aviso de hidratação: o Chrome
+   * abre sozinho os `details` que contêm a âncora do endereço, e faz isso
+   * antes de o React assumir a página. Se o servidor mandasse tudo fechado, o
+   * React encontraria um `open` que não pôs ali e reclamaria no console.
+   *
+   * O `open` aqui é valor inicial, não controle: o React só reescreve o
+   * atributo quando o valor da propriedade muda entre dois renders, então
+   * fechar com o dedo continua fechando.
+   */
+  const [catDoEndereco, nucDoEndereco] = (abrir ?? "").split("/");
+  const comecaAberta = (slug: string) => Boolean(apenasCategoria) || slug === catDoEndereco;
+  const caminhoComecaAberto = (cat: string, nuc: string) =>
+    cat === catDoEndereco && nuc === nucDoEndereco;
 
   /**
    * O link que já identifica uma solução abre a sanfona certa.
@@ -143,6 +264,7 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
    * conteúdo da sanfona ocupar lugar na página. Daí o quadro de animação.
    */
   const atendido = useRef("");
+  const agendarRolagem = useRolagemAgendada();
   useEffect(() => {
     if (!abrir || typeof window === "undefined") return;
     // sem a preferência lida, o público ainda pode mudar debaixo da decisão
@@ -150,10 +272,10 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
     if (atendido.current === abrir) return;
 
     const [cat, nuc] = abrir.split("/");
-    const sanfonaCat = document.getElementById(`sanfona-${cat}`) as HTMLDetailsElement | null;
-    const sanfonaNuc = nuc
-      ? (document.getElementById(`sanfona-${cat}-${nuc}`) as HTMLDetailsElement | null)
-      : null;
+    const sanfonaCat = document.getElementById(`sanfona-${cat}`);
+    // numa modalidade de caminho único o nível de dentro não é sanfona, é só
+    // um bloco com id: serve de alvo de rolagem, mas não tem o que abrir
+    const alvoNuc = nuc ? document.getElementById(`sanfona-${cat}-${nuc}`) : null;
     const hash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
 
     /**
@@ -163,7 +285,7 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
      * lista que não contém justamente o que o link prometeu. Por isso o produto
      * entra na conta, não só a sanfona.
      */
-    const escondido = !sanfonaCat || (nuc && !sanfonaNuc) || (hash && !document.getElementById(hash));
+    const escondido = !sanfonaCat || (nuc && !alvoNuc) || (hash && !document.getElementById(hash));
     if (escondido && perfil !== "todos") {
       definirPerfil("todos");
       return;
@@ -172,37 +294,95 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
     if (!sanfonaCat) return;
 
     atendido.current = abrir;
-    sanfonaCat.open = true;
-    if (sanfonaNuc) sanfonaNuc.open = true;
+    if (sanfonaCat instanceof HTMLDetailsElement) sanfonaCat.open = true;
+    if (alvoNuc instanceof HTMLDetailsElement) alvoNuc.open = true;
 
-    const foco = (sanfonaNuc ?? sanfonaCat).querySelector("summary");
+    const produto = hash ? document.getElementById(hash) : null;
+    // a solução pedida abre o detalhe junto: o link prometeu a solução, não um
+    // título que ainda exige um toque para mostrar o conteúdo
+    const detalhe = produto?.querySelector<HTMLDetailsElement>("details.sf-mais");
+    if (detalhe) detalhe.open = true;
+    const foco =
+      detalhe?.querySelector("summary") ?? (alvoNuc ?? sanfonaCat).querySelector("summary");
 
-    const quadro = window.requestAnimationFrame(() => {
-      const produto = hash ? document.getElementById(hash) : null;
-      const alvo = produto ?? sanfonaNuc ?? sanfonaCat;
-      const cabecalho = document.querySelector("header")?.offsetHeight ?? 0;
-      const topo = window.scrollY + alvo.getBoundingClientRect().top - cabecalho - 24;
-      const manso = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      window.scrollTo({ top: Math.max(0, topo), behavior: manso ? "instant" : "smooth" });
-      // o teclado continua de onde o link parou; sem preventScroll o foco
-      // daria um segundo salto por cima da rolagem que acabou de começar
-      foco?.focus({ preventScroll: true });
-    });
-    return () => window.cancelAnimationFrame(quadro);
-  }, [abrir, perfil, definirPerfil, pronto]);
+    agendarRolagem(
+      () => produto ?? alvoNuc ?? sanfonaCat,
+      // o teclado continua de onde o link parou. O foco vai depois da rolagem,
+      // e não antes: posto no começo, ele é perdido no render seguinte
+      () => foco?.focus({ preventScroll: true }),
+    );
+  }, [abrir, perfil, definirPerfil, pronto, agendarRolagem]);
+
+  /**
+   * Toque na sanfona reescreve o endereço, para recarregar e compartilhar
+   * caírem na mesma tela.
+   *
+   * O efeito acima também abre sanfonas, e abrir dispara o mesmo `toggle`. Em
+   * vez de uma trava por tempo, que dependeria da ordem entre a fila de
+   * eventos e o quadro de animação, a comparação é com o estado já registrado:
+   * se o toque chega ao mesmo lugar que o link pediu, não há o que reescrever,
+   * e o hash do produto sobrevive.
+   *
+   * Na página da modalidade a sincronia não roda: o endereço já é a
+   * modalidade, e a sanfona abre junto com a página.
+   */
+  const aoAlternar = useCallback(
+    (cat: string, nuc: string | null, aberto: boolean) => {
+      if (apenasCategoria) return;
+      const atual = atendido.current;
+
+      if (!aberto) {
+        // fechar o caminho devolve a modalidade; fechar a modalidade limpa tudo
+        const alvo = nuc ? `${cat}/${nuc}` : cat;
+        if (atual !== alvo && !(nuc === null && atual.startsWith(`${cat}/`))) return;
+        const resto = nuc ? cat : null;
+        atendido.current = resto ?? "";
+        sincronizarEndereco(resto, null);
+        return;
+      }
+
+      const valor = nuc ? `${cat}/${nuc}` : cat;
+      // a modalidade abrindo por baixo de um caminho já endereçado não rebaixa
+      // o endereço para o nível de cima
+      if (atual === valor || (nuc === null && atual.startsWith(`${cat}/`))) return;
+      atendido.current = valor;
+      sincronizarEndereco(valor, null);
+    },
+    [apenasCategoria],
+  );
+
+  /**
+   * Abrir o detalhe de uma solução põe o id dela no endereço, e fechar tira.
+   * Quando o efeito do link abre o detalhe, o hash já é o do produto, então a
+   * comparação dispensa qualquer trava.
+   */
+  const aoAlternarDetalhe = useCallback(
+    (produtoId: string, aberto: boolean) => {
+      if (apenasCategoria || typeof window === "undefined") return;
+      const hashAtual = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+      if (aberto) {
+        if (hashAtual === produtoId) return;
+        sincronizarEndereco(atendido.current || null, produtoId);
+      } else if (hashAtual === produtoId) {
+        sincronizarEndereco(atendido.current || null, null);
+      }
+    },
+    [apenasCategoria],
+  );
 
   return (
     <section className="sec" id="caminhos" aria-labelledby="caminhos-h">
-      <style>{ESTILO}</style>
+      <style>{ESTILO + ESTILO_SOLUCAO}</style>
       <EstiloFavoritar />
 
       <div className="wrap">
         <h2 className="p10-h2" id="caminhos-h">
-          Caminhos disponíveis
+          {apenasCategoria ? "Soluções desta frente" : "Caminhos disponíveis"}
         </h2>
         <p className="sf-lede">
-          Abra a frente que interessa e veja as soluções aqui mesmo. Cada nível também tem a sua
-          página própria, para abrir em separado.
+          {apenasCategoria
+            ? "As soluções abrem aqui mesmo. Cada uma também tem a sua página própria, para abrir em separado."
+            : "Abra a frente que interessa e veja as soluções aqui mesmo. Cada nível também tem a sua página própria, para abrir em separado."}
         </p>
 
         <div className="sf-filtros" role="group" aria-label="Filtrar por público">
@@ -231,173 +411,93 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
         </div>
 
         <div className="sf-lista">
-          {arvore.map(({ categoria, caminhos, total }) => (
-            <details key={categoria.slug} className="sf-cat" id={`sanfona-${categoria.slug}`}>
-              <summary>
-                <span className="sf-cat-nome">{categoria.nome}</span>
-                <span className="sf-tag">{plural(total, "solução", "soluções")}</span>
-                <span className="sf-sinal" aria-hidden />
-              </summary>
+          {arvore.map(({ categoria, caminhos, total }) => {
+            // modalidade de um caminho só: a sanfona de dentro seria um clique
+            // para revelar exatamente o que a de fora já prometeu
+            const caminhoUnico = caminhos.length === 1 ? caminhos[0] : null;
+            return (
+              <details
+                key={categoria.slug}
+                className="sf-cat"
+                id={`sanfona-${categoria.slug}`}
+                open={comecaAberta(categoria.slug)}
+                suppressHydrationWarning
+                onToggle={(e) => {
+                  const d = e.currentTarget as HTMLDetailsElement;
+                  marcarExpansao(d);
+                  aoAlternar(categoria.slug, null, d.open);
+                }}
+              >
+                <summary aria-expanded={comecaAberta(categoria.slug)} suppressHydrationWarning>
+                  <span className="sf-cat-nome">{categoria.nome}</span>
+                  <span className="sf-tag">{plural(total, "solução", "soluções")}</span>
+                  <span className="sf-sinal" aria-hidden />
+                </summary>
 
-              <div className="sf-cat-corpo">
-                {categoria.hero && <p className="sf-cat-hero">{categoria.hero}</p>}
+                <div className="sf-cat-corpo">
+                  {categoria.hero && <p className="sf-cat-hero">{categoria.hero}</p>}
 
-                {caminhos.map(({ nucleo, produtos }) => {
-                  const criterios = criteriosDoCaminho(nucleo.porque);
-                  return (
-                    <details
-                      key={nucleo.slug}
-                      className="sf-nuc"
-                      id={`sanfona-${categoria.slug}-${nucleo.slug}`}
-                    >
-                      <summary>
-                        <span className="sf-nuc-nome">{nucleo.nome}</span>
-                        <span className="sf-tag">
-                          {plural(produtos.length, "solução", "soluções")}
-                        </span>
-                        <span className="sf-sinal" aria-hidden />
-                      </summary>
-
-                      <div className="sf-nuc-corpo">
-                        {nucleo.blocoValor.length > 0 && (
-                          <p className="sf-frentes">{nucleo.blocoValor.join(" · ")}</p>
-                        )}
-
-                        {criterios.length > 0 && (
-                          <div className="sf-criterios">
-                            <h4>O que pesa na escolha</h4>
-                            <ul>
-                              {criterios.map((c) => (
-                                <li key={c}>{c}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        <ul className="sf-prods">
-                          {produtos.map((produto) => (
-                            <li key={produto.id} id={produto.id} className="sf-prod">
-                              <div className="sf-prod-topo">
-                                <h4>{produto.nome}</h4>
-                                <span className="sf-perfil">
-                                  {publico(produto.perfil) === "empresa"
-                                    ? "Sua empresa"
-                                    : "Você e família"}
-                                </span>
-                              </div>
-                              <p>{produto.descricao}</p>
-
-                              {/* A avaliação da planilha é explícita sobre o card:
-                                  mostra nome, definição curta e perfil, e deixa
-                                  características, inclusos e FAQ para depois da
-                                  expansão. Listas extensas de inclusos estão entre
-                                  o que ela manda evitar no primeiro nível. */}
-                              {(produto.itensInclusos.length > 0 ||
-                                produto.caracteristicas.length > 0) && (
-                                <details className="sf-mais">
-                                  <summary>Entender opção</summary>
-                                  <div className="sf-mais-corpo">
-                                    {produto.itensInclusos.length > 0 && (
-                                      <p>
-                                        <strong>Inclui:</strong>{" "}
-                                        {/* no catálogo cada item é uma frase solta
-                                            e o último às vezes traz ponto final */}
-                                        {produto.itensInclusos
-                                          .map((i) => i.trim().replace(/\.$/, ""))
-                                          .filter(Boolean)
-                                          .join(" · ")}
-                                      </p>
-                                    )}
-                                    {produto.caracteristicas.length > 0 && (
-                                      <p>
-                                        <strong>Como funciona:</strong>{" "}
-                                        {produto.caracteristicas
-                                          .map((c) => c.trim().replace(/\.$/, ""))
-                                          .filter(Boolean)
-                                          .join(" · ")}
-                                      </p>
-                                    )}
-                                    <Link
-                                      className="sf-mais-pagina"
-                                      to="/solucoes/$solucao/$categoria/$nucleo"
-                                      params={{
-                                        solucao: solucao.slug,
-                                        categoria: categoria.slug,
-                                        nucleo: nucleo.slug,
-                                      }}
-                                      hash={produto.id}
-                                    >
-                                      Ver a página desta solução
-                                      <span aria-hidden> →</span>
-                                    </Link>
-                                  </div>
-                                </details>
-                              )}
-
-                              <div className="sf-prod-acoes">
-                                {/* A variação de CTA que o Carlos pediu: quem tem
-                                    endereço de contratação confirmado oferece
-                                    "Contratar online"; o resto segue pela cotação,
-                                    com o consultor. */}
-                                {contratacaoOnlineDe(produto.linkPorto) ? (
-                                  <a
-                                    className="sf-btn sf-btn-p"
-                                    href={contratacaoOnlineDe(produto.linkPorto) as string}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    Contratar online
-                                    <ExternalLink size={14} aria-hidden />
-                                  </a>
-                                ) : (
-                                  <a
-                                    className="sf-btn sf-btn-p"
-                                    href={whatsappUrl(
-                                      `Olá! Quero solicitar cotação de ${produto.nome} (${solucao.nome}).`,
-                                    )}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                  >
-                                    Solicitar cotação
-                                  </a>
-                                )}
-                                <BotaoFavoritar
-                                  chave={`${solucao.slug}/${categoria.slug}/${nucleo.slug}/${produto.id}`}
-                                  nome={produto.nome}
-                                />
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-
-                        <Link
-                          className="sf-pagina"
-                          to="/solucoes/$solucao/$categoria/$nucleo"
-                          params={{
-                            solucao: solucao.slug,
-                            categoria: categoria.slug,
-                            nucleo: nucleo.slug,
-                          }}
+                  {caminhoUnico ? (
+                    <div id={`sanfona-${categoria.slug}-${caminhoUnico.nucleo.slug}`}>
+                      <CorpoDoCaminho
+                        solucao={solucao}
+                        categoria={categoria}
+                        nucleo={caminhoUnico.nucleo}
+                        produtos={caminhoUnico.produtos}
+                        solto
+                        aoAlternarDetalhe={aoAlternarDetalhe}
+                      />
+                    </div>
+                  ) : (
+                    caminhos.map(({ nucleo, produtos }) => (
+                      <details
+                        key={nucleo.slug}
+                        className="sf-nuc"
+                        id={`sanfona-${categoria.slug}-${nucleo.slug}`}
+                        open={caminhoComecaAberto(categoria.slug, nucleo.slug)}
+                        suppressHydrationWarning
+                        onToggle={(e) => {
+                          const d = e.currentTarget as HTMLDetailsElement;
+                          marcarExpansao(d);
+                          aoAlternar(categoria.slug, nucleo.slug, d.open);
+                        }}
+                      >
+                        <summary
+                          aria-expanded={caminhoComecaAberto(categoria.slug, nucleo.slug)}
+                          suppressHydrationWarning
                         >
-                          Abrir a página de {nucleo.nome}
-                          <span aria-hidden> →</span>
-                        </Link>
-                      </div>
-                    </details>
-                  );
-                })}
+                          <span className="sf-nuc-nome">{nucleo.nome}</span>
+                          <span className="sf-tag">
+                            {plural(produtos.length, "solução", "soluções")}
+                          </span>
+                          <span className="sf-sinal" aria-hidden />
+                        </summary>
 
-                <Link
-                  className="sf-pagina sf-pagina-cat"
-                  to="/solucoes/$solucao/$categoria"
-                  params={{ solucao: solucao.slug, categoria: categoria.slug }}
-                >
-                  Abrir a página de {categoria.nome}
-                  <span aria-hidden> →</span>
-                </Link>
-              </div>
-            </details>
-          ))}
+                        <CorpoDoCaminho
+                          solucao={solucao}
+                          categoria={categoria}
+                          nucleo={nucleo}
+                          produtos={produtos}
+                          aoAlternarDetalhe={aoAlternarDetalhe}
+                        />
+                      </details>
+                    ))
+                  )}
+
+                  {!apenasCategoria && (
+                    <Link
+                      className="sf-pagina sf-pagina-cat"
+                      to="/solucoes/$solucao/$categoria"
+                      params={{ solucao: solucao.slug, categoria: categoria.slug }}
+                    >
+                      Abrir a página de {categoria.nome}
+                      <span aria-hidden> →</span>
+                    </Link>
+                  )}
+                </div>
+              </details>
+            );
+          })}
         </div>
 
         {emBreve.length > 0 && (
@@ -410,19 +510,8 @@ export function Sanfonas({ solucao, abrir }: { solucao: Solucao; abrir?: string 
   );
 }
 
-/* A folha fica fora do componente para não ser remontada a cada filtro. */
 const ESTILO = `
 .sf-lede { font-family: var(--fb); font-size: 1rem; line-height: 1.6; color: var(--ctxt); margin: 14px 0 0; max-width: 64ch; }
-
-.sf-filtros { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 26px 0 22px; }
-.sf-filtro {
-  font-family: var(--fb); font-size: .82rem; font-weight: 600; padding: 8px 15px;
-  border-radius: 999px; border: 1px solid var(--c2); background: transparent;
-  color: var(--ctxt); cursor: pointer; transition: border-color var(--t), color var(--t), background var(--t);
-}
-.sf-filtro:hover { border-color: var(--vp); color: var(--preto); }
-.sf-filtro[aria-pressed="true"] { background: var(--vp); border-color: var(--vp); color: #fff; }
-.sf-conta { font-family: var(--fl); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: #8A93A0; margin-left: 4px; }
 
 .sf-lista { display: flex; flex-direction: column; gap: 10px; }
 
@@ -456,6 +545,12 @@ details[open] > summary .sf-sinal::after { transform: scaleY(0); opacity: 0; }
 .sf-nuc-nome { font-family: var(--fd); font-size: 1rem; font-weight: 600; color: var(--preto); min-width: 0; }
 .sf-nuc-corpo { padding: 2px 17px 17px; display: flex; flex-direction: column; gap: 15px; }
 
+/* caminho sem sanfona em volta: a camada continua nomeada, mas sem cobrar o toque */
+.sf-nuc-solo { padding: 0; scroll-margin-top: 110px; }
+.sf-nuc-rotulo {
+  font-family: var(--fd); font-size: 1rem; font-weight: 600; color: var(--preto); margin: 0;
+}
+
 .sf-frentes { font-family: var(--fl); font-size: .74rem; letter-spacing: .07em; text-transform: uppercase; color: var(--vp); margin: 0; }
 
 .sf-criterios h4 { font-family: var(--fl); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: #8A93A0; margin: 0 0 8px; }
@@ -467,55 +562,6 @@ details[open] > summary .sf-sinal::after { transform: scaleY(0); opacity: 0; }
   border: 1px solid var(--c2); border-radius: 999px; padding: 5px 12px; background: #fff;
 }
 
-.sf-prods { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: 1fr; }
-@media (min-width: 900px) { .sf-prods { grid-template-columns: repeat(2, 1fr); } }
-.sf-prod {
-  display: block; border: 1px solid var(--c2); border-radius: var(--rs);
-  padding: 16px 18px; background: #fff; scroll-margin-top: 110px;
-}
-.sf-prod:target { border-color: var(--vp); box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp) 16%, transparent); }
-.sf-prod-topo { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
-.sf-prod h4 { font-family: var(--fd); font-size: 1.02rem; font-weight: 600; color: var(--preto); margin: 0; letter-spacing: -.01em; }
-.sf-perfil { font-family: var(--fl); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: #8A93A0; white-space: nowrap; flex: none; }
-.sf-prod > p { font-family: var(--fb); font-size: .91rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
-.sf-mais { margin-top: 10px; }
-.sf-mais > summary {
-  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 7px;
-  font-family: var(--fl); font-size: .72rem; letter-spacing: .09em; text-transform: uppercase;
-  font-weight: 600; color: var(--vp);
-}
-.sf-mais > summary::-webkit-details-marker { display: none; }
-.sf-mais > summary::after { content: "+"; font-size: 1rem; line-height: 1; }
-.sf-mais[open] > summary::after { content: "\\2212"; }
-.sf-mais > summary:focus-visible { outline: 2px solid var(--vp); outline-offset: 2px; }
-.sf-mais-corpo { display: grid; gap: 8px; margin-top: 10px; }
-.sf-mais-corpo p {
-  font-family: var(--fb); font-size: .85rem; line-height: 1.5; color: #6B7482; margin: 0;
-}
-.sf-mais-corpo strong { font-weight: 600; color: var(--preto); }
-.sf-mais-pagina {
-  justify-self: start; font-family: var(--fl); font-size: .72rem; letter-spacing: .09em;
-  text-transform: uppercase; font-weight: 600; color: var(--vp); text-decoration: none;
-}
-.sf-mais-pagina:hover { text-decoration: underline; }
-
-.sf-prod-acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-.sf-btn {
-  display: inline-flex; align-items: center; gap: 7px; border-radius: 999px; padding: 9px 17px;
-  font-family: var(--fb); font-size: .83rem; font-weight: 600; text-decoration: none;
-  border: 1px solid transparent; transition: background var(--t), border-color var(--t), color var(--t);
-}
-.sf-btn-p { background: var(--vp); color: #fff; }
-.sf-btn-p:hover { filter: brightness(1.1); }
-.sf-btn-s { background: transparent; color: var(--preto); border-color: var(--c2); }
-.sf-btn-s:hover { border-color: var(--vp); color: var(--vp); }
-.sf-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-
-.sf-pagina {
-  align-self: flex-start; font-family: var(--fl); font-size: .74rem; letter-spacing: .09em;
-  text-transform: uppercase; font-weight: 600; color: var(--vp); text-decoration: none;
-}
-.sf-pagina:hover { text-decoration: underline; }
 .sf-pagina-cat { margin-top: 6px; }
 
 .sf-breve { font-family: var(--fb); font-size: .9rem; color: #8A93A0; margin: 20px 0 0; }

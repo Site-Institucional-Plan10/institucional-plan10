@@ -8,7 +8,8 @@ import { finContentFor } from "@/data/financasContent";
 import { heroCategoria, contextoDe } from "@/lib/imagery";
 import { finCategoriaImgs } from "@/lib/financasImagery";
 import { canonical } from "@/lib/seo";
-import { faqDaCategoria, criteriosDaCategoria, valoresDaCategoria, frentesConectadas } from "@/lib/plan10";
+import { Sanfonas } from "@/components/solucoes/Sanfonas";
+import { faqDaCategoria, criteriosDaCategoria, valoresDaCategoria, frentesConectadas, aberturaLimpa, whatsappUrl } from "@/lib/plan10";
 import { dim } from "@/lib/dimensoes";
 
 const splitDots = (s: string) =>
@@ -29,7 +30,21 @@ export const Route = createFileRoute("/solucoes/$solucao/$categoria/")({
     const { solucao: s, categoria: c } = loaderData;
     const url = canonical(`/solucoes/${s.slug}/${c.slug}`);
     const fin = finContentFor(c.slug);
-    const desc = (fin?.hero || c.hero || s.subHero).slice(0, 300);
+    /**
+     * Descrição curta demais não é descrição.
+     *
+     * Em três modalidades o texto de abertura do catálogo é só o nome do
+     * caminho ("Saúde pet.", "Apoio náutico.", "Proteção em viagem."), e ia
+     * inteiro para a meta description: catorze caracteres, que não dizem nada
+     * ao buscador nem a quem lê o resultado. Quando a abertura não se sustenta
+     * sozinha, a abertura consultiva do primeiro caminho completa a frase. O
+     * texto continua sendo do catálogo, nenhuma linha foi inventada aqui.
+     */
+    const abertura = fin?.hero || c.hero || "";
+    const reforco = aberturaLimpa(c.nucleos[0]?.aberturaConsultiva ?? "");
+    const desc = (
+      abertura.length >= 70 ? abertura : [abertura, reforco || s.subHero].filter(Boolean).join(" ")
+    ).slice(0, 300);
     return {
       meta: [
         { title: `${c.nome} | ${s.nome} | Plan10` },
@@ -77,22 +92,15 @@ function CategoriaPage() {
     [c],
   );
 
-  const nucleos = (
-    <div className="p10-cards">
-      {c.nucleos.map((n) => (
-        <Link
-          key={n.slug}
-          to="/solucoes/$solucao/$categoria/$nucleo"
-          params={{ solucao: s.slug, categoria: c.slug, nucleo: n.slug }}
-          className="p10-card"
-        >
-          <h3>{n.nome}</h3>
-          {n.hero && <p>{n.hero}</p>}
-          <span className="arrow">Ver opções →</span>
-        </Link>
-      ))}
-    </div>
-  );
+  /**
+   * A modalidade mostra as soluções, não uma lista de links para elas.
+   *
+   * Aqui havia uma grade de cards: cada card levava à página do caminho, que
+   * por sua vez pedia mais um toque por solução. Eram três telas para chegar
+   * ao conteúdo que cabe nesta. A sanfona é a mesma da vertical, recortada
+   * nesta modalidade e já aberta, e cada nível continua com a sua página.
+   */
+  const solucoesDaModalidade = <Sanfonas solucao={s} apenasCategoria={c.slug} />;
 
   // Layout genérico (demais soluções, sem conteúdo consultivo dedicado ainda).
   if (!fin) {
@@ -110,14 +118,7 @@ function CategoriaPage() {
         <Crumb s={s} c={c} />
 
         {/* Caminhos primeiro, igual às categorias financeiras */}
-        <section className="sec">
-          <div className="wrap">
-            <h2 className="p10-h2" style={{ marginBottom: 26 }}>
-              Opções disponíveis
-            </h2>
-            {nucleos}
-          </div>
-        </section>
+        {solucoesDaModalidade}
 
         {(criterios.length > 0 || valores.length > 0) && (
           <section className="sec sec-alt">
@@ -177,16 +178,15 @@ function CategoriaPage() {
                 Avance com o apoio de um consultor. Você decide o próximo passo depois da conversa.
               </p>
             </div>
-            {c.nucleos[0] && (
-              <Link
-                to="/solucoes/$solucao/$categoria/$nucleo"
-                params={{ solucao: s.slug, categoria: c.slug, nucleo: c.nucleos[0].slug }}
+            <a
                 className="btn btn-primary"
                 style={{ justifySelf: "start" }}
+                href={whatsappUrl(`Olá! Quero falar com um consultor sobre ${c.nome}.`)}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Ver as opções →
-              </Link>
-            )}
+                Falar com um consultor →
+              </a>
             {frentes.length > 0 && (
               <div style={{ borderTop: "1px solid rgba(244,240,232,.16)", paddingTop: 22 }}>
                 <p className="eyebrow" style={{ marginBottom: 12 }}>
@@ -225,14 +225,7 @@ function CategoriaPage() {
       <Crumb s={s} c={c} />
 
       {/* Caminhos: conversão primeiro, logo abaixo do hero */}
-      <section className="sec">
-        <div className="wrap">
-          <h2 className="p10-h2" style={{ marginBottom: 26 }}>
-            Opções disponíveis
-          </h2>
-          {nucleos}
-        </div>
-      </section>
+      {solucoesDaModalidade}
 
       {/* Entenda a decisão: abertura, sub-hero, imagem, critérios e modalidades */}
       <section className="sec sec-alt">
@@ -336,16 +329,15 @@ function CategoriaPage() {
             <h2 className="p10-h2">Próximo passo</h2>
             <p className="p10-lede">Avance com o apoio de um consultor. Você decide o próximo passo depois da conversa.</p>
           </div>
-          {primeiroNucleo && (
-            <Link
-              to="/solucoes/$solucao/$categoria/$nucleo"
-              params={{ solucao: s.slug, categoria: c.slug, nucleo: primeiroNucleo.slug }}
+            <a
               className="btn btn-primary"
               style={{ justifySelf: "start" }}
+              href={whatsappUrl(`Olá! Quero falar com um consultor sobre ${c.nome}.`)}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Ver as opções →
-            </Link>
-          )}
+              Falar com um consultor →
+            </a>
           {fin.cross.length > 0 && (
             <div style={{ borderTop: "1px solid rgba(244,240,232,.16)", paddingTop: 22 }}>
               <p className="eyebrow" style={{ marginBottom: 12 }}>

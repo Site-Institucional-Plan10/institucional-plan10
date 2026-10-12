@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRolarAteTrilha } from "@/lib/rolagem";
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import {
@@ -9,9 +9,11 @@ import {
   type Product,
 } from "@/data/solutions";
 import { PageTheme } from "@/components/plan10/PageTheme";
-import { PerfilToggle } from "@/components/plan10/PerfilToggle";
-import { ProductCard } from "@/components/plan10/ProductCard";
-import { ProductChooser } from "@/components/plan10/ProductChooser";
+import { ItemSolucao, ESTILO_SOLUCAO, publicoDe as publico } from "@/components/solucoes/ItemSolucao";
+import { useRolagemAgendada } from "@/lib/rolarAteSolucao";
+import { criteriosDoCaminho } from "@/components/solucoes/Sanfonas";
+import { EstiloFavoritar } from "@/components/favoritos/BotaoFavoritar";
+import { usarPerfil } from "@/lib/perfilPublico";
 import { LeadForm } from "@/components/plan10/LeadForm";
 
 import { FONTS, whatsappUrl, aberturaLimpa, frentesConectadas, faqDoCaminho } from "@/lib/plan10";
@@ -69,16 +71,69 @@ function NucleoPage() {
   };
   // Quase metade das modalidades tem opções de um perfil só. Abrir sempre em PF
   // deixaria a página vazia nessas. O padrão passa a ser o perfil que existe.
-  useRolarAteTrilha(`${s.slug}/${c.slug}/${n.slug}`);
+  /**
+   * Link que nomeia uma solução manda na rolagem.
+   *
+   * A descida automática até a trilha é para quem chega à página sem destino
+   * dentro dela. Com hash a pessoa pediu uma solução específica, e duas
+   * rolagens ao mesmo tempo terminam numa briga de quadro contra quadro.
+   */
+  const [veioComHash] = useState(
+    () => typeof window !== "undefined" && window.location.hash.length > 1,
+  );
+  useRolarAteTrilha(`${s.slug}/${c.slug}/${n.slug}`, !veioComHash);
 
+  /**
+   * O público é o mesmo do site inteiro, não uma escolha desta página.
+   *
+   * Antes aqui havia um par PF/PJ próprio que abria em PF e escondia metade do
+   * catálogo do caminho antes de a pessoa pedir qualquer coisa. Agora o
+   * controle é o mesmo das sanfonas da vertical, com "Todos os perfis" entre as
+   * opções, e quem chega por link não encontra nada escondido.
+   */
   const temPF = useMemo(() => n.products.some((p) => p.perfil === "PF"), [n]);
   const temPJ = useMemo(() => n.products.some((p) => p.perfil === "PJ"), [n]);
-  const [perfil, setPerfil] = useState<"PF" | "PJ">(temPF ? "PF" : "PJ");
-  const filtered = useMemo(() => n.products.filter((p) => p.perfil === perfil), [n, perfil]);
+  const { perfil, definirPerfil, pronto } = usarPerfil();
+  const visiveis = useMemo(
+    () => n.products.filter((p) => perfil === "todos" || publico(p.perfil) === perfil),
+    [n, perfil],
+  );
+  // o filtro não pode esvaziar a página de um caminho que tem solução: se a
+  // preferência guardada não cabe aqui, ela cede, como já cede nas sanfonas
+  useEffect(() => {
+    if (pronto && visiveis.length === 0 && n.products.length > 0 && perfil !== "todos") {
+      definirPerfil("todos");
+    }
+  }, [pronto, visiveis.length, n.products.length, perfil, definirPerfil]);
 
-  // Produto que abriu a escolha de caminho, e o que ficou marcado no formulário.
-  const [escolhendo, setEscolhendo] = useState<Product | null>(null);
+  const criterios = useMemo(() => criteriosDoCaminho(n.porque), [n]);
   const [produtoNoForm, setProdutoNoForm] = useState("");
+
+  /**
+   * A solução que o endereço nomeia já chega aberta.
+   *
+   * O item pode estar fora da tela porque o filtro de público o escondeu, e
+   * nesse caso o efeito acima devolve o filtro para "todos" e este roda de
+   * novo no quadro seguinte, quando o item já existe.
+   */
+  const hashAtendido = useRef("");
+  const agendarRolagem = useRolagemAgendada();
+  useEffect(() => {
+    if (!pronto || typeof window === "undefined") return;
+    const hash = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+    if (!hash || hashAtendido.current === hash) return;
+    const item = document.getElementById(hash);
+    if (!item) return;
+
+    hashAtendido.current = hash;
+    const detalhe = item.querySelector<HTMLDetailsElement>("details.sf-mais");
+    if (detalhe) detalhe.open = true;
+
+    agendarRolagem(
+      () => item,
+      () => detalhe?.querySelector("summary")?.focus({ preventScroll: true }),
+    );
+  }, [pronto, visiveis, agendarRolagem]);
 
   const cross = useMemo(
     () => Array.from(new Set(n.products.flatMap((p) => p.crossSelling))).slice(0, 2),
@@ -136,8 +191,7 @@ function NucleoPage() {
 
   function irParaFormulario(produtoNome: string) {
     setProdutoNoForm(produtoNome);
-    // Espera o modal fechar para o scroll não competir com o overflow travado.
-    setTimeout(() => scrollTo("contato"), 60);
+    scrollTo("contato");
   }
 
   return (
@@ -186,58 +240,104 @@ function NucleoPage() {
         </div>
       </nav>
 
-      {/* Opções disponíveis: grade compacta, logo abaixo do hero */}
+      {/*
+        As soluções do caminho, no mesmo item das sanfonas da vertical.
+
+        Esta seção era uma grade de cards que abria um modal com o conteúdo
+        inteiro, e foi o ponto que o Carlos marcou na auditoria. Quem chegava
+        por link profundo via a página recomeçar a seleção: escolher o perfil,
+        achar o card, abrir o modal. Agora o conteúdo está na própria página,
+        no HTML inicial, e o link que nomeia uma solução já a entrega aberta.
+      */}
       <section className="sec" id="opcoes">
+        <style>{ESTILO_SOLUCAO}</style>
+        <EstiloFavoritar />
         <div className="wrap">
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "flex-end",
-              justifyContent: "space-between",
-              gap: 16,
-              marginBottom: 8,
-            }}
-          >
-            <div>
-              <h2 className="p10-h2" style={{ marginBottom: 0 }}>
-                Opções disponíveis
-              </h2>
-            </div>
-            {temPF && temPJ && <PerfilToggle value={perfil} onChange={setPerfil} />}
-          </div>
-          <p className="p10-lede" style={{ margin: "0 0 22px" }}>
-            {filtered.length > 0
-              ? "Abra a opção que interessa para ver o que ela inclui e a quem se destina."
-              : "As opções deste perfil ficam disponíveis por consultoria."}
+          <h2 className="p10-h2" style={{ marginBottom: 0 }}>
+            Soluções deste caminho
+          </h2>
+          <p className="p10-lede" style={{ margin: "10px 0 0" }}>
+            {n.products.length > 0
+              ? "Abra a solução que interessa para ver o que ela inclui, a quem se destina e as perguntas frequentes."
+              : "As soluções deste caminho ficam disponíveis por consultoria."}
           </p>
-          {filtered.length === 0 ? (
+
+          {n.products.length === 0 ? (
             <a
               href={whatsappUrl(`Olá! Quero orientação sobre ${n.nome}.`)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline-light"
+              style={{ marginTop: 20 }}
             >
               Falar com um consultor
             </a>
           ) : (
-            <div className="prod-grid">
-              {filtered.map((p) => (
-                <ProductCard
-                  key={p.id}
-                  product={p}
-                  nucleoNome={n.nome}
-                  onPrimary={() => setEscolhendo(p)}
-                  imagem={
-                    s.slug === "financeiras"
-                      ? // posição na lista COMPLETA, não na filtrada por perfil:
-                        // o pool de financiamentos é alinhado à ordem dos produtos
-                        finProdutoImg(c.slug, n.slug, n.products.indexOf(p))
-                      : undefined
-                  }
-                />
-              ))}
-            </div>
+            <>
+              {temPF && temPJ && (
+                <div className="sf-filtros" role="group" aria-label="Filtrar por público">
+                  {(
+                    [
+                      ["todos", "Todos os perfis"],
+                      ["pessoal", "Você e família"],
+                      ["empresa", "Sua empresa"],
+                    ] as const
+                  ).map(([valor, rotulo]) => (
+                    <button
+                      key={valor}
+                      type="button"
+                      className="sf-filtro"
+                      aria-pressed={perfil === valor}
+                      onClick={() => definirPerfil(valor)}
+                    >
+                      {rotulo}
+                    </button>
+                  ))}
+                  <span className="sf-conta" aria-live="polite">
+                    {perfil === "todos"
+                      ? `${n.products.length} ${n.products.length === 1 ? "solução" : "soluções"}`
+                      : `${visiveis.length} de ${n.products.length}`}
+                  </span>
+                </div>
+              )}
+
+              {criterios.length > 0 && (
+                <div className="sf-criterios" style={{ margin: temPF && temPJ ? 0 : "24px 0 0" }}>
+                  <h4>O que pesa na escolha</h4>
+                  <ul>
+                    {criterios.map((crit) => (
+                      <li key={crit}>{crit}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <ul className="sf-prods" style={{ marginTop: 20 }}>
+                {visiveis.map((p) => (
+                  <ItemSolucao
+                    key={p.id}
+                    produto={p}
+                    solucaoSlug={s.slug}
+                    solucaoNome={s.nome}
+                    categoriaSlug={c.slug}
+                    nucleoSlug={n.slug}
+                    publico={publico(p.perfil)}
+                    // a página é a da solução: o link para ela seria para si mesma
+                    linkDaPagina={false}
+                    // caminho de uma solução só não cobra toque para mostrá-la
+                    abertaPorPadrao={n.products.length === 1}
+                    aoFormulario={irParaFormulario}
+                    imagem={
+                      s.slug === "financeiras"
+                        ? // posição na lista COMPLETA, não na filtrada por perfil:
+                          // o pool de financiamentos é alinhado à ordem dos produtos
+                          finProdutoImg(c.slug, n.slug, n.products.indexOf(p))
+                        : undefined
+                    }
+                  />
+                ))}
+              </ul>
+            </>
           )}
         </div>
       </section>
@@ -292,7 +392,7 @@ function NucleoPage() {
           </div>
           <LeadForm
             interesse={n.nome}
-            perfilInicial={perfil}
+            perfilInicial={perfil === "empresa" || (!temPF && temPJ) ? "PJ" : "PF"}
             contexto={`${s.nome} › ${n.nome}`}
             produtos={n.products.map((p) => p.nome)}
             produtoSelecionado={produtoNoForm}
@@ -357,13 +457,6 @@ function NucleoPage() {
           </div>
         </section>
       )}
-
-      <ProductChooser
-        produto={escolhendo}
-        nucleoNome={n.nome}
-        onClose={() => setEscolhendo(null)}
-        onFormulario={irParaFormulario}
-      />
     </PageTheme>
   );
 }

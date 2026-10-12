@@ -35,57 +35,57 @@
     {
       "source": "/saude",
       "destination": "/solucoes/saude",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/seguros",
       "destination": "/solucoes/protecao",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/financas",
       "destination": "/solucoes/financeiras",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/consorcios",
       "destination": "/solucoes/crescimento",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/servicos-24h",
       "destination": "/solucoes/assistencia",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/seguros/automovel",
       "destination": "/solucoes/protecao?abrir=veiculos-e-frotas%2Fautomoveis",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/seguros/residencial",
       "destination": "/solucoes/protecao?abrir=patrimonio-e-alto-valor%2Fimovel-residencial",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/seguros/vida",
       "destination": "/solucoes/protecao?abrir=vida%2Fvida",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/seguros/empresarial",
       "destination": "/solucoes/protecao",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/consorcio",
       "destination": "/solucoes/crescimento",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/servicos",
       "destination": "/solucoes/assistencia",
-      "permanent": true
+      "statusCode": 301
     }
   ]
 }
