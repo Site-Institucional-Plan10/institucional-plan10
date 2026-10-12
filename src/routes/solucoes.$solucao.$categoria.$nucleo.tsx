@@ -303,7 +303,7 @@ function NucleoPage() {
 
               {criterios.length > 0 && (
                 <div className="sf-criterios" style={{ margin: temPF && temPJ ? 0 : "24px 0 0" }}>
-                  <h4>O que pesa na escolha</h4>
+                  <h3>O que pesa na escolha</h3>
                   <ul>
                     {criterios.map((crit) => (
                       <li key={crit}>{crit}</li>

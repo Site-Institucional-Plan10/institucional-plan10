@@ -4,12 +4,18 @@ import { ChevronDown, Menu, MessageCircle, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/Plan10Button";
 import { useHubLogo } from "@/hooks/useHubLogo";
 import { searchIndex, type SearchItem } from "@/data/searchIndex";
+import { buscar, type ItemCatalogo } from "@/lib/verticais";
+
 import { getWhatsAppUrl } from "@/lib/utils";
 import { MegaMenu } from "@/components/layout/MegaMenu";
 import { Heart } from "lucide-react";
 import { usarFavoritos } from "@/lib/favoritos";
 import { VERTICAIS } from "@/lib/verticais";
 import { dim } from "@/lib/dimensoes";
+
+/** Resultado da busca: página do índice escrito à mão, ou solução do catálogo
+ *  (que traz `rota`, o endereço da vertical já apontando para a sanfona). */
+type ResultadoBusca = SearchItem & { rota?: ItemCatalogo["rota"] };
 
 // Rótulos curtos das soluções para o header (o nome completo é longo demais)
 /**
@@ -105,20 +111,42 @@ function SearchBox({ onClose }: { onClose: () => void }) {
     return () => clearTimeout(t);
   }, [query]);
 
-  const results = useMemo<SearchItem[]>(() => {
+  /**
+   * A busca passou a alcançar o catálogo, não só as páginas.
+   *
+   * O índice escrito à mão tem catorze entradas e a mais funda delas é a
+   * página de uma vertical: quem digitava o nome de uma solução das 397 não
+   * encontrava, e quem chegava a uma vertical ainda tinha de procurar a
+   * solução lá dentro. Agora o catálogo entra junto, e cada resultado dele
+   * carrega a rota da vertical já apontando para a sanfona certa, que é o
+   * mesmo endereço que o mega menu e a descoberta da Home usam.
+   */
+  const results = useMemo<ResultadoBusca[]>(() => {
     if (!debounced) return [];
     const q = debounced.toLowerCase();
-    return searchIndex
+    const paginas = searchIndex
       .filter((item) => {
         if (item.label.toLowerCase().includes(q)) return true;
         if (item.description.toLowerCase().includes(q)) return true;
         return item.keywords.some((k) => k.toLowerCase().includes(q));
       })
-      .slice(0, 6);
+      .slice(0, 4);
+    const solucoes: ResultadoBusca[] = buscar(debounced, undefined, 8).map((i) => ({
+      id: i.chave,
+      label: i.nome,
+      description: `${VERTICAIS.find((v) => v.id === i.vertical)?.label ?? ""} · ${
+        i.perfil === "empresa" ? "Sua empresa" : "Você e família"
+      }`,
+      category: "Soluções",
+      route: i.href,
+      keywords: [],
+      rota: i.rota,
+    }));
+    return [...paginas, ...solucoes];
   }, [debounced]);
 
   const grouped = useMemo(() => {
-    const map = new Map<string, SearchItem[]>();
+    const map = new Map<string, ResultadoBusca[]>();
     results.forEach((r) => {
       const arr = map.get(r.category) ?? [];
       arr.push(r);
@@ -139,12 +167,22 @@ function SearchBox({ onClose }: { onClose: () => void }) {
     return () => document.removeEventListener("mousedown", onClick);
   }, [onClose]);
 
-  function handleSelect(item: SearchItem) {
-    navigate({ to: item.route });
-    if (item.anchor) {
-      setTimeout(() => {
-        document.getElementById(item.anchor!)?.scrollIntoView({ behavior: "smooth" });
-      }, 300);
+  function handleSelect(item: ResultadoBusca) {
+    if (item.rota) {
+      // a vertical abre a sanfona e rola até a solução sozinha, pelo endereço
+      navigate({
+        to: item.rota.to,
+        params: item.rota.params,
+        search: item.rota.search,
+        hash: item.rota.hash,
+      });
+    } else {
+      navigate({ to: item.route });
+      if (item.anchor) {
+        setTimeout(() => {
+          document.getElementById(item.anchor!)?.scrollIntoView({ behavior: "smooth" });
+        }, 300);
+      }
     }
     onClose();
   }

@@ -150,7 +150,7 @@ function CorpoDoCaminho({
 
       {criterios.length > 0 && (
         <div className="sf-criterios">
-          <h4>O que pesa na escolha</h4>
+          <h3>O que pesa na escolha</h3>
           <ul>
             {criterios.map((c) => (
               <li key={c}>{c}</li>
@@ -553,7 +553,7 @@ details[open] > summary .sf-sinal::after { transform: scaleY(0); opacity: 0; }
 
 .sf-frentes { font-family: var(--fl); font-size: .74rem; letter-spacing: .07em; text-transform: uppercase; color: var(--vp); margin: 0; }
 
-.sf-criterios h4 { font-family: var(--fl); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: #8A93A0; margin: 0 0 8px; }
+.sf-criterios h3 { font-family: var(--fl); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: #8A93A0; margin: 0 0 8px; }
 .sf-criterios ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 /* li em flex quebraria cada palavra numa coluna; aqui o item é a caixa e o
    texto dentro dele fica em linha */

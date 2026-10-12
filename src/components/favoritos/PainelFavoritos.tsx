@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Heart, X } from "lucide-react";
 import { usarFavoritos } from "@/lib/favoritos";
 import { usarPerfil } from "@/lib/perfilPublico";
-import { VERTICAIS } from "@/lib/verticais";
+import { VERTICAIS, itemPorChave } from "@/lib/verticais";
 import { whatsappUrl } from "@/lib/plan10";
 
 /**
@@ -215,12 +215,39 @@ export function PainelFavoritos() {
                 {itens.map((i) => (
                   <li key={i.chave}>
                     <div className="p10-fv-item">
-                      <div className="p10-fv-item-txt">
-                        <strong>{i.nome}</strong>
-                        <small>
-                          {VERTICAIS.find((v) => v.id === i.vertical)?.label} · {rotuloPerfil(i.perfil)}
-                        </small>
-                      </div>
+                      {/* O favorito volta para a própria solução.
+                          Antes esta lista era só texto, e quem quisesse rever o
+                          que tinha guardado precisava procurar de novo. A chave
+                          do favorito já é o endereço do item no catálogo, então
+                          o caminho de volta é o mesmo endereço que o mega menu
+                          e a busca usam: a vertical abre a sanfona certa e rola
+                          até a solução. */}
+                      {(() => {
+                        const noCatalogo = itemPorChave(i.chave);
+                        const texto = (
+                          <>
+                            <strong>{i.nome}</strong>
+                            <small>
+                              {VERTICAIS.find((v) => v.id === i.vertical)?.label} ·{" "}
+                              {rotuloPerfil(i.perfil)}
+                            </small>
+                          </>
+                        );
+                        return noCatalogo ? (
+                          <Link
+                            className="p10-fv-item-txt p10-fv-item-link"
+                            to={noCatalogo.rota.to}
+                            params={noCatalogo.rota.params}
+                            search={noCatalogo.rota.search}
+                            hash={noCatalogo.rota.hash}
+                            onClick={fechar}
+                          >
+                            {texto}
+                          </Link>
+                        ) : (
+                          <div className="p10-fv-item-txt">{texto}</div>
+                        );
+                      })()}
                       <button
                         type="button"
                         className="p10-fv-tirar"
@@ -483,6 +510,9 @@ const ESTILO = `
   border-radius: 10px; padding: 12px 14px; background: #FBFAF6;
 }
 .p10-fv-item-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.p10-fv-item-link { text-decoration: none; border-radius: 6px; }
+.p10-fv-item-link:hover strong { color: #C45016; text-decoration: underline; }
+.p10-fv-item-link:focus-visible { outline: 2px solid #C45016; outline-offset: 3px; }
 .p10-fv-item strong { font-size: .93rem; font-weight: 600; color: #16222F; }
 .p10-fv-item small { font-size: .74rem; letter-spacing: .05em; text-transform: uppercase; color: #9AA1AC; }
 .p10-fv-tirar {

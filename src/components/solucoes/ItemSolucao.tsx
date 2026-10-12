@@ -103,7 +103,7 @@ export function ItemSolucao({
       )}
 
       <div className="sf-prod-topo">
-        <h4>{produto.nome}</h4>
+        <h3>{produto.nome}</h3>
         <span className="sf-perfil">
           {publico === "empresa" ? "Sua empresa" : "Você e família"}
         </span>
@@ -243,7 +243,7 @@ export const ESTILO_SOLUCAO = `
 .sf-prod-foto { margin: -16px -18px 14px; }
 .sf-prod-foto img { display: block; width: 100%; height: 150px; object-fit: cover; }
 .sf-prod-topo { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 7px; }
-.sf-prod h4 { font-family: var(--fd); font-size: 1.02rem; font-weight: 600; color: var(--preto); margin: 0; letter-spacing: -.01em; }
+.sf-prod h3 { font-family: var(--fd); font-size: 1.02rem; font-weight: 600; color: var(--preto); margin: 0; letter-spacing: -.01em; }
 .sf-perfil { font-family: var(--fl); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: #8A93A0; white-space: nowrap; flex: none; }
 .sf-prod > p { font-family: var(--fb); font-size: .91rem; line-height: 1.55; color: var(--ctxt); margin: 0; }
 

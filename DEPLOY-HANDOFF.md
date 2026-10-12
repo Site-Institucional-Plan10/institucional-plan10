@@ -158,6 +158,11 @@ O formato é `?abrir=<modalidade>/<caminho>#<id-da-solução>` na página da
 vertical. O servidor já entrega a sanfona aberta, então o link funciona antes
 de o JavaScript rodar.
 
+Quatro pontos do site montam esse endereço, todos a partir de `rota` em
+`src/lib/verticais.ts`: o mega menu, a descoberta da Home, a busca do
+cabeçalho e o painel de favoritos. Mexer no formato do endereço é mexer num
+lugar só.
+
 Exemplos reais:
 
 ```
@@ -212,6 +217,9 @@ Medidas em 11 de outubro de 2026, sobre o build de produção servido localmente
 | Leiaute em 360, 390, 414, 768, 1024 e 1440 px | sem rolagem horizontal em nenhuma combinação |
 | Cabeçalho em 18 larguras, de 360 a 1920 px | nenhum elemento ultrapassa a janela; acesso a contato em todas |
 | Aviso de hidratação no console | nenhum |
+| Hierarquia de títulos nas 296 rotas | sem salto de nível, menos `/blog`, que é anterior e fora deste escopo |
+| Links internos | 447 destinos distintos, nenhum quebrado |
+| Barra fixa do celular sobre título, CTA, formulário e consentimento | não cobre nenhum deles em definitivo; a folga reservada acompanha a altura medida da barra |
 
 ESLint acusa cerca de 13.500 apontamentos, quase todos do Prettier e
 anteriores a esta revisão: o projeto nunca passou por uma formatação completa.
