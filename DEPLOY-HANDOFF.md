@@ -163,6 +163,13 @@ Quatro pontos do site montam esse endereço, todos a partir de `rota` em
 cabeçalho e o painel de favoritos. Mexer no formato do endereço é mexer num
 lugar só.
 
+**Atenção ao identificador da solução.** O `id` do produto no catálogo não é
+único: sete deles se repetem entre caminhos da mesma vertical. Nas páginas que
+mostram vários caminhos, o `id` do elemento é prefixado pelo caminho
+(`<caminho>--<id>`) e o `id` do produto vive em `data-solucao`. O hash do
+endereço continua sendo o `id` do produto, e quem o procura busca dentro do
+caminho que o `abrir` nomeia, nunca com `getElementById` na página inteira.
+
 Exemplos reais:
 
 ```
@@ -216,6 +223,9 @@ Medidas em 11 de outubro de 2026, sobre o build de produção servido localmente
 | Imagens com largura e altura declaradas | 100%, e todo arquivo existe no build |
 | Leiaute em 360, 390, 414, 768, 1024 e 1440 px | sem rolagem horizontal em nenhuma combinação |
 | Cabeçalho em 18 larguras, de 360 a 1920 px | nenhum elemento ultrapassa a janela; acesso a contato em todas |
+| Identificador de elemento duplicado | nenhum em 296 rotas |
+| Console do navegador | limpo em 13 rotas, incluindo as de link profundo |
+| Menu, cards, busca e favoritos | os quatro chegam à vertical com a solução certa aberta |
 | Aviso de hidratação no console | nenhum |
 | Hierarquia de títulos nas 296 rotas | sem salto de nível, menos `/blog`, que é anterior e fora deste escopo |
 | Links internos | 447 destinos distintos, nenhum quebrado |
